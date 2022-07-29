@@ -1,0 +1,35 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Autobahn.Entities
+{
+    [Table("PsSectionLocation")]
+    public partial class PsSectionLocation
+    {
+        public int PsSectionLocationId { get; set; }
+
+        public int PsSectionId { get; set; }
+
+        [StringLength(60)]
+        public string CourseInstructionSiteName { get; set; }
+
+        public int? RefCourseInstructionSiteTypeId { get; set; }
+
+        public DateTime? RecordStartDateTime { get; set; }
+
+        public DateTime? RecordEndDateTime { get; set; }
+
+        public int? RecordStatusId { get; set; }
+
+        public int? DataCollectionId { get; set; }
+
+        public virtual DataCollection DataCollection { get; set; }
+
+        public virtual PsSection PsSection { get; set; }
+
+        public virtual RecordStatus RecordStatus { get; set; }
+
+        public virtual RefCourseInstructionSiteType RefCourseInstructionSiteType { get; set; }
+    }
+}

@@ -1,0 +1,30 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Autobahn.Entities
+{
+    [Table("IndividualizedProgramProgressGoal")]
+    public partial class IndividualizedProgramProgressGoal
+    {
+        public int IndividualizedProgramProgressGoalId { get; set; }
+
+        public int GoalPerformanceId { get; set; }
+
+        public int IndividualizedProgramProgressReportId { get; set; }
+
+        public DateTime? RecordStartDateTime { get; set; }
+
+        public DateTime? RecordEndDateTime { get; set; }
+
+        public int? RecordStatusId { get; set; }
+
+        public int? DataCollectionId { get; set; }
+
+        public virtual DataCollection DataCollection { get; set; }
+
+        public virtual GoalPerformance GoalPerformance { get; set; }
+
+        public virtual IndividualizedProgramProgressReport IndividualizedProgramProgressReport { get; set; }
+
+        public virtual RecordStatus RecordStatus { get; set; }
+    }
+}
