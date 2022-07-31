@@ -115,7 +115,7 @@ namespace AutobahnCodeGen
                     stream.WriteLine($"     /// <summary>");
                     stream.WriteLine($"     /// The I{model.Name}");
                     stream.WriteLine($"     /// </summary>");
-                    stream.WriteLine($@"    public partial Interface I{model.Name}");
+                    stream.WriteLine($@"    public partial interface I{model.Name}");
                     stream.WriteLine($@"    {{");
                     GenerateProperties(stream, model, elements, moduleName, true);
                     stream.WriteLine($@"    }}");

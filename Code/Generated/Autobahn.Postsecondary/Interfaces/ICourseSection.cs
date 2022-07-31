@@ -8,7 +8,7 @@ namespace Autobahn.Postsecondary.Interfaces
      /// <summary>
      /// The ICourseSection
      /// </summary>
-    public partial Interface ICourseSection
+    public partial interface ICourseSection
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CourseSection"/> model

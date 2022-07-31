@@ -8,7 +8,7 @@ namespace Autobahn.CareerandTechnical.Interfaces
      /// <summary>
      /// The IProgram
      /// </summary>
-    public partial Interface IProgram
+    public partial interface IProgram
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Program"/> model

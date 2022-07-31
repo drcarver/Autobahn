@@ -8,7 +8,7 @@ namespace Autobahn.Facilities.Interfaces
      /// <summary>
      /// The IFacility
      /// </summary>
-    public partial Interface IFacility
+    public partial interface IFacility
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Facility"/> model

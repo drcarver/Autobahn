@@ -8,7 +8,7 @@ namespace Autobahn.Credentials.Interfaces
      /// <summary>
      /// The ICredentialOffered
      /// </summary>
-    public partial Interface ICredentialOffered
+    public partial interface ICredentialOffered
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CredentialOffered"/> model

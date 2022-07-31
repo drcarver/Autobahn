@@ -8,7 +8,7 @@ namespace Autobahn.Assessments.Interfaces
      /// <summary>
      /// The IAssessmentPerformanceLevel
      /// </summary>
-    public partial Interface IAssessmentPerformanceLevel
+    public partial interface IAssessmentPerformanceLevel
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentPerformanceLevel"/> model

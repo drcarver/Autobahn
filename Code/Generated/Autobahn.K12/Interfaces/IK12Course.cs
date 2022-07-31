@@ -8,7 +8,7 @@ namespace Autobahn.K12.Interfaces
      /// <summary>
      /// The IK12Course
      /// </summary>
-    public partial Interface IK12Course
+    public partial interface IK12Course
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12Course"/> model

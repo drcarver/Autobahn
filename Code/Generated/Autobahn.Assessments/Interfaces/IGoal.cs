@@ -8,7 +8,7 @@ namespace Autobahn.Assessments.Interfaces
      /// <summary>
      /// The IGoal
      /// </summary>
-    public partial Interface IGoal
+    public partial interface IGoal
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Goal"/> model

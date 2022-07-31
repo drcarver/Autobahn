@@ -8,7 +8,7 @@ namespace Autobahn.Workforce.Interfaces
      /// <summary>
      /// The IQuarterlyEmploymentRecord
      /// </summary>
-    public partial Interface IQuarterlyEmploymentRecord
+    public partial interface IQuarterlyEmploymentRecord
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="QuarterlyEmploymentRecord"/> model

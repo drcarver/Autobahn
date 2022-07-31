@@ -8,7 +8,7 @@ namespace Autobahn.CareerandTechnical.Interfaces
      /// <summary>
      /// The ICourse
      /// </summary>
-    public partial Interface ICourse
+    public partial interface ICourse
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Course"/> model

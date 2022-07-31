@@ -8,7 +8,7 @@ namespace Autobahn.Postsecondary.Interfaces
      /// <summary>
      /// The IOrganization
      /// </summary>
-    public partial Interface IOrganization
+    public partial interface IOrganization
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model

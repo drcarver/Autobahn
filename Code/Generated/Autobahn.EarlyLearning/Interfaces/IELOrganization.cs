@@ -8,7 +8,7 @@ namespace Autobahn.EarlyLearning.Interfaces
      /// <summary>
      /// The IELOrganization
      /// </summary>
-    public partial Interface IELOrganization
+    public partial interface IELOrganization
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="ELOrganization"/> model

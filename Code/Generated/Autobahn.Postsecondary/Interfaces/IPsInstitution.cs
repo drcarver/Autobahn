@@ -8,7 +8,7 @@ namespace Autobahn.Postsecondary.Interfaces
      /// <summary>
      /// The IPsInstitution
      /// </summary>
-    public partial Interface IPsInstitution
+    public partial interface IPsInstitution
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PsInstitution"/> model

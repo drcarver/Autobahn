@@ -8,7 +8,7 @@ namespace Autobahn.Assessments.Interfaces
      /// <summary>
      /// The IRubric
      /// </summary>
-    public partial Interface IRubric
+    public partial interface IRubric
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Rubric"/> model

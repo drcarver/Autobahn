@@ -8,7 +8,7 @@ namespace Autobahn.K12.Interfaces
      /// <summary>
      /// The IIncident
      /// </summary>
-    public partial Interface IIncident
+    public partial interface IIncident
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Incident"/> model

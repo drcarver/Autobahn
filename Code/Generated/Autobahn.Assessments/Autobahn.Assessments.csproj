@@ -30,7 +30,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Autobahn.Core.Module\Autobahn.Core.Module.csproj" />
+	  <ProjectReference Include="..\..\Autobahn.Core.Module\Autobahn.Core.csproj" />
 	</ItemGroup>
-
 </Project>

@@ -8,7 +8,7 @@ namespace Autobahn.Assessments.Interfaces
      /// <summary>
      /// The ILearnerAction
      /// </summary>
-    public partial Interface ILearnerAction
+    public partial interface ILearnerAction
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="LearnerAction"/> model

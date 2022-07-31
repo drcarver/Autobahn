@@ -8,7 +8,7 @@ namespace Autobahn.EarlyLearning.Interfaces
      /// <summary>
      /// The IELStaff
      /// </summary>
-    public partial Interface IELStaff
+    public partial interface IELStaff
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="ELStaff"/> model

@@ -8,7 +8,7 @@ namespace Autobahn.LearningResources.Interfaces
      /// <summary>
      /// The ILearningResource
      /// </summary>
-    public partial Interface ILearningResource
+    public partial interface ILearningResource
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="LearningResource"/> model

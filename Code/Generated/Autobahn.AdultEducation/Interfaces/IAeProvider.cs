@@ -8,7 +8,7 @@ namespace Autobahn.AdultEducation.Interfaces
      /// <summary>
      /// The IAeProvider
      /// </summary>
-    public partial Interface IAeProvider
+    public partial interface IAeProvider
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AeProvider"/> model

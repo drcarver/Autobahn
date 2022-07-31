@@ -8,7 +8,7 @@ namespace Autobahn.Workforce.Interfaces
      /// <summary>
      /// The IWorkforceProgramParticipation
      /// </summary>
-    public partial Interface IWorkforceProgramParticipation
+    public partial interface IWorkforceProgramParticipation
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="WorkforceProgramParticipation"/> model

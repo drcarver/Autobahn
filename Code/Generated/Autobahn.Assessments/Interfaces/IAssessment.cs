@@ -8,7 +8,7 @@ namespace Autobahn.Assessments.Interfaces
      /// <summary>
      /// The IAssessment
      /// </summary>
-    public partial Interface IAssessment
+    public partial interface IAssessment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Assessment"/> model

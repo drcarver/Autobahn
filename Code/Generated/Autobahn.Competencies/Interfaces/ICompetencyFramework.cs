@@ -8,7 +8,7 @@ namespace Autobahn.Competencies.Interfaces
      /// <summary>
      /// The ICompetencyFramework
      /// </summary>
-    public partial Interface ICompetencyFramework
+    public partial interface ICompetencyFramework
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyFramework"/> model

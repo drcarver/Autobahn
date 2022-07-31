@@ -8,7 +8,7 @@ namespace Autobahn.AdultEducation.Interfaces
      /// <summary>
      /// The IAeStaff
      /// </summary>
-    public partial Interface IAeStaff
+    public partial interface IAeStaff
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AeStaff"/> model

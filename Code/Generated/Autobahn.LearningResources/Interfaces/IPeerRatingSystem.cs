@@ -8,7 +8,7 @@ namespace Autobahn.LearningResources.Interfaces
      /// <summary>
      /// The IPeerRatingSystem
      /// </summary>
-    public partial Interface IPeerRatingSystem
+    public partial interface IPeerRatingSystem
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PeerRatingSystem"/> model
