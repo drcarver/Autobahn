@@ -16,5 +16,30 @@
         public string UseCaseConnection { get; set; }
         public string URL { get; set; }
         public string SubmitAComment { get; set; }
-    }
+        public string TableName { get; set; }
+        public string DomainName { get; set; }
+
+        public CEDSElement Clone()
+        {
+            return new CEDSElement
+            {
+                ElementName = ElementName,
+                Definition = Definition,
+                OptionSet = OptionSet,
+                DomainEntityCategory = DomainEntityCategory,
+                Status = Status,
+                Format = Format,
+                ChangeNotes = ChangeNotes,
+                UsageNotes = UsageNotes,
+                GlobalID = GlobalID,
+                AlternateName = AlternateName,
+                TechnicalName = TechnicalName,
+                UseCaseConnection = UseCaseConnection,
+                URL = URL,
+                SubmitAComment = SubmitAComment,
+                TableName = TableName,
+                DomainName = DomainName
+            };
+        }
+}
 }

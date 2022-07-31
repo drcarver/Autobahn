@@ -110,6 +110,8 @@
     <Compile Include="MauiModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceModel.cs" />
+    <Compile Include="ReferencePicklList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -133,6 +135,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Autobahn.Entities\Autobahn.Entities.csproj">
+      <Project>{9cb926c8-4b9a-460c-a07a-be6b371d68e4}</Project>
+      <Name>Autobahn.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

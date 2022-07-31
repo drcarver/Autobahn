@@ -55,7 +55,7 @@ namespace Autobahn.Entities
             PersonReferrals = new HashSet<PersonReferral>();
             PersonRelationships = new HashSet<PersonRelationship>();
             PersonRelationships1 = new HashSet<PersonRelationship>();
-            PersonStatus = new HashSet<PersonStatu>();
+            PersonStatus = new HashSet<PersonStatus>();
             QuarterlyEmploymentRecords = new HashSet<QuarterlyEmploymentRecord>();
             RecordStatuses = new HashSet<RecordStatus>();
             RecordStatusHistories = new HashSet<RecordStatusHistory>();
@@ -213,7 +213,7 @@ namespace Autobahn.Entities
         public virtual ICollection<PersonRelationship> PersonRelationships1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonStatu> PersonStatus { get; set; }
+        public virtual ICollection<PersonStatus> PersonStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QuarterlyEmploymentRecord> QuarterlyEmploymentRecords { get; set; }

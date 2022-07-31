@@ -4,8 +4,8 @@ namespace Autobahn.Entities
 {
     public partial class Autobahn : DbContext
     {
-        public Autobahn()
-            : base("name=Autobahn")
+        public Autobahn(string cnstring)
+            : base(cnstring)
         {
         }
 
@@ -304,7 +304,7 @@ namespace Autobahn.Entities
         public virtual DbSet<PersonProgramParticipation> PersonProgramParticipations { get; set; }
         public virtual DbSet<PersonReferral> PersonReferrals { get; set; }
         public virtual DbSet<PersonRelationship> PersonRelationships { get; set; }
-        public virtual DbSet<PersonStatu> PersonStatus { get; set; }
+        public virtual DbSet<PersonStatus> PersonStatus { get; set; }
         public virtual DbSet<PersonTelephone> PersonTelephones { get; set; }
         public virtual DbSet<ProfessionalDevelopmentActivity> ProfessionalDevelopmentActivities { get; set; }
         public virtual DbSet<ProfessionalDevelopmentRequirement> ProfessionalDevelopmentRequirements { get; set; }

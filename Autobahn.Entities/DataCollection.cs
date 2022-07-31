@@ -303,7 +303,7 @@ namespace Autobahn.Entities
             PersonProgramParticipations = new HashSet<PersonProgramParticipation>();
             PersonReferrals = new HashSet<PersonReferral>();
             PersonRelationships = new HashSet<PersonRelationship>();
-            PersonStatus = new HashSet<PersonStatu>();
+            PersonStatus = new HashSet<PersonStatus>();
             PersonTelephones = new HashSet<PersonTelephone>();
             ProfessionalDevelopmentActivities = new HashSet<ProfessionalDevelopmentActivity>();
             ProfessionalDevelopmentRequirements = new HashSet<ProfessionalDevelopmentRequirement>();
@@ -1275,7 +1275,7 @@ namespace Autobahn.Entities
         public virtual ICollection<PersonRelationship> PersonRelationships { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonStatu> PersonStatus { get; set; }
+        public virtual ICollection<PersonStatus> PersonStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonTelephone> PersonTelephones { get; set; }
