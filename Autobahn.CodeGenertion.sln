@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Entities", "Autoba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autobahn.Core", "Code\Autobahn.Core.Module\Autobahn.Core.csproj", "{D176733B-AAD7-4696-A0F5-F832A8ECB0DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Reference", "Code\Autobahn.Reference\Autobahn.Reference.csproj", "{50518B8D-2ADD-4871-B124-88E4B03A0D7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autobahn.Common", "Code\Generated\Autobahn.Common\Autobahn.Common.csproj", "{18A81C7C-1F0C-4CD6-ACBD-1292D94977B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{D176733B-AAD7-4696-A0F5-F832A8ECB0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D176733B-AAD7-4696-A0F5-F832A8ECB0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D176733B-AAD7-4696-A0F5-F832A8ECB0DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50518B8D-2ADD-4871-B124-88E4B03A0D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50518B8D-2ADD-4871-B124-88E4B03A0D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50518B8D-2ADD-4871-B124-88E4B03A0D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50518B8D-2ADD-4871-B124-88E4B03A0D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A81C7C-1F0C-4CD6-ACBD-1292D94977B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A81C7C-1F0C-4CD6-ACBD-1292D94977B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A81C7C-1F0C-4CD6-ACBD-1292D94977B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A81C7C-1F0C-4CD6-ACBD-1292D94977B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
