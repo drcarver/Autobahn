@@ -11,11 +11,6 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencyDefinition
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CompetencyDefinition"/> model
-        /// </summary>
-        Guid CompetencyDefinitionId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyFramework"/> model
         /// </summary>
         Guid CompetencyFrameworkId { get; set; }

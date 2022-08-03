@@ -11,11 +11,6 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialDefinition
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
-        /// </summary>
-        Guid CredentialDefinitionId { get; set; }
-
-        /// <summary>
         /// Defines the CredentialDefinition.AlternateName non nullable property
         /// </summary>
         System.String AlternateName { get; set; }
@@ -31,9 +26,9 @@ namespace Autobahn.Credentials.Interfaces
         System.String Description { get; set; }
 
         /// <summary>
-        /// The North American Industry Classification System (NAICS) code associated with an individual's employment.
+        /// Defines the CredentialDefinition.EmploymentNAICSCode non nullable property
         /// </summary>
-    System.String EmploymentNAICSCode { get; set; }
+        System.String EmploymentNAICSCode { get; set; }
 
         /// <summary>
         /// Defines the CredentialDefinition.ImageUrl non nullable property

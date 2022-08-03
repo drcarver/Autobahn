@@ -11,11 +11,6 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialOffered
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CredentialOffered"/> model
-        /// </summary>
-        Guid CredentialOfferedId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
         /// </summary>
         Guid CredentialDefinitionId { get; set; }
@@ -26,14 +21,14 @@ namespace Autobahn.Credentials.Interfaces
         Guid CredentialIssuerId { get; set; }
 
         /// <summary>
-        /// The first date a credential was offered.
+        /// Defines the CredentialOffered.CredentialOfferedStartDate nullable property
         /// </summary>
-    System.DateTime? CredentialOfferedStartDate { get; set; }
+        System.DateTime? CredentialOfferedStartDate { get; set; }
 
         /// <summary>
-        /// The last date a credential was offered.
+        /// Defines the CredentialOffered.CredentialOfferedEndDate nullable property
         /// </summary>
-    System.DateTime? CredentialOfferedEndDate { get; set; }
+        System.DateTime? CredentialOfferedEndDate { get; set; }
 
         /// <summary>
         /// Defines the CredentialOffered.RecordStartDateTime nullable property

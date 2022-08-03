@@ -11,11 +11,6 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacility
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="Facility"/> model
-        /// </summary>
-        Guid FacilityId { get; set; }
-
-        /// <summary>
         /// Defines the Facility.Identifier non nullable property
         /// </summary>
         System.String Identifier { get; set; }
@@ -26,9 +21,9 @@ namespace Autobahn.Facilities.Interfaces
         System.String BuildingName { get; set; }
 
         /// <summary>
-        /// The number of the building on the site, if more than one building shares the same address.
+        /// Defines the Facility.BuildingSiteNumber non nullable property
         /// </summary>
-    System.String BuildingSiteNumber { get; set; }
+        System.String BuildingSiteNumber { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefBuildingUseType"/> model
@@ -41,44 +36,44 @@ namespace Autobahn.Facilities.Interfaces
         Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
+        /// Defines the Facility.BuildingArea non nullable property
         /// </summary>
-    System.String BuildingArea { get; set; }
+        System.String BuildingArea { get; set; }
 
         /// <summary>
-        /// The number of stories in a building, excluding the basement if its ceiling is less than three feet above ground level.
+        /// Defines the Facility.BuildingNumberOfStories non nullable property
         /// </summary>
-    System.String BuildingNumberOfStories { get; set; }
+        System.String BuildingNumberOfStories { get; set; }
 
         /// <summary>
-        /// The year a building was constructed, as indicated by cornerstone or official government records.
+        /// Defines the Facility.BuildingYearBuilt non nullable property
         /// </summary>
-    System.String BuildingYearBuilt { get; set; }
+        System.String BuildingYearBuilt { get; set; }
 
         /// <summary>
-        /// The most recent year that a comprehensive upgrade of ALL major building systems and components was completed, such that it functions as a modern building, as measured by a facility condition index not greater than 15%.
+        /// Defines the Facility.BuildingYearOfLastModernization non nullable property
         /// </summary>
-    System.String BuildingYearOfLastModernization { get; set; }
+        System.String BuildingYearOfLastModernization { get; set; }
 
         /// <summary>
-        /// The date the property/facility was acquired.
+        /// Defines the Facility.FacilityAcquisitionDate nullable property
         /// </summary>
-    System.DateTime? FacilityAcquisitionDate { get; set; }
+        System.DateTime? FacilityAcquisitionDate { get; set; }
 
         /// <summary>
-        /// An indication of whether the building is built for permanent use in the same location or is relocatable.
+        /// Defines the Facility.FacilityBuildingPermanency non nullable property
         /// </summary>
-    System.String FacilityBuildingPermanency { get; set; }
+        System.String FacilityBuildingPermanency { get; set; }
 
         /// <summary>
-        /// The time, in years, of the expected useful life of a facility for the purposes of depreciation.
+        /// Defines the Facility.FacilityExpectedLife non nullable property
         /// </summary>
-    System.String FacilityExpectedLife { get; set; }
+        System.String FacilityExpectedLife { get; set; }
 
         /// <summary>
-        /// Indicates the public or private entity holds legal title to the building and/or site.
+        /// Defines the Facility.FacilityOwnershipIndicator nullable property
         /// </summary>
-    System.Boolean? FacilityOwnershipIndicator { get; set; }
+        System.Boolean? FacilityOwnershipIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefBuildingHistoricStatus"/> model

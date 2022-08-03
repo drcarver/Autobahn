@@ -13,11 +13,6 @@ namespace Autobahn.Workforce.Models
     public partial class WorkforceProgramParticipation : IWorkforceProgramParticipation
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="WorkforceProgramParticipation"/> model
-        /// </summary>
-        public Guid WorkforceProgramParticipationId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="PersonProgramParticipation"/> model
         /// </summary>
         public Guid PersonProgramParticipationId { get; set; }

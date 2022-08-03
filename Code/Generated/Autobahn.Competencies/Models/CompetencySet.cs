@@ -13,11 +13,6 @@ namespace Autobahn.Competencies.Models
     public partial class CompetencySet : ICompetencySet
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CompetencySet"/> model
-        /// </summary>
-        public Guid CompetencySetId { get; set; }
-
-        /// <summary>
         /// Defines the CompetencySet.ChildOf_CompetencySet nullable property
         /// </summary>
         public System.Int32? ChildOf_CompetencySet { get; set; }

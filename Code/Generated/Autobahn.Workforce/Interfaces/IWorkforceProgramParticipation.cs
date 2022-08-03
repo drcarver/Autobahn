@@ -11,11 +11,6 @@ namespace Autobahn.Workforce.Interfaces
     public partial interface IWorkforceProgramParticipation
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="WorkforceProgramParticipation"/> model
-        /// </summary>
-        Guid WorkforceProgramParticipationId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="PersonProgramParticipation"/> model
         /// </summary>
         Guid PersonProgramParticipationId { get; set; }

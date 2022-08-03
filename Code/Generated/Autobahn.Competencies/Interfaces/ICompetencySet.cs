@@ -11,11 +11,6 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencySet
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CompetencySet"/> model
-        /// </summary>
-        Guid CompetencySetId { get; set; }
-
-        /// <summary>
         /// Defines the CompetencySet.ChildOf_CompetencySet nullable property
         /// </summary>
         System.Int32? ChildOf_CompetencySet { get; set; }

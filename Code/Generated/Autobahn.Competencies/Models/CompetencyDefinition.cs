@@ -13,11 +13,6 @@ namespace Autobahn.Competencies.Models
     public partial class CompetencyDefinition : ICompetencyDefinition
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CompetencyDefinition"/> model
-        /// </summary>
-        public Guid CompetencyDefinitionId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyFramework"/> model
         /// </summary>
         public Guid CompetencyFrameworkId { get; set; }

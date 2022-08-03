@@ -104,9 +104,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NDSElement.cs" />
     <Compile Include="CEDSElement.cs" />
+    <Compile Include="NDSElementMap.cs" />
     <Compile Include="CEDSMap.cs" />
     <Compile Include="CEDSService.cs" />
+    <Compile Include="CEDSTable.cs" />
+    <Compile Include="CEDSTableMap.cs" />
     <Compile Include="MauiModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,7 +125,6 @@
     <Content Include="Reference\MauiProject.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="CEDS-V10.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -11,11 +11,6 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialAward
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CredentialAward"/> model
-        /// </summary>
-        Guid CredentialAwardId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
         /// </summary>
         Guid CredentialDefinitionId { get; set; }
@@ -51,9 +46,9 @@ namespace Autobahn.Credentials.Interfaces
         System.DateTime? CompletionDate { get; set; }
 
         /// <summary>
-        /// The date, if any, on which the qualification, achievement, personal or organizational quality, or aspect of an identity expires or requires renewal.
+        /// Defines the CredentialAward.CredentialAwardEndDate nullable property
         /// </summary>
-    System.DateTime? CredentialAwardEndDate { get; set; }
+        System.DateTime? CredentialAwardEndDate { get; set; }
 
         /// <summary>
         /// Defines the CredentialAward.EvidenceURL non nullable property
@@ -76,9 +71,9 @@ namespace Autobahn.Credentials.Interfaces
         System.String RevokedReason { get; set; }
 
         /// <summary>
-        /// The date on which the qualification, achievement, personal or organizational quality, or aspect of an identity was conferred.
+        /// Defines the CredentialAward.CredentialAwardStartDate nullable property
         /// </summary>
-    System.DateTime? CredentialAwardStartDate { get; set; }
+        System.DateTime? CredentialAwardStartDate { get; set; }
 
         /// <summary>
         /// Defines the CredentialAward.RecordStartDateTime nullable property

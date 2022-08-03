@@ -11,11 +11,6 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencyFramework
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="CompetencyFramework"/> model
-        /// </summary>
-        Guid CompetencyFrameworkId { get; set; }
-
-        /// <summary>
         /// Defines the CompetencyFramework.URI non nullable property
         /// </summary>
         System.String URI { get; set; }
@@ -91,9 +86,9 @@ namespace Autobahn.Competencies.Interfaces
         System.String RightsHolder { get; set; }
 
         /// <summary>
-        /// The date on which this content was first published.
+        /// Defines the CompetencyFramework.CompetencyFrameworkPublicationDate nullable property
         /// </summary>
-    System.DateTime? CompetencyFrameworkPublicationDate { get; set; }
+        System.DateTime? CompetencyFrameworkPublicationDate { get; set; }
 
         /// <summary>
         /// Defines the CompetencyFramework.CompetencyFrameworkSourceUrl non nullable property

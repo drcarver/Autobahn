@@ -5,7 +5,7 @@ namespace AutobahnCodeGen
     public sealed class CEDSMap : ClassMap<CEDSElement>
     {
         public CEDSMap()
-{
+        {
             Map(x => x.ElementName).Name("Element Name");
             Map(x => x.Definition).Name("Definition");
             Map(x => x.OptionSet).Name("Option Set");

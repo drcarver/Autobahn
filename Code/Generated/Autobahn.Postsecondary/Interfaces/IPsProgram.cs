@@ -11,11 +11,6 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsProgram
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="PsProgram"/> model
-        /// </summary>
-        Guid PsProgramId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
         /// </summary>
         Guid OrganizationId { get; set; }

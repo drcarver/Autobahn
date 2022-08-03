@@ -13,11 +13,6 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsInstitution : IPsInstitution
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="PsInstitution"/> model
-        /// </summary>
-        public Guid PsInstitutionId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
         /// </summary>
         public Guid OrganizationId { get; set; }

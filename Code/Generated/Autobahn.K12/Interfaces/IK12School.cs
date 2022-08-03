@@ -11,49 +11,44 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12School
     {
         /// <summary>
-        /// Reference to a required instance of the <see cref="K12School"/> model
-        /// </summary>
-        Guid K12SchoolId { get; set; }
-
-        /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
         /// </summary>
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
+        /// Defines the K12School.CharterSchoolIndicator nullable property
         /// </summary>
-    System.Boolean? CharterSchoolIndicator { get; set; }
+        System.Boolean? CharterSchoolIndicator { get; set; }
 
         /// <summary>
-        /// The school year in which a charter school was initially approved.
+        /// Defines the K12School.CharterSchoolApprovalYear non nullable property
         /// </summary>
-    System.String CharterSchoolApprovalYear { get; set; }
+        System.String CharterSchoolApprovalYear { get; set; }
 
         /// <summary>
-        /// The full name of an agency that accredited a school.
+        /// Defines the K12School.AccreditationAgencyName non nullable property
         /// </summary>
-    System.String AccreditationAgencyName { get; set; }
+        System.String AccreditationAgencyName { get; set; }
 
         /// <summary>
-        /// Indicates that the charter school offers open enrollment.
+        /// Defines the K12School.CharterSchoolOpenEnrollmentIndicator nullable property
         /// </summary>
-    System.Boolean? CharterSchoolOpenEnrollmentIndicator { get; set; }
+        System.Boolean? CharterSchoolOpenEnrollmentIndicator { get; set; }
 
         /// <summary>
-        /// The effective date of the contract (or charter) that an approved charter school authorizer authorized the charter school to operate in the state under the state's charter school legislation.
+        /// Defines the K12School.CharterSchoolContractApprovalDate nullable property
         /// </summary>
-    System.DateTime? CharterSchoolContractApprovalDate { get; set; }
+        System.DateTime? CharterSchoolContractApprovalDate { get; set; }
 
         /// <summary>
-        /// The unique number the SEA assigns to the contract (or charter) that authorizes the charter school to operate in the state under the state's charter school legislation.
+        /// Defines the K12School.CharterSchoolContractIdNumber non nullable property
         /// </summary>
-    System.String CharterSchoolContractIdNumber { get; set; }
+        System.String CharterSchoolContractIdNumber { get; set; }
 
         /// <summary>
-        /// The date by which the charter school must renew its contract (or charter) with an approved charter school authorizer in order to continue to operate in the state under the state's charter school legislation.
+        /// Defines the K12School.CharterSchoolContractRenewalDate nullable property
         /// </summary>
-    System.DateTime? CharterSchoolContractRenewalDate { get; set; }
+        System.DateTime? CharterSchoolContractRenewalDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="K12CharterSchoolManagementOrganization"/> model

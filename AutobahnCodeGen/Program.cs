@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Autobahn.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Remoting.Channels;
+using System.Xml.Linq;
 
 namespace AutobahnCodeGen
 {
@@ -10,52 +11,144 @@ namespace AutobahnCodeGen
     {
         static void Main(string[] args)
         {
-            Dictionary<string, List<CEDSElement>> CEDDomains = new Dictionary<string, List<CEDSElement>>();
+            Dictionary<string, List<string>> CEDDomains = new Dictionary<string, List<string>>();
             List<CEDSElement> CEDElements = new List<CEDSElement>();
             var csv = new CEDSService();
-            var records = csv.ReadCSVFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\AutobahnCodeGen\CEDS-V10.csv");
+            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDS-V10.csv");
+            var ndsElementsMetadata = csv.ReadNDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElements.csv");
+            var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTables.csv");
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
 
-            foreach (var record in records)
+            // Set the domains in the tablesMetadata
+            foreach (var table in tablesMetadata)
             {
-                var domains = record.DomainEntityCategory.Replace(Environment.NewLine, "|").Replace("||", "|")
-                    .Split('|');
-                foreach (var domain in domains)
+                if (table.TableName.StartsWith("Ae")
+                    || table.TableName.EndsWith("AE"))
                 {
-                    var domaintable = domain.Replace("->", "|").Split('|');
-                    if (domaintable.Length >= 2)
+                    table.Domain = "Adult Education";
+                }
+                if (table.TableName.StartsWith("EL") 
+                    || table.TableName.StartsWith("EarlyChildhood"))
+                {
+                    table.Domain = "Early Learning";
+                }
+                if (table.TableName.StartsWith("Assessment")
+                    || table.TableName.StartsWith("Rubric")
+                    || table.TableName.StartsWith("Goal")
+                    || table.TableName.StartsWith("Learner"))
+                {
+                    table.Domain = "Assessment";
+                }
+                if (table.TableName.StartsWith("Learning")
+                    || table.TableName.StartsWith("Peer"))
+                {
+                    table.Domain = "Learning Resource";
+                }
+                if (table.TableName.StartsWith("K12"))
+                {
+                    table.Domain = "K12";
+                }
+                if (table.TableName.StartsWith("Build")
+                    || table.TableName.StartsWith("Facility")
+                   )
+                {
+                    table.Domain = "Facilities";
+                }
+                if (table.TableName.StartsWith("Ps")
+                    || table.TableName.StartsWith("PS"))
+                {
+                    table.Domain = "Postsecondary";
+                }
+                if (table.TableName.StartsWith("Competency"))
+                {
+                    table.Domain = "Competencies";
+                }
+                if (table.TableName.StartsWith("Credential"))
+                {
+                    table.Domain = "Credentials";
+                }
+                if (table.TableName.StartsWith("Cte")
+                    || table.TableName.EndsWith("Cte"))
+                {
+                    table.Domain = "Career and Technical";
+                }
+                if (table.TableName.StartsWith("Organization") 
+                    || table.TableName.StartsWith("Person")
+                    || table.TableName.StartsWith("Staff")
+                    || table.TableName.StartsWith("Teacher")
+                    || table.TableName.StartsWith("Role"))
+                {
+                    table.Domain = "Common";
+                }
+                if (table.TableName.StartsWith("App")
+                    || table.TableName.StartsWith("Auth"))
+                {
+                    table.Domain = "Authentication and Authorization";
+                }
+                if (table.TableName.StartsWith("Ref"))
+                {
+                    table.Domain = "Reference";
+                }
+                if (table.TableName.StartsWith("Workforce"))
+                {
+                    table.Domain = "Workforce";
+                }
+                if (string.IsNullOrEmpty(table.Domain))
+                {
+                    table.Domain = "Common";
+                }
+            }
+
+            // Set the reference to the correct domain
+            foreach (var table in tablesMetadata.Where(t => t.TableName.StartsWith("Ref")))
+            {
+                foreach (var col in tablesMetadata.Where(c => c.ColumnName.StartsWith(table.TableName)))
+                {
+                    if (table.Domain == "Reference")
                     {
-                        var newrecord = record.Clone();
-                        newrecord.DomainName = domaintable[0].Trim();
-                        newrecord.TableName = domaintable[1].Replace(" ", string.Empty).Trim();
-                        CEDElements.Add(newrecord);
+                        table.Domain = col.Domain;
+                    }
+                    else if (table.Domain != col.Domain)
+                    {
+                        table.Domain = "Common";
                     }
                 }
             }
 
-            foreach (var element in CEDElements)
+            // Set the technical name
+            foreach (var col in ndsElementsMetadata)
             {
-                if (CEDDomains.Keys.Contains(element.DomainName.ToLower().Trim()))
+                var cedsElements = cedsElementsMetadata.Where(c => c.ElementName == col.ElementName);
+                foreach (var element in cedsElements)
                 {
-                    CEDDomains[element.DomainName.ToLower().Trim()].Add(element);
+                    col.TechnicalName = element.TechnicalName;
+                }
+            }
+
+            // Create the Domains Dictionary
+            foreach (var table in tablesMetadata)
+            {
+                if (CEDDomains.ContainsKey(table.Domain))
+                {
+                    if (!CEDDomains[table.Domain].Contains(table.TableName))
+                    {
+                        CEDDomains[table.Domain].Add(table.TableName);
+                    }
                 }
                 else
                 {
-                    CEDDomains.Add(element.DomainName.ToLower().Trim(), new List<CEDSElement>());
-                    CEDDomains[element.DomainName.ToLower().Trim()].Add(element);
+                    CEDDomains.Add(table.Domain, new List<string>());
+                    CEDDomains[table.Domain].Add(table.TableName);
                 }
             }
 
-            foreach (var dir in CEDDomains.Keys)
-            {
-                var fname = CEDDomains[dir][0].DomainName.Replace(" ", string.Empty);
-                var filedir = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
-                MauiModule.GenerateModule(filedir, $"Autobahn.{fname}", CEDDomains[dir], types.GetTypes());
-            }
+            MauiModule.GenerateModule(CEDDomains, tablesMetadata, types.GetTypes().ToList(), ndsElementsMetadata);
 
-            var skeys = MauiModule.RefModels.Values.Where(c => c.Count == 1)?.Count();
-            var mkeys = MauiModule.RefModels.Values.Where(c => c.Count > 1)?.Count();
+            //csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
+            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
+
+            //var skeys = MauiModule.RefModels.Values.Where(c => c.Count == 1)?.Count();
+            //var mkeys = MauiModule.RefModels.Values.Where(c => c.Count > 1)?.Count();
         }
     }
-
 }
