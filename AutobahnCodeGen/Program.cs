@@ -16,6 +16,36 @@ namespace AutobahnCodeGen
             var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTables.csv");
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
 
+            // Add any missing clases and columns from the entites
+            foreach (var classtype in types.GetTypes().ToList())
+            {
+                if (!classtype.IsClass)
+                {
+                    continue;
+                }
+
+                var model = tablesMetadata.FirstOrDefault(t => t.TableName == classtype.Name.Replace("Statu", "Status"));
+                if (model == null)
+                {
+                    foreach (var prop in classtype.GetProperties())
+                    {
+                        if (prop.GetAccessors()[0].IsVirtual)
+                        {
+                            continue;
+                        }
+
+                        var existing = cedsElementsMetadata.FirstOrDefault(t => t.TechnicalName == prop.Name);
+                        tablesMetadata.Add(new CEDSTable
+                        {
+                            TableName = classtype.Name.EndsWith("Statu") ? classtype.Name.Replace("Statu", "Status") : classtype.Name,
+                            ColumnName = prop.Name,
+                            GlobalID = existing?.GlobalID,
+                            Version = "--dbtable--"
+                        });
+                    }
+                }
+            }
+
             // Set the domains in the tablesMetadata
             foreach (var table in tablesMetadata)
             {
@@ -141,8 +171,8 @@ namespace AutobahnCodeGen
 
             MauiModule.GenerateModule(CEDDomains, tablesMetadata, types.GetTypes().ToList(), ndsElementsMetadata);
 
-            //csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
-            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
+            csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
+            csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
         }
     }
 }
