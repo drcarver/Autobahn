@@ -3,14 +3,15 @@
 //* FileName:   PsStudentSection.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentSection
      /// </summary>
-    public partial class PsStudentSection : IPsStudentSection
+    public partial class PsStudentSection : AutobahnBase, Interfaces.IPsStudentSection
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -53,24 +54,9 @@ namespace Autobahn.Postsecondary.Models
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 
         /// <summary>
-        /// Defines the PsStudentSection.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentSection.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Defines the PsStudentSection.NumberOfCreditsAttempted nullable property
         /// </summary>
         public System.Decimal? NumberOfCreditsAttempted { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

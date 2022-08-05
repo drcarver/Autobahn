@@ -3,12 +3,14 @@
 //* FileName:   IPsStudentAcademicAward.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPsStudentAcademicAward
      /// </summary>
-    public partial interface IPsStudentAcademicAward
+    public partial interface IPsStudentAcademicAward : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -44,26 +46,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// Reference to an optional instance of the <see cref="RefPESCAwardLevelType"/> model
         /// </summary>
         Guid? RefPESCAwardLevelTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentAcademicAward.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentAcademicAward.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

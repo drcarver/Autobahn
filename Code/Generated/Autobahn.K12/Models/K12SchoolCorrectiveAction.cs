@@ -3,14 +3,15 @@
 //* FileName:   K12SchoolCorrectiveAction.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12SchoolCorrectiveAction
      /// </summary>
-    public partial class K12SchoolCorrectiveAction : IK12SchoolCorrectiveAction
+    public partial class K12SchoolCorrectiveAction : AutobahnBase, Interfaces.IK12SchoolCorrectiveAction
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12School"/> model
@@ -21,21 +22,6 @@ namespace Autobahn.K12.Models
         /// Reference to a required instance of the <see cref="RefCorrectiveActionType"/> model
         /// </summary>
         public Guid RefCorrectiveActionTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the K12SchoolCorrectiveAction.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12SchoolCorrectiveAction.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

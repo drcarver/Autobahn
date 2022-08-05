@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentParticipantSession.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentParticipantSession
      /// </summary>
-    public partial interface IAssessmentParticipantSession
+    public partial interface IAssessmentParticipantSession : IAutobahnBase
     {
         /// <summary>
         /// Defines the AssessmentParticipantSession.ActualStartDateTime nullable property
@@ -89,26 +91,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Defines the AssessmentParticipantSession.PlatformUserAgent non nullable property
         /// </summary>
         System.String PlatformUserAgent { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentParticipantSession.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentParticipantSession.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

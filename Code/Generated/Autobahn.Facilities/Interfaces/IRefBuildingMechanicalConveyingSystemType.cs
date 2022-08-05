@@ -3,47 +3,14 @@
 //* FileName:   IRefBuildingMechanicalConveyingSystemType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
-     /// The IRefBuildingMechanicalConveyingSystemType
+     /// The RefBuildingMechanicalConveyingSystemType Interface
      /// </summary>
-    public partial interface IRefBuildingMechanicalConveyingSystemType
+    public partial interface IRefBuildingMechanicalConveyingSystemType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingMechanicalConveyingSystemType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

@@ -3,47 +3,14 @@
 //* FileName:   IRefGoalStatusType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
-     /// The IRefGoalStatusType
+     /// The RefGoalStatusType Interface
      /// </summary>
-    public partial interface IRefGoalStatusType
+    public partial interface IRefGoalStatusType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefGoalStatusType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefGoalStatusType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefGoalStatusType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefGoalStatusType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefGoalStatusType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefGoalStatusType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

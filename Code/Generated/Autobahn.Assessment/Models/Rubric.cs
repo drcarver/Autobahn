@@ -3,14 +3,15 @@
 //* FileName:   Rubric.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The Rubric
      /// </summary>
-    public partial class Rubric : IRubric
+    public partial class Rubric : AutobahnBase, Interfaces.IRubric
     {
         /// <summary>
         /// Defines the Rubric.Identifier non nullable property
@@ -31,21 +32,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the Rubric.Description non nullable property
         /// </summary>
         public System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the Rubric.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the Rubric.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

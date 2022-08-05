@@ -3,14 +3,15 @@
 //* FileName:   K12StudentCourseSection.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentCourseSection
      /// </summary>
-    public partial class K12StudentCourseSection : IK12StudentCourseSection
+    public partial class K12StudentCourseSection : AutobahnBase, Interfaces.IK12StudentCourseSection
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -101,21 +102,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
         /// </summary>
         public Guid? RefCourseGPAApplicabilityId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentCourseSection.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentCourseSection.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

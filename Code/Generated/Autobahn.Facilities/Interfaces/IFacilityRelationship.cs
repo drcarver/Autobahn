@@ -3,12 +3,14 @@
 //* FileName:   IFacilityRelationship.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The IFacilityRelationship
      /// </summary>
-    public partial interface IFacilityRelationship
+    public partial interface IFacilityRelationship : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Parent_Facility"/> model
@@ -19,26 +21,6 @@ namespace Autobahn.Facilities.Interfaces
         /// Reference to a required instance of the <see cref="Facility"/> model
         /// </summary>
         Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityRelationship.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityRelationship.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

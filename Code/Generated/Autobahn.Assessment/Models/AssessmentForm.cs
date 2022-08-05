@@ -3,14 +3,15 @@
 //* FileName:   AssessmentForm.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentForm
      /// </summary>
-    public partial class AssessmentForm : IAssessmentForm
+    public partial class AssessmentForm : AutobahnBase, Interfaces.IAssessmentForm
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Assessment"/> model
@@ -101,21 +102,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the AssessmentForm.AssessmentFormGUID non nullable property
         /// </summary>
         public System.String AssessmentFormGUID { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentForm.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentForm.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

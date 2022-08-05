@@ -3,12 +3,14 @@
 //* FileName:   ICredentialDefAgent.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Credentials.Interfaces
 {
      /// <summary>
      /// The ICredentialDefAgent
      /// </summary>
-    public partial interface ICredentialDefAgent
+    public partial interface ICredentialDefAgent : IAutobahnBase
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="Organization"/> model
@@ -29,26 +31,6 @@ namespace Autobahn.Credentials.Interfaces
         /// Reference to an optional instance of the <see cref="RefCredentialDefAgentRoleType"/> model
         /// </summary>
         Guid? RefCredentialDefAgentRoleTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefAgent.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefAgent.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

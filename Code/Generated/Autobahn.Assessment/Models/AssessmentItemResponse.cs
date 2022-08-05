@@ -3,14 +3,15 @@
 //* FileName:   AssessmentItemResponse.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentItemResponse
      /// </summary>
-    public partial class AssessmentItemResponse : IAssessmentItemResponse
+    public partial class AssessmentItemResponse : AutobahnBase, Interfaces.IAssessmentItemResponse
     {
         /// <summary>
         /// Defines the AssessmentItemResponse.Value non nullable property
@@ -106,21 +107,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="RefAssessmentItemResponseScoreStatus"/> model
         /// </summary>
         public Guid? RefAssessmentItemResponseScoreStatusId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentItemResponse.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentItemResponse.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

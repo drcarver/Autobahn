@@ -3,14 +3,15 @@
 //* FileName:   AssessmentSession.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentSession
      /// </summary>
-    public partial class AssessmentSession : IAssessmentSession
+    public partial class AssessmentSession : AutobahnBase, Interfaces.IAssessmentSession
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="AssessmentAdministration"/> model
@@ -81,21 +82,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="School_Organization"/> model
         /// </summary>
         public Guid? School_OrganizationId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSession.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSession.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

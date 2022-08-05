@@ -3,12 +3,14 @@
 //* FileName:   IFacilityEnergy.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The IFacilityEnergy
      /// </summary>
-    public partial interface IFacilityEnergy
+    public partial interface IFacilityEnergy : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Facility"/> model
@@ -34,26 +36,6 @@ namespace Autobahn.Facilities.Interfaces
         /// Reference to an optional instance of the <see cref="RefFacilityUtilityType"/> model
         /// </summary>
         Guid? RefFacilityUtilityTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityEnergy.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityEnergy.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

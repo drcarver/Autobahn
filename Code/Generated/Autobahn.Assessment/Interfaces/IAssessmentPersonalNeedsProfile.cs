@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentPersonalNeedsProfile.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentPersonalNeedsProfile
      /// </summary>
-    public partial interface IAssessmentPersonalNeedsProfile
+    public partial interface IAssessmentPersonalNeedsProfile : IAutobahnBase
     {
         /// <summary>
         /// Defines the AssessmentPersonalNeedsProfile.AssessmentNeedType non nullable property
@@ -24,26 +26,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Defines the AssessmentPersonalNeedsProfile.ActivateByDefault nullable property
         /// </summary>
         System.Boolean? ActivateByDefault { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedsProfile.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedsProfile.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

@@ -3,14 +3,15 @@
 //* FileName:   Assessment.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The Assessment
      /// </summary>
-    public partial class Assessment : IAssessment
+    public partial class Assessment : AutobahnBase, Interfaces.IAssessment
     {
         /// <summary>
         /// Defines the Assessment.Identifier non nullable property
@@ -81,21 +82,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the Assessment.AssessmentFamilyShortName non nullable property
         /// </summary>
         public System.String AssessmentFamilyShortName { get; set; }
-
-        /// <summary>
-        /// Defines the Assessment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the Assessment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

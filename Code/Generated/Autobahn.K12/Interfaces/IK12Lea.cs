@@ -3,12 +3,14 @@
 //* FileName:   IK12Lea.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12Lea
      /// </summary>
-    public partial interface IK12Lea
+    public partial interface IK12Lea : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
@@ -44,26 +46,6 @@ namespace Autobahn.K12.Interfaces
         /// Reference to an optional instance of the <see cref="RefCharterLeaStatus"/> model
         /// </summary>
         Guid? RefCharterLeaStatusId { get; set; }
-
-        /// <summary>
-        /// Defines the K12Lea.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12Lea.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

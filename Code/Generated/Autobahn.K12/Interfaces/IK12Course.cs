@@ -3,12 +3,14 @@
 //* FileName:   IK12Course.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12Course
      /// </summary>
-    public partial interface IK12Course
+    public partial interface IK12Course : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Course"/> model
@@ -114,26 +116,6 @@ namespace Autobahn.K12.Interfaces
         /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the K12Course.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12Course.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

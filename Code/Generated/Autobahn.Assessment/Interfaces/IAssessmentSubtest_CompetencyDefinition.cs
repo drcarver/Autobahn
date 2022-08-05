@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentSubtest_CompetencyDefinition.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentSubtest_CompetencyDefinition
      /// </summary>
-    public partial interface IAssessmentSubtest_CompetencyDefinition
+    public partial interface IAssessmentSubtest_CompetencyDefinition : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentSubtest"/> model
@@ -19,26 +21,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to a required instance of the <see cref="CompetencyDefinition"/> model
         /// </summary>
         Guid CompetencyDefinitionId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest_CompetencyDefinition.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest_CompetencyDefinition.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

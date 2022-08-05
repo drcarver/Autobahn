@@ -3,12 +3,14 @@
 //* FileName:   IPsStudentEnrollment.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPsStudentEnrollment
      /// </summary>
-    public partial interface IPsStudentEnrollment
+    public partial interface IPsStudentEnrollment : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PSStudentEnrollment"/> model
@@ -161,16 +163,6 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid? RefDevelopmentalEducationTypeId { get; set; }
 
         /// <summary>
-        /// Defines the PsStudentEnrollment.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentEnrollment.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefPSExitOrWithdrawalType"/> model
         /// </summary>
         Guid? RefPSExitOrWithdrawalTypeId { get; set; }
@@ -179,16 +171,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// Defines the PsStudentEnrollment.DisplacedStudentStatus nullable property
         /// </summary>
         System.Boolean? DisplacedStudentStatus { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

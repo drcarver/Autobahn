@@ -3,14 +3,15 @@
 //* FileName:   CredentialDefinition.cs
 //**********************************************************
 
-using Autobahn.Credentials.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialDefinition
      /// </summary>
-    public partial class CredentialDefinition : ICredentialDefinition
+    public partial class CredentialDefinition : AutobahnBase, Interfaces.ICredentialDefinition
     {
         /// <summary>
         /// Defines the CredentialDefinition.AlternateName non nullable property
@@ -108,24 +109,9 @@ namespace Autobahn.Credentials.Models
         public Guid? RefCTDLAudienceLevelTypeId { get; set; }
 
         /// <summary>
-        /// Defines the CredentialDefinition.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefinition.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Defines the CredentialDefinition.CredentialDefinitionTerminalDegreeIndicator nullable property
         /// </summary>
         public System.Boolean? CredentialDefinitionTerminalDegreeIndicator { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

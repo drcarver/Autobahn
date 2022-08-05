@@ -1,15 +1,14 @@
-using System.ComponentModel;
 using Autobahn.Common.Interfaces;
 
 namespace Autobahn.Common.Models
 {
-     /// <summary>
-     /// The Base Model for Autobahn
-     /// </summary>
-    public partial class AutobahnBase : IAutobahnBase, IChangeTracking
+    /// <summary>
+    /// The Base Model for Autobahn
+    /// </summary>
+    public partial class AutobahnBase : IAutobahnBase
     {
         // private field for IsChanged
-        protected bool isChanged = false;
+        protected bool _isChanged = false;
 
         /// <summary>
         /// THe Id of the ViewModel
@@ -21,17 +20,23 @@ namespace Autobahn.Common.Models
         /// </summary>
         public virtual void AcceptChanges()
         {
-            isChanged = true;
+            _isChanged = false;
+            IsNew = false;
         }
 
         /// <summary>
         /// Has the ViewModelChanged?
         /// </summary>
-        public bool IsChanged { get => isChanged; }
+        public bool IsChanged { get => _isChanged; }
 
         /// <summary>
         /// Is it a new model?
         /// </summary>
         public bool IsNew { get; set; }
+
+        /// <summary>
+        /// Is it a deleted model?
+        /// </summary>
+        public bool IsDeleted { get; set; }
     }
 }

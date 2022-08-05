@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentFormSection_AssessmentItem.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentFormSection_AssessmentItem
      /// </summary>
-    public partial interface IAssessmentFormSection_AssessmentItem
+    public partial interface IAssessmentFormSection_AssessmentItem : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentFormSectionItem"/> model
@@ -29,26 +31,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to a required instance of the <see cref="AssessmentItem"/> model
         /// </summary>
         Guid AssessmentItemId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentFormSection_AssessmentItem.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentFormSection_AssessmentItem.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

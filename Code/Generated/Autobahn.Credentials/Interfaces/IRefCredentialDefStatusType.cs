@@ -3,47 +3,14 @@
 //* FileName:   IRefCredentialDefStatusType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Credentials.Interfaces
 {
      /// <summary>
-     /// The IRefCredentialDefStatusType
+     /// The RefCredentialDefStatusType Interface
      /// </summary>
-    public partial interface IRefCredentialDefStatusType
+    public partial interface IRefCredentialDefStatusType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefCredentialDefStatusType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

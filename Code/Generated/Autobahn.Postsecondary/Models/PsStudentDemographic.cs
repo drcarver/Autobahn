@@ -3,14 +3,15 @@
 //* FileName:   PsStudentDemographic.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentDemographic
      /// </summary>
-    public partial class PsStudentDemographic : IPsStudentDemographic
+    public partial class PsStudentDemographic : AutobahnBase, Interfaces.IPsStudentDemographic
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -58,16 +59,6 @@ namespace Autobahn.Postsecondary.Models
         public Guid? RefCohortExclusionId { get; set; }
 
         /// <summary>
-        /// Defines the PsStudentDemographic.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentDemographic.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Defines the PsStudentDemographic.ChildrenOfFallenHeroesIndicator nullable property
         /// </summary>
         public System.Boolean? ChildrenOfFallenHeroesIndicator { get; set; }
@@ -86,11 +77,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefNumberOfDependentsType"/> model
         /// </summary>
         public Guid? RefNumberOfDependentsTypeId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

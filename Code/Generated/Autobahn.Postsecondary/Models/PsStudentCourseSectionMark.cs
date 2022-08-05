@@ -3,14 +3,15 @@
 //* FileName:   PsStudentCourseSectionMark.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentCourseSectionMark
      /// </summary>
-    public partial class PsStudentCourseSectionMark : IPsStudentCourseSectionMark
+    public partial class PsStudentCourseSectionMark : AutobahnBase, Interfaces.IPsStudentCourseSectionMark
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PsStudentSection"/> model
@@ -31,21 +32,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentCourseSectionMark.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentCourseSectionMark.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

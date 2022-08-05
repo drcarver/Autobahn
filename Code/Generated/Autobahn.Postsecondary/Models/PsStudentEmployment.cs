@@ -3,14 +3,15 @@
 //* FileName:   PsStudentEmployment.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentEmployment
      /// </summary>
-    public partial class PsStudentEmployment : IPsStudentEmployment
+    public partial class PsStudentEmployment : AutobahnBase, Interfaces.IPsStudentEmployment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -36,21 +37,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefEmploymentStatusWhileEnrolled"/> model
         /// </summary>
         public Guid? RefEmploymentStatusWhileEnrolledId { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentEmployment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentEmployment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

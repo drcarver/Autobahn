@@ -3,12 +3,14 @@
 //* FileName:   IPsProgram.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPsProgram
      /// </summary>
-    public partial interface IPsProgram
+    public partial interface IPsProgram : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
@@ -54,26 +56,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// Reference to an optional instance of the <see cref="RefDQPCategoriesOfLearning"/> model
         /// </summary>
         Guid? RefDQPCategoriesOfLearningId { get; set; }
-
-        /// <summary>
-        /// Defines the PsProgram.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsProgram.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

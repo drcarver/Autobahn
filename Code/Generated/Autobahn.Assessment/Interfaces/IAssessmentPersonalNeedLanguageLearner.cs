@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentPersonalNeedLanguageLearner.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentPersonalNeedLanguageLearner
      /// </summary>
-    public partial interface IAssessmentPersonalNeedLanguageLearner
+    public partial interface IAssessmentPersonalNeedLanguageLearner : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentNeedsProfileContent"/> model
@@ -29,26 +31,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to a required instance of the <see cref="RefAssessmentNeedsProfileContentLanguageLearnerType"/> model
         /// </summary>
         Guid RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedLanguageLearner.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedLanguageLearner.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

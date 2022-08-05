@@ -3,12 +3,14 @@
 //* FileName:   IK12School.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12School
      /// </summary>
-    public partial interface IK12School
+    public partial interface IK12School : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
@@ -89,26 +91,6 @@ namespace Autobahn.K12.Interfaces
         /// Reference to an optional instance of the <see cref="RefStatePovertyDesignation"/> model
         /// </summary>
         Guid? RefStatePovertyDesignationId { get; set; }
-
-        /// <summary>
-        /// Defines the K12School.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12School.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

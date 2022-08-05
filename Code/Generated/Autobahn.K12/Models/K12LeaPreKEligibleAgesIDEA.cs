@@ -3,14 +3,15 @@
 //* FileName:   K12LeaPreKEligibleAgesIDEA.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12LeaPreKEligibleAgesIDEA
      /// </summary>
-    public partial class K12LeaPreKEligibleAgesIDEA : IK12LeaPreKEligibleAgesIDEA
+    public partial class K12LeaPreKEligibleAgesIDEA : AutobahnBase, Interfaces.IK12LeaPreKEligibleAgesIDEA
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12LEAPreKEligibleAgesIDEA"/> model
@@ -26,21 +27,6 @@ namespace Autobahn.K12.Models
         /// Reference to a required instance of the <see cref="RefPreKEligibleAgesNonIDEA"/> model
         /// </summary>
         public Guid RefPreKEligibleAgesNonIDEAId { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaPreKEligibleAgesIDEA.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaPreKEligibleAgesIDEA.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

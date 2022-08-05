@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ DomainName: Autobahn.Common
+ FileName:   DataCollectionView.cs
+-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm= "clr-namespace:Autobahn.Common.ViewModels"
+             x:Class="Autobahn.Common.Views.DataCollectionView"
+             x:DataType="vm:DataCollectionViewModel"
+             Title="{Binding ViewTitle}">
+    <VerticalStackLayout>
+        <Label
+           Text="Welcome to .NET MAUI!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

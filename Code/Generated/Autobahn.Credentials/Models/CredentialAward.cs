@@ -3,14 +3,15 @@
 //* FileName:   CredentialAward.cs
 //**********************************************************
 
-using Autobahn.Credentials.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialAward
      /// </summary>
-    public partial class CredentialAward : ICredentialAward
+    public partial class CredentialAward : AutobahnBase, Interfaces.ICredentialAward
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
@@ -78,24 +79,9 @@ namespace Autobahn.Credentials.Models
         public System.DateTime? CredentialAwardStartDate { get; set; }
 
         /// <summary>
-        /// Defines the CredentialAward.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialAward.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="Organization"/> model
         /// </summary>
         public Guid? OrganizationId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

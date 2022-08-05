@@ -3,14 +3,15 @@
 //* FileName:   AssessmentAsset.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentAsset
      /// </summary>
-    public partial class AssessmentAsset : IAssessmentAsset
+    public partial class AssessmentAsset : AutobahnBase, Interfaces.IAssessmentAsset
     {
         /// <summary>
         /// Defines the AssessmentAsset.Version non nullable property
@@ -71,21 +72,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="LearningResource"/> model
         /// </summary>
         public Guid? LearningResourceId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentAsset.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentAsset.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

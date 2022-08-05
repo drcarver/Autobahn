@@ -3,12 +3,14 @@
 //* FileName:   IBuildingSpace.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The IBuildingSpace
      /// </summary>
-    public partial interface IBuildingSpace
+    public partial interface IBuildingSpace : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Facility"/> model
@@ -114,26 +116,6 @@ namespace Autobahn.Facilities.Interfaces
         /// Reference to an optional instance of the <see cref="RefBuildingStudentSupportSpaceType"/> model
         /// </summary>
         Guid? RefBuildingStudentSupportSpaceTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSpace.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSpace.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

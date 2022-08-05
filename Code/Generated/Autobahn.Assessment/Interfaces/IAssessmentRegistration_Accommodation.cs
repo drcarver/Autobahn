@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentRegistration_Accommodation.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentRegistration_Accommodation
      /// </summary>
-    public partial interface IAssessmentRegistration_Accommodation
+    public partial interface IAssessmentRegistration_Accommodation : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentRegistration"/> model
@@ -19,26 +21,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to a required instance of the <see cref="AssessmentAccommodation"/> model
         /// </summary>
         Guid AssessmentAccommodationId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentRegistration_Accommodation.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentRegistration_Accommodation.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

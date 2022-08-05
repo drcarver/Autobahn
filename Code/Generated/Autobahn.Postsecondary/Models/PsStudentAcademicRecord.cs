@@ -3,14 +3,15 @@
 //* FileName:   PsStudentAcademicRecord.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentAcademicRecord
      /// </summary>
-    public partial class PsStudentAcademicRecord : IPsStudentAcademicRecord
+    public partial class PsStudentAcademicRecord : AutobahnBase, Interfaces.IPsStudentAcademicRecord
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -73,16 +74,6 @@ namespace Autobahn.Postsecondary.Models
         public Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
         /// <summary>
-        /// Defines the PsStudentAcademicRecord.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentAcademicRecord.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Defines the PsStudentAcademicRecord.CreditsAttemptedCumulative nullable property
         /// </summary>
         public System.Decimal? CreditsAttemptedCumulative { get; set; }
@@ -96,11 +87,6 @@ namespace Autobahn.Postsecondary.Models
         /// Defines the PsStudentAcademicRecord.NumberOfCreditsAttempted nullable property
         /// </summary>
         public System.Decimal? NumberOfCreditsAttempted { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

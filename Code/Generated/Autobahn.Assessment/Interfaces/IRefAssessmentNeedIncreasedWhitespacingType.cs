@@ -3,47 +3,14 @@
 //* FileName:   IRefAssessmentNeedIncreasedWhitespacingType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
-     /// The IRefAssessmentNeedIncreasedWhitespacingType
+     /// The RefAssessmentNeedIncreasedWhitespacingType Interface
      /// </summary>
-    public partial interface IRefAssessmentNeedIncreasedWhitespacingType
+    public partial interface IRefAssessmentNeedIncreasedWhitespacingType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefAssessmentNeedIncreasedWhitespacingType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

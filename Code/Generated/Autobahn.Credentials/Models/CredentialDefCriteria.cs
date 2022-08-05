@@ -3,14 +3,15 @@
 //* FileName:   CredentialDefCriteria.cs
 //**********************************************************
 
-using Autobahn.Credentials.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialDefCriteria
      /// </summary>
-    public partial class CredentialDefCriteria : ICredentialDefCriteria
+    public partial class CredentialDefCriteria : AutobahnBase, Interfaces.ICredentialDefCriteria
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
@@ -56,21 +57,6 @@ namespace Autobahn.Credentials.Models
         /// Reference to an optional instance of the <see cref="RefCredentialDefAssessMethodType"/> model
         /// </summary>
         public Guid? RefCredentialDefAssessMethodTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefCriteria.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefCriteria.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

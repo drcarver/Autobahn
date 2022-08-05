@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentItemResponseTheory.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentItemResponseTheory
      /// </summary>
-    public partial interface IAssessmentItemResponseTheory
+    public partial interface IAssessmentItemResponseTheory : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentItem"/> model
@@ -84,26 +86,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to an optional instance of the <see cref="RefItemResponseTheoryKappaAlgorithm"/> model
         /// </summary>
         Guid? RefItemResponseTheoryKappaAlgorithmId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentItemResponseTheory.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentItemResponseTheory.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

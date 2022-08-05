@@ -3,14 +3,15 @@
 //* FileName:   WorkforceProgramParticipantCohort.cs
 //**********************************************************
 
-using Autobahn.Workforce.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Workforce.Models
 {
      /// <summary>
      /// The WorkforceProgramParticipantCohort
      /// </summary>
-    public partial class WorkforceProgramParticipantCohort : IWorkforceProgramParticipantCohort
+    public partial class WorkforceProgramParticipantCohort : AutobahnBase, Interfaces.IWorkforceProgramParticipantCohort
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -26,21 +27,6 @@ namespace Autobahn.Workforce.Models
         /// Defines the WorkforceProgramParticipantCohort.CohortMedianEarnings nullable property
         /// </summary>
         public System.Decimal? CohortMedianEarnings { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceProgramParticipantCohort.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceProgramParticipantCohort.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

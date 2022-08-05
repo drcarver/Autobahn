@@ -3,12 +3,14 @@
 //* FileName:   ICompetencyDefEducationLevel.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Competencies.Interfaces
 {
      /// <summary>
      /// The ICompetencyDefEducationLevel
      /// </summary>
-    public partial interface ICompetencyDefEducationLevel
+    public partial interface ICompetencyDefEducationLevel : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyDefinition"/> model
@@ -19,26 +21,6 @@ namespace Autobahn.Competencies.Interfaces
         /// Reference to a required instance of the <see cref="RefEducationLevel"/> model
         /// </summary>
         Guid RefEducationLevelId { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefEducationLevel.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefEducationLevel.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

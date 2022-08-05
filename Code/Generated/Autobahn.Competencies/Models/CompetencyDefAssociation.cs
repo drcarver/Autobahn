@@ -3,14 +3,15 @@
 //* FileName:   CompetencyDefAssociation.cs
 //**********************************************************
 
-using Autobahn.Competencies.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencyDefAssociation
      /// </summary>
-    public partial class CompetencyDefAssociation : ICompetencyDefAssociation
+    public partial class CompetencyDefAssociation : AutobahnBase, Interfaces.ICompetencyDefAssociation
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyDefinition"/> model
@@ -71,21 +72,6 @@ namespace Autobahn.Competencies.Models
         /// Reference to an optional instance of the <see cref="RefLearningResourceCompetencyAlignmentType"/> model
         /// </summary>
         public Guid? RefLearningResourceCompetencyAlignmentTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefAssociation.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefAssociation.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

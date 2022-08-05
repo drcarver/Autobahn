@@ -3,14 +3,15 @@
 //* FileName:   AssessmentSubtest_AssessmentItem.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentSubtest_AssessmentItem
      /// </summary>
-    public partial class AssessmentSubtest_AssessmentItem : IAssessmentSubtest_AssessmentItem
+    public partial class AssessmentSubtest_AssessmentItem : AutobahnBase, Interfaces.IAssessmentSubtest_AssessmentItem
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentSubtestItem"/> model
@@ -41,21 +42,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the AssessmentSubtest_AssessmentItem.ItemWeightNotAttempted nullable property
         /// </summary>
         public System.Decimal? ItemWeightNotAttempted { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest_AssessmentItem.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest_AssessmentItem.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

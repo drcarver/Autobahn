@@ -3,14 +3,15 @@
 //* FileName:   K12StudentDiscipline.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentDiscipline
      /// </summary>
-    public partial class K12StudentDiscipline : IK12StudentDiscipline
+    public partial class K12StudentDiscipline : AutobahnBase, Interfaces.IK12StudentDiscipline
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -101,21 +102,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefIDEADisciplineMethodFirearm"/> model
         /// </summary>
         public Guid? RefIDEADisciplineMethodFirearmId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentDiscipline.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentDiscipline.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

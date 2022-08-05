@@ -3,14 +3,15 @@
 //* FileName:   FacilityHazard.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityHazard
      /// </summary>
-    public partial class FacilityHazard : IFacilityHazard
+    public partial class FacilityHazard : AutobahnBase, Interfaces.IFacilityHazard
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Facility"/> model
@@ -51,21 +52,6 @@ namespace Autobahn.Facilities.Models
         /// Reference to an optional instance of the <see cref="RefFacilityNaturallyOccurringHazardType"/> model
         /// </summary>
         public Guid? RefFacilityNaturallyOccurringHazardTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityHazard.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityHazard.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

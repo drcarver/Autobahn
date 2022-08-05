@@ -3,14 +3,15 @@
 //* FileName:   PsProgram.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsProgram
      /// </summary>
-    public partial class PsProgram : IPsProgram
+    public partial class PsProgram : AutobahnBase, Interfaces.IPsProgram
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
@@ -56,21 +57,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefDQPCategoriesOfLearning"/> model
         /// </summary>
         public Guid? RefDQPCategoriesOfLearningId { get; set; }
-
-        /// <summary>
-        /// Defines the PsProgram.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsProgram.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

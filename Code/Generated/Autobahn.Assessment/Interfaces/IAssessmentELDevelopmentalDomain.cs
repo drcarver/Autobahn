@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentELDevelopmentalDomain.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentELDevelopmentalDomain
      /// </summary>
-    public partial interface IAssessmentELDevelopmentalDomain
+    public partial interface IAssessmentELDevelopmentalDomain : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Assessment"/> model
@@ -19,26 +21,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to a required instance of the <see cref="RefAssessmentELDevelopmentalDomain"/> model
         /// </summary>
         Guid RefAssessmentELDevelopmentalDomainId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentELDevelopmentalDomain.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentELDevelopmentalDomain.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

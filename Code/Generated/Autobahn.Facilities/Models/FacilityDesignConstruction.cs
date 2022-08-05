@@ -3,14 +3,15 @@
 //* FileName:   FacilityDesignConstruction.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityDesignConstruction
      /// </summary>
-    public partial class FacilityDesignConstruction : IFacilityDesignConstruction
+    public partial class FacilityDesignConstruction : AutobahnBase, Interfaces.IFacilityDesignConstruction
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="FacilityDesign"/> model
@@ -76,21 +77,6 @@ namespace Autobahn.Facilities.Models
         /// Reference to an optional instance of the <see cref="RefFacilityStandardType"/> model
         /// </summary>
         public Guid? RefFacilityStandardTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityDesignConstruction.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityDesignConstruction.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

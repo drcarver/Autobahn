@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentPerformanceLevel.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentPerformanceLevel
      /// </summary>
-    public partial interface IAssessmentPerformanceLevel
+    public partial interface IAssessmentPerformanceLevel : IAutobahnBase
     {
         /// <summary>
         /// Defines the AssessmentPerformanceLevel.Identifier non nullable property
@@ -44,26 +46,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Defines the AssessmentPerformanceLevel.DescriptiveFeedback non nullable property
         /// </summary>
         System.String DescriptiveFeedback { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPerformanceLevel.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPerformanceLevel.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

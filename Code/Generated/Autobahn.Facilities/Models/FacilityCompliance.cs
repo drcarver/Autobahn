@@ -3,14 +3,15 @@
 //* FileName:   FacilityCompliance.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityCompliance
      /// </summary>
-    public partial class FacilityCompliance : IFacilityCompliance
+    public partial class FacilityCompliance : AutobahnBase, Interfaces.IFacilityCompliance
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="FacilityMandate"/> model
@@ -66,21 +67,6 @@ namespace Autobahn.Facilities.Models
         /// Reference to an optional instance of the <see cref="RefFacilityMaintStandardType"/> model
         /// </summary>
         public Guid? RefFacilityMaintStandardTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityCompliance.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityCompliance.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

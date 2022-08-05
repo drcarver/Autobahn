@@ -3,14 +3,15 @@
 //* FileName:   WorkforceEmploymentQuarterlyData.cs
 //**********************************************************
 
-using Autobahn.Workforce.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Workforce.Models
 {
      /// <summary>
      /// The WorkforceEmploymentQuarterlyData
      /// </summary>
-    public partial class WorkforceEmploymentQuarterlyData : IWorkforceEmploymentQuarterlyData
+    public partial class WorkforceEmploymentQuarterlyData : AutobahnBase, Interfaces.IWorkforceEmploymentQuarterlyData
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -36,21 +37,6 @@ namespace Autobahn.Workforce.Models
         /// Reference to an optional instance of the <see cref="RefEmployedAfterExit"/> model
         /// </summary>
         public Guid? RefEmployedAfterExitId { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceEmploymentQuarterlyData.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceEmploymentQuarterlyData.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

@@ -3,14 +3,15 @@
 //* FileName:   GoalMeasurementCriterion.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The GoalMeasurementCriterion
      /// </summary>
-    public partial class GoalMeasurementCriterion : IGoalMeasurementCriterion
+    public partial class GoalMeasurementCriterion : AutobahnBase, Interfaces.IGoalMeasurementCriterion
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="GoalMeasurement"/> model
@@ -36,21 +37,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the GoalMeasurementCriterion.SuccessCount nullable property
         /// </summary>
         public System.Int32? SuccessCount { get; set; }
-
-        /// <summary>
-        /// Defines the GoalMeasurementCriterion.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the GoalMeasurementCriterion.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

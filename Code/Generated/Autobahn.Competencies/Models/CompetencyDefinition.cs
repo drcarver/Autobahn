@@ -3,14 +3,15 @@
 //* FileName:   CompetencyDefinition.cs
 //**********************************************************
 
-using Autobahn.Competencies.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencyDefinition
      /// </summary>
-    public partial class CompetencyDefinition : ICompetencyDefinition
+    public partial class CompetencyDefinition : AutobahnBase, Interfaces.ICompetencyDefinition
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CompetencyFramework"/> model
@@ -176,21 +177,6 @@ namespace Autobahn.Competencies.Models
         /// Reference to an optional instance of the <see cref="RefCompetencyDefTestabilityType"/> model
         /// </summary>
         public Guid? RefCompetencyDefTestabilityTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefinition.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyDefinition.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

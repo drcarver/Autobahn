@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentResult.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentResult
      /// </summary>
-    public partial interface IAssessmentResult
+    public partial interface IAssessmentResult : IAutobahnBase
     {
         /// <summary>
         /// Defines the AssessmentResult.ScoreValue non nullable property
@@ -114,26 +116,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to an optional instance of the <see cref="RefAssessmentResultScoreType"/> model
         /// </summary>
         Guid? RefAssessmentResultScoreTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentResult.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentResult.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

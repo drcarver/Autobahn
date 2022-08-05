@@ -3,12 +3,14 @@
 //* FileName:   IGoalMeasurement.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IGoalMeasurement
      /// </summary>
-    public partial interface IGoalMeasurement
+    public partial interface IGoalMeasurement : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Goal"/> model
@@ -34,26 +36,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Reference to an optional instance of the <see cref="RefGoalMeasurementType"/> model
         /// </summary>
         Guid? RefGoalMeasurementTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the GoalMeasurement.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the GoalMeasurement.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

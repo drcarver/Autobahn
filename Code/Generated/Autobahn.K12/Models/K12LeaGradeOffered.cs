@@ -3,14 +3,15 @@
 //* FileName:   K12LeaGradeOffered.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12LeaGradeOffered
      /// </summary>
-    public partial class K12LeaGradeOffered : IK12LeaGradeOffered
+    public partial class K12LeaGradeOffered : AutobahnBase, Interfaces.IK12LeaGradeOffered
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12Lea"/> model
@@ -21,21 +22,6 @@ namespace Autobahn.K12.Models
         /// Reference to a required instance of the <see cref="RefGradeLevel"/> model
         /// </summary>
         public Guid RefGradeLevelId { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaGradeOffered.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaGradeOffered.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

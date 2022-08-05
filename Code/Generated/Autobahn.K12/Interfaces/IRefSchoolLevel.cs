@@ -3,47 +3,14 @@
 //* FileName:   IRefSchoolLevel.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The IRefSchoolLevel
+     /// The RefSchoolLevel Interface
      /// </summary>
-    public partial interface IRefSchoolLevel
+    public partial interface IRefSchoolLevel : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefSchoolLevel.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolLevel.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolLevel.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolLevel.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolLevel.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolLevel.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

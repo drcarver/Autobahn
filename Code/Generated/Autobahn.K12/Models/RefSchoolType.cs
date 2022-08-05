@@ -3,49 +3,15 @@
 //* FileName:   RefSchoolType.cs
 //**********************************************************
 
+using Autobahn.Common.Models;
 using Autobahn.K12.Interfaces;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The RefSchoolType
+     /// The RefSchoolType Model
      /// </summary>
-    public partial class RefSchoolType : IRefSchoolType
+    public partial class RefSchoolType : ReferenceModelBase, IRefSchoolType
     {
-        /// <summary>
-        /// Defines the RefSchoolType.Description non nullable property
-        /// </summary>
-        public System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolType.Code non nullable property
-        /// </summary>
-        public System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolType.Definition non nullable property
-        /// </summary>
-        public System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        public Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolType.SortOrder nullable property
-        /// </summary>
-        public System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolType.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefSchoolType.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

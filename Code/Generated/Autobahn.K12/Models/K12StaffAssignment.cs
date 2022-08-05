@@ -3,14 +3,15 @@
 //* FileName:   K12StaffAssignment.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StaffAssignment
      /// </summary>
-    public partial class K12StaffAssignment : IK12StaffAssignment
+    public partial class K12StaffAssignment : AutobahnBase, Interfaces.IK12StaffAssignment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -116,21 +117,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefOutOfFieldStatus"/> model
         /// </summary>
         public Guid? RefOutOfFieldStatusId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StaffAssignment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StaffAssignment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

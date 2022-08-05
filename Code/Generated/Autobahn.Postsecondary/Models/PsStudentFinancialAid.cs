@@ -3,14 +3,15 @@
 //* FileName:   PsStudentFinancialAid.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentFinancialAid
      /// </summary>
-    public partial class PsStudentFinancialAid : IPsStudentFinancialAid
+    public partial class PsStudentFinancialAid : AutobahnBase, Interfaces.IPsStudentFinancialAid
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -51,21 +52,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitType"/> model
         /// </summary>
         public Guid? RefFinancialAidVeteransBenefitTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentFinancialAid.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentFinancialAid.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

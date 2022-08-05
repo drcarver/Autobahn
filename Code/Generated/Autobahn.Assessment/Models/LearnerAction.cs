@@ -3,14 +3,15 @@
 //* FileName:   LearnerAction.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The LearnerAction
      /// </summary>
-    public partial class LearnerAction : ILearnerAction
+    public partial class LearnerAction : AutobahnBase, Interfaces.ILearnerAction
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="AssessmentItemResponse"/> model
@@ -51,21 +52,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the LearnerAction.LearnerActionObjectType non nullable property
         /// </summary>
         public System.String LearnerActionObjectType { get; set; }
-
-        /// <summary>
-        /// Defines the LearnerAction.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the LearnerAction.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

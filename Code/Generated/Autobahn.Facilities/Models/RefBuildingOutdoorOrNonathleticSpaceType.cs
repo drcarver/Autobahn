@@ -3,49 +3,15 @@
 //* FileName:   RefBuildingOutdoorOrNonathleticSpaceType.cs
 //**********************************************************
 
+using Autobahn.Common.Models;
 using Autobahn.Facilities.Interfaces;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
-     /// The RefBuildingOutdoorOrNonathleticSpaceType
+     /// The RefBuildingOutdoorOrNonathleticSpaceType Model
      /// </summary>
-    public partial class RefBuildingOutdoorOrNonathleticSpaceType : IRefBuildingOutdoorOrNonathleticSpaceType
+    public partial class RefBuildingOutdoorOrNonathleticSpaceType : ReferenceModelBase, IRefBuildingOutdoorOrNonathleticSpaceType
     {
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.Description non nullable property
-        /// </summary>
-        public System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.Code non nullable property
-        /// </summary>
-        public System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.Definition non nullable property
-        /// </summary>
-        public System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        public Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.SortOrder nullable property
-        /// </summary>
-        public System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingOutdoorOrNonathleticSpaceType.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

@@ -3,14 +3,15 @@
 //* FileName:   K12StudentEnrollment.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentEnrollment
      /// </summary>
-    public partial class K12StudentEnrollment : IK12StudentEnrollment
+    public partial class K12StudentEnrollment : AutobahnBase, Interfaces.IK12StudentEnrollment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -96,21 +97,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefStudentEnrollmentAccessType"/> model
         /// </summary>
         public Guid? RefStudentEnrollmentAccessTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentEnrollment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentEnrollment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

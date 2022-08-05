@@ -3,12 +3,14 @@
 //* FileName:   IK12LeaFederalReporting.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12LeaFederalReporting
      /// </summary>
-    public partial interface IK12LeaFederalReporting
+    public partial interface IK12LeaFederalReporting : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12Lea"/> model
@@ -79,26 +81,6 @@ namespace Autobahn.K12.Interfaces
         /// Reference to an optional instance of the <see cref="RefIntegratedTechnologyStatus"/> model
         /// </summary>
         Guid? RefIntegratedTechnologyStatusId { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaFederalReporting.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaFederalReporting.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

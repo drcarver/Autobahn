@@ -3,12 +3,14 @@
 //* FileName:   IPSStudentProgram.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPSStudentProgram
      /// </summary>
-    public partial interface IPSStudentProgram
+    public partial interface IPSStudentProgram : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -36,29 +38,9 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid? RefTransferOutIndicatorId { get; set; }
 
         /// <summary>
-        /// Defines the PSStudentProgram.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PSStudentProgram.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         Guid? RefCareerClusterId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

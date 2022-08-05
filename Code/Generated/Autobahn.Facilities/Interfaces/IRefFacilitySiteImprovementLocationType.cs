@@ -3,47 +3,14 @@
 //* FileName:   IRefFacilitySiteImprovementLocationType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
-     /// The IRefFacilitySiteImprovementLocationType
+     /// The RefFacilitySiteImprovementLocationType Interface
      /// </summary>
-    public partial interface IRefFacilitySiteImprovementLocationType
+    public partial interface IRefFacilitySiteImprovementLocationType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefFacilitySiteImprovementLocationType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

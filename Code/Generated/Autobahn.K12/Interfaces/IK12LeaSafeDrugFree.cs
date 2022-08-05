@@ -3,12 +3,14 @@
 //* FileName:   IK12LeaSafeDrugFree.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12LeaSafeDrugFree
      /// </summary>
-    public partial interface IK12LeaSafeDrugFree
+    public partial interface IK12LeaSafeDrugFree : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12Lea"/> model
@@ -54,26 +56,6 @@ namespace Autobahn.K12.Interfaces
         /// Defines the K12LeaSafeDrugFree.MostRecentCollection non nullable property
         /// </summary>
         System.String MostRecentCollection { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaSafeDrugFree.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaSafeDrugFree.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

@@ -3,14 +3,15 @@
 //* FileName:   RubricCriterion.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The RubricCriterion
      /// </summary>
-    public partial class RubricCriterion : IRubricCriterion
+    public partial class RubricCriterion : AutobahnBase, Interfaces.IRubricCriterion
     {
         /// <summary>
         /// Defines the RubricCriterion.Category non nullable property
@@ -41,21 +42,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to a required instance of the <see cref="Rubric"/> model
         /// </summary>
         public Guid RubricId { get; set; }
-
-        /// <summary>
-        /// Defines the RubricCriterion.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RubricCriterion.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

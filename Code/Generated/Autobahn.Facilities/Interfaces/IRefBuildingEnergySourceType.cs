@@ -3,47 +3,14 @@
 //* FileName:   IRefBuildingEnergySourceType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
-     /// The IRefBuildingEnergySourceType
+     /// The RefBuildingEnergySourceType Interface
      /// </summary>
-    public partial interface IRefBuildingEnergySourceType
+    public partial interface IRefBuildingEnergySourceType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefBuildingEnergySourceType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

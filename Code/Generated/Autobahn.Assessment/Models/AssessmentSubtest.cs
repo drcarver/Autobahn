@@ -3,14 +3,15 @@
 //* FileName:   AssessmentSubtest.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentSubtest
      /// </summary>
-    public partial class AssessmentSubtest : IAssessmentSubtest
+    public partial class AssessmentSubtest : AutobahnBase, Interfaces.IAssessmentSubtest
     {
         /// <summary>
         /// Defines the AssessmentSubtest.Identifier non nullable property
@@ -106,21 +107,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="AssessmentForm"/> model
         /// </summary>
         public Guid? AssessmentFormId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSubtest.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

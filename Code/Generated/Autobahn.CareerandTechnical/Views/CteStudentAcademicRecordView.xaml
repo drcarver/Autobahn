@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ DomainName: Autobahn.CareerandTechnical
+ FileName:   CteStudentAcademicRecordView.cs
+-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm= "clr-namespace:Autobahn.CareerandTechnical.ViewModels"
+             x:Class="Autobahn.CareerandTechnical.Views.CteStudentAcademicRecordView"
+             x:DataType="vm:CteStudentAcademicRecordViewModel"
+             Title="{Binding ViewTitle}">
+    <VerticalStackLayout>
+        <Label
+           Text="Welcome to .NET MAUI!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

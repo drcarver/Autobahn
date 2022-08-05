@@ -3,14 +3,15 @@
 //* FileName:   K12StaffEmployment.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StaffEmployment
      /// </summary>
-    public partial class K12StaffEmployment : IK12StaffEmployment
+    public partial class K12StaffEmployment : AutobahnBase, Interfaces.IK12StaffEmployment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="StaffEmployment"/> model
@@ -46,21 +47,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
         /// </summary>
         public Guid? RefEmploymentStatusId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StaffEmployment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StaffEmployment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

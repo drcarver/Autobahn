@@ -3,14 +3,15 @@
 //* FileName:   AssessmentPersonalNeedScreenReader.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentPersonalNeedScreenReader
      /// </summary>
-    public partial class AssessmentPersonalNeedScreenReader : IAssessmentPersonalNeedScreenReader
+    public partial class AssessmentPersonalNeedScreenReader : AutobahnBase, Interfaces.IAssessmentPersonalNeedScreenReader
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentPersonalNeedsProfileDisplay"/> model
@@ -41,21 +42,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="RefAssessmentNeedLinkIndicationType"/> model
         /// </summary>
         public Guid? RefAssessmentNeedLinkIndicationTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedScreenReader.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedScreenReader.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

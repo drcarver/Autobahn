@@ -3,12 +3,14 @@
 //* FileName:   IPsStudentCourseSectionMark.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPsStudentCourseSectionMark
      /// </summary>
-    public partial interface IPsStudentCourseSectionMark
+    public partial interface IPsStudentCourseSectionMark : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PsStudentSection"/> model
@@ -29,26 +31,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentCourseSectionMark.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsStudentCourseSectionMark.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

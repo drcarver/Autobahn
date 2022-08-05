@@ -3,12 +3,14 @@
 //* FileName:   IAssessmentNeedApipDisplay.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Assessment.Interfaces
 {
      /// <summary>
      /// The IAssessmentNeedApipDisplay
      /// </summary>
-    public partial interface IAssessmentNeedApipDisplay
+    public partial interface IAssessmentNeedApipDisplay : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentPersonalNeedsProfileDisplay"/> model
@@ -49,26 +51,6 @@ namespace Autobahn.Assessment.Interfaces
         /// Defines the AssessmentNeedApipDisplay.EncouragementSoundFileUrl non nullable property
         /// </summary>
         System.String EncouragementSoundFileUrl { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentNeedApipDisplay.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentNeedApipDisplay.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

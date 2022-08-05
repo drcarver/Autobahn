@@ -3,12 +3,14 @@
 //* FileName:   IK12LeaFederalFunds.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The IK12LeaFederalFunds
      /// </summary>
-    public partial interface IK12LeaFederalFunds
+    public partial interface IK12LeaFederalFunds : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationCalendarSession"/> model
@@ -54,26 +56,6 @@ namespace Autobahn.K12.Interfaces
         /// Reference to an optional instance of the <see cref="RefRlisProgramUse"/> model
         /// </summary>
         Guid? RefRlisProgramUseId { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaFederalFunds.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaFederalFunds.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

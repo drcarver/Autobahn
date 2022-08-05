@@ -3,14 +3,15 @@
 //* FileName:   CredentialDefCategory.cs
 //**********************************************************
 
-using Autobahn.Credentials.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialDefCategory
      /// </summary>
-    public partial class CredentialDefCategory : ICredentialDefCategory
+    public partial class CredentialDefCategory : AutobahnBase, Interfaces.ICredentialDefCategory
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="CredentialDefinition"/> model
@@ -26,21 +27,6 @@ namespace Autobahn.Credentials.Models
         /// Defines the CredentialDefCategory.CategorySystem non nullable property
         /// </summary>
         public System.String CategorySystem { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefCategory.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialDefCategory.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

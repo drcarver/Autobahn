@@ -3,14 +3,15 @@
 //* FileName:   AssessmentSessionStaffRole.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentSessionStaffRole
      /// </summary>
-    public partial class AssessmentSessionStaffRole : IAssessmentSessionStaffRole
+    public partial class AssessmentSessionStaffRole : AutobahnBase, Interfaces.IAssessmentSessionStaffRole
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefAssessmentSessionStaffRoleType"/> model
@@ -31,21 +32,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to an optional instance of the <see cref="AssessmentParticipantSession"/> model
         /// </summary>
         public Guid? AssessmentParticipantSessionId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSessionStaffRole.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentSessionStaffRole.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

@@ -3,47 +3,14 @@
 //* FileName:   IRefFederalProgramFundingAllocationType.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The IRefFederalProgramFundingAllocationType
+     /// The RefFederalProgramFundingAllocationType Interface
      /// </summary>
-    public partial interface IRefFederalProgramFundingAllocationType
+    public partial interface IRefFederalProgramFundingAllocationType : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefFederalProgramFundingAllocationType.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

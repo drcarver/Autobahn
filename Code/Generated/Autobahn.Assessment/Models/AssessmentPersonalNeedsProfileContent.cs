@@ -3,14 +3,15 @@
 //* FileName:   AssessmentPersonalNeedsProfileContent.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentPersonalNeedsProfileContent
      /// </summary>
-    public partial class AssessmentPersonalNeedsProfileContent : IAssessmentPersonalNeedsProfileContent
+    public partial class AssessmentPersonalNeedsProfileContent : AutobahnBase, Interfaces.IAssessmentPersonalNeedsProfileContent
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentPersonalNeedsProfile"/> model
@@ -101,21 +102,6 @@ namespace Autobahn.Assessment.Models
         /// Defines the AssessmentPersonalNeedsProfileContent.KeywordTranslationsActivateByDefaultIndicator nullable property
         /// </summary>
         public System.Boolean? KeywordTranslationsActivateByDefaultIndicator { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedsProfileContent.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentPersonalNeedsProfileContent.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

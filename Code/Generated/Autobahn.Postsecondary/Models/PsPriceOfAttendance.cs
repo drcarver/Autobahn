@@ -3,14 +3,15 @@
 //* FileName:   PsPriceOfAttendance.cs
 //**********************************************************
 
-using Autobahn.Postsecondary.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsPriceOfAttendance
      /// </summary>
-    public partial class PsPriceOfAttendance : IPsPriceOfAttendance
+    public partial class PsPriceOfAttendance : AutobahnBase, Interfaces.IPsPriceOfAttendance
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PSPriceOfAttendance"/> model
@@ -76,21 +77,6 @@ namespace Autobahn.Postsecondary.Models
         /// Reference to an optional instance of the <see cref="RefTuitionUnit"/> model
         /// </summary>
         public Guid? RefTuitionUnitId { get; set; }
-
-        /// <summary>
-        /// Defines the PsPriceOfAttendance.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsPriceOfAttendance.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

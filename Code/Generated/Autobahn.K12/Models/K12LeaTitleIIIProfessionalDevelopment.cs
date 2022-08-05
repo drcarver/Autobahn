@@ -3,14 +3,15 @@
 //* FileName:   K12LeaTitleIIIProfessionalDevelopment.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12LeaTitleIIIProfessionalDevelopment
      /// </summary>
-    public partial class K12LeaTitleIIIProfessionalDevelopment : IK12LeaTitleIIIProfessionalDevelopment
+    public partial class K12LeaTitleIIIProfessionalDevelopment : AutobahnBase, Interfaces.IK12LeaTitleIIIProfessionalDevelopment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="K12LEATitleIIIProfessionalDevelopment"/> model
@@ -26,21 +27,6 @@ namespace Autobahn.K12.Models
         /// Reference to a required instance of the <see cref="RefTitleIIIProfessionalDevelopmentType"/> model
         /// </summary>
         public Guid RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaTitleIIIProfessionalDevelopment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12LeaTitleIIIProfessionalDevelopment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

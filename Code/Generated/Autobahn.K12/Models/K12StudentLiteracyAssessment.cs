@@ -3,14 +3,15 @@
 //* FileName:   K12StudentLiteracyAssessment.cs
 //**********************************************************
 
-using Autobahn.K12.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentLiteracyAssessment
      /// </summary>
-    public partial class K12StudentLiteracyAssessment : IK12StudentLiteracyAssessment
+    public partial class K12StudentLiteracyAssessment : AutobahnBase, Interfaces.IK12StudentLiteracyAssessment
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationPersonRole"/> model
@@ -36,21 +37,6 @@ namespace Autobahn.K12.Models
         /// Reference to an optional instance of the <see cref="RefLiteracyAssessment"/> model
         /// </summary>
         public Guid? RefLiteracyAssessmentId { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentLiteracyAssessment.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the K12StudentLiteracyAssessment.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

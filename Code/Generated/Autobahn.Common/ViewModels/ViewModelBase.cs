@@ -9,6 +9,9 @@ namespace Autobahn.Common.ViewModels
     /// </summary>
     public class ViewModelBase : AutobahnBase
     {
+        // private member variable for IsBusy
+        private bool _isBusy = false;
+
         /// <summary>
         /// Checks if a property already matches a desired value. Sets the property and
         /// notifies listeners only when necessary.
@@ -27,7 +30,7 @@ namespace Autobahn.Common.ViewModels
 
             storage = value;
             RaisePropertyChanged(propertyName);
-            isChanged = true;
+            _isChanged = true;
             return true;
         }
 
@@ -51,7 +54,7 @@ namespace Autobahn.Common.ViewModels
             storage = value;
             onChanged?.Invoke();
             RaisePropertyChanged(propertyName);
-            isChanged = true;
+            _isChanged = true;
             return true;
         }
 
@@ -79,5 +82,10 @@ namespace Autobahn.Common.ViewModels
         {
             PropertyChanged?.Invoke(this, args);
         }
+
+        /// <summary>
+        /// True if the view model is busy (usually when being saved ir loaded).
+        /// </summary>
+        public bool IsBusy { get => _isBusy; set => SetProperty(ref _isBusy, value); }
     }
 }

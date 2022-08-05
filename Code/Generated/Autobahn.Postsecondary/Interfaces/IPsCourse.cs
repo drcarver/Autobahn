@@ -3,12 +3,14 @@
 //* FileName:   IPsCourse.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPsCourse
      /// </summary>
-    public partial interface IPsCourse
+    public partial interface IPsCourse : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Course"/> model
@@ -54,26 +56,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         Guid? RefCipCodeId { get; set; }
-
-        /// <summary>
-        /// Defines the PsCourse.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the PsCourse.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

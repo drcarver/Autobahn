@@ -3,14 +3,15 @@
 //* FileName:   CredentialIssuer.cs
 //**********************************************************
 
-using Autobahn.Credentials.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialIssuer
      /// </summary>
-    public partial class CredentialIssuer : ICredentialIssuer
+    public partial class CredentialIssuer : AutobahnBase, Interfaces.ICredentialIssuer
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Organization"/> model
@@ -31,21 +32,6 @@ namespace Autobahn.Credentials.Models
         /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
         /// </summary>
         public Guid? RefCTDLOrganizationTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialIssuer.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CredentialIssuer.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

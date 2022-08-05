@@ -3,47 +3,14 @@
 //* FileName:   IRefGradePointAverageDomain.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
-     /// The IRefGradePointAverageDomain
+     /// The RefGradePointAverageDomain Interface
      /// </summary>
-    public partial interface IRefGradePointAverageDomain
+    public partial interface IRefGradePointAverageDomain : IReferenceModel
     {
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.Description non nullable property
-        /// </summary>
-        System.String Description { get; set; }
-
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.Code non nullable property
-        /// </summary>
-        System.String Code { get; set; }
-
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.Definition non nullable property
-        /// </summary>
-        System.String Definition { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefJurisdiction"/> model
-        /// </summary>
-        Guid? RefJurisdictionId { get; set; }
-
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.SortOrder nullable property
-        /// </summary>
-        System.Decimal? SortOrder { get; set; }
-
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the RefGradePointAverageDomain.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
     }
 }

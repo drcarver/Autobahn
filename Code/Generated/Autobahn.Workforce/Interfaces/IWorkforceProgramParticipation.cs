@@ -3,12 +3,14 @@
 //* FileName:   IWorkforceProgramParticipation.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Workforce.Interfaces
 {
      /// <summary>
      /// The IWorkforceProgramParticipation
      /// </summary>
-    public partial interface IWorkforceProgramParticipation
+    public partial interface IWorkforceProgramParticipation : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="PersonProgramParticipation"/> model
@@ -29,26 +31,6 @@ namespace Autobahn.Workforce.Interfaces
         /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceProgramParticipation.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the WorkforceProgramParticipation.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

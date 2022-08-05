@@ -3,14 +3,15 @@
 //* FileName:   BuildingSystemComponentService.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The BuildingSystemComponentService
      /// </summary>
-    public partial class BuildingSystemComponentService : IBuildingSystemComponentService
+    public partial class BuildingSystemComponentService : AutobahnBase, Interfaces.IBuildingSystemComponentService
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="BuildingSystemComponent"/> model
@@ -26,21 +27,6 @@ namespace Autobahn.Facilities.Models
         /// Defines the BuildingSystemComponentService.ComponentOrFixtureServicedDate nullable property
         /// </summary>
         public System.DateTime? ComponentOrFixtureServicedDate { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSystemComponentService.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSystemComponentService.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

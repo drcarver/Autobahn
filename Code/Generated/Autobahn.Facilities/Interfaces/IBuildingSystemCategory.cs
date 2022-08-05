@@ -3,12 +3,14 @@
 //* FileName:   IBuildingSystemCategory.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The IBuildingSystemCategory
      /// </summary>
-    public partial interface IBuildingSystemCategory
+    public partial interface IBuildingSystemCategory : IAutobahnBase
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="BuildingSystemComponent"/> model
@@ -84,26 +86,6 @@ namespace Autobahn.Facilities.Interfaces
         /// Reference to an optional instance of the <see cref="RefBuildingVerticalTransportationSystemType"/> model
         /// </summary>
         Guid? RefBuildingVerticalTransportationSystemTypeId { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSystemCategory.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the BuildingSystemCategory.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

@@ -22,12 +22,12 @@ namespace AutobahnCodeGen
                 if (table.TableName.StartsWith("Ae")
                     || table.TableName.EndsWith("AE"))
                 {
-                    table.Domain = "Adult Education";
+                    table.Domain = "AdultEducation";
                 }
                 if (table.TableName.StartsWith("EL") 
                     || table.TableName.StartsWith("EarlyChildhood"))
                 {
-                    table.Domain = "Early Learning";
+                    table.Domain = "EarlyLearning";
                 }
                 if (table.TableName.StartsWith("Assessment")
                     || table.TableName.StartsWith("Rubric")
@@ -39,7 +39,7 @@ namespace AutobahnCodeGen
                 if (table.TableName.StartsWith("Learning")
                     || table.TableName.StartsWith("Peer"))
                 {
-                    table.Domain = "Learning Resource";
+                    table.Domain = "LearningResource";
                 }
                 if (table.TableName.StartsWith("K12"))
                 {
@@ -67,7 +67,7 @@ namespace AutobahnCodeGen
                 if (table.TableName.StartsWith("Cte")
                     || table.TableName.EndsWith("Cte"))
                 {
-                    table.Domain = "Career and Technical";
+                    table.Domain = "CareerandTechnical";
                 }
                 if (table.TableName.StartsWith("Organization") 
                     || table.TableName.StartsWith("Person")
@@ -80,7 +80,7 @@ namespace AutobahnCodeGen
                 if (table.TableName.StartsWith("App")
                     || table.TableName.StartsWith("Auth"))
                 {
-                    table.Domain = "Authentication and Authorization";
+                    table.Domain = "AuthenticationandAuthorization";
                 }
                 if (table.TableName.StartsWith("Ref"))
                 {
@@ -143,9 +143,6 @@ namespace AutobahnCodeGen
 
             //csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
             //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
-
-            //var skeys = MauiModule.RefModels.Values.Where(c => c.Count == 1)?.Count();
-            //var mkeys = MauiModule.RefModels.Values.Where(c => c.Count > 1)?.Count();
         }
     }
 }

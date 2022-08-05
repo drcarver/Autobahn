@@ -3,12 +3,14 @@
 //* FileName:   ICompetencyFramework.cs
 //**********************************************************
 
+using Autobahn.Common.Interfaces;
+
 namespace Autobahn.Competencies.Interfaces
 {
      /// <summary>
      /// The ICompetencyFramework
      /// </summary>
-    public partial interface ICompetencyFramework
+    public partial interface ICompetencyFramework : IAutobahnBase
     {
         /// <summary>
         /// Defines the CompetencyFramework.URI non nullable property
@@ -94,26 +96,6 @@ namespace Autobahn.Competencies.Interfaces
         /// Defines the CompetencyFramework.CompetencyFrameworkSourceUrl non nullable property
         /// </summary>
         System.String CompetencyFrameworkSourceUrl { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyFramework.RecordStartDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the CompetencyFramework.RecordEndDateTime nullable property
-        /// </summary>
-        System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        Guid? RecordStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="DataCollection"/> model
-        /// </summary>
-        Guid? DataCollectionId { get; set; }
 
     }
 }

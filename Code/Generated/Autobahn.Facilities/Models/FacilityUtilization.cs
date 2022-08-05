@@ -3,14 +3,15 @@
 //* FileName:   FacilityUtilization.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityUtilization
      /// </summary>
-    public partial class FacilityUtilization : IFacilityUtilization
+    public partial class FacilityUtilization : AutobahnBase, Interfaces.IFacilityUtilization
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="Facility"/> model
@@ -41,21 +42,6 @@ namespace Autobahn.Facilities.Models
         /// Defines the FacilityUtilization.FacilityEnrollmentCapacity nullable property
         /// </summary>
         public System.Int32? FacilityEnrollmentCapacity { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityUtilization.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityUtilization.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

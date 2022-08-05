@@ -3,14 +3,15 @@
 //* FileName:   AssessmentResultRubricCriterionResult.cs
 //**********************************************************
 
-using Autobahn.Assessment.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Assessment.Models
 {
      /// <summary>
      /// The AssessmentResultRubricCriterionResult
      /// </summary>
-    public partial class AssessmentResultRubricCriterionResult : IAssessmentResultRubricCriterionResult
+    public partial class AssessmentResultRubricCriterionResult : AutobahnBase, Interfaces.IAssessmentResultRubricCriterionResult
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="AssessmentResult"/> model
@@ -21,21 +22,6 @@ namespace Autobahn.Assessment.Models
         /// Reference to a required instance of the <see cref="RubricCriterionLevel"/> model
         /// </summary>
         public Guid RubricCriterionLevelId { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentResultRubricCriterionResult.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the AssessmentResultRubricCriterionResult.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model

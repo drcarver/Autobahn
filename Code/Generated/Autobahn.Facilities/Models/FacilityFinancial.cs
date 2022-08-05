@@ -3,14 +3,15 @@
 //* FileName:   FacilityFinancial.cs
 //**********************************************************
 
-using Autobahn.Facilities.Interfaces;
+using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityFinancial
      /// </summary>
-    public partial class FacilityFinancial : IFacilityFinancial
+    public partial class FacilityFinancial : AutobahnBase, Interfaces.IFacilityFinancial
     {
         /// <summary>
         /// Reference to a required instance of the <see cref="OrganizationFinancial"/> model
@@ -31,21 +32,6 @@ namespace Autobahn.Facilities.Models
         /// Reference to an optional instance of the <see cref="FacilityMortgageFee"/> model
         /// </summary>
         public Guid? FacilityMortgageFeeId { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityFinancial.RecordStartDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// Defines the FacilityFinancial.RecordEndDateTime nullable property
-        /// </summary>
-        public System.DateTime? RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RecordStatus"/> model
-        /// </summary>
-        public Guid? RecordStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="DataCollection"/> model
