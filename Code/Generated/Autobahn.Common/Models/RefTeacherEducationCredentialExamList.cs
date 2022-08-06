@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefTeacherEducationCredentialExam"> List
          /// </summary>
-        public static List<RefTeacherEducationCredentialExam> RefTeacherEducationCredentialExamList = new List<RefTeacherEducationCredentialExam> =
+        public static List<RefTeacherEducationCredentialExam> RefTeacherEducationCredentialExamList = new List<RefTeacherEducationCredentialExam>
         {
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("4efe2beb-f689-4e3d-b870-507362d47b1d"), Code="Praxis I examination is/was used to assess teacher candidate's knowledge and skills.", Description="PraxisI", Definition="", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("65f3a09e-a51e-4a58-a7c4-2946fc3721ce"), Code="Praxis II examination is/was used to assess teacher candidate's knowledge and skills.", Description="PraxisII", Definition="", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("fb318877-7885-49f9-a14d-d7c75f0d12f9"), Code="ACTFL is/was used to assess teacher candidate's knowledge and skills.", Description="ACTFL", Definition="", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("bb715bd6-267b-4102-8c0e-8a4b7bad2dcd"), Code="State Exam is/was used to assess teacher candidate's knowledge and skills.", Description="StateExam", Definition="", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("b8fc40cd-9a6a-45f3-99f7-8b2bd1e6bfd6"), Code="An examination used to assess teacher candidate's knowledge and skills is of a type not yet included in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("19ac5d2c-7c9a-47a8-a1d7-32d25836e0a8"), Code="PraxisI", Description="Praxis I", Definition="Praxis I examination is/was used to assess teacher candidate's knowledge and skills.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("3444dbb3-969b-44a2-858c-c8f9e6377adf"), Code="PraxisII", Description="Praxis II", Definition="Praxis II examination is/was used to assess teacher candidate's knowledge and skills.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("3fda4145-e3a2-4db1-b946-cd86b35aeac9"), Code="ACTFL", Description="ACTFL", Definition="ACTFL is/was used to assess teacher candidate's knowledge and skills.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("dce2c778-cde3-4b90-a4cf-c3fea643c67c"), Code="StateExam", Description="State Exam", Definition="State Exam is/was used to assess teacher candidate's knowledge and skills.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("161c3876-8262-43f3-8b08-554c4ce4d7ab"), Code="Other", Description="Other", Definition="An examination used to assess teacher candidate's knowledge and skills is of a type not yet included in CEDS.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefTeacherEducationCredentialExam Pick List
          /// </summary>
-        public static List<RefTeacherEducationCredentialExam> RefTeacherEducationCredentialExamPickList = new List<RefTeacherEducationCredentialExam> =
+        public static List<RefTeacherEducationCredentialExam> RefTeacherEducationCredentialExamPickList = new List<RefTeacherEducationCredentialExam>
         {
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("4efe2beb-f689-4e3d-b870-507362d47b1d"), Code="Praxis I examination is/was used to assess teacher candidate's knowledge and skills.", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("65f3a09e-a51e-4a58-a7c4-2946fc3721ce"), Code="Praxis II examination is/was used to assess teacher candidate's knowledge and skills.", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("fb318877-7885-49f9-a14d-d7c75f0d12f9"), Code="ACTFL is/was used to assess teacher candidate's knowledge and skills.", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("bb715bd6-267b-4102-8c0e-8a4b7bad2dcd"), Code="State Exam is/was used to assess teacher candidate's knowledge and skills.", SortOrder=0 },
-            new RefTeacherEducationCredentialExam { Id=Guid.Parse("b8fc40cd-9a6a-45f3-99f7-8b2bd1e6bfd6"), Code="An examination used to assess teacher candidate's knowledge and skills is of a type not yet included in CEDS.", SortOrder=0 },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("19ac5d2c-7c9a-47a8-a1d7-32d25836e0a8"), Code="PraxisI", Description="Praxis I", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("3444dbb3-969b-44a2-858c-c8f9e6377adf"), Code="PraxisII", Description="Praxis II", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("3fda4145-e3a2-4db1-b946-cd86b35aeac9"), Code="ACTFL", Description="ACTFL", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("dce2c778-cde3-4b90-a4cf-c3fea643c67c"), Code="StateExam", Description="State Exam", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTeacherEducationCredentialExam { Id=Guid.Parse("161c3876-8262-43f3-8b08-554c4ce4d7ab"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

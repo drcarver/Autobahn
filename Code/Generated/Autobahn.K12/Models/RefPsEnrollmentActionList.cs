@@ -15,21 +15,21 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefPsEnrollmentAction"> List
          /// </summary>
-        public static List<RefPsEnrollmentAction> RefPsEnrollmentActionList = new List<RefPsEnrollmentAction> =
+        public static List<RefPsEnrollmentAction> RefPsEnrollmentActionList = new List<RefPsEnrollmentAction>
         {
-            new RefPsEnrollmentAction { Id=Guid.Parse("e8b70d1d-601a-4380-a18d-6500c466dfbf"), Code="No information is available about the action taken with respect to postsecondary enrollment by the student who graduated from the school, LEA or state in the past two years.", Description="NoInformation", Definition="", SortOrder=0 },
-            new RefPsEnrollmentAction { Id=Guid.Parse("94d355cd-3216-4973-bfed-7463f0418aa6"), Code="The student who graduated from the school, LEA or state in the past two years enrolled in a postsecondary institution.", Description="Enrolled", Definition="", SortOrder=0 },
-            new RefPsEnrollmentAction { Id=Guid.Parse("403290cc-1a5d-46e8-8176-65210c137aac"), Code="The student who graduated from the school, LEA or state in the past two years was NOT  enrolled in a postsecondary institution.", Description="NotEnrolled", Definition="", SortOrder=0 },
+            new RefPsEnrollmentAction { Id=Guid.Parse("a96c18fb-3c1e-4342-8a71-554c935e1300"), Code="NoInformation", Description="No information", Definition="No information is available about the action taken with respect to postsecondary enrollment by the student who graduated from the school, LEA or state in the past two years.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsEnrollmentAction { Id=Guid.Parse("1f70f67d-213e-4520-aa7c-3bc62ab0f455"), Code="Enrolled", Description="Enrolled", Definition="The student who graduated from the school, LEA or state in the past two years enrolled in a postsecondary institution.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPsEnrollmentAction { Id=Guid.Parse("cd94998e-7c82-4190-9a52-1a55e041a3a3"), Code="NotEnrolled", Description="Not enrolled", Definition="The student who graduated from the school, LEA or state in the past two years was NOT  enrolled in a postsecondary institution.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefPsEnrollmentAction Pick List
          /// </summary>
-        public static List<RefPsEnrollmentAction> RefPsEnrollmentActionPickList = new List<RefPsEnrollmentAction> =
+        public static List<RefPsEnrollmentAction> RefPsEnrollmentActionPickList = new List<RefPsEnrollmentAction>
         {
-            new RefPsEnrollmentAction { Id=Guid.Parse("e8b70d1d-601a-4380-a18d-6500c466dfbf"), Code="No information is available about the action taken with respect to postsecondary enrollment by the student who graduated from the school, LEA or state in the past two years.", SortOrder=0 },
-            new RefPsEnrollmentAction { Id=Guid.Parse("94d355cd-3216-4973-bfed-7463f0418aa6"), Code="The student who graduated from the school, LEA or state in the past two years enrolled in a postsecondary institution.", SortOrder=0 },
-            new RefPsEnrollmentAction { Id=Guid.Parse("403290cc-1a5d-46e8-8176-65210c137aac"), Code="The student who graduated from the school, LEA or state in the past two years was NOT  enrolled in a postsecondary institution.", SortOrder=0 },
+            new RefPsEnrollmentAction { Id=Guid.Parse("a96c18fb-3c1e-4342-8a71-554c935e1300"), Code="NoInformation", Description="No information", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsEnrollmentAction { Id=Guid.Parse("1f70f67d-213e-4520-aa7c-3bc62ab0f455"), Code="Enrolled", Description="Enrolled", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPsEnrollmentAction { Id=Guid.Parse("cd94998e-7c82-4190-9a52-1a55e041a3a3"), Code="NotEnrolled", Description="Not enrolled", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

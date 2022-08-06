@@ -15,29 +15,29 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefEnvironmentSetting"> List
          /// </summary>
-        public static List<RefEnvironmentSetting> RefEnvironmentSettingList = new List<RefEnvironmentSetting> =
+        public static List<RefEnvironmentSetting> RefEnvironmentSettingList = new List<RefEnvironmentSetting>
         {
-            new RefEnvironmentSetting { Id=Guid.Parse("465e1cdc-d8cd-4e96-b913-7e799324a2c7"), Code="Home-based (Child's Home) is the site or setting in which early childhood care, education, and/or services are provided.", Description="HomeBased", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("c50ec7d1-849e-469f-8dbe-d8b64e2eb9e6"), Code="Community-based (outside the child's home) is the site or setting in which early childhood care, education, and/or services are provided.", Description="CommunityBased", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("66d9cc67-6d27-4ad0-a0a8-62e550c33d87"), Code="Center-based (including a school setting) is the site or setting in which early childhood care, education, and/or services are provided.", Description="CenterBased", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("23b19ea9-fef2-4ecd-a0e0-c90f59cc99a8"), Code="Center-based for children with special needs is the site or setting in which early childhood care, education, and/or services are provided.", Description="CenterBasedSpecial", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("7febb812-2d66-4da7-b558-9efa76784852"), Code="Family Child Care Home (Provider's Home) is the site or setting in which early childhood care, education, and/or services are provided.", Description="FamilyChildCare", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("cb383a82-1ef5-4145-bf6d-67525ab32c42"), Code="Multi-setting is the site or setting in which early childhood care, education, and/or services are provided.", Description="MultiSetting", Definition="", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("c28fedb6-f54f-424e-8732-921a2654bcfe"), Code="Locally designed is the site or setting in which early childhood care, education, and/or services are provided.", Description="LocallyDesigned", Definition="", SortOrder=0 },
+            new RefEnvironmentSetting { Id=Guid.Parse("ba92bd0d-7666-451d-bc1d-d025f4e70570"), Code="HomeBased", Description="Home-based (Child's Home)", Definition="Home-based (Child's Home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("0.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("9e21954e-e2e8-46a2-a93b-e9bcb750a4f9"), Code="CommunityBased", Description="Community-based (outside the child's home)", Definition="Community-based (outside the child's home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("7f7de5e9-bb2c-4c8d-ae74-86cc6977a4e9"), Code="CenterBased", Description="Center-based (including a school setting)", Definition="Center-based (including a school setting) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("24e8807e-16f1-46e4-8212-b9233fdfa7dc"), Code="CenterBasedSpecial", Description="Center-based for children with special needs", Definition="Center-based for children with special needs is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("23b680d6-1564-4278-bb41-098bcab6e150"), Code="FamilyChildCare", Description="Family Child Care Home (Provider's Home)", Definition="Family Child Care Home (Provider's Home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("a31f6e22-e9e9-41bb-87e1-1780753bbe8a"), Code="MultiSetting", Description="Multi-setting", Definition="Multi-setting is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("d902078f-840f-48c9-8dd1-f6f1649f0333"), Code="LocallyDesigned", Description="Locally designed", Definition="Locally designed is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefEnvironmentSetting Pick List
          /// </summary>
-        public static List<RefEnvironmentSetting> RefEnvironmentSettingPickList = new List<RefEnvironmentSetting> =
+        public static List<RefEnvironmentSetting> RefEnvironmentSettingPickList = new List<RefEnvironmentSetting>
         {
-            new RefEnvironmentSetting { Id=Guid.Parse("465e1cdc-d8cd-4e96-b913-7e799324a2c7"), Code="Home-based (Child's Home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("c50ec7d1-849e-469f-8dbe-d8b64e2eb9e6"), Code="Community-based (outside the child's home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("66d9cc67-6d27-4ad0-a0a8-62e550c33d87"), Code="Center-based (including a school setting) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("23b19ea9-fef2-4ecd-a0e0-c90f59cc99a8"), Code="Center-based for children with special needs is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("7febb812-2d66-4da7-b558-9efa76784852"), Code="Family Child Care Home (Provider's Home) is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("cb383a82-1ef5-4145-bf6d-67525ab32c42"), Code="Multi-setting is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
-            new RefEnvironmentSetting { Id=Guid.Parse("c28fedb6-f54f-424e-8732-921a2654bcfe"), Code="Locally designed is the site or setting in which early childhood care, education, and/or services are provided.", SortOrder=0 },
+            new RefEnvironmentSetting { Id=Guid.Parse("ba92bd0d-7666-451d-bc1d-d025f4e70570"), Code="HomeBased", Description="Home-based (Child's Home)", SortOrder=Convert.ToDecimal("0.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("9e21954e-e2e8-46a2-a93b-e9bcb750a4f9"), Code="CommunityBased", Description="Community-based (outside the child's home)", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("7f7de5e9-bb2c-4c8d-ae74-86cc6977a4e9"), Code="CenterBased", Description="Center-based (including a school setting)", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("24e8807e-16f1-46e4-8212-b9233fdfa7dc"), Code="CenterBasedSpecial", Description="Center-based for children with special needs", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("23b680d6-1564-4278-bb41-098bcab6e150"), Code="FamilyChildCare", Description="Family Child Care Home (Provider's Home)", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("a31f6e22-e9e9-41bb-87e1-1780753bbe8a"), Code="MultiSetting", Description="Multi-setting", SortOrder=Convert.ToDecimal("8.00") },
+            new RefEnvironmentSetting { Id=Guid.Parse("d902078f-840f-48c9-8dd1-f6f1649f0333"), Code="LocallyDesigned", Description="Locally designed", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

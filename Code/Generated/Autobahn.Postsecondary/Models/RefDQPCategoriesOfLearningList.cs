@@ -15,25 +15,25 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefDQPCategoriesOfLearning"> List
          /// </summary>
-        public static List<RefDQPCategoriesOfLearning> RefDQPCategoriesOfLearningList = new List<RefDQPCategoriesOfLearning> =
+        public static List<RefDQPCategoriesOfLearning> RefDQPCategoriesOfLearningList = new List<RefDQPCategoriesOfLearning>
         {
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d3de762b-1fa9-451d-83de-a309f3e8991a"), Code="A category of learning addressing specialized knowledge and skill requirements of a student pursuing a specialized degree.", Description="SpecializedKnowledge", Definition="", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("4a56273e-eadb-40bf-9831-b1b4850e8201"), Code="Liberal and general education category of learning with emphasis on students' broad learning across the humanities, arts, sciences and social sciences.", Description="BroadAndIntegrativeKnowledge", Definition="", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d186a504-1d53-406d-ad11-f28f9b509ea7"), Code="Proficiencies that transcend the boundaries of particular fields of study including analytic inquiry, use of information resources, engaging diverse perspectives, ethical reasoning, quantitative fluency, and communicative fluency.", Description="IntellectualSkills", Definition="", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("f359dcaa-8d77-410e-83f9-a158d64c8bb9"), Code="A category of learning addressing what graduates can do with what they know.", Description="AppliedAndCollaborativeLearning", Definition="", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("682b4988-0dc3-4e5e-a4a5-df4c9d444b83"), Code="A category of learning addressing proficiencies needed for both civic and global inquiry and interaction.", Description="CivicAndGlobalLearning", Definition="", SortOrder=0 },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("4e0bd5c7-ccf8-413d-8bbc-0f60fe89bb0a"), Code="SpecializedKnowledge", Description="Specialized Knowledge", Definition="A category of learning addressing specialized knowledge and skill requirements of a student pursuing a specialized degree.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d17127d6-b35b-477f-a1c3-270030bda21f"), Code="BroadAndIntegrativeKnowledge", Description="Broad and Integrative Knowledge", Definition="Liberal and general education category of learning with emphasis on students' broad learning across the humanities, arts, sciences and social sciences.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("5fc3d485-4fda-4e1b-beb5-1d11b9daf2bd"), Code="IntellectualSkills", Description="Intellectual Skills", Definition="Proficiencies that transcend the boundaries of particular fields of study including analytic inquiry, use of information resources, engaging diverse perspectives, ethical reasoning, quantitative fluency, and communicative fluency.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("05c4ead2-56b9-4d5d-8918-bdf4a5919ddf"), Code="AppliedAndCollaborativeLearning", Description="Applied and Collaborative Learning", Definition="A category of learning addressing what graduates can do with what they know.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("6ec941e2-448a-4b88-848e-9d6879a3da64"), Code="CivicAndGlobalLearning", Description="Civic and Global Learning", Definition="A category of learning addressing proficiencies needed for both civic and global inquiry and interaction.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefDQPCategoriesOfLearning Pick List
          /// </summary>
-        public static List<RefDQPCategoriesOfLearning> RefDQPCategoriesOfLearningPickList = new List<RefDQPCategoriesOfLearning> =
+        public static List<RefDQPCategoriesOfLearning> RefDQPCategoriesOfLearningPickList = new List<RefDQPCategoriesOfLearning>
         {
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d3de762b-1fa9-451d-83de-a309f3e8991a"), Code="A category of learning addressing specialized knowledge and skill requirements of a student pursuing a specialized degree.", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("4a56273e-eadb-40bf-9831-b1b4850e8201"), Code="Liberal and general education category of learning with emphasis on students' broad learning across the humanities, arts, sciences and social sciences.", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d186a504-1d53-406d-ad11-f28f9b509ea7"), Code="Proficiencies that transcend the boundaries of particular fields of study including analytic inquiry, use of information resources, engaging diverse perspectives, ethical reasoning, quantitative fluency, and communicative fluency.", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("f359dcaa-8d77-410e-83f9-a158d64c8bb9"), Code="A category of learning addressing what graduates can do with what they know.", SortOrder=0 },
-            new RefDQPCategoriesOfLearning { Id=Guid.Parse("682b4988-0dc3-4e5e-a4a5-df4c9d444b83"), Code="A category of learning addressing proficiencies needed for both civic and global inquiry and interaction.", SortOrder=0 },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("4e0bd5c7-ccf8-413d-8bbc-0f60fe89bb0a"), Code="SpecializedKnowledge", Description="Specialized Knowledge", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("d17127d6-b35b-477f-a1c3-270030bda21f"), Code="BroadAndIntegrativeKnowledge", Description="Broad and Integrative Knowledge", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("5fc3d485-4fda-4e1b-beb5-1d11b9daf2bd"), Code="IntellectualSkills", Description="Intellectual Skills", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("05c4ead2-56b9-4d5d-8918-bdf4a5919ddf"), Code="AppliedAndCollaborativeLearning", Description="Applied and Collaborative Learning", SortOrder=Convert.ToDecimal("4.00") },
+            new RefDQPCategoriesOfLearning { Id=Guid.Parse("6ec941e2-448a-4b88-848e-9d6879a3da64"), Code="CivicAndGlobalLearning", Description="Civic and Global Learning", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

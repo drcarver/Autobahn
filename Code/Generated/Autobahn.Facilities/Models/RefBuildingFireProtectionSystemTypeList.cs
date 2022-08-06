@@ -15,31 +15,31 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingFireProtectionSystemType"> List
          /// </summary>
-        public static List<RefBuildingFireProtectionSystemType> RefBuildingFireProtectionSystemTypeList = new List<RefBuildingFireProtectionSystemType> =
+        public static List<RefBuildingFireProtectionSystemType> RefBuildingFireProtectionSystemTypeList = new List<RefBuildingFireProtectionSystemType>
         {
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("27a4e6f2-e8cf-4e3e-870e-63b949dfc780"), Code="Alarms is specified as the type of system that protects the facility against fire.", Description="02513", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("56ac085f-61d1-4cf3-8507-5c796ee20d03"), Code="Automatic sprinkler is specified as the type of system that protects the facility against fire.", Description="02511", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("73f3efef-379e-4525-9260-0d2c4fe6c8c8"), Code="Fire protection specialists is specified as the type of system that protects the facility against fire.", Description="13579", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("932f887a-eca0-4095-a6b8-88dd4d824f43"), Code="Fire pump/extinguishers is specified as the type of system that protects the facility against fire.", Description="02512", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("faaaeb52-ac4e-4855-8789-dff5e39b12fc"), Code="Kitchen fire suppressor system is specified as the type of system that protects the facility against fire.", Description="02514", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("cd5ec966-443d-4426-8f05-e439c99a3189"), Code="Other fire protection systems is specified as the type of system that protects the facility against fire.", Description="13580", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("c62c6b6d-318f-4330-9ac4-32a69c82cb53"), Code="Standpipes is specified as the type of system that protects the facility against fire.", Description="13581", Definition="", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("7434cd5d-2857-418c-968a-7cbe735280dd"), Code="Other is specified as the type of system that protects the facility against fire.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("ca3aa8c1-9134-471f-9305-3354ff3cd029"), Code="02513", Description="Alarms", Definition="Alarms is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("d7b521bf-b87c-41f8-8cea-e9929ccb457b"), Code="02511", Description="Automatic sprinkler", Definition="Automatic sprinkler is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("f8df3198-2eaf-41ff-96a7-3306fadb73d7"), Code="13579", Description="Fire protection specialists", Definition="Fire protection specialists is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("71016019-ea43-41d1-a4a7-5c46510046f0"), Code="02512", Description="Fire pump/extinguishers", Definition="Fire pump/extinguishers is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("7ff970b9-6d6d-4182-8ec7-9256e44de9a4"), Code="02514", Description="Kitchen fire suppressor system", Definition="Kitchen fire suppressor system is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("c8ace21e-a455-407a-a637-c93f62611ed7"), Code="13580", Description="Other fire protection systems", Definition="Other fire protection systems is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("864e1f32-6d32-4e37-82f7-cae94a4c1d09"), Code="13581", Description="Standpipes", Definition="Standpipes is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("86bfb497-63b4-4023-b5f3-57d627a3684a"), Code="09999", Description="Other", Definition="Other is specified as the type of system that protects the facility against fire.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingFireProtectionSystemType Pick List
          /// </summary>
-        public static List<RefBuildingFireProtectionSystemType> RefBuildingFireProtectionSystemTypePickList = new List<RefBuildingFireProtectionSystemType> =
+        public static List<RefBuildingFireProtectionSystemType> RefBuildingFireProtectionSystemTypePickList = new List<RefBuildingFireProtectionSystemType>
         {
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("27a4e6f2-e8cf-4e3e-870e-63b949dfc780"), Code="Alarms is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("56ac085f-61d1-4cf3-8507-5c796ee20d03"), Code="Automatic sprinkler is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("73f3efef-379e-4525-9260-0d2c4fe6c8c8"), Code="Fire protection specialists is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("932f887a-eca0-4095-a6b8-88dd4d824f43"), Code="Fire pump/extinguishers is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("faaaeb52-ac4e-4855-8789-dff5e39b12fc"), Code="Kitchen fire suppressor system is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("cd5ec966-443d-4426-8f05-e439c99a3189"), Code="Other fire protection systems is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("c62c6b6d-318f-4330-9ac4-32a69c82cb53"), Code="Standpipes is specified as the type of system that protects the facility against fire.", SortOrder=0 },
-            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("7434cd5d-2857-418c-968a-7cbe735280dd"), Code="Other is specified as the type of system that protects the facility against fire.", SortOrder=0 },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("ca3aa8c1-9134-471f-9305-3354ff3cd029"), Code="02513", Description="Alarms", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("d7b521bf-b87c-41f8-8cea-e9929ccb457b"), Code="02511", Description="Automatic sprinkler", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("f8df3198-2eaf-41ff-96a7-3306fadb73d7"), Code="13579", Description="Fire protection specialists", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("71016019-ea43-41d1-a4a7-5c46510046f0"), Code="02512", Description="Fire pump/extinguishers", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("7ff970b9-6d6d-4182-8ec7-9256e44de9a4"), Code="02514", Description="Kitchen fire suppressor system", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("c8ace21e-a455-407a-a637-c93f62611ed7"), Code="13580", Description="Other fire protection systems", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("864e1f32-6d32-4e37-82f7-cae94a4c1d09"), Code="13581", Description="Standpipes", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingFireProtectionSystemType { Id=Guid.Parse("86bfb497-63b4-4023-b5f3-57d627a3684a"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

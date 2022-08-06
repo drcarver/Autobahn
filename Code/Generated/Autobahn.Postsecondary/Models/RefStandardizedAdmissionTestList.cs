@@ -15,47 +15,47 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefStandardizedAdmissionTest"> List
          /// </summary>
-        public static List<RefStandardizedAdmissionTest> RefStandardizedAdmissionTestList = new List<RefStandardizedAdmissionTest> =
+        public static List<RefStandardizedAdmissionTest> RefStandardizedAdmissionTestList = new List<RefStandardizedAdmissionTest>
         {
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("8c520424-f300-43dc-8016-0b88c5d37a94"), Code="SAT Reading is a test used for admissions purposes.", Description="SAT_Reading", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("a6c21061-efa6-4861-ac1c-bd2294e65fdf"), Code="SAT Writing is a test used for admissions purposes.", Description="SAT_Writing", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("31996a3a-1b64-411e-bdd0-e812b4b6b1da"), Code="SAT Math is a test used for admissions purposes.", Description="SAT_Math", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("fcd8f482-83cc-4959-a174-9aa3a26d76a8"), Code="SAT Total is a test used for admissions purposes.", Description="SAT_Total", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("0154c22d-3c82-471c-8611-b9ea5a36aa6f"), Code="ACT English is a test used for admissions purposes.", Description="ACT_English", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("2a7fa606-0943-4618-9aa4-c42e1eb36ecd"), Code="ACT Math is a test used for admissions purposes.", Description="ACT_Math", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("865c32e0-001b-49e5-80c7-3e4fca8f7246"), Code="ACT Reading is a test used for admissions purposes.", Description="ACT_Reading", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("a487865d-a6bd-4f43-8bb0-ec8cd76b5322"), Code="ACT Science is a test used for admissions purposes.", Description="ACT_Science", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("2b3509b0-feff-4e73-9470-a07ff43c4796"), Code="ACT Composite is a test used for admissions purposes.", Description="ACT_Composite", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("beb366f0-5060-46ef-8f12-0b8fa80706fd"), Code="COMPASS reading is a test used for admissions purposes.", Description="COMPASS_reading", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("5168a9a3-cf07-4307-8169-a50a9a7804be"), Code="COMPASS writing is a test used for admissions purposes.", Description="COMPASS_writing", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("8a762347-f169-417b-8e3b-86bf65f10067"), Code="COMPASS math is a test used for admissions purposes.", Description="COMPASS_math", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("4899cc28-0c3f-4551-8ed2-221a7d450890"), Code="Accuplacer reading is a test used for admissions purposes.", Description="Accuplacer_reading", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("864c4942-ee41-43ab-98e3-a4fc7db048d1"), Code="Accuplacer writing is a test used for admissions purposes.", Description="Accuplacer_writing", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("302d5b3c-8496-4f62-9e9f-0e569fce08f0"), Code="Accuplacer math is a test used for admissions purposes.", Description="Accuplacer_math", Definition="", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("d7145fa5-7787-4fd0-aa60-3dbe6db1c3c8"), Code="The test type used for admissions purposes is not yet included in CEDS as a Standardized Admissions Test Type.", Description="Other", Definition="", SortOrder=0 },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("63e109e9-10d9-4a53-8d96-28ff62f5a19b"), Code="SAT_Reading", Description="SAT Reading", Definition="SAT Reading is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("ad9a557c-ff9c-428a-b5bc-f80514190189"), Code="SAT_Writing", Description="SAT Writing", Definition="SAT Writing is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("3d9595b8-7088-46fb-83d7-77e125023c73"), Code="SAT_Math", Description="SAT Math", Definition="SAT Math is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("ff13c2b9-c45a-4299-9c2d-68422b157336"), Code="SAT_Total", Description="SAT Total", Definition="SAT Total is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("7ec1df7e-132e-4cea-81e5-6a191455915a"), Code="ACT_English", Description="ACT English", Definition="ACT English is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2b49b7dc-a79a-40ac-a057-177d31c0d4f5"), Code="ACT_Math", Description="ACT Math", Definition="ACT Math is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("50c29bfd-a18a-4795-a779-b3698d13bab5"), Code="ACT_Reading", Description="ACT Reading", Definition="ACT Reading is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("dfcd63f5-f429-4242-89db-b83bc5ffa23f"), Code="ACT_Science", Description="ACT Science", Definition="ACT Science is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("e602390a-3d21-4b6f-88e3-130529cbcde3"), Code="ACT_Composite", Description="ACT Composite", Definition="ACT Composite is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("b47dbd74-cf84-4bc9-beda-2e16e94d66c8"), Code="COMPASS_reading", Description="COMPASS reading", Definition="COMPASS reading is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("d3b757f7-6a45-439e-be88-df371d664011"), Code="COMPASS_writing", Description="COMPASS writing", Definition="COMPASS writing is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2ae97c12-0466-483e-a663-f4a3f47884e4"), Code="COMPASS_math", Description="COMPASS math", Definition="COMPASS math is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("a1e8ccb4-cd67-4dec-86e2-c28cf9f6ded9"), Code="Accuplacer_reading", Description="Accuplacer reading", Definition="Accuplacer reading is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("21b84c9e-3dba-4674-8dc8-8f28d7024a47"), Code="Accuplacer_writing", Description="Accuplacer writing", Definition="Accuplacer writing is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2ff8a574-84b0-4dbe-b571-a0b12b9ad4b3"), Code="Accuplacer_math", Description="Accuplacer math", Definition="Accuplacer math is a test used for admissions purposes.", SortOrder=Convert.ToDecimal("15.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("d2cd4a0f-1549-45c0-8158-063b226effac"), Code="Other", Description="Other", Definition="The test type used for admissions purposes is not yet included in CEDS as a Standardized Admissions Test Type.", SortOrder=Convert.ToDecimal("100.00") },
         };
 
         /// <summary>
         /// The RefStandardizedAdmissionTest Pick List
          /// </summary>
-        public static List<RefStandardizedAdmissionTest> RefStandardizedAdmissionTestPickList = new List<RefStandardizedAdmissionTest> =
+        public static List<RefStandardizedAdmissionTest> RefStandardizedAdmissionTestPickList = new List<RefStandardizedAdmissionTest>
         {
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("8c520424-f300-43dc-8016-0b88c5d37a94"), Code="SAT Reading is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("a6c21061-efa6-4861-ac1c-bd2294e65fdf"), Code="SAT Writing is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("31996a3a-1b64-411e-bdd0-e812b4b6b1da"), Code="SAT Math is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("fcd8f482-83cc-4959-a174-9aa3a26d76a8"), Code="SAT Total is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("0154c22d-3c82-471c-8611-b9ea5a36aa6f"), Code="ACT English is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("2a7fa606-0943-4618-9aa4-c42e1eb36ecd"), Code="ACT Math is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("865c32e0-001b-49e5-80c7-3e4fca8f7246"), Code="ACT Reading is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("a487865d-a6bd-4f43-8bb0-ec8cd76b5322"), Code="ACT Science is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("2b3509b0-feff-4e73-9470-a07ff43c4796"), Code="ACT Composite is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("beb366f0-5060-46ef-8f12-0b8fa80706fd"), Code="COMPASS reading is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("5168a9a3-cf07-4307-8169-a50a9a7804be"), Code="COMPASS writing is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("8a762347-f169-417b-8e3b-86bf65f10067"), Code="COMPASS math is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("4899cc28-0c3f-4551-8ed2-221a7d450890"), Code="Accuplacer reading is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("864c4942-ee41-43ab-98e3-a4fc7db048d1"), Code="Accuplacer writing is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("302d5b3c-8496-4f62-9e9f-0e569fce08f0"), Code="Accuplacer math is a test used for admissions purposes.", SortOrder=0 },
-            new RefStandardizedAdmissionTest { Id=Guid.Parse("d7145fa5-7787-4fd0-aa60-3dbe6db1c3c8"), Code="The test type used for admissions purposes is not yet included in CEDS as a Standardized Admissions Test Type.", SortOrder=0 },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("63e109e9-10d9-4a53-8d96-28ff62f5a19b"), Code="SAT_Reading", Description="SAT Reading", SortOrder=Convert.ToDecimal("1.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("ad9a557c-ff9c-428a-b5bc-f80514190189"), Code="SAT_Writing", Description="SAT Writing", SortOrder=Convert.ToDecimal("2.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("3d9595b8-7088-46fb-83d7-77e125023c73"), Code="SAT_Math", Description="SAT Math", SortOrder=Convert.ToDecimal("3.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("ff13c2b9-c45a-4299-9c2d-68422b157336"), Code="SAT_Total", Description="SAT Total", SortOrder=Convert.ToDecimal("4.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("7ec1df7e-132e-4cea-81e5-6a191455915a"), Code="ACT_English", Description="ACT English", SortOrder=Convert.ToDecimal("5.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2b49b7dc-a79a-40ac-a057-177d31c0d4f5"), Code="ACT_Math", Description="ACT Math", SortOrder=Convert.ToDecimal("6.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("50c29bfd-a18a-4795-a779-b3698d13bab5"), Code="ACT_Reading", Description="ACT Reading", SortOrder=Convert.ToDecimal("7.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("dfcd63f5-f429-4242-89db-b83bc5ffa23f"), Code="ACT_Science", Description="ACT Science", SortOrder=Convert.ToDecimal("8.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("e602390a-3d21-4b6f-88e3-130529cbcde3"), Code="ACT_Composite", Description="ACT Composite", SortOrder=Convert.ToDecimal("9.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("b47dbd74-cf84-4bc9-beda-2e16e94d66c8"), Code="COMPASS_reading", Description="COMPASS reading", SortOrder=Convert.ToDecimal("10.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("d3b757f7-6a45-439e-be88-df371d664011"), Code="COMPASS_writing", Description="COMPASS writing", SortOrder=Convert.ToDecimal("11.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2ae97c12-0466-483e-a663-f4a3f47884e4"), Code="COMPASS_math", Description="COMPASS math", SortOrder=Convert.ToDecimal("12.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("a1e8ccb4-cd67-4dec-86e2-c28cf9f6ded9"), Code="Accuplacer_reading", Description="Accuplacer reading", SortOrder=Convert.ToDecimal("13.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("21b84c9e-3dba-4674-8dc8-8f28d7024a47"), Code="Accuplacer_writing", Description="Accuplacer writing", SortOrder=Convert.ToDecimal("14.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("2ff8a574-84b0-4dbe-b571-a0b12b9ad4b3"), Code="Accuplacer_math", Description="Accuplacer math", SortOrder=Convert.ToDecimal("15.00") },
+            new RefStandardizedAdmissionTest { Id=Guid.Parse("d2cd4a0f-1549-45c0-8158-063b226effac"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("100.00") },
        };
    }
 }

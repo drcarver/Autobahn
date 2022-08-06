@@ -15,19 +15,19 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefPsStudentLevel"> List
          /// </summary>
-        public static List<RefPsStudentLevel> RefPsStudentLevelList = new List<RefPsStudentLevel> =
+        public static List<RefPsStudentLevel> RefPsStudentLevelList = new List<RefPsStudentLevel>
         {
-            new RefPsStudentLevel { Id=Guid.Parse("fbbf131d-7303-468a-ae38-6dd0b2290a79"), Code="The person enrolling in credit-granting courses at the postsecondary institution is at the undergraduate level.", Description="Undergraduate", Definition="", SortOrder=0 },
-            new RefPsStudentLevel { Id=Guid.Parse("543ff89b-7335-43e2-baea-f9415e37de5e"), Code="The person enrolling in credit-granting courses at the postsecondary institution is at the graduate level.", Description="Graduate", Definition="", SortOrder=0 },
+            new RefPsStudentLevel { Id=Guid.Parse("6bdfc755-a41a-4c23-b500-0e6a0e03d006"), Code="Undergraduate", Description="Undergraduate", Definition="The person enrolling in credit-granting courses at the postsecondary institution is at the undergraduate level.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsStudentLevel { Id=Guid.Parse("d90dfe49-4d2c-4660-97e4-f063c29ca4ef"), Code="Graduate", Description="Graduate", Definition="The person enrolling in credit-granting courses at the postsecondary institution is at the graduate level.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefPsStudentLevel Pick List
          /// </summary>
-        public static List<RefPsStudentLevel> RefPsStudentLevelPickList = new List<RefPsStudentLevel> =
+        public static List<RefPsStudentLevel> RefPsStudentLevelPickList = new List<RefPsStudentLevel>
         {
-            new RefPsStudentLevel { Id=Guid.Parse("fbbf131d-7303-468a-ae38-6dd0b2290a79"), Code="The person enrolling in credit-granting courses at the postsecondary institution is at the undergraduate level.", SortOrder=0 },
-            new RefPsStudentLevel { Id=Guid.Parse("543ff89b-7335-43e2-baea-f9415e37de5e"), Code="The person enrolling in credit-granting courses at the postsecondary institution is at the graduate level.", SortOrder=0 },
+            new RefPsStudentLevel { Id=Guid.Parse("6bdfc755-a41a-4c23-b500-0e6a0e03d006"), Code="Undergraduate", Description="Undergraduate", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsStudentLevel { Id=Guid.Parse("d90dfe49-4d2c-4660-97e4-f063c29ca4ef"), Code="Graduate", Description="Graduate", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

@@ -15,21 +15,21 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefDistanceEducationCourseEnrollment"> List
          /// </summary>
-        public static List<RefDistanceEducationCourseEnrollment> RefDistanceEducationCourseEnrollmentList = new List<RefDistanceEducationCourseEnrollment> =
+        public static List<RefDistanceEducationCourseEnrollment> RefDistanceEducationCourseEnrollmentList = new List<RefDistanceEducationCourseEnrollment>
         {
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("12c43399-7c8e-4487-b10f-bd91ca76a8f2"), Code="The student is enrolled exclusively in distance education courses.", Description="EnrolledExclusively", Definition="", SortOrder=0 },
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("72c1d2bf-7332-4220-962f-0c277faeaf28"), Code="The student is enrolled in some but not all distance education courses.", Description="EnrolledInSome", Definition="", SortOrder=0 },
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("1395ad75-3b24-4ef4-a837-34caccc6af95"), Code="The student is not enrolled in distance education courses.", Description="NotEnrolled", Definition="", SortOrder=0 },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("097075b0-c714-4584-810d-8f8cffe17c67"), Code="EnrolledExclusively", Description="Enrolled exclusively in distance education courses", Definition="The student is enrolled exclusively in distance education courses.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("dd549b02-c0bf-441e-b1fc-b28e0326d780"), Code="EnrolledInSome", Description="Enrolled in some but not all distance education courses", Definition="The student is enrolled in some but not all distance education courses.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("9ab5647d-a5e8-4c8a-abc7-74da5f60268e"), Code="NotEnrolled", Description="Not enrolled in distance education courses", Definition="The student is not enrolled in distance education courses.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefDistanceEducationCourseEnrollment Pick List
          /// </summary>
-        public static List<RefDistanceEducationCourseEnrollment> RefDistanceEducationCourseEnrollmentPickList = new List<RefDistanceEducationCourseEnrollment> =
+        public static List<RefDistanceEducationCourseEnrollment> RefDistanceEducationCourseEnrollmentPickList = new List<RefDistanceEducationCourseEnrollment>
         {
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("12c43399-7c8e-4487-b10f-bd91ca76a8f2"), Code="The student is enrolled exclusively in distance education courses.", SortOrder=0 },
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("72c1d2bf-7332-4220-962f-0c277faeaf28"), Code="The student is enrolled in some but not all distance education courses.", SortOrder=0 },
-            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("1395ad75-3b24-4ef4-a837-34caccc6af95"), Code="The student is not enrolled in distance education courses.", SortOrder=0 },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("097075b0-c714-4584-810d-8f8cffe17c67"), Code="EnrolledExclusively", Description="Enrolled exclusively in distance education courses", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("dd549b02-c0bf-441e-b1fc-b28e0326d780"), Code="EnrolledInSome", Description="Enrolled in some but not all distance education courses", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDistanceEducationCourseEnrollment { Id=Guid.Parse("9ab5647d-a5e8-4c8a-abc7-74da5f60268e"), Code="NotEnrolled", Description="Not enrolled in distance education courses", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

@@ -15,27 +15,27 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingCommMgmtComponentSystemType"> List
          /// </summary>
-        public static List<RefBuildingCommMgmtComponentSystemType> RefBuildingCommMgmtComponentSystemTypeList = new List<RefBuildingCommMgmtComponentSystemType> =
+        public static List<RefBuildingCommMgmtComponentSystemType> RefBuildingCommMgmtComponentSystemTypeList = new List<RefBuildingCommMgmtComponentSystemType>
         {
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("9fb1f063-0b98-45fe-9f4c-ff3fc5237fd9"), Code="Data is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="02500", Definition="", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("1cd81e4f-279b-4536-b619-927884336a92"), Code="Integrated (voice, data, video, etc.) is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="14905", Definition="", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("60c0f4ee-3787-4887-95c0-e3a8e4648e7c"), Code="Public address system is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="02501", Definition="", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("48d30a10-6c55-4aa3-842e-3164e3d6b6ec"), Code="Video is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="02499", Definition="", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("b9071999-ac32-4328-83fb-ba1718cfb587"), Code="Voice is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="02498", Definition="", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("a1ebec68-b966-45ad-bcaf-47cf8c0eb88a"), Code="Other is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("71ae30ba-48cf-4733-a9ae-2ef96e4234fe"), Code="02500", Description="Data", Definition="Data is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("e468a928-8a18-4f43-8e41-cb772267b19f"), Code="14905", Description="Integrated (voice, data, video, etc.)", Definition="Integrated (voice, data, video, etc.) is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("aa4af572-4813-46e3-9e92-370ff6ede062"), Code="02501", Description="Public address system", Definition="Public address system is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("76e65313-ea6c-4fd3-bc17-6f1c710de9d7"), Code="02499", Description="Video", Definition="Video is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("dcf64375-6974-4cd1-b56d-44d1f7afc06a"), Code="02498", Description="Voice", Definition="Voice is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("f1716092-7af3-475f-9fa1-3c147454918c"), Code="09999", Description="Other", Definition="Other is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingCommMgmtComponentSystemType Pick List
          /// </summary>
-        public static List<RefBuildingCommMgmtComponentSystemType> RefBuildingCommMgmtComponentSystemTypePickList = new List<RefBuildingCommMgmtComponentSystemType> =
+        public static List<RefBuildingCommMgmtComponentSystemType> RefBuildingCommMgmtComponentSystemTypePickList = new List<RefBuildingCommMgmtComponentSystemType>
         {
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("9fb1f063-0b98-45fe-9f4c-ff3fc5237fd9"), Code="Data is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("1cd81e4f-279b-4536-b619-927884336a92"), Code="Integrated (voice, data, video, etc.) is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("60c0f4ee-3787-4887-95c0-e3a8e4648e7c"), Code="Public address system is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("48d30a10-6c55-4aa3-842e-3164e3d6b6ec"), Code="Video is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("b9071999-ac32-4328-83fb-ba1718cfb587"), Code="Voice is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
-            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("a1ebec68-b966-45ad-bcaf-47cf8c0eb88a"), Code="Other is specified as the type of system, interface, and management components for carrying voice, video, and data throughout a building.", SortOrder=0 },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("71ae30ba-48cf-4733-a9ae-2ef96e4234fe"), Code="02500", Description="Data", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("e468a928-8a18-4f43-8e41-cb772267b19f"), Code="14905", Description="Integrated (voice, data, video, etc.)", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("aa4af572-4813-46e3-9e92-370ff6ede062"), Code="02501", Description="Public address system", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("76e65313-ea6c-4fd3-bc17-6f1c710de9d7"), Code="02499", Description="Video", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("dcf64375-6974-4cd1-b56d-44d1f7afc06a"), Code="02498", Description="Voice", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingCommMgmtComponentSystemType { Id=Guid.Parse("f1716092-7af3-475f-9fa1-3c147454918c"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

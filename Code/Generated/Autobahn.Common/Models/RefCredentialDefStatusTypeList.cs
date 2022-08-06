@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCredentialDefStatusType"> List
          /// </summary>
-        public static List<RefCredentialDefStatusType> RefCredentialDefStatusTypeList = new List<RefCredentialDefStatusType> =
+        public static List<RefCredentialDefStatusType> RefCredentialDefStatusTypeList = new List<RefCredentialDefStatusType>
         {
-            new RefCredentialDefStatusType { Id=Guid.Parse("747f241d-4af8-4088-8124-a773a09c4146"), Code="Awards of the credential are ongoing.", Description="Active", Definition="", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("82721f96-a10b-4ec9-8932-82c13e65cab0"), Code="The credential is no longer awarded.", Description="Deprecated", Definition="", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("2c24a671-ad3f-46ae-bc43-61af80af940d"), Code="The credential award is provisional or temporary; frequently pending further assessment of qualification.", Description="Probationary", Definition="", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("ffdf8227-6ca0-48ee-b855-3ceb1e373f2a"), Code="The credential is no longer awarded and has been superseded by another credential.", Description="Superseded", Definition="", SortOrder=0 },
+            new RefCredentialDefStatusType { Id=Guid.Parse("cdebd286-3237-4cca-acc4-641d8b75a5c3"), Code="Active", Description="Active", Definition="Awards of the credential are ongoing.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("8bae3f2c-a20c-4008-ab5e-2db6f2298016"), Code="Deprecated", Description="Deprecated", Definition="The credential is no longer awarded.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("ff1779f5-b02c-4556-9e0c-e358a8e44ab4"), Code="Probationary", Description="Probationary", Definition="The credential award is provisional or temporary; frequently pending further assessment of qualification.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("cee9bd01-5086-4ba8-b41a-08f9e5c1e717"), Code="Superseded", Description="Superseded", Definition="The credential is no longer awarded and has been superseded by another credential.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefCredentialDefStatusType Pick List
          /// </summary>
-        public static List<RefCredentialDefStatusType> RefCredentialDefStatusTypePickList = new List<RefCredentialDefStatusType> =
+        public static List<RefCredentialDefStatusType> RefCredentialDefStatusTypePickList = new List<RefCredentialDefStatusType>
         {
-            new RefCredentialDefStatusType { Id=Guid.Parse("747f241d-4af8-4088-8124-a773a09c4146"), Code="Awards of the credential are ongoing.", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("82721f96-a10b-4ec9-8932-82c13e65cab0"), Code="The credential is no longer awarded.", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("2c24a671-ad3f-46ae-bc43-61af80af940d"), Code="The credential award is provisional or temporary; frequently pending further assessment of qualification.", SortOrder=0 },
-            new RefCredentialDefStatusType { Id=Guid.Parse("ffdf8227-6ca0-48ee-b855-3ceb1e373f2a"), Code="The credential is no longer awarded and has been superseded by another credential.", SortOrder=0 },
+            new RefCredentialDefStatusType { Id=Guid.Parse("cdebd286-3237-4cca-acc4-641d8b75a5c3"), Code="Active", Description="Active", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("8bae3f2c-a20c-4008-ab5e-2db6f2298016"), Code="Deprecated", Description="Deprecated", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("ff1779f5-b02c-4556-9e0c-e358a8e44ab4"), Code="Probationary", Description="Probationary", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefStatusType { Id=Guid.Parse("cee9bd01-5086-4ba8-b41a-08f9e5c1e717"), Code="Superseded", Description="Superseded", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

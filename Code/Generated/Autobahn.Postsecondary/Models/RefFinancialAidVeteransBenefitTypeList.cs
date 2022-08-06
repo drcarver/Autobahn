@@ -15,19 +15,19 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefFinancialAidVeteransBenefitType"> List
          /// </summary>
-        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypeList = new List<RefFinancialAidVeteransBenefitType> =
+        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypeList = new List<RefFinancialAidVeteransBenefitType>
         {
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("df81f22f-d99a-48ec-8787-658e3e09c73b"), Code="Post-9/11 GI Bill", Description="Post911GIBill", Definition="", SortOrder=0 },
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("1f7803fb-4967-40df-ba65-d3e4aa9c3dd7"), Code="Department of Defense Tuition Assistance", Description="DODTuitionAssistance", Definition="", SortOrder=0 },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c999cfb0-766e-4013-8ab6-89c88a90bb76"), Code="Post911GIBill", Description="Post-9/11 GI Bill", Definition="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("a6fb0b1a-f0c5-4868-a34c-1a963cc5d9c3"), Code="DODTuitionAssistance", Description="Department of Defense Tuition Assistance", Definition="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefFinancialAidVeteransBenefitType Pick List
          /// </summary>
-        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypePickList = new List<RefFinancialAidVeteransBenefitType> =
+        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypePickList = new List<RefFinancialAidVeteransBenefitType>
         {
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("df81f22f-d99a-48ec-8787-658e3e09c73b"), Code="Post-9/11 GI Bill", SortOrder=0 },
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("1f7803fb-4967-40df-ba65-d3e4aa9c3dd7"), Code="Department of Defense Tuition Assistance", SortOrder=0 },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c999cfb0-766e-4013-8ab6-89c88a90bb76"), Code="Post911GIBill", Description="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("a6fb0b1a-f0c5-4868-a34c-1a963cc5d9c3"), Code="DODTuitionAssistance", Description="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

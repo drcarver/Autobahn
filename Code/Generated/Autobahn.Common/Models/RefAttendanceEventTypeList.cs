@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAttendanceEventType"> List
          /// </summary>
-        public static List<RefAttendanceEventType> RefAttendanceEventTypeList = new List<RefAttendanceEventType> =
+        public static List<RefAttendanceEventType> RefAttendanceEventTypeList = new List<RefAttendanceEventType>
         {
-            new RefAttendanceEventType { Id=Guid.Parse("92a6f80f-82cf-4961-a5b1-4ac97d438646"), Code="Daily attendance is specified as the type of attendance event.", Description="DailyAttendance", Definition="", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("91ccaee4-497b-4b2f-ad0b-7fdca6bdf8c6"), Code="Class/section attendance is specified as the type of attendance event.", Description="ClassSectionAttendance", Definition="", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("d6ec1c1d-1c27-4877-a7af-765525bf5098"), Code="Program attendance is specified as the type of attendance event.", Description="ProgramAttendance", Definition="", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("ddba2ced-586f-40af-b6be-1ef7b9ed8906"), Code="Extracurricular attendance is specified as the type of attendance event.", Description="ExtracurricularAttendance", Definition="", SortOrder=0 },
+            new RefAttendanceEventType { Id=Guid.Parse("26460746-8561-41ef-9127-c128d4c171a0"), Code="DailyAttendance", Description="Daily attendance", Definition="Daily attendance is specified as the type of attendance event.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("de8803d5-2fa4-4b43-a206-e18b6ab7ca1b"), Code="ClassSectionAttendance", Description="Class/section attendance", Definition="Class/section attendance is specified as the type of attendance event.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("e04d448d-3274-4503-8c51-11fa68513a78"), Code="ProgramAttendance", Description="Program attendance", Definition="Program attendance is specified as the type of attendance event.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("45dcec02-db1a-4efd-ad54-25fe76037a80"), Code="ExtracurricularAttendance", Description="Extracurricular attendance", Definition="Extracurricular attendance is specified as the type of attendance event.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefAttendanceEventType Pick List
          /// </summary>
-        public static List<RefAttendanceEventType> RefAttendanceEventTypePickList = new List<RefAttendanceEventType> =
+        public static List<RefAttendanceEventType> RefAttendanceEventTypePickList = new List<RefAttendanceEventType>
         {
-            new RefAttendanceEventType { Id=Guid.Parse("92a6f80f-82cf-4961-a5b1-4ac97d438646"), Code="Daily attendance is specified as the type of attendance event.", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("91ccaee4-497b-4b2f-ad0b-7fdca6bdf8c6"), Code="Class/section attendance is specified as the type of attendance event.", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("d6ec1c1d-1c27-4877-a7af-765525bf5098"), Code="Program attendance is specified as the type of attendance event.", SortOrder=0 },
-            new RefAttendanceEventType { Id=Guid.Parse("ddba2ced-586f-40af-b6be-1ef7b9ed8906"), Code="Extracurricular attendance is specified as the type of attendance event.", SortOrder=0 },
+            new RefAttendanceEventType { Id=Guid.Parse("26460746-8561-41ef-9127-c128d4c171a0"), Code="DailyAttendance", Description="Daily attendance", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("de8803d5-2fa4-4b43-a206-e18b6ab7ca1b"), Code="ClassSectionAttendance", Description="Class/section attendance", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("e04d448d-3274-4503-8c51-11fa68513a78"), Code="ProgramAttendance", Description="Program attendance", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAttendanceEventType { Id=Guid.Parse("45dcec02-db1a-4efd-ad54-25fe76037a80"), Code="ExtracurricularAttendance", Description="Extracurricular attendance", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

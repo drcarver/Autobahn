@@ -15,21 +15,21 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefCharterSchoolType"> List
          /// </summary>
-        public static List<RefCharterSchoolType> RefCharterSchoolTypeList = new List<RefCharterSchoolType> =
+        public static List<RefCharterSchoolType> RefCharterSchoolTypeList = new List<RefCharterSchoolType>
         {
-            new RefCharterSchoolType { Id=Guid.Parse("8ee96a58-0414-40d0-937a-6377daa29245"), Code="A K12 school created by contract between a state's charter authorization board and an entity other than a  college or university.", Description="School", Definition="", SortOrder=0 },
-            new RefCharterSchoolType { Id=Guid.Parse("667e278c-8b91-464a-9eee-5fcc8538d09c"), Code="A K12 school created by contract between a college or university and a state's charter authorization board(s).", Description="CollegeUniversity", Definition="", SortOrder=0 },
-            new RefCharterSchoolType { Id=Guid.Parse("5c8fc39c-99ed-40f2-a4d0-e83335ffda01"), Code="A school that is not a charter school.", Description="NA", Definition="", SortOrder=0 },
+            new RefCharterSchoolType { Id=Guid.Parse("a781fcd0-c46b-4ec5-b768-015ec371a6d6"), Code="School", Description="School Charter", Definition="A K12 school created by contract between a state's charter authorization board and an entity other than a  college or university.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCharterSchoolType { Id=Guid.Parse("0836c70d-0e23-4f6e-a607-e2d1ddde650f"), Code="CollegeUniversity", Description="College/University Charter", Definition="A K12 school created by contract between a college or university and a state's charter authorization board(s).", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCharterSchoolType { Id=Guid.Parse("c234c05a-ed02-4709-bcc4-18aa170a0c89"), Code="NA", Description="Not a Charter School", Definition="A school that is not a charter school.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefCharterSchoolType Pick List
          /// </summary>
-        public static List<RefCharterSchoolType> RefCharterSchoolTypePickList = new List<RefCharterSchoolType> =
+        public static List<RefCharterSchoolType> RefCharterSchoolTypePickList = new List<RefCharterSchoolType>
         {
-            new RefCharterSchoolType { Id=Guid.Parse("8ee96a58-0414-40d0-937a-6377daa29245"), Code="A K12 school created by contract between a state's charter authorization board and an entity other than a  college or university.", SortOrder=0 },
-            new RefCharterSchoolType { Id=Guid.Parse("667e278c-8b91-464a-9eee-5fcc8538d09c"), Code="A K12 school created by contract between a college or university and a state's charter authorization board(s).", SortOrder=0 },
-            new RefCharterSchoolType { Id=Guid.Parse("5c8fc39c-99ed-40f2-a4d0-e83335ffda01"), Code="A school that is not a charter school.", SortOrder=0 },
+            new RefCharterSchoolType { Id=Guid.Parse("a781fcd0-c46b-4ec5-b768-015ec371a6d6"), Code="School", Description="School Charter", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCharterSchoolType { Id=Guid.Parse("0836c70d-0e23-4f6e-a607-e2d1ddde650f"), Code="CollegeUniversity", Description="College/University Charter", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCharterSchoolType { Id=Guid.Parse("c234c05a-ed02-4709-bcc4-18aa170a0c89"), Code="NA", Description="Not a Charter School", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefPersonalInformationType"> List
          /// </summary>
-        public static List<RefPersonalInformationType> RefPersonalInformationTypeList = new List<RefPersonalInformationType> =
+        public static List<RefPersonalInformationType> RefPersonalInformationTypeList = new List<RefPersonalInformationType>
         {
-            new RefPersonalInformationType { Id=Guid.Parse("72a9cb0b-65fe-40e2-8157-4d9133dd90a8"), Code="Address is the type of personal information verified through the Personal Information Verification evidence.", Description="Address", Definition="", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("2b202cde-a29a-4918-aaab-6a043af31d0c"), Code="Birthdate is the type of personal information verified through the Personal Information Verification evidence.", Description="Birthdate", Definition="", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("23dc4c25-5bb9-4811-a8a4-d1538e782937"), Code="Name is the type of personal information verified through the Personal Information Verification evidence.", Description="Name", Definition="", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("0a1797e0-5c84-499b-b09e-7b037f558b51"), Code="Telephone Number is the type of personal information verified through the Personal Information Verification evidence.", Description="TelephoneNumber", Definition="", SortOrder=0 },
+            new RefPersonalInformationType { Id=Guid.Parse("aaacf46c-1a47-4ed0-894f-f49f2b682f6a"), Code="Address", Description="Address", Definition="Address is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("b80ba0cb-fc11-448a-a2bc-9c0040ab8395"), Code="Birthdate", Description="Birthdate", Definition="Birthdate is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("a4ba3a3a-10b4-4d1e-b716-1e962d3c6a1d"), Code="Name", Description="Name", Definition="Name is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("f7f67a39-8dfa-45c9-9cdd-7848f0f47a82"), Code="TelephoneNumber", Description="Telephone Number", Definition="Telephone Number is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefPersonalInformationType Pick List
          /// </summary>
-        public static List<RefPersonalInformationType> RefPersonalInformationTypePickList = new List<RefPersonalInformationType> =
+        public static List<RefPersonalInformationType> RefPersonalInformationTypePickList = new List<RefPersonalInformationType>
         {
-            new RefPersonalInformationType { Id=Guid.Parse("72a9cb0b-65fe-40e2-8157-4d9133dd90a8"), Code="Address is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("2b202cde-a29a-4918-aaab-6a043af31d0c"), Code="Birthdate is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("23dc4c25-5bb9-4811-a8a4-d1538e782937"), Code="Name is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=0 },
-            new RefPersonalInformationType { Id=Guid.Parse("0a1797e0-5c84-499b-b09e-7b037f558b51"), Code="Telephone Number is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=0 },
+            new RefPersonalInformationType { Id=Guid.Parse("aaacf46c-1a47-4ed0-894f-f49f2b682f6a"), Code="Address", Description="Address", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("b80ba0cb-fc11-448a-a2bc-9c0040ab8395"), Code="Birthdate", Description="Birthdate", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("a4ba3a3a-10b4-4d1e-b716-1e962d3c6a1d"), Code="Name", Description="Name", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPersonalInformationType { Id=Guid.Parse("f7f67a39-8dfa-45c9-9cdd-7848f0f47a82"), Code="TelephoneNumber", Description="Telephone Number", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

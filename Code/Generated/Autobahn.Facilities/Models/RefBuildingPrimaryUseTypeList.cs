@@ -15,25 +15,25 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingPrimaryUseType"> List
          /// </summary>
-        public static List<RefBuildingPrimaryUseType> RefBuildingPrimaryUseTypeList = new List<RefBuildingPrimaryUseType> =
+        public static List<RefBuildingPrimaryUseType> RefBuildingPrimaryUseTypeList = new List<RefBuildingPrimaryUseType>
         {
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("d916ef39-7d6a-4667-b74f-84e20168e874"), Code="Church is specified as the primary use type of the building in which a school is located.", Description="13561", Definition="", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("6a98af57-9774-4bfb-9948-bb0f7b30be00"), Code="Commercial office building is specified as the primary use type of the building in which a school is located.", Description="13562", Definition="", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("2314e715-4c22-465e-8546-1d6b790d1b4b"), Code="Commercial warehouse is specified as the primary use type of the building in which a school is located.", Description="13563", Definition="", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("ad2bf060-7458-42a9-8217-4f85d1287815"), Code="Community center is specified as the primary use type of the building in which a school is located.", Description="13564", Definition="", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("e6e7f845-789f-4617-8952-4f189fe70fa9"), Code="Public school building is specified as the primary use type of the building in which a school is located.", Description="13565", Definition="", SortOrder=0 },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("816ccda6-0a82-49ab-9978-25ba925b52d8"), Code="13561", Description="Church", Definition="Church is specified as the primary use type of the building in which a school is located.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("67f62e72-18e6-4f8f-9d95-b50301816a32"), Code="13562", Description="Commercial office building", Definition="Commercial office building is specified as the primary use type of the building in which a school is located.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("3a548805-34f3-4f69-81ff-103a469b3261"), Code="13563", Description="Commercial warehouse", Definition="Commercial warehouse is specified as the primary use type of the building in which a school is located.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("5487f8a2-8992-49c8-8644-6d2ea11600de"), Code="13564", Description="Community center", Definition="Community center is specified as the primary use type of the building in which a school is located.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("3a79ec9d-ba50-42bf-8f49-ab7e9e12207e"), Code="13565", Description="Public school building", Definition="Public school building is specified as the primary use type of the building in which a school is located.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefBuildingPrimaryUseType Pick List
          /// </summary>
-        public static List<RefBuildingPrimaryUseType> RefBuildingPrimaryUseTypePickList = new List<RefBuildingPrimaryUseType> =
+        public static List<RefBuildingPrimaryUseType> RefBuildingPrimaryUseTypePickList = new List<RefBuildingPrimaryUseType>
         {
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("d916ef39-7d6a-4667-b74f-84e20168e874"), Code="Church is specified as the primary use type of the building in which a school is located.", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("6a98af57-9774-4bfb-9948-bb0f7b30be00"), Code="Commercial office building is specified as the primary use type of the building in which a school is located.", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("2314e715-4c22-465e-8546-1d6b790d1b4b"), Code="Commercial warehouse is specified as the primary use type of the building in which a school is located.", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("ad2bf060-7458-42a9-8217-4f85d1287815"), Code="Community center is specified as the primary use type of the building in which a school is located.", SortOrder=0 },
-            new RefBuildingPrimaryUseType { Id=Guid.Parse("e6e7f845-789f-4617-8952-4f189fe70fa9"), Code="Public school building is specified as the primary use type of the building in which a school is located.", SortOrder=0 },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("816ccda6-0a82-49ab-9978-25ba925b52d8"), Code="13561", Description="Church", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("67f62e72-18e6-4f8f-9d95-b50301816a32"), Code="13562", Description="Commercial office building", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("3a548805-34f3-4f69-81ff-103a469b3261"), Code="13563", Description="Commercial warehouse", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("5487f8a2-8992-49c8-8644-6d2ea11600de"), Code="13564", Description="Community center", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingPrimaryUseType { Id=Guid.Parse("3a79ec9d-ba50-42bf-8f49-ab7e9e12207e"), Code="13565", Description="Public school building", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

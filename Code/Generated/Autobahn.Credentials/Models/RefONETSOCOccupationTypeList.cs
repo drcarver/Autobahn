@@ -15,14 +15,14 @@ namespace Autobahn.Credentials.Models
         /// <summary>
         /// The complete <see cref="RefONETSOCOccupationType"> List
          /// </summary>
-        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypeList = new List<RefONETSOCOccupationType> =
+        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypeList = new List<RefONETSOCOccupationType>
         {
         };
 
         /// <summary>
         /// The RefONETSOCOccupationType Pick List
          /// </summary>
-        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypePickList = new List<RefONETSOCOccupationType> =
+        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypePickList = new List<RefONETSOCOccupationType>
         {
        };
    }

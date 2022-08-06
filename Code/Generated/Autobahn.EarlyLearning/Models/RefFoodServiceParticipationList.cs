@@ -15,45 +15,45 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefFoodServiceParticipation"> List
          /// </summary>
-        public static List<RefFoodServiceParticipation> RefFoodServiceParticipationList = new List<RefFoodServiceParticipation> =
+        public static List<RefFoodServiceParticipation> RefFoodServiceParticipationList = new List<RefFoodServiceParticipation>
         {
-            new RefFoodServiceParticipation { Id=Guid.Parse("599c83e8-f609-45aa-9c42-3bf63f9c38d4"), Code="The student participates in the free breakfast food service program.", Description="FreeBreakfast", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("0ab8e949-c1b8-4113-baf7-9855539e1b34"), Code="The student participates in the free lunch  food service program.", Description="FreeLunch", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("f408acc3-c72a-4519-be54-f32cb0c31d87"), Code="The student participates in the Free milk food service program.", Description="FreeMilk", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("2fc434f3-3b95-4e23-a690-05aac0289d16"), Code="The student participates in the Free snack food service program.", Description="FreeSnack", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("fbce8322-0f2a-4252-a791-32b4ccc90886"), Code="The student participates in the Free supper food service program.", Description="FreeSupper", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("a27f9978-0126-4e12-b164-4061464c7185"), Code="The student participates in the Full price breakfast food service program.", Description="FullPriceBreakfast", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("8d37e9c2-4fbd-4569-9861-099c95ee02bc"), Code="The student participates in the Full price lunch food service program.", Description="FullPriceLunch", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("77cec05e-af7c-43ee-aee7-b4cc2c82ab76"), Code="The student participates in the Full price milk food service program.", Description="FullPriceMilk", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("0edf3b00-b1c1-426f-8e61-a711319761e3"), Code="The student participates in the Full price snack food service program.", Description="FullPriceSnack", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("b761bbb5-af42-4c3e-9080-e618867c837d"), Code="The student participates in the Full price supper food service program.", Description="FullPriceSupper", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("74ce1f88-00b6-40d7-8743-4d2554769388"), Code="The student participates in the Reduced price breakfast food service program.", Description="ReducedPriceBreakfast", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("bbd09c8c-97b2-4e28-978a-36eae1ca1dd7"), Code="The student participates in the Reduced price lunch food service program.", Description="ReducedPriceLunch", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("b0769405-ec41-49b4-a240-1ad9e64ebb8f"), Code="The student participates in the Reduced price snac food service program.", Description="ReducedPriceSnack", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("90068441-42d2-4d62-995c-740d7ef50f7c"), Code="The student participates in the Reduced price supper food service program.", Description="ReducedPriceSupper", Definition="", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("17526562-5925-4649-a9e1-df41b8678b07"), Code="The student participates in a category of the food service program not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefFoodServiceParticipation { Id=Guid.Parse("00c05187-b409-4d8b-9f3c-9a11e6161a19"), Code="FreeBreakfast", Description="Free breakfast", Definition="The student participates in the free breakfast food service program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("866b7b13-4a8c-4a80-b8cc-6c8960c64537"), Code="FreeLunch", Description="Free lunch", Definition="The student participates in the free lunch  food service program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("8ca7ab49-d219-4f9c-9747-c0f5ae2ebb71"), Code="FreeMilk", Description="Free milk", Definition="The student participates in the Free milk food service program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("1fefefb1-75e3-4789-b75d-c44db7d3e55e"), Code="FreeSnack", Description="Free snack", Definition="The student participates in the Free snack food service program.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("b9b9be0c-d264-4767-8366-bac6c4953d74"), Code="FreeSupper", Description="Free supper", Definition="The student participates in the Free supper food service program.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("261f3f0a-321a-4234-ae71-7c5f340f720c"), Code="FullPriceBreakfast", Description="Full price breakfast", Definition="The student participates in the Full price breakfast food service program.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("0955ade6-f02d-4541-8540-9490702afee4"), Code="FullPriceLunch", Description="Full price lunch", Definition="The student participates in the Full price lunch food service program.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("2327ebab-eae2-4a84-92eb-e6e938580c41"), Code="FullPriceMilk", Description="Full price milk", Definition="The student participates in the Full price milk food service program.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("f655d975-dcdf-47b2-a3f3-79b54be42540"), Code="FullPriceSnack", Description="Full price snack", Definition="The student participates in the Full price snack food service program.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("1a916bc0-53da-4ae3-80aa-1dec9e325b5b"), Code="FullPriceSupper", Description="Full price supper", Definition="The student participates in the Full price supper food service program.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("9211bea3-24ea-40ec-9b7b-db90f2e3895a"), Code="ReducedPriceBreakfast", Description="Reduced price breakfast", Definition="The student participates in the Reduced price breakfast food service program.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("67dc2cc4-52b8-4ffe-8ea8-2c466cb973b1"), Code="ReducedPriceLunch", Description="Reduced price lunch", Definition="The student participates in the Reduced price lunch food service program.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("36860ffc-83e8-408d-b4a7-1db4b4e6e9b8"), Code="ReducedPriceSnack", Description="Reduced price snack", Definition="The student participates in the Reduced price snac food service program.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("470e06c0-1d81-449e-90cf-4667881e09e4"), Code="ReducedPriceSupper", Description="Reduced price supper", Definition="The student participates in the Reduced price supper food service program.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("c8aa09ce-3a4a-452a-a8ce-bb00d2f9e3d8"), Code="Other", Description="Other", Definition="The student participates in a category of the food service program not yet defined in CEDS.", SortOrder=Convert.ToDecimal("15.00") },
         };
 
         /// <summary>
         /// The RefFoodServiceParticipation Pick List
          /// </summary>
-        public static List<RefFoodServiceParticipation> RefFoodServiceParticipationPickList = new List<RefFoodServiceParticipation> =
+        public static List<RefFoodServiceParticipation> RefFoodServiceParticipationPickList = new List<RefFoodServiceParticipation>
         {
-            new RefFoodServiceParticipation { Id=Guid.Parse("599c83e8-f609-45aa-9c42-3bf63f9c38d4"), Code="The student participates in the free breakfast food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("0ab8e949-c1b8-4113-baf7-9855539e1b34"), Code="The student participates in the free lunch  food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("f408acc3-c72a-4519-be54-f32cb0c31d87"), Code="The student participates in the Free milk food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("2fc434f3-3b95-4e23-a690-05aac0289d16"), Code="The student participates in the Free snack food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("fbce8322-0f2a-4252-a791-32b4ccc90886"), Code="The student participates in the Free supper food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("a27f9978-0126-4e12-b164-4061464c7185"), Code="The student participates in the Full price breakfast food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("8d37e9c2-4fbd-4569-9861-099c95ee02bc"), Code="The student participates in the Full price lunch food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("77cec05e-af7c-43ee-aee7-b4cc2c82ab76"), Code="The student participates in the Full price milk food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("0edf3b00-b1c1-426f-8e61-a711319761e3"), Code="The student participates in the Full price snack food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("b761bbb5-af42-4c3e-9080-e618867c837d"), Code="The student participates in the Full price supper food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("74ce1f88-00b6-40d7-8743-4d2554769388"), Code="The student participates in the Reduced price breakfast food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("bbd09c8c-97b2-4e28-978a-36eae1ca1dd7"), Code="The student participates in the Reduced price lunch food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("b0769405-ec41-49b4-a240-1ad9e64ebb8f"), Code="The student participates in the Reduced price snac food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("90068441-42d2-4d62-995c-740d7ef50f7c"), Code="The student participates in the Reduced price supper food service program.", SortOrder=0 },
-            new RefFoodServiceParticipation { Id=Guid.Parse("17526562-5925-4649-a9e1-df41b8678b07"), Code="The student participates in a category of the food service program not yet defined in CEDS.", SortOrder=0 },
+            new RefFoodServiceParticipation { Id=Guid.Parse("00c05187-b409-4d8b-9f3c-9a11e6161a19"), Code="FreeBreakfast", Description="Free breakfast", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("866b7b13-4a8c-4a80-b8cc-6c8960c64537"), Code="FreeLunch", Description="Free lunch", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("8ca7ab49-d219-4f9c-9747-c0f5ae2ebb71"), Code="FreeMilk", Description="Free milk", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("1fefefb1-75e3-4789-b75d-c44db7d3e55e"), Code="FreeSnack", Description="Free snack", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("b9b9be0c-d264-4767-8366-bac6c4953d74"), Code="FreeSupper", Description="Free supper", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("261f3f0a-321a-4234-ae71-7c5f340f720c"), Code="FullPriceBreakfast", Description="Full price breakfast", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("0955ade6-f02d-4541-8540-9490702afee4"), Code="FullPriceLunch", Description="Full price lunch", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("2327ebab-eae2-4a84-92eb-e6e938580c41"), Code="FullPriceMilk", Description="Full price milk", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("f655d975-dcdf-47b2-a3f3-79b54be42540"), Code="FullPriceSnack", Description="Full price snack", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("1a916bc0-53da-4ae3-80aa-1dec9e325b5b"), Code="FullPriceSupper", Description="Full price supper", SortOrder=Convert.ToDecimal("10.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("9211bea3-24ea-40ec-9b7b-db90f2e3895a"), Code="ReducedPriceBreakfast", Description="Reduced price breakfast", SortOrder=Convert.ToDecimal("11.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("67dc2cc4-52b8-4ffe-8ea8-2c466cb973b1"), Code="ReducedPriceLunch", Description="Reduced price lunch", SortOrder=Convert.ToDecimal("12.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("36860ffc-83e8-408d-b4a7-1db4b4e6e9b8"), Code="ReducedPriceSnack", Description="Reduced price snack", SortOrder=Convert.ToDecimal("13.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("470e06c0-1d81-449e-90cf-4667881e09e4"), Code="ReducedPriceSupper", Description="Reduced price supper", SortOrder=Convert.ToDecimal("14.00") },
+            new RefFoodServiceParticipation { Id=Guid.Parse("c8aa09ce-3a4a-452a-a8ce-bb00d2f9e3d8"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("15.00") },
        };
    }
 }

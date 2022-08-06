@@ -15,19 +15,19 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefTransferReady"> List
          /// </summary>
-        public static List<RefTransferReady> RefTransferReadyList = new List<RefTransferReady> =
+        public static List<RefTransferReady> RefTransferReadyList = new List<RefTransferReady>
         {
-            new RefTransferReady { Id=Guid.Parse("cc511084-298b-40ba-a637-1c400abb1a54"), Code="The person has successfully completed a transfer-preparatory program as defined by the state.", Description="YesStateDefined", Definition="", SortOrder=0 },
-            new RefTransferReady { Id=Guid.Parse("54d4402f-7e57-4567-8a52-8c712394aa80"), Code="The person has successfully completed a transfer-preparatory program as defined by the institution.", Description="YesInstitutionDefined", Definition="", SortOrder=0 },
+            new RefTransferReady { Id=Guid.Parse("15971766-a6e3-4222-81ff-801cd0d347e9"), Code="YesStateDefined", Description="Yes, state defined", Definition="The person has successfully completed a transfer-preparatory program as defined by the state.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTransferReady { Id=Guid.Parse("2c221921-9d21-48d5-a2b2-7f5583dc0e7e"), Code="YesInstitutionDefined", Description="Yes, institution defined", Definition="The person has successfully completed a transfer-preparatory program as defined by the institution.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefTransferReady Pick List
          /// </summary>
-        public static List<RefTransferReady> RefTransferReadyPickList = new List<RefTransferReady> =
+        public static List<RefTransferReady> RefTransferReadyPickList = new List<RefTransferReady>
         {
-            new RefTransferReady { Id=Guid.Parse("cc511084-298b-40ba-a637-1c400abb1a54"), Code="The person has successfully completed a transfer-preparatory program as defined by the state.", SortOrder=0 },
-            new RefTransferReady { Id=Guid.Parse("54d4402f-7e57-4567-8a52-8c712394aa80"), Code="The person has successfully completed a transfer-preparatory program as defined by the institution.", SortOrder=0 },
+            new RefTransferReady { Id=Guid.Parse("15971766-a6e3-4222-81ff-801cd0d347e9"), Code="YesStateDefined", Description="Yes, state defined", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTransferReady { Id=Guid.Parse("2c221921-9d21-48d5-a2b2-7f5583dc0e7e"), Code="YesInstitutionDefined", Description="Yes, institution defined", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

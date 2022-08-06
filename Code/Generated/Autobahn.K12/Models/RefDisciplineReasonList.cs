@@ -15,27 +15,27 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefDisciplineReason"> List
          /// </summary>
-        public static List<RefDisciplineReason> RefDisciplineReasonList = new List<RefDisciplineReason> =
+        public static List<RefDisciplineReason> RefDisciplineReasonList = new List<RefDisciplineReason>
         {
-            new RefDisciplineReason { Id=Guid.Parse("99e26bf7-c544-4eba-ab9e-4211d27a9493"), Code="Illicit drug related is the reason why the student was disciplined.", Description="DrugRelated", Definition="", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("418ff867-1e2d-441c-9551-4efe6d047916"), Code="Alcohol related is the reason why the student was disciplined.", Description="AlcoholRelated", Definition="", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("cf158136-1fe8-43bd-a7a0-d8d1755131ec"), Code="Weapons possession is the reason why the student was disciplined.", Description="WeaponsPossession", Definition="", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("61262a37-eb9d-46ed-a232-b1748089c28a"), Code="Violent Incident (with Physical Injury) is the reason why the student was disciplined.", Description="WithPhysicalInjury", Definition="", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("7a9fa63e-3c91-4e55-867a-fb24030386da"), Code="Violent Incident (without Physical Injury) is the reason why the student was disciplined.", Description="WithoutPhysicalInjury", Definition="", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("4068e58c-59fd-4079-9f13-efd36be968ae"), Code="Other reasons for out of school suspensions related to drug use and violence is the reason why the student was disciplined.", Description="Other", Definition="", SortOrder=0 },
+            new RefDisciplineReason { Id=Guid.Parse("a6ab218e-3de6-4014-9306-06087339a64c"), Code="DrugRelated", Description="Illicit drug related", Definition="Illicit drug related is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDisciplineReason { Id=Guid.Parse("2cffc78a-66dc-487b-9d6f-00326c2fa0bc"), Code="AlcoholRelated", Description="Alcohol related", Definition="Alcohol related is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDisciplineReason { Id=Guid.Parse("96c23d54-4beb-4387-904e-bd35f4a74b42"), Code="WeaponsPossession", Description="Weapons possession", Definition="Weapons possession is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDisciplineReason { Id=Guid.Parse("82bc3357-dc7b-4555-ae67-11eda218da91"), Code="WithPhysicalInjury", Description="Violent Incident (with Physical Injury)", Definition="Violent Incident (with Physical Injury) is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefDisciplineReason { Id=Guid.Parse("ed76b452-b8d0-4b47-8bae-691b675b2fd7"), Code="WithoutPhysicalInjury", Description="Violent Incident (without Physical Injury)", Definition="Violent Incident (without Physical Injury) is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefDisciplineReason { Id=Guid.Parse("ef6901af-44dc-49b7-9aaa-e85b3afe133f"), Code="Other", Description="Other reasons for out of school suspensions related to drug use and violence", Definition="Other reasons for out of school suspensions related to drug use and violence is the reason why the student was disciplined.", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefDisciplineReason Pick List
          /// </summary>
-        public static List<RefDisciplineReason> RefDisciplineReasonPickList = new List<RefDisciplineReason> =
+        public static List<RefDisciplineReason> RefDisciplineReasonPickList = new List<RefDisciplineReason>
         {
-            new RefDisciplineReason { Id=Guid.Parse("99e26bf7-c544-4eba-ab9e-4211d27a9493"), Code="Illicit drug related is the reason why the student was disciplined.", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("418ff867-1e2d-441c-9551-4efe6d047916"), Code="Alcohol related is the reason why the student was disciplined.", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("cf158136-1fe8-43bd-a7a0-d8d1755131ec"), Code="Weapons possession is the reason why the student was disciplined.", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("61262a37-eb9d-46ed-a232-b1748089c28a"), Code="Violent Incident (with Physical Injury) is the reason why the student was disciplined.", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("7a9fa63e-3c91-4e55-867a-fb24030386da"), Code="Violent Incident (without Physical Injury) is the reason why the student was disciplined.", SortOrder=0 },
-            new RefDisciplineReason { Id=Guid.Parse("4068e58c-59fd-4079-9f13-efd36be968ae"), Code="Other reasons for out of school suspensions related to drug use and violence is the reason why the student was disciplined.", SortOrder=0 },
+            new RefDisciplineReason { Id=Guid.Parse("a6ab218e-3de6-4014-9306-06087339a64c"), Code="DrugRelated", Description="Illicit drug related", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDisciplineReason { Id=Guid.Parse("2cffc78a-66dc-487b-9d6f-00326c2fa0bc"), Code="AlcoholRelated", Description="Alcohol related", SortOrder=Convert.ToDecimal("2.00") },
+            new RefDisciplineReason { Id=Guid.Parse("96c23d54-4beb-4387-904e-bd35f4a74b42"), Code="WeaponsPossession", Description="Weapons possession", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDisciplineReason { Id=Guid.Parse("82bc3357-dc7b-4555-ae67-11eda218da91"), Code="WithPhysicalInjury", Description="Violent Incident (with Physical Injury)", SortOrder=Convert.ToDecimal("4.00") },
+            new RefDisciplineReason { Id=Guid.Parse("ed76b452-b8d0-4b47-8bae-691b675b2fd7"), Code="WithoutPhysicalInjury", Description="Violent Incident (without Physical Injury)", SortOrder=Convert.ToDecimal("5.00") },
+            new RefDisciplineReason { Id=Guid.Parse("ef6901af-44dc-49b7-9aaa-e85b3afe133f"), Code="Other", Description="Other reasons for out of school suspensions related to drug use and violence", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

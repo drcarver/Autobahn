@@ -15,14 +15,14 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentTypeChildrenWithDisability"> List
          /// </summary>
-        public static List<RefAssessmentTypeChildrenWithDisability> RefAssessmentTypeChildrenWithDisabilityList = new List<RefAssessmentTypeChildrenWithDisability> =
+        public static List<RefAssessmentTypeChildrenWithDisability> RefAssessmentTypeChildrenWithDisabilityList = new List<RefAssessmentTypeChildrenWithDisability>
         {
         };
 
         /// <summary>
         /// The RefAssessmentTypeChildrenWithDisability Pick List
          /// </summary>
-        public static List<RefAssessmentTypeChildrenWithDisability> RefAssessmentTypeChildrenWithDisabilityPickList = new List<RefAssessmentTypeChildrenWithDisability> =
+        public static List<RefAssessmentTypeChildrenWithDisability> RefAssessmentTypeChildrenWithDisabilityPickList = new List<RefAssessmentTypeChildrenWithDisability>
         {
        };
    }

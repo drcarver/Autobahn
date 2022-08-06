@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIncomeCalculationMethod"> List
          /// </summary>
-        public static List<RefIncomeCalculationMethod> RefIncomeCalculationMethodList = new List<RefIncomeCalculationMethod> =
+        public static List<RefIncomeCalculationMethod> RefIncomeCalculationMethodList = new List<RefIncomeCalculationMethod>
         {
-            new RefIncomeCalculationMethod { Id=Guid.Parse("9f46bc7f-21d8-4f6b-a252-d2e8d514a4db"), Code="Head Start is the calculation method used by a program to determine total family income.", Description="HeadStart", Definition="", SortOrder=0 },
-            new RefIncomeCalculationMethod { Id=Guid.Parse("9447cdcb-8090-4562-ae7a-69b1ad88109f"), Code="State-specific calculation is the calculation method used by a program to determine total family income.", Description="StateSpecific", Definition="", SortOrder=0 },
+            new RefIncomeCalculationMethod { Id=Guid.Parse("287c0064-0044-425f-88de-06fa14d65ee7"), Code="HeadStart", Description="Head Start calculation", Definition="Head Start is the calculation method used by a program to determine total family income.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncomeCalculationMethod { Id=Guid.Parse("a53b7fad-2d3b-4853-a922-ff905748ec1c"), Code="StateSpecific", Description="State-specific calculation", Definition="State-specific calculation is the calculation method used by a program to determine total family income.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefIncomeCalculationMethod Pick List
          /// </summary>
-        public static List<RefIncomeCalculationMethod> RefIncomeCalculationMethodPickList = new List<RefIncomeCalculationMethod> =
+        public static List<RefIncomeCalculationMethod> RefIncomeCalculationMethodPickList = new List<RefIncomeCalculationMethod>
         {
-            new RefIncomeCalculationMethod { Id=Guid.Parse("9f46bc7f-21d8-4f6b-a252-d2e8d514a4db"), Code="Head Start is the calculation method used by a program to determine total family income.", SortOrder=0 },
-            new RefIncomeCalculationMethod { Id=Guid.Parse("9447cdcb-8090-4562-ae7a-69b1ad88109f"), Code="State-specific calculation is the calculation method used by a program to determine total family income.", SortOrder=0 },
+            new RefIncomeCalculationMethod { Id=Guid.Parse("287c0064-0044-425f-88de-06fa14d65ee7"), Code="HeadStart", Description="Head Start calculation", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncomeCalculationMethod { Id=Guid.Parse("a53b7fad-2d3b-4853-a922-ff905748ec1c"), Code="StateSpecific", Description="State-specific calculation", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

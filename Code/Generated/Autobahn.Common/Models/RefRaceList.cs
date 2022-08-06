@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefRace"> List
          /// </summary>
-        public static List<RefRace> RefRaceList = new List<RefRace> =
+        public static List<RefRace> RefRaceList = new List<RefRace>
         {
-            new RefRace { Id=Guid.Parse("0cf903ee-8e81-4807-ada8-71f9471c4383"), Code="", Description="RaceAmericanIndianorAlaskaNative", Definition="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("1fe049ff-4536-4003-baa9-243c0371a9b9"), Code="", Description="RaceAsian", Definition="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("8bc919c6-baa1-4772-b458-770beb7a378d"), Code="", Description="RaceBlackorAfricanAmerican", Definition="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("ed7869cb-b24e-49b8-a491-d234a3851668"), Code="", Description="RaceNativeHawaiianorOtherPacificIslander", Definition="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("792f93bc-69f6-4712-a663-855e50b8768a"), Code="", Description="RaceWhite", Definition="", SortOrder=0 },
+            new RefRace { Id=Guid.Parse("eff2c8ef-0a27-4df8-a1e1-2418cbf54c0e"), Code="RaceAmericanIndianorAlaskaNative", Description="American Indian or Alaska Native", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("c01a2d4d-f6c5-476c-8155-fdf926a974c5"), Code="RaceAsian", Description="Asian", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("7d26919b-e6d8-43d5-96f6-5c9a7b7035de"), Code="RaceBlackorAfricanAmerican", Description="Black or African American", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("0e492600-d53e-467a-ae5f-9004bf8832ff"), Code="RaceNativeHawaiianorOtherPacificIslander", Description="Native Hawaiian or Other Pacific Islander", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("a7781a3f-6425-4c31-858c-ff14ef9e1e34"), Code="RaceWhite", Description="White", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefRace Pick List
          /// </summary>
-        public static List<RefRace> RefRacePickList = new List<RefRace> =
+        public static List<RefRace> RefRacePickList = new List<RefRace>
         {
-            new RefRace { Id=Guid.Parse("0cf903ee-8e81-4807-ada8-71f9471c4383"), Code="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("1fe049ff-4536-4003-baa9-243c0371a9b9"), Code="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("8bc919c6-baa1-4772-b458-770beb7a378d"), Code="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("ed7869cb-b24e-49b8-a491-d234a3851668"), Code="", SortOrder=0 },
-            new RefRace { Id=Guid.Parse("792f93bc-69f6-4712-a663-855e50b8768a"), Code="", SortOrder=0 },
+            new RefRace { Id=Guid.Parse("eff2c8ef-0a27-4df8-a1e1-2418cbf54c0e"), Code="RaceAmericanIndianorAlaskaNative", Description="American Indian or Alaska Native", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("c01a2d4d-f6c5-476c-8155-fdf926a974c5"), Code="RaceAsian", Description="Asian", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("7d26919b-e6d8-43d5-96f6-5c9a7b7035de"), Code="RaceBlackorAfricanAmerican", Description="Black or African American", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("0e492600-d53e-467a-ae5f-9004bf8832ff"), Code="RaceNativeHawaiianorOtherPacificIslander", Description="Native Hawaiian or Other Pacific Islander", SortOrder=Convert.ToDecimal("") },
+            new RefRace { Id=Guid.Parse("a7781a3f-6425-4c31-858c-ff14ef9e1e34"), Code="RaceWhite", Description="White", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

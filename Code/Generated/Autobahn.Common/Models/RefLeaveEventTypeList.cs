@@ -15,49 +15,49 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefLeaveEventType"> List
          /// </summary>
-        public static List<RefLeaveEventType> RefLeaveEventTypeList = new List<RefLeaveEventType> =
+        public static List<RefLeaveEventType> RefLeaveEventTypeList = new List<RefLeaveEventType>
         {
-            new RefLeaveEventType { Id=Guid.Parse("da40508f-4b25-45fd-b058-bf6c2beef986"), Code="Administrative is the  type of leave event for staff.", Description="Administrative", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("9abc1212-c424-4af7-b9ec-68108b2bc9ff"), Code="Annual leave is the  type of leave event for staff.", Description="AnnualLeave", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f57f89ce-fd46-4a5e-a09e-26a742053246"), Code="Bereavement is the  type of leave event for staff.", Description="Bereavement", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("3b9faf7c-ff9b-4d09-8fb9-0675489de916"), Code="Compensatory leave time is the  type of leave event for staff.", Description="CompensatoryLeaveTime", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("81dc0fbe-02a0-4cf9-a726-cd77f2a9e192"), Code="Family and medical leave is the  type of leave event for staff.", Description="FamilyAndMedicalLeave", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("1918bc40-ec9c-4dda-8793-70a7a9fa236c"), Code="Flex time is the  type of leave event for staff.", Description="FlexTime", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("6bd30b34-9006-41e1-adf5-9d6f19371f43"), Code="Government-requested is the  type of leave event for staff.", Description="GovernmentRequested", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("6504175f-d44d-4828-8488-5d959d0ddc03"), Code="Jury Duty is the  type of leave event for staff.", Description="JuryDuty", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f4356916-4b84-4502-831b-aace5bb57071"), Code="Military leave is the  type of leave event for staff.", Description="MilitaryLeave", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("b154f138-b827-4b38-8018-ac9f88f4542d"), Code="Other is the  type of leave event for staff.", Description="Other", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f352551b-ccfc-4e6d-b6a7-6b8116e63346"), Code="Personal is the  type of leave event for staff.", Description="Personal", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("12c6dced-5648-499f-97e7-c75b29a70a4e"), Code="Professional development is the  type of leave event for staff.", Description="ProfessionalDevelopment", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("3ed2323a-997f-4dc0-bf75-7d57f92c94ab"), Code="Release time is the  type of leave event for staff.", Description="ReleaseTime", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("1f1941f4-cbc2-4dc2-b06b-cfd0993345f4"), Code="Sabbatical leave is the  type of leave event for staff.", Description="SabbaticalLeave", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("24ef4de0-888b-4061-8f6b-07b0a8c0660e"), Code="Sick leave is the  type of leave event for staff.", Description="SickLeave", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("44f08a26-5243-4d8b-a863-dfd919ca7134"), Code="Suspension is the  type of leave event for staff.", Description="Suspension", Definition="", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("fcb00381-2ad3-4d8a-a1e9-00d345d36204"), Code="Workers compensation is the  type of leave event for staff.", Description="WorkersCompensation", Definition="", SortOrder=0 },
+            new RefLeaveEventType { Id=Guid.Parse("b1a2654d-d79d-4407-aff8-3b35e45c43a5"), Code="Administrative", Description="Administrative", Definition="Administrative is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLeaveEventType { Id=Guid.Parse("89cea147-1580-405b-8707-1ce6c6006c86"), Code="AnnualLeave", Description="Annual leave", Definition="Annual leave is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLeaveEventType { Id=Guid.Parse("f638eddb-4826-4e32-9bd2-9881820cce19"), Code="Bereavement", Description="Bereavement", Definition="Bereavement is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLeaveEventType { Id=Guid.Parse("5bd5e781-ca83-4a50-9085-b2b951b7615a"), Code="CompensatoryLeaveTime", Description="Compensatory leave time", Definition="Compensatory leave time is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLeaveEventType { Id=Guid.Parse("32d1e606-0065-4021-a21a-9560f80c14c6"), Code="FamilyAndMedicalLeave", Description="Family and medical leave", Definition="Family and medical leave is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLeaveEventType { Id=Guid.Parse("82c91f8f-2ed5-4d49-b2f5-991b64ccb394"), Code="FlexTime", Description="Flex time", Definition="Flex time is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefLeaveEventType { Id=Guid.Parse("da2a9c38-500a-4bc5-876c-87a492ca7c97"), Code="GovernmentRequested", Description="Government-requested", Definition="Government-requested is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLeaveEventType { Id=Guid.Parse("9bd30f2f-5e38-4181-a766-ab780a004a06"), Code="JuryDuty", Description="Jury Duty", Definition="Jury Duty is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefLeaveEventType { Id=Guid.Parse("7ad0cac8-a394-4cef-813d-ddc167dd023d"), Code="MilitaryLeave", Description="Military leave", Definition="Military leave is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLeaveEventType { Id=Guid.Parse("d4ab82ae-dc96-4b80-af21-6fad90091757"), Code="Other", Description="Other", Definition="Other is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("16.00") },
+            new RefLeaveEventType { Id=Guid.Parse("4a896695-75ed-4d4b-a81f-1f49b9eea12e"), Code="Personal", Description="Personal", Definition="Personal is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("18.00") },
+            new RefLeaveEventType { Id=Guid.Parse("7d417314-43eb-407c-8263-a45847ab9c77"), Code="ProfessionalDevelopment", Description="Professional development", Definition="Professional development is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("19.00") },
+            new RefLeaveEventType { Id=Guid.Parse("24f2735a-09dd-4c1c-b2c7-c42d12ca9de8"), Code="ReleaseTime", Description="Release time", Definition="Release time is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("20.00") },
+            new RefLeaveEventType { Id=Guid.Parse("350fb876-cfaa-4aac-abda-e750bc6d1f13"), Code="SabbaticalLeave", Description="Sabbatical leave", Definition="Sabbatical leave is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("22.00") },
+            new RefLeaveEventType { Id=Guid.Parse("0eda4daf-5d21-490c-9ad4-b363d9be2208"), Code="SickLeave", Description="Sick leave", Definition="Sick leave is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("24.00") },
+            new RefLeaveEventType { Id=Guid.Parse("d7eeef16-ef9b-4c17-9680-271e63d0413d"), Code="Suspension", Description="Suspension", Definition="Suspension is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("26.00") },
+            new RefLeaveEventType { Id=Guid.Parse("0281e092-1b44-48bc-80b9-34f071a4c569"), Code="WorkersCompensation", Description="Workers compensation", Definition="Workers compensation is the  type of leave event for staff.", SortOrder=Convert.ToDecimal("32.00") },
         };
 
         /// <summary>
         /// The RefLeaveEventType Pick List
          /// </summary>
-        public static List<RefLeaveEventType> RefLeaveEventTypePickList = new List<RefLeaveEventType> =
+        public static List<RefLeaveEventType> RefLeaveEventTypePickList = new List<RefLeaveEventType>
         {
-            new RefLeaveEventType { Id=Guid.Parse("da40508f-4b25-45fd-b058-bf6c2beef986"), Code="Administrative is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("9abc1212-c424-4af7-b9ec-68108b2bc9ff"), Code="Annual leave is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f57f89ce-fd46-4a5e-a09e-26a742053246"), Code="Bereavement is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("3b9faf7c-ff9b-4d09-8fb9-0675489de916"), Code="Compensatory leave time is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("81dc0fbe-02a0-4cf9-a726-cd77f2a9e192"), Code="Family and medical leave is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("1918bc40-ec9c-4dda-8793-70a7a9fa236c"), Code="Flex time is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("6bd30b34-9006-41e1-adf5-9d6f19371f43"), Code="Government-requested is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("6504175f-d44d-4828-8488-5d959d0ddc03"), Code="Jury Duty is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f4356916-4b84-4502-831b-aace5bb57071"), Code="Military leave is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("b154f138-b827-4b38-8018-ac9f88f4542d"), Code="Other is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("f352551b-ccfc-4e6d-b6a7-6b8116e63346"), Code="Personal is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("12c6dced-5648-499f-97e7-c75b29a70a4e"), Code="Professional development is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("3ed2323a-997f-4dc0-bf75-7d57f92c94ab"), Code="Release time is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("1f1941f4-cbc2-4dc2-b06b-cfd0993345f4"), Code="Sabbatical leave is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("24ef4de0-888b-4061-8f6b-07b0a8c0660e"), Code="Sick leave is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("44f08a26-5243-4d8b-a863-dfd919ca7134"), Code="Suspension is the  type of leave event for staff.", SortOrder=0 },
-            new RefLeaveEventType { Id=Guid.Parse("fcb00381-2ad3-4d8a-a1e9-00d345d36204"), Code="Workers compensation is the  type of leave event for staff.", SortOrder=0 },
+            new RefLeaveEventType { Id=Guid.Parse("b1a2654d-d79d-4407-aff8-3b35e45c43a5"), Code="Administrative", Description="Administrative", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLeaveEventType { Id=Guid.Parse("89cea147-1580-405b-8707-1ce6c6006c86"), Code="AnnualLeave", Description="Annual leave", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLeaveEventType { Id=Guid.Parse("f638eddb-4826-4e32-9bd2-9881820cce19"), Code="Bereavement", Description="Bereavement", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLeaveEventType { Id=Guid.Parse("5bd5e781-ca83-4a50-9085-b2b951b7615a"), Code="CompensatoryLeaveTime", Description="Compensatory leave time", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLeaveEventType { Id=Guid.Parse("32d1e606-0065-4021-a21a-9560f80c14c6"), Code="FamilyAndMedicalLeave", Description="Family and medical leave", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLeaveEventType { Id=Guid.Parse("82c91f8f-2ed5-4d49-b2f5-991b64ccb394"), Code="FlexTime", Description="Flex time", SortOrder=Convert.ToDecimal("11.00") },
+            new RefLeaveEventType { Id=Guid.Parse("da2a9c38-500a-4bc5-876c-87a492ca7c97"), Code="GovernmentRequested", Description="Government-requested", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLeaveEventType { Id=Guid.Parse("9bd30f2f-5e38-4181-a766-ab780a004a06"), Code="JuryDuty", Description="Jury Duty", SortOrder=Convert.ToDecimal("13.00") },
+            new RefLeaveEventType { Id=Guid.Parse("7ad0cac8-a394-4cef-813d-ddc167dd023d"), Code="MilitaryLeave", Description="Military leave", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLeaveEventType { Id=Guid.Parse("d4ab82ae-dc96-4b80-af21-6fad90091757"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("16.00") },
+            new RefLeaveEventType { Id=Guid.Parse("4a896695-75ed-4d4b-a81f-1f49b9eea12e"), Code="Personal", Description="Personal", SortOrder=Convert.ToDecimal("18.00") },
+            new RefLeaveEventType { Id=Guid.Parse("7d417314-43eb-407c-8263-a45847ab9c77"), Code="ProfessionalDevelopment", Description="Professional development", SortOrder=Convert.ToDecimal("19.00") },
+            new RefLeaveEventType { Id=Guid.Parse("24f2735a-09dd-4c1c-b2c7-c42d12ca9de8"), Code="ReleaseTime", Description="Release time", SortOrder=Convert.ToDecimal("20.00") },
+            new RefLeaveEventType { Id=Guid.Parse("350fb876-cfaa-4aac-abda-e750bc6d1f13"), Code="SabbaticalLeave", Description="Sabbatical leave", SortOrder=Convert.ToDecimal("22.00") },
+            new RefLeaveEventType { Id=Guid.Parse("0eda4daf-5d21-490c-9ad4-b363d9be2208"), Code="SickLeave", Description="Sick leave", SortOrder=Convert.ToDecimal("24.00") },
+            new RefLeaveEventType { Id=Guid.Parse("d7eeef16-ef9b-4c17-9680-271e63d0413d"), Code="Suspension", Description="Suspension", SortOrder=Convert.ToDecimal("26.00") },
+            new RefLeaveEventType { Id=Guid.Parse("0281e092-1b44-48bc-80b9-34f071a4c569"), Code="WorkersCompensation", Description="Workers compensation", SortOrder=Convert.ToDecimal("32.00") },
        };
    }
 }

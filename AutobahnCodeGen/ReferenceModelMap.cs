@@ -6,10 +6,10 @@ namespace AutobahnCodeGen
     {
         public ReferenceModelMap()
         {
-            Map(x => x.Description).Index(2);
-            Map(x => x.Code).Index(3);
-            Map(x => x.Definition).Index(4);
-            Map(x => x.SortOrder).Index(6);
+            Map(x => x.Description).Index(1);
+            Map(x => x.Code).Index(2);
+            Map(x => x.Definition).Index(3);
+            Map(x => x.SortOrder).Index(5);
         }
     }
 }

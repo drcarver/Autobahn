@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCredentialType"> List
          /// </summary>
-        public static List<RefCredentialType> RefCredentialTypeList = new List<RefCredentialType> =
+        public static List<RefCredentialType> RefCredentialTypeList = new List<RefCredentialType>
         {
-            new RefCredentialType { Id=Guid.Parse("579f6f95-5f8e-421b-a2d2-fcd13f8e0b7f"), Code="Certification is specified as the  category of credential a person holds.", Description="Certification", Definition="", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("3622287b-8821-436c-8960-322345508051"), Code="Endorsement is specified as the  category of credential a person holds.", Description="Endorsement", Definition="", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("0941e43e-6911-46d9-a163-56fe6d3f7e4c"), Code="Licensure is specified as the  category of credential a person holds.", Description="Licensure", Definition="", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("ab742a5f-8b08-40e1-9d1b-3600da8bce50"), Code="Other is specified as the  category of credential a person holds.", Description="Other", Definition="", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("5ae7e669-c4bd-476c-acf4-f39fae80a403"), Code="Registration is specified as the  category of credential a person holds.", Description="Registration", Definition="", SortOrder=0 },
+            new RefCredentialType { Id=Guid.Parse("c56455f6-54b9-4e40-8395-426709ee19b9"), Code="Certification", Description="Certification", Definition="Certification is specified as the  category of credential a person holds.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCredentialType { Id=Guid.Parse("33832ad3-bbf5-4083-90c5-4533bdf505f2"), Code="Endorsement", Description="Endorsement", Definition="Endorsement is specified as the  category of credential a person holds.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCredentialType { Id=Guid.Parse("164f2f60-2040-43dd-a33c-b7c71abb392f"), Code="Licensure", Description="Licensure", Definition="Licensure is specified as the  category of credential a person holds.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCredentialType { Id=Guid.Parse("440e5c2e-5d3b-4523-ab4f-b55d6c072670"), Code="Other", Description="Other", Definition="Other is specified as the  category of credential a person holds.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCredentialType { Id=Guid.Parse("3273f646-f932-427a-b820-30f386b54cf9"), Code="Registration", Description="Registration", Definition="Registration is specified as the  category of credential a person holds.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefCredentialType Pick List
          /// </summary>
-        public static List<RefCredentialType> RefCredentialTypePickList = new List<RefCredentialType> =
+        public static List<RefCredentialType> RefCredentialTypePickList = new List<RefCredentialType>
         {
-            new RefCredentialType { Id=Guid.Parse("579f6f95-5f8e-421b-a2d2-fcd13f8e0b7f"), Code="Certification is specified as the  category of credential a person holds.", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("3622287b-8821-436c-8960-322345508051"), Code="Endorsement is specified as the  category of credential a person holds.", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("0941e43e-6911-46d9-a163-56fe6d3f7e4c"), Code="Licensure is specified as the  category of credential a person holds.", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("ab742a5f-8b08-40e1-9d1b-3600da8bce50"), Code="Other is specified as the  category of credential a person holds.", SortOrder=0 },
-            new RefCredentialType { Id=Guid.Parse("5ae7e669-c4bd-476c-acf4-f39fae80a403"), Code="Registration is specified as the  category of credential a person holds.", SortOrder=0 },
+            new RefCredentialType { Id=Guid.Parse("c56455f6-54b9-4e40-8395-426709ee19b9"), Code="Certification", Description="Certification", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCredentialType { Id=Guid.Parse("33832ad3-bbf5-4083-90c5-4533bdf505f2"), Code="Endorsement", Description="Endorsement", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCredentialType { Id=Guid.Parse("164f2f60-2040-43dd-a33c-b7c71abb392f"), Code="Licensure", Description="Licensure", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCredentialType { Id=Guid.Parse("440e5c2e-5d3b-4523-ab4f-b55d6c072670"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCredentialType { Id=Guid.Parse("3273f646-f932-427a-b820-30f386b54cf9"), Code="Registration", Description="Registration", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

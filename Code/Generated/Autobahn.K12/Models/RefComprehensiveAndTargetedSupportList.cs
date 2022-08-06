@@ -15,14 +15,14 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefComprehensiveAndTargetedSupport"> List
          /// </summary>
-        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportList = new List<RefComprehensiveAndTargetedSupport> =
+        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportList = new List<RefComprehensiveAndTargetedSupport>
         {
         };
 
         /// <summary>
         /// The RefComprehensiveAndTargetedSupport Pick List
          /// </summary>
-        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportPickList = new List<RefComprehensiveAndTargetedSupport> =
+        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportPickList = new List<RefComprehensiveAndTargetedSupport>
         {
        };
    }

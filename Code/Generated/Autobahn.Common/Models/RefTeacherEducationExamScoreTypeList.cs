@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefTeacherEducationExamScoreType"> List
          /// </summary>
-        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypeList = new List<RefTeacherEducationExamScoreType> =
+        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypeList = new List<RefTeacherEducationExamScoreType>
         {
         };
 
         /// <summary>
         /// The RefTeacherEducationExamScoreType Pick List
          /// </summary>
-        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypePickList = new List<RefTeacherEducationExamScoreType> =
+        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypePickList = new List<RefTeacherEducationExamScoreType>
         {
        };
    }

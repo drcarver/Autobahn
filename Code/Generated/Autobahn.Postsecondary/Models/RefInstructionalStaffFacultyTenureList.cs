@@ -15,23 +15,23 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefInstructionalStaffFacultyTenure"> List
          /// </summary>
-        public static List<RefInstructionalStaffFacultyTenure> RefInstructionalStaffFacultyTenureList = new List<RefInstructionalStaffFacultyTenure> =
+        public static List<RefInstructionalStaffFacultyTenure> RefInstructionalStaffFacultyTenureList = new List<RefInstructionalStaffFacultyTenure>
         {
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("6d3020d4-f94c-4a22-a0ff-ba052815694a"), Code="The staff member is tenured.", Description="Tenured", Definition="", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("f0b56961-636e-4501-b5f4-2045a95ea57e"), Code="The staff member is on tenure track.", Description="OnTenureTrack", Definition="", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("ccce26d8-2fdd-4fc2-919f-efab8f9d1ccb"), Code="The staff member is not on tenure track.", Description="NotOnTenureTrack", Definition="", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("7a94a2b0-6a6e-4ccc-a8ca-c904929cb90e"), Code="The staff member is without faculty status.", Description="WithoutFacultyStatus", Definition="", SortOrder=0 },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("a6d68ffd-2c55-4240-852a-73c648d169e5"), Code="Tenured", Description="Tenured", Definition="The staff member is tenured.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("eed5483e-b1e9-441d-bbbd-301fc60c45c3"), Code="OnTenureTrack", Description="On tenure track", Definition="The staff member is on tenure track.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("f1338cc6-d921-4c68-8b14-5ceb73ad0c89"), Code="NotOnTenureTrack", Description="Not on tenure track", Definition="The staff member is not on tenure track.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("c459bbb5-62f0-4e31-bec3-724740ed09f8"), Code="WithoutFacultyStatus", Description="Without faculty status", Definition="The staff member is without faculty status.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefInstructionalStaffFacultyTenure Pick List
          /// </summary>
-        public static List<RefInstructionalStaffFacultyTenure> RefInstructionalStaffFacultyTenurePickList = new List<RefInstructionalStaffFacultyTenure> =
+        public static List<RefInstructionalStaffFacultyTenure> RefInstructionalStaffFacultyTenurePickList = new List<RefInstructionalStaffFacultyTenure>
         {
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("6d3020d4-f94c-4a22-a0ff-ba052815694a"), Code="The staff member is tenured.", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("f0b56961-636e-4501-b5f4-2045a95ea57e"), Code="The staff member is on tenure track.", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("ccce26d8-2fdd-4fc2-919f-efab8f9d1ccb"), Code="The staff member is not on tenure track.", SortOrder=0 },
-            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("7a94a2b0-6a6e-4ccc-a8ca-c904929cb90e"), Code="The staff member is without faculty status.", SortOrder=0 },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("a6d68ffd-2c55-4240-852a-73c648d169e5"), Code="Tenured", Description="Tenured", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("eed5483e-b1e9-441d-bbbd-301fc60c45c3"), Code="OnTenureTrack", Description="On tenure track", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("f1338cc6-d921-4c68-8b14-5ceb73ad0c89"), Code="NotOnTenureTrack", Description="Not on tenure track", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionalStaffFacultyTenure { Id=Guid.Parse("c459bbb5-62f0-4e31-bec3-724740ed09f8"), Code="WithoutFacultyStatus", Description="Without faculty status", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

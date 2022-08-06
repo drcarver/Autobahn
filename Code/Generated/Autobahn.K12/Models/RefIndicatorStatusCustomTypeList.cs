@@ -15,14 +15,14 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefIndicatorStatusCustomType"> List
          /// </summary>
-        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypeList = new List<RefIndicatorStatusCustomType> =
+        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypeList = new List<RefIndicatorStatusCustomType>
         {
         };
 
         /// <summary>
         /// The RefIndicatorStatusCustomType Pick List
          /// </summary>
-        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypePickList = new List<RefIndicatorStatusCustomType> =
+        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypePickList = new List<RefIndicatorStatusCustomType>
         {
        };
    }

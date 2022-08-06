@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefEmployedAfterExit"> List
          /// </summary>
-        public static List<RefEmployedAfterExit> RefEmployedAfterExitList = new List<RefEmployedAfterExit> =
+        public static List<RefEmployedAfterExit> RefEmployedAfterExitList = new List<RefEmployedAfterExit>
         {
-            new RefEmployedAfterExit { Id=Guid.Parse("b0531f96-11db-475c-ab9f-72060e38a260"), Code="", Description="Yes", Definition="", SortOrder=0 },
-            new RefEmployedAfterExit { Id=Guid.Parse("d4cc0be6-010f-4fa9-8488-3fa13a5314f2"), Code="", Description="Unknown", Definition="", SortOrder=0 },
+            new RefEmployedAfterExit { Id=Guid.Parse("ba0da1db-89d3-4e98-bbe9-b4adff274819"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("297005bf-aed6-491d-8d7f-f3244541fb68"), Code="Unknown", Description="Unknown", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefEmployedAfterExit Pick List
          /// </summary>
-        public static List<RefEmployedAfterExit> RefEmployedAfterExitPickList = new List<RefEmployedAfterExit> =
+        public static List<RefEmployedAfterExit> RefEmployedAfterExitPickList = new List<RefEmployedAfterExit>
         {
-            new RefEmployedAfterExit { Id=Guid.Parse("b0531f96-11db-475c-ab9f-72060e38a260"), Code="", SortOrder=0 },
-            new RefEmployedAfterExit { Id=Guid.Parse("d4cc0be6-010f-4fa9-8488-3fa13a5314f2"), Code="", SortOrder=0 },
+            new RefEmployedAfterExit { Id=Guid.Parse("ba0da1db-89d3-4e98-bbe9-b4adff274819"), Code="Yes", Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("297005bf-aed6-491d-8d7f-f3244541fb68"), Code="Unknown", Description="Unknown", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

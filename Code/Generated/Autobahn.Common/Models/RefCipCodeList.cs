@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCipCode"> List
          /// </summary>
-        public static List<RefCipCode> RefCipCodeList = new List<RefCipCode> =
+        public static List<RefCipCode> RefCipCodeList = new List<RefCipCode>
         {
         };
 
         /// <summary>
         /// The RefCipCode Pick List
          /// </summary>
-        public static List<RefCipCode> RefCipCodePickList = new List<RefCipCode> =
+        public static List<RefCipCode> RefCipCodePickList = new List<RefCipCode>
         {
        };
    }

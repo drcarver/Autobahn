@@ -15,19 +15,19 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefMepSessionType"> List
          /// </summary>
-        public static List<RefMepSessionType> RefMepSessionTypeList = new List<RefMepSessionType> =
+        public static List<RefMepSessionType> RefMepSessionTypeList = new List<RefMepSessionType>
         {
-            new RefMepSessionType { Id=Guid.Parse("5ebd4a00-4590-4e48-8f56-3837ca6859ec"), Code="The Migrant Education Program operates during the Regular School Year.", Description="RegularSchoolYear", Definition="", SortOrder=0 },
-            new RefMepSessionType { Id=Guid.Parse("e86698fc-5e08-4904-a836-78da9cd9d332"), Code="The Migrant Education Program operates during the Summer Term or Intersession.", Description="SummerTerm", Definition="", SortOrder=0 },
+            new RefMepSessionType { Id=Guid.Parse("acc12802-b9df-42ec-a95a-36fc67edc638"), Code="RegularSchoolYear", Description="Regular School Year", Definition="The Migrant Education Program operates during the Regular School Year.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepSessionType { Id=Guid.Parse("b725b586-ed8d-4253-a03e-46da6b56230f"), Code="SummerTerm", Description="Summer Term or Intersession", Definition="The Migrant Education Program operates during the Summer Term or Intersession.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefMepSessionType Pick List
          /// </summary>
-        public static List<RefMepSessionType> RefMepSessionTypePickList = new List<RefMepSessionType> =
+        public static List<RefMepSessionType> RefMepSessionTypePickList = new List<RefMepSessionType>
         {
-            new RefMepSessionType { Id=Guid.Parse("5ebd4a00-4590-4e48-8f56-3837ca6859ec"), Code="The Migrant Education Program operates during the Regular School Year.", SortOrder=0 },
-            new RefMepSessionType { Id=Guid.Parse("e86698fc-5e08-4904-a836-78da9cd9d332"), Code="The Migrant Education Program operates during the Summer Term or Intersession.", SortOrder=0 },
+            new RefMepSessionType { Id=Guid.Parse("acc12802-b9df-42ec-a95a-36fc67edc638"), Code="RegularSchoolYear", Description="Regular School Year", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepSessionType { Id=Guid.Parse("b725b586-ed8d-4253-a03e-46da6b56230f"), Code="SummerTerm", Description="Summer Term or Intersession", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

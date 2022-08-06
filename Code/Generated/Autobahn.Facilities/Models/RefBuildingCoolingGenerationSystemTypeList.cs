@@ -15,31 +15,31 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingCoolingGenerationSystemType"> List
          /// </summary>
-        public static List<RefBuildingCoolingGenerationSystemType> RefBuildingCoolingGenerationSystemTypeList = new List<RefBuildingCoolingGenerationSystemType> =
+        public static List<RefBuildingCoolingGenerationSystemType> RefBuildingCoolingGenerationSystemTypeList = new List<RefBuildingCoolingGenerationSystemType>
         {
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("28cf9280-aedc-4add-8692-1f8a1311daca"), Code="Ceiling fans or ventilation fans is specified as the type of mechanical systems and building designs used for cooling.", Description="02490", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("e64e63fd-e72b-4e72-8ccc-06e9d759e065"), Code="Central cooling system is specified as the type of mechanical systems and building designs used for cooling.", Description="02486", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("77ae8ce2-07b0-4be7-8f91-0e66dfa27b72"), Code="Combination cooling systems is specified as the type of mechanical systems and building designs used for cooling.", Description="02489", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("5a880486-1927-4027-992b-63b1a58d5968"), Code="Individual (room) unit cooling system is specified as the type of mechanical systems and building designs used for cooling.", Description="02488", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("8c5fbbdf-220d-42c8-a9cd-704a96761907"), Code="Local zone cooling system is specified as the type of mechanical systems and building designs used for cooling.", Description="02487", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("9928d94b-4311-47df-9d80-f4c7218e23aa"), Code="Natural systems is specified as the type of mechanical systems and building designs used for cooling.", Description="02491", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("a8ba30f4-779c-4eae-93bb-cdb0ef8c8629"), Code="No type of mechanical systems and building designs used for cooling is specified.", Description="09998", Definition="", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("b3f720ad-be13-4d23-af56-bcb8d970b2aa"), Code="Other is specified as the type of mechanical systems and building designs used for cooling.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("d4d8fe50-71a5-4b1b-871d-0a223f2e168a"), Code="02490", Description="Ceiling fans or ventilation fans", Definition="Ceiling fans or ventilation fans is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("0a3347c4-9560-4bde-ac16-94f3e4bbcc9c"), Code="02486", Description="Central cooling system", Definition="Central cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("1587d2a5-ba3b-43ff-9ca3-b2a75bfdfee7"), Code="02489", Description="Combination cooling systems", Definition="Combination cooling systems is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("2ee827aa-8bc0-4eed-84ca-25c2b17b43ea"), Code="02488", Description="Individual (room) unit cooling system", Definition="Individual (room) unit cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("03a2724f-e753-45c7-ad86-86d37b214368"), Code="02487", Description="Local zone cooling system", Definition="Local zone cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("495250fd-1156-4bbc-9e6c-8e40eb6b135e"), Code="02491", Description="Natural systems", Definition="Natural systems is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("20d0ac1e-6bbd-47ec-ad87-27023048d71a"), Code="09998", Description="None", Definition="No type of mechanical systems and building designs used for cooling is specified.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("8aaf6b4f-a146-48d3-84fa-fcdd29007922"), Code="09999", Description="Other", Definition="Other is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingCoolingGenerationSystemType Pick List
          /// </summary>
-        public static List<RefBuildingCoolingGenerationSystemType> RefBuildingCoolingGenerationSystemTypePickList = new List<RefBuildingCoolingGenerationSystemType> =
+        public static List<RefBuildingCoolingGenerationSystemType> RefBuildingCoolingGenerationSystemTypePickList = new List<RefBuildingCoolingGenerationSystemType>
         {
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("28cf9280-aedc-4add-8692-1f8a1311daca"), Code="Ceiling fans or ventilation fans is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("e64e63fd-e72b-4e72-8ccc-06e9d759e065"), Code="Central cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("77ae8ce2-07b0-4be7-8f91-0e66dfa27b72"), Code="Combination cooling systems is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("5a880486-1927-4027-992b-63b1a58d5968"), Code="Individual (room) unit cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("8c5fbbdf-220d-42c8-a9cd-704a96761907"), Code="Local zone cooling system is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("9928d94b-4311-47df-9d80-f4c7218e23aa"), Code="Natural systems is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("a8ba30f4-779c-4eae-93bb-cdb0ef8c8629"), Code="No type of mechanical systems and building designs used for cooling is specified.", SortOrder=0 },
-            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("b3f720ad-be13-4d23-af56-bcb8d970b2aa"), Code="Other is specified as the type of mechanical systems and building designs used for cooling.", SortOrder=0 },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("d4d8fe50-71a5-4b1b-871d-0a223f2e168a"), Code="02490", Description="Ceiling fans or ventilation fans", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("0a3347c4-9560-4bde-ac16-94f3e4bbcc9c"), Code="02486", Description="Central cooling system", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("1587d2a5-ba3b-43ff-9ca3-b2a75bfdfee7"), Code="02489", Description="Combination cooling systems", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("2ee827aa-8bc0-4eed-84ca-25c2b17b43ea"), Code="02488", Description="Individual (room) unit cooling system", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("03a2724f-e753-45c7-ad86-86d37b214368"), Code="02487", Description="Local zone cooling system", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("495250fd-1156-4bbc-9e6c-8e40eb6b135e"), Code="02491", Description="Natural systems", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("20d0ac1e-6bbd-47ec-ad87-27023048d71a"), Code="09998", Description="None", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingCoolingGenerationSystemType { Id=Guid.Parse("8aaf6b4f-a146-48d3-84fa-fcdd29007922"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

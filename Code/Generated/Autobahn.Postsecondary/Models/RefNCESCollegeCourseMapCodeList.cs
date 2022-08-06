@@ -15,14 +15,14 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefNCESCollegeCourseMapCode"> List
          /// </summary>
-        public static List<RefNCESCollegeCourseMapCode> RefNCESCollegeCourseMapCodeList = new List<RefNCESCollegeCourseMapCode> =
+        public static List<RefNCESCollegeCourseMapCode> RefNCESCollegeCourseMapCodeList = new List<RefNCESCollegeCourseMapCode>
         {
         };
 
         /// <summary>
         /// The RefNCESCollegeCourseMapCode Pick List
          /// </summary>
-        public static List<RefNCESCollegeCourseMapCode> RefNCESCollegeCourseMapCodePickList = new List<RefNCESCollegeCourseMapCode> =
+        public static List<RefNCESCollegeCourseMapCode> RefNCESCollegeCourseMapCodePickList = new List<RefNCESCollegeCourseMapCode>
         {
        };
    }

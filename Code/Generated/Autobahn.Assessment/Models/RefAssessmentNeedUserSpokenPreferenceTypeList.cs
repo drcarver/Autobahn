@@ -15,23 +15,23 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentNeedUserSpokenPreferenceType"> List
          /// </summary>
-        public static List<RefAssessmentNeedUserSpokenPreferenceType> RefAssessmentNeedUserSpokenPreferenceTypeList = new List<RefAssessmentNeedUserSpokenPreferenceType> =
+        public static List<RefAssessmentNeedUserSpokenPreferenceType> RefAssessmentNeedUserSpokenPreferenceTypeList = new List<RefAssessmentNeedUserSpokenPreferenceType>
         {
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("f4f55023-272e-4e3d-b426-5b66b99115ec"), Code="Text only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", Description="TextOnly", Definition="", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("19a895ae-32d4-499d-b0db-e1ae920a8de4"), Code="Text and graphics is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", Description="TextGraphics", Definition="", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("0d569154-5766-42c2-bf00-169a79412e7d"), Code="Graphics only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", Description="GraphicsOnly", Definition="", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("977f5d9b-a74b-4227-b59a-c7009095e49b"), Code="Non-visual is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", Description="NonVisual", Definition="", SortOrder=0 },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("9b494ef9-cf85-4bb0-bdef-c5f37964caa1"), Code="TextOnly", Description="Text only", Definition="Text only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("bfa363ad-0ae6-43c3-a002-f783e79691ff"), Code="TextGraphics", Description="Text and graphics", Definition="Text and graphics is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("74a7ea65-cd31-46a8-b6f6-6ac77e71b684"), Code="GraphicsOnly", Description="Graphics only", Definition="Graphics only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("0c10e9dd-c5bb-4096-b0f2-dc055ec4a11b"), Code="NonVisual", Description="Non-visual", Definition="Non-visual is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefAssessmentNeedUserSpokenPreferenceType Pick List
          /// </summary>
-        public static List<RefAssessmentNeedUserSpokenPreferenceType> RefAssessmentNeedUserSpokenPreferenceTypePickList = new List<RefAssessmentNeedUserSpokenPreferenceType> =
+        public static List<RefAssessmentNeedUserSpokenPreferenceType> RefAssessmentNeedUserSpokenPreferenceTypePickList = new List<RefAssessmentNeedUserSpokenPreferenceType>
         {
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("f4f55023-272e-4e3d-b426-5b66b99115ec"), Code="Text only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("19a895ae-32d4-499d-b0db-e1ae920a8de4"), Code="Text and graphics is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("0d569154-5766-42c2-bf00-169a79412e7d"), Code="Graphics only is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=0 },
-            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("977f5d9b-a74b-4227-b59a-c7009095e49b"), Code="Non-visual is specified as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.", SortOrder=0 },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("9b494ef9-cf85-4bb0-bdef-c5f37964caa1"), Code="TextOnly", Description="Text only", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("bfa363ad-0ae6-43c3-a002-f783e79691ff"), Code="TextGraphics", Description="Text and graphics", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("74a7ea65-cd31-46a8-b6f6-6ac77e71b684"), Code="GraphicsOnly", Description="Graphics only", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentNeedUserSpokenPreferenceType { Id=Guid.Parse("0c10e9dd-c5bb-4096-b0f2-dc055ec4a11b"), Code="NonVisual", Description="Non-visual", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCalendarEventType"> List
          /// </summary>
-        public static List<RefCalendarEventType> RefCalendarEventTypeList = new List<RefCalendarEventType> =
+        public static List<RefCalendarEventType> RefCalendarEventTypeList = new List<RefCalendarEventType>
         {
-            new RefCalendarEventType { Id=Guid.Parse("f62760b3-2971-4d9f-b193-d3e44290f7d8"), Code="Emergency day is specified as the  type of scheduled or unscheduled calendar event.", Description="EmergencyDay", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("d291bb1e-db7d-4e9e-9457-b2f81ee26810"), Code="Holiday is specified as the  type of scheduled or unscheduled calendar event.", Description="Holiday", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("6b5b3c8d-941f-4d7c-864c-85e0c2c875bb"), Code="Instructional day is specified as the type of scheduled or unscheduled calendar event.", Description="InstructionalDay", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("084862ff-e00a-41b1-a5d4-520913aa0881"), Code="Other is specified as the  type of scheduled or unscheduled calendar event.", Description="Other", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("da652f4f-2a87-4266-aaad-41eb611c1651"), Code="Strike is specified as the  type of scheduled or unscheduled calendar event.", Description="Strike", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("666b8af7-3d29-4336-b650-21f6f9d7ec22"), Code="Student late arrival/early dismissal is specified as the  type of scheduled or unscheduled calendar event.", Description="LateArrivalEarlyDismissal", Definition="", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("481e2fe3-e7e6-4d40-9584-379a6d271a1e"), Code="Teacher only day is specified as the  type of scheduled or unscheduled calendar event.", Description="TeacherOnlyDay", Definition="", SortOrder=0 },
+            new RefCalendarEventType { Id=Guid.Parse("8e5f41f8-cea7-4405-b059-f7c643f3e6ef"), Code="EmergencyDay", Description="Emergency day", Definition="Emergency day is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCalendarEventType { Id=Guid.Parse("b3685436-6b84-4cbd-ad65-50637c0b772d"), Code="Holiday", Description="Holiday", Definition="Holiday is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCalendarEventType { Id=Guid.Parse("d75d9a94-72cb-4bed-b854-4d3cb1d32512"), Code="InstructionalDay", Description="Instructional day", Definition="Instructional day is specified as the type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCalendarEventType { Id=Guid.Parse("2020aa32-2136-46e2-9d07-940aa8bca55a"), Code="Other", Description="Other", Definition="Other is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCalendarEventType { Id=Guid.Parse("f831f9bc-4a17-4bf5-a400-7c3eac519fa9"), Code="Strike", Description="Strike", Definition="Strike is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCalendarEventType { Id=Guid.Parse("19998666-343e-42b5-985e-13580d2bb117"), Code="LateArrivalEarlyDismissal", Description="Student late arrival/early dismissal", Definition="Student late arrival/early dismissal is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCalendarEventType { Id=Guid.Parse("a2d13398-4953-46f2-a861-8f42ce69ba91"), Code="TeacherOnlyDay", Description="Teacher only day", Definition="Teacher only day is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefCalendarEventType Pick List
          /// </summary>
-        public static List<RefCalendarEventType> RefCalendarEventTypePickList = new List<RefCalendarEventType> =
+        public static List<RefCalendarEventType> RefCalendarEventTypePickList = new List<RefCalendarEventType>
         {
-            new RefCalendarEventType { Id=Guid.Parse("f62760b3-2971-4d9f-b193-d3e44290f7d8"), Code="Emergency day is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("d291bb1e-db7d-4e9e-9457-b2f81ee26810"), Code="Holiday is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("6b5b3c8d-941f-4d7c-864c-85e0c2c875bb"), Code="Instructional day is specified as the type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("084862ff-e00a-41b1-a5d4-520913aa0881"), Code="Other is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("da652f4f-2a87-4266-aaad-41eb611c1651"), Code="Strike is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("666b8af7-3d29-4336-b650-21f6f9d7ec22"), Code="Student late arrival/early dismissal is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
-            new RefCalendarEventType { Id=Guid.Parse("481e2fe3-e7e6-4d40-9584-379a6d271a1e"), Code="Teacher only day is specified as the  type of scheduled or unscheduled calendar event.", SortOrder=0 },
+            new RefCalendarEventType { Id=Guid.Parse("8e5f41f8-cea7-4405-b059-f7c643f3e6ef"), Code="EmergencyDay", Description="Emergency day", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCalendarEventType { Id=Guid.Parse("b3685436-6b84-4cbd-ad65-50637c0b772d"), Code="Holiday", Description="Holiday", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCalendarEventType { Id=Guid.Parse("d75d9a94-72cb-4bed-b854-4d3cb1d32512"), Code="InstructionalDay", Description="Instructional day", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCalendarEventType { Id=Guid.Parse("2020aa32-2136-46e2-9d07-940aa8bca55a"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCalendarEventType { Id=Guid.Parse("f831f9bc-4a17-4bf5-a400-7c3eac519fa9"), Code="Strike", Description="Strike", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCalendarEventType { Id=Guid.Parse("19998666-343e-42b5-985e-13580d2bb117"), Code="LateArrivalEarlyDismissal", Description="Student late arrival/early dismissal", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCalendarEventType { Id=Guid.Parse("a2d13398-4953-46f2-a861-8f42ce69ba91"), Code="TeacherOnlyDay", Description="Teacher only day", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

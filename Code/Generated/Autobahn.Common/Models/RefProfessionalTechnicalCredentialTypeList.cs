@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefProfessionalTechnicalCredentialType"> List
          /// </summary>
-        public static List<RefProfessionalTechnicalCredentialType> RefProfessionalTechnicalCredentialTypeList = new List<RefProfessionalTechnicalCredentialType> =
+        public static List<RefProfessionalTechnicalCredentialType> RefProfessionalTechnicalCredentialTypeList = new List<RefProfessionalTechnicalCredentialType>
         {
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("d3abe4aa-6174-4416-876c-e486ab2df668"), Code="Occupational License was conferred for competency in a specific area measured by a set of pre-established standards.", Description="OccupationalLicense", Definition="", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("1e6d35e9-2714-4a91-bec0-1ae5f95dc4c0"), Code="Industry-recognized Certification was conferred for competency in a specific area measured by a set of pre-established standards.", Description="IndustryCertification", Definition="", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("2efc4b45-41ce-40bf-8888-7a0e882b4f8e"), Code="Apprenticeship Certificate was conferred for competency in a specific area measured by a set of pre-established standards.", Description="ApprenticeshipCertificate", Definition="", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("1e71b7f9-bfc4-4488-bbe0-18042146d112"), Code="Employer certification was conferred for competency in a specific area measured by a set of pre-established standards.", Description="EmployerCertification", Definition="", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("19a0cca8-ba3b-4026-8063-502de9bb823a"), Code="Pre-employment training certificate was conferred for competency in a specific area measured by a set of pre-established standards.", Description="PreEmploymentTraining", Definition="", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("8a70d4c2-38e1-4a28-b0b2-c46c827056ba"), Code="Other recognized occupational skills credential was conferred for competency in a specific area measured by a set of pre-established standards.", Description="OtherOccupational", Definition="", SortOrder=0 },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("8bc6a76b-4c0c-4af8-915e-b5a07df4b39a"), Code="OccupationalLicense", Description="Occupational License", Definition="Occupational License was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("7a5b6e0f-25df-48ca-9b7e-72935ee3d6bf"), Code="IndustryCertification", Description="Industry-recognized Certification", Definition="Industry-recognized Certification was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("32f3b770-3bf5-43f7-9a76-f36d2af5e0d8"), Code="ApprenticeshipCertificate", Description="Apprenticeship Certificate", Definition="Apprenticeship Certificate was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("7c2c64a5-c4e8-4223-8aee-f12e970a6561"), Code="EmployerCertification", Description="Employer certification", Definition="Employer certification was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("f6fd0810-54e4-462f-823f-87e998443942"), Code="PreEmploymentTraining", Description="Pre-employment training certificate", Definition="Pre-employment training certificate was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("c92a71cc-4830-49d3-9049-c5a3fc6f6034"), Code="OtherOccupational", Description="Other recognized occupational skills credential", Definition="Other recognized occupational skills credential was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
         /// The RefProfessionalTechnicalCredentialType Pick List
          /// </summary>
-        public static List<RefProfessionalTechnicalCredentialType> RefProfessionalTechnicalCredentialTypePickList = new List<RefProfessionalTechnicalCredentialType> =
+        public static List<RefProfessionalTechnicalCredentialType> RefProfessionalTechnicalCredentialTypePickList = new List<RefProfessionalTechnicalCredentialType>
         {
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("d3abe4aa-6174-4416-876c-e486ab2df668"), Code="Occupational License was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("1e6d35e9-2714-4a91-bec0-1ae5f95dc4c0"), Code="Industry-recognized Certification was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("2efc4b45-41ce-40bf-8888-7a0e882b4f8e"), Code="Apprenticeship Certificate was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("1e71b7f9-bfc4-4488-bbe0-18042146d112"), Code="Employer certification was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("19a0cca8-ba3b-4026-8063-502de9bb823a"), Code="Pre-employment training certificate was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
-            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("8a70d4c2-38e1-4a28-b0b2-c46c827056ba"), Code="Other recognized occupational skills credential was conferred for competency in a specific area measured by a set of pre-established standards.", SortOrder=0 },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("8bc6a76b-4c0c-4af8-915e-b5a07df4b39a"), Code="OccupationalLicense", Description="Occupational License", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("7a5b6e0f-25df-48ca-9b7e-72935ee3d6bf"), Code="IndustryCertification", Description="Industry-recognized Certification", SortOrder=Convert.ToDecimal("2.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("32f3b770-3bf5-43f7-9a76-f36d2af5e0d8"), Code="ApprenticeshipCertificate", Description="Apprenticeship Certificate", SortOrder=Convert.ToDecimal("3.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("7c2c64a5-c4e8-4223-8aee-f12e970a6561"), Code="EmployerCertification", Description="Employer certification", SortOrder=Convert.ToDecimal("5.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("f6fd0810-54e4-462f-823f-87e998443942"), Code="PreEmploymentTraining", Description="Pre-employment training certificate", SortOrder=Convert.ToDecimal("7.00") },
+            new RefProfessionalTechnicalCredentialType { Id=Guid.Parse("c92a71cc-4830-49d3-9049-c5a3fc6f6034"), Code="OtherOccupational", Description="Other recognized occupational skills credential", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

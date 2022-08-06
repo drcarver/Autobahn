@@ -15,21 +15,21 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefControlOfInstitution"> List
          /// </summary>
-        public static List<RefControlOfInstitution> RefControlOfInstitutionList = new List<RefControlOfInstitution> =
+        public static List<RefControlOfInstitution> RefControlOfInstitutionList = new List<RefControlOfInstitution>
         {
-            new RefControlOfInstitution { Id=Guid.Parse("a664ada1-14c8-4e39-b5e2-40c7c18cac62"), Code="The postsecondary institution is operated by publicly elected or appointed officials.", Description="Public", Definition="", SortOrder=0 },
-            new RefControlOfInstitution { Id=Guid.Parse("e74d4014-4127-4f35-a525-9a37e1204a8d"), Code="The postsecondary institution is operated by privately elected or appointed officials and is organized as a not for profit entity.", Description="PrivateNFP", Definition="", SortOrder=0 },
-            new RefControlOfInstitution { Id=Guid.Parse("fc04ba46-f12b-49c7-b59a-64dbc1da4654"), Code="The postsecondary institution is operated by privately elected or appointed officials and is organized as a for profit entity.", Description="PrivateFP", Definition="", SortOrder=0 },
+            new RefControlOfInstitution { Id=Guid.Parse("896433dc-2073-4f6b-8193-06ff44ac12a7"), Code="Public", Description="Public", Definition="The postsecondary institution is operated by publicly elected or appointed officials.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefControlOfInstitution { Id=Guid.Parse("220c64fe-9b4e-4b8c-a0c5-ca8448a35037"), Code="PrivateNFP", Description="Private, not for profit", Definition="The postsecondary institution is operated by privately elected or appointed officials and is organized as a not for profit entity.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefControlOfInstitution { Id=Guid.Parse("e572c793-a96c-4d11-b458-0fd46b73433c"), Code="PrivateFP", Description="Private, for profit", Definition="The postsecondary institution is operated by privately elected or appointed officials and is organized as a for profit entity.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefControlOfInstitution Pick List
          /// </summary>
-        public static List<RefControlOfInstitution> RefControlOfInstitutionPickList = new List<RefControlOfInstitution> =
+        public static List<RefControlOfInstitution> RefControlOfInstitutionPickList = new List<RefControlOfInstitution>
         {
-            new RefControlOfInstitution { Id=Guid.Parse("a664ada1-14c8-4e39-b5e2-40c7c18cac62"), Code="The postsecondary institution is operated by publicly elected or appointed officials.", SortOrder=0 },
-            new RefControlOfInstitution { Id=Guid.Parse("e74d4014-4127-4f35-a525-9a37e1204a8d"), Code="The postsecondary institution is operated by privately elected or appointed officials and is organized as a not for profit entity.", SortOrder=0 },
-            new RefControlOfInstitution { Id=Guid.Parse("fc04ba46-f12b-49c7-b59a-64dbc1da4654"), Code="The postsecondary institution is operated by privately elected or appointed officials and is organized as a for profit entity.", SortOrder=0 },
+            new RefControlOfInstitution { Id=Guid.Parse("896433dc-2073-4f6b-8193-06ff44ac12a7"), Code="Public", Description="Public", SortOrder=Convert.ToDecimal("1.00") },
+            new RefControlOfInstitution { Id=Guid.Parse("220c64fe-9b4e-4b8c-a0c5-ca8448a35037"), Code="PrivateNFP", Description="Private, not for profit", SortOrder=Convert.ToDecimal("2.00") },
+            new RefControlOfInstitution { Id=Guid.Parse("e572c793-a96c-4d11-b458-0fd46b73433c"), Code="PrivateFP", Description="Private, for profit", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

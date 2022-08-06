@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefRoleStatusType"> List
          /// </summary>
-        public static List<RefRoleStatusType> RefRoleStatusTypeList = new List<RefRoleStatusType> =
+        public static List<RefRoleStatusType> RefRoleStatusTypeList = new List<RefRoleStatusType>
         {
-            new RefRoleStatusType { Id=Guid.Parse("60287e51-225b-4e5b-87fc-c8d151c2e111"), Code="", Description="000094", Definition="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("ce59b9cf-1a0a-4686-ac06-85522fe0721a"), Code="", Description="000096", Definition="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("e2d4f4e8-100f-48f4-bc09-7b736f4b54ec"), Code="", Description="000347", Definition="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("52b37680-cccf-4f6f-951d-64c5eae8450a"), Code="", Description="000767", Definition="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("22cfdb27-2dca-4fac-9403-03d10f7e2156"), Code="", Description="000976", Definition="", SortOrder=0 },
+            new RefRoleStatusType { Id=Guid.Parse("33d9aa95-005b-4cd2-9c9d-0552f2ea18f3"), Code="000094", Description="Enrollment Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("436f24b5-f242-44f9-8cd9-e03e709516f5"), Code="000096", Description="Postsecondary Enrollment Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("b65a0705-d3d6-41c0-80ae-148368f619df"), Code="000347", Description="Employment Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("1fb0881d-ff21-4e79-96af-f09ab837a185"), Code="000767", Description="Teacher Preparation Program Enrollment Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("6fa4e336-18d1-46f5-bcff-77b6cb728556"), Code="000976", Description="Course Section Enrollment Status Type", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefRoleStatusType Pick List
          /// </summary>
-        public static List<RefRoleStatusType> RefRoleStatusTypePickList = new List<RefRoleStatusType> =
+        public static List<RefRoleStatusType> RefRoleStatusTypePickList = new List<RefRoleStatusType>
         {
-            new RefRoleStatusType { Id=Guid.Parse("60287e51-225b-4e5b-87fc-c8d151c2e111"), Code="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("ce59b9cf-1a0a-4686-ac06-85522fe0721a"), Code="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("e2d4f4e8-100f-48f4-bc09-7b736f4b54ec"), Code="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("52b37680-cccf-4f6f-951d-64c5eae8450a"), Code="", SortOrder=0 },
-            new RefRoleStatusType { Id=Guid.Parse("22cfdb27-2dca-4fac-9403-03d10f7e2156"), Code="", SortOrder=0 },
+            new RefRoleStatusType { Id=Guid.Parse("33d9aa95-005b-4cd2-9c9d-0552f2ea18f3"), Code="000094", Description="Enrollment Status", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("436f24b5-f242-44f9-8cd9-e03e709516f5"), Code="000096", Description="Postsecondary Enrollment Status", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("b65a0705-d3d6-41c0-80ae-148368f619df"), Code="000347", Description="Employment Status", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("1fb0881d-ff21-4e79-96af-f09ab837a185"), Code="000767", Description="Teacher Preparation Program Enrollment Status", SortOrder=Convert.ToDecimal("") },
+            new RefRoleStatusType { Id=Guid.Parse("6fa4e336-18d1-46f5-bcff-77b6cb728556"), Code="000976", Description="Course Section Enrollment Status Type", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

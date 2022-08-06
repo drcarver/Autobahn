@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefStaffPerformanceLevel"> List
          /// </summary>
-        public static List<RefStaffPerformanceLevel> RefStaffPerformanceLevelList = new List<RefStaffPerformanceLevel> =
+        public static List<RefStaffPerformanceLevel> RefStaffPerformanceLevelList = new List<RefStaffPerformanceLevel>
         {
-            new RefStaffPerformanceLevel { Id=Guid.Parse("f045dafb-eb45-47be-867b-b415e70c86c5"), Code="Level 1 (lowest level) is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL1", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("16c44242-f73b-48cc-a19a-ae5c27118c17"), Code="Level 2 is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL2", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("68ec76c6-d4d0-45dd-ad1a-974ea0cb9fc4"), Code="Level 3 is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL3", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("d98fcd9a-e0f1-4349-b4d0-96eff2596386"), Code="Level 4 is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL4", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("17025e17-a4ac-4696-a0f9-890d34c3147c"), Code="Level 5 is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL5", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("515f6bcc-c7cb-46aa-8915-0631052bf511"), Code="Level 6 (highest level) is the level used in the district evaluation system for the teacher or principal performance rating.", Description="FAL6", Definition="", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("c767011a-42ea-41bb-9a8f-8392a4939461"), Code="Evaluated, not ranked is the level used in the district evaluation system for the teacher or principal performance rating.", Description="EVALNR", Definition="", SortOrder=0 },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("bf40d48c-07dc-4c8f-882d-3afc255bb3e3"), Code="FAL1", Description="Level 1 (lowest level)", Definition="Level 1 (lowest level) is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("9ef570d9-ae9c-4fac-a15f-93f184d7c439"), Code="FAL2", Description="Level 2", Definition="Level 2 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("7bca9111-a4ae-4889-89a0-44678f4da455"), Code="FAL3", Description="Level 3", Definition="Level 3 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("14ce16a8-5192-4196-b5bc-8291c83f813c"), Code="FAL4", Description="Level 4", Definition="Level 4 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("8ce5bacf-42d7-4639-9159-e7fa2f509f6d"), Code="FAL5", Description="Level 5", Definition="Level 5 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("8af10bfd-9f46-4a69-9fd2-9a15ea5e896f"), Code="FAL6", Description="Level 6 (highest level)", Definition="Level 6 (highest level) is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("7f5dc499-e2f3-4acb-8d73-2b4d0357ac7c"), Code="EVALNR", Description="Evaluated, not ranked", Definition="Evaluated, not ranked is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefStaffPerformanceLevel Pick List
          /// </summary>
-        public static List<RefStaffPerformanceLevel> RefStaffPerformanceLevelPickList = new List<RefStaffPerformanceLevel> =
+        public static List<RefStaffPerformanceLevel> RefStaffPerformanceLevelPickList = new List<RefStaffPerformanceLevel>
         {
-            new RefStaffPerformanceLevel { Id=Guid.Parse("f045dafb-eb45-47be-867b-b415e70c86c5"), Code="Level 1 (lowest level) is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("16c44242-f73b-48cc-a19a-ae5c27118c17"), Code="Level 2 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("68ec76c6-d4d0-45dd-ad1a-974ea0cb9fc4"), Code="Level 3 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("d98fcd9a-e0f1-4349-b4d0-96eff2596386"), Code="Level 4 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("17025e17-a4ac-4696-a0f9-890d34c3147c"), Code="Level 5 is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("515f6bcc-c7cb-46aa-8915-0631052bf511"), Code="Level 6 (highest level) is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
-            new RefStaffPerformanceLevel { Id=Guid.Parse("c767011a-42ea-41bb-9a8f-8392a4939461"), Code="Evaluated, not ranked is the level used in the district evaluation system for the teacher or principal performance rating.", SortOrder=0 },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("bf40d48c-07dc-4c8f-882d-3afc255bb3e3"), Code="FAL1", Description="Level 1 (lowest level)", SortOrder=Convert.ToDecimal("1.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("9ef570d9-ae9c-4fac-a15f-93f184d7c439"), Code="FAL2", Description="Level 2", SortOrder=Convert.ToDecimal("2.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("7bca9111-a4ae-4889-89a0-44678f4da455"), Code="FAL3", Description="Level 3", SortOrder=Convert.ToDecimal("3.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("14ce16a8-5192-4196-b5bc-8291c83f813c"), Code="FAL4", Description="Level 4", SortOrder=Convert.ToDecimal("4.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("8ce5bacf-42d7-4639-9159-e7fa2f509f6d"), Code="FAL5", Description="Level 5", SortOrder=Convert.ToDecimal("5.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("8af10bfd-9f46-4a69-9fd2-9a15ea5e896f"), Code="FAL6", Description="Level 6 (highest level)", SortOrder=Convert.ToDecimal("6.00") },
+            new RefStaffPerformanceLevel { Id=Guid.Parse("7f5dc499-e2f3-4acb-8d73-2b4d0357ac7c"), Code="EVALNR", Description="Evaluated, not ranked", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

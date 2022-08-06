@@ -15,33 +15,33 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefFamilyIncomeSource"> List
          /// </summary>
-        public static List<RefFamilyIncomeSource> RefFamilyIncomeSourceList = new List<RefFamilyIncomeSource> =
+        public static List<RefFamilyIncomeSource> RefFamilyIncomeSourceList = new List<RefFamilyIncomeSource>
         {
-            new RefFamilyIncomeSource { Id=Guid.Parse("9fcdb919-2980-4c18-acf7-a984482e3fe9"), Code="Wages is a source of total family income.", Description="Wages", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("1365eceb-55f4-4162-b8d5-c2e2b8e59da3"), Code="Alimony is a source of total family income.", Description="Alimony", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("ab586a06-7a54-4bb7-b86c-0366645eb100"), Code="Child support is a source of total family income.", Description="ChildSupport", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("7311cda3-36ec-47a4-9b8a-848ed4d3e56c"), Code="Worker's compensation is a source of total family income.", Description="WorkersComp", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("f2d18618-7dbb-4780-a1ad-1b7163876fac"), Code="Unemployment is a source of total family income.", Description="Unemployment", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("af2a3a2f-90e4-4745-8bc0-265a130111db"), Code="Supplemental security income is a source of total family income.", Description="SSI", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("b6c71000-d4ea-4044-a6e8-4d082961665b"), Code="Temporary assistance for needy families is a source of total family income.", Description="TANF", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("38baedd6-aaa0-4ef1-8000-a42b332bbca9"), Code="Agricultural is a source of total family income.", Description="Agricultural", Definition="", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("eeee7fd8-e71c-4c23-bdb4-bd8d1affa6b7"), Code="A source of total family income in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefFamilyIncomeSource { Id=Guid.Parse("1ee6849f-5fdb-48c5-ae45-c7b31837c2fc"), Code="Wages", Description="Wages", Definition="Wages is a source of total family income.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("23ec1b66-5a99-4a51-a0aa-359992f9ea99"), Code="Alimony", Description="Alimony", Definition="Alimony is a source of total family income.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("51229a02-72e5-4955-904a-da203e035020"), Code="ChildSupport", Description="Child support", Definition="Child support is a source of total family income.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("84d4dc02-a93c-4b47-8fb3-c16285fae125"), Code="WorkersComp", Description="Worker's compensation", Definition="Worker's compensation is a source of total family income.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("d7b7eece-78e9-4c79-9308-772e66ab9162"), Code="Unemployment", Description="Unemployment", Definition="Unemployment is a source of total family income.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("d18777e7-9148-4e6f-bea7-e79907ca23e8"), Code="SSI", Description="Supplemental security income", Definition="Supplemental security income is a source of total family income.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("64b3cb22-9df8-45a5-9517-0d08c0b7a920"), Code="TANF", Description="Temporary assistance for needy families", Definition="Temporary assistance for needy families is a source of total family income.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("3bbdcfae-fd78-4e76-9b18-3671e66fe87f"), Code="Agricultural", Description="Agricultural", Definition="Agricultural is a source of total family income.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("3d8b8d1f-d4cc-4425-a072-b25c1ebf6a8c"), Code="Other", Description="Other", Definition="A source of total family income in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
         /// The RefFamilyIncomeSource Pick List
          /// </summary>
-        public static List<RefFamilyIncomeSource> RefFamilyIncomeSourcePickList = new List<RefFamilyIncomeSource> =
+        public static List<RefFamilyIncomeSource> RefFamilyIncomeSourcePickList = new List<RefFamilyIncomeSource>
         {
-            new RefFamilyIncomeSource { Id=Guid.Parse("9fcdb919-2980-4c18-acf7-a984482e3fe9"), Code="Wages is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("1365eceb-55f4-4162-b8d5-c2e2b8e59da3"), Code="Alimony is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("ab586a06-7a54-4bb7-b86c-0366645eb100"), Code="Child support is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("7311cda3-36ec-47a4-9b8a-848ed4d3e56c"), Code="Worker's compensation is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("f2d18618-7dbb-4780-a1ad-1b7163876fac"), Code="Unemployment is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("af2a3a2f-90e4-4745-8bc0-265a130111db"), Code="Supplemental security income is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("b6c71000-d4ea-4044-a6e8-4d082961665b"), Code="Temporary assistance for needy families is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("38baedd6-aaa0-4ef1-8000-a42b332bbca9"), Code="Agricultural is a source of total family income.", SortOrder=0 },
-            new RefFamilyIncomeSource { Id=Guid.Parse("eeee7fd8-e71c-4c23-bdb4-bd8d1affa6b7"), Code="A source of total family income in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefFamilyIncomeSource { Id=Guid.Parse("1ee6849f-5fdb-48c5-ae45-c7b31837c2fc"), Code="Wages", Description="Wages", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("23ec1b66-5a99-4a51-a0aa-359992f9ea99"), Code="Alimony", Description="Alimony", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("51229a02-72e5-4955-904a-da203e035020"), Code="ChildSupport", Description="Child support", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("84d4dc02-a93c-4b47-8fb3-c16285fae125"), Code="WorkersComp", Description="Worker's compensation", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("d7b7eece-78e9-4c79-9308-772e66ab9162"), Code="Unemployment", Description="Unemployment", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("d18777e7-9148-4e6f-bea7-e79907ca23e8"), Code="SSI", Description="Supplemental security income", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("64b3cb22-9df8-45a5-9517-0d08c0b7a920"), Code="TANF", Description="Temporary assistance for needy families", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("3bbdcfae-fd78-4e76-9b18-3671e66fe87f"), Code="Agricultural", Description="Agricultural", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFamilyIncomeSource { Id=Guid.Parse("3d8b8d1f-d4cc-4425-a072-b25c1ebf6a8c"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

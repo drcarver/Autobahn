@@ -15,33 +15,33 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefCharterSchoolAuthorizerType"> List
          /// </summary>
-        public static List<RefCharterSchoolAuthorizerType> RefCharterSchoolAuthorizerTypeList = new List<RefCharterSchoolAuthorizerType> =
+        public static List<RefCharterSchoolAuthorizerType> RefCharterSchoolAuthorizerTypeList = new List<RefCharterSchoolAuthorizerType>
         {
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("984cdd94-057f-43ab-93ca-8698f50443bb"), Code="State board of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="SBE", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2ab362a4-29d7-4399-9c27-7d10ad9ed97f"), Code="Public charter school board is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="PCSB", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("16ab4db9-b18e-405c-adfe-214ce55a5481"), Code="University is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="UNI", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("356d78d1-2d6b-417c-a790-3b2490512bbb"), Code="Community college is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="CC", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("6477036b-f2e9-47ed-8944-12fdb5be6745"), Code="Local education agency is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="LEA", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("68674918-7db6-4fdb-8ec2-590850916cf9"), Code="Other is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="OTH", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2dd932f1-7b39-416a-b946-c7c1e7be42ee"), Code="Non educational government entities is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="GOVTENT", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("cf3251f4-e9aa-48dc-8f8b-85e2bafd892b"), Code="Not for profit organization is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="NONPROFIT", Definition="", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2dc34fcd-426e-4ea1-b62e-69c00b0b40e1"), Code="State department of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", Description="SEA", Definition="", SortOrder=0 },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("7dd9badd-2d80-4ac4-afb0-d3cdde73572e"), Code="SBE", Description="State board of education", Definition="State board of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("93f5085c-df1b-49b3-a66d-77ab8b4fd974"), Code="PCSB", Description="Public charter school board", Definition="Public charter school board is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("dcb6530e-a267-4de0-afe7-f03bf5af983e"), Code="UNI", Description="University", Definition="University is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("4d7af452-a9c0-42e7-9a02-5abf2559a27f"), Code="CC", Description="Community college", Definition="Community college is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("163d2e79-09c6-4e6f-83db-96117781ac15"), Code="LEA", Description="Local education agency", Definition="Local education agency is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("661bce06-4e36-41fb-aa37-df5e519f6920"), Code="OTH", Description="Other", Definition="Other is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("7621df6c-7475-456f-b73a-2238542efba5"), Code="GOVTENT", Description="Non educational government entities", Definition="Non educational government entities is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("61a69c8e-4d7e-4045-85bb-0dfb11c16a77"), Code="NONPROFIT", Description="Not for profit organization", Definition="Not for profit organization is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("cb23daec-ce66-4915-b222-ee04ed8a3802"), Code="SEA", Description="State department of education", Definition="State department of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefCharterSchoolAuthorizerType Pick List
          /// </summary>
-        public static List<RefCharterSchoolAuthorizerType> RefCharterSchoolAuthorizerTypePickList = new List<RefCharterSchoolAuthorizerType> =
+        public static List<RefCharterSchoolAuthorizerType> RefCharterSchoolAuthorizerTypePickList = new List<RefCharterSchoolAuthorizerType>
         {
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("984cdd94-057f-43ab-93ca-8698f50443bb"), Code="State board of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2ab362a4-29d7-4399-9c27-7d10ad9ed97f"), Code="Public charter school board is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("16ab4db9-b18e-405c-adfe-214ce55a5481"), Code="University is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("356d78d1-2d6b-417c-a790-3b2490512bbb"), Code="Community college is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("6477036b-f2e9-47ed-8944-12fdb5be6745"), Code="Local education agency is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("68674918-7db6-4fdb-8ec2-590850916cf9"), Code="Other is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2dd932f1-7b39-416a-b946-c7c1e7be42ee"), Code="Non educational government entities is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("cf3251f4-e9aa-48dc-8f8b-85e2bafd892b"), Code="Not for profit organization is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
-            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("2dc34fcd-426e-4ea1-b62e-69c00b0b40e1"), Code="State department of education is specified as the type of agency that authorized the establishment or continuation of a charter school.", SortOrder=0 },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("7dd9badd-2d80-4ac4-afb0-d3cdde73572e"), Code="SBE", Description="State board of education", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("93f5085c-df1b-49b3-a66d-77ab8b4fd974"), Code="PCSB", Description="Public charter school board", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("dcb6530e-a267-4de0-afe7-f03bf5af983e"), Code="UNI", Description="University", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("4d7af452-a9c0-42e7-9a02-5abf2559a27f"), Code="CC", Description="Community college", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("163d2e79-09c6-4e6f-83db-96117781ac15"), Code="LEA", Description="Local education agency", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("661bce06-4e36-41fb-aa37-df5e519f6920"), Code="OTH", Description="Other", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("7621df6c-7475-456f-b73a-2238542efba5"), Code="GOVTENT", Description="Non educational government entities", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("61a69c8e-4d7e-4045-85bb-0dfb11c16a77"), Code="NONPROFIT", Description="Not for profit organization", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCharterSchoolAuthorizerType { Id=Guid.Parse("cb23daec-ce66-4915-b222-ee04ed8a3802"), Code="SEA", Description="State department of education", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

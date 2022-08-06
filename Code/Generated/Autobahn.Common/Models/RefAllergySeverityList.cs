@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAllergySeverity"> List
          /// </summary>
-        public static List<RefAllergySeverity> RefAllergySeverityList = new List<RefAllergySeverity> =
+        public static List<RefAllergySeverity> RefAllergySeverityList = new List<RefAllergySeverity>
         {
-            new RefAllergySeverity { Id=Guid.Parse("906ba3bd-6f6e-47ef-9f39-bab296322193"), Code="The level of severity of a person's reaction to an allergen is mild.", Description="Mild", Definition="", SortOrder=0 },
-            new RefAllergySeverity { Id=Guid.Parse("2e5d6f16-0c7f-411f-8bbd-6bd898612d4e"), Code="The level of severity of a person's reaction to an allergen is severe.", Description="Severe", Definition="", SortOrder=0 },
+            new RefAllergySeverity { Id=Guid.Parse("4a06dff3-df72-41ff-beba-b9dcf0f6868e"), Code="Mild", Description="Mild allergic reaction", Definition="The level of severity of a person's reaction to an allergen is mild.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAllergySeverity { Id=Guid.Parse("d009e6f7-34d2-41b8-9f77-965aaa8ae63e"), Code="Severe", Description="Severe allergic reaction", Definition="The level of severity of a person's reaction to an allergen is severe.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefAllergySeverity Pick List
          /// </summary>
-        public static List<RefAllergySeverity> RefAllergySeverityPickList = new List<RefAllergySeverity> =
+        public static List<RefAllergySeverity> RefAllergySeverityPickList = new List<RefAllergySeverity>
         {
-            new RefAllergySeverity { Id=Guid.Parse("906ba3bd-6f6e-47ef-9f39-bab296322193"), Code="The level of severity of a person's reaction to an allergen is mild.", SortOrder=0 },
-            new RefAllergySeverity { Id=Guid.Parse("2e5d6f16-0c7f-411f-8bbd-6bd898612d4e"), Code="The level of severity of a person's reaction to an allergen is severe.", SortOrder=0 },
+            new RefAllergySeverity { Id=Guid.Parse("4a06dff3-df72-41ff-beba-b9dcf0f6868e"), Code="Mild", Description="Mild allergic reaction", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAllergySeverity { Id=Guid.Parse("d009e6f7-34d2-41b8-9f77-965aaa8ae63e"), Code="Severe", Description="Severe allergic reaction", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

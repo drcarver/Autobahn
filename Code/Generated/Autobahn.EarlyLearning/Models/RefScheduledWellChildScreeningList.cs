@@ -15,45 +15,45 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefScheduledWellChildScreening"> List
          /// </summary>
-        public static List<RefScheduledWellChildScreening> RefScheduledWellChildScreeningList = new List<RefScheduledWellChildScreening> =
+        public static List<RefScheduledWellChildScreening> RefScheduledWellChildScreeningList = new List<RefScheduledWellChildScreening>
         {
-            new RefScheduledWellChildScreening { Id=Guid.Parse("e705e2df-1bae-4306-8ad8-6ee6124d9e3b"), Code="Newborn well child visit.", Description="Newborn", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("8e284728-6051-4bc4-8e79-7fc2bbc6cec2"), Code="3 to 5 days well child visit.", Description="3To5Days", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("6289e8b5-994d-47a3-8ca7-b633e67f9fcb"), Code="1 month well child visit.", Description="1Month", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("b5059697-675f-473d-8df1-014d2b0e6cf0"), Code="2 months well child visit.", Description="2Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("752d6498-fa08-464f-b549-de4f1b3931fd"), Code="4 months well child visit.", Description="4Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("92b28cdb-f98b-4785-b4b8-922714547695"), Code="6 months well child visit.", Description="6Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("2421e294-d3ce-4546-9011-eca21858f205"), Code="9 months well child visit.", Description="9Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("8d9f3f72-32ec-4aeb-973e-a78098ca5c8f"), Code="12 months well child visit.", Description="12Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("eca3dfce-e75a-4cbb-9885-43a54df81ccc"), Code="15 months well child visit.", Description="15Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("326051e0-e966-4418-9272-8bfb03e22e3d"), Code="18 months well child visit.", Description="18Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("28044fc5-79fd-41d5-891c-0c6ae3b547c4"), Code="24 months well child visit.", Description="24Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("f02e5e68-37ff-479a-861b-f1c4a6caef49"), Code="30 months well child visit.", Description="30Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("6f33d3f2-a89b-487c-b397-74ac8f6a7e1a"), Code="36 months well child visit.", Description="36Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("7dd96f10-b83a-4845-ad6d-44b7febfcc14"), Code="48 months well child visit.", Description="48Months", Definition="", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("38f0d0ce-1014-4420-843d-d834521da7d4"), Code="60 months well child visit.", Description="60Months", Definition="", SortOrder=0 },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("240202e2-c48b-401d-aaea-9d7ae433d0b0"), Code="Newborn", Description="Newborn well child visit", Definition="Newborn well child visit.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("5d4833a4-b4a1-4e78-8450-1846a473cd1a"), Code="3To5Days", Description="3 to 5 days well child visit", Definition="3 to 5 days well child visit.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("bdedd6ce-b901-4bfb-b8a2-ea627cd3de74"), Code="1Month", Description="1 month well child visit", Definition="1 month well child visit.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("68b0f742-be06-47c0-be3f-3be6ce27a9de"), Code="2Months", Description="2 months well child visit", Definition="2 months well child visit.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("c9aa0903-7313-4100-bda7-82148d366f69"), Code="4Months", Description="4 months well child visit", Definition="4 months well child visit.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("13eb57f3-e830-4f4d-a957-d6f1615cd021"), Code="6Months", Description="6 months well child visit", Definition="6 months well child visit.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("01651c78-172e-4bbd-9330-f8048ca4a454"), Code="9Months", Description="9 months well child visit", Definition="9 months well child visit.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("2053572e-38bb-4e5a-b211-ade95f195daf"), Code="12Months", Description="12 months well child visit", Definition="12 months well child visit.", SortOrder=Convert.ToDecimal("15.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("1868a1db-6662-4504-9004-39695e29a3e4"), Code="15Months", Description="15 months well child visit", Definition="15 months well child visit.", SortOrder=Convert.ToDecimal("17.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("e3d43aa9-a65b-4d86-b43c-32185251c7f2"), Code="18Months", Description="18 months well child visit", Definition="18 months well child visit.", SortOrder=Convert.ToDecimal("19.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("652f0a8e-8c16-4c27-919d-fd23e7d309cb"), Code="24Months", Description="24 months well child visit", Definition="24 months well child visit.", SortOrder=Convert.ToDecimal("21.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("11068a83-a9dd-42d6-884e-9be56975d8ab"), Code="30Months", Description="30 months well child visit", Definition="30 months well child visit.", SortOrder=Convert.ToDecimal("23.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("99ab6f7a-7c93-4623-9f38-6e4b106f70cc"), Code="36Months", Description="36 months well child visit", Definition="36 months well child visit.", SortOrder=Convert.ToDecimal("25.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("f63cc572-10aa-4f11-83f2-0a0e558b69e1"), Code="48Months", Description="48 months well child visit", Definition="48 months well child visit.", SortOrder=Convert.ToDecimal("27.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("3e609547-6442-4f23-a390-c40d5852cc50"), Code="60Months", Description="60 months well child visit", Definition="60 months well child visit.", SortOrder=Convert.ToDecimal("29.00") },
         };
 
         /// <summary>
         /// The RefScheduledWellChildScreening Pick List
          /// </summary>
-        public static List<RefScheduledWellChildScreening> RefScheduledWellChildScreeningPickList = new List<RefScheduledWellChildScreening> =
+        public static List<RefScheduledWellChildScreening> RefScheduledWellChildScreeningPickList = new List<RefScheduledWellChildScreening>
         {
-            new RefScheduledWellChildScreening { Id=Guid.Parse("e705e2df-1bae-4306-8ad8-6ee6124d9e3b"), Code="Newborn well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("8e284728-6051-4bc4-8e79-7fc2bbc6cec2"), Code="3 to 5 days well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("6289e8b5-994d-47a3-8ca7-b633e67f9fcb"), Code="1 month well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("b5059697-675f-473d-8df1-014d2b0e6cf0"), Code="2 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("752d6498-fa08-464f-b549-de4f1b3931fd"), Code="4 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("92b28cdb-f98b-4785-b4b8-922714547695"), Code="6 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("2421e294-d3ce-4546-9011-eca21858f205"), Code="9 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("8d9f3f72-32ec-4aeb-973e-a78098ca5c8f"), Code="12 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("eca3dfce-e75a-4cbb-9885-43a54df81ccc"), Code="15 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("326051e0-e966-4418-9272-8bfb03e22e3d"), Code="18 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("28044fc5-79fd-41d5-891c-0c6ae3b547c4"), Code="24 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("f02e5e68-37ff-479a-861b-f1c4a6caef49"), Code="30 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("6f33d3f2-a89b-487c-b397-74ac8f6a7e1a"), Code="36 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("7dd96f10-b83a-4845-ad6d-44b7febfcc14"), Code="48 months well child visit.", SortOrder=0 },
-            new RefScheduledWellChildScreening { Id=Guid.Parse("38f0d0ce-1014-4420-843d-d834521da7d4"), Code="60 months well child visit.", SortOrder=0 },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("240202e2-c48b-401d-aaea-9d7ae433d0b0"), Code="Newborn", Description="Newborn well child visit", SortOrder=Convert.ToDecimal("1.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("5d4833a4-b4a1-4e78-8450-1846a473cd1a"), Code="3To5Days", Description="3 to 5 days well child visit", SortOrder=Convert.ToDecimal("3.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("bdedd6ce-b901-4bfb-b8a2-ea627cd3de74"), Code="1Month", Description="1 month well child visit", SortOrder=Convert.ToDecimal("5.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("68b0f742-be06-47c0-be3f-3be6ce27a9de"), Code="2Months", Description="2 months well child visit", SortOrder=Convert.ToDecimal("7.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("c9aa0903-7313-4100-bda7-82148d366f69"), Code="4Months", Description="4 months well child visit", SortOrder=Convert.ToDecimal("9.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("13eb57f3-e830-4f4d-a957-d6f1615cd021"), Code="6Months", Description="6 months well child visit", SortOrder=Convert.ToDecimal("11.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("01651c78-172e-4bbd-9330-f8048ca4a454"), Code="9Months", Description="9 months well child visit", SortOrder=Convert.ToDecimal("13.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("2053572e-38bb-4e5a-b211-ade95f195daf"), Code="12Months", Description="12 months well child visit", SortOrder=Convert.ToDecimal("15.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("1868a1db-6662-4504-9004-39695e29a3e4"), Code="15Months", Description="15 months well child visit", SortOrder=Convert.ToDecimal("17.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("e3d43aa9-a65b-4d86-b43c-32185251c7f2"), Code="18Months", Description="18 months well child visit", SortOrder=Convert.ToDecimal("19.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("652f0a8e-8c16-4c27-919d-fd23e7d309cb"), Code="24Months", Description="24 months well child visit", SortOrder=Convert.ToDecimal("21.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("11068a83-a9dd-42d6-884e-9be56975d8ab"), Code="30Months", Description="30 months well child visit", SortOrder=Convert.ToDecimal("23.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("99ab6f7a-7c93-4623-9f38-6e4b106f70cc"), Code="36Months", Description="36 months well child visit", SortOrder=Convert.ToDecimal("25.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("f63cc572-10aa-4f11-83f2-0a0e558b69e1"), Code="48Months", Description="48 months well child visit", SortOrder=Convert.ToDecimal("27.00") },
+            new RefScheduledWellChildScreening { Id=Guid.Parse("3e609547-6442-4f23-a390-c40d5852cc50"), Code="60Months", Description="60 months well child visit", SortOrder=Convert.ToDecimal("29.00") },
        };
    }
 }

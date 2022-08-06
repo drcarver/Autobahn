@@ -15,14 +15,14 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefELOtherFederalFundingSource"> List
          /// </summary>
-        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourceList = new List<RefELOtherFederalFundingSource> =
+        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourceList = new List<RefELOtherFederalFundingSource>
         {
         };
 
         /// <summary>
         /// The RefELOtherFederalFundingSource Pick List
          /// </summary>
-        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourcePickList = new List<RefELOtherFederalFundingSource> =
+        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourcePickList = new List<RefELOtherFederalFundingSource>
         {
        };
    }

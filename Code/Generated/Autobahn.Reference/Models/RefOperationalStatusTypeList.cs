@@ -15,21 +15,21 @@ namespace Autobahn.Reference.Models
         /// <summary>
         /// The complete <see cref="RefOperationalStatusType"> List
          /// </summary>
-        public static List<RefOperationalStatusType> RefOperationalStatusTypeList = new List<RefOperationalStatusType> =
+        public static List<RefOperationalStatusType> RefOperationalStatusTypeList = new List<RefOperationalStatusType>
         {
-            new RefOperationalStatusType { Id=Guid.Parse("b623506b-ab79-40c7-adba-b556308b820b"), Code="", Description="000174", Definition="", SortOrder=0 },
-            new RefOperationalStatusType { Id=Guid.Parse("bb147e68-3190-4f65-93d9-5a8588165389"), Code="", Description="000533", Definition="", SortOrder=0 },
-            new RefOperationalStatusType { Id=Guid.Parse("ea37cfa5-8c4a-475a-8452-5e9315b52050"), Code="", Description="001418", Definition="", SortOrder=0 },
+            new RefOperationalStatusType { Id=Guid.Parse("4e693b99-2cd0-4acb-b7f2-12ab42504db5"), Code="000174", Description="Local Education Agency Operational Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOperationalStatusType { Id=Guid.Parse("3c10fda2-9cf9-4bb3-8abc-fdb9e49f730e"), Code="000533", Description="School Operational Status", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOperationalStatusType { Id=Guid.Parse("398f4fc6-7c1d-47e8-ae2c-054928161345"), Code="001418", Description="Organization Operational Status", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefOperationalStatusType Pick List
          /// </summary>
-        public static List<RefOperationalStatusType> RefOperationalStatusTypePickList = new List<RefOperationalStatusType> =
+        public static List<RefOperationalStatusType> RefOperationalStatusTypePickList = new List<RefOperationalStatusType>
         {
-            new RefOperationalStatusType { Id=Guid.Parse("b623506b-ab79-40c7-adba-b556308b820b"), Code="", SortOrder=0 },
-            new RefOperationalStatusType { Id=Guid.Parse("bb147e68-3190-4f65-93d9-5a8588165389"), Code="", SortOrder=0 },
-            new RefOperationalStatusType { Id=Guid.Parse("ea37cfa5-8c4a-475a-8452-5e9315b52050"), Code="", SortOrder=0 },
+            new RefOperationalStatusType { Id=Guid.Parse("4e693b99-2cd0-4acb-b7f2-12ab42504db5"), Code="000174", Description="Local Education Agency Operational Status", SortOrder=Convert.ToDecimal("") },
+            new RefOperationalStatusType { Id=Guid.Parse("3c10fda2-9cf9-4bb3-8abc-fdb9e49f730e"), Code="000533", Description="School Operational Status", SortOrder=Convert.ToDecimal("") },
+            new RefOperationalStatusType { Id=Guid.Parse("398f4fc6-7c1d-47e8-ae2c-054928161345"), Code="001418", Description="Organization Operational Status", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

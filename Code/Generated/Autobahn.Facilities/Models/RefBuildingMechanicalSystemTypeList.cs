@@ -15,23 +15,23 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingMechanicalSystemType"> List
          /// </summary>
-        public static List<RefBuildingMechanicalSystemType> RefBuildingMechanicalSystemTypeList = new List<RefBuildingMechanicalSystemType> =
+        public static List<RefBuildingMechanicalSystemType> RefBuildingMechanicalSystemTypeList = new List<RefBuildingMechanicalSystemType>
         {
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("5a6fccfa-e42a-4d59-8016-d4fcb14e484e"), Code="The primary means by which air is circulated, freshened, and exhausted.", Description="02455", Definition="", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("32b3d63e-a5f9-4607-a953-ba261c6216fc"), Code="The type of mechanical systems and building designs used for cooling.", Description="02454", Definition="", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("f5cb6db5-3068-4648-a803-a5aa54e86030"), Code="The method by which the heat is distributed and delivered throughout the room(s) or building.", Description="02453", Definition="", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("dfbbafc3-6463-484d-9860-a1db4b921c0d"), Code="Other is specified as the major manufactured systems required to operate a building.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("ff9ad732-e42d-4ed4-882c-ca2cc3906f36"), Code="02455", Description="Air distribution system", Definition="The primary means by which air is circulated, freshened, and exhausted.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("8a778e90-3f35-4f49-97d8-329afa768354"), Code="02454", Description="Cooling generation system", Definition="The type of mechanical systems and building designs used for cooling.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("40c61064-0a18-4ce5-9acc-1d40da02bc59"), Code="02453", Description="Heating generation system", Definition="The method by which the heat is distributed and delivered throughout the room(s) or building.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("eb36f338-0cad-4bb5-9529-0485083d9625"), Code="09999", Description="Other", Definition="Other is specified as the major manufactured systems required to operate a building.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingMechanicalSystemType Pick List
          /// </summary>
-        public static List<RefBuildingMechanicalSystemType> RefBuildingMechanicalSystemTypePickList = new List<RefBuildingMechanicalSystemType> =
+        public static List<RefBuildingMechanicalSystemType> RefBuildingMechanicalSystemTypePickList = new List<RefBuildingMechanicalSystemType>
         {
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("5a6fccfa-e42a-4d59-8016-d4fcb14e484e"), Code="The primary means by which air is circulated, freshened, and exhausted.", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("32b3d63e-a5f9-4607-a953-ba261c6216fc"), Code="The type of mechanical systems and building designs used for cooling.", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("f5cb6db5-3068-4648-a803-a5aa54e86030"), Code="The method by which the heat is distributed and delivered throughout the room(s) or building.", SortOrder=0 },
-            new RefBuildingMechanicalSystemType { Id=Guid.Parse("dfbbafc3-6463-484d-9860-a1db4b921c0d"), Code="Other is specified as the major manufactured systems required to operate a building.", SortOrder=0 },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("ff9ad732-e42d-4ed4-882c-ca2cc3906f36"), Code="02455", Description="Air distribution system", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("8a778e90-3f35-4f49-97d8-329afa768354"), Code="02454", Description="Cooling generation system", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("40c61064-0a18-4ce5-9acc-1d40da02bc59"), Code="02453", Description="Heating generation system", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingMechanicalSystemType { Id=Guid.Parse("eb36f338-0cad-4bb5-9529-0485083d9625"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

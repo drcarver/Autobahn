@@ -15,49 +15,49 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefEntityType"> List
          /// </summary>
-        public static List<RefEntityType> RefEntityTypeList = new List<RefEntityType> =
+        public static List<RefEntityType> RefEntityTypeList = new List<RefEntityType>
         {
-            new RefEntityType { Id=Guid.Parse("15cb9f15-c9a2-4eaa-8de4-1ce3f430bff9"), Code="", Description="11000", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("3053e40a-ee84-45a1-9ef1-6443e9e96efb"), Code="", Description="11001", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("8548b5ec-76ef-403e-88bf-9eb116cce646"), Code="", Description="11002", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("c306f882-d3e7-4b6b-8209-cb3bfda53acb"), Code="", Description="11112", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("529853c5-0500-4806-8ebc-21b1b72d8275"), Code="", Description="11113", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("8c58f272-2bb7-4327-a8c1-8288ce7a7af1"), Code="", Description="11114", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("649355ef-1f16-459e-bfcb-edb07ec341a4"), Code="", Description="11089", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("928e7078-42aa-4743-806a-deb6a55f67e2"), Code="", Description="11482", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("cd082731-4a50-4e03-8dd1-cffc8208026e"), Code="", Description="11104", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("80b92ced-d1c9-4fdd-a103-6076ee7542b2"), Code="", Description="11123", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("12d834c3-87e8-489d-b4c0-698444aada67"), Code="", Description="11571", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("fee36154-018d-4672-af60-068332af4189"), Code="", Description="11566", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("0e0f1c21-b1c9-4935-9416-83d29c33450a"), Code="", Description="11440", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("b06cb1dc-25b4-4b57-ac7e-6bb6bc961049"), Code="", Description="Course", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("073e8a96-25f9-4301-9eaf-3f60d5a2916f"), Code="", Description="LearningResource", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("28af8aef-c2ab-4491-b143-5232cecd63c8"), Code="", Description="AssessmentItem", Definition="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("e38f8404-8698-4eb8-9c95-041bed7c3639"), Code="", Description="RubricCriterion", Definition="", SortOrder=0 },
+            new RefEntityType { Id=Guid.Parse("d2b06db6-26b1-48dd-aaef-f7e5a7e7fdc9"), Code="11000", Description="Early Learning", Definition="", SortOrder=Convert.ToDecimal("10.00") },
+            new RefEntityType { Id=Guid.Parse("a993cb6e-3e69-4e82-a872-bb9a7efd4d11"), Code="11001", Description="K12", Definition="", SortOrder=Convert.ToDecimal("20.00") },
+            new RefEntityType { Id=Guid.Parse("4dd79b27-460d-4e5a-bba4-9928346cb29c"), Code="11002", Description="Postsecondary", Definition="", SortOrder=Convert.ToDecimal("30.00") },
+            new RefEntityType { Id=Guid.Parse("1345c932-8cd7-4014-97a5-74196324f3d3"), Code="11112", Description="Career and Technical", Definition="", SortOrder=Convert.ToDecimal("40.00") },
+            new RefEntityType { Id=Guid.Parse("adb45f90-a4ec-4781-a144-e4bf9a9e85f5"), Code="11113", Description="Adult Education", Definition="", SortOrder=Convert.ToDecimal("50.00") },
+            new RefEntityType { Id=Guid.Parse("acbd0f7e-93b1-4d2e-a5a1-a0034a5ca72a"), Code="11114", Description="Workforce", Definition="", SortOrder=Convert.ToDecimal("60.00") },
+            new RefEntityType { Id=Guid.Parse("ea95548b-2d97-4a01-9cf5-138bb40470f8"), Code="11089", Description="Assessments", Definition="", SortOrder=Convert.ToDecimal("70.00") },
+            new RefEntityType { Id=Guid.Parse("8fed842d-f6a2-4e60-9e2c-b132a22c566b"), Code="11482", Description="Credentials", Definition="", SortOrder=Convert.ToDecimal("80.00") },
+            new RefEntityType { Id=Guid.Parse("2ed3117d-3f05-44f8-8d40-5da7589473d5"), Code="11104", Description="Competencies", Definition="", SortOrder=Convert.ToDecimal("90.00") },
+            new RefEntityType { Id=Guid.Parse("3a74389c-ad68-4463-8047-375d8a82f65a"), Code="11123", Description="Learning Resources", Definition="", SortOrder=Convert.ToDecimal("100.00") },
+            new RefEntityType { Id=Guid.Parse("7988d81e-45f8-4684-ab58-1b812dd9e4ec"), Code="11571", Description="Facilities", Definition="", SortOrder=Convert.ToDecimal("110.00") },
+            new RefEntityType { Id=Guid.Parse("938c22de-0e74-4bdd-9b3a-335c80ee6274"), Code="11566", Description="Implementation Variables", Definition="", SortOrder=Convert.ToDecimal("120.00") },
+            new RefEntityType { Id=Guid.Parse("5f816a45-27bc-482e-b32b-b1ab76b0c19a"), Code="11440", Description="Authentication and Authorization", Definition="", SortOrder=Convert.ToDecimal("130.00") },
+            new RefEntityType { Id=Guid.Parse("5ed33034-dc92-4c40-b303-7dfcc098726c"), Code="Course", Description="Course Table", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEntityType { Id=Guid.Parse("a47f9653-f7d3-4096-8b96-e0f98231248e"), Code="LearningResource", Description="LearningResource Table", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEntityType { Id=Guid.Parse("09317ad6-612c-44b2-ba82-88e2451874c2"), Code="AssessmentItem", Description="AssessmentItem Table", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEntityType { Id=Guid.Parse("f808370b-b5f9-4ac7-a704-e46cdd74c551"), Code="RubricCriterion", Description="RubricCriterion Table", Definition="", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefEntityType Pick List
          /// </summary>
-        public static List<RefEntityType> RefEntityTypePickList = new List<RefEntityType> =
+        public static List<RefEntityType> RefEntityTypePickList = new List<RefEntityType>
         {
-            new RefEntityType { Id=Guid.Parse("15cb9f15-c9a2-4eaa-8de4-1ce3f430bff9"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("3053e40a-ee84-45a1-9ef1-6443e9e96efb"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("8548b5ec-76ef-403e-88bf-9eb116cce646"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("c306f882-d3e7-4b6b-8209-cb3bfda53acb"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("529853c5-0500-4806-8ebc-21b1b72d8275"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("8c58f272-2bb7-4327-a8c1-8288ce7a7af1"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("649355ef-1f16-459e-bfcb-edb07ec341a4"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("928e7078-42aa-4743-806a-deb6a55f67e2"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("cd082731-4a50-4e03-8dd1-cffc8208026e"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("80b92ced-d1c9-4fdd-a103-6076ee7542b2"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("12d834c3-87e8-489d-b4c0-698444aada67"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("fee36154-018d-4672-af60-068332af4189"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("0e0f1c21-b1c9-4935-9416-83d29c33450a"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("b06cb1dc-25b4-4b57-ac7e-6bb6bc961049"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("073e8a96-25f9-4301-9eaf-3f60d5a2916f"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("28af8aef-c2ab-4491-b143-5232cecd63c8"), Code="", SortOrder=0 },
-            new RefEntityType { Id=Guid.Parse("e38f8404-8698-4eb8-9c95-041bed7c3639"), Code="", SortOrder=0 },
+            new RefEntityType { Id=Guid.Parse("d2b06db6-26b1-48dd-aaef-f7e5a7e7fdc9"), Code="11000", Description="Early Learning", SortOrder=Convert.ToDecimal("10.00") },
+            new RefEntityType { Id=Guid.Parse("a993cb6e-3e69-4e82-a872-bb9a7efd4d11"), Code="11001", Description="K12", SortOrder=Convert.ToDecimal("20.00") },
+            new RefEntityType { Id=Guid.Parse("4dd79b27-460d-4e5a-bba4-9928346cb29c"), Code="11002", Description="Postsecondary", SortOrder=Convert.ToDecimal("30.00") },
+            new RefEntityType { Id=Guid.Parse("1345c932-8cd7-4014-97a5-74196324f3d3"), Code="11112", Description="Career and Technical", SortOrder=Convert.ToDecimal("40.00") },
+            new RefEntityType { Id=Guid.Parse("adb45f90-a4ec-4781-a144-e4bf9a9e85f5"), Code="11113", Description="Adult Education", SortOrder=Convert.ToDecimal("50.00") },
+            new RefEntityType { Id=Guid.Parse("acbd0f7e-93b1-4d2e-a5a1-a0034a5ca72a"), Code="11114", Description="Workforce", SortOrder=Convert.ToDecimal("60.00") },
+            new RefEntityType { Id=Guid.Parse("ea95548b-2d97-4a01-9cf5-138bb40470f8"), Code="11089", Description="Assessments", SortOrder=Convert.ToDecimal("70.00") },
+            new RefEntityType { Id=Guid.Parse("8fed842d-f6a2-4e60-9e2c-b132a22c566b"), Code="11482", Description="Credentials", SortOrder=Convert.ToDecimal("80.00") },
+            new RefEntityType { Id=Guid.Parse("2ed3117d-3f05-44f8-8d40-5da7589473d5"), Code="11104", Description="Competencies", SortOrder=Convert.ToDecimal("90.00") },
+            new RefEntityType { Id=Guid.Parse("3a74389c-ad68-4463-8047-375d8a82f65a"), Code="11123", Description="Learning Resources", SortOrder=Convert.ToDecimal("100.00") },
+            new RefEntityType { Id=Guid.Parse("7988d81e-45f8-4684-ab58-1b812dd9e4ec"), Code="11571", Description="Facilities", SortOrder=Convert.ToDecimal("110.00") },
+            new RefEntityType { Id=Guid.Parse("938c22de-0e74-4bdd-9b3a-335c80ee6274"), Code="11566", Description="Implementation Variables", SortOrder=Convert.ToDecimal("120.00") },
+            new RefEntityType { Id=Guid.Parse("5f816a45-27bc-482e-b32b-b1ab76b0c19a"), Code="11440", Description="Authentication and Authorization", SortOrder=Convert.ToDecimal("130.00") },
+            new RefEntityType { Id=Guid.Parse("5ed33034-dc92-4c40-b303-7dfcc098726c"), Code="Course", Description="Course Table", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEntityType { Id=Guid.Parse("a47f9653-f7d3-4096-8b96-e0f98231248e"), Code="LearningResource", Description="LearningResource Table", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEntityType { Id=Guid.Parse("09317ad6-612c-44b2-ba82-88e2451874c2"), Code="AssessmentItem", Description="AssessmentItem Table", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEntityType { Id=Guid.Parse("f808370b-b5f9-4ac7-a704-e46cdd74c551"), Code="RubricCriterion", Description="RubricCriterion Table", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

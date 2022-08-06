@@ -15,27 +15,27 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefELServiceType"> List
          /// </summary>
-        public static List<RefELServiceType> RefELServiceTypeList = new List<RefELServiceType> =
+        public static List<RefELServiceType> RefELServiceTypeList = new List<RefELServiceType>
         {
-            new RefELServiceType { Id=Guid.Parse("4b29fd05-b35c-44e3-b95f-c235efa8e2f5"), Code="Mental health is the type of service provided to a child.", Description="MentalHealth", Definition="", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("5faa45d6-5ccb-4d43-866f-78597f927c64"), Code="Nutritional is the type of service provided to a child.", Description="Nutritional", Definition="", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("4ea0b20c-7f57-449f-84c0-eae2eee9945e"), Code="Educational is the type of service provided to a child.", Description="Educational", Definition="", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("b1cebc53-143b-49c4-a1b9-77717476295f"), Code="Physical rehabilitation", Description="PhysicalRehabilitation", Definition="", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("8d5dacf5-26b5-4b7e-9b10-d6d7f9ad70da"), Code="Dental Health is the type of service provided to a child.", Description="DentalHealth", Definition="", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("30cf5869-e658-4393-abad-580f65d32ce2"), Code="The type of service provided to a child is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefELServiceType { Id=Guid.Parse("9694c230-06a9-4757-936b-77b10fb53cf4"), Code="MentalHealth", Description="Mental health", Definition="Mental health is the type of service provided to a child.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELServiceType { Id=Guid.Parse("79136f55-284e-44b4-8dbf-9f5df93f5e23"), Code="Nutritional", Description="Nutritional", Definition="Nutritional is the type of service provided to a child.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELServiceType { Id=Guid.Parse("8bceab8b-c03e-40c0-9d1e-327c60bfa08b"), Code="Educational", Description="Educational", Definition="Educational is the type of service provided to a child.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELServiceType { Id=Guid.Parse("8cb4f3f6-2c8a-4ee1-8179-7fa0a362ecbf"), Code="PhysicalRehabilitation", Description="Physical rehabilitation", Definition="Physical rehabilitation", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELServiceType { Id=Guid.Parse("50138fd5-91d3-4470-8dea-93248028b9f7"), Code="DentalHealth", Description="Dental Health", Definition="Dental Health is the type of service provided to a child.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELServiceType { Id=Guid.Parse("92ac87e6-3a4f-454a-ae45-73d702af38e8"), Code="Other", Description="Other", Definition="The type of service provided to a child is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefELServiceType Pick List
          /// </summary>
-        public static List<RefELServiceType> RefELServiceTypePickList = new List<RefELServiceType> =
+        public static List<RefELServiceType> RefELServiceTypePickList = new List<RefELServiceType>
         {
-            new RefELServiceType { Id=Guid.Parse("4b29fd05-b35c-44e3-b95f-c235efa8e2f5"), Code="Mental health is the type of service provided to a child.", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("5faa45d6-5ccb-4d43-866f-78597f927c64"), Code="Nutritional is the type of service provided to a child.", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("4ea0b20c-7f57-449f-84c0-eae2eee9945e"), Code="Educational is the type of service provided to a child.", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("b1cebc53-143b-49c4-a1b9-77717476295f"), Code="Physical rehabilitation", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("8d5dacf5-26b5-4b7e-9b10-d6d7f9ad70da"), Code="Dental Health is the type of service provided to a child.", SortOrder=0 },
-            new RefELServiceType { Id=Guid.Parse("30cf5869-e658-4393-abad-580f65d32ce2"), Code="The type of service provided to a child is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefELServiceType { Id=Guid.Parse("9694c230-06a9-4757-936b-77b10fb53cf4"), Code="MentalHealth", Description="Mental health", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELServiceType { Id=Guid.Parse("79136f55-284e-44b4-8dbf-9f5df93f5e23"), Code="Nutritional", Description="Nutritional", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELServiceType { Id=Guid.Parse("8bceab8b-c03e-40c0-9d1e-327c60bfa08b"), Code="Educational", Description="Educational", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELServiceType { Id=Guid.Parse("8cb4f3f6-2c8a-4ee1-8179-7fa0a362ecbf"), Code="PhysicalRehabilitation", Description="Physical rehabilitation", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELServiceType { Id=Guid.Parse("50138fd5-91d3-4470-8dea-93248028b9f7"), Code="DentalHealth", Description="Dental Health", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELServiceType { Id=Guid.Parse("92ac87e6-3a4f-454a-ae45-73d702af38e8"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

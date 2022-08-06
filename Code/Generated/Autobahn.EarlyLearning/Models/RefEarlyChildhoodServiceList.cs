@@ -15,14 +15,14 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefEarlyChildhoodService"> List
          /// </summary>
-        public static List<RefEarlyChildhoodService> RefEarlyChildhoodServiceList = new List<RefEarlyChildhoodService> =
+        public static List<RefEarlyChildhoodService> RefEarlyChildhoodServiceList = new List<RefEarlyChildhoodService>
         {
         };
 
         /// <summary>
         /// The RefEarlyChildhoodService Pick List
          /// </summary>
-        public static List<RefEarlyChildhoodService> RefEarlyChildhoodServicePickList = new List<RefEarlyChildhoodService> =
+        public static List<RefEarlyChildhoodService> RefEarlyChildhoodServicePickList = new List<RefEarlyChildhoodService>
         {
        };
    }

@@ -15,35 +15,35 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefELLocalRevenueSource"> List
          /// </summary>
-        public static List<RefELLocalRevenueSource> RefELLocalRevenueSourceList = new List<RefELLocalRevenueSource> =
+        public static List<RefELLocalRevenueSource> RefELLocalRevenueSourceList = new List<RefELLocalRevenueSource>
         {
-            new RefELLocalRevenueSource { Id=Guid.Parse("fbd9d88d-464e-4813-8650-e79dd5347ffc"), Code="LEA is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="LEA", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("385baedd-0693-49d0-8f55-1128da6cfa4c"), Code="County Levy Tax is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="CountyLevyTax", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("7c05a4b5-a160-4c52-914b-5e08f88ec25d"), Code="Foundations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="Foundations", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("ba211896-da80-4b45-838b-b73bae54f631"), Code="Special Fund Raising is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="SpecialFundRaising", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("2cedf36e-ef5e-454a-8c23-48408a09aff3"), Code="Local Government is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="LocalGovernment", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("097741ff-3d61-41fb-afdf-5f1f8e960c5a"), Code="Cash Donations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="CashDonations", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("58b125be-3226-43b6-81b7-64d565f20324"), Code="United Way is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="UnitedWay", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("4244e99e-4df8-45ee-9d8f-0aafc7877daf"), Code="Private Insurance is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="PrivateInsurance", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("2f99f6ff-7585-4ebd-bf46-cbe2ca00d102"), Code="Family Fees is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", Description="FamilyFees", Definition="", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("b56d034f-edee-47e3-bcf7-5a79889a44ec"), Code="A source of funds is in a category not yet included in CEDS..", Description="Other", Definition="", SortOrder=0 },
+            new RefELLocalRevenueSource { Id=Guid.Parse("505a9220-91e0-4acf-be6f-e229747646f5"), Code="LEA", Description="LEA", Definition="LEA is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("2ddbf0b8-73e3-4980-9bc3-a49cd127ddae"), Code="CountyLevyTax", Description="County Levy Tax", Definition="County Levy Tax is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("906dc1a1-c049-438d-ac46-cc9fb22ff056"), Code="Foundations", Description="Foundations", Definition="Foundations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("54d8efc2-5854-4e7c-a213-b3bf87a12e98"), Code="SpecialFundRaising", Description="Special Fund Raising", Definition="Special Fund Raising is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("41383539-baf1-4c1b-9c69-5e3edf10a574"), Code="LocalGovernment", Description="Local Government", Definition="Local Government is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b0aefb45-a75a-42bf-9a4d-9534fbbfbb10"), Code="CashDonations", Description="Cash Donations", Definition="Cash Donations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("5f73c1ce-1207-4e18-98f5-a08b8327232c"), Code="UnitedWay", Description="United Way", Definition="United Way is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b28bf497-5ea6-4938-bbc0-1d93c95e3fee"), Code="PrivateInsurance", Description="Private Insurance", Definition="Private Insurance is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("15.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("499fe395-9b4b-4c39-8dc8-c97c545e8482"), Code="FamilyFees", Description="Family Fees", Definition="Family Fees is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=Convert.ToDecimal("17.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b15908d4-05c4-4cce-8070-b3bbe8a4f963"), Code="Other", Description="Other", Definition="A source of funds is in a category not yet included in CEDS..", SortOrder=Convert.ToDecimal("19.00") },
         };
 
         /// <summary>
         /// The RefELLocalRevenueSource Pick List
          /// </summary>
-        public static List<RefELLocalRevenueSource> RefELLocalRevenueSourcePickList = new List<RefELLocalRevenueSource> =
+        public static List<RefELLocalRevenueSource> RefELLocalRevenueSourcePickList = new List<RefELLocalRevenueSource>
         {
-            new RefELLocalRevenueSource { Id=Guid.Parse("fbd9d88d-464e-4813-8650-e79dd5347ffc"), Code="LEA is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("385baedd-0693-49d0-8f55-1128da6cfa4c"), Code="County Levy Tax is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("7c05a4b5-a160-4c52-914b-5e08f88ec25d"), Code="Foundations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("ba211896-da80-4b45-838b-b73bae54f631"), Code="Special Fund Raising is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("2cedf36e-ef5e-454a-8c23-48408a09aff3"), Code="Local Government is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("097741ff-3d61-41fb-afdf-5f1f8e960c5a"), Code="Cash Donations is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("58b125be-3226-43b6-81b7-64d565f20324"), Code="United Way is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("4244e99e-4df8-45ee-9d8f-0aafc7877daf"), Code="Private Insurance is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("2f99f6ff-7585-4ebd-bf46-cbe2ca00d102"), Code="Family Fees is a source of funds that originate at the local level, and not from the state or federal level, that contribute to EL program.", SortOrder=0 },
-            new RefELLocalRevenueSource { Id=Guid.Parse("b56d034f-edee-47e3-bcf7-5a79889a44ec"), Code="A source of funds is in a category not yet included in CEDS..", SortOrder=0 },
+            new RefELLocalRevenueSource { Id=Guid.Parse("505a9220-91e0-4acf-be6f-e229747646f5"), Code="LEA", Description="LEA", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("2ddbf0b8-73e3-4980-9bc3-a49cd127ddae"), Code="CountyLevyTax", Description="County Levy Tax", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("906dc1a1-c049-438d-ac46-cc9fb22ff056"), Code="Foundations", Description="Foundations", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("54d8efc2-5854-4e7c-a213-b3bf87a12e98"), Code="SpecialFundRaising", Description="Special Fund Raising", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("41383539-baf1-4c1b-9c69-5e3edf10a574"), Code="LocalGovernment", Description="Local Government", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b0aefb45-a75a-42bf-9a4d-9534fbbfbb10"), Code="CashDonations", Description="Cash Donations", SortOrder=Convert.ToDecimal("11.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("5f73c1ce-1207-4e18-98f5-a08b8327232c"), Code="UnitedWay", Description="United Way", SortOrder=Convert.ToDecimal("13.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b28bf497-5ea6-4938-bbc0-1d93c95e3fee"), Code="PrivateInsurance", Description="Private Insurance", SortOrder=Convert.ToDecimal("15.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("499fe395-9b4b-4c39-8dc8-c97c545e8482"), Code="FamilyFees", Description="Family Fees", SortOrder=Convert.ToDecimal("17.00") },
+            new RefELLocalRevenueSource { Id=Guid.Parse("b15908d4-05c4-4cce-8070-b3bbe8a4f963"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("19.00") },
        };
    }
 }

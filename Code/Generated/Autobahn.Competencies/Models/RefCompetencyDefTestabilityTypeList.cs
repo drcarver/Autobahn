@@ -15,23 +15,23 @@ namespace Autobahn.Competencies.Models
         /// <summary>
         /// The complete <see cref="RefCompetencyDefTestabilityType"> List
          /// </summary>
-        public static List<RefCompetencyDefTestabilityType> RefCompetencyDefTestabilityTypeList = new List<RefCompetencyDefTestabilityType> =
+        public static List<RefCompetencyDefTestabilityType> RefCompetencyDefTestabilityTypeList = new List<RefCompetencyDefTestabilityType>
         {
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("0b3b0ca7-5302-4061-a85b-f1337618f6dd"), Code="Testable using a single indicator type, measuring a single competency", Description="SingleIndicator", Definition="", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("ec88ec6d-c712-4eff-9cdd-d70370b7dbcc"), Code="Testability requires more than one indicator type used to measure a single competency", Description="MultipleIndicator", Definition="", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("e1aacbce-d18f-43c1-af36-76034b93870f"), Code="Testability requires a combination of indicators that assess multiple competencies or performance tasks", Description="MultipleCompetency", Definition="", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("e12b6729-7798-4f7b-9f1a-8f99a61b60e6"), Code="The competency (skill, knowledge, ability, disposition) cannot be assessed.", Description="CannotBeAssessed", Definition="", SortOrder=0 },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("0680604a-2d95-48b1-b347-02ec380ad8b9"), Code="SingleIndicator", Description="Single Indicator", Definition="Testable using a single indicator type, measuring a single competency", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("dbe8d0ae-2043-4176-93b3-de89116cce36"), Code="MultipleIndicator", Description="Multiple Indicator", Definition="Testability requires more than one indicator type used to measure a single competency", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("b6f5df6d-8286-41ed-ac40-b510a09d3ad2"), Code="MultipleCompetency", Description="Multiple Competency", Definition="Testability requires a combination of indicators that assess multiple competencies or performance tasks", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("124ade08-7d14-43f5-a9c5-452315b14540"), Code="CannotBeAssessed", Description="Cannot be assessed", Definition="The competency (skill, knowledge, ability, disposition) cannot be assessed.", SortOrder=Convert.ToDecimal("8.00") },
         };
 
         /// <summary>
         /// The RefCompetencyDefTestabilityType Pick List
          /// </summary>
-        public static List<RefCompetencyDefTestabilityType> RefCompetencyDefTestabilityTypePickList = new List<RefCompetencyDefTestabilityType> =
+        public static List<RefCompetencyDefTestabilityType> RefCompetencyDefTestabilityTypePickList = new List<RefCompetencyDefTestabilityType>
         {
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("0b3b0ca7-5302-4061-a85b-f1337618f6dd"), Code="Testable using a single indicator type, measuring a single competency", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("ec88ec6d-c712-4eff-9cdd-d70370b7dbcc"), Code="Testability requires more than one indicator type used to measure a single competency", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("e1aacbce-d18f-43c1-af36-76034b93870f"), Code="Testability requires a combination of indicators that assess multiple competencies or performance tasks", SortOrder=0 },
-            new RefCompetencyDefTestabilityType { Id=Guid.Parse("e12b6729-7798-4f7b-9f1a-8f99a61b60e6"), Code="The competency (skill, knowledge, ability, disposition) cannot be assessed.", SortOrder=0 },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("0680604a-2d95-48b1-b347-02ec380ad8b9"), Code="SingleIndicator", Description="Single Indicator", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("dbe8d0ae-2043-4176-93b3-de89116cce36"), Code="MultipleIndicator", Description="Multiple Indicator", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("b6f5df6d-8286-41ed-ac40-b510a09d3ad2"), Code="MultipleCompetency", Description="Multiple Competency", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCompetencyDefTestabilityType { Id=Guid.Parse("124ade08-7d14-43f5-a9c5-452315b14540"), Code="CannotBeAssessed", Description="Cannot be assessed", SortOrder=Convert.ToDecimal("8.00") },
        };
    }
 }

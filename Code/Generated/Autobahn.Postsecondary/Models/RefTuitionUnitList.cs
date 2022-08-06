@@ -15,25 +15,25 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefTuitionUnit"> List
          /// </summary>
-        public static List<RefTuitionUnit> RefTuitionUnitList = new List<RefTuitionUnit> =
+        public static List<RefTuitionUnit> RefTuitionUnitList = new List<RefTuitionUnit>
         {
-            new RefTuitionUnit { Id=Guid.Parse("b716f89a-5779-49e6-87f4-72f02683e0f3"), Code="Tuition is being charged Per Term.", Description="PerTerm", Definition="", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("4b8f6c60-699a-48c0-b792-abf855f1e33b"), Code="Tuition is being charged Per Year.", Description="PerYear", Definition="", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("ee8f515f-3e53-44cd-82be-7e4e5c7ebe32"), Code="Tuition is being charged Per Program.", Description="PerProgram", Definition="", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("303f4cec-e669-4963-a7b0-9f2ecd3b6008"), Code="Tuition is being charged Per Course.", Description="PerCourse", Definition="", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("44363649-d1d4-4faa-9871-b382eee0da2e"), Code="Tuition is being charged Per Credit.", Description="PerCredit", Definition="", SortOrder=0 },
+            new RefTuitionUnit { Id=Guid.Parse("a67fa840-c1a7-4ae2-98be-f0706c0151af"), Code="PerTerm", Description="Per Term", Definition="Tuition is being charged Per Term.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTuitionUnit { Id=Guid.Parse("c42a3084-2f46-4269-8ae2-4b7ddf7b538a"), Code="PerYear", Description="Per Year", Definition="Tuition is being charged Per Year.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTuitionUnit { Id=Guid.Parse("9559d81a-2ee3-4ff2-8529-57ea89a7b72f"), Code="PerProgram", Description="Per Program", Definition="Tuition is being charged Per Program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTuitionUnit { Id=Guid.Parse("2d87e52e-caf9-48dd-8545-4dd97b4db761"), Code="PerCourse", Description="Per Course", Definition="Tuition is being charged Per Course.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTuitionUnit { Id=Guid.Parse("3b20f457-4e5d-4b00-8449-fe8a88b31bc2"), Code="PerCredit", Description="Per Credit", Definition="Tuition is being charged Per Credit.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefTuitionUnit Pick List
          /// </summary>
-        public static List<RefTuitionUnit> RefTuitionUnitPickList = new List<RefTuitionUnit> =
+        public static List<RefTuitionUnit> RefTuitionUnitPickList = new List<RefTuitionUnit>
         {
-            new RefTuitionUnit { Id=Guid.Parse("b716f89a-5779-49e6-87f4-72f02683e0f3"), Code="Tuition is being charged Per Term.", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("4b8f6c60-699a-48c0-b792-abf855f1e33b"), Code="Tuition is being charged Per Year.", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("ee8f515f-3e53-44cd-82be-7e4e5c7ebe32"), Code="Tuition is being charged Per Program.", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("303f4cec-e669-4963-a7b0-9f2ecd3b6008"), Code="Tuition is being charged Per Course.", SortOrder=0 },
-            new RefTuitionUnit { Id=Guid.Parse("44363649-d1d4-4faa-9871-b382eee0da2e"), Code="Tuition is being charged Per Credit.", SortOrder=0 },
+            new RefTuitionUnit { Id=Guid.Parse("a67fa840-c1a7-4ae2-98be-f0706c0151af"), Code="PerTerm", Description="Per Term", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTuitionUnit { Id=Guid.Parse("c42a3084-2f46-4269-8ae2-4b7ddf7b538a"), Code="PerYear", Description="Per Year", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTuitionUnit { Id=Guid.Parse("9559d81a-2ee3-4ff2-8529-57ea89a7b72f"), Code="PerProgram", Description="Per Program", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTuitionUnit { Id=Guid.Parse("2d87e52e-caf9-48dd-8545-4dd97b4db761"), Code="PerCourse", Description="Per Course", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTuitionUnit { Id=Guid.Parse("3b20f457-4e5d-4b00-8449-fe8a88b31bc2"), Code="PerCredit", Description="Per Credit", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

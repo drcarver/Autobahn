@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefGpaWeightedIndicator"> List
          /// </summary>
-        public static List<RefGpaWeightedIndicator> RefGpaWeightedIndicatorList = new List<RefGpaWeightedIndicator> =
+        public static List<RefGpaWeightedIndicator> RefGpaWeightedIndicatorList = new List<RefGpaWeightedIndicator>
         {
-            new RefGpaWeightedIndicator { Id=Guid.Parse("2d856421-e1d1-4ecb-9562-8a2039d4499f"), Code="The reported Grade Point Average is weighted.", Description="Weighted", Definition="", SortOrder=0 },
-            new RefGpaWeightedIndicator { Id=Guid.Parse("8885e061-3af4-42bb-b1ee-d2167f376597"), Code="The reported Grade Point Average is unweighted.", Description="Unweighted", Definition="", SortOrder=0 },
+            new RefGpaWeightedIndicator { Id=Guid.Parse("13825181-3541-4c1b-af00-8f08cf76e81e"), Code="Weighted", Description="Weighted", Definition="The reported Grade Point Average is weighted.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefGpaWeightedIndicator { Id=Guid.Parse("6ece3b73-80a3-4915-9916-0fbedd99c29b"), Code="Unweighted", Description="Unweighted", Definition="The reported Grade Point Average is unweighted.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefGpaWeightedIndicator Pick List
          /// </summary>
-        public static List<RefGpaWeightedIndicator> RefGpaWeightedIndicatorPickList = new List<RefGpaWeightedIndicator> =
+        public static List<RefGpaWeightedIndicator> RefGpaWeightedIndicatorPickList = new List<RefGpaWeightedIndicator>
         {
-            new RefGpaWeightedIndicator { Id=Guid.Parse("2d856421-e1d1-4ecb-9562-8a2039d4499f"), Code="The reported Grade Point Average is weighted.", SortOrder=0 },
-            new RefGpaWeightedIndicator { Id=Guid.Parse("8885e061-3af4-42bb-b1ee-d2167f376597"), Code="The reported Grade Point Average is unweighted.", SortOrder=0 },
+            new RefGpaWeightedIndicator { Id=Guid.Parse("13825181-3541-4c1b-af00-8f08cf76e81e"), Code="Weighted", Description="Weighted", SortOrder=Convert.ToDecimal("1.00") },
+            new RefGpaWeightedIndicator { Id=Guid.Parse("6ece3b73-80a3-4915-9916-0fbedd99c29b"), Code="Unweighted", Description="Unweighted", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

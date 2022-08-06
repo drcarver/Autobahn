@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentNeedBrailleStatusCellType"> List
          /// </summary>
-        public static List<RefAssessmentNeedBrailleStatusCellType> RefAssessmentNeedBrailleStatusCellTypeList = new List<RefAssessmentNeedBrailleStatusCellType> =
+        public static List<RefAssessmentNeedBrailleStatusCellType> RefAssessmentNeedBrailleStatusCellTypeList = new List<RefAssessmentNeedBrailleStatusCellType>
         {
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("db38814f-5b22-4991-935a-0ad71e9b6d4c"), Code="Defines as part of an Assessment Personal Needs Profile the preferred presence of a Braille display status cell set to Off.", Description="Off", Definition="", SortOrder=0 },
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("87a2c04f-5af7-4f53-944d-f7499ae64b96"), Code="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell set to Left.", Description="Left", Definition="", SortOrder=0 },
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("6bbef1b1-5b12-4a0e-b0e6-6b14187b8d3d"), Code="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell Right.", Description="Right", Definition="", SortOrder=0 },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("23d722ff-e4b7-4034-906a-d640e4f1015e"), Code="Off", Description="Off", Definition="Defines as part of an Assessment Personal Needs Profile the preferred presence of a Braille display status cell set to Off.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("f33572ca-59fa-4d17-8b7c-307847140919"), Code="Left", Description="Left", Definition="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell set to Left.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("5220f50c-5b55-483f-890b-96ce0d001068"), Code="Right", Description="Right", Definition="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell Right.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefAssessmentNeedBrailleStatusCellType Pick List
          /// </summary>
-        public static List<RefAssessmentNeedBrailleStatusCellType> RefAssessmentNeedBrailleStatusCellTypePickList = new List<RefAssessmentNeedBrailleStatusCellType> =
+        public static List<RefAssessmentNeedBrailleStatusCellType> RefAssessmentNeedBrailleStatusCellTypePickList = new List<RefAssessmentNeedBrailleStatusCellType>
         {
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("db38814f-5b22-4991-935a-0ad71e9b6d4c"), Code="Defines as part of an Assessment Personal Needs Profile the preferred presence of a Braille display status cell set to Off.", SortOrder=0 },
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("87a2c04f-5af7-4f53-944d-f7499ae64b96"), Code="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell set to Left.", SortOrder=0 },
-            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("6bbef1b1-5b12-4a0e-b0e6-6b14187b8d3d"), Code="Defines as part of an Assessment Personal Needs Profile the preferred location of a Braille display status cell Right.", SortOrder=0 },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("23d722ff-e4b7-4034-906a-d640e4f1015e"), Code="Off", Description="Off", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("f33572ca-59fa-4d17-8b7c-307847140919"), Code="Left", Description="Left", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedBrailleStatusCellType { Id=Guid.Parse("5220f50c-5b55-483f-890b-96ce0d001068"), Code="Right", Description="Right", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefMedicalAlertIndicator"> List
          /// </summary>
-        public static List<RefMedicalAlertIndicator> RefMedicalAlertIndicatorList = new List<RefMedicalAlertIndicator> =
+        public static List<RefMedicalAlertIndicator> RefMedicalAlertIndicatorList = new List<RefMedicalAlertIndicator>
         {
-            new RefMedicalAlertIndicator { Id=Guid.Parse("1009a1cb-b132-4834-b05d-cb4566c67266"), Code="The person has an alert indicator for a chronic medical/health condition.", Description="Chronic", Definition="", SortOrder=0 },
-            new RefMedicalAlertIndicator { Id=Guid.Parse("73daeff8-e551-420b-832d-f7256f320a35"), Code="The person has an alert indicator for an acute medical/health condition.", Description="Acute", Definition="", SortOrder=0 },
-            new RefMedicalAlertIndicator { Id=Guid.Parse("a63de77e-bf1a-497b-b938-5da68a2a63a4"), Code="The person does not have an alert indicator for a medical/health condition.", Description="None", Definition="", SortOrder=0 },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("68372dcb-9e7c-41d0-a50c-1ad74d9f90e6"), Code="Chronic", Description="Chronic", Definition="The person has an alert indicator for a chronic medical/health condition.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("8c7d32f8-0956-4794-8c21-0b4539e81666"), Code="Acute", Description="Acute", Definition="The person has an alert indicator for an acute medical/health condition.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("aa387e44-52cf-4bcc-8892-9dd3f8d868d7"), Code="None", Description="None", Definition="The person does not have an alert indicator for a medical/health condition.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefMedicalAlertIndicator Pick List
          /// </summary>
-        public static List<RefMedicalAlertIndicator> RefMedicalAlertIndicatorPickList = new List<RefMedicalAlertIndicator> =
+        public static List<RefMedicalAlertIndicator> RefMedicalAlertIndicatorPickList = new List<RefMedicalAlertIndicator>
         {
-            new RefMedicalAlertIndicator { Id=Guid.Parse("1009a1cb-b132-4834-b05d-cb4566c67266"), Code="The person has an alert indicator for a chronic medical/health condition.", SortOrder=0 },
-            new RefMedicalAlertIndicator { Id=Guid.Parse("73daeff8-e551-420b-832d-f7256f320a35"), Code="The person has an alert indicator for an acute medical/health condition.", SortOrder=0 },
-            new RefMedicalAlertIndicator { Id=Guid.Parse("a63de77e-bf1a-497b-b938-5da68a2a63a4"), Code="The person does not have an alert indicator for a medical/health condition.", SortOrder=0 },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("68372dcb-9e7c-41d0-a50c-1ad74d9f90e6"), Code="Chronic", Description="Chronic", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("8c7d32f8-0956-4794-8c21-0b4539e81666"), Code="Acute", Description="Acute", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMedicalAlertIndicator { Id=Guid.Parse("aa387e44-52cf-4bcc-8892-9dd3f8d868d7"), Code="None", Description="None", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

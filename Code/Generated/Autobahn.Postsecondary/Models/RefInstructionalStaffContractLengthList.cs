@@ -15,25 +15,25 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefInstructionalStaffContractLength"> List
          /// </summary>
-        public static List<RefInstructionalStaffContractLength> RefInstructionalStaffContractLengthList = new List<RefInstructionalStaffContractLength> =
+        public static List<RefInstructionalStaffContractLength> RefInstructionalStaffContractLengthList = new List<RefInstructionalStaffContractLength>
         {
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("dbf229fe-76fd-42a6-a450-37732e95143e"), Code="The contracted teaching period for the faculty member is less than 9-Months.", Description="LessThan9-Month", Definition="", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("0db54e91-f515-4d94-8a14-318d6558a1aa"), Code="The contracted teaching period for the faculty member 9-Months.", Description="9-Month", Definition="", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("c7ee21e7-a67d-43a0-a930-2299489a28bb"), Code="The contracted teaching period for the faculty member 10-Months.", Description="10-Month", Definition="", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("e3fae842-dee4-4ca9-bacd-f9d97e9cc1ad"), Code="The contracted teaching period for the faculty member 11-Months.", Description="11-Month", Definition="", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("d964d4c7-18a5-400a-8a5f-5991f71d2255"), Code="The contracted teaching period for the faculty member 12-Months.", Description="12-Month", Definition="", SortOrder=0 },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("963bed18-e3e6-4e0a-8e7f-2043de235e57"), Code="LessThan9-Month", Description="Less than 9-Month", Definition="The contracted teaching period for the faculty member is less than 9-Months.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("6abf7c36-a87a-49f6-af6f-1570a9fc7a3f"), Code="9-Month", Description="9-Month", Definition="The contracted teaching period for the faculty member 9-Months.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("bd026c99-a06f-4dbd-9eb1-7a02c47967ea"), Code="10-Month", Description="10-Month", Definition="The contracted teaching period for the faculty member 10-Months.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("78b6c2cd-ac90-42b3-9b00-03cdb3bec215"), Code="11-Month", Description="11-Month", Definition="The contracted teaching period for the faculty member 11-Months.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("71b81eb1-b9de-4756-943f-8c95189ccd4d"), Code="12-Month", Description="12-Month", Definition="The contracted teaching period for the faculty member 12-Months.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefInstructionalStaffContractLength Pick List
          /// </summary>
-        public static List<RefInstructionalStaffContractLength> RefInstructionalStaffContractLengthPickList = new List<RefInstructionalStaffContractLength> =
+        public static List<RefInstructionalStaffContractLength> RefInstructionalStaffContractLengthPickList = new List<RefInstructionalStaffContractLength>
         {
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("dbf229fe-76fd-42a6-a450-37732e95143e"), Code="The contracted teaching period for the faculty member is less than 9-Months.", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("0db54e91-f515-4d94-8a14-318d6558a1aa"), Code="The contracted teaching period for the faculty member 9-Months.", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("c7ee21e7-a67d-43a0-a930-2299489a28bb"), Code="The contracted teaching period for the faculty member 10-Months.", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("e3fae842-dee4-4ca9-bacd-f9d97e9cc1ad"), Code="The contracted teaching period for the faculty member 11-Months.", SortOrder=0 },
-            new RefInstructionalStaffContractLength { Id=Guid.Parse("d964d4c7-18a5-400a-8a5f-5991f71d2255"), Code="The contracted teaching period for the faculty member 12-Months.", SortOrder=0 },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("963bed18-e3e6-4e0a-8e7f-2043de235e57"), Code="LessThan9-Month", Description="Less than 9-Month", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("6abf7c36-a87a-49f6-af6f-1570a9fc7a3f"), Code="9-Month", Description="9-Month", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("bd026c99-a06f-4dbd-9eb1-7a02c47967ea"), Code="10-Month", Description="10-Month", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("78b6c2cd-ac90-42b3-9b00-03cdb3bec215"), Code="11-Month", Description="11-Month", SortOrder=Convert.ToDecimal("4.00") },
+            new RefInstructionalStaffContractLength { Id=Guid.Parse("71b81eb1-b9de-4756-943f-8c95189ccd4d"), Code="12-Month", Description="12-Month", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

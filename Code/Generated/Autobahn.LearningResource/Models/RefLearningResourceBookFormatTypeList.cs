@@ -15,31 +15,31 @@ namespace Autobahn.LearningResource.Models
         /// <summary>
         /// The complete <see cref="RefLearningResourceBookFormatType"> List
          /// </summary>
-        public static List<RefLearningResourceBookFormatType> RefLearningResourceBookFormatTypeList = new List<RefLearningResourceBookFormatType> =
+        public static List<RefLearningResourceBookFormatType> RefLearningResourceBookFormatTypeList = new List<RefLearningResourceBookFormatType>
         {
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("79753357-293b-4de0-8a01-452d5d1b62ce"), Code="Ebook is the specific format for the learning resource that is a book.", Description="Ebook", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("9346501f-0671-46fb-96f8-f19ca122aac6"), Code="Hardcover is the specific format for the learning resource that is a book.", Description="Hardcover", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("70010513-a1c6-4f2a-9196-53ea622213b3"), Code="Paperback is the specific format for the learning resource that is a book.", Description="Paperback", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("0a4b0b1f-34ad-4d39-bce5-4082a4778c99"), Code="DAISY202 is the specific format for the learning resource that is a book.", Description="DAISY202", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("e15a5563-b171-4b67-8983-bf4101b18473"), Code="DAISY3 is the specific format for the learning resource that is a book.", Description="DAISY3", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("450d25e5-faab-46dd-83e2-eb0756e5de7f"), Code="EPUB2 is the specific format for the learning resource that is a book.", Description="EPUB2", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("657d1d43-cd62-49f9-bdaa-f2ce50809610"), Code="EPUB3 is the specific format for the learning resource that is a book.", Description="EPUB3", Definition="", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("f5c694ed-9aa5-49a1-ab2f-bddb9c7660b4"), Code="The specific format for the learning resource that is a book is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("ddf0d885-c92d-4afe-a17d-b86f19b76e8e"), Code="Ebook", Description="Ebook", Definition="Ebook is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("229a86bf-e9f1-4b8e-97e0-9d5129e693ef"), Code="Hardcover", Description="Hardcover", Definition="Hardcover is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("20ad2f55-23f7-4068-b1c9-9e51aa8b9ae9"), Code="Paperback", Description="Paperback", Definition="Paperback is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("d65e230f-6499-4254-b9f8-2a7a4a76aace"), Code="DAISY202", Description="DAISY202", Definition="DAISY202 is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("f3fae486-a7fc-4748-980f-1d62035cd0dd"), Code="DAISY3", Description="DAISY3", Definition="DAISY3 is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("a0f2bd5f-81b9-4406-8610-536fa4e12905"), Code="EPUB2", Description="EPUB2", Definition="EPUB2 is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("f78e8a35-adda-491a-a5ed-42c677ab6989"), Code="EPUB3", Description="EPUB3", Definition="EPUB3 is the specific format for the learning resource that is a book.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("5c7a9b0d-0a2a-437b-86d3-6ca9b1a24fd2"), Code="Other", Description="Other", Definition="The specific format for the learning resource that is a book is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("16.00") },
         };
 
         /// <summary>
         /// The RefLearningResourceBookFormatType Pick List
          /// </summary>
-        public static List<RefLearningResourceBookFormatType> RefLearningResourceBookFormatTypePickList = new List<RefLearningResourceBookFormatType> =
+        public static List<RefLearningResourceBookFormatType> RefLearningResourceBookFormatTypePickList = new List<RefLearningResourceBookFormatType>
         {
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("79753357-293b-4de0-8a01-452d5d1b62ce"), Code="Ebook is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("9346501f-0671-46fb-96f8-f19ca122aac6"), Code="Hardcover is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("70010513-a1c6-4f2a-9196-53ea622213b3"), Code="Paperback is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("0a4b0b1f-34ad-4d39-bce5-4082a4778c99"), Code="DAISY202 is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("e15a5563-b171-4b67-8983-bf4101b18473"), Code="DAISY3 is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("450d25e5-faab-46dd-83e2-eb0756e5de7f"), Code="EPUB2 is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("657d1d43-cd62-49f9-bdaa-f2ce50809610"), Code="EPUB3 is the specific format for the learning resource that is a book.", SortOrder=0 },
-            new RefLearningResourceBookFormatType { Id=Guid.Parse("f5c694ed-9aa5-49a1-ab2f-bddb9c7660b4"), Code="The specific format for the learning resource that is a book is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("ddf0d885-c92d-4afe-a17d-b86f19b76e8e"), Code="Ebook", Description="Ebook", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("229a86bf-e9f1-4b8e-97e0-9d5129e693ef"), Code="Hardcover", Description="Hardcover", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("20ad2f55-23f7-4068-b1c9-9e51aa8b9ae9"), Code="Paperback", Description="Paperback", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("d65e230f-6499-4254-b9f8-2a7a4a76aace"), Code="DAISY202", Description="DAISY202", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("f3fae486-a7fc-4748-980f-1d62035cd0dd"), Code="DAISY3", Description="DAISY3", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("a0f2bd5f-81b9-4406-8610-536fa4e12905"), Code="EPUB2", Description="EPUB2", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("f78e8a35-adda-491a-a5ed-42c677ab6989"), Code="EPUB3", Description="EPUB3", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLearningResourceBookFormatType { Id=Guid.Parse("5c7a9b0d-0a2a-437b-86d3-6ca9b1a24fd2"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("16.00") },
        };
    }
 }

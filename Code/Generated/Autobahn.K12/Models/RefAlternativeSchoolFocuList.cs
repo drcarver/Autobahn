@@ -15,14 +15,14 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefAlternativeSchoolFocu"> List
          /// </summary>
-        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuList = new List<RefAlternativeSchoolFocu> =
+        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuList = new List<RefAlternativeSchoolFocu>
         {
         };
 
         /// <summary>
         /// The RefAlternativeSchoolFocu Pick List
          /// </summary>
-        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuPickList = new List<RefAlternativeSchoolFocu> =
+        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuPickList = new List<RefAlternativeSchoolFocu>
         {
        };
    }

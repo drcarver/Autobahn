@@ -15,35 +15,35 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefHealthInsuranceCoverage"> List
          /// </summary>
-        public static List<RefHealthInsuranceCoverage> RefHealthInsuranceCoverageList = new List<RefHealthInsuranceCoverage> =
+        public static List<RefHealthInsuranceCoverage> RefHealthInsuranceCoverageList = new List<RefHealthInsuranceCoverage>
         {
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("feee8d0c-2d18-4647-835d-4f66b89907cd"), Code="Non-workplace or personal insurance coverage.", Description="NonWorkplace", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("98a4977f-5ad2-4255-8f5a-c86b8b4369bf"), Code="Workplace insurance coverage.", Description="Workplace", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("7c890378-69a6-4315-9223-fc248d08f743"), Code="Medicaid insurance coverage.", Description="Medicaid", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("15d1e4cf-801f-42aa-9002-a115eba3d53a"), Code="Children's health insurance program.", Description="CHIP", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("f8c8b837-dc53-4695-b62f-df5e613eb318"), Code="State-only funded insurance coverage.", Description="StateOnlyFunded", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("2dfc50a5-76ac-484a-a2e5-ddb83bbe82ec"), Code="Supplemental security income insurance coverage.", Description="SSI", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("fb07b5b5-5413-4139-888f-b41c543e26bc"), Code="Military medical insurance coverage.", Description="Military", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("f2339607-1b0b-4613-8024-72c2ee026a54"), Code="Veteran's medical insurance coverage.", Description="Veteran", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("697cfb71-32b2-4919-aadc-8ef2cdc73b0c"), Code="None insurance coverage.", Description="None", Definition="", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("1686d8dd-43d8-442a-89b8-a0bf4f875799"), Code="Other insurance coverage.", Description="Other", Definition="", SortOrder=0 },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("97ce9a72-3cdb-4492-b0d1-64bf58238c81"), Code="NonWorkplace", Description="Non-workplace or personal", Definition="Non-workplace or personal insurance coverage.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("0bef7eaa-ced0-4f3a-b476-779b21db2279"), Code="Workplace", Description="Workplace", Definition="Workplace insurance coverage.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("e9568c27-25c0-4cb0-93f0-2c606c1bd2a1"), Code="Medicaid", Description="Medicaid", Definition="Medicaid insurance coverage.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("59372ab6-dad8-40e0-a7d4-743a45aa3569"), Code="CHIP", Description="Children's health insurance program", Definition="Children's health insurance program.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("0ba8425e-e1d8-423f-8ac4-7125cfa7ae66"), Code="StateOnlyFunded", Description="State-only funded insurance", Definition="State-only funded insurance coverage.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("3d100bcf-16cd-4b95-801f-9054a0df2999"), Code="SSI", Description="Supplemental security income", Definition="Supplemental security income insurance coverage.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("75d4ded5-85f3-47ed-b406-450a40feeca5"), Code="Military", Description="Military medical", Definition="Military medical insurance coverage.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("4901a06e-c807-4174-9fd5-a15294cc11d1"), Code="Veteran", Description="Veteran's medical", Definition="Veteran's medical insurance coverage.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("90415cc8-aa1f-48e3-97ed-d6f010756d1e"), Code="None", Description="None", Definition="None insurance coverage.", SortOrder=Convert.ToDecimal("20.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("29cc7bc6-9bdb-4c8c-a0ae-f0e0723e9de5"), Code="Other", Description="Other", Definition="Other insurance coverage.", SortOrder=Convert.ToDecimal("21.00") },
         };
 
         /// <summary>
         /// The RefHealthInsuranceCoverage Pick List
          /// </summary>
-        public static List<RefHealthInsuranceCoverage> RefHealthInsuranceCoveragePickList = new List<RefHealthInsuranceCoverage> =
+        public static List<RefHealthInsuranceCoverage> RefHealthInsuranceCoveragePickList = new List<RefHealthInsuranceCoverage>
         {
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("feee8d0c-2d18-4647-835d-4f66b89907cd"), Code="Non-workplace or personal insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("98a4977f-5ad2-4255-8f5a-c86b8b4369bf"), Code="Workplace insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("7c890378-69a6-4315-9223-fc248d08f743"), Code="Medicaid insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("15d1e4cf-801f-42aa-9002-a115eba3d53a"), Code="Children's health insurance program.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("f8c8b837-dc53-4695-b62f-df5e613eb318"), Code="State-only funded insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("2dfc50a5-76ac-484a-a2e5-ddb83bbe82ec"), Code="Supplemental security income insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("fb07b5b5-5413-4139-888f-b41c543e26bc"), Code="Military medical insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("f2339607-1b0b-4613-8024-72c2ee026a54"), Code="Veteran's medical insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("697cfb71-32b2-4919-aadc-8ef2cdc73b0c"), Code="None insurance coverage.", SortOrder=0 },
-            new RefHealthInsuranceCoverage { Id=Guid.Parse("1686d8dd-43d8-442a-89b8-a0bf4f875799"), Code="Other insurance coverage.", SortOrder=0 },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("97ce9a72-3cdb-4492-b0d1-64bf58238c81"), Code="NonWorkplace", Description="Non-workplace or personal", SortOrder=Convert.ToDecimal("1.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("0bef7eaa-ced0-4f3a-b476-779b21db2279"), Code="Workplace", Description="Workplace", SortOrder=Convert.ToDecimal("2.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("e9568c27-25c0-4cb0-93f0-2c606c1bd2a1"), Code="Medicaid", Description="Medicaid", SortOrder=Convert.ToDecimal("3.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("59372ab6-dad8-40e0-a7d4-743a45aa3569"), Code="CHIP", Description="Children's health insurance program", SortOrder=Convert.ToDecimal("4.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("0ba8425e-e1d8-423f-8ac4-7125cfa7ae66"), Code="StateOnlyFunded", Description="State-only funded insurance", SortOrder=Convert.ToDecimal("5.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("3d100bcf-16cd-4b95-801f-9054a0df2999"), Code="SSI", Description="Supplemental security income", SortOrder=Convert.ToDecimal("6.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("75d4ded5-85f3-47ed-b406-450a40feeca5"), Code="Military", Description="Military medical", SortOrder=Convert.ToDecimal("8.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("4901a06e-c807-4174-9fd5-a15294cc11d1"), Code="Veteran", Description="Veteran's medical", SortOrder=Convert.ToDecimal("10.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("90415cc8-aa1f-48e3-97ed-d6f010756d1e"), Code="None", Description="None", SortOrder=Convert.ToDecimal("20.00") },
+            new RefHealthInsuranceCoverage { Id=Guid.Parse("29cc7bc6-9bdb-4c8c-a0ae-f0e0723e9de5"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("21.00") },
        };
    }
 }

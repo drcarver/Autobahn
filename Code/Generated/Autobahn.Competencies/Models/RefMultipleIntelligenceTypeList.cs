@@ -15,31 +15,31 @@ namespace Autobahn.Competencies.Models
         /// <summary>
         /// The complete <see cref="RefMultipleIntelligenceType"> List
          /// </summary>
-        public static List<RefMultipleIntelligenceType> RefMultipleIntelligenceTypeList = new List<RefMultipleIntelligenceType> =
+        public static List<RefMultipleIntelligenceType> RefMultipleIntelligenceTypeList = new List<RefMultipleIntelligenceType>
         {
-            new RefMultipleIntelligenceType { Id=Guid.Parse("ddbd1c97-a1c0-4a4f-97d4-d0670dd1734c"), Code="The learning standard item or competency fits into the Linguistic intelligence modality. ", Description="Linguistic", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("bbe829a1-604d-4900-a776-4215002267b3"), Code="The learning standard item or competency fits into the Logic-mathematical intelligence modality.", Description="Logic-mathematical", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("9e79c891-ecdd-4fb3-81ba-7547bbb46107"), Code="The learning standard item or competency fits into the Musical intelligence modality.", Description="Musical", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("b00e306f-5d07-49b7-9080-74a6e0749188"), Code="The learning standard item or competency fits into the Spatial intelligence modality.", Description="Spatial", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("ae09dd01-dac0-4466-94e8-c6fcb89e28c3"), Code="The learning standard item or competency fits into the Bodily/kinesthetic intelligence modality.", Description="BodilyKinesthetic", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("9b99a357-003f-4ea9-9677-c9ca27cff851"), Code="The learning standard item or competency fits into the Interpersonal intelligence modality.", Description="Interpersonal", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("433747c5-9954-4e92-a79e-adf5c2b790b8"), Code="The learning standard item or competency fits into the Intrapersonal intelligence modality.", Description="Intrapersonal", Definition="", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("aefbcd75-384b-42c5-b42f-73ee3e6e4e83"), Code="The learning standard item or competency fits into the Naturalistic intelligence modality.", Description="Naturalistic", Definition="", SortOrder=0 },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("72ab09a1-077a-4e9c-8906-6740c640fcd5"), Code="Linguistic", Description="Linguistic", Definition="The learning standard item or competency fits into the Linguistic intelligence modality. ", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("0d394461-b3b4-4cd6-9e68-4bab068b501a"), Code="Logic-mathematical", Description="Logic-mathematical", Definition="The learning standard item or competency fits into the Logic-mathematical intelligence modality.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("dc8a4864-c9b3-454e-bc38-8fc5cfb6cd04"), Code="Musical", Description="Musical", Definition="The learning standard item or competency fits into the Musical intelligence modality.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("1fe5518b-da07-435d-907f-8b4760236c26"), Code="Spatial", Description="Spatial", Definition="The learning standard item or competency fits into the Spatial intelligence modality.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("0f496eb8-df8f-41ff-971a-671b0af4fdaa"), Code="BodilyKinesthetic", Description="Bodily/kinesthetic", Definition="The learning standard item or competency fits into the Bodily/kinesthetic intelligence modality.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("cf89335f-78d6-4593-8354-f87257f0675c"), Code="Interpersonal", Description="Interpersonal", Definition="The learning standard item or competency fits into the Interpersonal intelligence modality.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("5eb03745-90f8-4fa6-a6b9-7ee50c5dc5dd"), Code="Intrapersonal", Description="Intrapersonal", Definition="The learning standard item or competency fits into the Intrapersonal intelligence modality.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("ba3fa47c-dab9-4dbd-b1b8-1978918895c2"), Code="Naturalistic", Description="Naturalistic", Definition="The learning standard item or competency fits into the Naturalistic intelligence modality.", SortOrder=Convert.ToDecimal("8.00") },
         };
 
         /// <summary>
         /// The RefMultipleIntelligenceType Pick List
          /// </summary>
-        public static List<RefMultipleIntelligenceType> RefMultipleIntelligenceTypePickList = new List<RefMultipleIntelligenceType> =
+        public static List<RefMultipleIntelligenceType> RefMultipleIntelligenceTypePickList = new List<RefMultipleIntelligenceType>
         {
-            new RefMultipleIntelligenceType { Id=Guid.Parse("ddbd1c97-a1c0-4a4f-97d4-d0670dd1734c"), Code="The learning standard item or competency fits into the Linguistic intelligence modality. ", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("bbe829a1-604d-4900-a776-4215002267b3"), Code="The learning standard item or competency fits into the Logic-mathematical intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("9e79c891-ecdd-4fb3-81ba-7547bbb46107"), Code="The learning standard item or competency fits into the Musical intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("b00e306f-5d07-49b7-9080-74a6e0749188"), Code="The learning standard item or competency fits into the Spatial intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("ae09dd01-dac0-4466-94e8-c6fcb89e28c3"), Code="The learning standard item or competency fits into the Bodily/kinesthetic intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("9b99a357-003f-4ea9-9677-c9ca27cff851"), Code="The learning standard item or competency fits into the Interpersonal intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("433747c5-9954-4e92-a79e-adf5c2b790b8"), Code="The learning standard item or competency fits into the Intrapersonal intelligence modality.", SortOrder=0 },
-            new RefMultipleIntelligenceType { Id=Guid.Parse("aefbcd75-384b-42c5-b42f-73ee3e6e4e83"), Code="The learning standard item or competency fits into the Naturalistic intelligence modality.", SortOrder=0 },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("72ab09a1-077a-4e9c-8906-6740c640fcd5"), Code="Linguistic", Description="Linguistic", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("0d394461-b3b4-4cd6-9e68-4bab068b501a"), Code="Logic-mathematical", Description="Logic-mathematical", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("dc8a4864-c9b3-454e-bc38-8fc5cfb6cd04"), Code="Musical", Description="Musical", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("1fe5518b-da07-435d-907f-8b4760236c26"), Code="Spatial", Description="Spatial", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("0f496eb8-df8f-41ff-971a-671b0af4fdaa"), Code="BodilyKinesthetic", Description="Bodily/kinesthetic", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("cf89335f-78d6-4593-8354-f87257f0675c"), Code="Interpersonal", Description="Interpersonal", SortOrder=Convert.ToDecimal("6.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("5eb03745-90f8-4fa6-a6b9-7ee50c5dc5dd"), Code="Intrapersonal", Description="Intrapersonal", SortOrder=Convert.ToDecimal("7.00") },
+            new RefMultipleIntelligenceType { Id=Guid.Parse("ba3fa47c-dab9-4dbd-b1b8-1978918895c2"), Code="Naturalistic", Description="Naturalistic", SortOrder=Convert.ToDecimal("8.00") },
        };
    }
 }

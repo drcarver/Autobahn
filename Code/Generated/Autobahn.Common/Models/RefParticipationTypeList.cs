@@ -15,41 +15,41 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefParticipationType"> List
          /// </summary>
-        public static List<RefParticipationType> RefParticipationTypeList = new List<RefParticipationType> =
+        public static List<RefParticipationType> RefParticipationTypeList = new List<RefParticipationType>
         {
-            new RefParticipationType { Id=Guid.Parse("ca509c3c-30dd-4581-bc89-692c822ea264"), Code="GEDPreparationProgramParticipation", Description="GED Preparation Program Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("84adb87f-eb29-4fde-84a6-2f6587e5c5d3"), Code="GiftedandTalented", Description="Gifted and Talented", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("f4c98c6e-82bc-4dcc-b4b7-8dc269149c6a"), Code="HomelessServiced", Description="Homeless Serviced", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("d13c281b-e8a4-4efe-9158-6a882854348c"), Code="MEP Participation ", Description="Migrant Education Program Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("7d8b01e0-aea0-443b-88b5-f7ac33282a2c"), Code="NeglectedorDelinquent", Description="Neglected or Delinquent", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("f7cacf20-8821-4e77-878a-a272719f8e8f"), Code="Section504", Description="Section 504", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("d97ba6dc-c94f-4b39-b08b-ab9c2623909e"), Code="TitleIIIImmigrantParticipation", Description="Title III Immigrant Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("98be496b-d20b-4908-b486-520ae7e58fcd"), Code="TitleISchoolwideProgramParticipation", Description="Title I Schoolwide Program Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("e315151a-e1f9-4916-80e5-6127eb294942"), Code="TitleITargetedAssistanceParticipation", Description="Title I Targeted Assistance Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("7c585046-622a-4fb8-97a6-bd1c3efff987"), Code="Title III LEP Participation ", Description="Title III English Learner Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("8303675e-2396-4391-8324-1066cd030a26"), Code="KindergartenProgramParticipation", Description="Kindergarten Program Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("60a01c5f-6844-42e0-8061-cdf7f41455d3"), Code="CareerPathwaysProgramParticipation", Description="Career Pathways Program Participation", Definition="", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("4d3d8f7b-c68c-423d-a536-aeb9c2eef007"), Code="CorrectionalEducationReentryServicesParticipation", Description="Correctional Education Reentry Services Participation", Definition="", SortOrder=0 },
+            new RefParticipationType { Id=Guid.Parse("28e9dd49-8ed2-4962-9e7a-99e78d9c728c"), Code="GED Preparation Program Participation", Description="", Definition="GEDPreparationProgramParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("c2b8d79f-10c2-4b63-b618-9a587eddb23e"), Code="Gifted and Talented", Description="", Definition="GiftedandTalented", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("3ed65710-f529-48a4-9dec-5f1c5f1f056d"), Code="Homeless Serviced", Description="", Definition="HomelessServiced", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("b002fb35-e7b3-4b6e-84e6-cef776bd1717"), Code="Migrant Education Program Participation", Description="", Definition="MEP Participation ", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("797155c0-a651-4298-a1f7-2e48ca2df48c"), Code="Neglected or Delinquent", Description="", Definition="NeglectedorDelinquent", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("47841941-1480-4a22-8759-d46d4ac12b80"), Code="Section 504", Description="", Definition="Section504", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("600b6aed-a811-47ec-821d-7c4d6847d617"), Code="Title III Immigrant Participation", Description="", Definition="TitleIIIImmigrantParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("8766e0ae-86ef-4681-bf1d-4c06435d0430"), Code="Title I Schoolwide Program Participation", Description="", Definition="TitleISchoolwideProgramParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("57b61214-7913-455a-8135-bdb5975c1bf9"), Code="Title I Targeted Assistance Participation", Description="", Definition="TitleITargetedAssistanceParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("3d9c76ec-142c-4541-a319-b349d52b47d5"), Code="Title III English Learner Participation", Description="", Definition="Title III LEP Participation ", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("a35ca4f6-ce86-4eef-8559-b08ac1e5eb21"), Code="Kindergarten Program Participation", Description="", Definition="KindergartenProgramParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("42881527-d297-47fb-a9e2-4151d236493c"), Code="Career Pathways Program Participation", Description="", Definition="CareerPathwaysProgramParticipation", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("b9e1d41f-37df-4124-8a34-106f87985825"), Code="Correctional Education Reentry Services Participation", Description="", Definition="CorrectionalEducationReentryServicesParticipation", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefParticipationType Pick List
          /// </summary>
-        public static List<RefParticipationType> RefParticipationTypePickList = new List<RefParticipationType> =
+        public static List<RefParticipationType> RefParticipationTypePickList = new List<RefParticipationType>
         {
-            new RefParticipationType { Id=Guid.Parse("ca509c3c-30dd-4581-bc89-692c822ea264"), Code="GEDPreparationProgramParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("84adb87f-eb29-4fde-84a6-2f6587e5c5d3"), Code="GiftedandTalented", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("f4c98c6e-82bc-4dcc-b4b7-8dc269149c6a"), Code="HomelessServiced", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("d13c281b-e8a4-4efe-9158-6a882854348c"), Code="MEP Participation ", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("7d8b01e0-aea0-443b-88b5-f7ac33282a2c"), Code="NeglectedorDelinquent", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("f7cacf20-8821-4e77-878a-a272719f8e8f"), Code="Section504", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("d97ba6dc-c94f-4b39-b08b-ab9c2623909e"), Code="TitleIIIImmigrantParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("98be496b-d20b-4908-b486-520ae7e58fcd"), Code="TitleISchoolwideProgramParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("e315151a-e1f9-4916-80e5-6127eb294942"), Code="TitleITargetedAssistanceParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("7c585046-622a-4fb8-97a6-bd1c3efff987"), Code="Title III LEP Participation ", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("8303675e-2396-4391-8324-1066cd030a26"), Code="KindergartenProgramParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("60a01c5f-6844-42e0-8061-cdf7f41455d3"), Code="CareerPathwaysProgramParticipation", SortOrder=0 },
-            new RefParticipationType { Id=Guid.Parse("4d3d8f7b-c68c-423d-a536-aeb9c2eef007"), Code="CorrectionalEducationReentryServicesParticipation", SortOrder=0 },
+            new RefParticipationType { Id=Guid.Parse("28e9dd49-8ed2-4962-9e7a-99e78d9c728c"), Code="GED Preparation Program Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("c2b8d79f-10c2-4b63-b618-9a587eddb23e"), Code="Gifted and Talented", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("3ed65710-f529-48a4-9dec-5f1c5f1f056d"), Code="Homeless Serviced", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("b002fb35-e7b3-4b6e-84e6-cef776bd1717"), Code="Migrant Education Program Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("797155c0-a651-4298-a1f7-2e48ca2df48c"), Code="Neglected or Delinquent", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("47841941-1480-4a22-8759-d46d4ac12b80"), Code="Section 504", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("600b6aed-a811-47ec-821d-7c4d6847d617"), Code="Title III Immigrant Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("8766e0ae-86ef-4681-bf1d-4c06435d0430"), Code="Title I Schoolwide Program Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("57b61214-7913-455a-8135-bdb5975c1bf9"), Code="Title I Targeted Assistance Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("3d9c76ec-142c-4541-a319-b349d52b47d5"), Code="Title III English Learner Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("a35ca4f6-ce86-4eef-8559-b08ac1e5eb21"), Code="Kindergarten Program Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("42881527-d297-47fb-a9e2-4151d236493c"), Code="Career Pathways Program Participation", Description="", SortOrder=Convert.ToDecimal("") },
+            new RefParticipationType { Id=Guid.Parse("b9e1d41f-37df-4124-8a34-106f87985825"), Code="Correctional Education Reentry Services Participation", Description="", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

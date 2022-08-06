@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCourseRepeatCode"> List
          /// </summary>
-        public static List<RefCourseRepeatCode> RefCourseRepeatCodeList = new List<RefCourseRepeatCode> =
+        public static List<RefCourseRepeatCode> RefCourseRepeatCodeList = new List<RefCourseRepeatCode>
         {
-            new RefCourseRepeatCode { Id=Guid.Parse("fffc7c7f-8089-4d41-a25d-87dce1422665"), Code="The student repeated the course and it has been counted in grade point average. ", Description="RepeatCounted", Definition="", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("3e1da173-c6a0-4d8c-8aa8-4081a0b673c4"), Code="The student repeated the course and it has not been counted in grade point average. ", Description="RepeatNotCounted", Definition="", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("33afefda-1725-4753-87ad-31b3cf381c13"), Code="Replacement course counted.", Description="ReplacementCounted", Definition="", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("0d5276eb-70f3-4c6f-b226-8051b2cd423b"), Code="Replacement course not counted.", Description="ReplacedNotCounted", Definition="", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("506a123c-daa4-4d02-953b-b7ab39392946"), Code="The student repeated the course and it has been counted by another institution.", Description="RepeatOtherInstitution", Definition="", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("2fcd68e2-e533-4789-8f75-ff0ab77bd212"), Code="Other, the course is not counted in GPA (e.g., used for academic forgiveness or clemency).", Description="NotCountedOther", Definition="", SortOrder=0 },
+            new RefCourseRepeatCode { Id=Guid.Parse("73bf1385-3407-445c-a5d9-64c9dd2b6d00"), Code="RepeatCounted", Description="Repeated, counted in grade point average", Definition="The student repeated the course and it has been counted in grade point average. ", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("b9c81dd1-99ab-49ca-80d5-449d7f8fd612"), Code="RepeatNotCounted", Description="Repeated, not counted in grade point average", Definition="The student repeated the course and it has not been counted in grade point average. ", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("cb995d93-833c-4c3f-abb0-2d379c040ff6"), Code="ReplacementCounted", Description="Replacement counted", Definition="Replacement course counted.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("c7a357a8-9eec-470e-adab-a3bc1811f65a"), Code="ReplacedNotCounted", Description="Replacement not counted", Definition="Replacement course not counted.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("3301bde3-2811-410c-b6d6-57ff8174ebb2"), Code="RepeatOtherInstitution", Description="Repeated, other institution", Definition="The student repeated the course and it has been counted by another institution.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("76b74bc1-aba4-446f-8498-1c8aa735d634"), Code="NotCountedOther", Description="Other, not counted in GPA (e.g., used for academic forgiveness or clemency).", Definition="Other, the course is not counted in GPA (e.g., used for academic forgiveness or clemency).", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefCourseRepeatCode Pick List
          /// </summary>
-        public static List<RefCourseRepeatCode> RefCourseRepeatCodePickList = new List<RefCourseRepeatCode> =
+        public static List<RefCourseRepeatCode> RefCourseRepeatCodePickList = new List<RefCourseRepeatCode>
         {
-            new RefCourseRepeatCode { Id=Guid.Parse("fffc7c7f-8089-4d41-a25d-87dce1422665"), Code="The student repeated the course and it has been counted in grade point average. ", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("3e1da173-c6a0-4d8c-8aa8-4081a0b673c4"), Code="The student repeated the course and it has not been counted in grade point average. ", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("33afefda-1725-4753-87ad-31b3cf381c13"), Code="Replacement course counted.", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("0d5276eb-70f3-4c6f-b226-8051b2cd423b"), Code="Replacement course not counted.", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("506a123c-daa4-4d02-953b-b7ab39392946"), Code="The student repeated the course and it has been counted by another institution.", SortOrder=0 },
-            new RefCourseRepeatCode { Id=Guid.Parse("2fcd68e2-e533-4789-8f75-ff0ab77bd212"), Code="Other, the course is not counted in GPA (e.g., used for academic forgiveness or clemency).", SortOrder=0 },
+            new RefCourseRepeatCode { Id=Guid.Parse("73bf1385-3407-445c-a5d9-64c9dd2b6d00"), Code="RepeatCounted", Description="Repeated, counted in grade point average", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("b9c81dd1-99ab-49ca-80d5-449d7f8fd612"), Code="RepeatNotCounted", Description="Repeated, not counted in grade point average", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("cb995d93-833c-4c3f-abb0-2d379c040ff6"), Code="ReplacementCounted", Description="Replacement counted", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("c7a357a8-9eec-470e-adab-a3bc1811f65a"), Code="ReplacedNotCounted", Description="Replacement not counted", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("3301bde3-2811-410c-b6d6-57ff8174ebb2"), Code="RepeatOtherInstitution", Description="Repeated, other institution", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseRepeatCode { Id=Guid.Parse("76b74bc1-aba4-446f-8498-1c8aa735d634"), Code="NotCountedOther", Description="Other, not counted in GPA (e.g., used for academic forgiveness or clemency).", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

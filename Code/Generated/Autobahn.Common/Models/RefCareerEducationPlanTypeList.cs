@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCareerEducationPlanType"> List
          /// </summary>
-        public static List<RefCareerEducationPlanType> RefCareerEducationPlanTypeList = new List<RefCareerEducationPlanType> =
+        public static List<RefCareerEducationPlanType> RefCareerEducationPlanTypeList = new List<RefCareerEducationPlanType>
         {
-            new RefCareerEducationPlanType { Id=Guid.Parse("bc5a5580-4d21-40a9-8db3-5a13e9faeac4"), Code="An individualized guidance and counseling plan for education.", Description="Education", Definition="", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("d466aae1-a3fe-439f-a9c8-9656be8c5fdc"), Code="An individualized guidance and counseling plan for career.", Description="Career", Definition="", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("f82751cf-386a-45fd-a1da-29679dd33ebd"), Code="An individualized guidance and counseling plan for both career and education.", Description="Both", Definition="", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("56b0b58b-a7f0-4e11-bc81-424bdd862fca"), Code="A kind of individualized guidance and counseling plan other than an education plan and a career plan.", Description="Other", Definition="", SortOrder=0 },
+            new RefCareerEducationPlanType { Id=Guid.Parse("6fac87d5-4bb5-4d39-82b8-58dfbd6b0e97"), Code="Education", Description="Education plan", Definition="An individualized guidance and counseling plan for education.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("d3a80253-c42e-4c20-baee-c73d3437ff12"), Code="Career", Description="Career plan", Definition="An individualized guidance and counseling plan for career.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("cd15b356-a2d3-430d-b1b5-d4eb72bc9725"), Code="Both", Description="Both education and career plan", Definition="An individualized guidance and counseling plan for both career and education.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("e33109e3-293a-4164-a923-0a9ce0b593a4"), Code="Other", Description="Other", Definition="A kind of individualized guidance and counseling plan other than an education plan and a career plan.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
         /// The RefCareerEducationPlanType Pick List
          /// </summary>
-        public static List<RefCareerEducationPlanType> RefCareerEducationPlanTypePickList = new List<RefCareerEducationPlanType> =
+        public static List<RefCareerEducationPlanType> RefCareerEducationPlanTypePickList = new List<RefCareerEducationPlanType>
         {
-            new RefCareerEducationPlanType { Id=Guid.Parse("bc5a5580-4d21-40a9-8db3-5a13e9faeac4"), Code="An individualized guidance and counseling plan for education.", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("d466aae1-a3fe-439f-a9c8-9656be8c5fdc"), Code="An individualized guidance and counseling plan for career.", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("f82751cf-386a-45fd-a1da-29679dd33ebd"), Code="An individualized guidance and counseling plan for both career and education.", SortOrder=0 },
-            new RefCareerEducationPlanType { Id=Guid.Parse("56b0b58b-a7f0-4e11-bc81-424bdd862fca"), Code="A kind of individualized guidance and counseling plan other than an education plan and a career plan.", SortOrder=0 },
+            new RefCareerEducationPlanType { Id=Guid.Parse("6fac87d5-4bb5-4d39-82b8-58dfbd6b0e97"), Code="Education", Description="Education plan", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("d3a80253-c42e-4c20-baee-c73d3437ff12"), Code="Career", Description="Career plan", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("cd15b356-a2d3-430d-b1b5-d4eb72bc9725"), Code="Both", Description="Both education and career plan", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCareerEducationPlanType { Id=Guid.Parse("e33109e3-293a-4164-a923-0a9ce0b593a4"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

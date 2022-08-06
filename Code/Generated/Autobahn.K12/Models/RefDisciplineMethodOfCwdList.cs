@@ -15,19 +15,19 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefDisciplineMethodOfCwd"> List
          /// </summary>
-        public static List<RefDisciplineMethodOfCwd> RefDisciplineMethodOfCwdList = new List<RefDisciplineMethodOfCwd> =
+        public static List<RefDisciplineMethodOfCwd> RefDisciplineMethodOfCwdList = new List<RefDisciplineMethodOfCwd>
         {
-            new RefDisciplineMethodOfCwd { Id=Guid.Parse("4a267e3a-4d38-4c33-8f13-a12a30dbfa9c"), Code="Out of School Suspensions/Expulsions - removal from regular school for disciplinary purposes temporarily, for the remainder of the school year, or longer according to LEA policy.", Description="OutOfSchool", Definition="", SortOrder=0 },
-            new RefDisciplineMethodOfCwd { Id=Guid.Parse("c042696e-6bdf-4e60-b77b-8d6256a90ecd"), Code="In School Suspensions - temporary removal from regular classroom(s) for disciplinary purposes but still under supervision of school personnel.", Description="InSchool", Definition="", SortOrder=0 },
+            new RefDisciplineMethodOfCwd { Id=Guid.Parse("1187b725-03ec-4fc4-99fb-8786b5781e01"), Code="OutOfSchool", Description="Out of School Suspensions/Expulsions", Definition="Out of School Suspensions/Expulsions - removal from regular school for disciplinary purposes temporarily, for the remainder of the school year, or longer according to LEA policy.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDisciplineMethodOfCwd { Id=Guid.Parse("3f8278ac-3033-4de6-8049-7ce17c5e7dad"), Code="InSchool", Description="In School Suspensions", Definition="In School Suspensions - temporary removal from regular classroom(s) for disciplinary purposes but still under supervision of school personnel.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefDisciplineMethodOfCwd Pick List
          /// </summary>
-        public static List<RefDisciplineMethodOfCwd> RefDisciplineMethodOfCwdPickList = new List<RefDisciplineMethodOfCwd> =
+        public static List<RefDisciplineMethodOfCwd> RefDisciplineMethodOfCwdPickList = new List<RefDisciplineMethodOfCwd>
         {
-            new RefDisciplineMethodOfCwd { Id=Guid.Parse("4a267e3a-4d38-4c33-8f13-a12a30dbfa9c"), Code="Out of School Suspensions/Expulsions - removal from regular school for disciplinary purposes temporarily, for the remainder of the school year, or longer according to LEA policy.", SortOrder=0 },
-            new RefDisciplineMethodOfCwd { Id=Guid.Parse("c042696e-6bdf-4e60-b77b-8d6256a90ecd"), Code="In School Suspensions - temporary removal from regular classroom(s) for disciplinary purposes but still under supervision of school personnel.", SortOrder=0 },
+            new RefDisciplineMethodOfCwd { Id=Guid.Parse("1187b725-03ec-4fc4-99fb-8786b5781e01"), Code="OutOfSchool", Description="Out of School Suspensions/Expulsions", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDisciplineMethodOfCwd { Id=Guid.Parse("3f8278ac-3033-4de6-8049-7ce17c5e7dad"), Code="InSchool", Description="In School Suspensions", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

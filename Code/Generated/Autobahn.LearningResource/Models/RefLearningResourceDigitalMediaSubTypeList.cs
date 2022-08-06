@@ -15,14 +15,14 @@ namespace Autobahn.LearningResource.Models
         /// <summary>
         /// The complete <see cref="RefLearningResourceDigitalMediaSubType"> List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypeList = new List<RefLearningResourceDigitalMediaSubType> =
+        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypeList = new List<RefLearningResourceDigitalMediaSubType>
         {
         };
 
         /// <summary>
         /// The RefLearningResourceDigitalMediaSubType Pick List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypePickList = new List<RefLearningResourceDigitalMediaSubType> =
+        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypePickList = new List<RefLearningResourceDigitalMediaSubType>
         {
        };
    }

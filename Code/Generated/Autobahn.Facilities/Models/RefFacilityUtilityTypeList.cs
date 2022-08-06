@@ -15,35 +15,35 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefFacilityUtilityType"> List
          /// </summary>
-        public static List<RefFacilityUtilityType> RefFacilityUtilityTypeList = new List<RefFacilityUtilityType> =
+        public static List<RefFacilityUtilityType> RefFacilityUtilityTypeList = new List<RefFacilityUtilityType>
         {
-            new RefFacilityUtilityType { Id=Guid.Parse("7c20a04c-5faa-4a4b-b1f8-b0f555b28c85"), Code="Electricity is specified as the type of utility used in the operation of a facility.", Description="02840", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("8162de77-a0a9-4ba9-9958-c11538f30383"), Code="Internet service is specified as the type of utility used in the operation of a facility.", Description="02990", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("ef00b258-260f-4b3f-8a4e-653507200fc9"), Code="Natural gas is specified as the type of utility used in the operation of a facility.", Description="02841", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("6d4e78ae-de3c-44ee-b030-d55f93e7fafe"), Code="Oil is specified as the type of utility used in the operation of a facility.", Description="02842", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("4b4ccfa7-2f92-4d6e-b230-0a9abfe616f0"), Code="Recycling is specified as the type of utility used in the operation of a facility.", Description="13685", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("07e0f23f-6c9a-465e-a465-29a3c02697a7"), Code="Sewer is specified as the type of utility used in the operation of a facility.", Description="02844", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("d13416dd-92ee-430a-9db2-b236bccc6759"), Code="Telephone is specified as the type of utility used in the operation of a facility.", Description="02845", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("c644b596-2170-490b-b387-f1bf97722bd2"), Code="Waste is specified as the type of utility used in the operation of a facility.", Description="13686", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("ef821ceb-f7dc-4630-8cb9-b0216b0b3dc4"), Code="Water is specified as the type of utility used in the operation of a facility.", Description="02843", Definition="", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("2a598f8f-428c-4dd0-a788-d2e182b7a3fb"), Code="Other is specified as the type of utility used in the operation of a facility.", Description="09999", Definition="", SortOrder=0 },
+            new RefFacilityUtilityType { Id=Guid.Parse("f79ad095-607b-4baa-a8d2-dc6a6b6d2bc6"), Code="02840", Description="Electricity", Definition="Electricity is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("3c066eb0-eac3-4371-9046-9fb21e541f00"), Code="02990", Description="Internet service", Definition="Internet service is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("44e945ad-0e3a-46d2-a1a3-a8b786ecc812"), Code="02841", Description="Natural gas", Definition="Natural gas is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("2d0b784f-7e6b-4f7f-9948-eaf24f663534"), Code="02842", Description="Oil", Definition="Oil is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("c47b8a71-e62f-438e-a183-dcc147e8535d"), Code="13685", Description="Recycling", Definition="Recycling is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("09f5b874-d4fe-4049-ae90-2630f9929c23"), Code="02844", Description="Sewer", Definition="Sewer is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("b70b6953-19ab-481f-a70b-129b7994a3e5"), Code="02845", Description="Telephone", Definition="Telephone is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("e4585006-3e98-4d21-917b-7933ba10bb42"), Code="13686", Description="Waste", Definition="Waste is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("71f5f13d-7c82-4e54-b944-06cd66b9ab34"), Code="02843", Description="Water", Definition="Water is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("7347064e-5b7d-451c-936a-23b9f9104c93"), Code="09999", Description="Other", Definition="Other is specified as the type of utility used in the operation of a facility.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefFacilityUtilityType Pick List
          /// </summary>
-        public static List<RefFacilityUtilityType> RefFacilityUtilityTypePickList = new List<RefFacilityUtilityType> =
+        public static List<RefFacilityUtilityType> RefFacilityUtilityTypePickList = new List<RefFacilityUtilityType>
         {
-            new RefFacilityUtilityType { Id=Guid.Parse("7c20a04c-5faa-4a4b-b1f8-b0f555b28c85"), Code="Electricity is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("8162de77-a0a9-4ba9-9958-c11538f30383"), Code="Internet service is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("ef00b258-260f-4b3f-8a4e-653507200fc9"), Code="Natural gas is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("6d4e78ae-de3c-44ee-b030-d55f93e7fafe"), Code="Oil is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("4b4ccfa7-2f92-4d6e-b230-0a9abfe616f0"), Code="Recycling is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("07e0f23f-6c9a-465e-a465-29a3c02697a7"), Code="Sewer is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("d13416dd-92ee-430a-9db2-b236bccc6759"), Code="Telephone is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("c644b596-2170-490b-b387-f1bf97722bd2"), Code="Waste is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("ef821ceb-f7dc-4630-8cb9-b0216b0b3dc4"), Code="Water is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
-            new RefFacilityUtilityType { Id=Guid.Parse("2a598f8f-428c-4dd0-a788-d2e182b7a3fb"), Code="Other is specified as the type of utility used in the operation of a facility.", SortOrder=0 },
+            new RefFacilityUtilityType { Id=Guid.Parse("f79ad095-607b-4baa-a8d2-dc6a6b6d2bc6"), Code="02840", Description="Electricity", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("3c066eb0-eac3-4371-9046-9fb21e541f00"), Code="02990", Description="Internet service", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("44e945ad-0e3a-46d2-a1a3-a8b786ecc812"), Code="02841", Description="Natural gas", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("2d0b784f-7e6b-4f7f-9948-eaf24f663534"), Code="02842", Description="Oil", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("c47b8a71-e62f-438e-a183-dcc147e8535d"), Code="13685", Description="Recycling", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("09f5b874-d4fe-4049-ae90-2630f9929c23"), Code="02844", Description="Sewer", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("b70b6953-19ab-481f-a70b-129b7994a3e5"), Code="02845", Description="Telephone", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("e4585006-3e98-4d21-917b-7933ba10bb42"), Code="13686", Description="Waste", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("71f5f13d-7c82-4e54-b944-06cd66b9ab34"), Code="02843", Description="Water", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFacilityUtilityType { Id=Guid.Parse("7347064e-5b7d-451c-936a-23b9f9104c93"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

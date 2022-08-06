@@ -15,23 +15,23 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefOutcomeTimePoint"> List
          /// </summary>
-        public static List<RefOutcomeTimePoint> RefOutcomeTimePointList = new List<RefOutcomeTimePoint> =
+        public static List<RefOutcomeTimePoint> RefOutcomeTimePointList = new List<RefOutcomeTimePoint>
         {
-            new RefOutcomeTimePoint { Id=Guid.Parse("481d89ae-56de-4888-a32c-78d2b5bad795"), Code="Baseline - at entry is the point in time for which the result is used for an outcome measure.", Description="Baseline", Definition="", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("38d9bc9d-a907-413a-997a-338e79c91809"), Code="At exit is the point in time for which the result is used for an outcome measure.", Description="AtExit", Definition="", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("2da1c68e-0f09-4f97-9084-9085aebca9bb"), Code="Not applicable is the point in time for which the result is used for an outcome measure.", Description="NA", Definition="", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("c485090e-09cb-40ff-8ac2-9441bf5a3598"), Code="Other is the point in time for which the result is used for an outcome measure.", Description="Other", Definition="", SortOrder=0 },
+            new RefOutcomeTimePoint { Id=Guid.Parse("524bb678-6b8e-4c0a-a478-54a9197167eb"), Code="Baseline", Description="Baseline - at entry", Definition="Baseline - at entry is the point in time for which the result is used for an outcome measure.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("540f391a-2ab1-445e-b9d2-04f5cde25c56"), Code="AtExit", Description="At exit", Definition="At exit is the point in time for which the result is used for an outcome measure.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("3891db92-c182-4a89-92f8-4ee3fee7ae71"), Code="NA", Description="Not applicable", Definition="Not applicable is the point in time for which the result is used for an outcome measure.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("5ef96643-1af8-42f5-af16-5028936dbccd"), Code="Other", Description="Other", Definition="Other is the point in time for which the result is used for an outcome measure.", SortOrder=Convert.ToDecimal("8.00") },
         };
 
         /// <summary>
         /// The RefOutcomeTimePoint Pick List
          /// </summary>
-        public static List<RefOutcomeTimePoint> RefOutcomeTimePointPickList = new List<RefOutcomeTimePoint> =
+        public static List<RefOutcomeTimePoint> RefOutcomeTimePointPickList = new List<RefOutcomeTimePoint>
         {
-            new RefOutcomeTimePoint { Id=Guid.Parse("481d89ae-56de-4888-a32c-78d2b5bad795"), Code="Baseline - at entry is the point in time for which the result is used for an outcome measure.", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("38d9bc9d-a907-413a-997a-338e79c91809"), Code="At exit is the point in time for which the result is used for an outcome measure.", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("2da1c68e-0f09-4f97-9084-9085aebca9bb"), Code="Not applicable is the point in time for which the result is used for an outcome measure.", SortOrder=0 },
-            new RefOutcomeTimePoint { Id=Guid.Parse("c485090e-09cb-40ff-8ac2-9441bf5a3598"), Code="Other is the point in time for which the result is used for an outcome measure.", SortOrder=0 },
+            new RefOutcomeTimePoint { Id=Guid.Parse("524bb678-6b8e-4c0a-a478-54a9197167eb"), Code="Baseline", Description="Baseline - at entry", SortOrder=Convert.ToDecimal("2.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("540f391a-2ab1-445e-b9d2-04f5cde25c56"), Code="AtExit", Description="At exit", SortOrder=Convert.ToDecimal("4.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("3891db92-c182-4a89-92f8-4ee3fee7ae71"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("6.00") },
+            new RefOutcomeTimePoint { Id=Guid.Parse("5ef96643-1af8-42f5-af16-5028936dbccd"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("8.00") },
        };
    }
 }

@@ -15,33 +15,33 @@ namespace Autobahn.LearningResource.Models
         /// <summary>
         /// The complete <see cref="RefLearningResourceDigitalMediaType"> List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaType> RefLearningResourceDigitalMediaTypeList = new List<RefLearningResourceDigitalMediaType> =
+        public static List<RefLearningResourceDigitalMediaType> RefLearningResourceDigitalMediaTypeList = new List<RefLearningResourceDigitalMediaType>
         {
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("306a6af8-d936-4d3a-b36c-717b0104bdf5"), Code="The AINA registered Media Type of the digital resource is: Application", Description="application", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("e063e5b1-e195-4824-b976-1176dd71e907"), Code="The AINA registered Media Type of the digital resource is: Audio", Description="audio", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("9bdc3c16-f680-448a-b1a4-b4aa09cc4a09"), Code="The AINA registered Media Type of the digital resource is: Example", Description="example", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("aa2f66a5-9031-4fcf-9029-8bbfce84fbb1"), Code="The AINA registered Media Type of the digital resource is: Image", Description="image", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("76ea8bc4-0f13-45c1-a93e-f89328aa7630"), Code="The AINA registered Media Type of the digital resource is: Message", Description="message", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("7515c9c5-c4e6-454b-9b7d-54f74b0bc969"), Code="The AINA registered Media Type of the digital resource is: Model", Description="model", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("81cf8dad-8c72-4c16-a55e-d99cb5188f4f"), Code="The AINA registered Media Type of the digital resource is: Multipart", Description="multipart", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("19793895-965c-4ed7-9a56-66ec7c65b4b8"), Code="The AINA registered Media Type of the digital resource is: Text", Description="text", Definition="", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("c0d53263-a019-46b8-91a0-0cba2d085dba"), Code="The AINA registered Media Type of the digital resource is: Video", Description="video", Definition="", SortOrder=0 },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("18e6aa9a-d611-43b5-8373-29b87d8a8c5a"), Code="application", Description="Application", Definition="The AINA registered Media Type of the digital resource is: Application", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("89f85217-9f9f-495e-8dda-8f6c3cd56d38"), Code="audio", Description="Audio", Definition="The AINA registered Media Type of the digital resource is: Audio", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("8f65fbca-1671-41db-9d8f-6c4374686fbb"), Code="example", Description="Example", Definition="The AINA registered Media Type of the digital resource is: Example", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("8864082f-5e4e-4d5a-ae43-142aadcdd8b3"), Code="image", Description="Image", Definition="The AINA registered Media Type of the digital resource is: Image", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("f31cb00f-ab73-47a9-8881-d77697f48cac"), Code="message", Description="Message", Definition="The AINA registered Media Type of the digital resource is: Message", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("ccde000e-7343-42c7-85c6-5228b0ec7a5b"), Code="model", Description="Model", Definition="The AINA registered Media Type of the digital resource is: Model", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("e56ebecc-de9f-49e6-9a27-6f942d455adf"), Code="multipart", Description="Multipart", Definition="The AINA registered Media Type of the digital resource is: Multipart", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("b329035c-35fa-415b-99c4-f9f3c1ae998c"), Code="text", Description="Text", Definition="The AINA registered Media Type of the digital resource is: Text", SortOrder=Convert.ToDecimal("16.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("51ad32ed-fc12-4f93-91f9-9b51391b92c5"), Code="video", Description="Video", Definition="The AINA registered Media Type of the digital resource is: Video", SortOrder=Convert.ToDecimal("18.00") },
         };
 
         /// <summary>
         /// The RefLearningResourceDigitalMediaType Pick List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaType> RefLearningResourceDigitalMediaTypePickList = new List<RefLearningResourceDigitalMediaType> =
+        public static List<RefLearningResourceDigitalMediaType> RefLearningResourceDigitalMediaTypePickList = new List<RefLearningResourceDigitalMediaType>
         {
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("306a6af8-d936-4d3a-b36c-717b0104bdf5"), Code="The AINA registered Media Type of the digital resource is: Application", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("e063e5b1-e195-4824-b976-1176dd71e907"), Code="The AINA registered Media Type of the digital resource is: Audio", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("9bdc3c16-f680-448a-b1a4-b4aa09cc4a09"), Code="The AINA registered Media Type of the digital resource is: Example", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("aa2f66a5-9031-4fcf-9029-8bbfce84fbb1"), Code="The AINA registered Media Type of the digital resource is: Image", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("76ea8bc4-0f13-45c1-a93e-f89328aa7630"), Code="The AINA registered Media Type of the digital resource is: Message", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("7515c9c5-c4e6-454b-9b7d-54f74b0bc969"), Code="The AINA registered Media Type of the digital resource is: Model", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("81cf8dad-8c72-4c16-a55e-d99cb5188f4f"), Code="The AINA registered Media Type of the digital resource is: Multipart", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("19793895-965c-4ed7-9a56-66ec7c65b4b8"), Code="The AINA registered Media Type of the digital resource is: Text", SortOrder=0 },
-            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("c0d53263-a019-46b8-91a0-0cba2d085dba"), Code="The AINA registered Media Type of the digital resource is: Video", SortOrder=0 },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("18e6aa9a-d611-43b5-8373-29b87d8a8c5a"), Code="application", Description="Application", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("89f85217-9f9f-495e-8dda-8f6c3cd56d38"), Code="audio", Description="Audio", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("8f65fbca-1671-41db-9d8f-6c4374686fbb"), Code="example", Description="Example", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("8864082f-5e4e-4d5a-ae43-142aadcdd8b3"), Code="image", Description="Image", SortOrder=Convert.ToDecimal("8.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("f31cb00f-ab73-47a9-8881-d77697f48cac"), Code="message", Description="Message", SortOrder=Convert.ToDecimal("10.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("ccde000e-7343-42c7-85c6-5228b0ec7a5b"), Code="model", Description="Model", SortOrder=Convert.ToDecimal("12.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("e56ebecc-de9f-49e6-9a27-6f942d455adf"), Code="multipart", Description="Multipart", SortOrder=Convert.ToDecimal("14.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("b329035c-35fa-415b-99c4-f9f3c1ae998c"), Code="text", Description="Text", SortOrder=Convert.ToDecimal("16.00") },
+            new RefLearningResourceDigitalMediaType { Id=Guid.Parse("51ad32ed-fc12-4f93-91f9-9b51391b92c5"), Code="video", Description="Video", SortOrder=Convert.ToDecimal("18.00") },
        };
    }
 }

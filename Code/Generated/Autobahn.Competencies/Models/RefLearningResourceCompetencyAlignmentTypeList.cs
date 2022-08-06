@@ -15,29 +15,29 @@ namespace Autobahn.Competencies.Models
         /// <summary>
         /// The complete <see cref="RefLearningResourceCompetencyAlignmentType"> List
          /// </summary>
-        public static List<RefLearningResourceCompetencyAlignmentType> RefLearningResourceCompetencyAlignmentTypeList = new List<RefLearningResourceCompetencyAlignmentType> =
+        public static List<RefLearningResourceCompetencyAlignmentType> RefLearningResourceCompetencyAlignmentTypeList = new List<RefLearningResourceCompetencyAlignmentType>
         {
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("10acf8d6-007f-4ecd-afa9-1b62d33954a1"), Code="The learning resource Assesses the aligned competency.", Description="Assesses", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("b4d93f7a-5f5c-4bf6-abdf-7e6f7612a2e8"), Code="The learning resource Teaches the aligned competency.", Description="Teaches", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("66dc19b5-8f35-4c4f-999b-75c5a1e6e883"), Code="The learning resource Requires the aligned competency.", Description="Requires", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("5bb017dd-ecea-4381-bf86-58d823581742"), Code="The aligned item specifies the Text Complexity of the learning resource.", Description="TextComplexity", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("2f446f9d-a1bd-47c1-b26b-a188400f4cb4"), Code="The aligned item specifies the Reading Level of the learning resource.", Description="ReadingLevel", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("1353f04c-44b4-4ec5-b4e3-a3f4efabf5e5"), Code="The aligned item specifies the Educational Subject of the learning resource.", Description="EducationalSubject", Definition="", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("e0413c6d-5e3b-4bed-9d5e-5a6d869cedc0"), Code="The aligned item specifies the Education Level of the learning resource.", Description="EducationLevel", Definition="", SortOrder=0 },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("97598ff5-dde0-492b-a103-47d2be9ea0b7"), Code="Assesses", Description="Assesses", Definition="The learning resource Assesses the aligned competency.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("25b2b255-4235-48e2-9397-513e15f0db44"), Code="Teaches", Description="Teaches", Definition="The learning resource Teaches the aligned competency.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("f0412179-d276-4ea8-bed2-44fd19b0b4de"), Code="Requires", Description="Requires", Definition="The learning resource Requires the aligned competency.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("b5f104a3-f0d5-4482-85ab-e61086729761"), Code="TextComplexity", Description="Text Complexity", Definition="The aligned item specifies the Text Complexity of the learning resource.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("276beed0-0f6e-46bc-9916-88261b7cebdc"), Code="ReadingLevel", Description="Reading Level", Definition="The aligned item specifies the Reading Level of the learning resource.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("dd2b2d7a-5824-4904-9527-ddf8038abe78"), Code="EducationalSubject", Description="Educational Subject", Definition="The aligned item specifies the Educational Subject of the learning resource.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("a72071ee-062e-49ad-a7ea-15e7c583889a"), Code="EducationLevel", Description="Education Level", Definition="The aligned item specifies the Education Level of the learning resource.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefLearningResourceCompetencyAlignmentType Pick List
          /// </summary>
-        public static List<RefLearningResourceCompetencyAlignmentType> RefLearningResourceCompetencyAlignmentTypePickList = new List<RefLearningResourceCompetencyAlignmentType> =
+        public static List<RefLearningResourceCompetencyAlignmentType> RefLearningResourceCompetencyAlignmentTypePickList = new List<RefLearningResourceCompetencyAlignmentType>
         {
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("10acf8d6-007f-4ecd-afa9-1b62d33954a1"), Code="The learning resource Assesses the aligned competency.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("b4d93f7a-5f5c-4bf6-abdf-7e6f7612a2e8"), Code="The learning resource Teaches the aligned competency.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("66dc19b5-8f35-4c4f-999b-75c5a1e6e883"), Code="The learning resource Requires the aligned competency.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("5bb017dd-ecea-4381-bf86-58d823581742"), Code="The aligned item specifies the Text Complexity of the learning resource.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("2f446f9d-a1bd-47c1-b26b-a188400f4cb4"), Code="The aligned item specifies the Reading Level of the learning resource.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("1353f04c-44b4-4ec5-b4e3-a3f4efabf5e5"), Code="The aligned item specifies the Educational Subject of the learning resource.", SortOrder=0 },
-            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("e0413c6d-5e3b-4bed-9d5e-5a6d869cedc0"), Code="The aligned item specifies the Education Level of the learning resource.", SortOrder=0 },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("97598ff5-dde0-492b-a103-47d2be9ea0b7"), Code="Assesses", Description="Assesses", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("25b2b255-4235-48e2-9397-513e15f0db44"), Code="Teaches", Description="Teaches", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("f0412179-d276-4ea8-bed2-44fd19b0b4de"), Code="Requires", Description="Requires", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("b5f104a3-f0d5-4482-85ab-e61086729761"), Code="TextComplexity", Description="Text Complexity", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("276beed0-0f6e-46bc-9916-88261b7cebdc"), Code="ReadingLevel", Description="Reading Level", SortOrder=Convert.ToDecimal("5.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("dd2b2d7a-5824-4904-9527-ddf8038abe78"), Code="EducationalSubject", Description="Educational Subject", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLearningResourceCompetencyAlignmentType { Id=Guid.Parse("a72071ee-062e-49ad-a7ea-15e7c583889a"), Code="EducationLevel", Description="Education Level", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

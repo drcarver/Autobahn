@@ -15,35 +15,35 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefInstructionLocationType"> List
          /// </summary>
-        public static List<RefInstructionLocationType> RefInstructionLocationTypeList = new List<RefInstructionLocationType> =
+        public static List<RefInstructionLocationType> RefInstructionLocationTypeList = new List<RefInstructionLocationType>
         {
-            new RefInstructionLocationType { Id=Guid.Parse("2bdbb395-c98d-45e5-ba7a-2be462c96e65"), Code="Business is the type of location at which instruction or service takes place.", Description="00997", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("d55cb161-6d36-4aee-90a5-d36e8517ebdc"), Code="Community facility is the type of location at which instruction or service takes place.", Description="00752", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("da3cb58f-cfa5-4963-b902-5963b4e3797c"), Code="Home of student is the type of location at which instruction or service takes place.", Description="00753", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("0e57ec91-ed41-4a16-9b4c-5d3821095e6d"), Code="Hospital is the type of location at which instruction or service takes place.", Description="00754", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("62705029-dc38-4ec7-b4df-52eda92b1b55"), Code="Library/media center is the type of location at which instruction or service takes place.", Description="03018", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("fe8bcde7-870f-4ba8-b2a2-cf6335ec31cf"), Code="Mobile is the type of location at which instruction or service takes place.", Description="03506", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("1b8543ca-d52f-4277-92c0-983c47ee59c8"), Code="The type of location at which instruction or service takes place is in a category not yet defined in CEDS.", Description="09999", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("617a2ff8-dbd7-4e65-bfae-fe00bcc87d7f"), Code="Other K-12 educational institution is the type of location at which instruction or service takes place.", Description="00341", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("5d6e9694-084a-4eed-8701-2b1a4fe15eec"), Code="Postsecondary facility is the type of location at which instruction or service takes place.", Description="00342", Definition="", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("a13760ea-a8ef-42da-907d-dfd2365667e9"), Code="School is the type of location at which instruction or service takes place.", Description="00675", Definition="", SortOrder=0 },
+            new RefInstructionLocationType { Id=Guid.Parse("d611d645-f938-451c-a077-856b0564680a"), Code="00997", Description="Business", Definition="Business is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("14969471-3510-4d93-a651-9b58ce46223a"), Code="00752", Description="Community facility", Definition="Community facility is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("09e688e7-de61-4279-932b-3fbdb3b6d7db"), Code="00753", Description="Home of student", Definition="Home of student is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("2dad9e4c-52a6-46dc-8c09-138cf8cba14a"), Code="00754", Description="Hospital", Definition="Hospital is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("f84a149e-59b7-446b-a2dd-3187841fe410"), Code="03018", Description="Library/media center", Definition="Library/media center is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("506a3007-69df-4001-b49a-f9fcc69bed32"), Code="03506", Description="Mobile", Definition="Mobile is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("2f6659f7-86ef-46fb-aceb-84f9a669c99d"), Code="09999", Description="Other", Definition="The type of location at which instruction or service takes place is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("7a5bdc05-31e2-470f-b879-074e75f51885"), Code="00341", Description="Other K-12 educational institution", Definition="Other K-12 educational institution is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("a64e4511-de7f-41ca-a371-54a087b83a9a"), Code="00342", Description="Postsecondary facility", Definition="Postsecondary facility is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("3e7b6874-981a-4ed3-b62e-56eac7856405"), Code="00675", Description="School", Definition="School is the type of location at which instruction or service takes place.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefInstructionLocationType Pick List
          /// </summary>
-        public static List<RefInstructionLocationType> RefInstructionLocationTypePickList = new List<RefInstructionLocationType> =
+        public static List<RefInstructionLocationType> RefInstructionLocationTypePickList = new List<RefInstructionLocationType>
         {
-            new RefInstructionLocationType { Id=Guid.Parse("2bdbb395-c98d-45e5-ba7a-2be462c96e65"), Code="Business is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("d55cb161-6d36-4aee-90a5-d36e8517ebdc"), Code="Community facility is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("da3cb58f-cfa5-4963-b902-5963b4e3797c"), Code="Home of student is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("0e57ec91-ed41-4a16-9b4c-5d3821095e6d"), Code="Hospital is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("62705029-dc38-4ec7-b4df-52eda92b1b55"), Code="Library/media center is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("fe8bcde7-870f-4ba8-b2a2-cf6335ec31cf"), Code="Mobile is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("1b8543ca-d52f-4277-92c0-983c47ee59c8"), Code="The type of location at which instruction or service takes place is in a category not yet defined in CEDS.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("617a2ff8-dbd7-4e65-bfae-fe00bcc87d7f"), Code="Other K-12 educational institution is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("5d6e9694-084a-4eed-8701-2b1a4fe15eec"), Code="Postsecondary facility is the type of location at which instruction or service takes place.", SortOrder=0 },
-            new RefInstructionLocationType { Id=Guid.Parse("a13760ea-a8ef-42da-907d-dfd2365667e9"), Code="School is the type of location at which instruction or service takes place.", SortOrder=0 },
+            new RefInstructionLocationType { Id=Guid.Parse("d611d645-f938-451c-a077-856b0564680a"), Code="00997", Description="Business", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("14969471-3510-4d93-a651-9b58ce46223a"), Code="00752", Description="Community facility", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("09e688e7-de61-4279-932b-3fbdb3b6d7db"), Code="00753", Description="Home of student", SortOrder=Convert.ToDecimal("3.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("2dad9e4c-52a6-46dc-8c09-138cf8cba14a"), Code="00754", Description="Hospital", SortOrder=Convert.ToDecimal("4.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("f84a149e-59b7-446b-a2dd-3187841fe410"), Code="03018", Description="Library/media center", SortOrder=Convert.ToDecimal("5.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("506a3007-69df-4001-b49a-f9fcc69bed32"), Code="03506", Description="Mobile", SortOrder=Convert.ToDecimal("6.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("2f6659f7-86ef-46fb-aceb-84f9a669c99d"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("7.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("7a5bdc05-31e2-470f-b879-074e75f51885"), Code="00341", Description="Other K-12 educational institution", SortOrder=Convert.ToDecimal("8.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("a64e4511-de7f-41ca-a371-54a087b83a9a"), Code="00342", Description="Postsecondary facility", SortOrder=Convert.ToDecimal("9.00") },
+            new RefInstructionLocationType { Id=Guid.Parse("3e7b6874-981a-4ed3-b62e-56eac7856405"), Code="00675", Description="School", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

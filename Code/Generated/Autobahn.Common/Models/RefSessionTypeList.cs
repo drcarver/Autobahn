@@ -15,37 +15,37 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefSessionType"> List
          /// </summary>
-        public static List<RefSessionType> RefSessionTypeList = new List<RefSessionType> =
+        public static List<RefSessionType> RefSessionTypeList = new List<RefSessionType>
         {
-            new RefSessionType { Id=Guid.Parse("cb27463d-1c28-44f6-a44a-31798b635fd7"), Code="A regular school term consisting of no major subdivision of time segments. It usually begins in the late summer or early fall and ends in late spring or early summer (e.g., elementary school).", Description="FullSchoolYear", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("e16dd7f3-e6d3-4375-97fb-55448161b92d"), Code="A short session which occurs between longer sessions.", Description="Intersession", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("4b6b7723-dcda-48b6-9326-1e9cbd075c1a"), Code="A session that is longer than a semester but shorter than a full year.", Description="LongSession", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("d0614ae6-8405-4ea7-84f5-05ce51ccb632"), Code="A school term which is shorter than a regular session.", Description="MiniTerm", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("163b1baa-3503-4669-ace2-b90484677aba"), Code="One of four equal segments into which a school year is divided.", Description="Quarter", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("07851e2e-c069-4fad-90ac-8e915fd0c6bd"), Code="One of five equal segments into which a school year is divided.", Description="Quinmester", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("a35494fa-311b-4696-8ba3-c523ad758a43"), Code="One of two equal segments into which a school year is divided.", Description="Semester", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("007215e0-f6e2-4f24-8f65-1a55e468198d"), Code="A school term which takes place in the summer between two regular school terms.", Description="SummerTerm", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("99df94e0-f9b8-4aa9-8552-ba6832ae54db"), Code="One of three equal segments into which a school year is divided.", Description="Trimester", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("df1035d9-c96b-4cb7-86ef-3e278a215cf5"), Code="An educational program that operates on a full twelve month cycle.", Description="TwelveMonth", Definition="", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("d6c46082-c5dc-4a03-970f-bae99d3a8e5b"), Code="The session type is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefSessionType { Id=Guid.Parse("1b8c71db-4685-4720-9338-c258cfe85385"), Code="FullSchoolYear", Description="Full School Year", Definition="A regular school term consisting of no major subdivision of time segments. It usually begins in the late summer or early fall and ends in late spring or early summer (e.g., elementary school).", SortOrder=Convert.ToDecimal("1.00") },
+            new RefSessionType { Id=Guid.Parse("90e57b0c-bbbb-4ab8-a703-957cc596e66b"), Code="Intersession", Description="Intersession", Definition="A short session which occurs between longer sessions.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefSessionType { Id=Guid.Parse("e7213fdc-fcbd-4558-ab11-f3f471a0b41f"), Code="LongSession", Description="Long Session", Definition="A session that is longer than a semester but shorter than a full year.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefSessionType { Id=Guid.Parse("6c53d1c6-0476-4638-a7d9-0446335763d2"), Code="MiniTerm", Description="Mini Term", Definition="A school term which is shorter than a regular session.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefSessionType { Id=Guid.Parse("624be73f-b43c-4f93-8875-8876b13a0ae3"), Code="Quarter", Description="Quarter", Definition="One of four equal segments into which a school year is divided.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefSessionType { Id=Guid.Parse("825cec51-ac8b-4845-bffd-7e8418328684"), Code="Quinmester", Description="Quinmester", Definition="One of five equal segments into which a school year is divided.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefSessionType { Id=Guid.Parse("0dbe9d2d-6a71-4803-98b4-0b7539862abb"), Code="Semester", Description="Semester", Definition="One of two equal segments into which a school year is divided.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefSessionType { Id=Guid.Parse("3b55b4af-dabe-4533-9841-9563ce5130e1"), Code="SummerTerm", Description="Summer Term", Definition="A school term which takes place in the summer between two regular school terms.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefSessionType { Id=Guid.Parse("98ea8778-849a-4345-8644-b9e999e995f7"), Code="Trimester", Description="Trimester", Definition="One of three equal segments into which a school year is divided.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefSessionType { Id=Guid.Parse("0b5dbe3b-6638-4e60-84b7-eb855c53e104"), Code="TwelveMonth", Description="Twelve Month", Definition="An educational program that operates on a full twelve month cycle.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefSessionType { Id=Guid.Parse("98fa0743-dd48-46b7-b68d-ef2f5f04e17c"), Code="Other", Description="Other", Definition="The session type is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("11.00") },
         };
 
         /// <summary>
         /// The RefSessionType Pick List
          /// </summary>
-        public static List<RefSessionType> RefSessionTypePickList = new List<RefSessionType> =
+        public static List<RefSessionType> RefSessionTypePickList = new List<RefSessionType>
         {
-            new RefSessionType { Id=Guid.Parse("cb27463d-1c28-44f6-a44a-31798b635fd7"), Code="A regular school term consisting of no major subdivision of time segments. It usually begins in the late summer or early fall and ends in late spring or early summer (e.g., elementary school).", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("e16dd7f3-e6d3-4375-97fb-55448161b92d"), Code="A short session which occurs between longer sessions.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("4b6b7723-dcda-48b6-9326-1e9cbd075c1a"), Code="A session that is longer than a semester but shorter than a full year.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("d0614ae6-8405-4ea7-84f5-05ce51ccb632"), Code="A school term which is shorter than a regular session.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("163b1baa-3503-4669-ace2-b90484677aba"), Code="One of four equal segments into which a school year is divided.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("07851e2e-c069-4fad-90ac-8e915fd0c6bd"), Code="One of five equal segments into which a school year is divided.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("a35494fa-311b-4696-8ba3-c523ad758a43"), Code="One of two equal segments into which a school year is divided.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("007215e0-f6e2-4f24-8f65-1a55e468198d"), Code="A school term which takes place in the summer between two regular school terms.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("99df94e0-f9b8-4aa9-8552-ba6832ae54db"), Code="One of three equal segments into which a school year is divided.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("df1035d9-c96b-4cb7-86ef-3e278a215cf5"), Code="An educational program that operates on a full twelve month cycle.", SortOrder=0 },
-            new RefSessionType { Id=Guid.Parse("d6c46082-c5dc-4a03-970f-bae99d3a8e5b"), Code="The session type is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefSessionType { Id=Guid.Parse("1b8c71db-4685-4720-9338-c258cfe85385"), Code="FullSchoolYear", Description="Full School Year", SortOrder=Convert.ToDecimal("1.00") },
+            new RefSessionType { Id=Guid.Parse("90e57b0c-bbbb-4ab8-a703-957cc596e66b"), Code="Intersession", Description="Intersession", SortOrder=Convert.ToDecimal("2.00") },
+            new RefSessionType { Id=Guid.Parse("e7213fdc-fcbd-4558-ab11-f3f471a0b41f"), Code="LongSession", Description="Long Session", SortOrder=Convert.ToDecimal("3.00") },
+            new RefSessionType { Id=Guid.Parse("6c53d1c6-0476-4638-a7d9-0446335763d2"), Code="MiniTerm", Description="Mini Term", SortOrder=Convert.ToDecimal("4.00") },
+            new RefSessionType { Id=Guid.Parse("624be73f-b43c-4f93-8875-8876b13a0ae3"), Code="Quarter", Description="Quarter", SortOrder=Convert.ToDecimal("5.00") },
+            new RefSessionType { Id=Guid.Parse("825cec51-ac8b-4845-bffd-7e8418328684"), Code="Quinmester", Description="Quinmester", SortOrder=Convert.ToDecimal("6.00") },
+            new RefSessionType { Id=Guid.Parse("0dbe9d2d-6a71-4803-98b4-0b7539862abb"), Code="Semester", Description="Semester", SortOrder=Convert.ToDecimal("7.00") },
+            new RefSessionType { Id=Guid.Parse("3b55b4af-dabe-4533-9841-9563ce5130e1"), Code="SummerTerm", Description="Summer Term", SortOrder=Convert.ToDecimal("8.00") },
+            new RefSessionType { Id=Guid.Parse("98ea8778-849a-4345-8644-b9e999e995f7"), Code="Trimester", Description="Trimester", SortOrder=Convert.ToDecimal("9.00") },
+            new RefSessionType { Id=Guid.Parse("0b5dbe3b-6638-4e60-84b7-eb855c53e104"), Code="TwelveMonth", Description="Twelve Month", SortOrder=Convert.ToDecimal("10.00") },
+            new RefSessionType { Id=Guid.Parse("98fa0743-dd48-46b7-b68d-ef2f5f04e17c"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("11.00") },
        };
    }
 }

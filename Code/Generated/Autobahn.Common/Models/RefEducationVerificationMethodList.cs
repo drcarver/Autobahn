@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefEducationVerificationMethod"> List
          /// </summary>
-        public static List<RefEducationVerificationMethod> RefEducationVerificationMethodList = new List<RefEducationVerificationMethod> =
+        public static List<RefEducationVerificationMethod> RefEducationVerificationMethodList = new List<RefEducationVerificationMethod>
         {
-            new RefEducationVerificationMethod { Id=Guid.Parse("549012fa-cd16-40d9-ba42-8461b6f70a3f"), Code="Official transcript is the method by which the formal education is verified.", Description="OfficialTranscript", Definition="", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("83b727a0-a47b-440a-86c3-fac952c38b2a"), Code="Transcript copy is the method by which the formal education is verified.", Description="TranscriptCopy", Definition="", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("35c743f7-2e28-46cd-8467-e37ebea06ee4"), Code="Degree copy is the method by which the formal education is verified.", Description="DegreeCopy", Definition="", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("565e9c7d-12fa-40ec-a72a-7a69b58d3170"), Code="Grade report is the method by which the formal education is verified.", Description="GradeReport", Definition="", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("e16e30f2-eef3-4274-b782-09ba167e6bb9"), Code="The method by which the formal education is verified is in a category not yet defined by CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefEducationVerificationMethod { Id=Guid.Parse("bdd4ff4e-7302-4d94-b808-c1abb762c831"), Code="OfficialTranscript", Description="Official transcript", Definition="Official transcript is the method by which the formal education is verified.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("a36a4eda-7d0e-4d8c-8c8b-fa66cddd2a1a"), Code="TranscriptCopy", Description="Transcript copy", Definition="Transcript copy is the method by which the formal education is verified.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("b0e359c4-2414-41df-bad4-ceaf4f854988"), Code="DegreeCopy", Description="Degree copy", Definition="Degree copy is the method by which the formal education is verified.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("f8a6e382-7090-4f78-813a-54fbd87ea29f"), Code="GradeReport", Description="Grade report", Definition="Grade report is the method by which the formal education is verified.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("3ac0f323-4cde-40f5-97d7-705850037419"), Code="Other", Description="Other", Definition="The method by which the formal education is verified is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
         /// The RefEducationVerificationMethod Pick List
          /// </summary>
-        public static List<RefEducationVerificationMethod> RefEducationVerificationMethodPickList = new List<RefEducationVerificationMethod> =
+        public static List<RefEducationVerificationMethod> RefEducationVerificationMethodPickList = new List<RefEducationVerificationMethod>
         {
-            new RefEducationVerificationMethod { Id=Guid.Parse("549012fa-cd16-40d9-ba42-8461b6f70a3f"), Code="Official transcript is the method by which the formal education is verified.", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("83b727a0-a47b-440a-86c3-fac952c38b2a"), Code="Transcript copy is the method by which the formal education is verified.", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("35c743f7-2e28-46cd-8467-e37ebea06ee4"), Code="Degree copy is the method by which the formal education is verified.", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("565e9c7d-12fa-40ec-a72a-7a69b58d3170"), Code="Grade report is the method by which the formal education is verified.", SortOrder=0 },
-            new RefEducationVerificationMethod { Id=Guid.Parse("e16e30f2-eef3-4274-b782-09ba167e6bb9"), Code="The method by which the formal education is verified is in a category not yet defined by CEDS.", SortOrder=0 },
+            new RefEducationVerificationMethod { Id=Guid.Parse("bdd4ff4e-7302-4d94-b808-c1abb762c831"), Code="OfficialTranscript", Description="Official transcript", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("a36a4eda-7d0e-4d8c-8c8b-fa66cddd2a1a"), Code="TranscriptCopy", Description="Transcript copy", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("b0e359c4-2414-41df-bad4-ceaf4f854988"), Code="DegreeCopy", Description="Degree copy", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("f8a6e382-7090-4f78-813a-54fbd87ea29f"), Code="GradeReport", Description="Grade report", SortOrder=Convert.ToDecimal("7.00") },
+            new RefEducationVerificationMethod { Id=Guid.Parse("3ac0f323-4cde-40f5-97d7-705850037419"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

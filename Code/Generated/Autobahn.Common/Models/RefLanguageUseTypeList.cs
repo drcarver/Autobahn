@@ -15,33 +15,33 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefLanguageUseType"> List
          /// </summary>
-        public static List<RefLanguageUseType> RefLanguageUseTypeList = new List<RefLanguageUseType> =
+        public static List<RefLanguageUseType> RefLanguageUseTypeList = new List<RefLanguageUseType>
         {
-            new RefLanguageUseType { Id=Guid.Parse("5bf4e1e4-f853-40f2-a1b9-bf62ea1b9463"), Code="", Description="", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("6b947bd0-b78e-49f4-aab3-e22da20607b1"), Code="", Description="The language specified by the related Language Code is the language the person uses for both written and spoken correspondence.", Definition="1.00", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("7602555e-a093-45b4-87a0-0ec86f157304"), Code="The language specified by the related Language Code is the person's dominant language.", Description="Dominant", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("a73b7357-a00c-40af-b47d-17521f570367"), Code="The language specified by the related Language Code is the language the person uses at home.", Description="Home", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("74149c34-844a-4f5c-8aff-396bc75b0aeb"), Code="The language specified by the related Language Code is the person's native language.", Description="Native", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("04fc10f7-91f7-41e8-ada5-093415c46d6a"), Code="The language specified by the related Language Code is the language the person's other language proficiency.", Description="OtherLanguageProficiency", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("0b1439b4-13ed-46f9-b8a9-b835639fd227"), Code="The function and context in which a person uses the  language specified by the related Language Code is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("bee8ef83-6af7-402f-a56c-3a76d811df07"), Code="The language specified by the related Language Code is the language the person uses for spoken correspondence.", Description="Spoken", Definition="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("eeeef7ba-32f6-4894-81b5-dad2c1e074d4"), Code="The language specified by the related Language Code is the language the person uses for written correspondence.", Description="Written", Definition="", SortOrder=0 },
+            new RefLanguageUseType { Id=Guid.Parse("d2d4e4af-9110-4234-a2a0-a98cdd86ea55"), Code="", Description="Correspondence", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefLanguageUseType { Id=Guid.Parse("1986180c-b3c4-49e1-94a5-47d43797b7ff"), Code="The language specified by the related Language Code is the language the person uses for both written and spoken correspondence.", Description="Correspondence", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefLanguageUseType { Id=Guid.Parse("542612c6-9793-424d-8ec9-d64186831cdd"), Code="Dominant", Description="Dominant language", Definition="The language specified by the related Language Code is the person's dominant language.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLanguageUseType { Id=Guid.Parse("d4699b8c-137a-4204-a2c6-43cf7a96d1f6"), Code="Home", Description="Home language", Definition="The language specified by the related Language Code is the language the person uses at home.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLanguageUseType { Id=Guid.Parse("cfe5fb4f-f00d-4f82-a24e-f68dd2230ed9"), Code="Native", Description="Native language", Definition="The language specified by the related Language Code is the person's native language.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLanguageUseType { Id=Guid.Parse("3919ceae-9707-481b-8480-0b18f48bf7f5"), Code="OtherLanguageProficiency", Description="Other language proficiency", Definition="The language specified by the related Language Code is the language the person's other language proficiency.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefLanguageUseType { Id=Guid.Parse("9dfaa80b-46ee-40b1-8482-2664ad3a74cb"), Code="Other", Description="Other", Definition="The function and context in which a person uses the  language specified by the related Language Code is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLanguageUseType { Id=Guid.Parse("3db0b61a-7341-4ca1-8dde-e9bf6991a2f1"), Code="Spoken", Description="Spoken Correspondence", Definition="The language specified by the related Language Code is the language the person uses for spoken correspondence.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLanguageUseType { Id=Guid.Parse("5ddc9c70-d8f8-4cfd-82bd-94772ae9dbff"), Code="Written", Description="Written Correspondence", Definition="The language specified by the related Language Code is the language the person uses for written correspondence.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefLanguageUseType Pick List
          /// </summary>
-        public static List<RefLanguageUseType> RefLanguageUseTypePickList = new List<RefLanguageUseType> =
+        public static List<RefLanguageUseType> RefLanguageUseTypePickList = new List<RefLanguageUseType>
         {
-            new RefLanguageUseType { Id=Guid.Parse("5bf4e1e4-f853-40f2-a1b9-bf62ea1b9463"), Code="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("6b947bd0-b78e-49f4-aab3-e22da20607b1"), Code="", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("7602555e-a093-45b4-87a0-0ec86f157304"), Code="The language specified by the related Language Code is the person's dominant language.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("a73b7357-a00c-40af-b47d-17521f570367"), Code="The language specified by the related Language Code is the language the person uses at home.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("74149c34-844a-4f5c-8aff-396bc75b0aeb"), Code="The language specified by the related Language Code is the person's native language.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("04fc10f7-91f7-41e8-ada5-093415c46d6a"), Code="The language specified by the related Language Code is the language the person's other language proficiency.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("0b1439b4-13ed-46f9-b8a9-b835639fd227"), Code="The function and context in which a person uses the  language specified by the related Language Code is in a category not yet defined in CEDS.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("bee8ef83-6af7-402f-a56c-3a76d811df07"), Code="The language specified by the related Language Code is the language the person uses for spoken correspondence.", SortOrder=0 },
-            new RefLanguageUseType { Id=Guid.Parse("eeeef7ba-32f6-4894-81b5-dad2c1e074d4"), Code="The language specified by the related Language Code is the language the person uses for written correspondence.", SortOrder=0 },
+            new RefLanguageUseType { Id=Guid.Parse("d2d4e4af-9110-4234-a2a0-a98cdd86ea55"), Code="", Description="Correspondence", SortOrder=Convert.ToDecimal("") },
+            new RefLanguageUseType { Id=Guid.Parse("1986180c-b3c4-49e1-94a5-47d43797b7ff"), Code="The language specified by the related Language Code is the language the person uses for both written and spoken correspondence.", Description="Correspondence", SortOrder=Convert.ToDecimal("") },
+            new RefLanguageUseType { Id=Guid.Parse("542612c6-9793-424d-8ec9-d64186831cdd"), Code="Dominant", Description="Dominant language", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLanguageUseType { Id=Guid.Parse("d4699b8c-137a-4204-a2c6-43cf7a96d1f6"), Code="Home", Description="Home language", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLanguageUseType { Id=Guid.Parse("cfe5fb4f-f00d-4f82-a24e-f68dd2230ed9"), Code="Native", Description="Native language", SortOrder=Convert.ToDecimal("4.00") },
+            new RefLanguageUseType { Id=Guid.Parse("3919ceae-9707-481b-8480-0b18f48bf7f5"), Code="OtherLanguageProficiency", Description="Other language proficiency", SortOrder=Convert.ToDecimal("5.00") },
+            new RefLanguageUseType { Id=Guid.Parse("9dfaa80b-46ee-40b1-8482-2664ad3a74cb"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLanguageUseType { Id=Guid.Parse("3db0b61a-7341-4ca1-8dde-e9bf6991a2f1"), Code="Spoken", Description="Spoken Correspondence", SortOrder=Convert.ToDecimal("6.00") },
+            new RefLanguageUseType { Id=Guid.Parse("5ddc9c70-d8f8-4cfd-82bd-94772ae9dbff"), Code="Written", Description="Written Correspondence", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

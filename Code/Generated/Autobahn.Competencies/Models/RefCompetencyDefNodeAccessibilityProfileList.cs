@@ -15,25 +15,25 @@ namespace Autobahn.Competencies.Models
         /// <summary>
         /// The complete <see cref="RefCompetencyDefNodeAccessibilityProfile"> List
          /// </summary>
-        public static List<RefCompetencyDefNodeAccessibilityProfile> RefCompetencyDefNodeAccessibilityProfileList = new List<RefCompetencyDefNodeAccessibilityProfile> =
+        public static List<RefCompetencyDefNodeAccessibilityProfile> RefCompetencyDefNodeAccessibilityProfileList = new List<RefCompetencyDefNodeAccessibilityProfile>
         {
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("f1cae615-8b85-4958-9fd7-229933077e80"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired vision.", Description="Vision", Definition="", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("59f0199b-2c71-40bd-93df-85dcac126a48"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired hearing.", Description="Hearing", Definition="", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("b207b231-a141-4867-8d92-e1c722cd3df9"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired communication.", Description="Communication", Definition="", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("1d764b72-2520-4966-9189-2110d185ed57"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired mobility.", Description="Mobility", Definition="", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("6f7e5924-c107-4d06-8b6b-4c1692ef3e9f"), Code="The node in the educational framework is designed for a general audience.", Description="General", Definition="", SortOrder=0 },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("388ccf8b-1f14-4e13-bb30-d71a029fb96d"), Code="Vision", Description="Vision", Definition="The node in the educational framework is designed to address alternative pathways for learners with impaired vision.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("14ebbb42-8877-4d65-8afc-9d00e929a599"), Code="Hearing", Description="Hearing", Definition="The node in the educational framework is designed to address alternative pathways for learners with impaired hearing.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("87665645-b0a7-4440-8773-9107195249a4"), Code="Communication", Description="Communication", Definition="The node in the educational framework is designed to address alternative pathways for learners with impaired communication.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("491c1ede-edde-4460-97a3-0fb97c3bd5b4"), Code="Mobility", Description="Mobility", Definition="The node in the educational framework is designed to address alternative pathways for learners with impaired mobility.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("88d7cfb1-2feb-4797-8cea-dbf23400d17c"), Code="General", Description="General", Definition="The node in the educational framework is designed for a general audience.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefCompetencyDefNodeAccessibilityProfile Pick List
          /// </summary>
-        public static List<RefCompetencyDefNodeAccessibilityProfile> RefCompetencyDefNodeAccessibilityProfilePickList = new List<RefCompetencyDefNodeAccessibilityProfile> =
+        public static List<RefCompetencyDefNodeAccessibilityProfile> RefCompetencyDefNodeAccessibilityProfilePickList = new List<RefCompetencyDefNodeAccessibilityProfile>
         {
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("f1cae615-8b85-4958-9fd7-229933077e80"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired vision.", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("59f0199b-2c71-40bd-93df-85dcac126a48"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired hearing.", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("b207b231-a141-4867-8d92-e1c722cd3df9"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired communication.", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("1d764b72-2520-4966-9189-2110d185ed57"), Code="The node in the educational framework is designed to address alternative pathways for learners with impaired mobility.", SortOrder=0 },
-            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("6f7e5924-c107-4d06-8b6b-4c1692ef3e9f"), Code="The node in the educational framework is designed for a general audience.", SortOrder=0 },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("388ccf8b-1f14-4e13-bb30-d71a029fb96d"), Code="Vision", Description="Vision", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("14ebbb42-8877-4d65-8afc-9d00e929a599"), Code="Hearing", Description="Hearing", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("87665645-b0a7-4440-8773-9107195249a4"), Code="Communication", Description="Communication", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("491c1ede-edde-4460-97a3-0fb97c3bd5b4"), Code="Mobility", Description="Mobility", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCompetencyDefNodeAccessibilityProfile { Id=Guid.Parse("88d7cfb1-2feb-4797-8cea-dbf23400d17c"), Code="General", Description="General", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

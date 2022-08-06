@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefReferralOutcome"> List
          /// </summary>
-        public static List<RefReferralOutcome> RefReferralOutcomeList = new List<RefReferralOutcome> =
+        public static List<RefReferralOutcome> RefReferralOutcomeList = new List<RefReferralOutcome>
         {
-            new RefReferralOutcome { Id=Guid.Parse("19c1ce03-f477-4be4-9466-674d738bc183"), Code="The student is on a waiting list to receive services based on the referral.", Description="WaitingList", Definition="", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("6deed0ea-a82c-4253-8a38-92ab9c65c34e"), Code="Parent declined service offered based on the referral.", Description="ParentDeclined", Definition="", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("43d4c735-ff47-4883-bed5-93746fb830f2"), Code="The student is enrolled based on the referral.", Description="Enrolled", Definition="", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("def57b23-0eee-473a-a768-046f8ce6b69f"), Code="The service provider has been unable to contact parent/family/guardian.", Description="Unreachable", Definition="", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("e21eec3f-c8fd-4ecb-8d71-8fd36742d250"), Code="The student is not eligible to receive services related to the referral.", Description="NotEligible", Definition="", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("06e2a2ef-c2f2-4f84-91f6-f66f08d989c3"), Code="The outcome of the referral is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefReferralOutcome { Id=Guid.Parse("fb87d1cb-2f85-48af-a925-25f659dd9571"), Code="WaitingList", Description="Waiting list", Definition="The student is on a waiting list to receive services based on the referral.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefReferralOutcome { Id=Guid.Parse("b8e0cee8-9e30-40e2-bba6-fce868fcf64f"), Code="ParentDeclined", Description="Parent declined service", Definition="Parent declined service offered based on the referral.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefReferralOutcome { Id=Guid.Parse("70497e56-9d3b-4be2-a574-bd3129f7b1c1"), Code="Enrolled", Description="Enrolled", Definition="The student is enrolled based on the referral.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefReferralOutcome { Id=Guid.Parse("5b91c1ed-60ed-4af7-9fd1-ff3f567775e2"), Code="Unreachable", Description="Unable to contact parent/family/guardian", Definition="The service provider has been unable to contact parent/family/guardian.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefReferralOutcome { Id=Guid.Parse("1faf9d66-2426-4ee7-9efe-725f9834c15b"), Code="NotEligible", Description="Not eligible", Definition="The student is not eligible to receive services related to the referral.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefReferralOutcome { Id=Guid.Parse("76e47940-1395-4ed3-a90b-0915d9c356c6"), Code="Other", Description="Other", Definition="The outcome of the referral is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefReferralOutcome Pick List
          /// </summary>
-        public static List<RefReferralOutcome> RefReferralOutcomePickList = new List<RefReferralOutcome> =
+        public static List<RefReferralOutcome> RefReferralOutcomePickList = new List<RefReferralOutcome>
         {
-            new RefReferralOutcome { Id=Guid.Parse("19c1ce03-f477-4be4-9466-674d738bc183"), Code="The student is on a waiting list to receive services based on the referral.", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("6deed0ea-a82c-4253-8a38-92ab9c65c34e"), Code="Parent declined service offered based on the referral.", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("43d4c735-ff47-4883-bed5-93746fb830f2"), Code="The student is enrolled based on the referral.", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("def57b23-0eee-473a-a768-046f8ce6b69f"), Code="The service provider has been unable to contact parent/family/guardian.", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("e21eec3f-c8fd-4ecb-8d71-8fd36742d250"), Code="The student is not eligible to receive services related to the referral.", SortOrder=0 },
-            new RefReferralOutcome { Id=Guid.Parse("06e2a2ef-c2f2-4f84-91f6-f66f08d989c3"), Code="The outcome of the referral is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefReferralOutcome { Id=Guid.Parse("fb87d1cb-2f85-48af-a925-25f659dd9571"), Code="WaitingList", Description="Waiting list", SortOrder=Convert.ToDecimal("2.00") },
+            new RefReferralOutcome { Id=Guid.Parse("b8e0cee8-9e30-40e2-bba6-fce868fcf64f"), Code="ParentDeclined", Description="Parent declined service", SortOrder=Convert.ToDecimal("4.00") },
+            new RefReferralOutcome { Id=Guid.Parse("70497e56-9d3b-4be2-a574-bd3129f7b1c1"), Code="Enrolled", Description="Enrolled", SortOrder=Convert.ToDecimal("6.00") },
+            new RefReferralOutcome { Id=Guid.Parse("5b91c1ed-60ed-4af7-9fd1-ff3f567775e2"), Code="Unreachable", Description="Unable to contact parent/family/guardian", SortOrder=Convert.ToDecimal("8.00") },
+            new RefReferralOutcome { Id=Guid.Parse("1faf9d66-2426-4ee7-9efe-725f9834c15b"), Code="NotEligible", Description="Not eligible", SortOrder=Convert.ToDecimal("10.00") },
+            new RefReferralOutcome { Id=Guid.Parse("76e47940-1395-4ed3-a90b-0915d9c356c6"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

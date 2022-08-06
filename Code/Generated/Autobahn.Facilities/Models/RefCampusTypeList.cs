@@ -15,25 +15,25 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefCampusType"> List
          /// </summary>
-        public static List<RefCampusType> RefCampusTypeList = new List<RefCampusType> =
+        public static List<RefCampusType> RefCampusTypeList = new List<RefCampusType>
         {
-            new RefCampusType { Id=Guid.Parse("cc7876f8-7313-4e3f-a8b6-8b9828eb2dbd"), Code="Administration is specified as the primary purpose for which a campus is designed and/or used.", Description="Administration", Definition="", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("d69c4dc2-0fbf-4cb6-b0f7-2782cacd9f89"), Code="Education is specified as the primary purpose for which a campus is designed and/or used.", Description="Education", Definition="", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("6dc72acd-ae17-47b1-993d-db9d4a784da2"), Code="Operations is specified as the primary purpose for which a campus is designed and/or used.", Description="Operations", Definition="", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("5c4f38c6-4c5a-497f-9117-f1d8033748bd"), Code="Residential is specified as the primary purpose for which a campus is designed and/or used.", Description="Residential", Definition="", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("64f96fe5-d2af-42f1-b048-2146e2f2b6de"), Code="Other is specified as the primary purpose for which a campus is designed and/or used.", Description="Other", Definition="", SortOrder=0 },
+            new RefCampusType { Id=Guid.Parse("e4465b01-6647-4a95-9c70-0ad252396815"), Code="Administration", Description="Administration", Definition="Administration is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCampusType { Id=Guid.Parse("4a75eed2-8394-41a0-a845-a1e9b61be0dc"), Code="Education", Description="Education", Definition="Education is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCampusType { Id=Guid.Parse("92d4e438-34be-48fa-b001-9cac5d184400"), Code="Operations", Description="Operations", Definition="Operations is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCampusType { Id=Guid.Parse("922e642f-dbd7-4c19-8d6b-42242b20d506"), Code="Residential", Description="Residential", Definition="Residential is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCampusType { Id=Guid.Parse("18d0e3bb-935a-44e1-8952-00eb639f6b1b"), Code="Other", Description="Other", Definition="Other is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefCampusType Pick List
          /// </summary>
-        public static List<RefCampusType> RefCampusTypePickList = new List<RefCampusType> =
+        public static List<RefCampusType> RefCampusTypePickList = new List<RefCampusType>
         {
-            new RefCampusType { Id=Guid.Parse("cc7876f8-7313-4e3f-a8b6-8b9828eb2dbd"), Code="Administration is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("d69c4dc2-0fbf-4cb6-b0f7-2782cacd9f89"), Code="Education is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("6dc72acd-ae17-47b1-993d-db9d4a784da2"), Code="Operations is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("5c4f38c6-4c5a-497f-9117-f1d8033748bd"), Code="Residential is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=0 },
-            new RefCampusType { Id=Guid.Parse("64f96fe5-d2af-42f1-b048-2146e2f2b6de"), Code="Other is specified as the primary purpose for which a campus is designed and/or used.", SortOrder=0 },
+            new RefCampusType { Id=Guid.Parse("e4465b01-6647-4a95-9c70-0ad252396815"), Code="Administration", Description="Administration", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCampusType { Id=Guid.Parse("4a75eed2-8394-41a0-a845-a1e9b61be0dc"), Code="Education", Description="Education", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCampusType { Id=Guid.Parse("92d4e438-34be-48fa-b001-9cac5d184400"), Code="Operations", Description="Operations", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCampusType { Id=Guid.Parse("922e642f-dbd7-4c19-8d6b-42242b20d506"), Code="Residential", Description="Residential", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCampusType { Id=Guid.Parse("18d0e3bb-935a-44e1-8952-00eb639f6b1b"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

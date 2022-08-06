@@ -15,29 +15,29 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentPlatformType"> List
          /// </summary>
-        public static List<RefAssessmentPlatformType> RefAssessmentPlatformTypeList = new List<RefAssessmentPlatformType> =
+        public static List<RefAssessmentPlatformType> RefAssessmentPlatformTypeList = new List<RefAssessmentPlatformType>
         {
-            new RefAssessmentPlatformType { Id=Guid.Parse("8c1e2241-2083-48f7-ae8e-678e35da839f"), Code="Paper is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Paper", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("10277817-e5af-4aa6-ad02-d9dda512848a"), Code="Computer is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Computer", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("6e67483b-b461-478f-a33d-11623e54fa02"), Code="Mobile is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Mobile", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("0fd46a15-b7ec-43b1-8b04-530978085ede"), Code="Clicker is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Clicker", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("38e8d9b6-36d9-47b1-8af3-67d461b56518"), Code="Other is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Other", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("c670ce72-2941-4446-a1d5-56656bb49336"), Code="Handheld is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Handheld", Definition="", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("d9a9a26f-1f05-44f9-a631-979d899a22cd"), Code="Tablet is specified as the platform with which the assessment was delivered to the student during the assessment session.", Description="Tablet", Definition="", SortOrder=0 },
+            new RefAssessmentPlatformType { Id=Guid.Parse("c8dc076d-54f7-45f5-864e-f9d030fb17d3"), Code="Paper", Description="Paper", Definition="Paper is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("be43c805-ed4c-42f1-9d45-98a515d8ca52"), Code="Computer", Description="Computer", Definition="Computer is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("6b1d3257-a7ff-4aad-a4bd-98a9a7228df1"), Code="Mobile", Description="Mobile", Definition="Mobile is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("d593faed-ef17-470c-b6b0-8ba0ecc54843"), Code="Clicker", Description="Clicker", Definition="Clicker is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("4027b81d-1e38-410f-a698-0329ad4f89d0"), Code="Other", Description="Other", Definition="Other is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("da69c016-0310-4261-a89a-88191ed25664"), Code="Handheld", Description="Handheld", Definition="Handheld is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("005165bd-e727-4a9d-975d-580daf5d06a3"), Code="Tablet", Description="Tablet", Definition="Tablet is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefAssessmentPlatformType Pick List
          /// </summary>
-        public static List<RefAssessmentPlatformType> RefAssessmentPlatformTypePickList = new List<RefAssessmentPlatformType> =
+        public static List<RefAssessmentPlatformType> RefAssessmentPlatformTypePickList = new List<RefAssessmentPlatformType>
         {
-            new RefAssessmentPlatformType { Id=Guid.Parse("8c1e2241-2083-48f7-ae8e-678e35da839f"), Code="Paper is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("10277817-e5af-4aa6-ad02-d9dda512848a"), Code="Computer is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("6e67483b-b461-478f-a33d-11623e54fa02"), Code="Mobile is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("0fd46a15-b7ec-43b1-8b04-530978085ede"), Code="Clicker is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("38e8d9b6-36d9-47b1-8af3-67d461b56518"), Code="Other is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("c670ce72-2941-4446-a1d5-56656bb49336"), Code="Handheld is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
-            new RefAssessmentPlatformType { Id=Guid.Parse("d9a9a26f-1f05-44f9-a631-979d899a22cd"), Code="Tablet is specified as the platform with which the assessment was delivered to the student during the assessment session.", SortOrder=0 },
+            new RefAssessmentPlatformType { Id=Guid.Parse("c8dc076d-54f7-45f5-864e-f9d030fb17d3"), Code="Paper", Description="Paper", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("be43c805-ed4c-42f1-9d45-98a515d8ca52"), Code="Computer", Description="Computer", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("6b1d3257-a7ff-4aad-a4bd-98a9a7228df1"), Code="Mobile", Description="Mobile", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("d593faed-ef17-470c-b6b0-8ba0ecc54843"), Code="Clicker", Description="Clicker", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("4027b81d-1e38-410f-a698-0329ad4f89d0"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("da69c016-0310-4261-a89a-88191ed25664"), Code="Handheld", Description="Handheld", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentPlatformType { Id=Guid.Parse("005165bd-e727-4a9d-975d-580daf5d06a3"), Code="Tablet", Description="Tablet", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

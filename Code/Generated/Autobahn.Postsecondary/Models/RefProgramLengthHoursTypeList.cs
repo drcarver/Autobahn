@@ -15,19 +15,19 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefProgramLengthHoursType"> List
          /// </summary>
-        public static List<RefProgramLengthHoursType> RefProgramLengthHoursTypeList = new List<RefProgramLengthHoursType> =
+        public static List<RefProgramLengthHoursType> RefProgramLengthHoursTypeList = new List<RefProgramLengthHoursType>
         {
-            new RefProgramLengthHoursType { Id=Guid.Parse("2b243668-18b9-4753-9372-943a19ec083d"), Code="Credit is the type of hours (credit or contact) by which the normal length of a program of study is measured.", Description="Credit", Definition="", SortOrder=0 },
-            new RefProgramLengthHoursType { Id=Guid.Parse("200f0b05-44c7-4cf1-9c0c-353446a19603"), Code="Contact is the type of hours (credit or contact) by which the normal length of a program of study is measured.", Description="Contact", Definition="", SortOrder=0 },
+            new RefProgramLengthHoursType { Id=Guid.Parse("fa536fbc-496f-47c2-93e3-304df6f97a06"), Code="Credit", Description="Credit", Definition="Credit is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProgramLengthHoursType { Id=Guid.Parse("778b9fa6-8489-4dc6-ab00-0e301fb77ac0"), Code="Contact", Description="Contact", Definition="Contact is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefProgramLengthHoursType Pick List
          /// </summary>
-        public static List<RefProgramLengthHoursType> RefProgramLengthHoursTypePickList = new List<RefProgramLengthHoursType> =
+        public static List<RefProgramLengthHoursType> RefProgramLengthHoursTypePickList = new List<RefProgramLengthHoursType>
         {
-            new RefProgramLengthHoursType { Id=Guid.Parse("2b243668-18b9-4753-9372-943a19ec083d"), Code="Credit is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=0 },
-            new RefProgramLengthHoursType { Id=Guid.Parse("200f0b05-44c7-4cf1-9c0c-353446a19603"), Code="Contact is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=0 },
+            new RefProgramLengthHoursType { Id=Guid.Parse("fa536fbc-496f-47c2-93e3-304df6f97a06"), Code="Credit", Description="Credit", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProgramLengthHoursType { Id=Guid.Parse("778b9fa6-8489-4dc6-ab00-0e301fb77ac0"), Code="Contact", Description="Contact", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

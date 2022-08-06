@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIPSPProgressReportSchedule"> List
          /// </summary>
-        public static List<RefIPSPProgressReportSchedule> RefIPSPProgressReportScheduleList = new List<RefIPSPProgressReportSchedule> =
+        public static List<RefIPSPProgressReportSchedule> RefIPSPProgressReportScheduleList = new List<RefIPSPProgressReportSchedule>
         {
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("65b853ff-1cf1-452f-9b8a-00e423fd28bf"), Code="Daily is the frequency by which parents are notified of the student's progress on annual goals.", Description="Daily", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("f54d20e9-3634-49d0-8e3a-b361c0080ce4"), Code="Monthly is the frequency by which parents are notified of the student's progress on annual goals.", Description="Monthly", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("69e3908d-5626-45e7-8a3c-5c0eff035006"), Code="Other is specified as the frequency by which parents are notified of the student's progress on annual goals.", Description="Other", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("8c783b8d-84ca-4c66-b72b-a12233a31129"), Code="Quarterly is the frequency by which parents are notified of the student's progress on annual goals.", Description="Quarterly", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("94616a36-dab3-4664-a29d-7dbd94a70f01"), Code="Term is the frequency by which parents are notified of the student's progress on annual goals.", Description="Term", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("75346354-0245-4c3e-95f6-dc26aa15f9d2"), Code="Weekly is the frequency by which parents are notified of the student's progress on annual goals.", Description="Weekly", Definition="", SortOrder=0 },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("a3b78be4-4faf-4b20-8411-6f4a0548d428"), Code="Daily", Description="Daily", Definition="Daily is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("942e1eb1-e522-4031-a972-fd78f3790f96"), Code="Monthly", Description="Monthly", Definition="Monthly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("685f52f5-a8ad-4845-b486-c689caca5808"), Code="Other", Description="Other", Definition="Other is specified as the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("389217d9-8486-4ff3-a6f7-83a52c2dda8a"), Code="Quarterly", Description="Quarterly", Definition="Quarterly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("fbe24160-1375-4435-9d5a-c9ddc900e250"), Code="Term", Description="Term", Definition="Term is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("163bbc98-493b-4363-8eb0-8e7e46631491"), Code="Weekly", Description="Weekly", Definition="Weekly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefIPSPProgressReportSchedule Pick List
          /// </summary>
-        public static List<RefIPSPProgressReportSchedule> RefIPSPProgressReportSchedulePickList = new List<RefIPSPProgressReportSchedule> =
+        public static List<RefIPSPProgressReportSchedule> RefIPSPProgressReportSchedulePickList = new List<RefIPSPProgressReportSchedule>
         {
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("65b853ff-1cf1-452f-9b8a-00e423fd28bf"), Code="Daily is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("f54d20e9-3634-49d0-8e3a-b361c0080ce4"), Code="Monthly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("69e3908d-5626-45e7-8a3c-5c0eff035006"), Code="Other is specified as the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("8c783b8d-84ca-4c66-b72b-a12233a31129"), Code="Quarterly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("94616a36-dab3-4664-a29d-7dbd94a70f01"), Code="Term is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
-            new RefIPSPProgressReportSchedule { Id=Guid.Parse("75346354-0245-4c3e-95f6-dc26aa15f9d2"), Code="Weekly is the frequency by which parents are notified of the student's progress on annual goals.", SortOrder=0 },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("a3b78be4-4faf-4b20-8411-6f4a0548d428"), Code="Daily", Description="Daily", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("942e1eb1-e522-4031-a972-fd78f3790f96"), Code="Monthly", Description="Monthly", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("685f52f5-a8ad-4845-b486-c689caca5808"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("389217d9-8486-4ff3-a6f7-83a52c2dda8a"), Code="Quarterly", Description="Quarterly", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("fbe24160-1375-4435-9d5a-c9ddc900e250"), Code="Term", Description="Term", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportSchedule { Id=Guid.Parse("163bbc98-493b-4363-8eb0-8e7e46631491"), Code="Weekly", Description="Weekly", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

@@ -15,31 +15,31 @@ namespace Autobahn.AdultEducation.Models
         /// <summary>
         /// The complete <see cref="RefAeStaffClassification"> List
          /// </summary>
-        public static List<RefAeStaffClassification> RefAeStaffClassificationList = new List<RefAeStaffClassification> =
+        public static List<RefAeStaffClassification> RefAeStaffClassificationList = new List<RefAeStaffClassification>
         {
-            new RefAeStaffClassification { Id=Guid.Parse("0e4e3591-d64a-43b6-921a-5355a73ffda4"), Code="State-level administrative/supervisory/ancillary services is specified as the classification for the adult education staff member.", Description="01", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("e0778423-2b0c-4306-8e3e-c53f7fd8cd96"), Code="Local-level administrative/supervisory/ancillary services  is specified as the classification for the adult education staff member.", Description="02", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("f4b2c448-fe8c-411f-b756-5343141a0e7b"), Code="Local teacher is specified as the classification for the adult education staff member.", Description="03", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("8f976ff7-9ac8-473a-b82f-4abe6fc5b1cd"), Code="Local counselor is specified as the classification for the adult education staff member.", Description="04", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("e9474611-ff16-494f-8af6-f40dcedc4dfd"), Code="Local paraprofessional is specified as the classification for the adult education staff member.", Description="05", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("b49639ec-10ad-4e82-8b89-de4cf165dd95"), Code="State Professional Development Staff is specified as the classification for the adult education staff member.", Description="06", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("bb40fa57-eb34-4390-a750-5deb8eea119f"), Code="Regional Professional Development Staff is specified as the classification for the adult education staff member.", Description="07", Definition="", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("0bda1ea4-b528-498b-8f25-c6d2f0003b3f"), Code="Local Professional Development Staff is specified as the classification for the adult education staff member.", Description="08", Definition="", SortOrder=0 },
+            new RefAeStaffClassification { Id=Guid.Parse("3c12bb02-88fd-4d08-bac3-cb29af702994"), Code="01", Description="State-level administrative/supervisory/ancillary services", Definition="State-level administrative/supervisory/ancillary services is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("b1f5836a-e744-48f4-b6f9-9026145f6022"), Code="02", Description="Local-level administrative/supervisory/ancillary services", Definition="Local-level administrative/supervisory/ancillary services  is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("b3ac41a4-68fb-4ea5-8271-f7dabcf9c3a9"), Code="03", Description="Local teacher", Definition="Local teacher is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("022e77e8-26a9-414d-bb05-7bb975f524c5"), Code="04", Description="Local counselor", Definition="Local counselor is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("1096a62b-aa6d-4747-8fcc-0d4941eedbaa"), Code="05", Description="Local paraprofessional", Definition="Local paraprofessional is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("d5450726-c4b4-4a8f-989e-9b202dea4399"), Code="06", Description="State Professional Development Staff", Definition="State Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("2bd67462-653d-4329-b763-5f0873f21c04"), Code="07", Description="Regional Professional Development Staff", Definition="Regional Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("1da634bf-59e4-484b-8062-0773cee6e8b4"), Code="08", Description="Local Professional Development Staff", Definition="Local Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=Convert.ToDecimal("15.00") },
         };
 
         /// <summary>
         /// The RefAeStaffClassification Pick List
          /// </summary>
-        public static List<RefAeStaffClassification> RefAeStaffClassificationPickList = new List<RefAeStaffClassification> =
+        public static List<RefAeStaffClassification> RefAeStaffClassificationPickList = new List<RefAeStaffClassification>
         {
-            new RefAeStaffClassification { Id=Guid.Parse("0e4e3591-d64a-43b6-921a-5355a73ffda4"), Code="State-level administrative/supervisory/ancillary services is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("e0778423-2b0c-4306-8e3e-c53f7fd8cd96"), Code="Local-level administrative/supervisory/ancillary services  is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("f4b2c448-fe8c-411f-b756-5343141a0e7b"), Code="Local teacher is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("8f976ff7-9ac8-473a-b82f-4abe6fc5b1cd"), Code="Local counselor is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("e9474611-ff16-494f-8af6-f40dcedc4dfd"), Code="Local paraprofessional is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("b49639ec-10ad-4e82-8b89-de4cf165dd95"), Code="State Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("bb40fa57-eb34-4390-a750-5deb8eea119f"), Code="Regional Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=0 },
-            new RefAeStaffClassification { Id=Guid.Parse("0bda1ea4-b528-498b-8f25-c6d2f0003b3f"), Code="Local Professional Development Staff is specified as the classification for the adult education staff member.", SortOrder=0 },
+            new RefAeStaffClassification { Id=Guid.Parse("3c12bb02-88fd-4d08-bac3-cb29af702994"), Code="01", Description="State-level administrative/supervisory/ancillary services", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("b1f5836a-e744-48f4-b6f9-9026145f6022"), Code="02", Description="Local-level administrative/supervisory/ancillary services", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("b3ac41a4-68fb-4ea5-8271-f7dabcf9c3a9"), Code="03", Description="Local teacher", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("022e77e8-26a9-414d-bb05-7bb975f524c5"), Code="04", Description="Local counselor", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("1096a62b-aa6d-4747-8fcc-0d4941eedbaa"), Code="05", Description="Local paraprofessional", SortOrder=Convert.ToDecimal("9.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("d5450726-c4b4-4a8f-989e-9b202dea4399"), Code="06", Description="State Professional Development Staff", SortOrder=Convert.ToDecimal("11.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("2bd67462-653d-4329-b763-5f0873f21c04"), Code="07", Description="Regional Professional Development Staff", SortOrder=Convert.ToDecimal("13.00") },
+            new RefAeStaffClassification { Id=Guid.Parse("1da634bf-59e4-484b-8062-0773cee6e8b4"), Code="08", Description="Local Professional Development Staff", SortOrder=Convert.ToDecimal("15.00") },
        };
    }
 }

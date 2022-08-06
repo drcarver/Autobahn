@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIPEDSIntercollegiateAthleticsExpens"> List
          /// </summary>
-        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensList = new List<RefIPEDSIntercollegiateAthleticsExpens> =
+        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensList = new List<RefIPEDSIntercollegiateAthleticsExpens>
         {
         };
 
         /// <summary>
         /// The RefIPEDSIntercollegiateAthleticsExpens Pick List
          /// </summary>
-        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensPickList = new List<RefIPEDSIntercollegiateAthleticsExpens> =
+        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensPickList = new List<RefIPEDSIntercollegiateAthleticsExpens>
         {
        };
    }

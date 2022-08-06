@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAeCertificationType"> List
          /// </summary>
-        public static List<RefAeCertificationType> RefAeCertificationTypeList = new List<RefAeCertificationType> =
+        public static List<RefAeCertificationType> RefAeCertificationTypeList = new List<RefAeCertificationType>
         {
-            new RefAeCertificationType { Id=Guid.Parse("77e1da47-c1a7-4d54-a7c8-0c54cb84c730"), Code="Adult Education Certification is specified as the category of certification a person holds.", Description="AdultEducationCertification", Definition="", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("046a8458-0acd-4b08-8ec0-f89974470355"), Code="K-12 Certification is specified as the category of certification a person holds.", Description="K-12Certification", Definition="", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("52ec1187-4849-45d1-b842-ccf8e5ed5299"), Code="Special Education Certification is specified as the category of certification a person holds.", Description="SpecialEducationCertification", Definition="", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("335ff0f1-f647-4756-bbb0-5f44173a7c21"), Code="Teachers of English to Speakers of Other Languages (TESOL) Certification is specified as the category of certification a person holds.", Description="TESOLCertification", Definition="", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("59bd5df5-9161-47cf-b35c-a40ac64b9f4b"), Code="None is specified as the category of certification a person holds.", Description="None", Definition="", SortOrder=0 },
+            new RefAeCertificationType { Id=Guid.Parse("c0add7e4-f027-44f0-b066-be0252f0ecff"), Code="AdultEducationCertification", Description="Adult Education Certification", Definition="Adult Education Certification is specified as the category of certification a person holds.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAeCertificationType { Id=Guid.Parse("e81dd2ee-8a08-4354-9089-21e009203818"), Code="K-12Certification", Description="K-12 Certification", Definition="K-12 Certification is specified as the category of certification a person holds.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAeCertificationType { Id=Guid.Parse("f218ccf5-4f6e-4960-bdcf-3ee91a927565"), Code="SpecialEducationCertification", Description="Special Education Certification", Definition="Special Education Certification is specified as the category of certification a person holds.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAeCertificationType { Id=Guid.Parse("562a5eda-0aa4-424e-9c32-5b4237edb484"), Code="TESOLCertification", Description="Teachers of English to Speakers of Other Languages (TESOL) Certification", Definition="Teachers of English to Speakers of Other Languages (TESOL) Certification is specified as the category of certification a person holds.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAeCertificationType { Id=Guid.Parse("e7e8cafd-7b32-4b4c-9632-dfb2a03a2da7"), Code="None", Description="None", Definition="None is specified as the category of certification a person holds.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefAeCertificationType Pick List
          /// </summary>
-        public static List<RefAeCertificationType> RefAeCertificationTypePickList = new List<RefAeCertificationType> =
+        public static List<RefAeCertificationType> RefAeCertificationTypePickList = new List<RefAeCertificationType>
         {
-            new RefAeCertificationType { Id=Guid.Parse("77e1da47-c1a7-4d54-a7c8-0c54cb84c730"), Code="Adult Education Certification is specified as the category of certification a person holds.", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("046a8458-0acd-4b08-8ec0-f89974470355"), Code="K-12 Certification is specified as the category of certification a person holds.", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("52ec1187-4849-45d1-b842-ccf8e5ed5299"), Code="Special Education Certification is specified as the category of certification a person holds.", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("335ff0f1-f647-4756-bbb0-5f44173a7c21"), Code="Teachers of English to Speakers of Other Languages (TESOL) Certification is specified as the category of certification a person holds.", SortOrder=0 },
-            new RefAeCertificationType { Id=Guid.Parse("59bd5df5-9161-47cf-b35c-a40ac64b9f4b"), Code="None is specified as the category of certification a person holds.", SortOrder=0 },
+            new RefAeCertificationType { Id=Guid.Parse("c0add7e4-f027-44f0-b066-be0252f0ecff"), Code="AdultEducationCertification", Description="Adult Education Certification", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAeCertificationType { Id=Guid.Parse("e81dd2ee-8a08-4354-9089-21e009203818"), Code="K-12Certification", Description="K-12 Certification", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAeCertificationType { Id=Guid.Parse("f218ccf5-4f6e-4960-bdcf-3ee91a927565"), Code="SpecialEducationCertification", Description="Special Education Certification", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAeCertificationType { Id=Guid.Parse("562a5eda-0aa4-424e-9c32-5b4237edb484"), Code="TESOLCertification", Description="Teachers of English to Speakers of Other Languages (TESOL) Certification", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAeCertificationType { Id=Guid.Parse("e7e8cafd-7b32-4b4c-9632-dfb2a03a2da7"), Code="None", Description="None", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

@@ -15,27 +15,27 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefMepStaffCategory"> List
          /// </summary>
-        public static List<RefMepStaffCategory> RefMepStaffCategoryList = new List<RefMepStaffCategory> =
+        public static List<RefMepStaffCategory> RefMepStaffCategoryList = new List<RefMepStaffCategory>
         {
-            new RefMepStaffCategory { Id=Guid.Parse("8ad2f208-0b62-4507-be72-43602063c728"), Code="Teachers is the category of staff working in the Migrant Education Program.", Description="Teachers", Definition="", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("ffb9f14c-55e7-4798-a490-e15b826077f1"), Code="Paraprofessionals  is the category of staff working in the Migrant Education Program.", Description="Paraprofessionals", Definition="", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("2971acb5-5d08-4714-935a-f0c398167b85"), Code="Counselors is the category of staff working in the Migrant Education Program.", Description="Counselors", Definition="", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("260b0b26-881e-40a0-a85b-8ba8f2a148f2"), Code="Administrators is the category of staff working in the Migrant Education Program.", Description="Administrators", Definition="", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("506d5025-efb7-4dec-8d11-f8d4511a1535"), Code="Recruiters is the category of staff working in the Migrant Education Program.", Description="Recruiters", Definition="", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("f539e404-1069-4662-bb09-55e9a06d03e4"), Code="Records Transfer Staff is the category of staff working in the Migrant Education Program.", Description="RecordsTransferStaff", Definition="", SortOrder=0 },
+            new RefMepStaffCategory { Id=Guid.Parse("5e3ac647-e8e1-4b3a-bc5e-9b1ad2bae562"), Code="Teachers", Description="Teachers", Definition="Teachers is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("ac8528c8-fb3b-4ca1-a536-be7dd67c96cc"), Code="Paraprofessionals", Description="Paraprofessionals", Definition="Paraprofessionals  is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("67a8b227-7c7a-4c95-9262-aa4620486285"), Code="Counselors", Description="Counselors", Definition="Counselors is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("c800ac93-9f90-4496-8b91-c7d4c796cc88"), Code="Administrators", Description="Administrators", Definition="Administrators is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("9aca83ab-4e9c-429f-9303-07b2c0d275ec"), Code="Recruiters", Description="Recruiters", Definition="Recruiters is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("dfd843ee-885e-4143-abbd-b541876517fa"), Code="RecordsTransferStaff", Description="Records Transfer Staff", Definition="Records Transfer Staff is the category of staff working in the Migrant Education Program.", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefMepStaffCategory Pick List
          /// </summary>
-        public static List<RefMepStaffCategory> RefMepStaffCategoryPickList = new List<RefMepStaffCategory> =
+        public static List<RefMepStaffCategory> RefMepStaffCategoryPickList = new List<RefMepStaffCategory>
         {
-            new RefMepStaffCategory { Id=Guid.Parse("8ad2f208-0b62-4507-be72-43602063c728"), Code="Teachers is the category of staff working in the Migrant Education Program.", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("ffb9f14c-55e7-4798-a490-e15b826077f1"), Code="Paraprofessionals  is the category of staff working in the Migrant Education Program.", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("2971acb5-5d08-4714-935a-f0c398167b85"), Code="Counselors is the category of staff working in the Migrant Education Program.", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("260b0b26-881e-40a0-a85b-8ba8f2a148f2"), Code="Administrators is the category of staff working in the Migrant Education Program.", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("506d5025-efb7-4dec-8d11-f8d4511a1535"), Code="Recruiters is the category of staff working in the Migrant Education Program.", SortOrder=0 },
-            new RefMepStaffCategory { Id=Guid.Parse("f539e404-1069-4662-bb09-55e9a06d03e4"), Code="Records Transfer Staff is the category of staff working in the Migrant Education Program.", SortOrder=0 },
+            new RefMepStaffCategory { Id=Guid.Parse("5e3ac647-e8e1-4b3a-bc5e-9b1ad2bae562"), Code="Teachers", Description="Teachers", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("ac8528c8-fb3b-4ca1-a536-be7dd67c96cc"), Code="Paraprofessionals", Description="Paraprofessionals", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("67a8b227-7c7a-4c95-9262-aa4620486285"), Code="Counselors", Description="Counselors", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("c800ac93-9f90-4496-8b91-c7d4c796cc88"), Code="Administrators", Description="Administrators", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("9aca83ab-4e9c-429f-9303-07b2c0d275ec"), Code="Recruiters", Description="Recruiters", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepStaffCategory { Id=Guid.Parse("dfd843ee-885e-4143-abbd-b541876517fa"), Code="RecordsTransferStaff", Description="Records Transfer Staff", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefMilitaryActiveStudentIndicator"> List
          /// </summary>
-        public static List<RefMilitaryActiveStudentIndicator> RefMilitaryActiveStudentIndicatorList = new List<RefMilitaryActiveStudentIndicator> =
+        public static List<RefMilitaryActiveStudentIndicator> RefMilitaryActiveStudentIndicatorList = new List<RefMilitaryActiveStudentIndicator>
         {
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("3cde8d9d-d61b-480f-8503-fac4ae4f6810"), Code="Student is not active in the military.", Description="NotActive", Definition="", SortOrder=0 },
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("2b876314-45a7-4a9c-908f-2e04c5d60013"), Code="Student is an Active member of the Active Duty Forces, National Guard, or Reserve Forces.", Description="Active", Definition="", SortOrder=0 },
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("a7e957ed-80e2-477b-a05c-99bdce63007b"), Code="It is unknown whether or not the Student is active in the military.", Description="Unknown", Definition="", SortOrder=0 },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("1c5bb6a1-d1a9-4bdd-a37c-ed88d85794ea"), Code="NotActive", Description="Not Active", Definition="Student is not active in the military.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("e54cac58-a535-45ab-8a4a-a708bf7a0e15"), Code="Active", Description="Active", Definition="Student is an Active member of the Active Duty Forces, National Guard, or Reserve Forces.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("36080f3b-43a1-4974-a05a-7f0fc72c7f24"), Code="Unknown", Description="Unknown", Definition="It is unknown whether or not the Student is active in the military.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefMilitaryActiveStudentIndicator Pick List
          /// </summary>
-        public static List<RefMilitaryActiveStudentIndicator> RefMilitaryActiveStudentIndicatorPickList = new List<RefMilitaryActiveStudentIndicator> =
+        public static List<RefMilitaryActiveStudentIndicator> RefMilitaryActiveStudentIndicatorPickList = new List<RefMilitaryActiveStudentIndicator>
         {
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("3cde8d9d-d61b-480f-8503-fac4ae4f6810"), Code="Student is not active in the military.", SortOrder=0 },
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("2b876314-45a7-4a9c-908f-2e04c5d60013"), Code="Student is an Active member of the Active Duty Forces, National Guard, or Reserve Forces.", SortOrder=0 },
-            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("a7e957ed-80e2-477b-a05c-99bdce63007b"), Code="It is unknown whether or not the Student is active in the military.", SortOrder=0 },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("1c5bb6a1-d1a9-4bdd-a37c-ed88d85794ea"), Code="NotActive", Description="Not Active", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("e54cac58-a535-45ab-8a4a-a708bf7a0e15"), Code="Active", Description="Active", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMilitaryActiveStudentIndicator { Id=Guid.Parse("36080f3b-43a1-4974-a05a-7f0fc72c7f24"), Code="Unknown", Description="Unknown", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

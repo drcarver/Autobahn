@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefMepServiceType"> List
          /// </summary>
-        public static List<RefMepServiceType> RefMepServiceTypeList = new List<RefMepServiceType> =
+        public static List<RefMepServiceType> RefMepServiceTypeList = new List<RefMepServiceType>
         {
-            new RefMepServiceType { Id=Guid.Parse("61a6f99d-4cae-4f43-9c5c-df852bad48e2"), Code="Counseling Services provided as part of a Migrant Education Program.", Description="CounselingServices", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("daa06554-d13b-447e-885a-532eb8e27382"), Code="High School Accrual provided as part of a Migrant Education Program.", Description="HighSchoolAccrual", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("4926ecd5-c118-4d2a-8b8b-a9a5f1840abe"), Code="Instructional Services provided as part of a Migrant Education Program.", Description="InstructionalServices", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("5a7009bc-be50-4559-9a6c-c000c136e241"), Code="Mathematics Instruction provided as part of a Migrant Education Program.", Description="MathematicsInstruction", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("8dd3c965-0cfc-4250-b7a2-fedefc8645a4"), Code="Reading Instruction provided as part of a Migrant Education Program.", Description="ReadingInstruction", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("c4848820-0aab-42f1-9c1f-be774caa77ee"), Code="Referral Services provided as part of a Migrant Education Program.", Description="ReferralServices", Definition="", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("ace3b3eb-99cf-4994-b40b-c7ffdfcb6e16"), Code="Support Services provided as part of a Migrant Education Program.", Description="SupportServices", Definition="", SortOrder=0 },
+            new RefMepServiceType { Id=Guid.Parse("1bb43172-5e49-4a04-9758-8f49b365a41c"), Code="CounselingServices", Description="Counseling Services", Definition="Counseling Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepServiceType { Id=Guid.Parse("24988111-8216-422e-a617-a913a28c6cdf"), Code="HighSchoolAccrual", Description="High School Accrual", Definition="High School Accrual provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepServiceType { Id=Guid.Parse("e4086f08-74bf-4b5e-b35a-4dc61d29e22b"), Code="InstructionalServices", Description="Instructional Services", Definition="Instructional Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepServiceType { Id=Guid.Parse("4dae7ece-961e-4ac1-b00c-faf8e732813f"), Code="MathematicsInstruction", Description="Mathematics Instruction", Definition="Mathematics Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepServiceType { Id=Guid.Parse("9e3e08ca-d248-4040-8ca2-96a31909c75f"), Code="ReadingInstruction", Description="Reading Instruction", Definition="Reading Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepServiceType { Id=Guid.Parse("f1afe50b-954e-496c-aca9-536a424ecad1"), Code="ReferralServices", Description="Referral Services", Definition="Referral Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefMepServiceType { Id=Guid.Parse("c21f650f-85ec-4520-9bbe-979dd17d0f1a"), Code="SupportServices", Description="Support Services", Definition="Support Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefMepServiceType Pick List
          /// </summary>
-        public static List<RefMepServiceType> RefMepServiceTypePickList = new List<RefMepServiceType> =
+        public static List<RefMepServiceType> RefMepServiceTypePickList = new List<RefMepServiceType>
         {
-            new RefMepServiceType { Id=Guid.Parse("61a6f99d-4cae-4f43-9c5c-df852bad48e2"), Code="Counseling Services provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("daa06554-d13b-447e-885a-532eb8e27382"), Code="High School Accrual provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("4926ecd5-c118-4d2a-8b8b-a9a5f1840abe"), Code="Instructional Services provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("5a7009bc-be50-4559-9a6c-c000c136e241"), Code="Mathematics Instruction provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("8dd3c965-0cfc-4250-b7a2-fedefc8645a4"), Code="Reading Instruction provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("c4848820-0aab-42f1-9c1f-be774caa77ee"), Code="Referral Services provided as part of a Migrant Education Program.", SortOrder=0 },
-            new RefMepServiceType { Id=Guid.Parse("ace3b3eb-99cf-4994-b40b-c7ffdfcb6e16"), Code="Support Services provided as part of a Migrant Education Program.", SortOrder=0 },
+            new RefMepServiceType { Id=Guid.Parse("1bb43172-5e49-4a04-9758-8f49b365a41c"), Code="CounselingServices", Description="Counseling Services", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepServiceType { Id=Guid.Parse("24988111-8216-422e-a617-a913a28c6cdf"), Code="HighSchoolAccrual", Description="High School Accrual", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepServiceType { Id=Guid.Parse("e4086f08-74bf-4b5e-b35a-4dc61d29e22b"), Code="InstructionalServices", Description="Instructional Services", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepServiceType { Id=Guid.Parse("4dae7ece-961e-4ac1-b00c-faf8e732813f"), Code="MathematicsInstruction", Description="Mathematics Instruction", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepServiceType { Id=Guid.Parse("9e3e08ca-d248-4040-8ca2-96a31909c75f"), Code="ReadingInstruction", Description="Reading Instruction", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepServiceType { Id=Guid.Parse("f1afe50b-954e-496c-aca9-536a424ecad1"), Code="ReferralServices", Description="Referral Services", SortOrder=Convert.ToDecimal("6.00") },
+            new RefMepServiceType { Id=Guid.Parse("c21f650f-85ec-4520-9bbe-979dd17d0f1a"), Code="SupportServices", Description="Support Services", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

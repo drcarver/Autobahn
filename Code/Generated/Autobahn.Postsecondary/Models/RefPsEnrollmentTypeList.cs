@@ -15,23 +15,23 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefPsEnrollmentType"> List
          /// </summary>
-        public static List<RefPsEnrollmentType> RefPsEnrollmentTypeList = new List<RefPsEnrollmentType> =
+        public static List<RefPsEnrollmentType> RefPsEnrollmentTypeList = new List<RefPsEnrollmentType>
         {
-            new RefPsEnrollmentType { Id=Guid.Parse("69b58989-0cc2-49f7-b970-f8aac2acfbc5"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: First time at institution, non-transfer in.", Description="FirstTime", Definition="", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("89a1d011-8681-4eac-ab3c-305fd5bbb43d"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Continuing.", Description="Continuing", Definition="", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("977bd662-1a6e-4c86-b80d-34055368bbca"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Re-admit.", Description="Re-admit", Definition="", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("a7209df8-0fb2-422f-b25e-7aa0bb4c3372"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Transfer in.", Description="TransferIn", Definition="", SortOrder=0 },
+            new RefPsEnrollmentType { Id=Guid.Parse("1b38a07a-6e96-418d-8eff-f0fd7ee715e5"), Code="FirstTime", Description="First time at institution, non-transfer in", Definition="The person's enrollment type associated with the enrollment award level at the beginning of a term is: First time at institution, non-transfer in.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("5c2439fd-7f81-474a-8393-853767fa45aa"), Code="Continuing", Description="Continuing", Definition="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Continuing.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("b18963c8-53ed-4042-99eb-055b8ad9a844"), Code="Re-admit", Description="Re-admit", Definition="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Re-admit.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("c4d69c9a-fbc1-4f60-87f6-429d0e66bf3a"), Code="TransferIn", Description="Transfer in", Definition="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Transfer in.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefPsEnrollmentType Pick List
          /// </summary>
-        public static List<RefPsEnrollmentType> RefPsEnrollmentTypePickList = new List<RefPsEnrollmentType> =
+        public static List<RefPsEnrollmentType> RefPsEnrollmentTypePickList = new List<RefPsEnrollmentType>
         {
-            new RefPsEnrollmentType { Id=Guid.Parse("69b58989-0cc2-49f7-b970-f8aac2acfbc5"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: First time at institution, non-transfer in.", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("89a1d011-8681-4eac-ab3c-305fd5bbb43d"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Continuing.", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("977bd662-1a6e-4c86-b80d-34055368bbca"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Re-admit.", SortOrder=0 },
-            new RefPsEnrollmentType { Id=Guid.Parse("a7209df8-0fb2-422f-b25e-7aa0bb4c3372"), Code="The person's enrollment type associated with the enrollment award level at the beginning of a term is: Transfer in.", SortOrder=0 },
+            new RefPsEnrollmentType { Id=Guid.Parse("1b38a07a-6e96-418d-8eff-f0fd7ee715e5"), Code="FirstTime", Description="First time at institution, non-transfer in", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("5c2439fd-7f81-474a-8393-853767fa45aa"), Code="Continuing", Description="Continuing", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("b18963c8-53ed-4042-99eb-055b8ad9a844"), Code="Re-admit", Description="Re-admit", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPsEnrollmentType { Id=Guid.Parse("c4d69c9a-fbc1-4f60-87f6-429d0e66bf3a"), Code="TransferIn", Description="Transfer in", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

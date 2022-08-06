@@ -15,35 +15,35 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingEnergyConservationMeasureType"> List
          /// </summary>
-        public static List<RefBuildingEnergyConservationMeasureType> RefBuildingEnergyConservationMeasureTypeList = new List<RefBuildingEnergyConservationMeasureType> =
+        public static List<RefBuildingEnergyConservationMeasureType> RefBuildingEnergyConservationMeasureTypeList = new List<RefBuildingEnergyConservationMeasureType>
         {
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("2642d5f5-7d01-4d55-b313-d126f83c1e56"), Code="Practice of using natural light, rather than electric lights, to illuminate a space.", Description="13653", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("d21d66bc-cd95-47cc-ab89-137dd3e28351"), Code="Process of removing lamps from a light fixture--for example, using only 2 fluorescent tubes in a 3-tube fixture--wherever there is extra light.", Description="13654", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("cd3899fb-7fb8-4a9a-a654-58e0c84151df"), Code="The replacement of a HVAC system with one that is more energy efficient.", Description="02848", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("02f1113f-5e3d-4b60-b6ee-12d76acb6493"), Code="The installation of energy controls that increase the energy efficiency of a building.", Description="02847", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("dc71ac51-efaf-4774-b904-96bb32c2d9bc"), Code="Installation of solar equipment is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", Description="14904", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("dbf57ca6-c5a1-416a-ae34-7daa7763a8ac"), Code="The replacement or addition of insulation to a building to make it more energy efficient.", Description="02850", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("62041d84-8a61-4a68-8c96-ff4cd33e4e1a"), Code="The replacement of lighting systems or fixtures with those that are more energy efficient.", Description="02849", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("13801a90-2e5d-4a0f-99fd-82b5682fcc53"), Code="The replacement of lamps that are not performing at peak performance.", Description="14903", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("d27fa673-805a-4169-b303-2c40a8cc1f6d"), Code="The replacement of windows in a building with those that increase energy efficiency.", Description="02846", Definition="", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("87b08370-8468-4e75-b8a8-b6387b19b21a"), Code="Other is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("ecca76ca-2315-4167-a6b7-101386ebe1d1"), Code="13653", Description="Daylighting", Definition="Practice of using natural light, rather than electric lights, to illuminate a space.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("3f073cea-a5e4-4b2f-93e2-346853aa07fd"), Code="13654", Description="Delamping", Definition="Process of removing lamps from a light fixture--for example, using only 2 fluorescent tubes in a 3-tube fixture--wherever there is extra light.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("117aaf1f-1bfa-430e-8dee-758589fdeeea"), Code="02848", Description="HVAC replacement", Definition="The replacement of a HVAC system with one that is more energy efficient.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("7d890872-d192-4477-bac4-fd39aa6511cd"), Code="02847", Description="Installation of energy controls", Definition="The installation of energy controls that increase the energy efficiency of a building.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("a7951c9b-5e6a-4827-b4c8-799c6809da78"), Code="14904", Description="Installation of solar equipment", Definition="Installation of solar equipment is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("a6697657-ad98-4e15-a0cd-fda4234dd622"), Code="02850", Description="Insulation improvements", Definition="The replacement or addition of insulation to a building to make it more energy efficient.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("ba247c5f-0bb1-40f6-a706-00bc6d06f812"), Code="02849", Description="Lighting replacement", Definition="The replacement of lighting systems or fixtures with those that are more energy efficient.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("c63ce31b-6923-4cc0-858d-d1cfc8415aba"), Code="14903", Description="Relamping", Definition="The replacement of lamps that are not performing at peak performance.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("3fa24edb-3638-4436-8e5a-c60dc3f88f1a"), Code="02846", Description="Window replacement", Definition="The replacement of windows in a building with those that increase energy efficiency.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("0c089d3e-ec3b-4e92-8b97-b32e727699be"), Code="09999", Description="Other", Definition="Other is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingEnergyConservationMeasureType Pick List
          /// </summary>
-        public static List<RefBuildingEnergyConservationMeasureType> RefBuildingEnergyConservationMeasureTypePickList = new List<RefBuildingEnergyConservationMeasureType> =
+        public static List<RefBuildingEnergyConservationMeasureType> RefBuildingEnergyConservationMeasureTypePickList = new List<RefBuildingEnergyConservationMeasureType>
         {
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("2642d5f5-7d01-4d55-b313-d126f83c1e56"), Code="Practice of using natural light, rather than electric lights, to illuminate a space.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("d21d66bc-cd95-47cc-ab89-137dd3e28351"), Code="Process of removing lamps from a light fixture--for example, using only 2 fluorescent tubes in a 3-tube fixture--wherever there is extra light.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("cd3899fb-7fb8-4a9a-a654-58e0c84151df"), Code="The replacement of a HVAC system with one that is more energy efficient.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("02f1113f-5e3d-4b60-b6ee-12d76acb6493"), Code="The installation of energy controls that increase the energy efficiency of a building.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("dc71ac51-efaf-4774-b904-96bb32c2d9bc"), Code="Installation of solar equipment is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("dbf57ca6-c5a1-416a-ae34-7daa7763a8ac"), Code="The replacement or addition of insulation to a building to make it more energy efficient.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("62041d84-8a61-4a68-8c96-ff4cd33e4e1a"), Code="The replacement of lighting systems or fixtures with those that are more energy efficient.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("13801a90-2e5d-4a0f-99fd-82b5682fcc53"), Code="The replacement of lamps that are not performing at peak performance.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("d27fa673-805a-4169-b303-2c40a8cc1f6d"), Code="The replacement of windows in a building with those that increase energy efficiency.", SortOrder=0 },
-            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("87b08370-8468-4e75-b8a8-b6387b19b21a"), Code="Other is specified as the type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.", SortOrder=0 },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("ecca76ca-2315-4167-a6b7-101386ebe1d1"), Code="13653", Description="Daylighting", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("3f073cea-a5e4-4b2f-93e2-346853aa07fd"), Code="13654", Description="Delamping", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("117aaf1f-1bfa-430e-8dee-758589fdeeea"), Code="02848", Description="HVAC replacement", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("7d890872-d192-4477-bac4-fd39aa6511cd"), Code="02847", Description="Installation of energy controls", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("a7951c9b-5e6a-4827-b4c8-799c6809da78"), Code="14904", Description="Installation of solar equipment", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("a6697657-ad98-4e15-a0cd-fda4234dd622"), Code="02850", Description="Insulation improvements", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("ba247c5f-0bb1-40f6-a706-00bc6d06f812"), Code="02849", Description="Lighting replacement", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("c63ce31b-6923-4cc0-858d-d1cfc8415aba"), Code="14903", Description="Relamping", SortOrder=Convert.ToDecimal("8.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("3fa24edb-3638-4436-8e5a-c60dc3f88f1a"), Code="02846", Description="Window replacement", SortOrder=Convert.ToDecimal("9.00") },
+            new RefBuildingEnergyConservationMeasureType { Id=Guid.Parse("0c089d3e-ec3b-4e92-8b97-b32e727699be"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

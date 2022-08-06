@@ -15,19 +15,19 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefNeedDeterminationMethod"> List
          /// </summary>
-        public static List<RefNeedDeterminationMethod> RefNeedDeterminationMethodList = new List<RefNeedDeterminationMethod> =
+        public static List<RefNeedDeterminationMethod> RefNeedDeterminationMethodList = new List<RefNeedDeterminationMethod>
         {
-            new RefNeedDeterminationMethod { Id=Guid.Parse("da0dabca-86a7-4a4b-801b-d6fc9a0546da"), Code="Federal", Description="Federal", Definition="", SortOrder=0 },
-            new RefNeedDeterminationMethod { Id=Guid.Parse("bb2b8807-ce54-4c02-b213-1f275650c656"), Code="Institutional", Description="Institutional", Definition="", SortOrder=0 },
+            new RefNeedDeterminationMethod { Id=Guid.Parse("b87db85d-8a10-4f1f-8b68-f7eb529c4987"), Code="Federal", Description="Federal", Definition="Federal", SortOrder=Convert.ToDecimal("1.00") },
+            new RefNeedDeterminationMethod { Id=Guid.Parse("6fc40ac5-d687-4ad5-9d36-330b21fc2a2a"), Code="Institutional", Description="Institutional", Definition="Institutional", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefNeedDeterminationMethod Pick List
          /// </summary>
-        public static List<RefNeedDeterminationMethod> RefNeedDeterminationMethodPickList = new List<RefNeedDeterminationMethod> =
+        public static List<RefNeedDeterminationMethod> RefNeedDeterminationMethodPickList = new List<RefNeedDeterminationMethod>
         {
-            new RefNeedDeterminationMethod { Id=Guid.Parse("da0dabca-86a7-4a4b-801b-d6fc9a0546da"), Code="Federal", SortOrder=0 },
-            new RefNeedDeterminationMethod { Id=Guid.Parse("bb2b8807-ce54-4c02-b213-1f275650c656"), Code="Institutional", SortOrder=0 },
+            new RefNeedDeterminationMethod { Id=Guid.Parse("b87db85d-8a10-4f1f-8b68-f7eb529c4987"), Code="Federal", Description="Federal", SortOrder=Convert.ToDecimal("1.00") },
+            new RefNeedDeterminationMethod { Id=Guid.Parse("6fc40ac5-d687-4ad5-9d36-330b21fc2a2a"), Code="Institutional", Description="Institutional", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

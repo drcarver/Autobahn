@@ -15,31 +15,31 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingAssemblySpaceType"> List
          /// </summary>
-        public static List<RefBuildingAssemblySpaceType> RefBuildingAssemblySpaceTypeList = new List<RefBuildingAssemblySpaceType> =
+        public static List<RefBuildingAssemblySpaceType> RefBuildingAssemblySpaceTypeList = new List<RefBuildingAssemblySpaceType>
         {
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9193ba40-81c0-4637-b4e2-279ae5c028a8"), Code="A space with a stage and audience seating to accommodate performing arts or other activities for a large audience.", Description="02768", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("688860fb-ebdd-4029-a786-ef26b4f5d92d"), Code="A space for actors and actresses to use before and during performances.", Description="02772", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9bbdcf3f-a9cf-46c4-bfbd-804aca52fe10"), Code="A space adjacent to the auditorium and equipped with a viewing area and built-in projection equipment.", Description="02769", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("d2dfbe09-9a45-46b4-adc1-b29d89613700"), Code="A space for costume storage.", Description="02770", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("de40a9fa-2f33-479e-a8e9-acf0929a63c4"), Code="A space that provides temporary shelter for individuals whose residences have been made uninhabitable by fire, flood, earthquake, or other major disaster.", Description="03108", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("e73622d8-1d4f-4c08-97e1-92dd054971d6"), Code="A space with a stage and movable chairs designed for assemblies, but also usable for other purposes.", Description="02773", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("eaadb4b2-8b39-45e2-95d1-3672b1c73c96"), Code="A space for set storage.", Description="02771", Definition="", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("d61cc6d5-8685-4eaa-b3d3-07a59caf761a"), Code="Other is specified as an area designed primarily for theater productions, assemblies, and other large gatherings.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b036ef85-a25b-49b4-ba10-bcc1ef744b10"), Code="02768", Description="Auditorium (fixed seats)", Definition="A space with a stage and audience seating to accommodate performing arts or other activities for a large audience.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("a74506a2-769f-4a9d-8545-43250fd3891b"), Code="02772", Description="Backstage room/green room", Definition="A space for actors and actresses to use before and during performances.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9558b667-8cb6-4517-b697-9a65bdf0078c"), Code="02769", Description="Control room", Definition="A space adjacent to the auditorium and equipped with a viewing area and built-in projection equipment.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("bd338594-d2f9-4dff-b5a5-5d76e010239c"), Code="02770", Description="Costume storage area", Definition="A space for costume storage.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("fe99348c-8ade-465e-aee0-9b84baa0928d"), Code="03108", Description="Disaster shelter area", Definition="A space that provides temporary shelter for individuals whose residences have been made uninhabitable by fire, flood, earthquake, or other major disaster.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b3c25b95-3d06-4057-8bae-687befe8bacc"), Code="02773", Description="Multi-purpose Room", Definition="A space with a stage and movable chairs designed for assemblies, but also usable for other purposes.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("8faf656d-d38c-4583-a2a9-281595b3a41a"), Code="02771", Description="Set storage area", Definition="A space for set storage.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b9c31feb-bb89-4542-8b8f-1c73e155b3f6"), Code="09999", Description="Other", Definition="Other is specified as an area designed primarily for theater productions, assemblies, and other large gatherings.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingAssemblySpaceType Pick List
          /// </summary>
-        public static List<RefBuildingAssemblySpaceType> RefBuildingAssemblySpaceTypePickList = new List<RefBuildingAssemblySpaceType> =
+        public static List<RefBuildingAssemblySpaceType> RefBuildingAssemblySpaceTypePickList = new List<RefBuildingAssemblySpaceType>
         {
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9193ba40-81c0-4637-b4e2-279ae5c028a8"), Code="A space with a stage and audience seating to accommodate performing arts or other activities for a large audience.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("688860fb-ebdd-4029-a786-ef26b4f5d92d"), Code="A space for actors and actresses to use before and during performances.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9bbdcf3f-a9cf-46c4-bfbd-804aca52fe10"), Code="A space adjacent to the auditorium and equipped with a viewing area and built-in projection equipment.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("d2dfbe09-9a45-46b4-adc1-b29d89613700"), Code="A space for costume storage.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("de40a9fa-2f33-479e-a8e9-acf0929a63c4"), Code="A space that provides temporary shelter for individuals whose residences have been made uninhabitable by fire, flood, earthquake, or other major disaster.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("e73622d8-1d4f-4c08-97e1-92dd054971d6"), Code="A space with a stage and movable chairs designed for assemblies, but also usable for other purposes.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("eaadb4b2-8b39-45e2-95d1-3672b1c73c96"), Code="A space for set storage.", SortOrder=0 },
-            new RefBuildingAssemblySpaceType { Id=Guid.Parse("d61cc6d5-8685-4eaa-b3d3-07a59caf761a"), Code="Other is specified as an area designed primarily for theater productions, assemblies, and other large gatherings.", SortOrder=0 },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b036ef85-a25b-49b4-ba10-bcc1ef744b10"), Code="02768", Description="Auditorium (fixed seats)", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("a74506a2-769f-4a9d-8545-43250fd3891b"), Code="02772", Description="Backstage room/green room", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("9558b667-8cb6-4517-b697-9a65bdf0078c"), Code="02769", Description="Control room", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("bd338594-d2f9-4dff-b5a5-5d76e010239c"), Code="02770", Description="Costume storage area", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("fe99348c-8ade-465e-aee0-9b84baa0928d"), Code="03108", Description="Disaster shelter area", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b3c25b95-3d06-4057-8bae-687befe8bacc"), Code="02773", Description="Multi-purpose Room", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("8faf656d-d38c-4583-a2a9-281595b3a41a"), Code="02771", Description="Set storage area", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingAssemblySpaceType { Id=Guid.Parse("b9c31feb-bb89-4542-8b8f-1c73e155b3f6"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

@@ -15,14 +15,14 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefTimeForCompletionUnit"> List
          /// </summary>
-        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitList = new List<RefTimeForCompletionUnit> =
+        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitList = new List<RefTimeForCompletionUnit>
         {
         };
 
         /// <summary>
         /// The RefTimeForCompletionUnit Pick List
          /// </summary>
-        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitPickList = new List<RefTimeForCompletionUnit> =
+        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitPickList = new List<RefTimeForCompletionUnit>
         {
        };
    }

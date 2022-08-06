@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIEPGoalType"> List
          /// </summary>
-        public static List<RefIEPGoalType> RefIEPGoalTypeList = new List<RefIEPGoalType> =
+        public static List<RefIEPGoalType> RefIEPGoalTypeList = new List<RefIEPGoalType>
         {
-            new RefIEPGoalType { Id=Guid.Parse("9f747da9-3ad3-4783-85b3-088c7adb36dd"), Code="Academic is the legal category for an IEP annual goal or short-term objectives.", Description="Academic", Definition="", SortOrder=0 },
-            new RefIEPGoalType { Id=Guid.Parse("c19e9b4c-8ae0-4395-87d4-c3ca9f1aea81"), Code="Functional is the legal category for an IEP annual goal or short-term objectives.", Description="Functional", Definition="", SortOrder=0 },
-            new RefIEPGoalType { Id=Guid.Parse("e343a864-0004-4e3d-bb4a-5bfebde24dc9"), Code="Transitional is the legal category for an IEP annual goal or short-term objectives.", Description="Transitional", Definition="", SortOrder=0 },
+            new RefIEPGoalType { Id=Guid.Parse("926db572-4bb2-42f0-a24b-17d6e35f96be"), Code="Academic", Description="Academic", Definition="Academic is the legal category for an IEP annual goal or short-term objectives.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPGoalType { Id=Guid.Parse("11adcb5d-61cf-4e87-86a2-d0fb59d928a5"), Code="Functional", Description="Functional", Definition="Functional is the legal category for an IEP annual goal or short-term objectives.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPGoalType { Id=Guid.Parse("31577a50-1e05-4229-a03b-ef390d5af96c"), Code="Transitional", Description="Transitional", Definition="Transitional is the legal category for an IEP annual goal or short-term objectives.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefIEPGoalType Pick List
          /// </summary>
-        public static List<RefIEPGoalType> RefIEPGoalTypePickList = new List<RefIEPGoalType> =
+        public static List<RefIEPGoalType> RefIEPGoalTypePickList = new List<RefIEPGoalType>
         {
-            new RefIEPGoalType { Id=Guid.Parse("9f747da9-3ad3-4783-85b3-088c7adb36dd"), Code="Academic is the legal category for an IEP annual goal or short-term objectives.", SortOrder=0 },
-            new RefIEPGoalType { Id=Guid.Parse("c19e9b4c-8ae0-4395-87d4-c3ca9f1aea81"), Code="Functional is the legal category for an IEP annual goal or short-term objectives.", SortOrder=0 },
-            new RefIEPGoalType { Id=Guid.Parse("e343a864-0004-4e3d-bb4a-5bfebde24dc9"), Code="Transitional is the legal category for an IEP annual goal or short-term objectives.", SortOrder=0 },
+            new RefIEPGoalType { Id=Guid.Parse("926db572-4bb2-42f0-a24b-17d6e35f96be"), Code="Academic", Description="Academic", SortOrder=Convert.ToDecimal("") },
+            new RefIEPGoalType { Id=Guid.Parse("11adcb5d-61cf-4e87-86a2-d0fb59d928a5"), Code="Functional", Description="Functional", SortOrder=Convert.ToDecimal("") },
+            new RefIEPGoalType { Id=Guid.Parse("31577a50-1e05-4229-a03b-ef390d5af96c"), Code="Transitional", Description="Transitional", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

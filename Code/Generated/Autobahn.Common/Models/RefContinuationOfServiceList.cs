@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefContinuationOfService"> List
          /// </summary>
-        public static List<RefContinuationOfService> RefContinuationOfServiceList = new List<RefContinuationOfService> =
+        public static List<RefContinuationOfService> RefContinuationOfServiceList = new List<RefContinuationOfService>
         {
         };
 
         /// <summary>
         /// The RefContinuationOfService Pick List
          /// </summary>
-        public static List<RefContinuationOfService> RefContinuationOfServicePickList = new List<RefContinuationOfService> =
+        public static List<RefContinuationOfService> RefContinuationOfServicePickList = new List<RefContinuationOfService>
         {
        };
    }

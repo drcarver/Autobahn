@@ -15,29 +15,29 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentReasonNotTested"> List
          /// </summary>
-        public static List<RefAssessmentReasonNotTested> RefAssessmentReasonNotTestedList = new List<RefAssessmentReasonNotTested> =
+        public static List<RefAssessmentReasonNotTested> RefAssessmentReasonNotTestedList = new List<RefAssessmentReasonNotTested>
         {
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("d39bbf8a-2882-4913-bab7-a3626c00451d"), Code="Absent is the primary reason the student was not tested.", Description="03451", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("eb803c29-faeb-4e10-aaf9-32a021e40b06"), Code="Disruptive behavior is the primary reason the student was not tested.", Description="03455", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("9e494b40-8e09-4e9f-a9c5-43d1521d34a4"), Code="Medical waiver is the primary reason the student was not tested.", Description="03454", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("43c485c4-76ef-47da-af77-92ae636f7b9b"), Code="Previously passed the examination is the primary reason the student was not tested.", Description="03456", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("b41b9891-d00d-4f98-9e6c-2e50cb207bb1"), Code="Refusal by parent is the primary reason the student was not tested.", Description="03452", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("118ee4cf-1f30-4785-9588-c403254f1fb8"), Code="Refusal by student is the primary reason the student was not tested.", Description="03453", Definition="", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("f51585cd-1c2f-418d-9679-6acb2cc0dbb1"), Code="The primary reason the student was not tested is in a category not yet defined in CEDS.", Description="09999", Definition="", SortOrder=0 },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("5c472c32-4983-4101-a6de-f7c63ad04dc9"), Code="03451", Description="Absent", Definition="Absent is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("cc7a7424-ea3d-47e7-b94c-797ad117e112"), Code="03455", Description="Disruptive behavior", Definition="Disruptive behavior is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("51907085-6518-4ff0-94c4-a504d755fc95"), Code="03454", Description="Medical waiver", Definition="Medical waiver is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("e91ce630-26a9-455b-9dde-f4a36eea5afa"), Code="03456", Description="Previously passed the examination", Definition="Previously passed the examination is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("202433f8-8a74-4e74-9bd8-e9cffddcc862"), Code="03452", Description="Refusal by parent", Definition="Refusal by parent is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("05831033-b3df-429d-980c-678e012f36bc"), Code="03453", Description="Refusal by student", Definition="Refusal by student is the primary reason the student was not tested.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("aa170888-0e44-4710-a1f4-bced119cff7c"), Code="09999", Description="Other", Definition="The primary reason the student was not tested is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefAssessmentReasonNotTested Pick List
          /// </summary>
-        public static List<RefAssessmentReasonNotTested> RefAssessmentReasonNotTestedPickList = new List<RefAssessmentReasonNotTested> =
+        public static List<RefAssessmentReasonNotTested> RefAssessmentReasonNotTestedPickList = new List<RefAssessmentReasonNotTested>
         {
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("d39bbf8a-2882-4913-bab7-a3626c00451d"), Code="Absent is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("eb803c29-faeb-4e10-aaf9-32a021e40b06"), Code="Disruptive behavior is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("9e494b40-8e09-4e9f-a9c5-43d1521d34a4"), Code="Medical waiver is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("43c485c4-76ef-47da-af77-92ae636f7b9b"), Code="Previously passed the examination is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("b41b9891-d00d-4f98-9e6c-2e50cb207bb1"), Code="Refusal by parent is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("118ee4cf-1f30-4785-9588-c403254f1fb8"), Code="Refusal by student is the primary reason the student was not tested.", SortOrder=0 },
-            new RefAssessmentReasonNotTested { Id=Guid.Parse("f51585cd-1c2f-418d-9679-6acb2cc0dbb1"), Code="The primary reason the student was not tested is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("5c472c32-4983-4101-a6de-f7c63ad04dc9"), Code="03451", Description="Absent", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("cc7a7424-ea3d-47e7-b94c-797ad117e112"), Code="03455", Description="Disruptive behavior", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("51907085-6518-4ff0-94c4-a504d755fc95"), Code="03454", Description="Medical waiver", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("e91ce630-26a9-455b-9dde-f4a36eea5afa"), Code="03456", Description="Previously passed the examination", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("202433f8-8a74-4e74-9bd8-e9cffddcc862"), Code="03452", Description="Refusal by parent", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("05831033-b3df-429d-980c-678e012f36bc"), Code="03453", Description="Refusal by student", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentReasonNotTested { Id=Guid.Parse("aa170888-0e44-4710-a1f4-bced119cff7c"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

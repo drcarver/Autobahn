@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefERAdministrativeDataSource"> List
          /// </summary>
-        public static List<RefERAdministrativeDataSource> RefERAdministrativeDataSourceList = new List<RefERAdministrativeDataSource> =
+        public static List<RefERAdministrativeDataSource> RefERAdministrativeDataSourceList = new List<RefERAdministrativeDataSource>
         {
-            new RefERAdministrativeDataSource { Id=Guid.Parse("36895a43-5c9b-460c-bac4-7b290f2c2b48"), Code="State UI Wage Records is the administrative data source of information used to collect employment and earnings-related data.", Description="01", Definition="", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("fa4973a9-ab76-4761-8524-469f3994a22a"), Code="Wage Record Interchange System (WRIS II) is the administrative data source of information used to collect employment and earnings-related data.", Description="02", Definition="", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("4fc4346b-cb07-4bdc-9850-fab2c6d8f752"), Code="Federal Employment Data Exchange System (FEDES) is the administrative data source of information used to collect employment and earnings-related data.", Description="03", Definition="", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("c180e89e-ef66-4c25-8998-8bf64148aad3"), Code="The administrative data source of information used to collect employment and earnings-related data is in a category not defined in CEDS.", Description="04", Definition="", SortOrder=0 },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("645d39af-8dc1-4e1e-96a6-9eff70cfd667"), Code="01", Description="State UI Wage Records", Definition="State UI Wage Records is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("2d815938-5814-452f-84b0-7775c505a3ea"), Code="02", Description="Wage Record Interchange System (WRIS II)", Definition="Wage Record Interchange System (WRIS II) is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("01b333ae-a0c6-4a7e-bb48-808aead016e3"), Code="03", Description="Federal Employment Data Exchange System (FEDES)", Definition="Federal Employment Data Exchange System (FEDES) is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("6e6ed856-c207-46f5-9cc3-7aba504a2612"), Code="04", Description="Other", Definition="The administrative data source of information used to collect employment and earnings-related data is in a category not defined in CEDS.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefERAdministrativeDataSource Pick List
          /// </summary>
-        public static List<RefERAdministrativeDataSource> RefERAdministrativeDataSourcePickList = new List<RefERAdministrativeDataSource> =
+        public static List<RefERAdministrativeDataSource> RefERAdministrativeDataSourcePickList = new List<RefERAdministrativeDataSource>
         {
-            new RefERAdministrativeDataSource { Id=Guid.Parse("36895a43-5c9b-460c-bac4-7b290f2c2b48"), Code="State UI Wage Records is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("fa4973a9-ab76-4761-8524-469f3994a22a"), Code="Wage Record Interchange System (WRIS II) is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("4fc4346b-cb07-4bdc-9850-fab2c6d8f752"), Code="Federal Employment Data Exchange System (FEDES) is the administrative data source of information used to collect employment and earnings-related data.", SortOrder=0 },
-            new RefERAdministrativeDataSource { Id=Guid.Parse("c180e89e-ef66-4c25-8998-8bf64148aad3"), Code="The administrative data source of information used to collect employment and earnings-related data is in a category not defined in CEDS.", SortOrder=0 },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("645d39af-8dc1-4e1e-96a6-9eff70cfd667"), Code="01", Description="State UI Wage Records", SortOrder=Convert.ToDecimal("1.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("2d815938-5814-452f-84b0-7775c505a3ea"), Code="02", Description="Wage Record Interchange System (WRIS II)", SortOrder=Convert.ToDecimal("2.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("01b333ae-a0c6-4a7e-bb48-808aead016e3"), Code="03", Description="Federal Employment Data Exchange System (FEDES)", SortOrder=Convert.ToDecimal("3.00") },
+            new RefERAdministrativeDataSource { Id=Guid.Parse("6e6ed856-c207-46f5-9cc3-7aba504a2612"), Code="04", Description="Other", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIndividualizedProgramTransitionType"> List
          /// </summary>
-        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypeList = new List<RefIndividualizedProgramTransitionType> =
+        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypeList = new List<RefIndividualizedProgramTransitionType>
         {
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("3102e049-d439-481a-98f4-c2d667e9663e"), Code="Postsecondary education or training is the type of post-school transition plan for the student recorded on their Individualized Education Program.", Description="03426", Definition="", SortOrder=0 },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("259c6a32-6991-4f3a-92d0-286177ac3aa7"), Code="Work is the type of post-school transition plan for the student recorded on their Individualized Education Program.", Description="00518", Definition="", SortOrder=0 },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("4bf9d447-d70e-4bcc-b76c-683e89420266"), Code="No post-school transition plan for the student was recorded on their Individualized Education Program.", Description="09998", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("0e4d41a1-cc8f-4471-ba71-3070f2210af3"), Code="03426", Description="Postsecondary education or training", Definition="Postsecondary education or training is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b46ef99e-400d-4944-a708-48d5271c8d48"), Code="00518", Description="Work", Definition="Work is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("97865346-eebf-4f87-8de9-6eb8df67b1ed"), Code="09998", Description="None", Definition="No post-school transition plan for the student was recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefIndividualizedProgramTransitionType Pick List
          /// </summary>
-        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypePickList = new List<RefIndividualizedProgramTransitionType> =
+        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypePickList = new List<RefIndividualizedProgramTransitionType>
         {
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("3102e049-d439-481a-98f4-c2d667e9663e"), Code="Postsecondary education or training is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=0 },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("259c6a32-6991-4f3a-92d0-286177ac3aa7"), Code="Work is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=0 },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("4bf9d447-d70e-4bcc-b76c-683e89420266"), Code="No post-school transition plan for the student was recorded on their Individualized Education Program.", SortOrder=0 },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("0e4d41a1-cc8f-4471-ba71-3070f2210af3"), Code="03426", Description="Postsecondary education or training", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b46ef99e-400d-4944-a708-48d5271c8d48"), Code="00518", Description="Work", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("97865346-eebf-4f87-8de9-6eb8df67b1ed"), Code="09998", Description="None", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

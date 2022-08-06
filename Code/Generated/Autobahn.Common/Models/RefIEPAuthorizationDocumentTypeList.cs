@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIEPAuthorizationDocumentType"> List
          /// </summary>
-        public static List<RefIEPAuthorizationDocumentType> RefIEPAuthorizationDocumentTypeList = new List<RefIEPAuthorizationDocumentType> =
+        public static List<RefIEPAuthorizationDocumentType> RefIEPAuthorizationDocumentTypeList = new List<RefIEPAuthorizationDocumentType>
         {
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("bf70992d-d5c3-47fc-bf39-87ea2eb79120"), Code="Amendment is specified as the type of Individualized Education Plan document authorized.", Description="Amendment", Definition="", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("d817d7fe-b4f7-4e6e-84ac-473cec6d8b21"), Code="Annual Goal is specified as the type of Individualized Education Plan document authorized.", Description="AnnualGoal", Definition="", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("135e32ae-f150-47d9-b794-e15b72942ca7"), Code="IEP is specified as the type of Individualized Education Plan document authorized.", Description="IEP", Definition="", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("557fc986-9d54-47f6-8ab5-0b62c8c3a7b0"), Code="Measurable Objective is specified as the type of Individualized Education Plan document authorized.", Description="MeasurableObjective", Definition="", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("75f74e45-b024-4481-b5fc-de86591e4e37"), Code="Placement is specified as the type of Individualized Education Plan document authorized.", Description="Placement", Definition="", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("38a93c45-1b89-4a59-8e96-10c1563b8c5a"), Code="Revoke is specified as the type of Individualized Education Plan document authorized.", Description="Revoke", Definition="", SortOrder=0 },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("3b482d41-c563-4fde-a7f4-18e6743e9cb8"), Code="Amendment", Description="Amendment", Definition="Amendment is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("550b1863-85b3-4f01-bd75-c429157d4d1a"), Code="AnnualGoal", Description="Annual Goal", Definition="Annual Goal is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("adc51b8d-2cb2-4552-a737-23bb870ebe7b"), Code="IEP", Description="IEP", Definition="IEP is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("d40620d8-32b9-408b-b39b-f2c675df276f"), Code="MeasurableObjective", Description="Measurable Objective", Definition="Measurable Objective is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("936c69ac-d7fd-4559-b1d9-6207cf54be60"), Code="Placement", Description="Placement", Definition="Placement is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("a8475847-0c16-4d7f-a456-a7a7a960711a"), Code="Revoke", Description="Revoke", Definition="Revoke is specified as the type of Individualized Education Plan document authorized.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefIEPAuthorizationDocumentType Pick List
          /// </summary>
-        public static List<RefIEPAuthorizationDocumentType> RefIEPAuthorizationDocumentTypePickList = new List<RefIEPAuthorizationDocumentType> =
+        public static List<RefIEPAuthorizationDocumentType> RefIEPAuthorizationDocumentTypePickList = new List<RefIEPAuthorizationDocumentType>
         {
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("bf70992d-d5c3-47fc-bf39-87ea2eb79120"), Code="Amendment is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("d817d7fe-b4f7-4e6e-84ac-473cec6d8b21"), Code="Annual Goal is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("135e32ae-f150-47d9-b794-e15b72942ca7"), Code="IEP is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("557fc986-9d54-47f6-8ab5-0b62c8c3a7b0"), Code="Measurable Objective is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("75f74e45-b024-4481-b5fc-de86591e4e37"), Code="Placement is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
-            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("38a93c45-1b89-4a59-8e96-10c1563b8c5a"), Code="Revoke is specified as the type of Individualized Education Plan document authorized.", SortOrder=0 },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("3b482d41-c563-4fde-a7f4-18e6743e9cb8"), Code="Amendment", Description="Amendment", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("550b1863-85b3-4f01-bd75-c429157d4d1a"), Code="AnnualGoal", Description="Annual Goal", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("adc51b8d-2cb2-4552-a737-23bb870ebe7b"), Code="IEP", Description="IEP", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("d40620d8-32b9-408b-b39b-f2c675df276f"), Code="MeasurableObjective", Description="Measurable Objective", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("936c69ac-d7fd-4559-b1d9-6207cf54be60"), Code="Placement", Description="Placement", SortOrder=Convert.ToDecimal("") },
+            new RefIEPAuthorizationDocumentType { Id=Guid.Parse("a8475847-0c16-4d7f-a456-a7a7a960711a"), Code="Revoke", Description="Revoke", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

@@ -15,35 +15,35 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefPDActivityType"> List
          /// </summary>
-        public static List<RefPDActivityType> RefPDActivityTypeList = new List<RefPDActivityType> =
+        public static List<RefPDActivityType> RefPDActivityTypeList = new List<RefPDActivityType>
         {
-            new RefPDActivityType { Id=Guid.Parse("f57b72a0-3e32-4775-b2a2-81578bed6b55"), Code="The type of professional development activity is a College Course.", Description="CollegeCourse", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("ed4807c1-4711-486f-af37-6e95cbe86053"), Code="The type of professional development activity is Coaching.", Description="Coaching", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("379a58ae-9ef4-4db3-9654-e1363b160d6a"), Code="The type of professional development activity is Mentoring.", Description="Mentoring", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("421492a5-0d5b-4373-b369-b11c66225bf1"), Code="The type of professional development activity is Consultation.", Description="Consultation", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("882d3b1b-df3a-4e8f-bf0b-7b173f8c4906"), Code="The type of professional development activity is Person-to-Person.", Description="P2P", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("955d351a-cdae-4c1d-8ed5-81e233ec4aa4"), Code="The type of professional development activity is Technical Assistance.", Description="TechnicalAssistance", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("356d7ded-87b6-45a9-ba37-cbd1aef0e5ca"), Code="The type of professional development activity is Advisement.", Description="Advisement", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("f0588bea-1b49-4d7b-9e0e-38f9dd1d2987"), Code="The type of professional development activity is One-time Workshop Training.", Description="OneTimeWorkshopTraining", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("68070151-bbe7-4eee-bc79-528fa63bb999"), Code="The type of professional development activity is Series of Workshops Training.", Description="SeriesOfWorkshopsTraining", Definition="", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("9be61da0-23e8-4802-86fa-9c9a6f17d554"), Code="The type of professional development activity is in a category not yet defined by CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefPDActivityType { Id=Guid.Parse("c3c44b82-3eb2-4d66-b846-5e19f7612ead"), Code="CollegeCourse", Description="College Course", Definition="The type of professional development activity is a College Course.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPDActivityType { Id=Guid.Parse("c04ef85e-8319-43bf-94e7-c6dc911448e6"), Code="Coaching", Description="Coaching", Definition="The type of professional development activity is Coaching.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPDActivityType { Id=Guid.Parse("6ebf431d-942e-4081-973b-861c48bba0b6"), Code="Mentoring", Description="Mentoring", Definition="The type of professional development activity is Mentoring.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefPDActivityType { Id=Guid.Parse("0f200d30-6a41-4576-9df3-80c0322f0cfa"), Code="Consultation", Description="Consultation", Definition="The type of professional development activity is Consultation.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefPDActivityType { Id=Guid.Parse("6b01a1b9-dbdd-42b5-8ee8-76db6b7b1588"), Code="P2P", Description="Person-to-Person", Definition="The type of professional development activity is Person-to-Person.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefPDActivityType { Id=Guid.Parse("db231250-70d2-4061-aa38-64fa82bf7231"), Code="TechnicalAssistance", Description="Technical Assistance", Definition="The type of professional development activity is Technical Assistance.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefPDActivityType { Id=Guid.Parse("fb58a218-e24d-40e5-b6b4-8cdc13ab3657"), Code="Advisement", Description="Advisement", Definition="The type of professional development activity is Advisement.", SortOrder=Convert.ToDecimal("16.00") },
+            new RefPDActivityType { Id=Guid.Parse("334f8181-7ff4-4596-976c-075ba185bee3"), Code="OneTimeWorkshopTraining", Description="One-time Workshop Training", Definition="The type of professional development activity is One-time Workshop Training.", SortOrder=Convert.ToDecimal("18.00") },
+            new RefPDActivityType { Id=Guid.Parse("0860cc38-d915-44ef-afa4-136ea838b09a"), Code="SeriesOfWorkshopsTraining", Description="Series of Workshops Training", Definition="The type of professional development activity is Series of Workshops Training.", SortOrder=Convert.ToDecimal("19.00") },
+            new RefPDActivityType { Id=Guid.Parse("be51d333-4c4c-4693-88a7-952bc1052347"), Code="Other", Description="Other", Definition="The type of professional development activity is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("20.00") },
         };
 
         /// <summary>
         /// The RefPDActivityType Pick List
          /// </summary>
-        public static List<RefPDActivityType> RefPDActivityTypePickList = new List<RefPDActivityType> =
+        public static List<RefPDActivityType> RefPDActivityTypePickList = new List<RefPDActivityType>
         {
-            new RefPDActivityType { Id=Guid.Parse("f57b72a0-3e32-4775-b2a2-81578bed6b55"), Code="The type of professional development activity is a College Course.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("ed4807c1-4711-486f-af37-6e95cbe86053"), Code="The type of professional development activity is Coaching.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("379a58ae-9ef4-4db3-9654-e1363b160d6a"), Code="The type of professional development activity is Mentoring.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("421492a5-0d5b-4373-b369-b11c66225bf1"), Code="The type of professional development activity is Consultation.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("882d3b1b-df3a-4e8f-bf0b-7b173f8c4906"), Code="The type of professional development activity is Person-to-Person.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("955d351a-cdae-4c1d-8ed5-81e233ec4aa4"), Code="The type of professional development activity is Technical Assistance.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("356d7ded-87b6-45a9-ba37-cbd1aef0e5ca"), Code="The type of professional development activity is Advisement.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("f0588bea-1b49-4d7b-9e0e-38f9dd1d2987"), Code="The type of professional development activity is One-time Workshop Training.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("68070151-bbe7-4eee-bc79-528fa63bb999"), Code="The type of professional development activity is Series of Workshops Training.", SortOrder=0 },
-            new RefPDActivityType { Id=Guid.Parse("9be61da0-23e8-4802-86fa-9c9a6f17d554"), Code="The type of professional development activity is in a category not yet defined by CEDS.", SortOrder=0 },
+            new RefPDActivityType { Id=Guid.Parse("c3c44b82-3eb2-4d66-b846-5e19f7612ead"), Code="CollegeCourse", Description="College Course", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPDActivityType { Id=Guid.Parse("c04ef85e-8319-43bf-94e7-c6dc911448e6"), Code="Coaching", Description="Coaching", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPDActivityType { Id=Guid.Parse("6ebf431d-942e-4081-973b-861c48bba0b6"), Code="Mentoring", Description="Mentoring", SortOrder=Convert.ToDecimal("8.00") },
+            new RefPDActivityType { Id=Guid.Parse("0f200d30-6a41-4576-9df3-80c0322f0cfa"), Code="Consultation", Description="Consultation", SortOrder=Convert.ToDecimal("10.00") },
+            new RefPDActivityType { Id=Guid.Parse("6b01a1b9-dbdd-42b5-8ee8-76db6b7b1588"), Code="P2P", Description="Person-to-Person", SortOrder=Convert.ToDecimal("12.00") },
+            new RefPDActivityType { Id=Guid.Parse("db231250-70d2-4061-aa38-64fa82bf7231"), Code="TechnicalAssistance", Description="Technical Assistance", SortOrder=Convert.ToDecimal("14.00") },
+            new RefPDActivityType { Id=Guid.Parse("fb58a218-e24d-40e5-b6b4-8cdc13ab3657"), Code="Advisement", Description="Advisement", SortOrder=Convert.ToDecimal("16.00") },
+            new RefPDActivityType { Id=Guid.Parse("334f8181-7ff4-4596-976c-075ba185bee3"), Code="OneTimeWorkshopTraining", Description="One-time Workshop Training", SortOrder=Convert.ToDecimal("18.00") },
+            new RefPDActivityType { Id=Guid.Parse("0860cc38-d915-44ef-afa4-136ea838b09a"), Code="SeriesOfWorkshopsTraining", Description="Series of Workshops Training", SortOrder=Convert.ToDecimal("19.00") },
+            new RefPDActivityType { Id=Guid.Parse("be51d333-4c4c-4693-88a7-952bc1052347"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("20.00") },
        };
    }
 }

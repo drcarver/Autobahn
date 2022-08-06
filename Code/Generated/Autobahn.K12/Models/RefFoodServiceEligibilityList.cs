@@ -15,23 +15,23 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefFoodServiceEligibility"> List
          /// </summary>
-        public static List<RefFoodServiceEligibility> RefFoodServiceEligibilityList = new List<RefFoodServiceEligibility> =
+        public static List<RefFoodServiceEligibility> RefFoodServiceEligibilityList = new List<RefFoodServiceEligibility>
         {
-            new RefFoodServiceEligibility { Id=Guid.Parse("f076e71e-3555-44e8-b904-1672cf59c4da"), Code="Free is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", Description="Free", Definition="", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("74e3e0be-89f8-47bf-a381-02a43eee9db3"), Code="Full price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", Description="FullPrice", Definition="", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("a66eb008-3639-4eba-9284-cbf79d62bacb"), Code="Reduced price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", Description="ReducedPrice", Definition="", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("75fbff87-09e3-4ff6-965e-4ca95ece70e9"), Code="Other is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", Description="Other", Definition="", SortOrder=0 },
+            new RefFoodServiceEligibility { Id=Guid.Parse("f145e703-1729-4c5d-8fac-65a68e916993"), Code="Free", Description="Free", Definition="Free is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("587f6823-1c36-4efb-9bcf-311d306fece8"), Code="FullPrice", Description="Full price", Definition="Full price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("afa7664a-eed8-4e23-bbe2-284836b3daee"), Code="ReducedPrice", Description="Reduced price", Definition="Reduced price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("5bc10ebd-e8c0-4f80-812a-b10977b459aa"), Code="Other", Description="Other", Definition="Other is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefFoodServiceEligibility Pick List
          /// </summary>
-        public static List<RefFoodServiceEligibility> RefFoodServiceEligibilityPickList = new List<RefFoodServiceEligibility> =
+        public static List<RefFoodServiceEligibility> RefFoodServiceEligibilityPickList = new List<RefFoodServiceEligibility>
         {
-            new RefFoodServiceEligibility { Id=Guid.Parse("f076e71e-3555-44e8-b904-1672cf59c4da"), Code="Free is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("74e3e0be-89f8-47bf-a381-02a43eee9db3"), Code="Full price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("a66eb008-3639-4eba-9284-cbf79d62bacb"), Code="Reduced price is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=0 },
-            new RefFoodServiceEligibility { Id=Guid.Parse("75fbff87-09e3-4ff6-965e-4ca95ece70e9"), Code="Other is the student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.", SortOrder=0 },
+            new RefFoodServiceEligibility { Id=Guid.Parse("f145e703-1729-4c5d-8fac-65a68e916993"), Code="Free", Description="Free", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("587f6823-1c36-4efb-9bcf-311d306fece8"), Code="FullPrice", Description="Full price", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("afa7664a-eed8-4e23-bbe2-284836b3daee"), Code="ReducedPrice", Description="Reduced price", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFoodServiceEligibility { Id=Guid.Parse("5bc10ebd-e8c0-4f80-812a-b10977b459aa"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

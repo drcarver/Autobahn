@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCteGraduationRateInclusion"> List
          /// </summary>
-        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionList = new List<RefCteGraduationRateInclusion> =
+        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionList = new List<RefCteGraduationRateInclusion>
         {
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("611775cb-9a5c-425c-b35f-1d9c9737290e"), Code="CTE concentrators are included in the state's computation of its graduation rate as graduated.", Description="IncludedAsGraduated", Definition="", SortOrder=0 },
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("a9ba7ab1-7923-422e-8e57-1a1deaa1fea2"), Code="CTE concentrators are included in the state's computation of its graduation rate as not graduated.", Description="NotIncludedAsGraduated", Definition="", SortOrder=0 },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("4d82ca07-7b9b-4134-a0bf-4c321ca58c53"), Code="IncludedAsGraduated", Description="Included in computation as graduated  ", Definition="CTE concentrators are included in the state's computation of its graduation rate as graduated.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("fe46de28-907a-4b7a-a0f3-4c20066e66ca"), Code="NotIncludedAsGraduated", Description="Included in computation as not graduated.", Definition="CTE concentrators are included in the state's computation of its graduation rate as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefCteGraduationRateInclusion Pick List
          /// </summary>
-        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionPickList = new List<RefCteGraduationRateInclusion> =
+        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionPickList = new List<RefCteGraduationRateInclusion>
         {
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("611775cb-9a5c-425c-b35f-1d9c9737290e"), Code="CTE concentrators are included in the state's computation of its graduation rate as graduated.", SortOrder=0 },
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("a9ba7ab1-7923-422e-8e57-1a1deaa1fea2"), Code="CTE concentrators are included in the state's computation of its graduation rate as not graduated.", SortOrder=0 },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("4d82ca07-7b9b-4134-a0bf-4c321ca58c53"), Code="IncludedAsGraduated", Description="Included in computation as graduated  ", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("fe46de28-907a-4b7a-a0f3-4c20066e66ca"), Code="NotIncludedAsGraduated", Description="Included in computation as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

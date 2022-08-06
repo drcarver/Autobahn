@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefMilitaryBranch"> List
          /// </summary>
-        public static List<RefMilitaryBranch> RefMilitaryBranchList = new List<RefMilitaryBranch> =
+        public static List<RefMilitaryBranch> RefMilitaryBranchList = new List<RefMilitaryBranch>
         {
-            new RefMilitaryBranch { Id=Guid.Parse("566432d4-2c7f-4615-a5d0-ac39d273eedf"), Code="U.S. Army", Description="Army", Definition="", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("175bc92f-b5a4-4a61-96f6-3830c1cff3ce"), Code="U.S. Marine Corps", Description="MarineCorps", Definition="", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("a87a0098-3f02-4504-aea9-97341f690bb9"), Code="U.S. Navy", Description="Navy", Definition="", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("be90940a-d8f7-4748-8d0c-d924c808a243"), Code="U.S.  Air Force", Description="AirForce", Definition="", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("34648452-ff65-49df-a92d-b40486cb5772"), Code="U.S. Space Force", Description="SpaceForce", Definition="", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("c5877a66-6170-4e2f-b068-1d56ef65acb2"), Code="U.S. Coast Guard", Description="CoastGuard", Definition="", SortOrder=0 },
+            new RefMilitaryBranch { Id=Guid.Parse("10078be1-2842-4838-9e8a-8b4c9b5134da"), Code="Army", Description="Army", Definition="U.S. Army", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("eb3109e4-5e27-4ec5-ac15-9850f4e93343"), Code="MarineCorps", Description="Marine Corps", Definition="U.S. Marine Corps", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("838bae9a-ac36-4652-b2fc-16a707889532"), Code="Navy", Description="Navy", Definition="U.S. Navy", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("781675cc-a502-4d8f-ae4d-ebb973ebcef3"), Code="AirForce", Description="Air Force", Definition="U.S.  Air Force", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("8cf505a0-035d-41f2-83c0-bde469ff442a"), Code="SpaceForce", Description="Space Force", Definition="U.S. Space Force", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("73368706-b03b-462f-8bd3-32ce88b6b864"), Code="CoastGuard", Description="Coast Guard", Definition="U.S. Coast Guard", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefMilitaryBranch Pick List
          /// </summary>
-        public static List<RefMilitaryBranch> RefMilitaryBranchPickList = new List<RefMilitaryBranch> =
+        public static List<RefMilitaryBranch> RefMilitaryBranchPickList = new List<RefMilitaryBranch>
         {
-            new RefMilitaryBranch { Id=Guid.Parse("566432d4-2c7f-4615-a5d0-ac39d273eedf"), Code="U.S. Army", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("175bc92f-b5a4-4a61-96f6-3830c1cff3ce"), Code="U.S. Marine Corps", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("a87a0098-3f02-4504-aea9-97341f690bb9"), Code="U.S. Navy", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("be90940a-d8f7-4748-8d0c-d924c808a243"), Code="U.S.  Air Force", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("34648452-ff65-49df-a92d-b40486cb5772"), Code="U.S. Space Force", SortOrder=0 },
-            new RefMilitaryBranch { Id=Guid.Parse("c5877a66-6170-4e2f-b068-1d56ef65acb2"), Code="U.S. Coast Guard", SortOrder=0 },
+            new RefMilitaryBranch { Id=Guid.Parse("10078be1-2842-4838-9e8a-8b4c9b5134da"), Code="Army", Description="Army", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("eb3109e4-5e27-4ec5-ac15-9850f4e93343"), Code="MarineCorps", Description="Marine Corps", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("838bae9a-ac36-4652-b2fc-16a707889532"), Code="Navy", Description="Navy", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("781675cc-a502-4d8f-ae4d-ebb973ebcef3"), Code="AirForce", Description="Air Force", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("8cf505a0-035d-41f2-83c0-bde469ff442a"), Code="SpaceForce", Description="Space Force", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMilitaryBranch { Id=Guid.Parse("73368706-b03b-462f-8bd3-32ce88b6b864"), Code="CoastGuard", Description="Coast Guard", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

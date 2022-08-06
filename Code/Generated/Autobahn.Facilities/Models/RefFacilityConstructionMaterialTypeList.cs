@@ -15,35 +15,35 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefFacilityConstructionMaterialType"> List
          /// </summary>
-        public static List<RefFacilityConstructionMaterialType> RefFacilityConstructionMaterialTypeList = new List<RefFacilityConstructionMaterialType> =
+        public static List<RefFacilityConstructionMaterialType> RefFacilityConstructionMaterialTypeList = new List<RefFacilityConstructionMaterialType>
         {
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("11c20a50-9e16-4af8-85f5-7133e1c6c08a"), Code="Adobe is specified as the primary material used for the construction of a building.", Description="02430", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("1ff246ad-160a-4780-b9bb-cb116963e044"), Code="Aluminum is specified as the primary material used for the construction of a building.", Description="02428", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("37eae1f1-efdf-4d34-96de-6111e0ea67ee"), Code="Block is specified as the primary material used for the construction of a building.", Description="02424", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("30f4dcf2-70e6-460a-b88e-ef840b7e4af9"), Code="Brick is specified as the primary material used for the construction of a building.", Description="02422", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("1fdbfab7-62ab-47d7-87e0-76d3de6adf76"), Code="Brick veneer is specified as the primary material used for the construction of a building.", Description="02423", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("592045bf-1a10-4fb8-8825-2d035943fe20"), Code="Concrete is specified as the primary material used for the construction of a building.", Description="02426", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("4de2d5b2-77f7-4eff-bc7c-294767eee91b"), Code="Prefabricated is specified as the primary material used for the construction of a building.", Description="02427", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("2e8f0b79-6343-40f2-8ab2-7583b23b0a11"), Code="Steel is specified as the primary material used for the construction of a building.", Description="02429", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("3beeb9ce-0d86-4877-ba2a-de1c0fb69775"), Code="Wood frame is specified as the primary material used for the construction of a building.", Description="02425", Definition="", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("9810c30c-6741-47bf-9e16-96204ea98ed5"), Code="Other is specified as the primary material used for the construction of a building.", Description="09999", Definition="", SortOrder=0 },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("f25350b1-4870-4e2b-bb99-d5a554bffdc4"), Code="02430", Description="Adobe", Definition="Adobe is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("646c57ce-d652-42a0-bdbe-d74cd961e3e8"), Code="02428", Description="Aluminum", Definition="Aluminum is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("9e5a7adc-b605-4372-83dc-754589ffffb1"), Code="02424", Description="Block", Definition="Block is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("0577c86f-e645-4590-b99c-b83a21d713b2"), Code="02422", Description="Brick", Definition="Brick is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("21df0ba3-14da-4058-a0b7-e68ecc54ec1b"), Code="02423", Description="Brick veneer", Definition="Brick veneer is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("2ff277e5-298d-4af2-ac66-1467bd8c6133"), Code="02426", Description="Concrete", Definition="Concrete is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("c24b6610-33a6-45c5-904c-3ce0ced623bd"), Code="02427", Description="Prefabricated", Definition="Prefabricated is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("cabbf06c-d75a-4d6a-ae98-d5d59677294f"), Code="02429", Description="Steel", Definition="Steel is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("c47b39da-0901-49d5-aa5e-deaa4e0fd894"), Code="02425", Description="Wood frame", Definition="Wood frame is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("44463cbf-3d58-4f90-be5e-f52a16663e60"), Code="09999", Description="Other", Definition="Other is specified as the primary material used for the construction of a building.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefFacilityConstructionMaterialType Pick List
          /// </summary>
-        public static List<RefFacilityConstructionMaterialType> RefFacilityConstructionMaterialTypePickList = new List<RefFacilityConstructionMaterialType> =
+        public static List<RefFacilityConstructionMaterialType> RefFacilityConstructionMaterialTypePickList = new List<RefFacilityConstructionMaterialType>
         {
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("11c20a50-9e16-4af8-85f5-7133e1c6c08a"), Code="Adobe is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("1ff246ad-160a-4780-b9bb-cb116963e044"), Code="Aluminum is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("37eae1f1-efdf-4d34-96de-6111e0ea67ee"), Code="Block is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("30f4dcf2-70e6-460a-b88e-ef840b7e4af9"), Code="Brick is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("1fdbfab7-62ab-47d7-87e0-76d3de6adf76"), Code="Brick veneer is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("592045bf-1a10-4fb8-8825-2d035943fe20"), Code="Concrete is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("4de2d5b2-77f7-4eff-bc7c-294767eee91b"), Code="Prefabricated is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("2e8f0b79-6343-40f2-8ab2-7583b23b0a11"), Code="Steel is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("3beeb9ce-0d86-4877-ba2a-de1c0fb69775"), Code="Wood frame is specified as the primary material used for the construction of a building.", SortOrder=0 },
-            new RefFacilityConstructionMaterialType { Id=Guid.Parse("9810c30c-6741-47bf-9e16-96204ea98ed5"), Code="Other is specified as the primary material used for the construction of a building.", SortOrder=0 },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("f25350b1-4870-4e2b-bb99-d5a554bffdc4"), Code="02430", Description="Adobe", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("646c57ce-d652-42a0-bdbe-d74cd961e3e8"), Code="02428", Description="Aluminum", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("9e5a7adc-b605-4372-83dc-754589ffffb1"), Code="02424", Description="Block", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("0577c86f-e645-4590-b99c-b83a21d713b2"), Code="02422", Description="Brick", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("21df0ba3-14da-4058-a0b7-e68ecc54ec1b"), Code="02423", Description="Brick veneer", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("2ff277e5-298d-4af2-ac66-1467bd8c6133"), Code="02426", Description="Concrete", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("c24b6610-33a6-45c5-904c-3ce0ced623bd"), Code="02427", Description="Prefabricated", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("cabbf06c-d75a-4d6a-ae98-d5d59677294f"), Code="02429", Description="Steel", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("c47b39da-0901-49d5-aa5e-deaa4e0fd894"), Code="02425", Description="Wood frame", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFacilityConstructionMaterialType { Id=Guid.Parse("44463cbf-3d58-4f90-be5e-f52a16663e60"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

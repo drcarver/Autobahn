@@ -15,25 +15,25 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// The complete <see cref="RefAcademicAwardPrerequisiteType"> List
          /// </summary>
-        public static List<RefAcademicAwardPrerequisiteType> RefAcademicAwardPrerequisiteTypeList = new List<RefAcademicAwardPrerequisiteType> =
+        public static List<RefAcademicAwardPrerequisiteType> RefAcademicAwardPrerequisiteTypeList = new List<RefAcademicAwardPrerequisiteType>
         {
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("455c6b41-f783-4318-834b-4d14b2e0e912"), Code="Achievement is a prerequisite condition for earning an academic award.", Description="Achievement", Definition="", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("412f3981-aded-44ab-b421-d9fa89bb5cc3"), Code="Course is a prerequisite condition for earning an academic award.", Description="Course", Definition="", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("99cca32f-3415-47db-9024-6bbdba76c71e"), Code="Experience is a prerequisite condition for earning an academic award.", Description="Experience", Definition="", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("58d6dd0d-84ed-4cf4-a306-993077f9868a"), Code="Score is a prerequisite condition for earning an academic award.", Description="Score", Definition="", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("c062c469-898b-4ba5-886a-6dd0d2704163"), Code="Status is a prerequisite condition for earning an academic award.", Description="Status", Definition="", SortOrder=0 },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("f908d669-cdfa-4626-8ec3-23a6980d00b2"), Code="Achievement", Description="Achievement", Definition="Achievement is a prerequisite condition for earning an academic award.", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("de3648b8-47cb-4040-8be6-f355d7ace241"), Code="Course", Description="Course", Definition="Course is a prerequisite condition for earning an academic award.", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("d7ac67e5-db0c-4af7-9289-081907d9f01d"), Code="Experience", Description="Experience", Definition="Experience is a prerequisite condition for earning an academic award.", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("3df3f569-df24-4f6b-9549-57019cb941ac"), Code="Score", Description="Score", Definition="Score is a prerequisite condition for earning an academic award.", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("19ac11da-9219-4ff9-9687-bb08a5590d1f"), Code="Status", Description="Status", Definition="Status is a prerequisite condition for earning an academic award.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefAcademicAwardPrerequisiteType Pick List
          /// </summary>
-        public static List<RefAcademicAwardPrerequisiteType> RefAcademicAwardPrerequisiteTypePickList = new List<RefAcademicAwardPrerequisiteType> =
+        public static List<RefAcademicAwardPrerequisiteType> RefAcademicAwardPrerequisiteTypePickList = new List<RefAcademicAwardPrerequisiteType>
         {
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("455c6b41-f783-4318-834b-4d14b2e0e912"), Code="Achievement is a prerequisite condition for earning an academic award.", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("412f3981-aded-44ab-b421-d9fa89bb5cc3"), Code="Course is a prerequisite condition for earning an academic award.", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("99cca32f-3415-47db-9024-6bbdba76c71e"), Code="Experience is a prerequisite condition for earning an academic award.", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("58d6dd0d-84ed-4cf4-a306-993077f9868a"), Code="Score is a prerequisite condition for earning an academic award.", SortOrder=0 },
-            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("c062c469-898b-4ba5-886a-6dd0d2704163"), Code="Status is a prerequisite condition for earning an academic award.", SortOrder=0 },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("f908d669-cdfa-4626-8ec3-23a6980d00b2"), Code="Achievement", Description="Achievement", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("de3648b8-47cb-4040-8be6-f355d7ace241"), Code="Course", Description="Course", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("d7ac67e5-db0c-4af7-9289-081907d9f01d"), Code="Experience", Description="Experience", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("3df3f569-df24-4f6b-9549-57019cb941ac"), Code="Score", Description="Score", SortOrder=Convert.ToDecimal("") },
+            new RefAcademicAwardPrerequisiteType { Id=Guid.Parse("19ac11da-9219-4ff9-9687-bb08a5590d1f"), Code="Status", Description="Status", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

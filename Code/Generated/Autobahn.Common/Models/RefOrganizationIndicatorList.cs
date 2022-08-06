@@ -15,43 +15,43 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefOrganizationIndicator"> List
          /// </summary>
-        public static List<RefOrganizationIndicator> RefOrganizationIndicatorList = new List<RefOrganizationIndicator> =
+        public static List<RefOrganizationIndicator> RefOrganizationIndicatorList = new List<RefOrganizationIndicator>
         {
-            new RefOrganizationIndicator { Id=Guid.Parse("5ee95531-fb31-49e1-ba1d-ccb80558e197"), Code="", Description="AP Course Self Selection", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("5911a7e8-3f94-4b36-8291-f8088f86f714"), Code="", Description="PersistentlyLowestAchievingSchool", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("38214fd5-76a4-47c4-8da1-219e7e4ef17b"), Code="", Description="SharedTime", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("40befc2e-4d4e-40a0-98eb-6769fe041234"), Code="", Description="AbilityGrouping", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("315039d0-e27d-4553-bc1b-183475180f95"), Code="", Description="ProgramProvidesTranslatedMaterials", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("534cf4e9-fadc-4eb5-bf3b-8dbe59a1690a"), Code="", Description="EarlyLearningProgramDevelopmentalScreening", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("5e1b9c19-434a-4f57-8257-f845c5618b01"), Code="", Description="ProgramProvidesWrittenHandbook", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("d3c4a228-5f32-4c09-beed-7bafabc5b8f5"), Code="", Description="ProgramCollectsParentalFeedback", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("7ee98b50-9856-46a4-ae1e-228a996d40f6"), Code="", Description="ProgramProvidesParentInvolvementOpportunity", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("42e5dc07-0adc-4b1c-9493-059e9314db56"), Code="", Description="ProgramProvidesParentEducation", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("f199a513-cbc8-4150-bae4-958c82ec5977"), Code="", Description="AssessmentSharedwithParents", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("ab800cef-d6a6-4928-8279-daa5e1e86fb8"), Code="", Description="ProgramFollowsSalaryScale", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("6cb29939-266a-436e-b631-543cc18aa203"), Code="", Description="DifferentialShiftPay", Definition="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("82f7922e-2481-48a4-bf3f-16eb7dd9d1cc"), Code="", Description="Virtual", Definition="", SortOrder=0 },
+            new RefOrganizationIndicator { Id=Guid.Parse("d41d1abc-e567-4a21-85c9-384c70e3a871"), Code="AP Course Self Selection", Description="Advanced Placement Course Self Selection", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("ca944734-a678-400b-a5f5-bd35203a8449"), Code="PersistentlyLowestAchievingSchool", Description="Persistently Lowest Achieving School", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("82e74aa1-ce18-4548-857a-fcad6dc75a15"), Code="SharedTime", Description="Shared Time", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("74ff431b-01e0-4459-8c1e-a6ee6f8284d3"), Code="AbilityGrouping", Description="Ability Grouping", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("de0c07c0-f640-4010-80f0-3a667ffdb4cd"), Code="ProgramProvidesTranslatedMaterials", Description="Program Provides Translated Materials", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("6c548dcf-6d4c-49b7-8aa7-af6800c28556"), Code="EarlyLearningProgramDevelopmentalScreening", Description="Early Learning Program Developmental Screening", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("82e79ca1-965c-4d4c-90b5-4505b6d0ffa1"), Code="ProgramProvidesWrittenHandbook", Description="Program Provides Written Handbook", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("b45e9e15-3818-4ee8-bc6b-80aeb6733494"), Code="ProgramCollectsParentalFeedback", Description="Program Collects Parental Feedback", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("6e6a0f52-5d1d-4b5f-b0a8-7d6ae85dd92e"), Code="ProgramProvidesParentInvolvementOpportunity", Description="Program Provides Parent Involvement Opportunity", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("831bbeb3-dc13-4c94-97f1-7a22c5878a87"), Code="ProgramProvidesParentEducation", Description="Program Provides Parent Education", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("c4d6cd7f-0cd8-4564-9b79-fa70f2c9a746"), Code="AssessmentSharedwithParents", Description="Assessment Shared with Parents", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("1b093061-3c41-4e02-89be-59e31542c7cc"), Code="ProgramFollowsSalaryScale", Description="Program Follows Salary Scale", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("a0df38df-bdf5-483f-aeff-9f2e844ff15a"), Code="DifferentialShiftPay", Description="Differential Shift Pay", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("7ccabf80-483d-43f0-b182-096fe6fa9655"), Code="Virtual", Description="Virtual", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefOrganizationIndicator Pick List
          /// </summary>
-        public static List<RefOrganizationIndicator> RefOrganizationIndicatorPickList = new List<RefOrganizationIndicator> =
+        public static List<RefOrganizationIndicator> RefOrganizationIndicatorPickList = new List<RefOrganizationIndicator>
         {
-            new RefOrganizationIndicator { Id=Guid.Parse("5ee95531-fb31-49e1-ba1d-ccb80558e197"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("5911a7e8-3f94-4b36-8291-f8088f86f714"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("38214fd5-76a4-47c4-8da1-219e7e4ef17b"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("40befc2e-4d4e-40a0-98eb-6769fe041234"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("315039d0-e27d-4553-bc1b-183475180f95"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("534cf4e9-fadc-4eb5-bf3b-8dbe59a1690a"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("5e1b9c19-434a-4f57-8257-f845c5618b01"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("d3c4a228-5f32-4c09-beed-7bafabc5b8f5"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("7ee98b50-9856-46a4-ae1e-228a996d40f6"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("42e5dc07-0adc-4b1c-9493-059e9314db56"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("f199a513-cbc8-4150-bae4-958c82ec5977"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("ab800cef-d6a6-4928-8279-daa5e1e86fb8"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("6cb29939-266a-436e-b631-543cc18aa203"), Code="", SortOrder=0 },
-            new RefOrganizationIndicator { Id=Guid.Parse("82f7922e-2481-48a4-bf3f-16eb7dd9d1cc"), Code="", SortOrder=0 },
+            new RefOrganizationIndicator { Id=Guid.Parse("d41d1abc-e567-4a21-85c9-384c70e3a871"), Code="AP Course Self Selection", Description="Advanced Placement Course Self Selection", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("ca944734-a678-400b-a5f5-bd35203a8449"), Code="PersistentlyLowestAchievingSchool", Description="Persistently Lowest Achieving School", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("82e74aa1-ce18-4548-857a-fcad6dc75a15"), Code="SharedTime", Description="Shared Time", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("74ff431b-01e0-4459-8c1e-a6ee6f8284d3"), Code="AbilityGrouping", Description="Ability Grouping", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("de0c07c0-f640-4010-80f0-3a667ffdb4cd"), Code="ProgramProvidesTranslatedMaterials", Description="Program Provides Translated Materials", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("6c548dcf-6d4c-49b7-8aa7-af6800c28556"), Code="EarlyLearningProgramDevelopmentalScreening", Description="Early Learning Program Developmental Screening", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("82e79ca1-965c-4d4c-90b5-4505b6d0ffa1"), Code="ProgramProvidesWrittenHandbook", Description="Program Provides Written Handbook", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("b45e9e15-3818-4ee8-bc6b-80aeb6733494"), Code="ProgramCollectsParentalFeedback", Description="Program Collects Parental Feedback", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("6e6a0f52-5d1d-4b5f-b0a8-7d6ae85dd92e"), Code="ProgramProvidesParentInvolvementOpportunity", Description="Program Provides Parent Involvement Opportunity", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("831bbeb3-dc13-4c94-97f1-7a22c5878a87"), Code="ProgramProvidesParentEducation", Description="Program Provides Parent Education", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("c4d6cd7f-0cd8-4564-9b79-fa70f2c9a746"), Code="AssessmentSharedwithParents", Description="Assessment Shared with Parents", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("1b093061-3c41-4e02-89be-59e31542c7cc"), Code="ProgramFollowsSalaryScale", Description="Program Follows Salary Scale", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("a0df38df-bdf5-483f-aeff-9f2e844ff15a"), Code="DifferentialShiftPay", Description="Differential Shift Pay", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationIndicator { Id=Guid.Parse("7ccabf80-483d-43f0-b182-096fe6fa9655"), Code="Virtual", Description="Virtual", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

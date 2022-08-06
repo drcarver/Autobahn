@@ -15,23 +15,23 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingJointUseRationaleType"> List
          /// </summary>
-        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypeList = new List<RefBuildingJointUseRationaleType> =
+        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypeList = new List<RefBuildingJointUseRationaleType>
         {
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("fc5e69fa-d2c3-4535-b6c0-3a245d0e3b53"), Code="Increase programs and services for students is specified as the reasons for permitting and participating in joint-use.", Description="13710", Definition="", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("74c664b8-c050-4257-9a85-b16a7547ea18"), Code="Increase programs and services for the community is specified as the reasons for permitting and participating in joint-use.", Description="13711", Definition="", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("2f79a54f-5db0-4346-9503-41ff2f3ca6ab"), Code="Increase utilization of under used space is specified as the reasons for permitting and participating in joint-use.", Description="13712", Definition="", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("c6386ac8-3c89-4466-9f35-2a96e34a7387"), Code="Raise revenue is specified as the reasons for permitting and participating in joint-use.", Description="13709", Definition="", SortOrder=0 },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("3ec3e841-fda2-4e8a-b400-de03c6f45302"), Code="13710", Description="Increase programs and services for students", Definition="Increase programs and services for students is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("8f9c29f5-bf0b-4c9a-a055-d841eb2e5293"), Code="13711", Description="Increase programs and services for the community", Definition="Increase programs and services for the community is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("08689566-8332-4fff-92bd-d19e297bf76f"), Code="13712", Description="Increase utilization of under used space", Definition="Increase utilization of under used space is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("797482c3-9837-4070-887f-b2bebbda6a37"), Code="13709", Description="Raise revenue", Definition="Raise revenue is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefBuildingJointUseRationaleType Pick List
          /// </summary>
-        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypePickList = new List<RefBuildingJointUseRationaleType> =
+        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypePickList = new List<RefBuildingJointUseRationaleType>
         {
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("fc5e69fa-d2c3-4535-b6c0-3a245d0e3b53"), Code="Increase programs and services for students is specified as the reasons for permitting and participating in joint-use.", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("74c664b8-c050-4257-9a85-b16a7547ea18"), Code="Increase programs and services for the community is specified as the reasons for permitting and participating in joint-use.", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("2f79a54f-5db0-4346-9503-41ff2f3ca6ab"), Code="Increase utilization of under used space is specified as the reasons for permitting and participating in joint-use.", SortOrder=0 },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("c6386ac8-3c89-4466-9f35-2a96e34a7387"), Code="Raise revenue is specified as the reasons for permitting and participating in joint-use.", SortOrder=0 },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("3ec3e841-fda2-4e8a-b400-de03c6f45302"), Code="13710", Description="Increase programs and services for students", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("8f9c29f5-bf0b-4c9a-a055-d841eb2e5293"), Code="13711", Description="Increase programs and services for the community", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("08689566-8332-4fff-92bd-d19e297bf76f"), Code="13712", Description="Increase utilization of under used space", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("797482c3-9837-4070-887f-b2bebbda6a37"), Code="13709", Description="Raise revenue", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefSex"> List
          /// </summary>
-        public static List<RefSex> RefSexList = new List<RefSex> =
+        public static List<RefSex> RefSexList = new List<RefSex>
         {
-            new RefSex { Id=Guid.Parse("0798fc26-0bf2-420e-9bf2-366eb07c7864"), Code="Male", Description="Male", Definition="", SortOrder=0 },
-            new RefSex { Id=Guid.Parse("30d7f5f0-165d-4345-ba2c-9f96a77311f0"), Code="Female", Description="Female", Definition="", SortOrder=0 },
-            new RefSex { Id=Guid.Parse("db204484-6204-44f6-9331-314baa085946"), Code="Gender is not selected", Description="NotSelected", Definition="", SortOrder=0 },
+            new RefSex { Id=Guid.Parse("205542c4-88f6-47ea-bf44-31a23deb51c7"), Code="Male", Description="Male", Definition="Male", SortOrder=Convert.ToDecimal("1.00") },
+            new RefSex { Id=Guid.Parse("fb109723-73c0-4894-8c1a-d526b4ae98cb"), Code="Female", Description="Female", Definition="Female", SortOrder=Convert.ToDecimal("2.00") },
+            new RefSex { Id=Guid.Parse("60015713-3dea-4dda-87b8-4a64df25b3a2"), Code="NotSelected", Description="Not selected", Definition="Gender is not selected", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefSex Pick List
          /// </summary>
-        public static List<RefSex> RefSexPickList = new List<RefSex> =
+        public static List<RefSex> RefSexPickList = new List<RefSex>
         {
-            new RefSex { Id=Guid.Parse("0798fc26-0bf2-420e-9bf2-366eb07c7864"), Code="Male", SortOrder=0 },
-            new RefSex { Id=Guid.Parse("30d7f5f0-165d-4345-ba2c-9f96a77311f0"), Code="Female", SortOrder=0 },
-            new RefSex { Id=Guid.Parse("db204484-6204-44f6-9331-314baa085946"), Code="Gender is not selected", SortOrder=0 },
+            new RefSex { Id=Guid.Parse("205542c4-88f6-47ea-bf44-31a23deb51c7"), Code="Male", Description="Male", SortOrder=Convert.ToDecimal("1.00") },
+            new RefSex { Id=Guid.Parse("fb109723-73c0-4894-8c1a-d526b4ae98cb"), Code="Female", Description="Female", SortOrder=Convert.ToDecimal("2.00") },
+            new RefSex { Id=Guid.Parse("60015713-3dea-4dda-87b8-4a64df25b3a2"), Code="NotSelected", Description="Not selected", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefChildDevelopmentAssociateType"> List
          /// </summary>
-        public static List<RefChildDevelopmentAssociateType> RefChildDevelopmentAssociateTypeList = new List<RefChildDevelopmentAssociateType> =
+        public static List<RefChildDevelopmentAssociateType> RefChildDevelopmentAssociateTypeList = new List<RefChildDevelopmentAssociateType>
         {
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b930cc78-17f3-4250-830d-ba6cdc3ec32b"), Code="Infant/toddler is specified as the type of Child Development Associate credential.", Description="01", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("4d989df5-275c-43d4-a45b-a7f61366f7cf"), Code="Preschool is specified as the type of Child Development Associate credential.", Description="02", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("dec1b137-d2a7-481f-b818-f24332d9a9d6"), Code="Family child care home is specified as the type of Child Development Associate credential.", Description="03", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("c7859c01-635d-4990-9d48-93cdda1eb5bb"), Code="Home visitor is specified as the type of Child Development Associate credential.", Description="04", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("f7c4c6fa-94d1-4d2c-bb29-204fa3f02793"), Code="Other is specified as the type of Child Development Associate credential.", Description="06", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("9bcb153c-3103-4710-84b0-54e435dd3363"), Code="Bilingual is specified as the type of Child Development Associate credential.", Description="07", Definition="", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("a06b45a6-7e61-4e40-bd69-be4f7edeca43"), Code="No current CDA indicated is specified as the type of Child Development Associate credential.", Description="99", Definition="", SortOrder=0 },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("7e889fd7-1058-4c40-913f-8f97a53988e7"), Code="01", Description="Infant/toddler", Definition="Infant/toddler is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("eaeaaa85-793b-4651-825f-41844e3286de"), Code="02", Description="Preschool", Definition="Preschool is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b73afa4e-0d02-4403-b472-cafd679f9a0f"), Code="03", Description="Family child care home", Definition="Family child care home is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("8a8cc3bc-d9cd-40b3-8ca2-6a0685e91463"), Code="04", Description="Home visitor", Definition="Home visitor is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("96a2ee4c-2394-49fd-adf2-525cbcd65646"), Code="06", Description="Other", Definition="Other is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("02b44b85-fd4a-44cd-a0a6-fe0f881c2ddc"), Code="07", Description="Bilingual", Definition="Bilingual is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b055ef85-fa15-4f18-bce4-2ad44e1d6765"), Code="99", Description="No current CDA indicated", Definition="No current CDA indicated is specified as the type of Child Development Associate credential.", SortOrder=Convert.ToDecimal("13.00") },
         };
 
         /// <summary>
         /// The RefChildDevelopmentAssociateType Pick List
          /// </summary>
-        public static List<RefChildDevelopmentAssociateType> RefChildDevelopmentAssociateTypePickList = new List<RefChildDevelopmentAssociateType> =
+        public static List<RefChildDevelopmentAssociateType> RefChildDevelopmentAssociateTypePickList = new List<RefChildDevelopmentAssociateType>
         {
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b930cc78-17f3-4250-830d-ba6cdc3ec32b"), Code="Infant/toddler is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("4d989df5-275c-43d4-a45b-a7f61366f7cf"), Code="Preschool is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("dec1b137-d2a7-481f-b818-f24332d9a9d6"), Code="Family child care home is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("c7859c01-635d-4990-9d48-93cdda1eb5bb"), Code="Home visitor is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("f7c4c6fa-94d1-4d2c-bb29-204fa3f02793"), Code="Other is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("9bcb153c-3103-4710-84b0-54e435dd3363"), Code="Bilingual is specified as the type of Child Development Associate credential.", SortOrder=0 },
-            new RefChildDevelopmentAssociateType { Id=Guid.Parse("a06b45a6-7e61-4e40-bd69-be4f7edeca43"), Code="No current CDA indicated is specified as the type of Child Development Associate credential.", SortOrder=0 },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("7e889fd7-1058-4c40-913f-8f97a53988e7"), Code="01", Description="Infant/toddler", SortOrder=Convert.ToDecimal("1.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("eaeaaa85-793b-4651-825f-41844e3286de"), Code="02", Description="Preschool", SortOrder=Convert.ToDecimal("3.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b73afa4e-0d02-4403-b472-cafd679f9a0f"), Code="03", Description="Family child care home", SortOrder=Convert.ToDecimal("5.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("8a8cc3bc-d9cd-40b3-8ca2-6a0685e91463"), Code="04", Description="Home visitor", SortOrder=Convert.ToDecimal("7.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("96a2ee4c-2394-49fd-adf2-525cbcd65646"), Code="06", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("02b44b85-fd4a-44cd-a0a6-fe0f881c2ddc"), Code="07", Description="Bilingual", SortOrder=Convert.ToDecimal("11.00") },
+            new RefChildDevelopmentAssociateType { Id=Guid.Parse("b055ef85-fa15-4f18-bce4-2ad44e1d6765"), Code="99", Description="No current CDA indicated", SortOrder=Convert.ToDecimal("13.00") },
        };
    }
 }

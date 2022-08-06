@@ -15,27 +15,27 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The complete <see cref="RefBuildingTechnologyWiringSystemType"> List
          /// </summary>
-        public static List<RefBuildingTechnologyWiringSystemType> RefBuildingTechnologyWiringSystemTypeList = new List<RefBuildingTechnologyWiringSystemType> =
+        public static List<RefBuildingTechnologyWiringSystemType> RefBuildingTechnologyWiringSystemTypeList = new List<RefBuildingTechnologyWiringSystemType>
         {
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("907a02e8-64e8-4560-909d-b735e47f3a29"), Code="Coaxial cable is specified as the means through which voice, video, audio, and data information are conveyed.", Description="02504", Definition="", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f32c5317-1175-40ec-a9e0-c95c393d829e"), Code="Fiber optic cable is specified as the means through which voice, video, audio, and data information are conveyed.", Description="02503", Definition="", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("d0170559-89af-453d-a3c7-783e376d7a3c"), Code="Twisted pair is specified as the means through which voice, video, audio, and data information are conveyed.", Description="02506", Definition="", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("0e2b3b8a-0365-4e3e-a119-2ffc4237a367"), Code="Wire cable is specified as the means through which voice, video, audio, and data information are conveyed.", Description="02502", Definition="", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("45a92390-dd35-4520-ba54-e2c1871e4706"), Code="Wireless is specified as the means through which voice, video, audio, and data information are conveyed.", Description="02505", Definition="", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("ff75b6c6-045e-4155-b852-776627198ba3"), Code="Other is specified as the means through which voice, video, audio, and data information are conveyed.", Description="09999", Definition="", SortOrder=0 },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("dce3ac37-624a-4905-83fb-fb37b1fdf190"), Code="02504", Description="Coaxial cable", Definition="Coaxial cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("134d0851-5bf1-4957-9cad-6114c4725989"), Code="02503", Description="Fiber optic cable", Definition="Fiber optic cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f759ae72-dae7-4dc5-b673-aabce5ad878f"), Code="02506", Description="Twisted pair", Definition="Twisted pair is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("8af78c20-a231-47bf-af0b-5379522436a0"), Code="02502", Description="Wire cable", Definition="Wire cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("2baf4422-b737-4364-85cc-ad01124602a7"), Code="02505", Description="Wireless", Definition="Wireless is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f05f3af4-4028-4850-904e-6cb17248996a"), Code="09999", Description="Other", Definition="Other is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefBuildingTechnologyWiringSystemType Pick List
          /// </summary>
-        public static List<RefBuildingTechnologyWiringSystemType> RefBuildingTechnologyWiringSystemTypePickList = new List<RefBuildingTechnologyWiringSystemType> =
+        public static List<RefBuildingTechnologyWiringSystemType> RefBuildingTechnologyWiringSystemTypePickList = new List<RefBuildingTechnologyWiringSystemType>
         {
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("907a02e8-64e8-4560-909d-b735e47f3a29"), Code="Coaxial cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f32c5317-1175-40ec-a9e0-c95c393d829e"), Code="Fiber optic cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("d0170559-89af-453d-a3c7-783e376d7a3c"), Code="Twisted pair is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("0e2b3b8a-0365-4e3e-a119-2ffc4237a367"), Code="Wire cable is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("45a92390-dd35-4520-ba54-e2c1871e4706"), Code="Wireless is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
-            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("ff75b6c6-045e-4155-b852-776627198ba3"), Code="Other is specified as the means through which voice, video, audio, and data information are conveyed.", SortOrder=0 },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("dce3ac37-624a-4905-83fb-fb37b1fdf190"), Code="02504", Description="Coaxial cable", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("134d0851-5bf1-4957-9cad-6114c4725989"), Code="02503", Description="Fiber optic cable", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f759ae72-dae7-4dc5-b673-aabce5ad878f"), Code="02506", Description="Twisted pair", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("8af78c20-a231-47bf-af0b-5379522436a0"), Code="02502", Description="Wire cable", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("2baf4422-b737-4364-85cc-ad01124602a7"), Code="02505", Description="Wireless", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingTechnologyWiringSystemType { Id=Guid.Parse("f05f3af4-4028-4850-904e-6cb17248996a"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

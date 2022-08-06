@@ -15,27 +15,27 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefFrequencyOfService"> List
          /// </summary>
-        public static List<RefFrequencyOfService> RefFrequencyOfServiceList = new List<RefFrequencyOfService> =
+        public static List<RefFrequencyOfService> RefFrequencyOfServiceList = new List<RefFrequencyOfService>
         {
-            new RefFrequencyOfService { Id=Guid.Parse("fadfa6a0-3f77-4a16-8a2c-c59f3cc75007"), Code="Daily service is planned to occur.", Description="Daily", Definition="", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("f58deb2e-1faa-4e37-b673-3eca15992bd7"), Code="Weekly service is planned to occur.", Description="Weekly", Definition="", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("a7ee481e-22f3-4c8f-afdb-c6ed48ac15fa"), Code="Monthly service is planned to occur.", Description="Monthly", Definition="", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("d877dd28-88e8-4918-9000-8f4151864794"), Code="Quarterly service is planned to occur.", Description="Quarterly", Definition="", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("c9774377-1462-44ed-ae90-8e7e5aef1d04"), Code="Annually service is planned to occur.", Description="Annually", Definition="", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("5d963c6c-8713-42a8-a608-51b9ec13c509"), Code="The service is planned to occur one time.", Description="OneTime", Definition="", SortOrder=0 },
+            new RefFrequencyOfService { Id=Guid.Parse("66b59630-ba42-491e-b722-a80b1f8888d3"), Code="Daily", Description="Daily", Definition="Daily service is planned to occur.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("945a73a2-117b-42d0-8075-216da9d78b3e"), Code="Weekly", Description="Weekly", Definition="Weekly service is planned to occur.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("c9c20077-6fd0-4fe0-9066-cee292b7f184"), Code="Monthly", Description="Monthly", Definition="Monthly service is planned to occur.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("c7096cbb-527d-4dfb-9c98-d85afd5bd2b7"), Code="Quarterly", Description="Quarterly", Definition="Quarterly service is planned to occur.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("368666aa-ab27-40ff-8c51-ed6ce7e52172"), Code="Annually", Description="Annually", Definition="Annually service is planned to occur.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("1c22c934-e027-4f3d-8514-a387b1f4c553"), Code="OneTime", Description="One Time", Definition="The service is planned to occur one time.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefFrequencyOfService Pick List
          /// </summary>
-        public static List<RefFrequencyOfService> RefFrequencyOfServicePickList = new List<RefFrequencyOfService> =
+        public static List<RefFrequencyOfService> RefFrequencyOfServicePickList = new List<RefFrequencyOfService>
         {
-            new RefFrequencyOfService { Id=Guid.Parse("fadfa6a0-3f77-4a16-8a2c-c59f3cc75007"), Code="Daily service is planned to occur.", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("f58deb2e-1faa-4e37-b673-3eca15992bd7"), Code="Weekly service is planned to occur.", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("a7ee481e-22f3-4c8f-afdb-c6ed48ac15fa"), Code="Monthly service is planned to occur.", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("d877dd28-88e8-4918-9000-8f4151864794"), Code="Quarterly service is planned to occur.", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("c9774377-1462-44ed-ae90-8e7e5aef1d04"), Code="Annually service is planned to occur.", SortOrder=0 },
-            new RefFrequencyOfService { Id=Guid.Parse("5d963c6c-8713-42a8-a608-51b9ec13c509"), Code="The service is planned to occur one time.", SortOrder=0 },
+            new RefFrequencyOfService { Id=Guid.Parse("66b59630-ba42-491e-b722-a80b1f8888d3"), Code="Daily", Description="Daily", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("945a73a2-117b-42d0-8075-216da9d78b3e"), Code="Weekly", Description="Weekly", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("c9c20077-6fd0-4fe0-9066-cee292b7f184"), Code="Monthly", Description="Monthly", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("c7096cbb-527d-4dfb-9c98-d85afd5bd2b7"), Code="Quarterly", Description="Quarterly", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("368666aa-ab27-40ff-8c51-ed6ce7e52172"), Code="Annually", Description="Annually", SortOrder=Convert.ToDecimal("9.00") },
+            new RefFrequencyOfService { Id=Guid.Parse("1c22c934-e027-4f3d-8514-a387b1f4c553"), Code="OneTime", Description="One Time", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

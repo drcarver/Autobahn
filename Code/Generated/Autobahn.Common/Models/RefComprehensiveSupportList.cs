@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefComprehensiveSupport"> List
          /// </summary>
-        public static List<RefComprehensiveSupport> RefComprehensiveSupportList = new List<RefComprehensiveSupport> =
+        public static List<RefComprehensiveSupport> RefComprehensiveSupportList = new List<RefComprehensiveSupport>
         {
         };
 
         /// <summary>
         /// The RefComprehensiveSupport Pick List
          /// </summary>
-        public static List<RefComprehensiveSupport> RefComprehensiveSupportPickList = new List<RefComprehensiveSupport> =
+        public static List<RefComprehensiveSupport> RefComprehensiveSupportPickList = new List<RefComprehensiveSupport>
         {
        };
    }

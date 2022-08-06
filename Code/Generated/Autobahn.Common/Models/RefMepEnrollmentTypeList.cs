@@ -15,27 +15,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefMepEnrollmentType"> List
          /// </summary>
-        public static List<RefMepEnrollmentType> RefMepEnrollmentTypeList = new List<RefMepEnrollmentType> =
+        public static List<RefMepEnrollmentType> RefMepEnrollmentTypeList = new List<RefMepEnrollmentType>
         {
-            new RefMepEnrollmentType { Id=Guid.Parse("820d89c6-4ad3-40d3-bb94-317139069b43"), Code="Basic School Program is the type of school/migrant education project in which instruction and/or support services are provided.", Description="01", Definition="", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("3f34ed42-6dec-45c4-8713-ef5759040f5c"), Code="Regular Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", Description="02", Definition="", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("d0bbf9b7-2401-4777-b2a3-c83f94d1b8ea"), Code="Summer/Intersession MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", Description="03", Definition="", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("a581a28e-b83e-4701-adf9-a9be270daf55"), Code="Year Round MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", Description="04", Definition="", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("553c8aaf-2bf8-47ba-a190-4cf4c244dda1"), Code="Basic School Program and Regular-Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", Description="05", Definition="", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("122a4531-6fc5-47d9-8dd5-fd2dd552d1fd"), Code="Residency Only (none of the above)", Description="06", Definition="", SortOrder=0 },
+            new RefMepEnrollmentType { Id=Guid.Parse("c2428717-ef67-4e56-9029-85680b76e1d9"), Code="01", Description="Basic School Program", Definition="Basic School Program is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("75ddce63-4d8d-40ac-84e9-513d950f86d3"), Code="02", Description="Regular Term MEP-Funded Project", Definition="Regular Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("03ff1966-3635-4d89-b5b2-e5104afa8b7e"), Code="03", Description="Summer/Intersession MEP-Funded Project", Definition="Summer/Intersession MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("1d0a18d0-b8c8-4f10-86b1-15ed882f7919"), Code="04", Description="Year Round MEP-Funded Project", Definition="Year Round MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("3a39ad80-8939-436d-9984-2f1e3f659a3e"), Code="05", Description="Basic School Program and Regular-Term MEP-Funded Project", Definition="Basic School Program and Regular-Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("09286bad-caaa-404b-aef6-d71cf63140ed"), Code="06", Description="Residency Only (none of the above)", Definition="Residency Only (none of the above)", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefMepEnrollmentType Pick List
          /// </summary>
-        public static List<RefMepEnrollmentType> RefMepEnrollmentTypePickList = new List<RefMepEnrollmentType> =
+        public static List<RefMepEnrollmentType> RefMepEnrollmentTypePickList = new List<RefMepEnrollmentType>
         {
-            new RefMepEnrollmentType { Id=Guid.Parse("820d89c6-4ad3-40d3-bb94-317139069b43"), Code="Basic School Program is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("3f34ed42-6dec-45c4-8713-ef5759040f5c"), Code="Regular Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("d0bbf9b7-2401-4777-b2a3-c83f94d1b8ea"), Code="Summer/Intersession MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("a581a28e-b83e-4701-adf9-a9be270daf55"), Code="Year Round MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("553c8aaf-2bf8-47ba-a190-4cf4c244dda1"), Code="Basic School Program and Regular-Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=0 },
-            new RefMepEnrollmentType { Id=Guid.Parse("122a4531-6fc5-47d9-8dd5-fd2dd552d1fd"), Code="Residency Only (none of the above)", SortOrder=0 },
+            new RefMepEnrollmentType { Id=Guid.Parse("c2428717-ef67-4e56-9029-85680b76e1d9"), Code="01", Description="Basic School Program", SortOrder=Convert.ToDecimal("1.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("75ddce63-4d8d-40ac-84e9-513d950f86d3"), Code="02", Description="Regular Term MEP-Funded Project", SortOrder=Convert.ToDecimal("2.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("03ff1966-3635-4d89-b5b2-e5104afa8b7e"), Code="03", Description="Summer/Intersession MEP-Funded Project", SortOrder=Convert.ToDecimal("3.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("1d0a18d0-b8c8-4f10-86b1-15ed882f7919"), Code="04", Description="Year Round MEP-Funded Project", SortOrder=Convert.ToDecimal("4.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("3a39ad80-8939-436d-9984-2f1e3f659a3e"), Code="05", Description="Basic School Program and Regular-Term MEP-Funded Project", SortOrder=Convert.ToDecimal("5.00") },
+            new RefMepEnrollmentType { Id=Guid.Parse("09286bad-caaa-404b-aef6-d71cf63140ed"), Code="06", Description="Residency Only (none of the above)", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

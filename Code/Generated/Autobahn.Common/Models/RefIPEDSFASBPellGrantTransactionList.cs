@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIPEDSFASBPellGrantTransaction"> List
          /// </summary>
-        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionList = new List<RefIPEDSFASBPellGrantTransaction> =
+        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionList = new List<RefIPEDSFASBPellGrantTransaction>
         {
         };
 
         /// <summary>
         /// The RefIPEDSFASBPellGrantTransaction Pick List
          /// </summary>
-        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionPickList = new List<RefIPEDSFASBPellGrantTransaction> =
+        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionPickList = new List<RefIPEDSFASBPellGrantTransaction>
         {
        };
    }

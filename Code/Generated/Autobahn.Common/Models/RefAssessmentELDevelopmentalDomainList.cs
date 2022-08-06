@@ -15,25 +15,25 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentELDevelopmentalDomain"> List
          /// </summary>
-        public static List<RefAssessmentELDevelopmentalDomain> RefAssessmentELDevelopmentalDomainList = new List<RefAssessmentELDevelopmentalDomain> =
+        public static List<RefAssessmentELDevelopmentalDomain> RefAssessmentELDevelopmentalDomainList = new List<RefAssessmentELDevelopmentalDomain>
         {
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("4f5ab8ae-dcea-4d67-9936-fcd45d2ce9b5"), Code="Domain related to a child's language and literacy development.", Description="01", Definition="", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("051b672a-80d3-4bd3-930d-0809ec5126e8"), Code="Domain related to a child's cognition and general knowledge (including early mathematics and early scientific development).", Description="02", Definition="", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("92ca795c-b103-4b91-9dad-2c3d62503e43"), Code="Domain related to a child's approaches toward learning (including the utilization of the arts).", Description="03", Definition="", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("43c716e8-1954-4559-8af4-39a82ac4ac9c"), Code="Domain related to a child's physical well-being and motor development (including adaptive skills).", Description="04", Definition="", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("09b39cd2-ae06-454b-a1ef-0e52c052dcda"), Code="Domain related to a child's social and emotional development.", Description="05", Definition="", SortOrder=0 },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("bbf032e9-ba82-49a5-9a69-f71035197068"), Code="01", Description="Language and Literacy", Definition="Domain related to a child's language and literacy development.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("27ad9576-618b-478c-b56f-0ee1fbcfa85d"), Code="02", Description="Cognition and General Knowledge", Definition="Domain related to a child's cognition and general knowledge (including early mathematics and early scientific development).", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("6c57e224-d89a-4631-bd7f-2b7cf09ae9c2"), Code="03", Description="Approaches Toward Learning", Definition="Domain related to a child's approaches toward learning (including the utilization of the arts).", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("5089f813-39fe-45f1-9787-0fe3ce91834b"), Code="04", Description="Physical Well-being and Motor", Definition="Domain related to a child's physical well-being and motor development (including adaptive skills).", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("00bab5f9-2969-489e-bcb2-6de9ba20cfd6"), Code="05", Description="Social and Emotional Development", Definition="Domain related to a child's social and emotional development.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
         /// The RefAssessmentELDevelopmentalDomain Pick List
          /// </summary>
-        public static List<RefAssessmentELDevelopmentalDomain> RefAssessmentELDevelopmentalDomainPickList = new List<RefAssessmentELDevelopmentalDomain> =
+        public static List<RefAssessmentELDevelopmentalDomain> RefAssessmentELDevelopmentalDomainPickList = new List<RefAssessmentELDevelopmentalDomain>
         {
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("4f5ab8ae-dcea-4d67-9936-fcd45d2ce9b5"), Code="Domain related to a child's language and literacy development.", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("051b672a-80d3-4bd3-930d-0809ec5126e8"), Code="Domain related to a child's cognition and general knowledge (including early mathematics and early scientific development).", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("92ca795c-b103-4b91-9dad-2c3d62503e43"), Code="Domain related to a child's approaches toward learning (including the utilization of the arts).", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("43c716e8-1954-4559-8af4-39a82ac4ac9c"), Code="Domain related to a child's physical well-being and motor development (including adaptive skills).", SortOrder=0 },
-            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("09b39cd2-ae06-454b-a1ef-0e52c052dcda"), Code="Domain related to a child's social and emotional development.", SortOrder=0 },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("bbf032e9-ba82-49a5-9a69-f71035197068"), Code="01", Description="Language and Literacy", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("27ad9576-618b-478c-b56f-0ee1fbcfa85d"), Code="02", Description="Cognition and General Knowledge", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("6c57e224-d89a-4631-bd7f-2b7cf09ae9c2"), Code="03", Description="Approaches Toward Learning", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("5089f813-39fe-45f1-9787-0fe3ce91834b"), Code="04", Description="Physical Well-being and Motor", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentELDevelopmentalDomain { Id=Guid.Parse("00bab5f9-2969-489e-bcb2-6de9ba20cfd6"), Code="05", Description="Social and Emotional Development", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

@@ -15,23 +15,23 @@ namespace Autobahn.Credentials.Models
         /// <summary>
         /// The complete <see cref="RefCredentialDefIntendedPurposeType"> List
          /// </summary>
-        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypeList = new List<RefCredentialDefIntendedPurposeType> =
+        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypeList = new List<RefCredentialDefIntendedPurposeType>
         {
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("8bec27e0-268a-4d9d-985c-bd42c21dd333"), Code="The intended purpose of the credential by the holder is general education.", Description="GeneralEducation", Definition="", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("629cb623-97fd-4746-8d83-beb55b455ce4"), Code="The intended purpose of the credential by the holder is job or career preparation.", Description="JobOrCareerPreparation", Definition="", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("958fb0a5-0199-4645-ac0e-72aa18081d03"), Code="The intended purpose of the credential by the holder is for mid-career, experienced worker preparation and advancement.", Description="MidCareer", Definition="", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("9f12e34a-457b-47dc-873a-78aca9e6f77d"), Code="The intended purpose of the credential by the holder is for determining prior learning experience of the holder, including but not limited to college credit.", Description="PriorExperience", Definition="", SortOrder=0 },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("11736fc1-3ef1-40ee-a6ca-0f76e88c76a8"), Code="GeneralEducation", Description="General Education", Definition="The intended purpose of the credential by the holder is general education.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("cb79137d-cb0b-4ff9-9c48-a4c74cbba2a9"), Code="JobOrCareerPreparation", Description="Job/Career Preparation", Definition="The intended purpose of the credential by the holder is job or career preparation.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("6bb1f603-5648-4afd-85ce-9ef1aefaa169"), Code="MidCareer", Description="Mid-Career Level", Definition="The intended purpose of the credential by the holder is for mid-career, experienced worker preparation and advancement.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("40b2d40b-8a96-4550-940b-8e5d5fc934b0"), Code="PriorExperience", Description="Prior Learning Experience", Definition="The intended purpose of the credential by the holder is for determining prior learning experience of the holder, including but not limited to college credit.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefCredentialDefIntendedPurposeType Pick List
          /// </summary>
-        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypePickList = new List<RefCredentialDefIntendedPurposeType> =
+        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypePickList = new List<RefCredentialDefIntendedPurposeType>
         {
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("8bec27e0-268a-4d9d-985c-bd42c21dd333"), Code="The intended purpose of the credential by the holder is general education.", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("629cb623-97fd-4746-8d83-beb55b455ce4"), Code="The intended purpose of the credential by the holder is job or career preparation.", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("958fb0a5-0199-4645-ac0e-72aa18081d03"), Code="The intended purpose of the credential by the holder is for mid-career, experienced worker preparation and advancement.", SortOrder=0 },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("9f12e34a-457b-47dc-873a-78aca9e6f77d"), Code="The intended purpose of the credential by the holder is for determining prior learning experience of the holder, including but not limited to college credit.", SortOrder=0 },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("11736fc1-3ef1-40ee-a6ca-0f76e88c76a8"), Code="GeneralEducation", Description="General Education", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("cb79137d-cb0b-4ff9-9c48-a4c74cbba2a9"), Code="JobOrCareerPreparation", Description="Job/Career Preparation", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("6bb1f603-5648-4afd-85ce-9ef1aefaa169"), Code="MidCareer", Description="Mid-Career Level", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("40b2d40b-8a96-4550-940b-8e5d5fc934b0"), Code="PriorExperience", Description="Prior Learning Experience", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

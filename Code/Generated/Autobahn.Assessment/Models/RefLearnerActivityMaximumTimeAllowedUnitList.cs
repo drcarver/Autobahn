@@ -15,14 +15,14 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefLearnerActivityMaximumTimeAllowedUnit"> List
          /// </summary>
-        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitList = new List<RefLearnerActivityMaximumTimeAllowedUnit> =
+        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitList = new List<RefLearnerActivityMaximumTimeAllowedUnit>
         {
         };
 
         /// <summary>
         /// The RefLearnerActivityMaximumTimeAllowedUnit Pick List
          /// </summary>
-        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitPickList = new List<RefLearnerActivityMaximumTimeAllowedUnit> =
+        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitPickList = new List<RefLearnerActivityMaximumTimeAllowedUnit>
         {
        };
    }

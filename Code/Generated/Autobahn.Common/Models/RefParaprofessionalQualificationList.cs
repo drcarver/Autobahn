@@ -15,19 +15,19 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefParaprofessionalQualification"> List
          /// </summary>
-        public static List<RefParaprofessionalQualification> RefParaprofessionalQualificationList = new List<RefParaprofessionalQualification> =
+        public static List<RefParaprofessionalQualification> RefParaprofessionalQualificationList = new List<RefParaprofessionalQualification>
         {
-            new RefParaprofessionalQualification { Id=Guid.Parse("c79a8767-1ee2-487d-88da-f0d3293e2289"), Code="The paraprofessional is qualified for their assignment according to state definition.", Description="Qualified", Definition="", SortOrder=0 },
-            new RefParaprofessionalQualification { Id=Guid.Parse("7cf74038-1b8b-4f1b-93a5-9eb0e482469f"), Code="The paraprofessional is NOT qualified for their assignment according to state definition.", Description="NotQualified", Definition="", SortOrder=0 },
+            new RefParaprofessionalQualification { Id=Guid.Parse("ab420bae-457a-421a-a362-acb20eb62cee"), Code="Qualified", Description="Qualified", Definition="The paraprofessional is qualified for their assignment according to state definition.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefParaprofessionalQualification { Id=Guid.Parse("105c0267-8510-4263-a77f-f90c8600f59f"), Code="NotQualified", Description="Not Qualified", Definition="The paraprofessional is NOT qualified for their assignment according to state definition.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
         /// The RefParaprofessionalQualification Pick List
          /// </summary>
-        public static List<RefParaprofessionalQualification> RefParaprofessionalQualificationPickList = new List<RefParaprofessionalQualification> =
+        public static List<RefParaprofessionalQualification> RefParaprofessionalQualificationPickList = new List<RefParaprofessionalQualification>
         {
-            new RefParaprofessionalQualification { Id=Guid.Parse("c79a8767-1ee2-487d-88da-f0d3293e2289"), Code="The paraprofessional is qualified for their assignment according to state definition.", SortOrder=0 },
-            new RefParaprofessionalQualification { Id=Guid.Parse("7cf74038-1b8b-4f1b-93a5-9eb0e482469f"), Code="The paraprofessional is NOT qualified for their assignment according to state definition.", SortOrder=0 },
+            new RefParaprofessionalQualification { Id=Guid.Parse("ab420bae-457a-421a-a362-acb20eb62cee"), Code="Qualified", Description="Qualified", SortOrder=Convert.ToDecimal("1.00") },
+            new RefParaprofessionalQualification { Id=Guid.Parse("105c0267-8510-4263-a77f-f90c8600f59f"), Code="NotQualified", Description="Not Qualified", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

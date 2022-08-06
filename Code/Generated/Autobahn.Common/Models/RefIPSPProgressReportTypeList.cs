@@ -15,23 +15,23 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefIPSPProgressReportType"> List
          /// </summary>
-        public static List<RefIPSPProgressReportType> RefIPSPProgressReportTypeList = new List<RefIPSPProgressReportType> =
+        public static List<RefIPSPProgressReportType> RefIPSPProgressReportTypeList = new List<RefIPSPProgressReportType>
         {
-            new RefIPSPProgressReportType { Id=Guid.Parse("e559543a-e43b-446b-b41c-4f9029da5350"), Code="The method by which parents are notified of the student's progress on annual goal is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("664c3f8b-0bf7-4e28-915d-8662679e6a88"), Code="Parent conference is a method by which parents are notified of the student's progress on annual goal.", Description="Parentconference", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("4a4e0aa3-1af5-44b7-8f51-74e147a72ce6"), Code="Progress reports are a method by which parents are notified of the student's progress on annual goal.", Description="Progressreports", Definition="", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("a901f3a9-d113-443c-ab1d-8acf9af4fa7e"), Code="Report card is a method by which parents are notified of the student's progress on annual goal.", Description="Reportcard", Definition="", SortOrder=0 },
+            new RefIPSPProgressReportType { Id=Guid.Parse("8b667afa-ed95-4eac-93e8-df99f2ae0c85"), Code="Other", Description="Other", Definition="The method by which parents are notified of the student's progress on annual goal is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("a6d81f39-b409-40b1-92fb-c8fe52a4a986"), Code="Parentconference", Description="Parent conference", Definition="Parent conference is a method by which parents are notified of the student's progress on annual goal.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("f222aabd-7cc9-41f4-9e68-f6b63e237f4e"), Code="Progressreports", Description="Progress reports", Definition="Progress reports are a method by which parents are notified of the student's progress on annual goal.", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("5dbe82eb-ded5-4053-9f96-11695a912762"), Code="Reportcard", Description="Report card", Definition="Report card is a method by which parents are notified of the student's progress on annual goal.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
         /// The RefIPSPProgressReportType Pick List
          /// </summary>
-        public static List<RefIPSPProgressReportType> RefIPSPProgressReportTypePickList = new List<RefIPSPProgressReportType> =
+        public static List<RefIPSPProgressReportType> RefIPSPProgressReportTypePickList = new List<RefIPSPProgressReportType>
         {
-            new RefIPSPProgressReportType { Id=Guid.Parse("e559543a-e43b-446b-b41c-4f9029da5350"), Code="The method by which parents are notified of the student's progress on annual goal is in a category not yet defined in CEDS.", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("664c3f8b-0bf7-4e28-915d-8662679e6a88"), Code="Parent conference is a method by which parents are notified of the student's progress on annual goal.", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("4a4e0aa3-1af5-44b7-8f51-74e147a72ce6"), Code="Progress reports are a method by which parents are notified of the student's progress on annual goal.", SortOrder=0 },
-            new RefIPSPProgressReportType { Id=Guid.Parse("a901f3a9-d113-443c-ab1d-8acf9af4fa7e"), Code="Report card is a method by which parents are notified of the student's progress on annual goal.", SortOrder=0 },
+            new RefIPSPProgressReportType { Id=Guid.Parse("8b667afa-ed95-4eac-93e8-df99f2ae0c85"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("a6d81f39-b409-40b1-92fb-c8fe52a4a986"), Code="Parentconference", Description="Parent conference", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("f222aabd-7cc9-41f4-9e68-f6b63e237f4e"), Code="Progressreports", Description="Progress reports", SortOrder=Convert.ToDecimal("") },
+            new RefIPSPProgressReportType { Id=Guid.Parse("5dbe82eb-ded5-4053-9f96-11695a912762"), Code="Reportcard", Description="Report card", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

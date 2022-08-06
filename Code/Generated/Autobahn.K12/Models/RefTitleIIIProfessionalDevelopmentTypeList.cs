@@ -15,27 +15,27 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The complete <see cref="RefTitleIIIProfessionalDevelopmentType"> List
          /// </summary>
-        public static List<RefTitleIIIProfessionalDevelopmentType> RefTitleIIIProfessionalDevelopmentTypeList = new List<RefTitleIIIProfessionalDevelopmentType> =
+        public static List<RefTitleIIIProfessionalDevelopmentType> RefTitleIIIProfessionalDevelopmentTypeList = new List<RefTitleIIIProfessionalDevelopmentType>
         {
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("1e0e26ba-4db2-47a3-b1ad-d56a6510d3cc"), Code="The type of Title III professional development utilized is Instructional strategies.", Description="InstructionalStrategies", Definition="", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("19f535e9-3a93-4f3a-afd8-baa6e9970eb9"), Code="The type of Title III professional development utilized is Assessment.", Description="Assessment", Definition="", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("006d2c5c-d86e-4fe7-890a-3ae8b55491a0"), Code="The type of Title III professional development utilized is ELP and content standards.", Description="ELPContentStandards", Definition="", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("1b9bc71d-c085-4311-b252-3e79eeb425a4"), Code="The type of Title III professional development utilized is Curriculum alignment to ELP standards.", Description="CurriculumAlignmentELP", Definition="", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("0549caed-cccb-488f-9bd9-70969be7a615"), Code="The type of Title III professional development utilized is Subject matter.", Description="SubjectMatter", Definition="", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("7eac0ba6-65dc-4fed-a0c5-c6ee3ee682bb"), Code="The type of Title III professional development utilized is in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("6392e49f-d210-4183-ae19-1a88991ea817"), Code="InstructionalStrategies", Description="Instructional strategies", Definition="The type of Title III professional development utilized is Instructional strategies.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("6331957f-384c-4649-8a54-38620f799282"), Code="Assessment", Description="Assessment", Definition="The type of Title III professional development utilized is Assessment.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("04ed3902-4367-4625-b6a3-3c2c7912ed24"), Code="ELPContentStandards", Description="ELP and content standards", Definition="The type of Title III professional development utilized is ELP and content standards.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("ff4866eb-b5e7-4d9e-b443-b3ecde2a4959"), Code="CurriculumAlignmentELP", Description="Curriculum alignment to ELP standards", Definition="The type of Title III professional development utilized is Curriculum alignment to ELP standards.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("d46cfa15-56b8-45e3-b1df-a54ba7779130"), Code="SubjectMatter", Description="Subject matter", Definition="The type of Title III professional development utilized is Subject matter.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("b58a81e5-4025-4bec-b8d8-57324d47471d"), Code="Other", Description="Other", Definition="The type of Title III professional development utilized is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefTitleIIIProfessionalDevelopmentType Pick List
          /// </summary>
-        public static List<RefTitleIIIProfessionalDevelopmentType> RefTitleIIIProfessionalDevelopmentTypePickList = new List<RefTitleIIIProfessionalDevelopmentType> =
+        public static List<RefTitleIIIProfessionalDevelopmentType> RefTitleIIIProfessionalDevelopmentTypePickList = new List<RefTitleIIIProfessionalDevelopmentType>
         {
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("1e0e26ba-4db2-47a3-b1ad-d56a6510d3cc"), Code="The type of Title III professional development utilized is Instructional strategies.", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("19f535e9-3a93-4f3a-afd8-baa6e9970eb9"), Code="The type of Title III professional development utilized is Assessment.", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("006d2c5c-d86e-4fe7-890a-3ae8b55491a0"), Code="The type of Title III professional development utilized is ELP and content standards.", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("1b9bc71d-c085-4311-b252-3e79eeb425a4"), Code="The type of Title III professional development utilized is Curriculum alignment to ELP standards.", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("0549caed-cccb-488f-9bd9-70969be7a615"), Code="The type of Title III professional development utilized is Subject matter.", SortOrder=0 },
-            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("7eac0ba6-65dc-4fed-a0c5-c6ee3ee682bb"), Code="The type of Title III professional development utilized is in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("6392e49f-d210-4183-ae19-1a88991ea817"), Code="InstructionalStrategies", Description="Instructional strategies", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("6331957f-384c-4649-8a54-38620f799282"), Code="Assessment", Description="Assessment", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("04ed3902-4367-4625-b6a3-3c2c7912ed24"), Code="ELPContentStandards", Description="ELP and content standards", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("ff4866eb-b5e7-4d9e-b443-b3ecde2a4959"), Code="CurriculumAlignmentELP", Description="Curriculum alignment to ELP standards", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("d46cfa15-56b8-45e3-b1df-a54ba7779130"), Code="SubjectMatter", Description="Subject matter", SortOrder=Convert.ToDecimal("5.00") },
+            new RefTitleIIIProfessionalDevelopmentType { Id=Guid.Parse("b58a81e5-4025-4bec-b8d8-57324d47471d"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

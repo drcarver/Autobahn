@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefPrimaryLearningDeviceProvider"> List
          /// </summary>
-        public static List<RefPrimaryLearningDeviceProvider> RefPrimaryLearningDeviceProviderList = new List<RefPrimaryLearningDeviceProvider> =
+        public static List<RefPrimaryLearningDeviceProvider> RefPrimaryLearningDeviceProviderList = new List<RefPrimaryLearningDeviceProvider>
         {
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f623eb87-99bc-42a9-b9be-97d7a04ea626"), Code="The provider of the primary learning device is the student or guardian.", Description="Personal", Definition="", SortOrder=0 },
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("17eb507b-8b95-466b-bf5d-d07c65e124c9"), Code="The provider of the primary learning device is the school.", Description="School", Definition="", SortOrder=0 },
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("6e60cecc-1e1a-4b94-bc67-53af5f826ef8"), Code="The provider of the primary learning device is not yet defined.", Description="Other", Definition="", SortOrder=0 },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("888e4b82-654a-490e-989f-3c7e16272f36"), Code="Personal", Description="Personal", Definition="The provider of the primary learning device is the student or guardian.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f9720b62-4426-4152-8740-9de6054c00cc"), Code="School", Description="School", Definition="The provider of the primary learning device is the school.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f21ae061-04ae-4ad6-9d3b-cb592fe4cd5a"), Code="Other", Description="Other", Definition="The provider of the primary learning device is not yet defined.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
         /// The RefPrimaryLearningDeviceProvider Pick List
          /// </summary>
-        public static List<RefPrimaryLearningDeviceProvider> RefPrimaryLearningDeviceProviderPickList = new List<RefPrimaryLearningDeviceProvider> =
+        public static List<RefPrimaryLearningDeviceProvider> RefPrimaryLearningDeviceProviderPickList = new List<RefPrimaryLearningDeviceProvider>
         {
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f623eb87-99bc-42a9-b9be-97d7a04ea626"), Code="The provider of the primary learning device is the student or guardian.", SortOrder=0 },
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("17eb507b-8b95-466b-bf5d-d07c65e124c9"), Code="The provider of the primary learning device is the school.", SortOrder=0 },
-            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("6e60cecc-1e1a-4b94-bc67-53af5f826ef8"), Code="The provider of the primary learning device is not yet defined.", SortOrder=0 },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("888e4b82-654a-490e-989f-3c7e16272f36"), Code="Personal", Description="Personal", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f9720b62-4426-4152-8740-9de6054c00cc"), Code="School", Description="School", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPrimaryLearningDeviceProvider { Id=Guid.Parse("f21ae061-04ae-4ad6-9d3b-cb592fe4cd5a"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

@@ -15,14 +15,14 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentReportingMethod"> List
          /// </summary>
-        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodList = new List<RefAssessmentReportingMethod> =
+        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodList = new List<RefAssessmentReportingMethod>
         {
         };
 
         /// <summary>
         /// The RefAssessmentReportingMethod Pick List
          /// </summary>
-        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodPickList = new List<RefAssessmentReportingMethod> =
+        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodPickList = new List<RefAssessmentReportingMethod>
         {
        };
    }

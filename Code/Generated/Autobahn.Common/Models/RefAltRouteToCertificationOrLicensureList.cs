@@ -15,21 +15,21 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAltRouteToCertificationOrLicensure"> List
          /// </summary>
-        public static List<RefAltRouteToCertificationOrLicensure> RefAltRouteToCertificationOrLicensureList = new List<RefAltRouteToCertificationOrLicensure> =
+        public static List<RefAltRouteToCertificationOrLicensure> RefAltRouteToCertificationOrLicensureList = new List<RefAltRouteToCertificationOrLicensure>
         {
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("3c6819c1-17f3-4d71-8fb4-e4fd9cf0bdf3"), Code="", Description="Yes", Definition="", SortOrder=0 },
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("733300ef-00a9-42c8-85a6-74e924227a5e"), Code="", Description="No", Definition="", SortOrder=0 },
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("a207291a-1c41-40b4-bc7f-21f8cad92a78"), Code="", Description="NA", Definition="", SortOrder=0 },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("12f626aa-069c-4410-a263-027ae9476618"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("cc87cc65-54ee-4cd1-93fa-c50cfe995bd6"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("4210dc98-6011-479d-a51b-cf73231037eb"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
         /// The RefAltRouteToCertificationOrLicensure Pick List
          /// </summary>
-        public static List<RefAltRouteToCertificationOrLicensure> RefAltRouteToCertificationOrLicensurePickList = new List<RefAltRouteToCertificationOrLicensure> =
+        public static List<RefAltRouteToCertificationOrLicensure> RefAltRouteToCertificationOrLicensurePickList = new List<RefAltRouteToCertificationOrLicensure>
         {
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("3c6819c1-17f3-4d71-8fb4-e4fd9cf0bdf3"), Code="", SortOrder=0 },
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("733300ef-00a9-42c8-85a6-74e924227a5e"), Code="", SortOrder=0 },
-            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("a207291a-1c41-40b4-bc7f-21f8cad92a78"), Code="", SortOrder=0 },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("12f626aa-069c-4410-a263-027ae9476618"), Code="Yes", Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("cc87cc65-54ee-4cd1-93fa-c50cfe995bd6"), Code="No", Description="No", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAltRouteToCertificationOrLicensure { Id=Guid.Parse("4210dc98-6011-479d-a51b-cf73231037eb"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

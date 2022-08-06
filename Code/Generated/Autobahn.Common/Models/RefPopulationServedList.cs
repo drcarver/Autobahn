@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefPopulationServed"> List
          /// </summary>
-        public static List<RefPopulationServed> RefPopulationServedList = new List<RefPopulationServed> =
+        public static List<RefPopulationServed> RefPopulationServedList = new List<RefPopulationServed>
         {
-            new RefPopulationServed { Id=Guid.Parse("d97e094d-985e-4bf7-919f-aa62361ecf04"), Code="The program provides services to meet the needs of English language learners.", Description="ELL", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("400a0096-dde9-41fc-9c36-2c87254ff25c"), Code="The program provides services to meet the needs of children with disabilities.", Description="CWD", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("6e61f8fb-1adc-4e05-ad98-84b5927a1705"), Code="The program provides services to meet the needs of homeless.", Description="Homeless", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("5c50be01-2a09-4825-a36c-286ac725024a"), Code="The program provides mental health services.", Description="MentalHealth", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("77a2a93a-ed8e-46f4-aa81-0c183bd2c262"), Code="The program provides services to meet the needs of learners with special health needs.", Description="SpecialHealthNeeds", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("4278a5c7-9030-4c77-91b0-8d256fe60d99"), Code="The program provides services to meet the needs of foster children and families.", Description="Foster", Definition="", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("79f79877-accb-45ba-b6f8-cae7ae2bdda4"), Code="The program provides services to meet the needs of learners in a category not yet defined in CEDS.", Description="Other", Definition="", SortOrder=0 },
+            new RefPopulationServed { Id=Guid.Parse("031edcbf-aa5b-4848-96aa-921309608133"), Code="ELL", Description="English language learners", Definition="The program provides services to meet the needs of English language learners.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPopulationServed { Id=Guid.Parse("1657f833-4375-4427-bda7-342e1b1ce766"), Code="CWD", Description="Children with disabilities", Definition="The program provides services to meet the needs of children with disabilities.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPopulationServed { Id=Guid.Parse("040418bd-d70e-4076-9f16-2168f023a0a1"), Code="Homeless", Description="Homeless", Definition="The program provides services to meet the needs of homeless.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPopulationServed { Id=Guid.Parse("b647cf2f-ca99-4337-8000-623f15388eb2"), Code="MentalHealth", Description="Mental health", Definition="The program provides mental health services.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefPopulationServed { Id=Guid.Parse("29a27fd6-e972-45e7-9407-eb9174db191f"), Code="SpecialHealthNeeds", Description="Special health needs", Definition="The program provides services to meet the needs of learners with special health needs.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPopulationServed { Id=Guid.Parse("27c606ea-8733-448a-924a-4bc75597cbc9"), Code="Foster", Description="Foster", Definition="The program provides services to meet the needs of foster children and families.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefPopulationServed { Id=Guid.Parse("2da2b994-7710-45cf-a6c1-b1cb89b587c3"), Code="Other", Description="Other", Definition="The program provides services to meet the needs of learners in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefPopulationServed Pick List
          /// </summary>
-        public static List<RefPopulationServed> RefPopulationServedPickList = new List<RefPopulationServed> =
+        public static List<RefPopulationServed> RefPopulationServedPickList = new List<RefPopulationServed>
         {
-            new RefPopulationServed { Id=Guid.Parse("d97e094d-985e-4bf7-919f-aa62361ecf04"), Code="The program provides services to meet the needs of English language learners.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("400a0096-dde9-41fc-9c36-2c87254ff25c"), Code="The program provides services to meet the needs of children with disabilities.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("6e61f8fb-1adc-4e05-ad98-84b5927a1705"), Code="The program provides services to meet the needs of homeless.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("5c50be01-2a09-4825-a36c-286ac725024a"), Code="The program provides mental health services.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("77a2a93a-ed8e-46f4-aa81-0c183bd2c262"), Code="The program provides services to meet the needs of learners with special health needs.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("4278a5c7-9030-4c77-91b0-8d256fe60d99"), Code="The program provides services to meet the needs of foster children and families.", SortOrder=0 },
-            new RefPopulationServed { Id=Guid.Parse("79f79877-accb-45ba-b6f8-cae7ae2bdda4"), Code="The program provides services to meet the needs of learners in a category not yet defined in CEDS.", SortOrder=0 },
+            new RefPopulationServed { Id=Guid.Parse("031edcbf-aa5b-4848-96aa-921309608133"), Code="ELL", Description="English language learners", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPopulationServed { Id=Guid.Parse("1657f833-4375-4427-bda7-342e1b1ce766"), Code="CWD", Description="Children with disabilities", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPopulationServed { Id=Guid.Parse("040418bd-d70e-4076-9f16-2168f023a0a1"), Code="Homeless", Description="Homeless", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPopulationServed { Id=Guid.Parse("b647cf2f-ca99-4337-8000-623f15388eb2"), Code="MentalHealth", Description="Mental health", SortOrder=Convert.ToDecimal("5.00") },
+            new RefPopulationServed { Id=Guid.Parse("29a27fd6-e972-45e7-9407-eb9174db191f"), Code="SpecialHealthNeeds", Description="Special health needs", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPopulationServed { Id=Guid.Parse("27c606ea-8733-448a-924a-4bc75597cbc9"), Code="Foster", Description="Foster", SortOrder=Convert.ToDecimal("7.00") },
+            new RefPopulationServed { Id=Guid.Parse("2da2b994-7710-45cf-a6c1-b1cb89b587c3"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

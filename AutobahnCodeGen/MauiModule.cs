@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity.Infrastructure;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
+using Autobahn.Entities;
 using File = System.IO.File;
 
 namespace AutobahnCodeGen
@@ -27,7 +26,7 @@ namespace AutobahnCodeGen
                 var fname = dir.Replace(" ", string.Empty);
                 var moduleName = $"Autobahn.{fname}";
 
-                GenerateTemplateProject(filePath, moduleName);
+                GenerateTemplateProject(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList());
                 GenerateModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
                 GenerateInterfaces(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
                 GenerateViewModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
@@ -113,11 +112,14 @@ namespace AutobahnCodeGen
                 stream.WriteLine($"         /// </summary>");
                 stream.WriteLine($@"        public static List<{model.Name}> {model.Name}List = new List<{model.Name}>");
                 stream.WriteLine($@"        {{");
+                var quote = "\"";
                 foreach (var item in refernceModelList)
                 {
-                    stream.WriteLine($@"            new {model.Name} {{ Id=Guid.Parse(""{item.Id}""), Code=""{item.Code.Replace("\"", "\"\"")}", Description=""{item.Description.Replace("\"", "\"\"")}
-                }
-                "", Definition=""{item.Definition}"", SortOrder={item.SortOrder ?? 0} }},");
+                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
+                    stream.WriteLine($@"            new {model.Name} {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
                 }
                 stream.WriteLine($@"        }};");
                 stream.WriteLine();
@@ -128,7 +130,10 @@ namespace AutobahnCodeGen
                 stream.WriteLine($@"        {{");
                 foreach (var item in refernceModelList)
                 {
-                    stream.WriteLine($@"            new {model.Name} {{ Id=Guid.Parse(""{item.Id}""), Code=""{item.Code}"", SortOrder={item.SortOrder ?? 0} }},");
+                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                    stream.WriteLine($@"            new {model.Name} {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
                 }
                 stream.WriteLine($@"       }};");
                 stream.WriteLine("   }");
@@ -268,7 +273,7 @@ namespace AutobahnCodeGen
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
-                var fname = $@"{filePath}\{model.Name}View.cs";
+                var fname = $@"{filePath}\{model.Name}View.xaml.cs";
                 using (var stream = File.CreateText(fname))
                 {
                     stream.WriteLine($"//**********************************************************");
@@ -735,21 +740,46 @@ namespace AutobahnCodeGen
             stream.WriteLine();
         }
 
-        private static void GenerateTemplateProject(string filePath, string moduleName)
+        private static void GenerateTemplateProject(string filePath, string moduleName, List<CEDSTable> tables)
         {
             DirectoryInfo di = new DirectoryInfo($@"{filePath}\{moduleName}");
             RecursiveDelete(di);
             if (moduleName == "Autobahn.Common")
             {
                 ZipFile.ExtractToDirectory($@"Reference\Autobahn.Common.zip", filePath);
+                GenerateViewItemGroups($@"{filePath}\Autobahn.Common\Autobahn.Common.csproj", tables);
             }
             else
             {
                 ZipFile.ExtractToDirectory($@"Reference\mauiproject.zip", filePath);
                 File.Move($@"{filePath}\mauiproject\module.csproj", $@"{filePath}\mauiproject\{moduleName}.csproj");
+                GenerateViewItemGroups($@"{filePath}\mauiproject\{moduleName}.csproj", tables);
                 File.Move($@"{filePath}\mauiproject\mauimodule.cs", $@"{filePath}\mauiproject\{moduleName}Module.cs");
                 Directory.Move($@"{filePath}\mauiproject", $@"{filePath}\{moduleName}");
             }
+        }
+
+        private static void GenerateViewItemGroups(string filePath, List<CEDSTable> tables)
+        {
+            var project = XDocument.Load(filePath);
+            var itemgroup = new XElement("ItemGroup");
+            var itemgrouplist = new List<string>();
+            foreach (var model in tables.Where(t => !t.TableName.StartsWith("Ref")))
+            {
+                if (itemgrouplist.Contains(model.TableName))
+                {
+                    continue;
+                }
+                itemgrouplist.Add(model.TableName);
+                var mauixaml = new XElement("MauiXaml");
+                var updateattrib = new XAttribute("Update", $@"Views\{model.TableName}View.xaml");
+                var buildaction = new XElement("Generator", "MSBuild:Compile"); 
+                mauixaml.Add(updateattrib);
+                mauixaml.Add(buildaction);
+                itemgroup.Add(mauixaml);
+            }
+            project.Root.LastNode.AddBeforeSelf(itemgroup);
+            project.Save(filePath);
         }
 
         public static void RecursiveDelete(DirectoryInfo baseDir)

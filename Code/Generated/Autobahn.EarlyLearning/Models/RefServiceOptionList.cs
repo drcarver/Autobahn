@@ -15,27 +15,27 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The complete <see cref="RefServiceOption"> List
          /// </summary>
-        public static List<RefServiceOption> RefServiceOptionList = new List<RefServiceOption> =
+        public static List<RefServiceOption> RefServiceOptionList = new List<RefServiceOption>
         {
-            new RefServiceOption { Id=Guid.Parse("80d16b87-83fa-4e84-8f30-3579453b2d89"), Code="Full-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", Description="FullDayFullYear", Definition="", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("08ccfd0e-b136-4436-9175-125716bf933d"), Code="Full-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", Description="FullDayPartYear", Definition="", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("acbc94d4-6903-47d5-9803-7d86d0ab40a7"), Code="Part-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", Description="PartDayFullYear", Definition="", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("e6919372-03f3-480e-bd8c-3378fb187988"), Code="Part-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", Description="PartDayPartYear", Definition="", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("77d5a4be-8346-4917-be41-277338508624"), Code="Home based is the nature of the early childhood program, class or group in which a person is enrolled.", Description="HomeBased", Definition="", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("18be3764-7566-45e7-94ec-2f2a74598c88"), Code="The nature of the early childhood program, class or group in which a person is enrolled is not applicable.", Description="NA", Definition="", SortOrder=0 },
+            new RefServiceOption { Id=Guid.Parse("304a1152-085a-4fb9-9c17-3b105d78c96b"), Code="FullDayFullYear", Description="Full-day/full-year", Definition="Full-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefServiceOption { Id=Guid.Parse("61f26b79-acc0-442d-aa89-8b3b7366cb79"), Code="FullDayPartYear", Description="Full-day/part-year", Definition="Full-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefServiceOption { Id=Guid.Parse("c2967c87-e0b8-4f2b-82ac-77da824911f1"), Code="PartDayFullYear", Description="Part-day/full-year", Definition="Part-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefServiceOption { Id=Guid.Parse("07eb5783-cb5c-4b4b-9de7-3a07fa607178"), Code="PartDayPartYear", Description="Part-day/part-year", Definition="Part-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefServiceOption { Id=Guid.Parse("098f097d-5b95-4728-983f-d67c4734a62c"), Code="HomeBased", Description="Home based", Definition="Home based is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefServiceOption { Id=Guid.Parse("03c2d0fc-0d55-43e4-abbb-db5db1f01ddb"), Code="NA", Description="Not applicable", Definition="The nature of the early childhood program, class or group in which a person is enrolled is not applicable.", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
         /// The RefServiceOption Pick List
          /// </summary>
-        public static List<RefServiceOption> RefServiceOptionPickList = new List<RefServiceOption> =
+        public static List<RefServiceOption> RefServiceOptionPickList = new List<RefServiceOption>
         {
-            new RefServiceOption { Id=Guid.Parse("80d16b87-83fa-4e84-8f30-3579453b2d89"), Code="Full-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("08ccfd0e-b136-4436-9175-125716bf933d"), Code="Full-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("acbc94d4-6903-47d5-9803-7d86d0ab40a7"), Code="Part-day/full-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("e6919372-03f3-480e-bd8c-3378fb187988"), Code="Part-day/part-year is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("77d5a4be-8346-4917-be41-277338508624"), Code="Home based is the nature of the early childhood program, class or group in which a person is enrolled.", SortOrder=0 },
-            new RefServiceOption { Id=Guid.Parse("18be3764-7566-45e7-94ec-2f2a74598c88"), Code="The nature of the early childhood program, class or group in which a person is enrolled is not applicable.", SortOrder=0 },
+            new RefServiceOption { Id=Guid.Parse("304a1152-085a-4fb9-9c17-3b105d78c96b"), Code="FullDayFullYear", Description="Full-day/full-year", SortOrder=Convert.ToDecimal("1.00") },
+            new RefServiceOption { Id=Guid.Parse("61f26b79-acc0-442d-aa89-8b3b7366cb79"), Code="FullDayPartYear", Description="Full-day/part-year", SortOrder=Convert.ToDecimal("2.00") },
+            new RefServiceOption { Id=Guid.Parse("c2967c87-e0b8-4f2b-82ac-77da824911f1"), Code="PartDayFullYear", Description="Part-day/full-year", SortOrder=Convert.ToDecimal("3.00") },
+            new RefServiceOption { Id=Guid.Parse("07eb5783-cb5c-4b4b-9de7-3a07fa607178"), Code="PartDayPartYear", Description="Part-day/part-year", SortOrder=Convert.ToDecimal("4.00") },
+            new RefServiceOption { Id=Guid.Parse("098f097d-5b95-4728-983f-d67c4734a62c"), Code="HomeBased", Description="Home based", SortOrder=Convert.ToDecimal("5.00") },
+            new RefServiceOption { Id=Guid.Parse("03c2d0fc-0d55-43e4-abbb-db5db1f01ddb"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

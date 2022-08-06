@@ -15,23 +15,23 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefLearnerActivityType"> List
          /// </summary>
-        public static List<RefLearnerActivityType> RefLearnerActivityTypeList = new List<RefLearnerActivityType> =
+        public static List<RefLearnerActivityType> RefLearnerActivityTypeList = new List<RefLearnerActivityType>
         {
-            new RefLearnerActivityType { Id=Guid.Parse("4a6eed66-d554-4129-9767-e5d41ffd8d01"), Code="The type of work assigned to the learner is an assignment.", Description="Assignment", Definition="", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("63a4d8ab-17bf-498d-8b18-0afbd3abc753"), Code="The type of assignment to the learner is a learning resource.", Description="LearningResource", Definition="", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("a6403a89-752e-4981-927d-8117bf1468ef"), Code="The type of work assigned to the learner is an activity.", Description="Activity", Definition="", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("793e70aa-3227-490b-80a0-73e2a3c60e64"), Code="The type of work assigned to the learner is a lesson.", Description="Lesson", Definition="", SortOrder=0 },
+            new RefLearnerActivityType { Id=Guid.Parse("35e29816-de7e-4729-931b-3904748ffefb"), Code="Assignment", Description="Assignment", Definition="The type of work assigned to the learner is an assignment.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("df026321-e07c-48ba-8c85-64dc7989db5d"), Code="LearningResource", Description="Learning Resource", Definition="The type of assignment to the learner is a learning resource.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("6f338e7c-c1e7-48fa-b763-d4704393ff1d"), Code="Activity", Description="Activity", Definition="The type of work assigned to the learner is an activity.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("2cdef63d-aa15-4f5e-bc9f-4f7e4998af2c"), Code="Lesson", Description="Lesson", Definition="The type of work assigned to the learner is a lesson.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
         /// The RefLearnerActivityType Pick List
          /// </summary>
-        public static List<RefLearnerActivityType> RefLearnerActivityTypePickList = new List<RefLearnerActivityType> =
+        public static List<RefLearnerActivityType> RefLearnerActivityTypePickList = new List<RefLearnerActivityType>
         {
-            new RefLearnerActivityType { Id=Guid.Parse("4a6eed66-d554-4129-9767-e5d41ffd8d01"), Code="The type of work assigned to the learner is an assignment.", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("63a4d8ab-17bf-498d-8b18-0afbd3abc753"), Code="The type of assignment to the learner is a learning resource.", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("a6403a89-752e-4981-927d-8117bf1468ef"), Code="The type of work assigned to the learner is an activity.", SortOrder=0 },
-            new RefLearnerActivityType { Id=Guid.Parse("793e70aa-3227-490b-80a0-73e2a3c60e64"), Code="The type of work assigned to the learner is a lesson.", SortOrder=0 },
+            new RefLearnerActivityType { Id=Guid.Parse("35e29816-de7e-4729-931b-3904748ffefb"), Code="Assignment", Description="Assignment", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("df026321-e07c-48ba-8c85-64dc7989db5d"), Code="LearningResource", Description="Learning Resource", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("6f338e7c-c1e7-48fa-b763-d4704393ff1d"), Code="Activity", Description="Activity", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearnerActivityType { Id=Guid.Parse("2cdef63d-aa15-4f5e-bc9f-4f7e4998af2c"), Code="Lesson", Description="Lesson", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

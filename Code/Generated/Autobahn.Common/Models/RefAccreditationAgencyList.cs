@@ -15,31 +15,31 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAccreditationAgency"> List
          /// </summary>
-        public static List<RefAccreditationAgency> RefAccreditationAgencyList = new List<RefAccreditationAgency> =
+        public static List<RefAccreditationAgency> RefAccreditationAgencyList = new List<RefAccreditationAgency>
         {
-            new RefAccreditationAgency { Id=Guid.Parse("7a717157-3ccb-4806-8ad0-a631b31016f7"), Code="National Association for the Education of Young Children", Description="NAEYC", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("e19d6359-009e-4f0f-a1a0-cebe54931ab8"), Code="National Early Childhood Program Accreditation", Description="NECPA", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("c7a2c2ed-e19c-4351-af57-a6fce75a0161"), Code="National Accreditation Commission", Description="NAC", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("356768ea-dc12-423f-8dcc-dbb1fad88f20"), Code="Council on Accreditation", Description="COA", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("569d6441-e9ab-47f7-a028-6336caf5589c"), Code="National Association for Family Child Care", Description="NAFCC", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("6a61e947-0566-4f43-ae06-a1dbb2cdf838"), Code="Southern Association of Colleges and Schools", Description="SACS", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("6ae62191-0a4a-44ad-b36e-114fd394faa4"), Code="Not accredited", Description="NotAccredited", Definition="", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("12c5dfc8-736b-4239-b14e-28751d6e8e93"), Code="Other Accreditation Agency", Description="Other", Definition="", SortOrder=0 },
+            new RefAccreditationAgency { Id=Guid.Parse("f79b6218-bb07-443b-ae00-d1affab8afaa"), Code="NAEYC", Description="National Association for the Education of Young Children", Definition="National Association for the Education of Young Children", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("edda1e1c-571a-401d-97fe-09df07471640"), Code="NECPA", Description="National Early Childhood Program Accreditation", Definition="National Early Childhood Program Accreditation", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("54faa7c2-10a6-4737-bb96-42d87cfa93ce"), Code="NAC", Description="National Accreditation Commission", Definition="National Accreditation Commission", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("e298027f-99b9-4f6a-adcc-307f0da1bd86"), Code="COA", Description="Council on Accreditation", Definition="Council on Accreditation", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("45ade2bc-83ab-48e8-a29f-2e288342f4a7"), Code="NAFCC", Description="National Association for Family Child Care", Definition="National Association for Family Child Care", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("7a47ce28-714c-49af-8d90-6c4bc3682fca"), Code="SACS", Description="Southern Association of Colleges and Schools", Definition="Southern Association of Colleges and Schools", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("ff1cf1f9-d221-45d9-a5f1-1b4cb099c35c"), Code="NotAccredited", Description="Not accredited", Definition="Not accredited", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("67133be3-f342-4524-8459-46f8d4480de5"), Code="Other", Description="Other Accreditation Agency", Definition="Other Accreditation Agency", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
         /// The RefAccreditationAgency Pick List
          /// </summary>
-        public static List<RefAccreditationAgency> RefAccreditationAgencyPickList = new List<RefAccreditationAgency> =
+        public static List<RefAccreditationAgency> RefAccreditationAgencyPickList = new List<RefAccreditationAgency>
         {
-            new RefAccreditationAgency { Id=Guid.Parse("7a717157-3ccb-4806-8ad0-a631b31016f7"), Code="National Association for the Education of Young Children", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("e19d6359-009e-4f0f-a1a0-cebe54931ab8"), Code="National Early Childhood Program Accreditation", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("c7a2c2ed-e19c-4351-af57-a6fce75a0161"), Code="National Accreditation Commission", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("356768ea-dc12-423f-8dcc-dbb1fad88f20"), Code="Council on Accreditation", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("569d6441-e9ab-47f7-a028-6336caf5589c"), Code="National Association for Family Child Care", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("6a61e947-0566-4f43-ae06-a1dbb2cdf838"), Code="Southern Association of Colleges and Schools", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("6ae62191-0a4a-44ad-b36e-114fd394faa4"), Code="Not accredited", SortOrder=0 },
-            new RefAccreditationAgency { Id=Guid.Parse("12c5dfc8-736b-4239-b14e-28751d6e8e93"), Code="Other Accreditation Agency", SortOrder=0 },
+            new RefAccreditationAgency { Id=Guid.Parse("f79b6218-bb07-443b-ae00-d1affab8afaa"), Code="NAEYC", Description="National Association for the Education of Young Children", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("edda1e1c-571a-401d-97fe-09df07471640"), Code="NECPA", Description="National Early Childhood Program Accreditation", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("54faa7c2-10a6-4737-bb96-42d87cfa93ce"), Code="NAC", Description="National Accreditation Commission", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("e298027f-99b9-4f6a-adcc-307f0da1bd86"), Code="COA", Description="Council on Accreditation", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("45ade2bc-83ab-48e8-a29f-2e288342f4a7"), Code="NAFCC", Description="National Association for Family Child Care", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("7a47ce28-714c-49af-8d90-6c4bc3682fca"), Code="SACS", Description="Southern Association of Colleges and Schools", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("ff1cf1f9-d221-45d9-a5f1-1b4cb099c35c"), Code="NotAccredited", Description="Not accredited", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAccreditationAgency { Id=Guid.Parse("67133be3-f342-4524-8459-46f8d4480de5"), Code="Other", Description="Other Accreditation Agency", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

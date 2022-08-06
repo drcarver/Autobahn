@@ -15,33 +15,33 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefAcademicTermDesignator"> List
          /// </summary>
-        public static List<RefAcademicTermDesignator> RefAcademicTermDesignatorList = new List<RefAcademicTermDesignator> =
+        public static List<RefAcademicTermDesignator> RefAcademicTermDesignatorList = new List<RefAcademicTermDesignator>
         {
-            new RefAcademicTermDesignator { Id=Guid.Parse("8a16c5e5-cb0c-47a2-ae90-e905e2017977"), Code="Fall is the academic term for which the data apply.", Description="Fall", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("6585b7eb-8dfb-415f-bb97-c540609a3625"), Code="Winter is the academic term for which the data apply.", Description="Winter", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("11db9316-327f-415e-a1f0-fb561236581d"), Code="Winter Intersession is the academic term for which the data apply.", Description="WinterIntersession", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("9c45deba-75c7-4086-b46b-dc2252ff3d6b"), Code="Spring is the academic term for which the data apply.", Description="Spring", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("ad7949cd-6f15-4edd-8f74-f3159ab782f8"), Code="Summer is the academic term for which the data apply.", Description="Summer", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("abaf25af-9b9c-4564-8d9d-e65dc9627392"), Code="Summer 1 is the academic term for which the data apply.", Description="Summer1", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("4c8ee365-03a7-4b5d-ac71-bd9d330ed7b9"), Code="Summer 2 is the academic term for which the data apply.", Description="Summer2", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("86268fba-41ec-45b9-b0b4-b7fff276b4a3"), Code="Spring Intersession is the academic term for which the data apply.", Description="SpringIntersession", Definition="", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("58303121-0cfe-4c76-a1db-6c0c2c27d455"), Code="Other is the academic term for which the data apply.", Description="Other", Definition="", SortOrder=0 },
+            new RefAcademicTermDesignator { Id=Guid.Parse("a49a87a4-0ebe-4e70-a27b-39c0c0034209"), Code="Fall", Description="Fall", Definition="Fall is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("0.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("f8de99b0-8972-4550-94d8-d728da19e543"), Code="Winter", Description="Winter", Definition="Winter is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("dc28bd67-74e1-472f-8fa2-e71e0f2fdeb4"), Code="WinterIntersession", Description="Winter Intersession", Definition="Winter Intersession is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("d1cbbbe0-8854-45f3-820f-57668563135f"), Code="Spring", Description="Spring", Definition="Spring is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("12a6797b-a46d-410b-8dc1-1687f4e58a1c"), Code="Summer", Description="Summer", Definition="Summer is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("ebaa8d43-289e-45c3-aeaf-0c0b7d9b494b"), Code="Summer1", Description="Summer 1", Definition="Summer 1 is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("f1f8ad6b-10d6-47dc-959e-68add6f80473"), Code="Summer2", Description="Summer 2", Definition="Summer 2 is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("59f8de48-ec90-4a2b-99c6-1bc6f61e86c3"), Code="SpringIntersession", Description="Spring Intersession", Definition="Spring Intersession is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("e142d644-88db-4ffa-b264-939a839b51f5"), Code="Other", Description="Other", Definition="Other is the academic term for which the data apply.", SortOrder=Convert.ToDecimal("16.00") },
         };
 
         /// <summary>
         /// The RefAcademicTermDesignator Pick List
          /// </summary>
-        public static List<RefAcademicTermDesignator> RefAcademicTermDesignatorPickList = new List<RefAcademicTermDesignator> =
+        public static List<RefAcademicTermDesignator> RefAcademicTermDesignatorPickList = new List<RefAcademicTermDesignator>
         {
-            new RefAcademicTermDesignator { Id=Guid.Parse("8a16c5e5-cb0c-47a2-ae90-e905e2017977"), Code="Fall is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("6585b7eb-8dfb-415f-bb97-c540609a3625"), Code="Winter is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("11db9316-327f-415e-a1f0-fb561236581d"), Code="Winter Intersession is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("9c45deba-75c7-4086-b46b-dc2252ff3d6b"), Code="Spring is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("ad7949cd-6f15-4edd-8f74-f3159ab782f8"), Code="Summer is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("abaf25af-9b9c-4564-8d9d-e65dc9627392"), Code="Summer 1 is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("4c8ee365-03a7-4b5d-ac71-bd9d330ed7b9"), Code="Summer 2 is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("86268fba-41ec-45b9-b0b4-b7fff276b4a3"), Code="Spring Intersession is the academic term for which the data apply.", SortOrder=0 },
-            new RefAcademicTermDesignator { Id=Guid.Parse("58303121-0cfe-4c76-a1db-6c0c2c27d455"), Code="Other is the academic term for which the data apply.", SortOrder=0 },
+            new RefAcademicTermDesignator { Id=Guid.Parse("a49a87a4-0ebe-4e70-a27b-39c0c0034209"), Code="Fall", Description="Fall", SortOrder=Convert.ToDecimal("0.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("f8de99b0-8972-4550-94d8-d728da19e543"), Code="Winter", Description="Winter", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("dc28bd67-74e1-472f-8fa2-e71e0f2fdeb4"), Code="WinterIntersession", Description="Winter Intersession", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("d1cbbbe0-8854-45f3-820f-57668563135f"), Code="Spring", Description="Spring", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("12a6797b-a46d-410b-8dc1-1687f4e58a1c"), Code="Summer", Description="Summer", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("ebaa8d43-289e-45c3-aeaf-0c0b7d9b494b"), Code="Summer1", Description="Summer 1", SortOrder=Convert.ToDecimal("10.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("f1f8ad6b-10d6-47dc-959e-68add6f80473"), Code="Summer2", Description="Summer 2", SortOrder=Convert.ToDecimal("12.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("59f8de48-ec90-4a2b-99c6-1bc6f61e86c3"), Code="SpringIntersession", Description="Spring Intersession", SortOrder=Convert.ToDecimal("14.00") },
+            new RefAcademicTermDesignator { Id=Guid.Parse("e142d644-88db-4ffa-b264-939a839b51f5"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("16.00") },
        };
    }
 }

@@ -15,29 +15,29 @@ namespace Autobahn.Assessment.Models
         /// <summary>
         /// The complete <see cref="RefAssessmentSessionStaffRoleType"> List
          /// </summary>
-        public static List<RefAssessmentSessionStaffRoleType> RefAssessmentSessionStaffRoleTypeList = new List<RefAssessmentSessionStaffRoleType> =
+        public static List<RefAssessmentSessionStaffRoleType> RefAssessmentSessionStaffRoleTypeList = new List<RefAssessmentSessionStaffRoleType>
         {
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("2f58920c-1542-497b-9362-d9d95ea1e8f4"), Code="Teacher is specified as the staff role the person served in related to the administration of an assessment session.", Description="Teacher", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("192b0e25-3ab3-4a99-82b2-14deaa59222d"), Code="Principal is specified as the staff role the person served in related to the administration of an assessment session.", Description="Principal", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("41000172-da36-46c4-a520-000f1a9722d2"), Code="Administrator is specified as the staff role the person served in related to the administration of an assessment session.", Description="Administrator", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("dda278ad-1b7f-46bd-80ee-0504afdb1060"), Code="Proctor is specified as the staff role the person served in related to the administration of an assessment session.", Description="Proctor", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("be9b779b-fe53-4fbd-be19-6f89d815132f"), Code="Observer is specified as the staff role the person served in related to the administration of an assessment session.", Description="Observer", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("ed4d759b-34a3-4cd2-8b48-a1378e2590b1"), Code="Scorer is specified as the staff role the person served in related to the administration of an assessment session.", Description="Scorer", Definition="", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("bd6bfb6f-01a7-41d4-8b3d-485bd02ed709"), Code="Registrar is specified as the staff role the person served in related to the administration of an assessment session.", Description="Registrar", Definition="", SortOrder=0 },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("992c7909-0429-4944-89a5-05e6a5ab3f30"), Code="Teacher", Description="Teacher", Definition="Teacher is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("0.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("85b10465-659e-4a6d-8ace-a99a46dca0bd"), Code="Principal", Description="Principal", Definition="Principal is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("bbddf8e0-a09f-4b80-aee3-b8d4b202faeb"), Code="Administrator", Description="Administrator", Definition="Administrator is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("d8932a3b-347e-43ba-afe7-b449b1963eee"), Code="Proctor", Description="Proctor", Definition="Proctor is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("018ba777-63d7-47c9-957d-2ea8e2c7b533"), Code="Observer", Description="Observer", Definition="Observer is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("b8a44228-e7d2-4128-8764-96cbbb71ef70"), Code="Scorer", Description="Scorer", Definition="Scorer is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("a7846e42-72e3-497f-b9db-22ec7337f661"), Code="Registrar", Description="Registrar", Definition="Registrar is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=Convert.ToDecimal("12.00") },
         };
 
         /// <summary>
         /// The RefAssessmentSessionStaffRoleType Pick List
          /// </summary>
-        public static List<RefAssessmentSessionStaffRoleType> RefAssessmentSessionStaffRoleTypePickList = new List<RefAssessmentSessionStaffRoleType> =
+        public static List<RefAssessmentSessionStaffRoleType> RefAssessmentSessionStaffRoleTypePickList = new List<RefAssessmentSessionStaffRoleType>
         {
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("2f58920c-1542-497b-9362-d9d95ea1e8f4"), Code="Teacher is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("192b0e25-3ab3-4a99-82b2-14deaa59222d"), Code="Principal is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("41000172-da36-46c4-a520-000f1a9722d2"), Code="Administrator is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("dda278ad-1b7f-46bd-80ee-0504afdb1060"), Code="Proctor is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("be9b779b-fe53-4fbd-be19-6f89d815132f"), Code="Observer is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("ed4d759b-34a3-4cd2-8b48-a1378e2590b1"), Code="Scorer is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
-            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("bd6bfb6f-01a7-41d4-8b3d-485bd02ed709"), Code="Registrar is specified as the staff role the person served in related to the administration of an assessment session.", SortOrder=0 },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("992c7909-0429-4944-89a5-05e6a5ab3f30"), Code="Teacher", Description="Teacher", SortOrder=Convert.ToDecimal("0.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("85b10465-659e-4a6d-8ace-a99a46dca0bd"), Code="Principal", Description="Principal", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("bbddf8e0-a09f-4b80-aee3-b8d4b202faeb"), Code="Administrator", Description="Administrator", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("d8932a3b-347e-43ba-afe7-b449b1963eee"), Code="Proctor", Description="Proctor", SortOrder=Convert.ToDecimal("6.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("018ba777-63d7-47c9-957d-2ea8e2c7b533"), Code="Observer", Description="Observer", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("b8a44228-e7d2-4128-8764-96cbbb71ef70"), Code="Scorer", Description="Scorer", SortOrder=Convert.ToDecimal("10.00") },
+            new RefAssessmentSessionStaffRoleType { Id=Guid.Parse("a7846e42-72e3-497f-b9db-22ec7337f661"), Code="Registrar", Description="Registrar", SortOrder=Convert.ToDecimal("12.00") },
        };
    }
 }

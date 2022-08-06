@@ -15,33 +15,33 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefFinancialAccountFundClassification"> List
          /// </summary>
-        public static List<RefFinancialAccountFundClassification> RefFinancialAccountFundClassificationList = new List<RefFinancialAccountFundClassification> =
+        public static List<RefFinancialAccountFundClassification> RefFinancialAccountFundClassificationList = new List<RefFinancialAccountFundClassification>
         {
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("8d08141b-7825-4b85-ad16-cbb8eb42d8d7"), Code="General Fund financial account.", Description="1", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("cf5cb139-c979-457c-8d53-95c60a889cb3"), Code="Special Revenue Funds financial account.", Description="2", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("8063b91f-2bb1-42cc-a7c8-0733554ee913"), Code="Capital Projects Funds financial account.", Description="3", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("95c73744-362f-42ae-b45c-973c037f8bd2"), Code="Debt Service Funds financial account.", Description="4", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("35f32866-7263-43ce-ba88-6dc78e859412"), Code="Permanent Funds financial account.", Description="5", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("6692b44e-c027-48d8-af75-0acbd14b1a61"), Code="Enterprise Funds financial account.", Description="6", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("3fae314b-bfb4-466a-a9e0-b2825ca7bdad"), Code="Internal Service Funds financial account.", Description="7", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("5be8d215-2030-4cbb-80ad-e1e652426628"), Code="Trust Funds financial account.", Description="8", Definition="", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("adcba646-9fad-479d-9217-c9820d9c3027"), Code="Agency Funds financial account.", Description="9", Definition="", SortOrder=0 },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("81689c0b-b858-4d82-9d37-be1fa90d2021"), Code="1", Description="General Fund", Definition="General Fund financial account.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("8f3d9fd3-42f0-4a43-afac-d1529fb424ef"), Code="2", Description="Special Revenue Funds", Definition="Special Revenue Funds financial account.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("f07398eb-a88e-4727-aeda-34ede54c07dc"), Code="3", Description="Capital Projects Funds", Definition="Capital Projects Funds financial account.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("95d1e648-8f0c-4832-83ac-5a07f42fe438"), Code="4", Description="Debt Service Funds", Definition="Debt Service Funds financial account.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("cbbc0b8d-bc9b-49cc-a899-5f0d26dea20f"), Code="5", Description="Permanent Funds", Definition="Permanent Funds financial account.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("e74a74a4-f2b2-4922-9112-06d54718ff53"), Code="6", Description="Enterprise Funds", Definition="Enterprise Funds financial account.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("a49ff6bc-385e-4707-931e-d2c935103846"), Code="7", Description="Internal Service Funds", Definition="Internal Service Funds financial account.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("f323982b-970a-41c3-b8bb-3222db763ef3"), Code="8", Description="Trust Funds", Definition="Trust Funds financial account.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("db8d5be9-c49c-41d9-a974-d7aab9506ae1"), Code="9", Description="Agency Funds", Definition="Agency Funds financial account.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
         /// The RefFinancialAccountFundClassification Pick List
          /// </summary>
-        public static List<RefFinancialAccountFundClassification> RefFinancialAccountFundClassificationPickList = new List<RefFinancialAccountFundClassification> =
+        public static List<RefFinancialAccountFundClassification> RefFinancialAccountFundClassificationPickList = new List<RefFinancialAccountFundClassification>
         {
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("8d08141b-7825-4b85-ad16-cbb8eb42d8d7"), Code="General Fund financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("cf5cb139-c979-457c-8d53-95c60a889cb3"), Code="Special Revenue Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("8063b91f-2bb1-42cc-a7c8-0733554ee913"), Code="Capital Projects Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("95c73744-362f-42ae-b45c-973c037f8bd2"), Code="Debt Service Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("35f32866-7263-43ce-ba88-6dc78e859412"), Code="Permanent Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("6692b44e-c027-48d8-af75-0acbd14b1a61"), Code="Enterprise Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("3fae314b-bfb4-466a-a9e0-b2825ca7bdad"), Code="Internal Service Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("5be8d215-2030-4cbb-80ad-e1e652426628"), Code="Trust Funds financial account.", SortOrder=0 },
-            new RefFinancialAccountFundClassification { Id=Guid.Parse("adcba646-9fad-479d-9217-c9820d9c3027"), Code="Agency Funds financial account.", SortOrder=0 },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("81689c0b-b858-4d82-9d37-be1fa90d2021"), Code="1", Description="General Fund", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("8f3d9fd3-42f0-4a43-afac-d1529fb424ef"), Code="2", Description="Special Revenue Funds", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("f07398eb-a88e-4727-aeda-34ede54c07dc"), Code="3", Description="Capital Projects Funds", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("95d1e648-8f0c-4832-83ac-5a07f42fe438"), Code="4", Description="Debt Service Funds", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("cbbc0b8d-bc9b-49cc-a899-5f0d26dea20f"), Code="5", Description="Permanent Funds", SortOrder=Convert.ToDecimal("5.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("e74a74a4-f2b2-4922-9112-06d54718ff53"), Code="6", Description="Enterprise Funds", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("a49ff6bc-385e-4707-931e-d2c935103846"), Code="7", Description="Internal Service Funds", SortOrder=Convert.ToDecimal("7.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("f323982b-970a-41c3-b8bb-3222db763ef3"), Code="8", Description="Trust Funds", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFinancialAccountFundClassification { Id=Guid.Parse("db8d5be9-c49c-41d9-a974-d7aab9506ae1"), Code="9", Description="Agency Funds", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

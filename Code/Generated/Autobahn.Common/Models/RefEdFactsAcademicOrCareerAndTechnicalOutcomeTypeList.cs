@@ -15,29 +15,29 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefEdFactsAcademicOrCareerAndTechnicalOutcomeType"> List
          /// </summary>
-        public static List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypeList = new List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> =
+        public static List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypeList = new List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType>
         {
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("5c3dd701-c781-4bf4-a874-3cbc0319eaf1"), Code="The student earned a GED while enrolled in the program.", Description="EARNGED", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("6614ac07-bd4e-4802-979a-2ab27c9ceed5"), Code="The student earned high school course credits while enrolled in the program.", Description="EARNCRE", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("3e9204a6-d74e-47e6-8014-fa864466e917"), Code="The student enrolled in a GED program while enrolled in the program.", Description="ENROLLGED", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("219e486e-50d5-461f-a314-fc3229547307"), Code="The student enrolled in job training courses/programs while enrolled in the program.", Description="ENROLLTRAIN", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("c47190e9-ca17-4ca9-a174-500667e803c0"), Code="The student obtained employment while enrolled in the program.", Description="OBTAINEMP", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("1e3266ec-aca6-499a-99e2-d41c74ea41a6"), Code="The student obtained a high school diploma while enrolled in the program.", Description="EARNDIPL", Definition="", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2a3ae0d5-422b-4168-bac5-ebeced16652f"), Code="The student was accepted and/or enrolled into postsecondary education while enrolled in the program.", Description="POSTSEC", Definition="", SortOrder=0 },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("97949870-a738-497a-8425-6535e824adfc"), Code="EARNGED", Description="Earned a GED", Definition="The student earned a GED while enrolled in the program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("48dd3c31-3a91-46a5-aeb5-0fb1700c479c"), Code="EARNCRE", Description="Earned high school course credits", Definition="The student earned high school course credits while enrolled in the program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("916d9fd5-7658-47a5-a08d-da7d145b029a"), Code="ENROLLGED", Description="Enrolled in a GED program", Definition="The student enrolled in a GED program while enrolled in the program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("aa226caa-56cb-4afc-8623-c5b22668f828"), Code="ENROLLTRAIN", Description="Enrolled in job training courses/programs", Definition="The student enrolled in job training courses/programs while enrolled in the program.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2acd88cf-7c61-40b7-9d7d-c0c88681ce42"), Code="OBTAINEMP", Description="Obtained employment", Definition="The student obtained employment while enrolled in the program.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2b6f160b-a2ca-45aa-90c3-921e9302f799"), Code="EARNDIPL", Description="Obtained high school diploma", Definition="The student obtained a high school diploma while enrolled in the program.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2f5652b5-68d2-44c8-af61-bcb93e4a8680"), Code="POSTSEC", Description="Were accepted and/or enrolled into postsecondary education", Definition="The student was accepted and/or enrolled into postsecondary education while enrolled in the program.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
         /// The RefEdFactsAcademicOrCareerAndTechnicalOutcomeType Pick List
          /// </summary>
-        public static List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypePickList = new List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> =
+        public static List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypePickList = new List<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType>
         {
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("5c3dd701-c781-4bf4-a874-3cbc0319eaf1"), Code="The student earned a GED while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("6614ac07-bd4e-4802-979a-2ab27c9ceed5"), Code="The student earned high school course credits while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("3e9204a6-d74e-47e6-8014-fa864466e917"), Code="The student enrolled in a GED program while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("219e486e-50d5-461f-a314-fc3229547307"), Code="The student enrolled in job training courses/programs while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("c47190e9-ca17-4ca9-a174-500667e803c0"), Code="The student obtained employment while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("1e3266ec-aca6-499a-99e2-d41c74ea41a6"), Code="The student obtained a high school diploma while enrolled in the program.", SortOrder=0 },
-            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2a3ae0d5-422b-4168-bac5-ebeced16652f"), Code="The student was accepted and/or enrolled into postsecondary education while enrolled in the program.", SortOrder=0 },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("97949870-a738-497a-8425-6535e824adfc"), Code="EARNGED", Description="Earned a GED", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("48dd3c31-3a91-46a5-aeb5-0fb1700c479c"), Code="EARNCRE", Description="Earned high school course credits", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("916d9fd5-7658-47a5-a08d-da7d145b029a"), Code="ENROLLGED", Description="Enrolled in a GED program", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("aa226caa-56cb-4afc-8623-c5b22668f828"), Code="ENROLLTRAIN", Description="Enrolled in job training courses/programs", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2acd88cf-7c61-40b7-9d7d-c0c88681ce42"), Code="OBTAINEMP", Description="Obtained employment", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2b6f160b-a2ca-45aa-90c3-921e9302f799"), Code="EARNDIPL", Description="Obtained high school diploma", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEdFactsAcademicOrCareerAndTechnicalOutcomeType { Id=Guid.Parse("2f5652b5-68d2-44c8-af61-bcb93e4a8680"), Code="POSTSEC", Description="Were accepted and/or enrolled into postsecondary education", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

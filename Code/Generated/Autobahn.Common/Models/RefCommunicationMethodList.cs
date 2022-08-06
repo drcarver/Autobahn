@@ -15,33 +15,33 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The complete <see cref="RefCommunicationMethod"> List
          /// </summary>
-        public static List<RefCommunicationMethod> RefCommunicationMethodList = new List<RefCommunicationMethod> =
+        public static List<RefCommunicationMethod> RefCommunicationMethodList = new List<RefCommunicationMethod>
         {
-            new RefCommunicationMethod { Id=Guid.Parse("c20d028d-f967-41bc-80e3-98bee488050a"), Code="The types of communication methods with parents include in-person communication.", Description="InPerson", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("4dfada7f-b6ad-401d-a316-1600c0473a9c"), Code="The types of communication methods with parents include Phone communications.", Description="Phone", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("0277ad7d-2a60-44a0-bf38-ff0e379dcbd7"), Code="The types of communication methods with parents include Website.", Description="Website", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("aeaa3916-94ed-44ae-8f0b-5a884ab77698"), Code="The types of communication methods with parents include Email.", Description="Email", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("2495c784-03c6-4a21-891a-2af77944a39d"), Code="The types of communication methods with parents include Newsletter.", Description="Newsletter", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("ee84aa05-8411-4631-b7e9-3701be1f9179"), Code="The types of communication methods with parents include Bulletin board.", Description="BulletinBoard", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("0b167211-0fdf-460d-94bd-da21a1d74f3a"), Code="The types of communication methods with parents include Home visit(s).", Description="HomeVisit", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("dc17f5ca-d54f-4207-8836-bc9e82bed87a"), Code="The types of communication methods with parents include Fax.", Description="Fax", Definition="", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("29b3cb44-c66e-461c-b7f1-6c4c049000a1"), Code="The types of communication methods with parents include Other.", Description="Other", Definition="", SortOrder=0 },
+            new RefCommunicationMethod { Id=Guid.Parse("ebdec9cc-97bc-40bb-9daf-05d663d68fba"), Code="InPerson", Description="In-person", Definition="The types of communication methods with parents include in-person communication.", SortOrder=Convert.ToDecimal("0.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("1eafbdc5-e585-4bd0-801d-5440840935f8"), Code="Phone", Description="Phone", Definition="The types of communication methods with parents include Phone communications.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("c13baea9-3af4-489c-b2f9-6f8d337f38d9"), Code="Website", Description="Website", Definition="The types of communication methods with parents include Website.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("262bf2d0-d307-4c0f-9fc2-8691dff95daa"), Code="Email", Description="Email", Definition="The types of communication methods with parents include Email.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("7e7d13e1-d4ff-4915-b4f9-48beb6453d3c"), Code="Newsletter", Description="Newsletter", Definition="The types of communication methods with parents include Newsletter.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("0d632850-6a94-4d10-a568-539a80338f7a"), Code="BulletinBoard", Description="Bulletin board", Definition="The types of communication methods with parents include Bulletin board.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("ec6c34e1-30a1-439d-98f2-7f3ea1cfdce3"), Code="HomeVisit", Description="Home visit", Definition="The types of communication methods with parents include Home visit(s).", SortOrder=Convert.ToDecimal("10.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("343cb586-2386-427f-8f05-5b65e5aa242f"), Code="Fax", Description="Fax", Definition="The types of communication methods with parents include Fax.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("9ccca5e2-b3fe-4e94-97a1-e804e8cea814"), Code="Other", Description="Other", Definition="The types of communication methods with parents include Other.", SortOrder=Convert.ToDecimal("14.00") },
         };
 
         /// <summary>
         /// The RefCommunicationMethod Pick List
          /// </summary>
-        public static List<RefCommunicationMethod> RefCommunicationMethodPickList = new List<RefCommunicationMethod> =
+        public static List<RefCommunicationMethod> RefCommunicationMethodPickList = new List<RefCommunicationMethod>
         {
-            new RefCommunicationMethod { Id=Guid.Parse("c20d028d-f967-41bc-80e3-98bee488050a"), Code="The types of communication methods with parents include in-person communication.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("4dfada7f-b6ad-401d-a316-1600c0473a9c"), Code="The types of communication methods with parents include Phone communications.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("0277ad7d-2a60-44a0-bf38-ff0e379dcbd7"), Code="The types of communication methods with parents include Website.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("aeaa3916-94ed-44ae-8f0b-5a884ab77698"), Code="The types of communication methods with parents include Email.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("2495c784-03c6-4a21-891a-2af77944a39d"), Code="The types of communication methods with parents include Newsletter.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("ee84aa05-8411-4631-b7e9-3701be1f9179"), Code="The types of communication methods with parents include Bulletin board.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("0b167211-0fdf-460d-94bd-da21a1d74f3a"), Code="The types of communication methods with parents include Home visit(s).", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("dc17f5ca-d54f-4207-8836-bc9e82bed87a"), Code="The types of communication methods with parents include Fax.", SortOrder=0 },
-            new RefCommunicationMethod { Id=Guid.Parse("29b3cb44-c66e-461c-b7f1-6c4c049000a1"), Code="The types of communication methods with parents include Other.", SortOrder=0 },
+            new RefCommunicationMethod { Id=Guid.Parse("ebdec9cc-97bc-40bb-9daf-05d663d68fba"), Code="InPerson", Description="In-person", SortOrder=Convert.ToDecimal("0.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("1eafbdc5-e585-4bd0-801d-5440840935f8"), Code="Phone", Description="Phone", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("c13baea9-3af4-489c-b2f9-6f8d337f38d9"), Code="Website", Description="Website", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("262bf2d0-d307-4c0f-9fc2-8691dff95daa"), Code="Email", Description="Email", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("7e7d13e1-d4ff-4915-b4f9-48beb6453d3c"), Code="Newsletter", Description="Newsletter", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("0d632850-6a94-4d10-a568-539a80338f7a"), Code="BulletinBoard", Description="Bulletin board", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("ec6c34e1-30a1-439d-98f2-7f3ea1cfdce3"), Code="HomeVisit", Description="Home visit", SortOrder=Convert.ToDecimal("10.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("343cb586-2386-427f-8f05-5b65e5aa242f"), Code="Fax", Description="Fax", SortOrder=Convert.ToDecimal("12.00") },
+            new RefCommunicationMethod { Id=Guid.Parse("9ccca5e2-b3fe-4e94-97a1-e804e8cea814"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("14.00") },
        };
    }
 }
