@@ -1,0 +1,153 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   RefStateList.cs
+//**********************************************************
+
+using Autobahn.Common.Models;
+
+namespace Autobahn.Common.Models
+{
+     /// <summary>
+     /// The list of RefState Models
+     /// </summary>
+    public static partial class ReferenceLists
+    {
+        /// <summary>
+        /// The complete <see cref="RefState"> List
+         /// </summary>
+        public static List<RefState> RefStateList = new List<RefState> =
+        {
+            new RefState { Id=Guid.Parse("2ce20c37-fa90-42e1-b13a-8a734b51f5a9"), Code="Alaska", Description="AK", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("23594f00-5f92-4ff0-950b-7ef47a343bee"), Code="Alabama", Description="AL", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("6986e215-61a2-4ee5-a619-44bf011e0f3e"), Code="Arkansas", Description="AR", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("0b10d93a-0246-41b2-9368-a1792ece88ca"), Code="American Samoa", Description="AS", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("955dbf6c-050e-4306-9835-792d5fd0bf10"), Code="Arizona", Description="AZ", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("fd183058-0ffb-4a7f-a89a-7bebe7cc0e48"), Code="California", Description="CA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8aca248a-d80a-432d-a5c3-76dc95ef7c60"), Code="Colorado", Description="CO", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("25e183a5-0034-45c0-931f-af32c073c334"), Code="Connecticut", Description="CT", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("63ba2aca-80ab-4290-a6e1-d94384223401"), Code="District of Columbia", Description="DC", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("335877c7-d5a1-4660-a48c-6bd4cb03440d"), Code="Delaware", Description="DE", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("9026fdc2-1a40-4a69-a35a-7b0f150791a9"), Code="Florida", Description="FL", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("e38d2e25-90f6-442b-844e-3ac6f21ac940"), Code="Federated States of Micronesia", Description="FM", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d4722efa-9ca4-453c-a9f0-87cf5d123798"), Code="Georgia", Description="GA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("efe3ede4-4544-4daf-b071-b5d3e578c523"), Code="Guam", Description="GU", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("5edba5ab-6687-437d-86af-dcb291dca074"), Code="Hawaii", Description="HI", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("80a885be-de95-411c-8c7f-55d6d3408a0b"), Code="Iowa", Description="IA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8b85fb32-0649-4312-8b74-ac7ad650cd7d"), Code="Idaho", Description="ID", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("3c2dddab-a709-4f7f-b628-fe290d985ba0"), Code="Illinois", Description="IL", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("36e971e0-5b5f-4ee2-9bf6-bbc398766c80"), Code="Indiana", Description="IN", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("2a2ea1f7-c6f4-4ac0-8d97-7d29471d78c7"), Code="Kansas", Description="KS", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("cc20b8da-2465-461d-86b7-1d6d3b8d9f3c"), Code="Kentucky", Description="KY", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("06757485-4139-4970-9a2c-bb1139880fa4"), Code="Louisiana", Description="LA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("3a39b08f-0763-4c34-a3ad-98ecaa24deab"), Code="Massachusetts", Description="MA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("4e8c5b9d-2321-480e-b634-ebbea72bf8d2"), Code="Maryland", Description="MD", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7f63d313-a108-4e9d-ad2c-06ed731dc01c"), Code="Maine", Description="ME", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("20ff201d-3b7d-4830-8b59-d1ace09b625b"), Code="Marshall Islands", Description="MH", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("b70fd36c-cd24-4ff2-8c72-bc0425532515"), Code="Michigan", Description="MI", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f144ac56-77e3-421f-bc56-cc1294586c14"), Code="Minnesota", Description="MN", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("971ee6da-1ced-4e07-b098-88169e58e252"), Code="Missouri", Description="MO", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7c136f34-ff64-4290-9378-25b75a44d2fa"), Code="Northern Marianas", Description="MP", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d620b3bf-08eb-49c2-82ec-0c80e88484b9"), Code="Mississippi", Description="MS", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("83cf5f91-c528-4807-bc3a-afc8cb1afd6f"), Code="Montana", Description="MT", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7fa58b2f-d713-4a9b-8dd7-143c0beb0e3f"), Code="North Carolina", Description="NC", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d1d07994-4d7a-46ce-8231-d214671bfc37"), Code="North Dakota", Description="ND", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("ec0fbeec-94ec-432d-891b-b67d00b2348e"), Code="Nebraska", Description="NE", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("656cf0e2-0f2f-4489-837a-6c1b26121ba6"), Code="New Hampshire", Description="NH", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f5c74222-3dbd-452f-bf37-67c1cc0c5d40"), Code="New Jersey", Description="NJ", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("55942af6-b1ff-4ec2-8c7b-a434d510fc78"), Code="New Mexico", Description="NM", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("bd455e4e-5c57-4372-8772-bf0d454ba7f6"), Code="Nevada", Description="NV", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("396ba326-3288-4b75-8f2e-e5de83b9c081"), Code="New York", Description="NY", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("2ee509ef-d11f-4fec-ae5b-d9f1bd5c04b1"), Code="Ohio", Description="OH", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("b5d4c6fc-021f-42bf-8100-29a1d09bdbd0"), Code="Oklahoma", Description="OK", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("dafa95c3-801c-48cd-8e07-bcfb7e84ebb3"), Code="Oregon", Description="OR", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("9f477dc1-8467-41ae-9b2e-eec26a533675"), Code="Pennsylvania", Description="PA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("03331898-a10e-4253-b6f4-e263889bb671"), Code="Puerto Rico", Description="PR", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7bc92f27-d035-4b12-91c8-6fd686125763"), Code="Palau", Description="PW", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("814ba19b-7965-4a67-afea-2bc848052adc"), Code="Rhode Island", Description="RI", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d0557e8a-a218-48da-83fa-014b55ba164c"), Code="South Carolina", Description="SC", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d470cf9b-df09-482e-b351-2c3be08f09da"), Code="South Dakota", Description="SD", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("bc98c80d-e816-4f14-8fe7-0bc488bc5ebe"), Code="Tennessee", Description="TN", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("459ed158-a7b7-4278-b4b4-2179f3139caf"), Code="Texas", Description="TX", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("98fb3b3f-b9ad-4457-82f2-319344637797"), Code="Utah", Description="UT", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("41d999c9-8569-4ef7-a612-26f699ceb1d4"), Code="Virginia", Description="VA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("085f5cd6-102d-4e3b-860e-581e759f3aa6"), Code="Virgin Islands", Description="VI", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("0374fcbb-1ee2-41ba-b6b7-c1fb0961e4d9"), Code="Vermont", Description="VT", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8a011931-93c9-4859-8060-721d03a3ef92"), Code="Washington", Description="WA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("a8812636-f7d8-46dc-b6cf-5f21cd8597d7"), Code="Wisconsin", Description="WI", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("421bc3c6-9de6-463b-aa6a-64181c987fef"), Code="West Virginia", Description="WV", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f281d751-a4dc-4ff5-9620-301abeb728bd"), Code="Wyoming", Description="WY", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("e4e2f9b8-6f12-43d9-9cdf-da9fb27913a8"), Code="Armed Forces America", Description="AA", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("6944eb07-d8db-4669-989e-7de1a6c60566"), Code="Armed Forces Africa, Canada, Europe, and Mideast", Description="AE", Definition="", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d0a9bb11-107a-4240-b212-643063a1c057"), Code="Armed Forces Pacific", Description="AP", Definition="", SortOrder=0 },
+        };
+
+        /// <summary>
+        /// The RefState Pick List
+         /// </summary>
+        public static List<RefState> RefStatePickList = new List<RefState> =
+        {
+            new RefState { Id=Guid.Parse("2ce20c37-fa90-42e1-b13a-8a734b51f5a9"), Code="Alaska", SortOrder=0 },
+            new RefState { Id=Guid.Parse("23594f00-5f92-4ff0-950b-7ef47a343bee"), Code="Alabama", SortOrder=0 },
+            new RefState { Id=Guid.Parse("6986e215-61a2-4ee5-a619-44bf011e0f3e"), Code="Arkansas", SortOrder=0 },
+            new RefState { Id=Guid.Parse("0b10d93a-0246-41b2-9368-a1792ece88ca"), Code="American Samoa", SortOrder=0 },
+            new RefState { Id=Guid.Parse("955dbf6c-050e-4306-9835-792d5fd0bf10"), Code="Arizona", SortOrder=0 },
+            new RefState { Id=Guid.Parse("fd183058-0ffb-4a7f-a89a-7bebe7cc0e48"), Code="California", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8aca248a-d80a-432d-a5c3-76dc95ef7c60"), Code="Colorado", SortOrder=0 },
+            new RefState { Id=Guid.Parse("25e183a5-0034-45c0-931f-af32c073c334"), Code="Connecticut", SortOrder=0 },
+            new RefState { Id=Guid.Parse("63ba2aca-80ab-4290-a6e1-d94384223401"), Code="District of Columbia", SortOrder=0 },
+            new RefState { Id=Guid.Parse("335877c7-d5a1-4660-a48c-6bd4cb03440d"), Code="Delaware", SortOrder=0 },
+            new RefState { Id=Guid.Parse("9026fdc2-1a40-4a69-a35a-7b0f150791a9"), Code="Florida", SortOrder=0 },
+            new RefState { Id=Guid.Parse("e38d2e25-90f6-442b-844e-3ac6f21ac940"), Code="Federated States of Micronesia", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d4722efa-9ca4-453c-a9f0-87cf5d123798"), Code="Georgia", SortOrder=0 },
+            new RefState { Id=Guid.Parse("efe3ede4-4544-4daf-b071-b5d3e578c523"), Code="Guam", SortOrder=0 },
+            new RefState { Id=Guid.Parse("5edba5ab-6687-437d-86af-dcb291dca074"), Code="Hawaii", SortOrder=0 },
+            new RefState { Id=Guid.Parse("80a885be-de95-411c-8c7f-55d6d3408a0b"), Code="Iowa", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8b85fb32-0649-4312-8b74-ac7ad650cd7d"), Code="Idaho", SortOrder=0 },
+            new RefState { Id=Guid.Parse("3c2dddab-a709-4f7f-b628-fe290d985ba0"), Code="Illinois", SortOrder=0 },
+            new RefState { Id=Guid.Parse("36e971e0-5b5f-4ee2-9bf6-bbc398766c80"), Code="Indiana", SortOrder=0 },
+            new RefState { Id=Guid.Parse("2a2ea1f7-c6f4-4ac0-8d97-7d29471d78c7"), Code="Kansas", SortOrder=0 },
+            new RefState { Id=Guid.Parse("cc20b8da-2465-461d-86b7-1d6d3b8d9f3c"), Code="Kentucky", SortOrder=0 },
+            new RefState { Id=Guid.Parse("06757485-4139-4970-9a2c-bb1139880fa4"), Code="Louisiana", SortOrder=0 },
+            new RefState { Id=Guid.Parse("3a39b08f-0763-4c34-a3ad-98ecaa24deab"), Code="Massachusetts", SortOrder=0 },
+            new RefState { Id=Guid.Parse("4e8c5b9d-2321-480e-b634-ebbea72bf8d2"), Code="Maryland", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7f63d313-a108-4e9d-ad2c-06ed731dc01c"), Code="Maine", SortOrder=0 },
+            new RefState { Id=Guid.Parse("20ff201d-3b7d-4830-8b59-d1ace09b625b"), Code="Marshall Islands", SortOrder=0 },
+            new RefState { Id=Guid.Parse("b70fd36c-cd24-4ff2-8c72-bc0425532515"), Code="Michigan", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f144ac56-77e3-421f-bc56-cc1294586c14"), Code="Minnesota", SortOrder=0 },
+            new RefState { Id=Guid.Parse("971ee6da-1ced-4e07-b098-88169e58e252"), Code="Missouri", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7c136f34-ff64-4290-9378-25b75a44d2fa"), Code="Northern Marianas", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d620b3bf-08eb-49c2-82ec-0c80e88484b9"), Code="Mississippi", SortOrder=0 },
+            new RefState { Id=Guid.Parse("83cf5f91-c528-4807-bc3a-afc8cb1afd6f"), Code="Montana", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7fa58b2f-d713-4a9b-8dd7-143c0beb0e3f"), Code="North Carolina", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d1d07994-4d7a-46ce-8231-d214671bfc37"), Code="North Dakota", SortOrder=0 },
+            new RefState { Id=Guid.Parse("ec0fbeec-94ec-432d-891b-b67d00b2348e"), Code="Nebraska", SortOrder=0 },
+            new RefState { Id=Guid.Parse("656cf0e2-0f2f-4489-837a-6c1b26121ba6"), Code="New Hampshire", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f5c74222-3dbd-452f-bf37-67c1cc0c5d40"), Code="New Jersey", SortOrder=0 },
+            new RefState { Id=Guid.Parse("55942af6-b1ff-4ec2-8c7b-a434d510fc78"), Code="New Mexico", SortOrder=0 },
+            new RefState { Id=Guid.Parse("bd455e4e-5c57-4372-8772-bf0d454ba7f6"), Code="Nevada", SortOrder=0 },
+            new RefState { Id=Guid.Parse("396ba326-3288-4b75-8f2e-e5de83b9c081"), Code="New York", SortOrder=0 },
+            new RefState { Id=Guid.Parse("2ee509ef-d11f-4fec-ae5b-d9f1bd5c04b1"), Code="Ohio", SortOrder=0 },
+            new RefState { Id=Guid.Parse("b5d4c6fc-021f-42bf-8100-29a1d09bdbd0"), Code="Oklahoma", SortOrder=0 },
+            new RefState { Id=Guid.Parse("dafa95c3-801c-48cd-8e07-bcfb7e84ebb3"), Code="Oregon", SortOrder=0 },
+            new RefState { Id=Guid.Parse("9f477dc1-8467-41ae-9b2e-eec26a533675"), Code="Pennsylvania", SortOrder=0 },
+            new RefState { Id=Guid.Parse("03331898-a10e-4253-b6f4-e263889bb671"), Code="Puerto Rico", SortOrder=0 },
+            new RefState { Id=Guid.Parse("7bc92f27-d035-4b12-91c8-6fd686125763"), Code="Palau", SortOrder=0 },
+            new RefState { Id=Guid.Parse("814ba19b-7965-4a67-afea-2bc848052adc"), Code="Rhode Island", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d0557e8a-a218-48da-83fa-014b55ba164c"), Code="South Carolina", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d470cf9b-df09-482e-b351-2c3be08f09da"), Code="South Dakota", SortOrder=0 },
+            new RefState { Id=Guid.Parse("bc98c80d-e816-4f14-8fe7-0bc488bc5ebe"), Code="Tennessee", SortOrder=0 },
+            new RefState { Id=Guid.Parse("459ed158-a7b7-4278-b4b4-2179f3139caf"), Code="Texas", SortOrder=0 },
+            new RefState { Id=Guid.Parse("98fb3b3f-b9ad-4457-82f2-319344637797"), Code="Utah", SortOrder=0 },
+            new RefState { Id=Guid.Parse("41d999c9-8569-4ef7-a612-26f699ceb1d4"), Code="Virginia", SortOrder=0 },
+            new RefState { Id=Guid.Parse("085f5cd6-102d-4e3b-860e-581e759f3aa6"), Code="Virgin Islands", SortOrder=0 },
+            new RefState { Id=Guid.Parse("0374fcbb-1ee2-41ba-b6b7-c1fb0961e4d9"), Code="Vermont", SortOrder=0 },
+            new RefState { Id=Guid.Parse("8a011931-93c9-4859-8060-721d03a3ef92"), Code="Washington", SortOrder=0 },
+            new RefState { Id=Guid.Parse("a8812636-f7d8-46dc-b6cf-5f21cd8597d7"), Code="Wisconsin", SortOrder=0 },
+            new RefState { Id=Guid.Parse("421bc3c6-9de6-463b-aa6a-64181c987fef"), Code="West Virginia", SortOrder=0 },
+            new RefState { Id=Guid.Parse("f281d751-a4dc-4ff5-9620-301abeb728bd"), Code="Wyoming", SortOrder=0 },
+            new RefState { Id=Guid.Parse("e4e2f9b8-6f12-43d9-9cdf-da9fb27913a8"), Code="Armed Forces America", SortOrder=0 },
+            new RefState { Id=Guid.Parse("6944eb07-d8db-4669-989e-7de1a6c60566"), Code="Armed Forces Africa, Canada, Europe, and Mideast", SortOrder=0 },
+            new RefState { Id=Guid.Parse("d0a9bb11-107a-4240-b212-643063a1c057"), Code="Armed Forces Pacific", SortOrder=0 },
+       };
+   }
+}

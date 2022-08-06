@@ -1,0 +1,65 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   RefIndividualizedProgramPlannedServiceTypeList.cs
+//**********************************************************
+
+using Autobahn.Common.Models;
+
+namespace Autobahn.Common.Models
+{
+     /// <summary>
+     /// The list of RefIndividualizedProgramPlannedServiceType Models
+     /// </summary>
+    public static partial class ReferenceLists
+    {
+        /// <summary>
+        /// The complete <see cref="RefIndividualizedProgramPlannedServiceType"> List
+         /// </summary>
+        public static List<RefIndividualizedProgramPlannedServiceType> RefIndividualizedProgramPlannedServiceTypeList = new List<RefIndividualizedProgramPlannedServiceType> =
+        {
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("7438dbd9-b8e2-46ce-b711-bc824045e1ca"), Code="Assistive technology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="01", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("00995f84-dd4a-4620-9d18-5f0335185030"), Code="", Description="2.00", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("ebf08506-0846-4ae3-99c5-f189ae2ede25"), Code="Audiology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="02", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("195adf22-d4eb-4159-8651-39fd56b92dde"), Code="Family training/counseling services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="03", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("ea59eac7-4568-4d98-b0bb-8f10490d6a48"), Code="Health services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="04", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("b9407be1-79fd-4b24-bc35-b0dbe8910dcc"), Code="Medical services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="05", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("042e64aa-ac21-44e9-a64a-8f1593ddccdc"), Code="Nursing services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="06", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("8170c991-2778-427d-af66-fd08f55a713e"), Code="Nutrition services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="07", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("1dd6159b-400e-45a9-aaee-1426f4bbdd17"), Code="Occupational therapy is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="08", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("690916d6-2568-4583-a9df-7bf41ea7aabd"), Code="Physical therapy is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="09", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("7c8e75af-b66b-4f71-a20f-67b06ac153d5"), Code="Psychological services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="10", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("c0ccb09f-a238-471e-9fbe-8286b8fc0bdd"), Code="Sign language and cued language services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="11", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("6176fb7a-5072-42be-b453-f6778fd209ff"), Code="Service coordination is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="12", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("47850ce3-9c9f-417b-9498-7f0729d67ab9"), Code="Social work services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="13", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("9d5bd816-027b-4dfc-bc71-ffa8a7182c2e"), Code="Special instruction is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="14", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("5c94b381-3b38-4b2c-8a0b-29077d8cb1f6"), Code="Speech-language pathology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="15", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("8566e09c-0f6e-48ca-b5c0-3a723278f158"), Code="Vision services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="16", Definition="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("5384ce82-eea4-46ee-a343-4fed5ef737ca"), Code="A type of service other than what is currently defined in CEDS that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", Description="99", Definition="", SortOrder=0 },
+        };
+
+        /// <summary>
+        /// The RefIndividualizedProgramPlannedServiceType Pick List
+         /// </summary>
+        public static List<RefIndividualizedProgramPlannedServiceType> RefIndividualizedProgramPlannedServiceTypePickList = new List<RefIndividualizedProgramPlannedServiceType> =
+        {
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("7438dbd9-b8e2-46ce-b711-bc824045e1ca"), Code="Assistive technology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("00995f84-dd4a-4620-9d18-5f0335185030"), Code="", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("ebf08506-0846-4ae3-99c5-f189ae2ede25"), Code="Audiology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("195adf22-d4eb-4159-8651-39fd56b92dde"), Code="Family training/counseling services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("ea59eac7-4568-4d98-b0bb-8f10490d6a48"), Code="Health services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("b9407be1-79fd-4b24-bc35-b0dbe8910dcc"), Code="Medical services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("042e64aa-ac21-44e9-a64a-8f1593ddccdc"), Code="Nursing services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("8170c991-2778-427d-af66-fd08f55a713e"), Code="Nutrition services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("1dd6159b-400e-45a9-aaee-1426f4bbdd17"), Code="Occupational therapy is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("690916d6-2568-4583-a9df-7bf41ea7aabd"), Code="Physical therapy is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("7c8e75af-b66b-4f71-a20f-67b06ac153d5"), Code="Psychological services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("c0ccb09f-a238-471e-9fbe-8286b8fc0bdd"), Code="Sign language and cued language services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("6176fb7a-5072-42be-b453-f6778fd209ff"), Code="Service coordination is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("47850ce3-9c9f-417b-9498-7f0729d67ab9"), Code="Social work services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("9d5bd816-027b-4dfc-bc71-ffa8a7182c2e"), Code="Special instruction is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("5c94b381-3b38-4b2c-8a0b-29077d8cb1f6"), Code="Speech-language pathology services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("8566e09c-0f6e-48ca-b5c0-3a723278f158"), Code="Vision services is the type of service that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+            new RefIndividualizedProgramPlannedServiceType { Id=Guid.Parse("5384ce82-eea4-46ee-a343-4fed5ef737ca"), Code="A type of service other than what is currently defined in CEDS that adapts the curriculum, materials, or instruction for students identified as needing special education because of a delay or disability.", SortOrder=0 },
+       };
+   }
+}

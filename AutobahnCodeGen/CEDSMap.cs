@@ -6,20 +6,17 @@ namespace AutobahnCodeGen
     {
         public CEDSMap()
         {
-            Map(x => x.ElementName).Name("Element Name");
-            Map(x => x.Definition).Name("Definition");
-            Map(x => x.OptionSet).Name("Option Set");
-            Map(x => x.DomainEntityCategory).Name("Domain -> Entity -> Category");
-            Map(x => x.Status).Name("Status");
-            Map(x => x.Format).Name("Format");
-            Map(x => x.ChangeNotes).Name("Change Notes");
-            Map(x => x.UsageNotes).Name("Usage Notes");
-            Map(x => x.GlobalID).Name("Global ID");
-            Map(x => x.AlternateName).Name("Alternate Name");
-            Map(x => x.TechnicalName).Name("Technical Name");
-            Map(x => x.UseCaseConnection).Name("Use Case/Connection");
-            Map(x => x.URL).Name("URL");
-            Map(x => x.SubmitAComment).Name("Submit a Comment");
+            Map(x => x.GlobalID).Index(0);
+            Map(x => x.ElementName).Index(1);
+            Map(x => x.AlternateName).Index(2);
+            Map(x => x.Definition).Index(3);
+            Map(x => x.Format).Index(4);
+            Map(x => x.OptionSet).Index(5);
+            Map(x => x.UsageNotes).Index(6);
+            Map(x => x.URL).Index(7);
+            Map(x => x.Version).Index(8);
+            Map(x => x.TermId).Index(9);
+            Map(x => x.ChangeNotes).Index(11);
         }
     }
 }

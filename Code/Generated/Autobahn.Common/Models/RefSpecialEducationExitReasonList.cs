@@ -1,0 +1,63 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   RefSpecialEducationExitReasonList.cs
+//**********************************************************
+
+using Autobahn.Common.Models;
+
+namespace Autobahn.Common.Models
+{
+     /// <summary>
+     /// The list of RefSpecialEducationExitReason Models
+     /// </summary>
+    public static partial class ReferenceLists
+    {
+        /// <summary>
+        /// The complete <see cref="RefSpecialEducationExitReason"> List
+         /// </summary>
+        public static List<RefSpecialEducationExitReason> RefSpecialEducationExitReasonList = new List<RefSpecialEducationExitReason> =
+        {
+            new RefSpecialEducationExitReason { Id=Guid.Parse("2a1c8f51-d6ca-4512-9730-f17ffc45bccf"), Code="Graduated with regular high school diploma is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="HighSchoolDiploma", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("b6b5fd0f-013c-43a8-bc06-7975e7e1c019"), Code="Received a certificate is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="ReceivedCertificate", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("aa0068df-ad23-4496-8b99-9c191176dec3"), Code="Reached maximum age is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="ReachedMaximumAge", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("5f24e980-9e94-49e6-b516-d68f4ab5fbb3"), Code="Died is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="Died", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("19d109a6-0184-4da0-8989-50bc5280bd95"), Code="Moved, known to be continuing is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="MovedAndContinuing", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("4ddf9c0e-f83f-4355-bd83-1e1a14745f11"), Code="Dropped out is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="DroppedOut", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("53a59b57-38e3-4ec9-a0cd-7530bd7cb8b7"), Code="Transferred to regular education is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="Transferred", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("d6dfb7fe-6a20-4716-893d-7f3a603f0cec"), Code="No longer eligible for Part C prior to reaching age three  is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="PartCNoLongerEligible", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("bedaf968-b126-446c-9615-3aef5e39f53e"), Code="Part B eligible, exiting Part C is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="PartBEligibleExitingPartC", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("65287d9c-4481-4bbc-b31a-3c44c5c7791e"), Code="Part B eligible, continuing in Part C is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="PartBEligibleContinuingPartC", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("14f9fd6c-7a49-47c4-96f9-169494ca2dda"), Code="Not eligible for Part B, exit with referrals to other programs is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="NotPartBEligibleExitingPartCWithReferrrals", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("b0970a8c-d258-46d3-a55b-13810c3afd00"), Code="Not eligible for Part B, exit with no referrals is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="NotPartBEligibleExitingPartCWithoutReferrrals", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("15a68bc5-9c98-498a-9973-a57732b02c07"), Code="Part B eligibility not determined is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="PartBEligibilityNotDeterminedExitingPartC", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("1747164d-77ad-4e16-8263-9e333f7cc9eb"), Code="Withdrawal by parent (or guardian) is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="WithdrawalByParent", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("7056d923-239c-4c0c-a116-0e3aa5de7982"), Code="Moved out of State is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="MovedOutOfState", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("37c62817-589d-48cd-831e-27af8cc591e0"), Code="Attempts to contact the parent and/or child were unsuccessful is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="Unreachable", Definition="", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("c42a6ad7-c114-46f3-bd41-975a52d1596d"), Code="Graduated with an alternate diploma is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", Description="GraduatedAlternateDiploma", Definition="", SortOrder=0 },
+        };
+
+        /// <summary>
+        /// The RefSpecialEducationExitReason Pick List
+         /// </summary>
+        public static List<RefSpecialEducationExitReason> RefSpecialEducationExitReasonPickList = new List<RefSpecialEducationExitReason> =
+        {
+            new RefSpecialEducationExitReason { Id=Guid.Parse("2a1c8f51-d6ca-4512-9730-f17ffc45bccf"), Code="Graduated with regular high school diploma is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("b6b5fd0f-013c-43a8-bc06-7975e7e1c019"), Code="Received a certificate is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("aa0068df-ad23-4496-8b99-9c191176dec3"), Code="Reached maximum age is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("5f24e980-9e94-49e6-b516-d68f4ab5fbb3"), Code="Died is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("19d109a6-0184-4da0-8989-50bc5280bd95"), Code="Moved, known to be continuing is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("4ddf9c0e-f83f-4355-bd83-1e1a14745f11"), Code="Dropped out is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("53a59b57-38e3-4ec9-a0cd-7530bd7cb8b7"), Code="Transferred to regular education is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("d6dfb7fe-6a20-4716-893d-7f3a603f0cec"), Code="No longer eligible for Part C prior to reaching age three  is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("bedaf968-b126-446c-9615-3aef5e39f53e"), Code="Part B eligible, exiting Part C is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("65287d9c-4481-4bbc-b31a-3c44c5c7791e"), Code="Part B eligible, continuing in Part C is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("14f9fd6c-7a49-47c4-96f9-169494ca2dda"), Code="Not eligible for Part B, exit with referrals to other programs is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("b0970a8c-d258-46d3-a55b-13810c3afd00"), Code="Not eligible for Part B, exit with no referrals is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("15a68bc5-9c98-498a-9973-a57732b02c07"), Code="Part B eligibility not determined is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("1747164d-77ad-4e16-8263-9e333f7cc9eb"), Code="Withdrawal by parent (or guardian) is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("7056d923-239c-4c0c-a116-0e3aa5de7982"), Code="Moved out of State is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("37c62817-589d-48cd-831e-27af8cc591e0"), Code="Attempts to contact the parent and/or child were unsuccessful is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+            new RefSpecialEducationExitReason { Id=Guid.Parse("c42a6ad7-c114-46f3-bd41-975a52d1596d"), Code="Graduated with an alternate diploma is the reason the child who was in special education at the start of the reporting period was not in special education at the end of the reporting period.", SortOrder=0 },
+       };
+   }
+}

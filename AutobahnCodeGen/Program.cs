@@ -11,15 +11,17 @@ namespace AutobahnCodeGen
             Dictionary<string, List<string>> CEDDomains = new Dictionary<string, List<string>>();
             List<CEDSElement> CEDElements = new List<CEDSElement>();
             var csv = new CEDSService();
-            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDS-V10.csv");
-            var ndsElementsMetadata = csv.ReadNDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElements.csv");
-            var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTables.csv");
+            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+            var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
 
             // Add any missing clases and columns from the entites
             foreach (var classtype in types.GetTypes().ToList())
             {
-                if (!classtype.IsClass)
+                if (!classtype.IsClass
+                    || classtype.Name == "C_CEDSElements"
+                    || classtype.Name == "C_CEDStoNDSMapping"
+                    || classtype.Name == "Autobahn")
                 {
                     continue;
                 }
@@ -142,15 +144,15 @@ namespace AutobahnCodeGen
                 }
             }
 
-            // Set the technical name
-            foreach (var col in ndsElementsMetadata)
-            {
-                var cedsElements = cedsElementsMetadata.Where(c => c.ElementName == col.ElementName);
-                foreach (var element in cedsElements)
-                {
-                    col.TechnicalName = element.TechnicalName;
-                }
-            }
+            //// Set the technical name
+            //foreach (var col in ndsElementsMetadata)
+            //{
+            //    var cedsElements = cedsElementsMetadata.Where(c => c.ElementName == col.ElementName);
+            //    foreach (var element in cedsElements)
+            //    {
+            //        col.TechnicalName = element.TechnicalName;
+            //    }
+            //}
 
             // Create the Domains Dictionary
             foreach (var table in tablesMetadata)
@@ -169,10 +171,10 @@ namespace AutobahnCodeGen
                 }
             }
 
-            MauiModule.GenerateModule(CEDDomains, tablesMetadata, types.GetTypes().ToList(), ndsElementsMetadata);
+            MauiModule.GenerateModule(CEDDomains, tablesMetadata, types.GetTypes().ToList(), cedsElementsMetadata);
 
             csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
-            csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
+            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
         }
     }
 }

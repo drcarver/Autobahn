@@ -16,10 +16,10 @@ namespace AutobahnCodeGen
         {
             public CEDSTableMap()
             {
-                Map(x => x.GlobalID).Name("GlobalID");
-                Map(x => x.TableName).Name("TableName");
-                Map(x => x.ColumnName).Name("ColumnName");
-                Map(x => x.Version).Name("Version");
+                Map(x => x.GlobalID).Index(0);
+                Map(x => x.TableName).Index(1);
+                Map(x => x.ColumnName).Index(2);
+                Map(x => x.Version).Index(3);
             }
         }
     }

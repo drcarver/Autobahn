@@ -1,4 +1,5 @@
-﻿using Autobahn.Common.Models;
+﻿using Autobahn.Common.Interfaces;
+using Autobahn.Common.Models;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -7,7 +8,7 @@ namespace Autobahn.Common.ViewModels
     /// <summary>
     /// The base view model
     /// </summary>
-    public class ViewModelBase : AutobahnBase
+    public class ViewModelBase : AutobahnBase, IViewModelBase
     {
         // private member variable for IsBusy
         private bool _isBusy = false;

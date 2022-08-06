@@ -13,9 +13,9 @@
         public string GlobalID { get; set; }
         public string AlternateName { get; set; }
         public string TechnicalName { get; set; }
-        public string UseCaseConnection { get; set; }
+        public string TermId { get; set; }
         public string URL { get; set; }
-        public string SubmitAComment { get; set; }
+        public string Version { get; set; }
         public string TableName { get; set; }
         public string DomainName { get; set; }
 
@@ -34,9 +34,7 @@
                 GlobalID = GlobalID,
                 AlternateName = AlternateName,
                 TechnicalName = TechnicalName,
-                UseCaseConnection = UseCaseConnection,
                 URL = URL,
-                SubmitAComment = SubmitAComment,
                 TableName = TableName,
                 DomainName = DomainName
             };

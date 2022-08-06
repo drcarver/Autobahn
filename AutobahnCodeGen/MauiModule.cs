@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.Infrastructure;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
+using System.Xml.Linq;
 using File = System.IO.File;
 
 namespace AutobahnCodeGen
@@ -17,7 +19,7 @@ namespace AutobahnCodeGen
         public static Dictionary<string, List<string>> RefModels { get; set; } = new Dictionary<string, List<string>>();
 
         public static void GenerateModule(Dictionary<string, List<string>> CEDDomains,
-            List<CEDSTable> tables, List<Type> types, List<NDSElement> elements)
+            List<CEDSTable> tables, List<Type> types, List<CEDSElement> elements)
         {
             var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
             foreach (var dir in CEDDomains.Keys)
@@ -49,6 +51,10 @@ namespace AutobahnCodeGen
                     if (prop.Name.StartsWith("Ref"))
                     {
                         var refmodelname = prop.Name.Replace("Id", string.Empty);
+                        if (refmodelname.EndsWith("Statu"))
+                        {
+                            refmodelname = refmodelname.Replace("Statu", "Status");
+                        }
                         if (!RefModels.ContainsKey(refmodelname))
                         {
                             var vals = new List<string> { moduleName };
@@ -66,7 +72,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<NDSElement> elements)
+        private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
         {
             foreach (var refmodel in RefModels.Keys)
             {
@@ -76,11 +82,61 @@ namespace AutobahnCodeGen
                     var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
                     GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
                     GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
+                    GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
                 }
             }
         }
 
-        private static void GenerateReferenceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<NDSElement> elements)
+        private static void GenerateReferenceList(string filePath, string moduleName, Type model)
+        {
+            var csv = new CEDSService();
+            var refernceModelList = csv.ReadReferenceFile($@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{model.Name}.csv");
+            var fullFilePath = $"{filePath}{model.Name}List.cs";
+            using (var stream = File.CreateText(fullFilePath))
+            {
+                stream.WriteLine($"//**********************************************************");
+                stream.WriteLine($"//* DomainName: {moduleName}");
+                stream.WriteLine($"//* FileName:   {model.Name}List.cs");
+                stream.WriteLine($"//**********************************************************");
+                stream.WriteLine("");
+                stream.WriteLine($"using Autobahn.Common.Models;");
+                stream.WriteLine("");
+                stream.WriteLine($"namespace {moduleName}.Models");
+                stream.WriteLine("{");
+                stream.WriteLine($"     /// <summary>");
+                stream.WriteLine($"     /// The list of {model.Name} Models");
+                stream.WriteLine($"     /// </summary>");
+                stream.WriteLine($@"    public static partial class ReferenceLists");
+                stream.WriteLine($@"    {{");
+                stream.WriteLine($@"        /// <summary>");
+                stream.WriteLine($@"        /// The complete <see cref=""{model.Name}""> List");
+                stream.WriteLine($"         /// </summary>");
+                stream.WriteLine($@"        public static List<{model.Name}> {model.Name}List = new List<{model.Name}>");
+                stream.WriteLine($@"        {{");
+                foreach (var item in refernceModelList)
+                {
+                    stream.WriteLine($@"            new {model.Name} {{ Id=Guid.Parse(""{item.Id}""), Code=""{item.Code.Replace("\"", "\"\"")}", Description=""{item.Description.Replace("\"", "\"\"")}
+                }
+                "", Definition=""{item.Definition}"", SortOrder={item.SortOrder ?? 0} }},");
+                }
+                stream.WriteLine($@"        }};");
+                stream.WriteLine();
+                stream.WriteLine($@"        /// <summary>");
+                stream.WriteLine($@"        /// The {model.Name} Pick List");
+                stream.WriteLine($"         /// </summary>");
+                stream.WriteLine($@"        public static List<{model.Name}> {model.Name}PickList = new List<{model.Name}>");
+                stream.WriteLine($@"        {{");
+                foreach (var item in refernceModelList)
+                {
+                    stream.WriteLine($@"            new {model.Name} {{ Id=Guid.Parse(""{item.Id}""), Code=""{item.Code}"", SortOrder={item.SortOrder ?? 0} }},");
+                }
+                stream.WriteLine($@"       }};");
+                stream.WriteLine("   }");
+                stream.WriteLine("}");
+            }
+        }
+
+        private static void GenerateReferenceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<CEDSElement> elements)
         {
             var fullFilePath = $"{filePath}{model.Name}.cs";
             using (var stream = File.CreateText(fullFilePath))
@@ -118,7 +174,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateReferenceInterfaceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<NDSElement> elements)
+        private static void GenerateReferenceInterfaceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<CEDSElement> elements)
         {
             var fullFilePath = $"{filePath}I{model.Name}.cs";
             using (var stream = File.CreateText(fullFilePath))
@@ -155,7 +211,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViews(string filePath, string moduleName, List<CEDSTable> tables, List<Type> classes, List<NDSElement> elements)
+        private static void GenerateViews(string filePath, string moduleName, List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var viewlist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -179,7 +235,7 @@ namespace AutobahnCodeGen
             GenerateXAMLFile($@"{filePath}\{moduleName}\Views\", moduleName, tables, viewlist, elements);
         }
 
-        private static void GenerateXAMLFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<NDSElement> elements)
+        private static void GenerateXAMLFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -208,7 +264,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViewFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<NDSElement> elements)
+        private static void GenerateViewFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -244,7 +300,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateViewModels(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<NDSElement> elements)
+            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var vmlist = new List<Type>();
             var fpath = string.Empty;
@@ -269,7 +325,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateViewModelFile(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<NDSElement> elements)
+            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -309,7 +365,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateInterfaces(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<NDSElement> elements)
+            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var interfacelist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -331,7 +387,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateModels(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<NDSElement> elements)
+            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var classlist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -357,7 +413,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateModelFiles(string filePath, string moduleName, 
-            List<Type> models, List<NDSElement> elements)
+            List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -396,7 +452,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateInterfaceFiles(string filePath, string moduleName, 
-            List<Type> models, List<NDSElement> elements)
+            List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -435,7 +491,8 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateProperties(StreamWriter stream, Type model,
-            List<NDSElement> elements, string moduleName, List<string> propertiesToIgnore, bool isInterface = false)
+            List<CEDSElement> elements, string moduleName, List<string> propertiesToIgnore, 
+            bool isInterface = false)
         {
             foreach (var prop in model.GetProperties())
             {
@@ -447,12 +504,18 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
+                var propName = prop.Name;
+                if (propName.EndsWith("Statu"))
+                {
+                    propName = propName.Replace("Statu", "Status");
+                }
+
                 var modifier = string.Empty;
                 if (!isInterface)
                 {
                     modifier = "public ";
                 }
-                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == prop.Name);
+                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == propName);
                 if (element != null)
                 {
                     stream.WriteLine($"        /// <summary>");
@@ -460,11 +523,11 @@ namespace AutobahnCodeGen
                     stream.WriteLine($"        /// </summary>");
                     if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
                     {
-                        stream.WriteLine($"    {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {prop.Name} {{ get => _{prop.Name}; set => SetProperty(_{prop.Name}, value); }}");
+                        stream.WriteLine($"    {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get; set; }}");
                     }
                     else
                     {
-                        stream.WriteLine($"    {modifier}{prop.PropertyType} {prop.Name}  {{ get => _{prop.Name}; set => SetProperty(_{prop.Name}, value); }}");
+                        stream.WriteLine($"    {modifier}{prop.PropertyType} {propName}  {{ get; set; }}");
                     }
                     stream.WriteLine();
                     continue;
@@ -478,13 +541,13 @@ namespace AutobahnCodeGen
                     {
                         stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{nospacesprop}\"/> model");
                         stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid? {prop.Name} {{ get; set; }}");
+                        stream.WriteLine($"        {modifier}Guid? {propName} {{ get; set; }}");
                     }
                     else
                     {
                         stream.WriteLine($"        /// Reference to a required instance of the <see cref=\"{nospacesprop}\"/> model");
                         stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid {prop.Name} {{ get; set; }}");
+                        stream.WriteLine($"        {modifier}Guid {propName} {{ get; set; }}");
                     }
                     stream.WriteLine();
                     continue;
@@ -493,23 +556,23 @@ namespace AutobahnCodeGen
                 if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
                 {
                     stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// Defines the {model.Name}.{prop.Name} nullable property");
+                    stream.WriteLine($"        /// Defines the {model.Name}.{propName} nullable property");
                     stream.WriteLine($"        /// </summary>");
-                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {prop.Name} {{ get; set; }}");
+                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get; set; }}");
                 }
                 else
                 {
                     stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// Defines the {model.Name}.{prop.Name} non nullable property");
+                    stream.WriteLine($"        /// Defines the {model.Name}.{propName} non nullable property");
                     stream.WriteLine($"        /// </summary>");
-                    stream.WriteLine($"        {modifier}{prop.PropertyType} {prop.Name} {{ get; set; }}");
+                    stream.WriteLine($"        {modifier}{prop.PropertyType} {propName} {{ get; set; }}");
                 }
                 stream.WriteLine();
             }
         }
 
         private static void GenerateBindableProperties(StreamWriter stream, Type model,
-            List<NDSElement> elements, string moduleName, List<string> propertiesToIgnore, bool isInterface = false)
+            List<CEDSElement> elements, string moduleName, List<string> propertiesToIgnore, bool isInterface = false)
         {
             if (!isInterface)
             {
@@ -533,6 +596,12 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
+                var propName = prop.Name;
+                if (propName.EndsWith("Statu"))
+                {
+                    propName = propName.Replace("Statu", "Status");
+                }
+
                 var modifier = string.Empty;
                 if (!isInterface)
                 {
@@ -546,21 +615,21 @@ namespace AutobahnCodeGen
                         stream.WriteLine($"        /// <summary>");
                         stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.Name}\"/> model");
                         stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid? {prop.Name} {{ get => _{prop.Name}; set => SetProperty(ref _{prop.Name}, value); }}");
+                        stream.WriteLine($"        {modifier}Guid? {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
                     }
                     else
                     {
                         stream.WriteLine($"        /// <summary>");
-                        stream.WriteLine($"        /// Reference to a required instance of the <see cref=\"{prop.Name}\"/> model");
+                        stream.WriteLine($"        /// Reference to a required instance of the <see cref=\"{propName}\"/> model");
                         stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid {prop.Name} {{ get => _{prop.Name}; set => SetProperty(ref _{prop.Name}, value); }}");
+                        stream.WriteLine($"        {modifier}Guid {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
                     }
                     stream.WriteLine();
                     proplist.Add(prop);
                     continue;
                 }
 
-                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == prop.Name);
+                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == propName);
                 if (element != null)
                 {
                     stream.WriteLine($"        /// <summary>");
@@ -570,11 +639,11 @@ namespace AutobahnCodeGen
 
                 if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
                 {
-                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {prop.Name} {{ get => _{prop.Name}; set => SetProperty(ref _{prop.Name}, value); }}");
+                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
                 }
                 else
                 {
-                    stream.WriteLine($"        {modifier}{prop.PropertyType} {prop.Name}  {{ get => _{prop.Name}; set => SetProperty(ref _{prop.Name}, value); }}");
+                    stream.WriteLine($"        {modifier}{prop.PropertyType} {propName}  {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
                 }
                 proplist.Add(prop);
                 stream.WriteLine();
@@ -592,11 +661,16 @@ namespace AutobahnCodeGen
             stream.WriteLine($"            Id = model.Id;");
             foreach (var prop in proplist)
             {
-                if (propertiesToIgnore.Contains(prop.Name))
+                var propName = prop.Name;
+                if (propName.EndsWith("Statu"))
+                {
+                    propName = propName.Replace("Statu", "Status");
+                }
+                if (propertiesToIgnore.Contains(propName))
                 {
                     continue;
                 }
-                stream.WriteLine($"            {prop.Name} = model.{prop.Name};");
+                stream.WriteLine($"            {propName} = model.{propName};");
             }
             stream.WriteLine($"            _isChanged = false;");
             stream.WriteLine($"            IsNew = false;");
@@ -619,19 +693,25 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
+                var propName = prop.Name;
+                if (propName.EndsWith("Statu"))
+                {
+                    propName = propName.Replace("Statu", "Status");
+                }
+
                 if (prop.Name.EndsWith("Id"))
                 {
                     // Nullable regular property backing field.
                     if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
                     {
-                        stream.WriteLine($"        // member variable for the {prop.Name} property");
-                        stream.WriteLine($"        private Guid? _{prop.Name};");
+                        stream.WriteLine($"        // member variable for the {propName} property");
+                        stream.WriteLine($"        private Guid? _{propName};");
                         stream.WriteLine();
                     }
                     else
                     {
-                        stream.WriteLine($"        // member variable for the {prop.Name} property");
-                        stream.WriteLine($"        private Guid _{prop.Name};");
+                        stream.WriteLine($"        // member variable for the {propName} property");
+                        stream.WriteLine($"        private Guid _{propName};");
                         stream.WriteLine();
                     }
                     continue;
@@ -640,14 +720,14 @@ namespace AutobahnCodeGen
                 // Nullable regular property backing field.
                 if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
                 {
-                    stream.WriteLine($"        // member variable for the {prop.Name} property");
-                    stream.WriteLine($"        private {Nullable.GetUnderlyingType(prop.PropertyType)}? _{prop.Name};");
+                    stream.WriteLine($"        // member variable for the {propName} property");
+                    stream.WriteLine($"        private {Nullable.GetUnderlyingType(prop.PropertyType)}? _{propName};");
                     stream.WriteLine();
                 }
                 else
                 {
-                    stream.WriteLine($"        // member variable for the {prop.Name} property");
-                    stream.WriteLine($"        private {prop.PropertyType} _{prop.Name};");
+                    stream.WriteLine($"        // member variable for the {propName} property");
+                    stream.WriteLine($"        private {prop.PropertyType} _{propName};");
                     stream.WriteLine();
                 }
             }

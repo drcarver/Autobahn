@@ -25,33 +25,14 @@ namespace AutobahnCodeGen
     //}
     public class CEDSService
     {
-        public List<NDSElement> ReadNDSElementsFile(string location)
-        {
-            try
-            {
-                using (var reader = new StreamReader(location))
-                {
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                    {
-                        csv.Context.RegisterClassMap<NDSElementMap>();
-                        var records = csv.GetRecords<NDSElement>().ToList();
-                        return records;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
-
         public List<CEDSElement> ReadCEDSElementsFile(string location)
         {
             try
             {
                 using (var reader = new StreamReader(location))
                 {
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound=null };
+                    using (var csv = new CsvReader(reader, config))
                     {
                         csv.Context.RegisterClassMap<CEDSMap>();
                         var records = csv.GetRecords<CEDSElement>().ToList();
@@ -71,7 +52,8 @@ namespace AutobahnCodeGen
             {
                 using (var reader = new StreamReader(location))
                 {
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    using (var csv = new CsvReader(reader, config))
                     {
                         csv.Context.RegisterClassMap<CEDSTableMap>();
                         var records = csv.GetRecords<CEDSTable>().ToList();
@@ -82,6 +64,27 @@ namespace AutobahnCodeGen
             catch (Exception e)
             {
                 throw new Exception(e.Message);
+            }
+        }
+
+        public List<ReferenceModel> ReadReferenceFile(string location)
+        {
+            try
+            {
+                using (var reader = new StreamReader(location))
+                {
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    using (var csv = new CsvReader(reader, config))
+                    {
+                        csv.Context.RegisterClassMap<ReferenceModelMap>();
+                        var records = csv.GetRecords<ReferenceModel>().ToList();
+                        return records;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return new List<ReferenceModel>();
             }
         }
 

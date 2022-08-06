@@ -1,3 +1,8 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   IReferenceModel.cs
+//**********************************************************
+
 namespace Autobahn.Common.Interfaces;
 
 public interface IReferenceModel : IAutobahnBase

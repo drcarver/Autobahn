@@ -104,6 +104,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReferenceModelMap.cs" />
+    <Compile Include="CSVReferenceModel.cs" />
     <Compile Include="NDSElement.cs" />
     <Compile Include="CEDSElement.cs" />
     <Compile Include="NDSElementMap.cs" />

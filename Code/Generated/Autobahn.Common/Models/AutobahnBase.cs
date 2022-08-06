@@ -1,3 +1,8 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   AutobahnBase.cs
+//**********************************************************
+
 using Autobahn.Common.Interfaces;
 
 namespace Autobahn.Common.Models

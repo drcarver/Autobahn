@@ -1,0 +1,69 @@
+//**********************************************************
+//* DomainName: Autobahn.Credentials
+//* FileName:   RefCTDLOrganizationTypeList.cs
+//**********************************************************
+
+using Autobahn.Common.Models;
+
+namespace Autobahn.Credentials.Models
+{
+     /// <summary>
+     /// The list of RefCTDLOrganizationType Models
+     /// </summary>
+    public static partial class ReferenceLists
+    {
+        /// <summary>
+        /// The complete <see cref="RefCTDLOrganizationType"> List
+         /// </summary>
+        public static List<RefCTDLOrganizationType> RefCTDLOrganizationTypeList = new List<RefCTDLOrganizationType> =
+        {
+            new RefCTDLOrganizationType { Id=Guid.Parse("17608110-3359-4748-b100-35cb262e5d9e"), Code="Primarily offers access to assessments for credentials as a service.", Description="AssessmentBody", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("4d24f184-81b4-4ea8-a690-0755573de9d8"), Code="An organization that primarily sells products or services and employs one or more individuals.", Description="Business", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("2f03e319-dd84-43c3-908c-d461b56a88c8"), Code="A membership organization primarily engaged in promoting the interests of their business members and providing them with services that may involve the provision of education and credentialing services.", Description="BusinessAssociation", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("a05387a5-e6e7-4a02-b05a-d87cd7c21451"), Code="An independent, third-party organization that operates a certification program. A certification body may or may not be governmental, and may or may not have regulatory authority.", Description="CertificationBody", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("14903227-516c-4729-935d-0e0d20b9cf69"), Code="Authorized postsecondary institution that primarily offers bachelor or higher degrees, but may also award associate degrees.  Includes free-standing medical, law or other first-professional schools, schools that offer postbaccalaureate certificates only, those that offer graduate programs only, etc.", Description="FourYear", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("9db91932-28d8-4d75-b7b6-a41d410779a4"), Code="An organization in the public sector at the federal, state or local levels.  Includes quasi-governmental organizations, special districts (e.g., libraries), corrections organizations, etc., except college and school districts. Is also responsible for the oversight and administration of specific functions other than the military services.", Description="Government", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("6f24c49a-45dd-4e7a-9ade-f06a40511341"), Code="A secondary school providing instruction and educational services that do not focus primarily on career and technical education or alternative education.", Description="HighSchool", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("b972b5e3-edb6-40cb-9fec-3a28e8ee2287"), Code="A membership organization of workers formed for the purpose of advancing its members' interests in respect to wages, benefits, and working conditions.", Description="LaborUnion", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("7a572457-a9d0-4940-8daa-6e2924864a99"), Code="A public school offering special instruction and programs not available elsewhere, designed to attract a more diverse student body from throughout a school district.", Description="Magnet", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("b656d914-077f-4fd0-b552-fc7b7117cb70"), Code="The armed services of a government entity.", Description="Military", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("c5a16e04-9913-4181-a735-7e80bb8eddfc"), Code="A secondary school that: 1) addresses needs of students which cannot typically be met in a regular school; 2) provides nontraditional education; and 3) falls outside of the categories of regular, magnet/special program emphasis, or career and technical education.", Description="NonTraditional", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("9f40a8e2-e465-4991-b465-a03dcca49661"), Code="An organization such as a college or university: (1) whose sole purpose is to provide postsecondary education defined as the provision of a formal instructional program whose curriculum is designed primarily for students who are beyond the compulsory age for high school and (2) has the authority to award degrees. This includes programs whose purpose is academic, vocational, and continuing professional education.", Description="Postsecondary", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("35de14a8-5677-46ab-a612-494550a66433"), Code="An organization that primarily operates online.", Description="PrimarilyOnline", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("4cbd85d2-b1f6-4c34-8bbd-eda87978ce75"), Code="A membership organization primarily engaged in promoting the interests of a particular profession, the interests of individuals engaged in that profession, and providing them with services that may involve the provision of education and credentialing services.", Description="ProfessionalAssociation", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("56d67f6b-c8b5-4cdb-a163-25f53ef67837"), Code="External body that performs accreditation, endorsement, approval, and/or recognition of a credential issuer.", Description="QualityAssurance", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("0bc61f8e-35e7-43ae-b9d3-a12a3cbcfba0"), Code="A secondary school primarily providing education to students at the ninth grade or higher.", Description="SecondarySchool", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("dd2423b2-621a-4fe4-a5b2-00f9d5f1b97d"), Code="A secondary school that focuses primarily on providing formal preparation for skilled, technical or professional occupations or careers.", Description="Technical", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("f0fec125-feec-4958-904a-005873661201"), Code="An organization whose major purpose is to provide education and training services but is not a postsecondary education institution with the authority to award degrees. Includes community-based organizations, non-degree granting proprietary schools which are education and training providers that are recognized by states as schools and are Title IV eligible but do not award degrees, etc.", Description="TrainingProvider", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("f1e49d23-9bdd-466d-a1c5-cabe59f54059"), Code="Authorized postsecondary institution that primarily offers associate degrees, but may also award higher degrees.", Description="TwoYear", Definition="", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("55975264-ca9b-4b3c-b0e7-1bb17729c4ef"), Code="Sells, maintains, and issues credentials for its own products and services for public access and use.", Description="Vendor", Definition="", SortOrder=0 },
+        };
+
+        /// <summary>
+        /// The RefCTDLOrganizationType Pick List
+         /// </summary>
+        public static List<RefCTDLOrganizationType> RefCTDLOrganizationTypePickList = new List<RefCTDLOrganizationType> =
+        {
+            new RefCTDLOrganizationType { Id=Guid.Parse("17608110-3359-4748-b100-35cb262e5d9e"), Code="Primarily offers access to assessments for credentials as a service.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("4d24f184-81b4-4ea8-a690-0755573de9d8"), Code="An organization that primarily sells products or services and employs one or more individuals.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("2f03e319-dd84-43c3-908c-d461b56a88c8"), Code="A membership organization primarily engaged in promoting the interests of their business members and providing them with services that may involve the provision of education and credentialing services.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("a05387a5-e6e7-4a02-b05a-d87cd7c21451"), Code="An independent, third-party organization that operates a certification program. A certification body may or may not be governmental, and may or may not have regulatory authority.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("14903227-516c-4729-935d-0e0d20b9cf69"), Code="Authorized postsecondary institution that primarily offers bachelor or higher degrees, but may also award associate degrees.  Includes free-standing medical, law or other first-professional schools, schools that offer postbaccalaureate certificates only, those that offer graduate programs only, etc.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("9db91932-28d8-4d75-b7b6-a41d410779a4"), Code="An organization in the public sector at the federal, state or local levels.  Includes quasi-governmental organizations, special districts (e.g., libraries), corrections organizations, etc., except college and school districts. Is also responsible for the oversight and administration of specific functions other than the military services.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("6f24c49a-45dd-4e7a-9ade-f06a40511341"), Code="A secondary school providing instruction and educational services that do not focus primarily on career and technical education or alternative education.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("b972b5e3-edb6-40cb-9fec-3a28e8ee2287"), Code="A membership organization of workers formed for the purpose of advancing its members' interests in respect to wages, benefits, and working conditions.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("7a572457-a9d0-4940-8daa-6e2924864a99"), Code="A public school offering special instruction and programs not available elsewhere, designed to attract a more diverse student body from throughout a school district.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("b656d914-077f-4fd0-b552-fc7b7117cb70"), Code="The armed services of a government entity.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("c5a16e04-9913-4181-a735-7e80bb8eddfc"), Code="A secondary school that: 1) addresses needs of students which cannot typically be met in a regular school; 2) provides nontraditional education; and 3) falls outside of the categories of regular, magnet/special program emphasis, or career and technical education.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("9f40a8e2-e465-4991-b465-a03dcca49661"), Code="An organization such as a college or university: (1) whose sole purpose is to provide postsecondary education defined as the provision of a formal instructional program whose curriculum is designed primarily for students who are beyond the compulsory age for high school and (2) has the authority to award degrees. This includes programs whose purpose is academic, vocational, and continuing professional education.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("35de14a8-5677-46ab-a612-494550a66433"), Code="An organization that primarily operates online.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("4cbd85d2-b1f6-4c34-8bbd-eda87978ce75"), Code="A membership organization primarily engaged in promoting the interests of a particular profession, the interests of individuals engaged in that profession, and providing them with services that may involve the provision of education and credentialing services.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("56d67f6b-c8b5-4cdb-a163-25f53ef67837"), Code="External body that performs accreditation, endorsement, approval, and/or recognition of a credential issuer.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("0bc61f8e-35e7-43ae-b9d3-a12a3cbcfba0"), Code="A secondary school primarily providing education to students at the ninth grade or higher.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("dd2423b2-621a-4fe4-a5b2-00f9d5f1b97d"), Code="A secondary school that focuses primarily on providing formal preparation for skilled, technical or professional occupations or careers.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("f0fec125-feec-4958-904a-005873661201"), Code="An organization whose major purpose is to provide education and training services but is not a postsecondary education institution with the authority to award degrees. Includes community-based organizations, non-degree granting proprietary schools which are education and training providers that are recognized by states as schools and are Title IV eligible but do not award degrees, etc.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("f1e49d23-9bdd-466d-a1c5-cabe59f54059"), Code="Authorized postsecondary institution that primarily offers associate degrees, but may also award higher degrees.", SortOrder=0 },
+            new RefCTDLOrganizationType { Id=Guid.Parse("55975264-ca9b-4b3c-b0e7-1bb17729c4ef"), Code="Sells, maintains, and issues credentials for its own products and services for public access and use.", SortOrder=0 },
+       };
+   }
+}

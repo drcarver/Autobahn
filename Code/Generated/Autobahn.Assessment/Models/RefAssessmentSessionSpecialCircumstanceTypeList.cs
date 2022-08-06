@@ -1,0 +1,93 @@
+//**********************************************************
+//* DomainName: Autobahn.Assessment
+//* FileName:   RefAssessmentSessionSpecialCircumstanceTypeList.cs
+//**********************************************************
+
+using Autobahn.Common.Models;
+
+namespace Autobahn.Assessment.Models
+{
+     /// <summary>
+     /// The list of RefAssessmentSessionSpecialCircumstanceType Models
+     /// </summary>
+    public static partial class ReferenceLists
+    {
+        /// <summary>
+        /// The complete <see cref="RefAssessmentSessionSpecialCircumstanceType"> List
+         /// </summary>
+        public static List<RefAssessmentSessionSpecialCircumstanceType> RefAssessmentSessionSpecialCircumstanceTypeList = new List<RefAssessmentSessionSpecialCircumstanceType> =
+        {
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("aa247b71-b1ae-4421-92d6-606a1ea42ae1"), Code="Long-term suspension - non-special education is specified as an unusual event occurred during the administration of the assessment. ", Description="13807", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("7357945a-5f39-40b1-b676-ed280e55d45e"), Code="Short-term suspension - non-special education is specified as an unusual event occurred during the administration of the assessment. ", Description="13808", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("8569d0ac-6dc9-4039-9e7d-cf0cb0526ca6"), Code="Suspension - special education is specified as an unusual event occurred during the administration of the assessment. ", Description="13809", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("626ec0ca-472f-4a48-ab60-f42e7e335472"), Code="Truancy - paperwork filed is specified as an unusual event occurred during the administration of the assessment. ", Description="13810", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("2ef46f1c-b7db-476c-b39a-0f4d6403736f"), Code="Truancy - no paperwork filed is specified as an unusual event occurred during the administration of the assessment. ", Description="13811", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("0c5ba0ea-84b6-4374-b375-fd9466aacc0e"), Code="Earlier truancy is specified as an unusual event occurred during the administration of the assessment. ", Description="13812", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("3269b5a1-5012-43ea-9cfe-6647d001aaa9"), Code="Chronic absences is specified as an unusual event occurred during the administration of the assessment. ", Description="13813", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("072e6b4b-f286-42b5-8a94-0a261fc2d31e"), Code="Catastrophic illness or accident is specified as an unusual event occurred during the administration of the assessment. ", Description="13814", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("24f31dfe-c5c3-41e8-9e32-42ff9711328a"), Code="Home schooled for assessed subjects is specified as an unusual event occurred during the administration of the assessment. ", Description="13815", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("df4b4e37-aae5-4972-b0fb-c9d27d2dc864"), Code="Student took this grade level assessment last year is specified as an unusual event occurred during the administration of the assessment. ", Description="13816", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("70438dcf-2fe0-48fe-be7b-197a140453a3"), Code="Incarcerated at adult facility is specified as an unusual event occurred during the administration of the assessment. ", Description="13817", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("be86518c-e17b-4da2-b2f4-10a1bf37d26c"), Code="Special treatment center is specified as an unusual event occurred during the administration of the assessment. ", Description="13818", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("211e3178-860d-42b9-97a1-cacf24234f48"), Code="Special detention center is specified as an unusual event occurred during the administration of the assessment. ", Description="13819", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ef01c349-3581-4c17-b5ee-640ae49073cb"), Code="Parent refusal is specified as an unusual event occurred during the administration of the assessment. ", Description="13820", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("e8fe18ad-bea1-43b4-a3f4-36c896b168f1"), Code="Cheating is specified as an unusual event occurred during the administration of the assessment. ", Description="13821", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("9e9c3b4c-9062-42ef-850c-916483e94029"), Code="Psychological factors of emotional trauma is specified as an unusual event occurred during the administration of the assessment. ", Description="13822", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ea527551-b4fd-4f5e-a60d-7928b31435b8"), Code="Student not showing adequate effort is specified as an unusual event occurred during the administration of the assessment. ", Description="13823", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("fffbf10f-1127-4fc6-a212-0af799766ff6"), Code="Homebound is specified as an unusual event occurred during the administration of the assessment. ", Description="13824", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("fcc3447b-7072-490e-9624-345dc3e1e6cf"), Code="Foreign exchange student is specified as an unusual event occurred during the administration of the assessment. ", Description="13825", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c5867758-40e4-472e-b4f6-e95b35206dc7"), Code="Student refusal is specified as an unusual event occurred during the administration of the assessment. ", Description="13826", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c5b3d1ab-6b80-41cb-a8b9-0b8713e9dc8e"), Code="Reading passage read to student (IEP) is specified as an unusual event occurred during the administration of the assessment. ", Description="13827", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("03babd37-0ed3-4b1f-9e2c-9f60bde22169"), Code="Non-special education student used calculator on non-calculator items is specified as an unusual event occurred during the administration of the assessment. ", Description="13828", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("73c7c6df-c3df-4c8c-a41d-1131af6c7b02"), Code="Student used math journal (non-IEP) is specified as an unusual event occurred during the administration of the assessment. ", Description="13829", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("38e8ee46-0c41-4ba8-a02a-5168951e76bd"), Code="Other reason for ineligibility is specified as an unusual event occurred during the administration of the assessment. ", Description="13830", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c2aae3da-db19-46c8-9923-4ac2582bb00c"), Code="Other reason for nonparticipation is specified as an unusual event occurred during the administration of the assessment. ", Description="13831", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("937ad423-aaea-4279-a3c9-24999279519e"), Code="Left testing is specified as an unusual event occurred during the administration of the assessment. ", Description="13832", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("51c64dc2-794f-4aff-be3a-95ebf90af983"), Code="Cross-enrolled is specified as an unusual event occurred during the administration of the assessment. ", Description="13833", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("6e4e5058-20dd-4385-bb3e-0ad34e144509"), Code="Only for writing is specified as an unusual event occurred during the administration of the assessment. ", Description="13834", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("632b79b2-de46-4b94-b8c1-73e24fe3ad39"), Code="Administration or system failure is specified as an unusual event occurred during the administration of the assessment. ", Description="13835", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ead80aad-379e-4f17-bc84-0712500f9fea"), Code="Teacher cheating or mis-admin is specified as an unusual event occurred during the administration of the assessment. ", Description="13836", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("6f9b8002-20ba-46b0-be94-04bd873df1e1"), Code="Fire alarm is specified as an unusual event occurred during the administration of the assessment. ", Description="13837", Definition="", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("37d39365-efc9-4ae0-a938-653b51afc2ce"), Code="Other is specified as an unusual event occurred during the administration of the assessment. ", Description="09999", Definition="", SortOrder=0 },
+        };
+
+        /// <summary>
+        /// The RefAssessmentSessionSpecialCircumstanceType Pick List
+         /// </summary>
+        public static List<RefAssessmentSessionSpecialCircumstanceType> RefAssessmentSessionSpecialCircumstanceTypePickList = new List<RefAssessmentSessionSpecialCircumstanceType> =
+        {
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("aa247b71-b1ae-4421-92d6-606a1ea42ae1"), Code="Long-term suspension - non-special education is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("7357945a-5f39-40b1-b676-ed280e55d45e"), Code="Short-term suspension - non-special education is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("8569d0ac-6dc9-4039-9e7d-cf0cb0526ca6"), Code="Suspension - special education is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("626ec0ca-472f-4a48-ab60-f42e7e335472"), Code="Truancy - paperwork filed is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("2ef46f1c-b7db-476c-b39a-0f4d6403736f"), Code="Truancy - no paperwork filed is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("0c5ba0ea-84b6-4374-b375-fd9466aacc0e"), Code="Earlier truancy is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("3269b5a1-5012-43ea-9cfe-6647d001aaa9"), Code="Chronic absences is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("072e6b4b-f286-42b5-8a94-0a261fc2d31e"), Code="Catastrophic illness or accident is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("24f31dfe-c5c3-41e8-9e32-42ff9711328a"), Code="Home schooled for assessed subjects is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("df4b4e37-aae5-4972-b0fb-c9d27d2dc864"), Code="Student took this grade level assessment last year is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("70438dcf-2fe0-48fe-be7b-197a140453a3"), Code="Incarcerated at adult facility is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("be86518c-e17b-4da2-b2f4-10a1bf37d26c"), Code="Special treatment center is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("211e3178-860d-42b9-97a1-cacf24234f48"), Code="Special detention center is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ef01c349-3581-4c17-b5ee-640ae49073cb"), Code="Parent refusal is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("e8fe18ad-bea1-43b4-a3f4-36c896b168f1"), Code="Cheating is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("9e9c3b4c-9062-42ef-850c-916483e94029"), Code="Psychological factors of emotional trauma is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ea527551-b4fd-4f5e-a60d-7928b31435b8"), Code="Student not showing adequate effort is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("fffbf10f-1127-4fc6-a212-0af799766ff6"), Code="Homebound is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("fcc3447b-7072-490e-9624-345dc3e1e6cf"), Code="Foreign exchange student is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c5867758-40e4-472e-b4f6-e95b35206dc7"), Code="Student refusal is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c5b3d1ab-6b80-41cb-a8b9-0b8713e9dc8e"), Code="Reading passage read to student (IEP) is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("03babd37-0ed3-4b1f-9e2c-9f60bde22169"), Code="Non-special education student used calculator on non-calculator items is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("73c7c6df-c3df-4c8c-a41d-1131af6c7b02"), Code="Student used math journal (non-IEP) is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("38e8ee46-0c41-4ba8-a02a-5168951e76bd"), Code="Other reason for ineligibility is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("c2aae3da-db19-46c8-9923-4ac2582bb00c"), Code="Other reason for nonparticipation is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("937ad423-aaea-4279-a3c9-24999279519e"), Code="Left testing is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("51c64dc2-794f-4aff-be3a-95ebf90af983"), Code="Cross-enrolled is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("6e4e5058-20dd-4385-bb3e-0ad34e144509"), Code="Only for writing is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("632b79b2-de46-4b94-b8c1-73e24fe3ad39"), Code="Administration or system failure is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("ead80aad-379e-4f17-bc84-0712500f9fea"), Code="Teacher cheating or mis-admin is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("6f9b8002-20ba-46b0-be94-04bd873df1e1"), Code="Fire alarm is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+            new RefAssessmentSessionSpecialCircumstanceType { Id=Guid.Parse("37d39365-efc9-4ae0-a938-653b51afc2ce"), Code="Other is specified as an unusual event occurred during the administration of the assessment. ", SortOrder=0 },
+       };
+   }
+}
