@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildOutcomeSummaryView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildOutcomeSummaryViewModel as the data context for the view
+        /// Inject the IELChildOutcomeSummaryViewModel as the data context for the view
         /// </summary>
-        public ELChildOutcomeSummaryView(ELChildOutcomeSummaryViewModel vm)
+        public ELChildOutcomeSummaryView(IELChildOutcomeSummaryViewModel vm)
         {
             BindingContext  = vm;
         }

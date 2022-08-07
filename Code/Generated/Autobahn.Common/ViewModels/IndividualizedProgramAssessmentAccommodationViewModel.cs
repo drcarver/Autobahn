@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IndividualizedProgramAssessmentAccommodationViewModel
      /// </summary>
-    public partial class IndividualizedProgramAssessmentAccommodationViewModel : ViewModelBase, Interfaces.IIndividualizedProgramAssessmentAccommodation
+    public partial class IndividualizedProgramAssessmentAccommodationViewModel : ViewModelBase, Interfaces.IIndividualizedProgramAssessmentAccommodationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

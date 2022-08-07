@@ -3,7 +3,6 @@
 //* FileName:   RefProgramEntryReasonList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefProgramEntryReason"> List
+        /// The complete <see cref="RefProgramEntryReasonModel"> List
          /// </summary>
-        public static List<RefProgramEntryReason> RefProgramEntryReasonList = new List<RefProgramEntryReason>
+        public static List<RefProgramEntryReasonModel> RefProgramEntryReasonList = new List<RefProgramEntryReasonModel>
         {
         };
 
         /// <summary>
-        /// The RefProgramEntryReason Pick List
+        /// The Reference RefProgramEntryReason Pick List
          /// </summary>
-        public static List<RefProgramEntryReason> RefProgramEntryReasonPickList = new List<RefProgramEntryReason>
+        public static List<ReferencePickListItemViewModel> RefProgramEntryReasonViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

@@ -11,7 +11,7 @@ namespace Autobahn.Postsecondary.ViewModels
      /// <summary>
      /// The PsStaffEmploymentViewModel
      /// </summary>
-    public partial class PsStaffEmploymentViewModel : ViewModelBase, Interfaces.IPsStaffEmployment
+    public partial class PsStaffEmploymentViewModel : ViewModelBase, Interfaces.IPsStaffEmploymentViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

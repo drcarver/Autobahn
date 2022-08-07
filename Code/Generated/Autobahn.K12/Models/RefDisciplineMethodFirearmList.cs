@@ -13,16 +13,16 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefDisciplineMethodFirearm"> List
+        /// The complete <see cref="RefDisciplineMethodFirearmModel"> List
          /// </summary>
-        public static List<RefDisciplineMethodFirearm> RefDisciplineMethodFirearmList = new List<RefDisciplineMethodFirearm>
+        public static List<RefDisciplineMethodFirearmModel> RefDisciplineMethodFirearmList = new List<RefDisciplineMethodFirearmModel>
         {
         };
 
         /// <summary>
-        /// The RefDisciplineMethodFirearm Pick List
+        /// The Reference RefDisciplineMethodFirearm Pick List
          /// </summary>
-        public static List<RefDisciplineMethodFirearm> RefDisciplineMethodFirearmPickList = new List<RefDisciplineMethodFirearm>
+        public static List<ReferencePickListItemViewModel> RefDisciplineMethodFirearmViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

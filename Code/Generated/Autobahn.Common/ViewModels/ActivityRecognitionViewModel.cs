@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ActivityRecognitionViewModel
      /// </summary>
-    public partial class ActivityRecognitionViewModel : ViewModelBase, Interfaces.IActivityRecognition
+    public partial class ActivityRecognitionViewModel : ViewModelBase, Interfaces.IActivityRecognitionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -13,23 +13,23 @@ namespace Autobahn.AdultEducation.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAePostsecondaryTransitionAction"> List
+        /// The complete <see cref="RefAePostsecondaryTransitionActionModel"> List
          /// </summary>
-        public static List<RefAePostsecondaryTransitionAction> RefAePostsecondaryTransitionActionList = new List<RefAePostsecondaryTransitionAction>
+        public static List<RefAePostsecondaryTransitionActionModel> RefAePostsecondaryTransitionActionList = new List<RefAePostsecondaryTransitionActionModel>
         {
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("e46afc1a-244d-4586-83b2-b4a226514f92"), Code="NoInformation", Description="No information", Definition="No information is available with respect to postsecondary enrollment by the learner after program exit or when co-enrolled in ABE and postsecondary.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("506e5c42-12f7-480e-a982-f74ccea72b9d"), Code="Enrolled", Description="Enrolled", Definition="The learner enrolled in a postsecondary educational or occupational skills program building on prior services or training received.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("9c602d50-b8a4-4098-91cd-ebe03e7886ce"), Code="NotEnrolled", Description="Not enrolled", Definition="The learner has not enrolled in a postsecondary educational or occupational skills program building on prior services or training received.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("b05ae4c1-f835-4a7e-aaf5-571288adc763"), Code="NoInformation", Description="No information", Definition="No information is available with respect to postsecondary enrollment by the learner after program exit or when co-enrolled in ABE and postsecondary.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("48c762a0-8817-4f4a-9636-10753cf6de8a"), Code="Enrolled", Description="Enrolled", Definition="The learner enrolled in a postsecondary educational or occupational skills program building on prior services or training received.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("9cc1896b-d9a9-45fe-8140-6aff60e154cb"), Code="NotEnrolled", Description="Not enrolled", Definition="The learner has not enrolled in a postsecondary educational or occupational skills program building on prior services or training received.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefAePostsecondaryTransitionAction Pick List
+        /// The Reference RefAePostsecondaryTransitionAction Pick List
          /// </summary>
-        public static List<RefAePostsecondaryTransitionAction> RefAePostsecondaryTransitionActionPickList = new List<RefAePostsecondaryTransitionAction>
+        public static List<ReferencePickListItemViewModel> RefAePostsecondaryTransitionActionViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("e46afc1a-244d-4586-83b2-b4a226514f92"), Code="NoInformation", Description="No information", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("506e5c42-12f7-480e-a982-f74ccea72b9d"), Code="Enrolled", Description="Enrolled", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("9c602d50-b8a4-4098-91cd-ebe03e7886ce"), Code="NotEnrolled", Description="Not enrolled", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("b05ae4c1-f835-4a7e-aaf5-571288adc763"), Description="No information", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("48c762a0-8817-4f4a-9636-10753cf6de8a"), Description="Enrolled", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAePostsecondaryTransitionAction { Id=Guid.Parse("9cc1896b-d9a9-45fe-8140-6aff60e154cb"), Description="Not enrolled", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

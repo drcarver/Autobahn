@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELClassSectionView : ContentPage
     {
         /// <summary>
-        /// Inject the ELClassSectionViewModel as the data context for the view
+        /// Inject the IELClassSectionViewModel as the data context for the view
         /// </summary>
-        public ELClassSectionView(ELClassSectionViewModel vm)
+        public ELClassSectionView(IELClassSectionViewModel vm)
         {
             BindingContext  = vm;
         }

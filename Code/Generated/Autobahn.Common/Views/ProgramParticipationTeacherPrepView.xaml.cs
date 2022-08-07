@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationTeacherPrepView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationTeacherPrepViewModel as the data context for the view
+        /// Inject the IProgramParticipationTeacherPrepViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationTeacherPrepView(ProgramParticipationTeacherPrepViewModel vm)
+        public ProgramParticipationTeacherPrepView(IProgramParticipationTeacherPrepViewModel vm)
         {
             BindingContext  = vm;
         }

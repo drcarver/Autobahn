@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ProgramParticipationWIOABarrierViewModel
      /// </summary>
-    public partial class ProgramParticipationWIOABarrierViewModel : ViewModelBase, Interfaces.IProgramParticipationWIOABarrier
+    public partial class ProgramParticipationWIOABarrierViewModel : ViewModelBase, Interfaces.IProgramParticipationWIOABarrierViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

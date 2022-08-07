@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class LocationAddressView : ContentPage
     {
         /// <summary>
-        /// Inject the LocationAddressViewModel as the data context for the view
+        /// Inject the ILocationAddressViewModel as the data context for the view
         /// </summary>
-        public LocationAddressView(LocationAddressViewModel vm)
+        public LocationAddressView(ILocationAddressViewModel vm)
         {
             BindingContext  = vm;
         }

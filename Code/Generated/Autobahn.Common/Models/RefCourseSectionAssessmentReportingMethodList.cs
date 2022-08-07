@@ -3,7 +3,6 @@
 //* FileName:   RefCourseSectionAssessmentReportingMethodList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,77 +12,77 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCourseSectionAssessmentReportingMethod"> List
+        /// The complete <see cref="RefCourseSectionAssessmentReportingMethodModel"> List
          /// </summary>
-        public static List<RefCourseSectionAssessmentReportingMethod> RefCourseSectionAssessmentReportingMethodList = new List<RefCourseSectionAssessmentReportingMethod>
+        public static List<RefCourseSectionAssessmentReportingMethodModel> RefCourseSectionAssessmentReportingMethodList = new List<RefCourseSectionAssessmentReportingMethodModel>
         {
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("0c168eff-fd8f-4582-a253-84c29f20edea"), Code="00512", Description="Achievement/proficiency level", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("0393d9ff-df5f-43f8-b313-ce61ed0af2ad"), Code="00494", Description="ACT score", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("59e4a04f-659c-4d86-9e48-7a5b4bfa6b93"), Code="00490", Description="Age score", Definition="", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("a25d8ec9-3aab-4202-be7a-85c8ab34883d"), Code="00491", Description="C-scaled scores", Definition="", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("fb3963ab-24c4-4745-a4f1-4a6f3139d0d3"), Code="00492", Description="College Board examination scores", Definition="", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b15846a1-c938-4cab-9170-bd13c4d03f2d"), Code="00493", Description="Grade equivalent or grade-level indicator", Definition="", SortOrder=Convert.ToDecimal("6.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("590a5e8d-a180-4292-82fd-0ac9908cb574"), Code="03473", Description="Graduation score", Definition="", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("47715aa7-b6c0-4392-a5ea-b177bbf43cbd"), Code="03474", Description="Growth/value-added/indexing", Definition="", SortOrder=Convert.ToDecimal("8.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("23cf5498-7bf9-4cba-8980-99e8aaa37d31"), Code="03475", Description="International Baccalaureate score", Definition="", SortOrder=Convert.ToDecimal("9.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("5d80776a-7967-4213-a468-1187fe920bef"), Code="00144", Description="Letter grade/mark", Definition="", SortOrder=Convert.ToDecimal("10.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e4b703c9-f166-46ce-8262-9fbb4718fa97"), Code="00513", Description="Mastery level", Definition="", SortOrder=Convert.ToDecimal("11.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b1febbfa-bff7-4005-8ced-ae6bf935df76"), Code="00497", Description="Normal curve equivalent", Definition="", SortOrder=Convert.ToDecimal("12.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("9c234cbe-6496-458b-b15f-65053d812a87"), Code="00498", Description="Normalized standard score", Definition="", SortOrder=Convert.ToDecimal("13.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("09798f55-5fa4-4cf9-84f3-643562453743"), Code="00499", Description="Number score", Definition="", SortOrder=Convert.ToDecimal("14.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("edca91bb-c947-4e3c-be40-ea9cab246157"), Code="00500", Description="Pass-fail", Definition="", SortOrder=Convert.ToDecimal("15.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("ad2b91fa-7c31-4fa0-b2b2-51c141b57a9d"), Code="03476", Description="Percentile", Definition="", SortOrder=Convert.ToDecimal("16.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("be7f76ff-6072-4d2c-917d-8bd4a6ae90b6"), Code="00502", Description="Percentile rank", Definition="", SortOrder=Convert.ToDecimal("17.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("74b8c10f-a8d4-4844-bd73-8a57f56d3d64"), Code="00503", Description="Proficiency level", Definition="", SortOrder=Convert.ToDecimal("18.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e5ecdcc3-bd88-4895-8254-6499592732ab"), Code="03477", Description="Promotion score", Definition="", SortOrder=Convert.ToDecimal("19.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("570e39f5-2d12-4de4-982e-7a45a9041655"), Code="00504", Description="Ranking", Definition="", SortOrder=Convert.ToDecimal("20.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("2fed2ea3-9cdf-4fa2-8e1d-6debf7d3f20a"), Code="00505", Description="Ratio IQ's", Definition="", SortOrder=Convert.ToDecimal("21.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("afacd888-d0e2-4bcc-bfa4-01b36233896b"), Code="03478", Description="Raw score", Definition="", SortOrder=Convert.ToDecimal("22.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("5671388c-9574-4155-9aa1-69e94909c1c8"), Code="03479", Description="Scale score", Definition="", SortOrder=Convert.ToDecimal("23.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8b889f85-da1f-468e-afa9-f49e8f88b272"), Code="00506", Description="Standard age score", Definition="", SortOrder=Convert.ToDecimal("24.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("546dfc97-7bdf-4d95-a467-ba1630cdfb84"), Code="00508", Description="Stanine score", Definition="", SortOrder=Convert.ToDecimal("25.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8a99b987-59e3-4749-bbfc-7f73411abcf8"), Code="00509", Description="Sten score", Definition="", SortOrder=Convert.ToDecimal("26.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("eb56ffd8-2d56-4236-9f53-f6ddb112c93b"), Code="00510", Description="T-score", Definition="", SortOrder=Convert.ToDecimal("27.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("76dc4e6f-a43f-46f6-940a-bd175335a995"), Code="03480", Description="Workplace readiness score", Definition="", SortOrder=Convert.ToDecimal("28.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("00053cfe-6f59-4c11-a4e4-2d1593e5c433"), Code="00511", Description="Z-score", Definition="", SortOrder=Convert.ToDecimal("29.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("4a781357-b7d7-4af5-bf2a-d6f9d98fd8cd"), Code="09999", Description="Other", Definition="", SortOrder=Convert.ToDecimal("30.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("023a724d-22b2-464a-af50-1292beb2d4b9"), Code="00512", Description="Achievement/proficiency level", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8ba7b269-7281-4254-8f86-5749d5fffe36"), Code="00494", Description="ACT score", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("944ac37e-8693-43ac-897f-fc3d1ae36c54"), Code="00490", Description="Age score", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("aff31085-55b4-47ee-9835-2693628bcad2"), Code="00491", Description="C-scaled scores", Definition="", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("bedb1a5a-e764-45ae-a138-e094e2565bb1"), Code="00492", Description="College Board examination scores", Definition="", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("747a1490-dcda-4b52-8009-9008fbd7bd16"), Code="00493", Description="Grade equivalent or grade-level indicator", Definition="", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("04f4be90-e8c7-46a3-af3b-db18b48754b4"), Code="03473", Description="Graduation score", Definition="", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("9867d036-56a1-42f4-b9ec-b6180722b82b"), Code="03474", Description="Growth/value-added/indexing", Definition="", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("6fdfae5c-f179-468f-9ec7-c9e2edb30537"), Code="03475", Description="International Baccalaureate score", Definition="", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cfed12f6-a8cb-42d4-8f7b-40c201212057"), Code="00144", Description="Letter grade/mark", Definition="", SortOrder=Convert.ToDecimal("10.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("568f2447-54e3-4251-afde-745d41f94caf"), Code="00513", Description="Mastery level", Definition="", SortOrder=Convert.ToDecimal("11.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("f6be8848-a851-4b62-a5e7-34b8ca74f8d8"), Code="00497", Description="Normal curve equivalent", Definition="", SortOrder=Convert.ToDecimal("12.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("acdb6a1c-86ce-46a4-be12-708a46061543"), Code="00498", Description="Normalized standard score", Definition="", SortOrder=Convert.ToDecimal("13.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("ec23c07a-49dc-40ce-b514-92b5ffcfc24d"), Code="00499", Description="Number score", Definition="", SortOrder=Convert.ToDecimal("14.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cffe2e0d-d563-483e-b91b-eb3fd6dcff69"), Code="00500", Description="Pass-fail", Definition="", SortOrder=Convert.ToDecimal("15.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("1520f2f3-38f2-4f5d-b7e7-875c9df08199"), Code="03476", Description="Percentile", Definition="", SortOrder=Convert.ToDecimal("16.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("89853cdf-f8c2-4363-aa81-f0478c571aa2"), Code="00502", Description="Percentile rank", Definition="", SortOrder=Convert.ToDecimal("17.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("f3551af6-5316-4c85-a885-d5b5c2373c60"), Code="00503", Description="Proficiency level", Definition="", SortOrder=Convert.ToDecimal("18.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e67dff11-d35a-453d-a7b2-7c2eebb1cc87"), Code="03477", Description="Promotion score", Definition="", SortOrder=Convert.ToDecimal("19.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b8e87e8b-8f8c-421e-8554-dcea9acf3711"), Code="00504", Description="Ranking", Definition="", SortOrder=Convert.ToDecimal("20.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("c8250a81-39e5-46c1-8c22-77bbe764213f"), Code="00505", Description="Ratio IQ's", Definition="", SortOrder=Convert.ToDecimal("21.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e88e83f0-87c3-43b3-9021-5949b6452b7c"), Code="03478", Description="Raw score", Definition="", SortOrder=Convert.ToDecimal("22.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("19bedf5c-d856-4590-9606-46dec9b72fb9"), Code="03479", Description="Scale score", Definition="", SortOrder=Convert.ToDecimal("23.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("19ac62bd-ca78-403c-b362-6bf4cad2b116"), Code="00506", Description="Standard age score", Definition="", SortOrder=Convert.ToDecimal("24.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("7595a841-1729-43f6-9e69-47ad514e33b4"), Code="00508", Description="Stanine score", Definition="", SortOrder=Convert.ToDecimal("25.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("59594708-d611-4372-8a21-4e8a582712e1"), Code="00509", Description="Sten score", Definition="", SortOrder=Convert.ToDecimal("26.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cd9dbe0b-764b-4156-a94e-e879a0dba4a0"), Code="00510", Description="T-score", Definition="", SortOrder=Convert.ToDecimal("27.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("347286b2-9ad2-42fe-bd14-d82bbceb9c63"), Code="03480", Description="Workplace readiness score", Definition="", SortOrder=Convert.ToDecimal("28.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("14291a3b-a55b-448a-bb6b-b4474697d89d"), Code="00511", Description="Z-score", Definition="", SortOrder=Convert.ToDecimal("29.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("925c9159-6eb4-49cb-a3cd-8bf19a5744d5"), Code="09999", Description="Other", Definition="", SortOrder=Convert.ToDecimal("30.00") },
         };
 
         /// <summary>
-        /// The RefCourseSectionAssessmentReportingMethod Pick List
+        /// The Reference RefCourseSectionAssessmentReportingMethod Pick List
          /// </summary>
-        public static List<RefCourseSectionAssessmentReportingMethod> RefCourseSectionAssessmentReportingMethodPickList = new List<RefCourseSectionAssessmentReportingMethod>
+        public static List<ReferencePickListItemViewModel> RefCourseSectionAssessmentReportingMethodViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("0c168eff-fd8f-4582-a253-84c29f20edea"), Code="00512", Description="Achievement/proficiency level", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("0393d9ff-df5f-43f8-b313-ce61ed0af2ad"), Code="00494", Description="ACT score", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("59e4a04f-659c-4d86-9e48-7a5b4bfa6b93"), Code="00490", Description="Age score", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("a25d8ec9-3aab-4202-be7a-85c8ab34883d"), Code="00491", Description="C-scaled scores", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("fb3963ab-24c4-4745-a4f1-4a6f3139d0d3"), Code="00492", Description="College Board examination scores", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b15846a1-c938-4cab-9170-bd13c4d03f2d"), Code="00493", Description="Grade equivalent or grade-level indicator", SortOrder=Convert.ToDecimal("6.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("590a5e8d-a180-4292-82fd-0ac9908cb574"), Code="03473", Description="Graduation score", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("47715aa7-b6c0-4392-a5ea-b177bbf43cbd"), Code="03474", Description="Growth/value-added/indexing", SortOrder=Convert.ToDecimal("8.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("23cf5498-7bf9-4cba-8980-99e8aaa37d31"), Code="03475", Description="International Baccalaureate score", SortOrder=Convert.ToDecimal("9.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("5d80776a-7967-4213-a468-1187fe920bef"), Code="00144", Description="Letter grade/mark", SortOrder=Convert.ToDecimal("10.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e4b703c9-f166-46ce-8262-9fbb4718fa97"), Code="00513", Description="Mastery level", SortOrder=Convert.ToDecimal("11.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b1febbfa-bff7-4005-8ced-ae6bf935df76"), Code="00497", Description="Normal curve equivalent", SortOrder=Convert.ToDecimal("12.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("9c234cbe-6496-458b-b15f-65053d812a87"), Code="00498", Description="Normalized standard score", SortOrder=Convert.ToDecimal("13.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("09798f55-5fa4-4cf9-84f3-643562453743"), Code="00499", Description="Number score", SortOrder=Convert.ToDecimal("14.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("edca91bb-c947-4e3c-be40-ea9cab246157"), Code="00500", Description="Pass-fail", SortOrder=Convert.ToDecimal("15.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("ad2b91fa-7c31-4fa0-b2b2-51c141b57a9d"), Code="03476", Description="Percentile", SortOrder=Convert.ToDecimal("16.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("be7f76ff-6072-4d2c-917d-8bd4a6ae90b6"), Code="00502", Description="Percentile rank", SortOrder=Convert.ToDecimal("17.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("74b8c10f-a8d4-4844-bd73-8a57f56d3d64"), Code="00503", Description="Proficiency level", SortOrder=Convert.ToDecimal("18.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e5ecdcc3-bd88-4895-8254-6499592732ab"), Code="03477", Description="Promotion score", SortOrder=Convert.ToDecimal("19.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("570e39f5-2d12-4de4-982e-7a45a9041655"), Code="00504", Description="Ranking", SortOrder=Convert.ToDecimal("20.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("2fed2ea3-9cdf-4fa2-8e1d-6debf7d3f20a"), Code="00505", Description="Ratio IQ's", SortOrder=Convert.ToDecimal("21.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("afacd888-d0e2-4bcc-bfa4-01b36233896b"), Code="03478", Description="Raw score", SortOrder=Convert.ToDecimal("22.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("5671388c-9574-4155-9aa1-69e94909c1c8"), Code="03479", Description="Scale score", SortOrder=Convert.ToDecimal("23.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8b889f85-da1f-468e-afa9-f49e8f88b272"), Code="00506", Description="Standard age score", SortOrder=Convert.ToDecimal("24.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("546dfc97-7bdf-4d95-a467-ba1630cdfb84"), Code="00508", Description="Stanine score", SortOrder=Convert.ToDecimal("25.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8a99b987-59e3-4749-bbfc-7f73411abcf8"), Code="00509", Description="Sten score", SortOrder=Convert.ToDecimal("26.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("eb56ffd8-2d56-4236-9f53-f6ddb112c93b"), Code="00510", Description="T-score", SortOrder=Convert.ToDecimal("27.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("76dc4e6f-a43f-46f6-940a-bd175335a995"), Code="03480", Description="Workplace readiness score", SortOrder=Convert.ToDecimal("28.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("00053cfe-6f59-4c11-a4e4-2d1593e5c433"), Code="00511", Description="Z-score", SortOrder=Convert.ToDecimal("29.00") },
-            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("4a781357-b7d7-4af5-bf2a-d6f9d98fd8cd"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("30.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("023a724d-22b2-464a-af50-1292beb2d4b9"), Description="Achievement/proficiency level", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("8ba7b269-7281-4254-8f86-5749d5fffe36"), Description="ACT score", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("944ac37e-8693-43ac-897f-fc3d1ae36c54"), Description="Age score", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("aff31085-55b4-47ee-9835-2693628bcad2"), Description="C-scaled scores", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("bedb1a5a-e764-45ae-a138-e094e2565bb1"), Description="College Board examination scores", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("747a1490-dcda-4b52-8009-9008fbd7bd16"), Description="Grade equivalent or grade-level indicator", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("04f4be90-e8c7-46a3-af3b-db18b48754b4"), Description="Graduation score", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("9867d036-56a1-42f4-b9ec-b6180722b82b"), Description="Growth/value-added/indexing", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("6fdfae5c-f179-468f-9ec7-c9e2edb30537"), Description="International Baccalaureate score", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cfed12f6-a8cb-42d4-8f7b-40c201212057"), Description="Letter grade/mark", SortOrder=Convert.ToDecimal("10.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("568f2447-54e3-4251-afde-745d41f94caf"), Description="Mastery level", SortOrder=Convert.ToDecimal("11.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("f6be8848-a851-4b62-a5e7-34b8ca74f8d8"), Description="Normal curve equivalent", SortOrder=Convert.ToDecimal("12.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("acdb6a1c-86ce-46a4-be12-708a46061543"), Description="Normalized standard score", SortOrder=Convert.ToDecimal("13.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("ec23c07a-49dc-40ce-b514-92b5ffcfc24d"), Description="Number score", SortOrder=Convert.ToDecimal("14.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cffe2e0d-d563-483e-b91b-eb3fd6dcff69"), Description="Pass-fail", SortOrder=Convert.ToDecimal("15.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("1520f2f3-38f2-4f5d-b7e7-875c9df08199"), Description="Percentile", SortOrder=Convert.ToDecimal("16.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("89853cdf-f8c2-4363-aa81-f0478c571aa2"), Description="Percentile rank", SortOrder=Convert.ToDecimal("17.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("f3551af6-5316-4c85-a885-d5b5c2373c60"), Description="Proficiency level", SortOrder=Convert.ToDecimal("18.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e67dff11-d35a-453d-a7b2-7c2eebb1cc87"), Description="Promotion score", SortOrder=Convert.ToDecimal("19.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("b8e87e8b-8f8c-421e-8554-dcea9acf3711"), Description="Ranking", SortOrder=Convert.ToDecimal("20.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("c8250a81-39e5-46c1-8c22-77bbe764213f"), Description="Ratio IQ's", SortOrder=Convert.ToDecimal("21.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("e88e83f0-87c3-43b3-9021-5949b6452b7c"), Description="Raw score", SortOrder=Convert.ToDecimal("22.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("19bedf5c-d856-4590-9606-46dec9b72fb9"), Description="Scale score", SortOrder=Convert.ToDecimal("23.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("19ac62bd-ca78-403c-b362-6bf4cad2b116"), Description="Standard age score", SortOrder=Convert.ToDecimal("24.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("7595a841-1729-43f6-9e69-47ad514e33b4"), Description="Stanine score", SortOrder=Convert.ToDecimal("25.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("59594708-d611-4372-8a21-4e8a582712e1"), Description="Sten score", SortOrder=Convert.ToDecimal("26.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("cd9dbe0b-764b-4156-a94e-e879a0dba4a0"), Description="T-score", SortOrder=Convert.ToDecimal("27.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("347286b2-9ad2-42fe-bd14-d82bbceb9c63"), Description="Workplace readiness score", SortOrder=Convert.ToDecimal("28.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("14291a3b-a55b-448a-bb6b-b4474697d89d"), Description="Z-score", SortOrder=Convert.ToDecimal("29.00") },
+            new RefCourseSectionAssessmentReportingMethod { Id=Guid.Parse("925c9159-6eb4-49cb-a3cd-8bf19a5744d5"), Description="Other", SortOrder=Convert.ToDecimal("30.00") },
        };
    }
 }

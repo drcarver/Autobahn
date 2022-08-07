@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationTitleIIILepView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationTitleIIILepViewModel as the data context for the view
+        /// Inject the IProgramParticipationTitleIIILepViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationTitleIIILepView(ProgramParticipationTitleIIILepViewModel vm)
+        public ProgramParticipationTitleIIILepView(IProgramParticipationTitleIIILepViewModel vm)
         {
             BindingContext  = vm;
         }

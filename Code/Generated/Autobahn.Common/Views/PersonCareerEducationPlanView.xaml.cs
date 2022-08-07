@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonCareerEducationPlanView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonCareerEducationPlanViewModel as the data context for the view
+        /// Inject the IPersonCareerEducationPlanViewModel as the data context for the view
         /// </summary>
-        public PersonCareerEducationPlanView(PersonCareerEducationPlanViewModel vm)
+        public PersonCareerEducationPlanView(IPersonCareerEducationPlanViewModel vm)
         {
             BindingContext  = vm;
         }

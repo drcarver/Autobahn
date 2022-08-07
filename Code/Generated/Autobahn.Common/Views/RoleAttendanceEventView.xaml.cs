@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class RoleAttendanceEventView : ContentPage
     {
         /// <summary>
-        /// Inject the RoleAttendanceEventViewModel as the data context for the view
+        /// Inject the IRoleAttendanceEventViewModel as the data context for the view
         /// </summary>
-        public RoleAttendanceEventView(RoleAttendanceEventViewModel vm)
+        public RoleAttendanceEventView(IRoleAttendanceEventViewModel vm)
         {
             BindingContext  = vm;
         }

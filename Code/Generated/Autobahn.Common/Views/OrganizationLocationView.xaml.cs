@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationLocationView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationLocationViewModel as the data context for the view
+        /// Inject the IOrganizationLocationViewModel as the data context for the view
         /// </summary>
-        public OrganizationLocationView(OrganizationLocationViewModel vm)
+        public OrganizationLocationView(IOrganizationLocationViewModel vm)
         {
             BindingContext  = vm;
         }

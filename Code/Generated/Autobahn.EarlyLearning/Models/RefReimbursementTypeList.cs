@@ -13,27 +13,27 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefReimbursementType"> List
+        /// The complete <see cref="RefReimbursementTypeModel"> List
          /// </summary>
-        public static List<RefReimbursementType> RefReimbursementTypeList = new List<RefReimbursementType>
+        public static List<RefReimbursementTypeModel> RefReimbursementTypeList = new List<RefReimbursementTypeModel>
         {
-            new RefReimbursementType { Id=Guid.Parse("b0a6b8d8-be4b-451d-bc7d-c03d63283611"), Code="FeeForService", Description="Fee for Service", Definition="Reimbursed via fee for service.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefReimbursementType { Id=Guid.Parse("15880dee-978c-47c3-90a4-efcc0cdcd5dd"), Code="CapitatedRate", Description="Capitated Rate", Definition="Reimbursed via capitated rate.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefReimbursementType { Id=Guid.Parse("235260eb-186e-4a9a-9781-b9ed93d20518"), Code="GrantContract", Description="Grant/contract", Definition="Reimbursed via grant/contract.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefReimbursementType { Id=Guid.Parse("9ea01a0c-385d-429d-9b8e-c5b575e309f2"), Code="Subsidy", Description="Subsidy", Definition="Reimbursed via subsidy.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefReimbursementType { Id=Guid.Parse("236d47e1-7081-4891-bff4-10f67374080a"), Code="Other", Description="Other", Definition="The reimbursement type is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefReimbursementType { Id=Guid.Parse("f2e7f943-5deb-45cc-b3b0-c4bb3325f576"), Code="FeeForService", Description="Fee for Service", Definition="Reimbursed via fee for service.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefReimbursementType { Id=Guid.Parse("ae6cc981-e275-4390-a2d6-3c0490c575d1"), Code="CapitatedRate", Description="Capitated Rate", Definition="Reimbursed via capitated rate.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefReimbursementType { Id=Guid.Parse("3c1692ee-2866-4083-b1de-21c10b6ce7ad"), Code="GrantContract", Description="Grant/contract", Definition="Reimbursed via grant/contract.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefReimbursementType { Id=Guid.Parse("49c31675-45d6-4e57-b24f-096aa0eeb9bc"), Code="Subsidy", Description="Subsidy", Definition="Reimbursed via subsidy.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefReimbursementType { Id=Guid.Parse("5f47cae9-839a-4ccd-b8dc-5785a3bd92b0"), Code="Other", Description="Other", Definition="The reimbursement type is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
-        /// The RefReimbursementType Pick List
+        /// The Reference RefReimbursementType Pick List
          /// </summary>
-        public static List<RefReimbursementType> RefReimbursementTypePickList = new List<RefReimbursementType>
+        public static List<ReferencePickListItemViewModel> RefReimbursementTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefReimbursementType { Id=Guid.Parse("b0a6b8d8-be4b-451d-bc7d-c03d63283611"), Code="FeeForService", Description="Fee for Service", SortOrder=Convert.ToDecimal("1.00") },
-            new RefReimbursementType { Id=Guid.Parse("15880dee-978c-47c3-90a4-efcc0cdcd5dd"), Code="CapitatedRate", Description="Capitated Rate", SortOrder=Convert.ToDecimal("3.00") },
-            new RefReimbursementType { Id=Guid.Parse("235260eb-186e-4a9a-9781-b9ed93d20518"), Code="GrantContract", Description="Grant/contract", SortOrder=Convert.ToDecimal("5.00") },
-            new RefReimbursementType { Id=Guid.Parse("9ea01a0c-385d-429d-9b8e-c5b575e309f2"), Code="Subsidy", Description="Subsidy", SortOrder=Convert.ToDecimal("7.00") },
-            new RefReimbursementType { Id=Guid.Parse("236d47e1-7081-4891-bff4-10f67374080a"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
+            new RefReimbursementType { Id=Guid.Parse("f2e7f943-5deb-45cc-b3b0-c4bb3325f576"), Description="Fee for Service", SortOrder=Convert.ToDecimal("1.00") },
+            new RefReimbursementType { Id=Guid.Parse("ae6cc981-e275-4390-a2d6-3c0490c575d1"), Description="Capitated Rate", SortOrder=Convert.ToDecimal("3.00") },
+            new RefReimbursementType { Id=Guid.Parse("3c1692ee-2866-4083-b1de-21c10b6ce7ad"), Description="Grant/contract", SortOrder=Convert.ToDecimal("5.00") },
+            new RefReimbursementType { Id=Guid.Parse("49c31675-45d6-4e57-b24f-096aa0eeb9bc"), Description="Subsidy", SortOrder=Convert.ToDecimal("7.00") },
+            new RefReimbursementType { Id=Guid.Parse("5f47cae9-839a-4ccd-b8dc-5785a3bd92b0"), Description="Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

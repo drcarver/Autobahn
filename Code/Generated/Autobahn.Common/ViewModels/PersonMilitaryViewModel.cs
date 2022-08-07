@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonMilitaryViewModel
      /// </summary>
-    public partial class PersonMilitaryViewModel : ViewModelBase, Interfaces.IPersonMilitary
+    public partial class PersonMilitaryViewModel : ViewModelBase, Interfaces.IPersonMilitaryViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

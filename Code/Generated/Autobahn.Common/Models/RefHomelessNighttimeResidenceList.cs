@@ -3,7 +3,6 @@
 //* FileName:   RefHomelessNighttimeResidenceList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,29 +12,29 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefHomelessNighttimeResidence"> List
+        /// The complete <see cref="RefHomelessNighttimeResidenceModel"> List
          /// </summary>
-        public static List<RefHomelessNighttimeResidence> RefHomelessNighttimeResidenceList = new List<RefHomelessNighttimeResidence>
+        public static List<RefHomelessNighttimeResidenceModel> RefHomelessNighttimeResidenceList = new List<RefHomelessNighttimeResidenceModel>
         {
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("812c07fc-e58a-45ef-bb48-7b2128c9acda"), Code="DoubledUp", Description="Doubled Up", Definition="Doubled-up (i.e., living with another family) is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("2.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("9c6262ba-97cb-4cda-9791-fa82ec7a89a5"), Code="Unsheltered", Description="Unsheltered", Definition="Unsheltered (e.g. cars, parks, campgrounds, temporary trailers including FEMA trailers, or abandoned buildings) is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("3.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("ab5712f2-3832-4d2f-83ab-51d5521bcfeb"), Code="HotelMotel", Description="Hotels/Motels", Definition="Hotels/Motels is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("4.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("80e40b9b-1ff5-4c8d-a034-4a82d82b847c"), Code="Shelter", Description="Shelter", Definition="A Shelter is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("5.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("560801e0-493b-459c-ba9e-d47c963a5d1e"), Code="SheltersTransitionalHousing", Description="Shelters Transitional Housing", Definition="Shelters or Transitional Housing is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("6.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("7a27d50c-6487-489d-8700-254f5d6231a4"), Code="TransitionalHousing", Description="Transitional Housing", Definition="Transitional Housing is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("7.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("8b6c2184-07ff-4118-9cd9-a3310e83dcc3"), Code="DoubledUp", Description="Doubled Up", Definition="Doubled-up (i.e., living with another family) is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("2.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("bfdebb51-5151-4bf6-bbe5-6ba531f597f1"), Code="Unsheltered", Description="Unsheltered", Definition="Unsheltered (e.g. cars, parks, campgrounds, temporary trailers including FEMA trailers, or abandoned buildings) is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("3.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("84a1703f-cd80-4aae-98b7-94f1e071cbd1"), Code="HotelMotel", Description="Hotels/Motels", Definition="Hotels/Motels is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("4.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("6be3cfc3-e16b-453a-89d1-58a2d58e9715"), Code="Shelter", Description="Shelter", Definition="A Shelter is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("5.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("901cd2fd-67fa-4f99-800e-1f1a6bbe13d8"), Code="SheltersTransitionalHousing", Description="Shelters Transitional Housing", Definition="Shelters or Transitional Housing is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("6.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("e21d2c7b-7e3c-4a27-abef-569633cf4f0c"), Code="TransitionalHousing", Description="Transitional Housing", Definition="Transitional Housing is the primary nighttime residence of the person at the time they were identified as homeless", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefHomelessNighttimeResidence Pick List
+        /// The Reference RefHomelessNighttimeResidence Pick List
          /// </summary>
-        public static List<RefHomelessNighttimeResidence> RefHomelessNighttimeResidencePickList = new List<RefHomelessNighttimeResidence>
+        public static List<ReferencePickListItemViewModel> RefHomelessNighttimeResidenceViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("812c07fc-e58a-45ef-bb48-7b2128c9acda"), Code="DoubledUp", Description="Doubled Up", SortOrder=Convert.ToDecimal("2.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("9c6262ba-97cb-4cda-9791-fa82ec7a89a5"), Code="Unsheltered", Description="Unsheltered", SortOrder=Convert.ToDecimal("3.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("ab5712f2-3832-4d2f-83ab-51d5521bcfeb"), Code="HotelMotel", Description="Hotels/Motels", SortOrder=Convert.ToDecimal("4.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("80e40b9b-1ff5-4c8d-a034-4a82d82b847c"), Code="Shelter", Description="Shelter", SortOrder=Convert.ToDecimal("5.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("560801e0-493b-459c-ba9e-d47c963a5d1e"), Code="SheltersTransitionalHousing", Description="Shelters Transitional Housing", SortOrder=Convert.ToDecimal("6.00") },
-            new RefHomelessNighttimeResidence { Id=Guid.Parse("7a27d50c-6487-489d-8700-254f5d6231a4"), Code="TransitionalHousing", Description="Transitional Housing", SortOrder=Convert.ToDecimal("7.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("8b6c2184-07ff-4118-9cd9-a3310e83dcc3"), Description="Doubled Up", SortOrder=Convert.ToDecimal("2.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("bfdebb51-5151-4bf6-bbe5-6ba531f597f1"), Description="Unsheltered", SortOrder=Convert.ToDecimal("3.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("84a1703f-cd80-4aae-98b7-94f1e071cbd1"), Description="Hotels/Motels", SortOrder=Convert.ToDecimal("4.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("6be3cfc3-e16b-453a-89d1-58a2d58e9715"), Description="Shelter", SortOrder=Convert.ToDecimal("5.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("901cd2fd-67fa-4f99-800e-1f1a6bbe13d8"), Description="Shelters Transitional Housing", SortOrder=Convert.ToDecimal("6.00") },
+            new RefHomelessNighttimeResidence { Id=Guid.Parse("e21d2c7b-7e3c-4a27-abef-569633cf4f0c"), Description="Transitional Housing", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

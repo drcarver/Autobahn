@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ServiceProviderViewModel
      /// </summary>
-    public partial class ServiceProviderViewModel : ViewModelBase, Interfaces.IServiceProvider
+    public partial class ServiceProviderViewModel : ViewModelBase, Interfaces.IServiceProviderViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

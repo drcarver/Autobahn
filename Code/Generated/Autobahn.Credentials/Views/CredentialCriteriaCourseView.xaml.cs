@@ -14,9 +14,9 @@ namespace Autobahn.Credentials.Views
     public partial class CredentialCriteriaCourseView : ContentPage
     {
         /// <summary>
-        /// Inject the CredentialCriteriaCourseViewModel as the data context for the view
+        /// Inject the ICredentialCriteriaCourseViewModel as the data context for the view
         /// </summary>
-        public CredentialCriteriaCourseView(CredentialCriteriaCourseViewModel vm)
+        public CredentialCriteriaCourseView(ICredentialCriteriaCourseViewModel vm)
         {
             BindingContext  = vm;
         }

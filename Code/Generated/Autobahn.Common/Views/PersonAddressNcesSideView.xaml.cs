@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonAddressNcesSideView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonAddressNcesSideViewModel as the data context for the view
+        /// Inject the IPersonAddressNcesSideViewModel as the data context for the view
         /// </summary>
-        public PersonAddressNcesSideView(PersonAddressNcesSideViewModel vm)
+        public PersonAddressNcesSideView(IPersonAddressNcesSideViewModel vm)
         {
             BindingContext  = vm;
         }

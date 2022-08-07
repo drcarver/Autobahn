@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentSubtest_AssessmentItemView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentSubtest_AssessmentItemViewModel as the data context for the view
+        /// Inject the IAssessmentSubtest_AssessmentItemViewModel as the data context for the view
         /// </summary>
-        public AssessmentSubtest_AssessmentItemView(AssessmentSubtest_AssessmentItemViewModel vm)
+        public AssessmentSubtest_AssessmentItemView(IAssessmentSubtest_AssessmentItemViewModel vm)
         {
             BindingContext  = vm;
         }

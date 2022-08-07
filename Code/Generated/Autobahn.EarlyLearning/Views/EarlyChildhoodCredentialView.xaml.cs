@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class EarlyChildhoodCredentialView : ContentPage
     {
         /// <summary>
-        /// Inject the EarlyChildhoodCredentialViewModel as the data context for the view
+        /// Inject the IEarlyChildhoodCredentialViewModel as the data context for the view
         /// </summary>
-        public EarlyChildhoodCredentialView(EarlyChildhoodCredentialViewModel vm)
+        public EarlyChildhoodCredentialView(IEarlyChildhoodCredentialViewModel vm)
         {
             BindingContext  = vm;
         }

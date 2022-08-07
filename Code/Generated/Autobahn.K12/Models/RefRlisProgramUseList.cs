@@ -13,31 +13,31 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefRlisProgramUse"> List
+        /// The complete <see cref="RefRlisProgramUseModel"> List
          /// </summary>
-        public static List<RefRlisProgramUse> RefRlisProgramUseList = new List<RefRlisProgramUse>
+        public static List<RefRlisProgramUseModel> RefRlisProgramUseList = new List<RefRlisProgramUseModel>
         {
-            new RefRlisProgramUse { Id=Guid.Parse("96b41924-6795-4025-868b-b88c71b18b0f"), Code="01", Description="Teacher recruitment and retention", Definition="Teacher recruitment and retention, including the use of signing bonuses and other financial incentives", SortOrder=Convert.ToDecimal("1.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("aba99f7d-3a2d-4479-b803-65a50430c0a5"), Code="02", Description="Teacher professional development", Definition="Teacher professional development, including programs that train teachers to utilize technology to improve teaching and to train special needs teachers", SortOrder=Convert.ToDecimal("2.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("611178a1-fb70-4e38-a5c1-8c3ad06da086"), Code="03", Description="Educational technology", Definition="Educational technology, including software and hardware as described in Title II, Part D", SortOrder=Convert.ToDecimal("3.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("4d9dd452-49f0-4fd7-8e30-2b643fe98027"), Code="04", Description="Parental involvement activities", Definition="Parental involvement activities uses of the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("e3f32866-33f2-43dc-8cef-e150559152a5"), Code="05", Description="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A)", Definition="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A) using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("9f921cf9-2201-4000-a47f-ddab5dafbcb3"), Code="06", Description="Activities authorized under Title I, Part A", Definition="Activities authorized under Title I, Part A using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("55d1cfd4-a2ed-4274-a8a9-39ac8f5454d7"), Code="07", Description="Activities authorized under Title III (Language instruction for English Learner and immigrant students)", Definition="Activities authorized under Title III (Language instruction for English Learner and immigrant students) using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("86e7f081-a5d8-47d7-bc75-3cc4e2f2dcb7"), Code="01", Description="Teacher recruitment and retention", Definition="Teacher recruitment and retention, including the use of signing bonuses and other financial incentives", SortOrder=Convert.ToDecimal("1.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("4d916b25-4cb3-47e4-9ef9-a1d8f1ae0470"), Code="02", Description="Teacher professional development", Definition="Teacher professional development, including programs that train teachers to utilize technology to improve teaching and to train special needs teachers", SortOrder=Convert.ToDecimal("2.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("ea5e8dc4-2726-4c77-b4ea-92b47fb71efd"), Code="03", Description="Educational technology", Definition="Educational technology, including software and hardware as described in Title II, Part D", SortOrder=Convert.ToDecimal("3.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("03c0f5b2-53fc-445d-af60-dbc27bf3375e"), Code="04", Description="Parental involvement activities", Definition="Parental involvement activities uses of the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("bc7878b2-5b24-4a79-a733-ea439bda2900"), Code="05", Description="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A)", Definition="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A) using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("3f2f5f1c-eafa-4505-84d4-6163471f4a94"), Code="06", Description="Activities authorized under Title I, Part A", Definition="Activities authorized under Title I, Part A using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("22bdc805-138a-482a-82e1-536e3862d8ed"), Code="07", Description="Activities authorized under Title III (Language instruction for English Learner and immigrant students)", Definition="Activities authorized under Title III (Language instruction for English Learner and immigrant students) using the Rural Low-Income Schools Program (RLIS) (Title VI, Part B, Subpart 2) Grant Funds.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefRlisProgramUse Pick List
+        /// The Reference RefRlisProgramUse Pick List
          /// </summary>
-        public static List<RefRlisProgramUse> RefRlisProgramUsePickList = new List<RefRlisProgramUse>
+        public static List<ReferencePickListItemViewModel> RefRlisProgramUseViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefRlisProgramUse { Id=Guid.Parse("96b41924-6795-4025-868b-b88c71b18b0f"), Code="01", Description="Teacher recruitment and retention", SortOrder=Convert.ToDecimal("1.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("aba99f7d-3a2d-4479-b803-65a50430c0a5"), Code="02", Description="Teacher professional development", SortOrder=Convert.ToDecimal("2.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("611178a1-fb70-4e38-a5c1-8c3ad06da086"), Code="03", Description="Educational technology", SortOrder=Convert.ToDecimal("3.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("4d9dd452-49f0-4fd7-8e30-2b643fe98027"), Code="04", Description="Parental involvement activities", SortOrder=Convert.ToDecimal("4.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("e3f32866-33f2-43dc-8cef-e150559152a5"), Code="05", Description="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A)", SortOrder=Convert.ToDecimal("5.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("9f921cf9-2201-4000-a47f-ddab5dafbcb3"), Code="06", Description="Activities authorized under Title I, Part A", SortOrder=Convert.ToDecimal("6.00") },
-            new RefRlisProgramUse { Id=Guid.Parse("55d1cfd4-a2ed-4274-a8a9-39ac8f5454d7"), Code="07", Description="Activities authorized under Title III (Language instruction for English Learner and immigrant students)", SortOrder=Convert.ToDecimal("7.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("86e7f081-a5d8-47d7-bc75-3cc4e2f2dcb7"), Description="Teacher recruitment and retention", SortOrder=Convert.ToDecimal("1.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("4d916b25-4cb3-47e4-9ef9-a1d8f1ae0470"), Description="Teacher professional development", SortOrder=Convert.ToDecimal("2.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("ea5e8dc4-2726-4c77-b4ea-92b47fb71efd"), Description="Educational technology", SortOrder=Convert.ToDecimal("3.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("03c0f5b2-53fc-445d-af60-dbc27bf3375e"), Description="Parental involvement activities", SortOrder=Convert.ToDecimal("4.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("bc7878b2-5b24-4a79-a733-ea439bda2900"), Description="Activities authorized under the Safe and Drug-Free Schools Program (Title IV, Part A)", SortOrder=Convert.ToDecimal("5.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("3f2f5f1c-eafa-4505-84d4-6163471f4a94"), Description="Activities authorized under Title I, Part A", SortOrder=Convert.ToDecimal("6.00") },
+            new RefRlisProgramUse { Id=Guid.Parse("22bdc805-138a-482a-82e1-536e3862d8ed"), Description="Activities authorized under Title III (Language instruction for English Learner and immigrant students)", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

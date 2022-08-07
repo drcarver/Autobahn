@@ -14,9 +14,9 @@ namespace Autobahn.CareerandTechnical.Views
     public partial class CteStudentAcademicRecordView : ContentPage
     {
         /// <summary>
-        /// Inject the CteStudentAcademicRecordViewModel as the data context for the view
+        /// Inject the ICteStudentAcademicRecordViewModel as the data context for the view
         /// </summary>
-        public CteStudentAcademicRecordView(CteStudentAcademicRecordViewModel vm)
+        public CteStudentAcademicRecordView(ICteStudentAcademicRecordViewModel vm)
         {
             BindingContext  = vm;
         }

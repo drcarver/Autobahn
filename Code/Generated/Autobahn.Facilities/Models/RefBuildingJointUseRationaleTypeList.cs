@@ -13,25 +13,25 @@ namespace Autobahn.Facilities.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefBuildingJointUseRationaleType"> List
+        /// The complete <see cref="RefBuildingJointUseRationaleTypeModel"> List
          /// </summary>
-        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypeList = new List<RefBuildingJointUseRationaleType>
+        public static List<RefBuildingJointUseRationaleTypeModel> RefBuildingJointUseRationaleTypeList = new List<RefBuildingJointUseRationaleTypeModel>
         {
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("3ec3e841-fda2-4e8a-b400-de03c6f45302"), Code="13710", Description="Increase programs and services for students", Definition="Increase programs and services for students is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("8f9c29f5-bf0b-4c9a-a055-d841eb2e5293"), Code="13711", Description="Increase programs and services for the community", Definition="Increase programs and services for the community is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("08689566-8332-4fff-92bd-d19e297bf76f"), Code="13712", Description="Increase utilization of under used space", Definition="Increase utilization of under used space is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("797482c3-9837-4070-887f-b2bebbda6a37"), Code="13709", Description="Raise revenue", Definition="Raise revenue is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("91db2a9f-bc06-4480-b160-967050f35fcd"), Code="13710", Description="Increase programs and services for students", Definition="Increase programs and services for students is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("1e107a5a-25b2-4111-b1b0-5ff0669fa43b"), Code="13711", Description="Increase programs and services for the community", Definition="Increase programs and services for the community is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("d97413b9-b8ab-43d8-a317-895eec29974a"), Code="13712", Description="Increase utilization of under used space", Definition="Increase utilization of under used space is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("7d248557-e5a0-49c6-9306-68faa8a3031b"), Code="13709", Description="Raise revenue", Definition="Raise revenue is specified as the reasons for permitting and participating in joint-use.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefBuildingJointUseRationaleType Pick List
+        /// The Reference RefBuildingJointUseRationaleType Pick List
          /// </summary>
-        public static List<RefBuildingJointUseRationaleType> RefBuildingJointUseRationaleTypePickList = new List<RefBuildingJointUseRationaleType>
+        public static List<ReferencePickListItemViewModel> RefBuildingJointUseRationaleTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("3ec3e841-fda2-4e8a-b400-de03c6f45302"), Code="13710", Description="Increase programs and services for students", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("8f9c29f5-bf0b-4c9a-a055-d841eb2e5293"), Code="13711", Description="Increase programs and services for the community", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("08689566-8332-4fff-92bd-d19e297bf76f"), Code="13712", Description="Increase utilization of under used space", SortOrder=Convert.ToDecimal("3.00") },
-            new RefBuildingJointUseRationaleType { Id=Guid.Parse("797482c3-9837-4070-887f-b2bebbda6a37"), Code="13709", Description="Raise revenue", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("91db2a9f-bc06-4480-b160-967050f35fcd"), Description="Increase programs and services for students", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("1e107a5a-25b2-4111-b1b0-5ff0669fa43b"), Description="Increase programs and services for the community", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("d97413b9-b8ab-43d8-a317-895eec29974a"), Description="Increase utilization of under used space", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingJointUseRationaleType { Id=Guid.Parse("7d248557-e5a0-49c6-9306-68faa8a3031b"), Description="Raise revenue", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

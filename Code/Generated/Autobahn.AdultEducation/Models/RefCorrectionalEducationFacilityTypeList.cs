@@ -13,27 +13,27 @@ namespace Autobahn.AdultEducation.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCorrectionalEducationFacilityType"> List
+        /// The complete <see cref="RefCorrectionalEducationFacilityTypeModel"> List
          /// </summary>
-        public static List<RefCorrectionalEducationFacilityType> RefCorrectionalEducationFacilityTypeList = new List<RefCorrectionalEducationFacilityType>
+        public static List<RefCorrectionalEducationFacilityTypeModel> RefCorrectionalEducationFacilityTypeList = new List<RefCorrectionalEducationFacilityTypeModel>
         {
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("8c6fe7d4-be17-4fe8-9022-8d25ed4eea29"), Code="Prison", Description="Prison, Penitentiary or Correctional Institution", Definition="Prison, Penitentiary or Correctional Institution is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("266184e2-b21e-414f-af79-489e88244918"), Code="Jail", Description="Jail", Definition="Jail is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("33173fdc-82a9-4cd8-ac70-917da6be8fbd"), Code="JuvenileFacility", Description="Juvenile Facility", Definition="Juvenile Facility is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("0306534c-fda6-4dd7-8057-d6df4de26bfd"), Code="CommunityCorrections", Description="Community Corrections", Definition="Community Corrections is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("60371163-52b8-46bc-a79a-fe5c3ed3ad7c"), Code="Other", Description="Other Institution", Definition="Other Institution is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("5ec9e8d1-7e4b-40d1-9b15-a1711e21cfd4"), Code="Prison", Description="Prison, Penitentiary or Correctional Institution", Definition="Prison, Penitentiary or Correctional Institution is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("7d57d64f-9d18-4691-9ce7-38f968a730b0"), Code="Jail", Description="Jail", Definition="Jail is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("ab3886df-2ddf-4a90-a5a7-c85ed18be3dd"), Code="JuvenileFacility", Description="Juvenile Facility", Definition="Juvenile Facility is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("b9000452-1abd-4e59-88c5-fd6ea5700775"), Code="CommunityCorrections", Description="Community Corrections", Definition="Community Corrections is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("a303d870-70a5-4488-be0c-d4c6fae45f39"), Code="Other", Description="Other Institution", Definition="Other Institution is specified as the  type of facility in which an inmate receives correctional education services.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
-        /// The RefCorrectionalEducationFacilityType Pick List
+        /// The Reference RefCorrectionalEducationFacilityType Pick List
          /// </summary>
-        public static List<RefCorrectionalEducationFacilityType> RefCorrectionalEducationFacilityTypePickList = new List<RefCorrectionalEducationFacilityType>
+        public static List<ReferencePickListItemViewModel> RefCorrectionalEducationFacilityTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("8c6fe7d4-be17-4fe8-9022-8d25ed4eea29"), Code="Prison", Description="Prison, Penitentiary or Correctional Institution", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("266184e2-b21e-414f-af79-489e88244918"), Code="Jail", Description="Jail", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("33173fdc-82a9-4cd8-ac70-917da6be8fbd"), Code="JuvenileFacility", Description="Juvenile Facility", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("0306534c-fda6-4dd7-8057-d6df4de26bfd"), Code="CommunityCorrections", Description="Community Corrections", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("60371163-52b8-46bc-a79a-fe5c3ed3ad7c"), Code="Other", Description="Other Institution", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("5ec9e8d1-7e4b-40d1-9b15-a1711e21cfd4"), Description="Prison, Penitentiary or Correctional Institution", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("7d57d64f-9d18-4691-9ce7-38f968a730b0"), Description="Jail", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("ab3886df-2ddf-4a90-a5a7-c85ed18be3dd"), Description="Juvenile Facility", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("b9000452-1abd-4e59-88c5-fd6ea5700775"), Description="Community Corrections", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCorrectionalEducationFacilityType { Id=Guid.Parse("a303d870-70a5-4488-be0c-d4c6fae45f39"), Description="Other Institution", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

@@ -14,9 +14,9 @@ namespace Autobahn.Credentials.Views
     public partial class CredentialDefCategoryView : ContentPage
     {
         /// <summary>
-        /// Inject the CredentialDefCategoryViewModel as the data context for the view
+        /// Inject the ICredentialDefCategoryViewModel as the data context for the view
         /// </summary>
-        public CredentialDefCategoryView(CredentialDefCategoryViewModel vm)
+        public CredentialDefCategoryView(ICredentialDefCategoryViewModel vm)
         {
             BindingContext  = vm;
         }

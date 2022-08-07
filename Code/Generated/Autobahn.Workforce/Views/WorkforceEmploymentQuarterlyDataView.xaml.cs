@@ -14,9 +14,9 @@ namespace Autobahn.Workforce.Views
     public partial class WorkforceEmploymentQuarterlyDataView : ContentPage
     {
         /// <summary>
-        /// Inject the WorkforceEmploymentQuarterlyDataViewModel as the data context for the view
+        /// Inject the IWorkforceEmploymentQuarterlyDataViewModel as the data context for the view
         /// </summary>
-        public WorkforceEmploymentQuarterlyDataView(WorkforceEmploymentQuarterlyDataViewModel vm)
+        public WorkforceEmploymentQuarterlyDataView(IWorkforceEmploymentQuarterlyDataViewModel vm)
         {
             BindingContext  = vm;
         }

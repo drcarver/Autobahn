@@ -3,7 +3,6 @@
 //* FileName:   RefIncidentPerpetratorInjuryTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,27 +12,27 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIncidentPerpetratorInjuryType"> List
+        /// The complete <see cref="RefIncidentPerpetratorInjuryTypeModel"> List
          /// </summary>
-        public static List<RefIncidentPerpetratorInjuryType> RefIncidentPerpetratorInjuryTypeList = new List<RefIncidentPerpetratorInjuryType>
+        public static List<RefIncidentPerpetratorInjuryTypeModel> RefIncidentPerpetratorInjuryTypeList = new List<RefIncidentPerpetratorInjuryTypeModel>
         {
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("c21d33a5-1997-4a58-8f7d-7cf7a5aa7bc4"), Code="MajorInjury", Description="Major injury", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("0dc255cc-6473-47da-b730-dd623f64e5f5"), Code="MinorInjury", Description="Minor injury", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("9e5084b9-2fdd-405c-8edc-1b6ad1f08d8f"), Code="NoInjury", Description="No injury", Definition="", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("5b8bbde1-de3a-4471-8003-a407dfb90cdd"), Code="SeriousBodilyInjury", Description="Serious bodily injury", Definition="", SortOrder=Convert.ToDecimal("4.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("92b1239e-81b6-4ee9-aac7-99c8089b457f"), Code="FatalInjury", Description="Fatal injury", Definition="", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("c5319947-7851-4d1b-8b4a-d5c30ce48c0b"), Code="MajorInjury", Description="Major injury", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("04d16854-4021-4ed8-b717-51a2300cd472"), Code="MinorInjury", Description="Minor injury", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("3476ac3f-ca01-485d-8053-aaa12c8d5ce0"), Code="NoInjury", Description="No injury", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("6ea6525d-565c-4a54-aa50-e0ec3fdde1da"), Code="SeriousBodilyInjury", Description="Serious bodily injury", Definition="", SortOrder=Convert.ToDecimal("4.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("7203b540-8fc1-405d-ae45-c265dcc6120a"), Code="FatalInjury", Description="Fatal injury", Definition="", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
-        /// The RefIncidentPerpetratorInjuryType Pick List
+        /// The Reference RefIncidentPerpetratorInjuryType Pick List
          /// </summary>
-        public static List<RefIncidentPerpetratorInjuryType> RefIncidentPerpetratorInjuryTypePickList = new List<RefIncidentPerpetratorInjuryType>
+        public static List<ReferencePickListItemViewModel> RefIncidentPerpetratorInjuryTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("c21d33a5-1997-4a58-8f7d-7cf7a5aa7bc4"), Code="MajorInjury", Description="Major injury", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("0dc255cc-6473-47da-b730-dd623f64e5f5"), Code="MinorInjury", Description="Minor injury", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("9e5084b9-2fdd-405c-8edc-1b6ad1f08d8f"), Code="NoInjury", Description="No injury", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("5b8bbde1-de3a-4471-8003-a407dfb90cdd"), Code="SeriousBodilyInjury", Description="Serious bodily injury", SortOrder=Convert.ToDecimal("4.00") },
-            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("92b1239e-81b6-4ee9-aac7-99c8089b457f"), Code="FatalInjury", Description="Fatal injury", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("c5319947-7851-4d1b-8b4a-d5c30ce48c0b"), Description="Major injury", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("04d16854-4021-4ed8-b717-51a2300cd472"), Description="Minor injury", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("3476ac3f-ca01-485d-8053-aaa12c8d5ce0"), Description="No injury", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("6ea6525d-565c-4a54-aa50-e0ec3fdde1da"), Description="Serious bodily injury", SortOrder=Convert.ToDecimal("4.00") },
+            new RefIncidentPerpetratorInjuryType { Id=Guid.Parse("7203b540-8fc1-405d-ae45-c265dcc6120a"), Description="Fatal injury", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

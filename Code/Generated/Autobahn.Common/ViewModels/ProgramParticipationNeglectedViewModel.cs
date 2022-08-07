@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ProgramParticipationNeglectedViewModel
      /// </summary>
-    public partial class ProgramParticipationNeglectedViewModel : ViewModelBase, Interfaces.IProgramParticipationNeglected
+    public partial class ProgramParticipationNeglectedViewModel : ViewModelBase, Interfaces.IProgramParticipationNeglectedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildIndividualizedProgramView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildIndividualizedProgramViewModel as the data context for the view
+        /// Inject the IELChildIndividualizedProgramViewModel as the data context for the view
         /// </summary>
-        public ELChildIndividualizedProgramView(ELChildIndividualizedProgramViewModel vm)
+        public ELChildIndividualizedProgramView(IELChildIndividualizedProgramViewModel vm)
         {
             BindingContext  = vm;
         }

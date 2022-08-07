@@ -11,7 +11,7 @@ namespace Autobahn.Credentials.ViewModels
      /// <summary>
      /// The CredentialOfferedViewModel
      /// </summary>
-    public partial class CredentialOfferedViewModel : ViewModelBase, Interfaces.ICredentialOffered
+    public partial class CredentialOfferedViewModel : ViewModelBase, Interfaces.ICredentialOfferedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

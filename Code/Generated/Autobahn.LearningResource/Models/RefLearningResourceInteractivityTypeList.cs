@@ -13,23 +13,23 @@ namespace Autobahn.LearningResource.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefLearningResourceInteractivityType"> List
+        /// The complete <see cref="RefLearningResourceInteractivityTypeModel"> List
          /// </summary>
-        public static List<RefLearningResourceInteractivityType> RefLearningResourceInteractivityTypeList = new List<RefLearningResourceInteractivityType>
+        public static List<RefLearningResourceInteractivityTypeModel> RefLearningResourceInteractivityTypeList = new List<RefLearningResourceInteractivityTypeModel>
         {
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("efe9a64d-17db-4de5-bb4d-7e5fbc10f39c"), Code="Active", Description="Active", Definition="The predominate mode of learning supported by the learning resource is: Active", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("d739f93f-921c-42d9-ab56-5453d9b95ae3"), Code="Expositive", Description="Expositive", Definition="The predominate mode of learning supported by the learning resource is: Expositive", SortOrder=Convert.ToDecimal("2.00") },
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("96ff7b74-a267-46a7-b877-5da60e33c5e6"), Code="Mixed", Description="Mixed", Definition="The predominate mode of learning supported by the learning resource is: Mixed", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("799455ea-7cbe-42a3-b3c0-3c1db5b61f57"), Code="Active", Description="Active", Definition="The predominate mode of learning supported by the learning resource is: Active", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("45f993cb-a8e5-406d-a169-532334d092c8"), Code="Expositive", Description="Expositive", Definition="The predominate mode of learning supported by the learning resource is: Expositive", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("d19c6640-0a76-4d15-b5c4-369674939431"), Code="Mixed", Description="Mixed", Definition="The predominate mode of learning supported by the learning resource is: Mixed", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefLearningResourceInteractivityType Pick List
+        /// The Reference RefLearningResourceInteractivityType Pick List
          /// </summary>
-        public static List<RefLearningResourceInteractivityType> RefLearningResourceInteractivityTypePickList = new List<RefLearningResourceInteractivityType>
+        public static List<ReferencePickListItemViewModel> RefLearningResourceInteractivityTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("efe9a64d-17db-4de5-bb4d-7e5fbc10f39c"), Code="Active", Description="Active", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("d739f93f-921c-42d9-ab56-5453d9b95ae3"), Code="Expositive", Description="Expositive", SortOrder=Convert.ToDecimal("2.00") },
-            new RefLearningResourceInteractivityType { Id=Guid.Parse("96ff7b74-a267-46a7-b877-5da60e33c5e6"), Code="Mixed", Description="Mixed", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("799455ea-7cbe-42a3-b3c0-3c1db5b61f57"), Description="Active", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("45f993cb-a8e5-406d-a169-532334d092c8"), Description="Expositive", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceInteractivityType { Id=Guid.Parse("d19c6640-0a76-4d15-b5c4-369674939431"), Description="Mixed", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

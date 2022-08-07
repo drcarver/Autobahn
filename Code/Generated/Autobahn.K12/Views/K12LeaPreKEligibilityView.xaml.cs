@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaPreKEligibilityView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaPreKEligibilityViewModel as the data context for the view
+        /// Inject the IK12LeaPreKEligibilityViewModel as the data context for the view
         /// </summary>
-        public K12LeaPreKEligibilityView(K12LeaPreKEligibilityViewModel vm)
+        public K12LeaPreKEligibilityView(IK12LeaPreKEligibilityViewModel vm)
         {
             BindingContext  = vm;
         }

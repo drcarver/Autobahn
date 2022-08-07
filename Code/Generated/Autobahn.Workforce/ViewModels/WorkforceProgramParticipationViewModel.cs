@@ -11,7 +11,7 @@ namespace Autobahn.Workforce.ViewModels
      /// <summary>
      /// The WorkforceProgramParticipationViewModel
      /// </summary>
-    public partial class WorkforceProgramParticipationViewModel : ViewModelBase, Interfaces.IWorkforceProgramParticipation
+    public partial class WorkforceProgramParticipationViewModel : ViewModelBase, Interfaces.IWorkforceProgramParticipationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

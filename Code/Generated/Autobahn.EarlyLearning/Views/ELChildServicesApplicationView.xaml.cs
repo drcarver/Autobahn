@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildServicesApplicationView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildServicesApplicationViewModel as the data context for the view
+        /// Inject the IELChildServicesApplicationViewModel as the data context for the view
         /// </summary>
-        public ELChildServicesApplicationView(ELChildServicesApplicationViewModel vm)
+        public ELChildServicesApplicationView(IELChildServicesApplicationViewModel vm)
         {
             BindingContext  = vm;
         }

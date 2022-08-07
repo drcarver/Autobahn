@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELQualityRatingImprovementViewModel
      /// </summary>
-    public partial class ELQualityRatingImprovementViewModel : ViewModelBase, Interfaces.IELQualityRatingImprovement
+    public partial class ELQualityRatingImprovementViewModel : ViewModelBase, Interfaces.IELQualityRatingImprovementViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

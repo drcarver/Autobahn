@@ -14,9 +14,9 @@ namespace Autobahn.Credentials.Views
     public partial class CredentialAwardEvidenceView : ContentPage
     {
         /// <summary>
-        /// Inject the CredentialAwardEvidenceViewModel as the data context for the view
+        /// Inject the ICredentialAwardEvidenceViewModel as the data context for the view
         /// </summary>
-        public CredentialAwardEvidenceView(CredentialAwardEvidenceViewModel vm)
+        public CredentialAwardEvidenceView(ICredentialAwardEvidenceViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -13,21 +13,21 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCourseHonorsType"> List
+        /// The complete <see cref="RefCourseHonorsTypeModel"> List
          /// </summary>
-        public static List<RefCourseHonorsType> RefCourseHonorsTypeList = new List<RefCourseHonorsType>
+        public static List<RefCourseHonorsTypeModel> RefCourseHonorsTypeList = new List<RefCourseHonorsTypeModel>
         {
-            new RefCourseHonorsType { Id=Guid.Parse("f6dcb54b-307f-4e8b-ba22-e1d560241af5"), Code="Honors", Description="Honors", Definition="The course is counted as an honors course.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseHonorsType { Id=Guid.Parse("a5062289-b528-4e7f-a496-6bc33c5637ef"), Code="HonorsOption", Description="Honors option", Definition="The course can be counted as an honors course.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseHonorsType { Id=Guid.Parse("90da7903-c323-476d-a0b4-a87a5784be14"), Code="Honors", Description="Honors", Definition="The course is counted as an honors course.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseHonorsType { Id=Guid.Parse("f11177e7-db75-4295-a696-02ec16f8e474"), Code="HonorsOption", Description="Honors option", Definition="The course can be counted as an honors course.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefCourseHonorsType Pick List
+        /// The Reference RefCourseHonorsType Pick List
          /// </summary>
-        public static List<RefCourseHonorsType> RefCourseHonorsTypePickList = new List<RefCourseHonorsType>
+        public static List<ReferencePickListItemViewModel> RefCourseHonorsTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCourseHonorsType { Id=Guid.Parse("f6dcb54b-307f-4e8b-ba22-e1d560241af5"), Code="Honors", Description="Honors", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseHonorsType { Id=Guid.Parse("a5062289-b528-4e7f-a496-6bc33c5637ef"), Code="HonorsOption", Description="Honors option", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseHonorsType { Id=Guid.Parse("90da7903-c323-476d-a0b4-a87a5784be14"), Description="Honors", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseHonorsType { Id=Guid.Parse("f11177e7-db75-4295-a696-02ec16f8e474"), Description="Honors option", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

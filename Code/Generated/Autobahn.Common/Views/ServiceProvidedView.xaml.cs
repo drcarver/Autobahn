@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ServiceProvidedView : ContentPage
     {
         /// <summary>
-        /// Inject the ServiceProvidedViewModel as the data context for the view
+        /// Inject the IServiceProvidedViewModel as the data context for the view
         /// </summary>
-        public ServiceProvidedView(ServiceProvidedViewModel vm)
+        public ServiceProvidedView(IServiceProvidedViewModel vm)
         {
             BindingContext  = vm;
         }

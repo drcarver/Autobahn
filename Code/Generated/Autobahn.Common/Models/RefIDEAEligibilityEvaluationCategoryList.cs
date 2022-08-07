@@ -3,7 +3,6 @@
 //* FileName:   RefIDEAEligibilityEvaluationCategoryList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,51 +12,51 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIDEAEligibilityEvaluationCategory"> List
+        /// The complete <see cref="RefIDEAEligibilityEvaluationCategoryModel"> List
          /// </summary>
-        public static List<RefIDEAEligibilityEvaluationCategory> RefIDEAEligibilityEvaluationCategoryList = new List<RefIDEAEligibilityEvaluationCategory>
+        public static List<RefIDEAEligibilityEvaluationCategoryModel> RefIDEAEligibilityEvaluationCategoryList = new List<RefIDEAEligibilityEvaluationCategoryModel>
         {
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("b9857a13-6703-466f-95ab-537555f2efbc"), Code="AcademicAchievement", Description="Academic Achievement", Definition="Academic Achievement is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("e2f2ff7a-f1e1-47b4-8c38-ec1106fa6c0d"), Code="AdaptiveBehavior", Description="Adaptive Behavior", Definition="Adaptive Behavior is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("24784c65-fc9f-4eac-a1e9-78bc5a897d2a"), Code="Cognitive", Description="Cognitive", Definition="Cognitive is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("d41fd2a3-c973-4b2e-b349-3fff90ea0af1"), Code="Communication", Description="Communication", Definition="Communication is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("085483f7-d4a3-44b2-bd93-f6d29820cd0d"), Code="Developmental", Description="Developmental", Definition="Developmental is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("adc0f40d-455d-4d48-84f1-5886a9a32a1c"), Code="FunctionalBehavior", Description="Functional Behavior", Definition="Functional Behavior is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("841f6640-104d-4963-9a6c-f7ff0bf51a91"), Code="Hearing", Description="Hearing", Definition="Hearing is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("789d76bc-1e1f-4c98-9a08-6839ba3cebce"), Code="Language", Description="Language", Definition="Language is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("2e1d4191-fd27-4fd3-8313-a9249d6f2658"), Code="Medical", Description="Medical", Definition="Medical is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("58725296-b94f-43fb-8fd8-d7b18d7eca8b"), Code="Motor", Description="Motor", Definition="Motor is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5ca3f3a8-c66a-4e11-9481-c50b486c1841"), Code="O&M", Description="Orientation and Mobility", Definition="Orientation and Mobility (O&M) is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("713186a1-232f-4d15-bb00-1ea213dbd8bb"), Code="Other", Description="Other", Definition="The category of evaluation used for IDEA eligibility is not yet defined in CEDS.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bade8b44-bbb6-4a4e-8de1-82080e8a812f"), Code="Social/Emotional", Description="Social/Emotional", Definition="Social/Emotional is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("1d9ef6d7-fa98-4383-9b69-5a2933cbf277"), Code="Speech", Description="Speech", Definition="Speech is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5daee850-4c3d-4f28-9cb0-6c57c78d714f"), Code="Transition", Description="Transition", Definition="Transition is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("29b03ea1-4be9-4f8b-bc27-b63d41774b32"), Code="Vision", Description="Vision", Definition="Vision is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bcab4212-3e1a-4bdc-91fa-4f1e0c650a79"), Code="Vocational", Description="Vocational", Definition="Vocational is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("3c47271f-ac51-4e58-b816-24c946f5150a"), Code="AcademicAchievement", Description="Academic Achievement", Definition="Academic Achievement is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("e41c0c21-5003-48d7-8b08-f019b0caae5e"), Code="AdaptiveBehavior", Description="Adaptive Behavior", Definition="Adaptive Behavior is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("7a6cde34-63ea-49c4-82b4-04dedbb01d53"), Code="Cognitive", Description="Cognitive", Definition="Cognitive is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("48b02259-5447-402f-9e2a-e9681abd3492"), Code="Communication", Description="Communication", Definition="Communication is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("24ea76d4-9428-44f9-a16a-d0fa90b41d33"), Code="Developmental", Description="Developmental", Definition="Developmental is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("cb829ef6-65d0-47c4-b5bc-d2b12c1e4321"), Code="FunctionalBehavior", Description="Functional Behavior", Definition="Functional Behavior is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bcb0f750-b5ef-42c2-9214-ed32246959a7"), Code="Hearing", Description="Hearing", Definition="Hearing is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bba3842a-9b2d-46f7-b50f-e9dfdff78308"), Code="Language", Description="Language", Definition="Language is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("0b9c0804-1e0b-4eb0-ac35-e97900164530"), Code="Medical", Description="Medical", Definition="Medical is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("32d2ce58-51fd-4754-ade9-81ce3b421df5"), Code="Motor", Description="Motor", Definition="Motor is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("1e1e7d35-7ba9-44ce-94f2-7e56b56ceb82"), Code="O&M", Description="Orientation and Mobility", Definition="Orientation and Mobility (O&M) is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("6bb48745-c2c2-4aff-86e6-a1cd77498440"), Code="Other", Description="Other", Definition="The category of evaluation used for IDEA eligibility is not yet defined in CEDS.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("ce41a2bd-81fe-4279-afc6-cca7cdf0a5fb"), Code="Social/Emotional", Description="Social/Emotional", Definition="Social/Emotional is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("cf65af11-6a7f-4681-a7a6-d11891f9cf75"), Code="Speech", Description="Speech", Definition="Speech is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5ec93f76-2b4d-4f48-9cfb-7f2bb0faee6e"), Code="Transition", Description="Transition", Definition="Transition is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("32c5fa9d-776e-4f03-b702-80bfe8d9d428"), Code="Vision", Description="Vision", Definition="Vision is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("20b93e73-0ba7-4b83-b3f6-ad76cfb649ab"), Code="Vocational", Description="Vocational", Definition="Vocational is specified as a category of evaluation used for IDEA eligibility.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefIDEAEligibilityEvaluationCategory Pick List
+        /// The Reference RefIDEAEligibilityEvaluationCategory Pick List
          /// </summary>
-        public static List<RefIDEAEligibilityEvaluationCategory> RefIDEAEligibilityEvaluationCategoryPickList = new List<RefIDEAEligibilityEvaluationCategory>
+        public static List<ReferencePickListItemViewModel> RefIDEAEligibilityEvaluationCategoryViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("b9857a13-6703-466f-95ab-537555f2efbc"), Code="AcademicAchievement", Description="Academic Achievement", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("e2f2ff7a-f1e1-47b4-8c38-ec1106fa6c0d"), Code="AdaptiveBehavior", Description="Adaptive Behavior", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("24784c65-fc9f-4eac-a1e9-78bc5a897d2a"), Code="Cognitive", Description="Cognitive", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("d41fd2a3-c973-4b2e-b349-3fff90ea0af1"), Code="Communication", Description="Communication", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("085483f7-d4a3-44b2-bd93-f6d29820cd0d"), Code="Developmental", Description="Developmental", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("adc0f40d-455d-4d48-84f1-5886a9a32a1c"), Code="FunctionalBehavior", Description="Functional Behavior", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("841f6640-104d-4963-9a6c-f7ff0bf51a91"), Code="Hearing", Description="Hearing", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("789d76bc-1e1f-4c98-9a08-6839ba3cebce"), Code="Language", Description="Language", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("2e1d4191-fd27-4fd3-8313-a9249d6f2658"), Code="Medical", Description="Medical", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("58725296-b94f-43fb-8fd8-d7b18d7eca8b"), Code="Motor", Description="Motor", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5ca3f3a8-c66a-4e11-9481-c50b486c1841"), Code="O&M", Description="Orientation and Mobility", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("713186a1-232f-4d15-bb00-1ea213dbd8bb"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bade8b44-bbb6-4a4e-8de1-82080e8a812f"), Code="Social/Emotional", Description="Social/Emotional", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("1d9ef6d7-fa98-4383-9b69-5a2933cbf277"), Code="Speech", Description="Speech", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5daee850-4c3d-4f28-9cb0-6c57c78d714f"), Code="Transition", Description="Transition", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("29b03ea1-4be9-4f8b-bc27-b63d41774b32"), Code="Vision", Description="Vision", SortOrder=Convert.ToDecimal("") },
-            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bcab4212-3e1a-4bdc-91fa-4f1e0c650a79"), Code="Vocational", Description="Vocational", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("3c47271f-ac51-4e58-b816-24c946f5150a"), Description="Academic Achievement", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("e41c0c21-5003-48d7-8b08-f019b0caae5e"), Description="Adaptive Behavior", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("7a6cde34-63ea-49c4-82b4-04dedbb01d53"), Description="Cognitive", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("48b02259-5447-402f-9e2a-e9681abd3492"), Description="Communication", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("24ea76d4-9428-44f9-a16a-d0fa90b41d33"), Description="Developmental", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("cb829ef6-65d0-47c4-b5bc-d2b12c1e4321"), Description="Functional Behavior", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bcb0f750-b5ef-42c2-9214-ed32246959a7"), Description="Hearing", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("bba3842a-9b2d-46f7-b50f-e9dfdff78308"), Description="Language", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("0b9c0804-1e0b-4eb0-ac35-e97900164530"), Description="Medical", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("32d2ce58-51fd-4754-ade9-81ce3b421df5"), Description="Motor", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("1e1e7d35-7ba9-44ce-94f2-7e56b56ceb82"), Description="Orientation and Mobility", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("6bb48745-c2c2-4aff-86e6-a1cd77498440"), Description="Other", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("ce41a2bd-81fe-4279-afc6-cca7cdf0a5fb"), Description="Social/Emotional", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("cf65af11-6a7f-4681-a7a6-d11891f9cf75"), Description="Speech", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("5ec93f76-2b4d-4f48-9cfb-7f2bb0faee6e"), Description="Transition", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("32c5fa9d-776e-4f03-b702-80bfe8d9d428"), Description="Vision", SortOrder=Convert.ToDecimal("") },
+            new RefIDEAEligibilityEvaluationCategory { Id=Guid.Parse("20b93e73-0ba7-4b83-b3f6-ad76cfb649ab"), Description="Vocational", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The OrganizationRelationshipViewModel
      /// </summary>
-    public partial class OrganizationRelationshipViewModel : ViewModelBase, Interfaces.IOrganizationRelationship
+    public partial class OrganizationRelationshipViewModel : ViewModelBase, Interfaces.IOrganizationRelationshipViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

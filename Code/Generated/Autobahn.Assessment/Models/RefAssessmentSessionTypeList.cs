@@ -13,21 +13,21 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAssessmentSessionType"> List
+        /// The complete <see cref="RefAssessmentSessionTypeModel"> List
          /// </summary>
-        public static List<RefAssessmentSessionType> RefAssessmentSessionTypeList = new List<RefAssessmentSessionType>
+        public static List<RefAssessmentSessionTypeModel> RefAssessmentSessionTypeList = new List<RefAssessmentSessionTypeModel>
         {
-            new RefAssessmentSessionType { Id=Guid.Parse("08374c8f-d221-48e8-9d1e-34f569fbe3e7"), Code="Standard", Description="Standard", Definition="Standard is specified as the type of assessment session that is scheduled.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentSessionType { Id=Guid.Parse("060f32cd-f794-4e14-9df2-ff2c34c4a765"), Code="Accommodation", Description="Accommodation", Definition="Accommodation is specified as the type of assessment session that is scheduled.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentSessionType { Id=Guid.Parse("79170a55-712d-4135-8abc-e968b4b2d039"), Code="Standard", Description="Standard", Definition="Standard is specified as the type of assessment session that is scheduled.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentSessionType { Id=Guid.Parse("664504e7-9c35-43e4-bf18-691f0d136c1a"), Code="Accommodation", Description="Accommodation", Definition="Accommodation is specified as the type of assessment session that is scheduled.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefAssessmentSessionType Pick List
+        /// The Reference RefAssessmentSessionType Pick List
          /// </summary>
-        public static List<RefAssessmentSessionType> RefAssessmentSessionTypePickList = new List<RefAssessmentSessionType>
+        public static List<ReferencePickListItemViewModel> RefAssessmentSessionTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAssessmentSessionType { Id=Guid.Parse("08374c8f-d221-48e8-9d1e-34f569fbe3e7"), Code="Standard", Description="Standard", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentSessionType { Id=Guid.Parse("060f32cd-f794-4e14-9df2-ff2c34c4a765"), Code="Accommodation", Description="Accommodation", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentSessionType { Id=Guid.Parse("79170a55-712d-4135-8abc-e968b4b2d039"), Description="Standard", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentSessionType { Id=Guid.Parse("664504e7-9c35-43e4-bf18-691f0d136c1a"), Description="Accommodation", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

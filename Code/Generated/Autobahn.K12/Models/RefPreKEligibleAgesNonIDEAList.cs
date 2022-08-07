@@ -13,25 +13,25 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefPreKEligibleAgesNonIDEA"> List
+        /// The complete <see cref="RefPreKEligibleAgesNonIDEAModel"> List
          /// </summary>
-        public static List<RefPreKEligibleAgesNonIDEA> RefPreKEligibleAgesNonIDEAList = new List<RefPreKEligibleAgesNonIDEA>
+        public static List<RefPreKEligibleAgesNonIDEAModel> RefPreKEligibleAgesNonIDEAList = new List<RefPreKEligibleAgesNonIDEAModel>
         {
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("463f51d1-eecc-4008-90cd-e0440f0048b2"), Code="Age0-2", Description="Students aged 0-2", Definition="The prekindergarten program is available to students aged 0-2.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("e5c84069-4ceb-40f3-ba09-8a19ebf2d498"), Code="Age3", Description="Students aged 3", Definition="The prekindergarten program is available to students aged 3.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("9275adb6-5111-4722-b5b8-91e901e238ab"), Code="Age4", Description="Students aged 4", Definition="The prekindergarten program is available to students aged 4.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("3783ea6f-084b-4978-bc80-fd6bb455ffbc"), Code="NoPreK", Description="No pre-kindergarten or only for IDEA students", Definition="No pre-kindergarten is available or only for IDEA students.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("c1241e40-e479-4557-8f4c-9ec326cd0de7"), Code="Age0-2", Description="Students aged 0-2", Definition="The prekindergarten program is available to students aged 0-2.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("a63bbc77-605e-40fc-a3a5-463c31504621"), Code="Age3", Description="Students aged 3", Definition="The prekindergarten program is available to students aged 3.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("0cc76382-cd2f-4d01-a21d-7522fb97b4fe"), Code="Age4", Description="Students aged 4", Definition="The prekindergarten program is available to students aged 4.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("86cd45ef-d59f-415b-b1ee-5abf8cc52960"), Code="NoPreK", Description="No pre-kindergarten or only for IDEA students", Definition="No pre-kindergarten is available or only for IDEA students.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefPreKEligibleAgesNonIDEA Pick List
+        /// The Reference RefPreKEligibleAgesNonIDEA Pick List
          /// </summary>
-        public static List<RefPreKEligibleAgesNonIDEA> RefPreKEligibleAgesNonIDEAPickList = new List<RefPreKEligibleAgesNonIDEA>
+        public static List<ReferencePickListItemViewModel> RefPreKEligibleAgesNonIDEAViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("463f51d1-eecc-4008-90cd-e0440f0048b2"), Code="Age0-2", Description="Students aged 0-2", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("e5c84069-4ceb-40f3-ba09-8a19ebf2d498"), Code="Age3", Description="Students aged 3", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("9275adb6-5111-4722-b5b8-91e901e238ab"), Code="Age4", Description="Students aged 4", SortOrder=Convert.ToDecimal("3.00") },
-            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("3783ea6f-084b-4978-bc80-fd6bb455ffbc"), Code="NoPreK", Description="No pre-kindergarten or only for IDEA students", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("c1241e40-e479-4557-8f4c-9ec326cd0de7"), Description="Students aged 0-2", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("a63bbc77-605e-40fc-a3a5-463c31504621"), Description="Students aged 3", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("0cc76382-cd2f-4d01-a21d-7522fb97b4fe"), Description="Students aged 4", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPreKEligibleAgesNonIDEA { Id=Guid.Parse("86cd45ef-d59f-415b-b1ee-5abf8cc52960"), Description="No pre-kindergarten or only for IDEA students", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

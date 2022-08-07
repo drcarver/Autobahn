@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonLanguageView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonLanguageViewModel as the data context for the view
+        /// Inject the IPersonLanguageViewModel as the data context for the view
         /// </summary>
-        public PersonLanguageView(PersonLanguageViewModel vm)
+        public PersonLanguageView(IPersonLanguageViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class FinancialAccountProgramView : ContentPage
     {
         /// <summary>
-        /// Inject the FinancialAccountProgramViewModel as the data context for the view
+        /// Inject the IFinancialAccountProgramViewModel as the data context for the view
         /// </summary>
-        public FinancialAccountProgramView(FinancialAccountProgramViewModel vm)
+        public FinancialAccountProgramView(IFinancialAccountProgramViewModel vm)
         {
             BindingContext  = vm;
         }

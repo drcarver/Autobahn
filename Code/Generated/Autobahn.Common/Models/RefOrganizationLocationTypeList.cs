@@ -3,7 +3,6 @@
 //* FileName:   RefOrganizationLocationTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,23 +12,23 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefOrganizationLocationType"> List
+        /// The complete <see cref="RefOrganizationLocationTypeModel"> List
          /// </summary>
-        public static List<RefOrganizationLocationType> RefOrganizationLocationTypeList = new List<RefOrganizationLocationType>
+        public static List<RefOrganizationLocationTypeModel> RefOrganizationLocationTypeList = new List<RefOrganizationLocationTypeModel>
         {
-            new RefOrganizationLocationType { Id=Guid.Parse("e2f8abba-e694-4c7d-b709-a07ddba5395c"), Code="Mailing", Description="Mailing", Definition="Mailing is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefOrganizationLocationType { Id=Guid.Parse("66526fda-4760-43c6-97d7-79cb70049397"), Code="Physical", Description="Physical", Definition="Physical is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefOrganizationLocationType { Id=Guid.Parse("1550520d-22fd-44bd-b32a-620e32bb146e"), Code="Shipping", Description="Shipping", Definition="Shipping is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("5bdbec4d-19d8-4014-a761-d8942ba42360"), Code="Mailing", Description="Mailing", Definition="Mailing is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("11e07d80-dca3-4206-9c08-a220146735c9"), Code="Physical", Description="Physical", Definition="Physical is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("9f3b21fb-5447-49b4-83ec-fb6f4249d483"), Code="Shipping", Description="Shipping", Definition="Shipping is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefOrganizationLocationType Pick List
+        /// The Reference RefOrganizationLocationType Pick List
          /// </summary>
-        public static List<RefOrganizationLocationType> RefOrganizationLocationTypePickList = new List<RefOrganizationLocationType>
+        public static List<ReferencePickListItemViewModel> RefOrganizationLocationTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefOrganizationLocationType { Id=Guid.Parse("e2f8abba-e694-4c7d-b709-a07ddba5395c"), Code="Mailing", Description="Mailing", SortOrder=Convert.ToDecimal("1.00") },
-            new RefOrganizationLocationType { Id=Guid.Parse("66526fda-4760-43c6-97d7-79cb70049397"), Code="Physical", Description="Physical", SortOrder=Convert.ToDecimal("2.00") },
-            new RefOrganizationLocationType { Id=Guid.Parse("1550520d-22fd-44bd-b32a-620e32bb146e"), Code="Shipping", Description="Shipping", SortOrder=Convert.ToDecimal("3.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("5bdbec4d-19d8-4014-a761-d8942ba42360"), Description="Mailing", SortOrder=Convert.ToDecimal("1.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("11e07d80-dca3-4206-9c08-a220146735c9"), Description="Physical", SortOrder=Convert.ToDecimal("2.00") },
+            new RefOrganizationLocationType { Id=Guid.Parse("9f3b21fb-5447-49b4-83ec-fb6f4249d483"), Description="Shipping", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

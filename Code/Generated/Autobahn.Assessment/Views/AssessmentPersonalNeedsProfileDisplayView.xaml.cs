@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentPersonalNeedsProfileDisplayView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentPersonalNeedsProfileDisplayViewModel as the data context for the view
+        /// Inject the IAssessmentPersonalNeedsProfileDisplayViewModel as the data context for the view
         /// </summary>
-        public AssessmentPersonalNeedsProfileDisplayView(AssessmentPersonalNeedsProfileDisplayViewModel vm)
+        public AssessmentPersonalNeedsProfileDisplayView(IAssessmentPersonalNeedsProfileDisplayViewModel vm)
         {
             BindingContext  = vm;
         }

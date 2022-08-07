@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentLanguageView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentLanguageViewModel as the data context for the view
+        /// Inject the IAssessmentLanguageViewModel as the data context for the view
         /// </summary>
-        public AssessmentLanguageView(AssessmentLanguageViewModel vm)
+        public AssessmentLanguageView(IAssessmentLanguageViewModel vm)
         {
             BindingContext  = vm;
         }

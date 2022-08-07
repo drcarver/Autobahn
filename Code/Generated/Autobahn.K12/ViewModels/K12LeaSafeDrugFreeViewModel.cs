@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12LeaSafeDrugFreeViewModel
      /// </summary>
-    public partial class K12LeaSafeDrugFreeViewModel : ViewModelBase, Interfaces.IK12LeaSafeDrugFree
+    public partial class K12LeaSafeDrugFreeViewModel : ViewModelBase, Interfaces.IK12LeaSafeDrugFreeViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

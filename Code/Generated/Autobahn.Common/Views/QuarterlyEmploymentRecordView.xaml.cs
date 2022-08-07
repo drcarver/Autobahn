@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class QuarterlyEmploymentRecordView : ContentPage
     {
         /// <summary>
-        /// Inject the QuarterlyEmploymentRecordViewModel as the data context for the view
+        /// Inject the IQuarterlyEmploymentRecordViewModel as the data context for the view
         /// </summary>
-        public QuarterlyEmploymentRecordView(QuarterlyEmploymentRecordViewModel vm)
+        public QuarterlyEmploymentRecordView(IQuarterlyEmploymentRecordViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -13,16 +13,16 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIndicatorStatusCustomType"> List
+        /// The complete <see cref="RefIndicatorStatusCustomTypeModel"> List
          /// </summary>
-        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypeList = new List<RefIndicatorStatusCustomType>
+        public static List<RefIndicatorStatusCustomTypeModel> RefIndicatorStatusCustomTypeList = new List<RefIndicatorStatusCustomTypeModel>
         {
         };
 
         /// <summary>
-        /// The RefIndicatorStatusCustomType Pick List
+        /// The Reference RefIndicatorStatusCustomType Pick List
          /// </summary>
-        public static List<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypePickList = new List<RefIndicatorStatusCustomType>
+        public static List<ReferencePickListItemViewModel> RefIndicatorStatusCustomTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

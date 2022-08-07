@@ -13,21 +13,21 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefPreAndPostTestIndicator"> List
+        /// The complete <see cref="RefPreAndPostTestIndicatorModel"> List
          /// </summary>
-        public static List<RefPreAndPostTestIndicator> RefPreAndPostTestIndicatorList = new List<RefPreAndPostTestIndicator>
+        public static List<RefPreAndPostTestIndicatorModel> RefPreAndPostTestIndicatorList = new List<RefPreAndPostTestIndicatorModel>
         {
-            new RefPreAndPostTestIndicator { Id=Guid.Parse("996f50a1-0056-4099-a4ae-83d75867b314"), Code="PreAndPostTest", Description="The student took both a pre-test and post-test", Definition="The student took both a pre-test and post-test.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPreAndPostTestIndicator { Id=Guid.Parse("0ee15365-95d8-4046-bb95-4f04f2034ce2"), Code="DidNotTakeBoth", Description="The student did not take both a pre-test and a post-test", Definition="The student did not take both a pre-test and a post-test.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPreAndPostTestIndicator { Id=Guid.Parse("f93c59ad-c5e9-4d2f-abf6-1fb9fd432ba3"), Code="PreAndPostTest", Description="The student took both a pre-test and post-test", Definition="The student took both a pre-test and post-test.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPreAndPostTestIndicator { Id=Guid.Parse("f93c68af-3cc5-4ea5-9e65-7bdb1e85d0e8"), Code="DidNotTakeBoth", Description="The student did not take both a pre-test and a post-test", Definition="The student did not take both a pre-test and a post-test.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefPreAndPostTestIndicator Pick List
+        /// The Reference RefPreAndPostTestIndicator Pick List
          /// </summary>
-        public static List<RefPreAndPostTestIndicator> RefPreAndPostTestIndicatorPickList = new List<RefPreAndPostTestIndicator>
+        public static List<ReferencePickListItemViewModel> RefPreAndPostTestIndicatorViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefPreAndPostTestIndicator { Id=Guid.Parse("996f50a1-0056-4099-a4ae-83d75867b314"), Code="PreAndPostTest", Description="The student took both a pre-test and post-test", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPreAndPostTestIndicator { Id=Guid.Parse("0ee15365-95d8-4046-bb95-4f04f2034ce2"), Code="DidNotTakeBoth", Description="The student did not take both a pre-test and a post-test", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPreAndPostTestIndicator { Id=Guid.Parse("f93c59ad-c5e9-4d2f-abf6-1fb9fd432ba3"), Description="The student took both a pre-test and post-test", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPreAndPostTestIndicator { Id=Guid.Parse("f93c68af-3cc5-4ea5-9e65-7bdb1e85d0e8"), Description="The student did not take both a pre-test and a post-test", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

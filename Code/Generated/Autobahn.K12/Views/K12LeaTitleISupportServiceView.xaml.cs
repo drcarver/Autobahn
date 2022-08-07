@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaTitleISupportServiceView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaTitleISupportServiceViewModel as the data context for the view
+        /// Inject the IK12LeaTitleISupportServiceViewModel as the data context for the view
         /// </summary>
-        public K12LeaTitleISupportServiceView(K12LeaTitleISupportServiceViewModel vm)
+        public K12LeaTitleISupportServiceView(IK12LeaTitleISupportServiceViewModel vm)
         {
             BindingContext  = vm;
         }

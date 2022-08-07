@@ -13,25 +13,25 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAssessmentNeedHazardType"> List
+        /// The complete <see cref="RefAssessmentNeedHazardTypeModel"> List
          /// </summary>
-        public static List<RefAssessmentNeedHazardType> RefAssessmentNeedHazardTypeList = new List<RefAssessmentNeedHazardType>
+        public static List<RefAssessmentNeedHazardTypeModel> RefAssessmentNeedHazardTypeList = new List<RefAssessmentNeedHazardTypeModel>
         {
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("feeeae60-b84b-4fd4-ac18-8e06b05ea86e"), Code="Flashing", Description="Flashing", Definition="Flashing is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("60a033bb-a680-4bf1-affd-fb6eb7f5ab0e"), Code="Sound", Description="Sound", Definition="Sound is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("76c358e7-b256-47cf-bcaa-066f15c8dc58"), Code="Olfactory", Description="Olfactory", Definition="Olfactory is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("7baa6f42-aaf0-4555-8a06-c31c26007838"), Code="MotionSimulation", Description="Motion simulation", Definition="Motion simulation is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("08f20cac-5bb3-4df4-8caa-88747b3d9c5c"), Code="Flashing", Description="Flashing", Definition="Flashing is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("130c3312-9d8b-4bb3-b8ad-b1070ea0ed4a"), Code="Sound", Description="Sound", Definition="Sound is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("8a065d4e-3ea3-47d6-820a-7a99bdaa4df2"), Code="Olfactory", Description="Olfactory", Definition="Olfactory is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("b9c2c938-8b7c-4e47-a420-58878c524dc2"), Code="MotionSimulation", Description="Motion simulation", Definition="Motion simulation is specified as part of an Assessment Personal Needs Profile as a characteristic of a digital resource that may be dangerous to a user.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefAssessmentNeedHazardType Pick List
+        /// The Reference RefAssessmentNeedHazardType Pick List
          /// </summary>
-        public static List<RefAssessmentNeedHazardType> RefAssessmentNeedHazardTypePickList = new List<RefAssessmentNeedHazardType>
+        public static List<ReferencePickListItemViewModel> RefAssessmentNeedHazardTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("feeeae60-b84b-4fd4-ac18-8e06b05ea86e"), Code="Flashing", Description="Flashing", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("60a033bb-a680-4bf1-affd-fb6eb7f5ab0e"), Code="Sound", Description="Sound", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("76c358e7-b256-47cf-bcaa-066f15c8dc58"), Code="Olfactory", Description="Olfactory", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAssessmentNeedHazardType { Id=Guid.Parse("7baa6f42-aaf0-4555-8a06-c31c26007838"), Code="MotionSimulation", Description="Motion simulation", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("08f20cac-5bb3-4df4-8caa-88747b3d9c5c"), Description="Flashing", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("130c3312-9d8b-4bb3-b8ad-b1070ea0ed4a"), Description="Sound", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("8a065d4e-3ea3-47d6-820a-7a99bdaa4df2"), Description="Olfactory", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAssessmentNeedHazardType { Id=Guid.Parse("b9c2c938-8b7c-4e47-a420-58878c524dc2"), Description="Motion simulation", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

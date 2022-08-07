@@ -14,9 +14,9 @@ namespace Autobahn.AuthenticationandAuthorization.Views
     public partial class AuthorizationView : ContentPage
     {
         /// <summary>
-        /// Inject the AuthorizationViewModel as the data context for the view
+        /// Inject the IAuthorizationViewModel as the data context for the view
         /// </summary>
-        public AuthorizationView(AuthorizationViewModel vm)
+        public AuthorizationView(IAuthorizationViewModel vm)
         {
             BindingContext  = vm;
         }

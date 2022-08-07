@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonDigitalAccessViewModel
      /// </summary>
-    public partial class PersonDigitalAccessViewModel : ViewModelBase, Interfaces.IPersonDigitalAccess
+    public partial class PersonDigitalAccessViewModel : ViewModelBase, Interfaces.IPersonDigitalAccessViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

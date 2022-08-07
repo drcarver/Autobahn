@@ -3,7 +3,6 @@
 //* FileName:   RefELProgramEligibilityList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,45 +12,45 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefELProgramEligibility"> List
+        /// The complete <see cref="RefELProgramEligibilityModel"> List
          /// </summary>
-        public static List<RefELProgramEligibility> RefELProgramEligibilityList = new List<RefELProgramEligibility>
+        public static List<RefELProgramEligibilityModel> RefELProgramEligibilityList = new List<RefELProgramEligibilityModel>
         {
-            new RefELProgramEligibility { Id=Guid.Parse("3a703fc8-c1a7-47d9-9431-9308bd6bb478"), Code="Age", Description="Age", Definition="Age is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("855b1906-3673-488d-b1c6-95f23a384cf7"), Code="FamilyIncome", Description="Family income", Definition="Family income is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("e59bf670-2b0f-4610-84c2-bc5c1130817d"), Code="DisabilityStatus", Description="Disability Status", Definition="Disability Status is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("80911aad-7beb-41c6-8e00-a2b78aaf9a55"), Code="SSSI", Description="Supplemental social security income", Definition="Supplemental social security income is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("c1098303-d6f5-47d9-be58-b282b61a902a"), Code="WIC", Description="Women, infants, and children", Definition="Women, infants, and children is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("7b64381a-a2d3-4f69-81b3-efaaba69c861"), Code="TANF", Description="Temporary assistance for needy families", Definition="Temporary assistance for needy families is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("9be234c2-5b85-4447-96cf-16b936178069"), Code="OtherPublicAssistance", Description="Other public assistance", Definition="Other public assistance is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("61ff29a9-0589-4e6b-9f6e-9ccb8db39ddb"), Code="Foster", Description="Foster", Definition="Foster is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("8.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("6e4e7cfd-a1fd-4a13-9ba6-b3c2af594e27"), Code="MilitaryFamily", Description="Military family", Definition="Military family is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("9.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("40aa9109-af6a-4363-9b4c-df2a0c11c43a"), Code="ELL", Description="Home language other than English", Definition="Home language other than English is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("10.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("ac7b84fa-86a1-4806-8301-9e6027340182"), Code="OtherFamilyRisk", Description="Other family risk factors", Definition="Other family risk factors is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("11.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("1edea07c-aa75-4bf4-adef-08894c8c26ea"), Code="OtherChildRisk", Description="Other child risk factors", Definition="Other child risk factors is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("12.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("2408eeaf-dfd5-4861-a1cb-781d806bf02e"), Code="AtRisk", Description="At-risk of having a substantial developmental delay", Definition="At-risk of having a substantial developmental delay is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("20.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("96509f1f-f958-401d-8441-fd930ea15cd0"), Code="Other", Description="Other", Definition="The category under which the person is eligible for an early childhood program or service is not yet defined in CEDS.", SortOrder=Convert.ToDecimal("21.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("114b9423-c2e0-4278-b9d1-45def1d029d5"), Code="Age", Description="Age", Definition="Age is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("daee339b-49b7-41f8-9b61-538eb8398f88"), Code="FamilyIncome", Description="Family income", Definition="Family income is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("b8d7de02-f6b5-4677-84ff-bf77515cefcb"), Code="DisabilityStatus", Description="Disability Status", Definition="Disability Status is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("cfcafce9-2593-4e18-bd54-4a3fe527ad2a"), Code="SSSI", Description="Supplemental social security income", Definition="Supplemental social security income is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("086374c7-87f9-4713-9b45-5ee042dab39e"), Code="WIC", Description="Women, infants, and children", Definition="Women, infants, and children is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("a575301a-3c01-4252-a0c5-cea8327987ca"), Code="TANF", Description="Temporary assistance for needy families", Definition="Temporary assistance for needy families is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("1e69de39-0c79-42b1-8a62-b6f53d95978e"), Code="OtherPublicAssistance", Description="Other public assistance", Definition="Other public assistance is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("a78ad435-bb29-4800-9fdc-70f156df195e"), Code="Foster", Description="Foster", Definition="Foster is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("b3e7a70d-2a34-467c-928a-1aea266f02b1"), Code="MilitaryFamily", Description="Military family", Definition="Military family is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("8624e0cf-d1b5-4ab6-a7df-0968b168173d"), Code="ELL", Description="Home language other than English", Definition="Home language other than English is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("bd4b696a-ac85-4e5a-97c4-9e1046a329fd"), Code="OtherFamilyRisk", Description="Other family risk factors", Definition="Other family risk factors is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("4d9f5811-2e7d-48b2-a8d5-68526a560990"), Code="OtherChildRisk", Description="Other child risk factors", Definition="Other child risk factors is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("ea350e41-55b8-4908-81f0-726b5a4bfe1f"), Code="AtRisk", Description="At-risk of having a substantial developmental delay", Definition="At-risk of having a substantial developmental delay is the category under which the person is eligible for an early childhood program or service.", SortOrder=Convert.ToDecimal("20.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("d531aa93-d3e0-4a22-8c5c-ca80eef0c94b"), Code="Other", Description="Other", Definition="The category under which the person is eligible for an early childhood program or service is not yet defined in CEDS.", SortOrder=Convert.ToDecimal("21.00") },
         };
 
         /// <summary>
-        /// The RefELProgramEligibility Pick List
+        /// The Reference RefELProgramEligibility Pick List
          /// </summary>
-        public static List<RefELProgramEligibility> RefELProgramEligibilityPickList = new List<RefELProgramEligibility>
+        public static List<ReferencePickListItemViewModel> RefELProgramEligibilityViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefELProgramEligibility { Id=Guid.Parse("3a703fc8-c1a7-47d9-9431-9308bd6bb478"), Code="Age", Description="Age", SortOrder=Convert.ToDecimal("1.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("855b1906-3673-488d-b1c6-95f23a384cf7"), Code="FamilyIncome", Description="Family income", SortOrder=Convert.ToDecimal("2.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("e59bf670-2b0f-4610-84c2-bc5c1130817d"), Code="DisabilityStatus", Description="Disability Status", SortOrder=Convert.ToDecimal("3.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("80911aad-7beb-41c6-8e00-a2b78aaf9a55"), Code="SSSI", Description="Supplemental social security income", SortOrder=Convert.ToDecimal("4.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("c1098303-d6f5-47d9-be58-b282b61a902a"), Code="WIC", Description="Women, infants, and children", SortOrder=Convert.ToDecimal("5.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("7b64381a-a2d3-4f69-81b3-efaaba69c861"), Code="TANF", Description="Temporary assistance for needy families", SortOrder=Convert.ToDecimal("6.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("9be234c2-5b85-4447-96cf-16b936178069"), Code="OtherPublicAssistance", Description="Other public assistance", SortOrder=Convert.ToDecimal("7.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("61ff29a9-0589-4e6b-9f6e-9ccb8db39ddb"), Code="Foster", Description="Foster", SortOrder=Convert.ToDecimal("8.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("6e4e7cfd-a1fd-4a13-9ba6-b3c2af594e27"), Code="MilitaryFamily", Description="Military family", SortOrder=Convert.ToDecimal("9.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("40aa9109-af6a-4363-9b4c-df2a0c11c43a"), Code="ELL", Description="Home language other than English", SortOrder=Convert.ToDecimal("10.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("ac7b84fa-86a1-4806-8301-9e6027340182"), Code="OtherFamilyRisk", Description="Other family risk factors", SortOrder=Convert.ToDecimal("11.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("1edea07c-aa75-4bf4-adef-08894c8c26ea"), Code="OtherChildRisk", Description="Other child risk factors", SortOrder=Convert.ToDecimal("12.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("2408eeaf-dfd5-4861-a1cb-781d806bf02e"), Code="AtRisk", Description="At-risk of having a substantial developmental delay", SortOrder=Convert.ToDecimal("20.00") },
-            new RefELProgramEligibility { Id=Guid.Parse("96509f1f-f958-401d-8441-fd930ea15cd0"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("21.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("114b9423-c2e0-4278-b9d1-45def1d029d5"), Description="Age", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("daee339b-49b7-41f8-9b61-538eb8398f88"), Description="Family income", SortOrder=Convert.ToDecimal("2.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("b8d7de02-f6b5-4677-84ff-bf77515cefcb"), Description="Disability Status", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("cfcafce9-2593-4e18-bd54-4a3fe527ad2a"), Description="Supplemental social security income", SortOrder=Convert.ToDecimal("4.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("086374c7-87f9-4713-9b45-5ee042dab39e"), Description="Women, infants, and children", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("a575301a-3c01-4252-a0c5-cea8327987ca"), Description="Temporary assistance for needy families", SortOrder=Convert.ToDecimal("6.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("1e69de39-0c79-42b1-8a62-b6f53d95978e"), Description="Other public assistance", SortOrder=Convert.ToDecimal("7.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("a78ad435-bb29-4800-9fdc-70f156df195e"), Description="Foster", SortOrder=Convert.ToDecimal("8.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("b3e7a70d-2a34-467c-928a-1aea266f02b1"), Description="Military family", SortOrder=Convert.ToDecimal("9.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("8624e0cf-d1b5-4ab6-a7df-0968b168173d"), Description="Home language other than English", SortOrder=Convert.ToDecimal("10.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("bd4b696a-ac85-4e5a-97c4-9e1046a329fd"), Description="Other family risk factors", SortOrder=Convert.ToDecimal("11.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("4d9f5811-2e7d-48b2-a8d5-68526a560990"), Description="Other child risk factors", SortOrder=Convert.ToDecimal("12.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("ea350e41-55b8-4908-81f0-726b5a4bfe1f"), Description="At-risk of having a substantial developmental delay", SortOrder=Convert.ToDecimal("20.00") },
+            new RefELProgramEligibility { Id=Guid.Parse("d531aa93-d3e0-4a22-8c5c-ca80eef0c94b"), Description="Other", SortOrder=Convert.ToDecimal("21.00") },
        };
    }
 }

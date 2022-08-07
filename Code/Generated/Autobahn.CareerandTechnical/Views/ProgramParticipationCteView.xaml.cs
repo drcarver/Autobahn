@@ -14,9 +14,9 @@ namespace Autobahn.CareerandTechnical.Views
     public partial class ProgramParticipationCteView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationCteViewModel as the data context for the view
+        /// Inject the IProgramParticipationCteViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationCteView(ProgramParticipationCteViewModel vm)
+        public ProgramParticipationCteView(IProgramParticipationCteViewModel vm)
         {
             BindingContext  = vm;
         }

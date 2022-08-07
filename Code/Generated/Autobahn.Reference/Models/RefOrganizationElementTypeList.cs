@@ -13,21 +13,21 @@ namespace Autobahn.Reference.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefOrganizationElementType"> List
+        /// The complete <see cref="RefOrganizationElementTypeModel"> List
          /// </summary>
-        public static List<RefOrganizationElementType> RefOrganizationElementTypeList = new List<RefOrganizationElementType>
+        public static List<RefOrganizationElementTypeModel> RefOrganizationElementTypeList = new List<RefOrganizationElementTypeModel>
         {
-            new RefOrganizationElementType { Id=Guid.Parse("7ca5c9b6-94d6-43e4-8fd6-2671a8661534"), Code="001078", Description="Adult Education Provider Type", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefOrganizationElementType { Id=Guid.Parse("7b95569b-ab94-4116-a5e4-6f7c499ae2e5"), Code="001156", Description="Organization Type", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationElementType { Id=Guid.Parse("1207f4df-25ba-48db-93da-c1934c7a3072"), Code="001078", Description="Adult Education Provider Type", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationElementType { Id=Guid.Parse("40fa638b-0a27-4f06-852b-9d9736dae730"), Code="001156", Description="Organization Type", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefOrganizationElementType Pick List
+        /// The Reference RefOrganizationElementType Pick List
          /// </summary>
-        public static List<RefOrganizationElementType> RefOrganizationElementTypePickList = new List<RefOrganizationElementType>
+        public static List<ReferencePickListItemViewModel> RefOrganizationElementTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefOrganizationElementType { Id=Guid.Parse("7ca5c9b6-94d6-43e4-8fd6-2671a8661534"), Code="001078", Description="Adult Education Provider Type", SortOrder=Convert.ToDecimal("") },
-            new RefOrganizationElementType { Id=Guid.Parse("7b95569b-ab94-4116-a5e4-6f7c499ae2e5"), Code="001156", Description="Organization Type", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationElementType { Id=Guid.Parse("1207f4df-25ba-48db-93da-c1934c7a3072"), Description="Adult Education Provider Type", SortOrder=Convert.ToDecimal("") },
+            new RefOrganizationElementType { Id=Guid.Parse("40fa638b-0a27-4f06-852b-9d9736dae730"), Description="Organization Type", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

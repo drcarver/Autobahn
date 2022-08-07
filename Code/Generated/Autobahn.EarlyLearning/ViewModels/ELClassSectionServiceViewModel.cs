@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELClassSectionServiceViewModel
      /// </summary>
-    public partial class ELClassSectionServiceViewModel : ViewModelBase, Interfaces.IELClassSectionService
+    public partial class ELClassSectionServiceViewModel : ViewModelBase, Interfaces.IELClassSectionServiceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

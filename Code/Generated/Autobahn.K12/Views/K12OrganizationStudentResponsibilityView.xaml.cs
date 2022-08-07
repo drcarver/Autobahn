@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12OrganizationStudentResponsibilityView : ContentPage
     {
         /// <summary>
-        /// Inject the K12OrganizationStudentResponsibilityViewModel as the data context for the view
+        /// Inject the IK12OrganizationStudentResponsibilityViewModel as the data context for the view
         /// </summary>
-        public K12OrganizationStudentResponsibilityView(K12OrganizationStudentResponsibilityViewModel vm)
+        public K12OrganizationStudentResponsibilityView(IK12OrganizationStudentResponsibilityViewModel vm)
         {
             BindingContext  = vm;
         }

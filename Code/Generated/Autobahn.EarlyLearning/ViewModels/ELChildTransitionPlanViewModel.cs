@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELChildTransitionPlanViewModel
      /// </summary>
-    public partial class ELChildTransitionPlanViewModel : ViewModelBase, Interfaces.IELChildTransitionPlan
+    public partial class ELChildTransitionPlanViewModel : ViewModelBase, Interfaces.IELChildTransitionPlanViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

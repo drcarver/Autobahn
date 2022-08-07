@@ -3,7 +3,6 @@
 //* FileName:   RefComprehensiveSupportList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefComprehensiveSupport"> List
+        /// The complete <see cref="RefComprehensiveSupportModel"> List
          /// </summary>
-        public static List<RefComprehensiveSupport> RefComprehensiveSupportList = new List<RefComprehensiveSupport>
+        public static List<RefComprehensiveSupportModel> RefComprehensiveSupportList = new List<RefComprehensiveSupportModel>
         {
         };
 
         /// <summary>
-        /// The RefComprehensiveSupport Pick List
+        /// The Reference RefComprehensiveSupport Pick List
          /// </summary>
-        public static List<RefComprehensiveSupport> RefComprehensiveSupportPickList = new List<RefComprehensiveSupport>
+        public static List<ReferencePickListItemViewModel> RefComprehensiveSupportViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

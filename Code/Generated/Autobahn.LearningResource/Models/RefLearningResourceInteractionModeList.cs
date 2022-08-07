@@ -13,21 +13,21 @@ namespace Autobahn.LearningResource.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefLearningResourceInteractionMode"> List
+        /// The complete <see cref="RefLearningResourceInteractionModeModel"> List
          /// </summary>
-        public static List<RefLearningResourceInteractionMode> RefLearningResourceInteractionModeList = new List<RefLearningResourceInteractionMode>
+        public static List<RefLearningResourceInteractionModeModel> RefLearningResourceInteractionModeList = new List<RefLearningResourceInteractionModeModel>
         {
-            new RefLearningResourceInteractionMode { Id=Guid.Parse("eab1de82-3b67-447c-9666-937fe96e4ca7"), Code="Asynchronous", Description="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", Definition="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLearningResourceInteractionMode { Id=Guid.Parse("a4b399b6-a2ee-4d91-a39e-f6c9eac8d038"), Code="Synchronous", Description="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", Definition="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceInteractionMode { Id=Guid.Parse("7ccd3bb0-9f0b-41c8-acc6-0128f86a95e7"), Code="Asynchronous", Description="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", Definition="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceInteractionMode { Id=Guid.Parse("652e6341-6c2d-436f-883d-2cc9e4713b22"), Code="Synchronous", Description="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", Definition="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefLearningResourceInteractionMode Pick List
+        /// The Reference RefLearningResourceInteractionMode Pick List
          /// </summary>
-        public static List<RefLearningResourceInteractionMode> RefLearningResourceInteractionModePickList = new List<RefLearningResourceInteractionMode>
+        public static List<ReferencePickListItemViewModel> RefLearningResourceInteractionModeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefLearningResourceInteractionMode { Id=Guid.Parse("eab1de82-3b67-447c-9666-937fe96e4ca7"), Code="Asynchronous", Description="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLearningResourceInteractionMode { Id=Guid.Parse("a4b399b6-a2ee-4d91-a39e-f6c9eac8d038"), Code="Synchronous", Description="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLearningResourceInteractionMode { Id=Guid.Parse("7ccd3bb0-9f0b-41c8-acc6-0128f86a95e7"), Description="Student-oriented teaching and learning which is not organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLearningResourceInteractionMode { Id=Guid.Parse("652e6341-6c2d-436f-883d-2cc9e4713b22"), Description="Group-oriented teaching and learning organized around participants interacting at the same time and in the same space.", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

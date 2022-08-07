@@ -13,16 +13,16 @@ namespace Autobahn.LearningResource.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefLearningResourceDigitalMediaSubType"> List
+        /// The complete <see cref="RefLearningResourceDigitalMediaSubTypeModel"> List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypeList = new List<RefLearningResourceDigitalMediaSubType>
+        public static List<RefLearningResourceDigitalMediaSubTypeModel> RefLearningResourceDigitalMediaSubTypeList = new List<RefLearningResourceDigitalMediaSubTypeModel>
         {
         };
 
         /// <summary>
-        /// The RefLearningResourceDigitalMediaSubType Pick List
+        /// The Reference RefLearningResourceDigitalMediaSubType Pick List
          /// </summary>
-        public static List<RefLearningResourceDigitalMediaSubType> RefLearningResourceDigitalMediaSubTypePickList = new List<RefLearningResourceDigitalMediaSubType>
+        public static List<ReferencePickListItemViewModel> RefLearningResourceDigitalMediaSubTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

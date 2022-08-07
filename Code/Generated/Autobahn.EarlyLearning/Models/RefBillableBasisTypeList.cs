@@ -13,23 +13,23 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefBillableBasisType"> List
+        /// The complete <see cref="RefBillableBasisTypeModel"> List
          /// </summary>
-        public static List<RefBillableBasisType> RefBillableBasisTypeList = new List<RefBillableBasisType>
+        public static List<RefBillableBasisTypeModel> RefBillableBasisTypeList = new List<RefBillableBasisTypeModel>
         {
-            new RefBillableBasisType { Id=Guid.Parse("f3d9c8ef-757e-4af9-a0fd-25f15724e2d7"), Code="FaceToFaceContact", Description="Face-to-Face Contact", Definition="Face-to-Face Contact is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBillableBasisType { Id=Guid.Parse("4068cdd3-0197-4b85-a7c9-7d49aaf200db"), Code="EventBased", Description="Event-based", Definition="Event-based is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBillableBasisType { Id=Guid.Parse("a0042b0e-a891-4d57-8d39-5ed1c2eb24ca"), Code="TimeBased", Description="Time-based", Definition="Time-based is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBillableBasisType { Id=Guid.Parse("f49b4fbf-dc3c-4075-8f0e-a16882100283"), Code="FaceToFaceContact", Description="Face-to-Face Contact", Definition="Face-to-Face Contact is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBillableBasisType { Id=Guid.Parse("70862ea0-4696-4a14-95fb-363689638b30"), Code="EventBased", Description="Event-based", Definition="Event-based is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBillableBasisType { Id=Guid.Parse("b5d2618d-d18e-46b5-9046-238894f4a28a"), Code="TimeBased", Description="Time-based", Definition="Time-based is specified as the event/action that results in a billable action.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefBillableBasisType Pick List
+        /// The Reference RefBillableBasisType Pick List
          /// </summary>
-        public static List<RefBillableBasisType> RefBillableBasisTypePickList = new List<RefBillableBasisType>
+        public static List<ReferencePickListItemViewModel> RefBillableBasisTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefBillableBasisType { Id=Guid.Parse("f3d9c8ef-757e-4af9-a0fd-25f15724e2d7"), Code="FaceToFaceContact", Description="Face-to-Face Contact", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBillableBasisType { Id=Guid.Parse("4068cdd3-0197-4b85-a7c9-7d49aaf200db"), Code="EventBased", Description="Event-based", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBillableBasisType { Id=Guid.Parse("a0042b0e-a891-4d57-8d39-5ed1c2eb24ca"), Code="TimeBased", Description="Time-based", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBillableBasisType { Id=Guid.Parse("f49b4fbf-dc3c-4075-8f0e-a16882100283"), Description="Face-to-Face Contact", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBillableBasisType { Id=Guid.Parse("70862ea0-4696-4a14-95fb-363689638b30"), Description="Event-based", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBillableBasisType { Id=Guid.Parse("b5d2618d-d18e-46b5-9046-238894f4a28a"), Description="Time-based", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

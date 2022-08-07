@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ServicesReceivedView : ContentPage
     {
         /// <summary>
-        /// Inject the ServicesReceivedViewModel as the data context for the view
+        /// Inject the IServicesReceivedViewModel as the data context for the view
         /// </summary>
-        public ServicesReceivedView(ServicesReceivedViewModel vm)
+        public ServicesReceivedView(IServicesReceivedViewModel vm)
         {
             BindingContext  = vm;
         }

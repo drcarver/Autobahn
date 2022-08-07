@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class TeacherEducationCredentialExamView : ContentPage
     {
         /// <summary>
-        /// Inject the TeacherEducationCredentialExamViewModel as the data context for the view
+        /// Inject the ITeacherEducationCredentialExamViewModel as the data context for the view
         /// </summary>
-        public TeacherEducationCredentialExamView(TeacherEducationCredentialExamViewModel vm)
+        public TeacherEducationCredentialExamView(ITeacherEducationCredentialExamViewModel vm)
         {
             BindingContext  = vm;
         }

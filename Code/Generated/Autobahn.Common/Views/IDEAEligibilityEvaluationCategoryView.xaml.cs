@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IDEAEligibilityEvaluationCategoryView : ContentPage
     {
         /// <summary>
-        /// Inject the IDEAEligibilityEvaluationCategoryViewModel as the data context for the view
+        /// Inject the IIDEAEligibilityEvaluationCategoryViewModel as the data context for the view
         /// </summary>
-        public IDEAEligibilityEvaluationCategoryView(IDEAEligibilityEvaluationCategoryViewModel vm)
+        public IDEAEligibilityEvaluationCategoryView(IIDEAEligibilityEvaluationCategoryViewModel vm)
         {
             BindingContext  = vm;
         }

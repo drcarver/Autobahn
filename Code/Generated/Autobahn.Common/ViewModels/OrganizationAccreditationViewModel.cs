@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The OrganizationAccreditationViewModel
      /// </summary>
-    public partial class OrganizationAccreditationViewModel : ViewModelBase, Interfaces.IOrganizationAccreditation
+    public partial class OrganizationAccreditationViewModel : ViewModelBase, Interfaces.IOrganizationAccreditationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

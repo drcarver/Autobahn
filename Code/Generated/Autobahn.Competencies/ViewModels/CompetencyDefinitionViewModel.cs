@@ -11,7 +11,7 @@ namespace Autobahn.Competencies.ViewModels
      /// <summary>
      /// The CompetencyDefinitionViewModel
      /// </summary>
-    public partial class CompetencyDefinitionViewModel : ViewModelBase, Interfaces.ICompetencyDefinition
+    public partial class CompetencyDefinitionViewModel : ViewModelBase, Interfaces.ICompetencyDefinitionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

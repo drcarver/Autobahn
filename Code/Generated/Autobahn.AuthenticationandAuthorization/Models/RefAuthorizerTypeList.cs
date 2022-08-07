@@ -13,27 +13,27 @@ namespace Autobahn.AuthenticationandAuthorization.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAuthorizerType"> List
+        /// The complete <see cref="RefAuthorizerTypeModel"> List
          /// </summary>
-        public static List<RefAuthorizerType> RefAuthorizerTypeList = new List<RefAuthorizerType>
+        public static List<RefAuthorizerTypeModel> RefAuthorizerTypeList = new List<RefAuthorizerTypeModel>
         {
-            new RefAuthorizerType { Id=Guid.Parse("0c6de0e4-b9e8-46c4-8fc1-5f9c4604ac77"), Code="LEARepresentative", Description="LEA Representative", Definition="LEA Representative is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("7aa995ab-616b-4ef4-8e91-f752ffc6724c"), Code="OutsideAgencySupportRepresentative", Description="Outside Agency Support Representative", Definition="Outside Agency Support Representative is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("afaa8733-885a-4600-84c3-76bf851b2f7a"), Code="Parent/Guardian", Description="Parent/Guardian", Definition="Parent/Guardian is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("53a18133-fa4e-4f95-ae46-245137924ba1"), Code="Staff", Description="Staff", Definition="Staff is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("efae7b80-1367-47be-a07e-dc9bf8a41d92"), Code="Student", Description="Student", Definition="Student is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("03fcc6d9-d3a2-46ee-9d8c-6dbb808cc445"), Code="LEARepresentative", Description="LEA Representative", Definition="LEA Representative is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("6f37d01c-148d-43e2-82b2-f7b5d9308539"), Code="OutsideAgencySupportRepresentative", Description="Outside Agency Support Representative", Definition="Outside Agency Support Representative is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("a76ba5bb-98fe-476d-aa1a-b3307df1a6b2"), Code="Parent/Guardian", Description="Parent/Guardian", Definition="Parent/Guardian is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("53642377-1b6b-49b4-94cc-c14522d30ad6"), Code="Staff", Description="Staff", Definition="Staff is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("e17f073c-109c-4bc4-9834-c75e5d2390a0"), Code="Student", Description="Student", Definition="Student is specified as the type of person who authorized the decision or document.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefAuthorizerType Pick List
+        /// The Reference RefAuthorizerType Pick List
          /// </summary>
-        public static List<RefAuthorizerType> RefAuthorizerTypePickList = new List<RefAuthorizerType>
+        public static List<ReferencePickListItemViewModel> RefAuthorizerTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAuthorizerType { Id=Guid.Parse("0c6de0e4-b9e8-46c4-8fc1-5f9c4604ac77"), Code="LEARepresentative", Description="LEA Representative", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("7aa995ab-616b-4ef4-8e91-f752ffc6724c"), Code="OutsideAgencySupportRepresentative", Description="Outside Agency Support Representative", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("afaa8733-885a-4600-84c3-76bf851b2f7a"), Code="Parent/Guardian", Description="Parent/Guardian", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("53a18133-fa4e-4f95-ae46-245137924ba1"), Code="Staff", Description="Staff", SortOrder=Convert.ToDecimal("") },
-            new RefAuthorizerType { Id=Guid.Parse("efae7b80-1367-47be-a07e-dc9bf8a41d92"), Code="Student", Description="Student", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("03fcc6d9-d3a2-46ee-9d8c-6dbb808cc445"), Description="LEA Representative", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("6f37d01c-148d-43e2-82b2-f7b5d9308539"), Description="Outside Agency Support Representative", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("a76ba5bb-98fe-476d-aa1a-b3307df1a6b2"), Description="Parent/Guardian", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("53642377-1b6b-49b4-94cc-c14522d30ad6"), Description="Staff", SortOrder=Convert.ToDecimal("") },
+            new RefAuthorizerType { Id=Guid.Parse("e17f073c-109c-4bc4-9834-c75e5d2390a0"), Description="Student", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

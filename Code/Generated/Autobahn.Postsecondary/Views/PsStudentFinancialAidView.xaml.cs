@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsStudentFinancialAidView : ContentPage
     {
         /// <summary>
-        /// Inject the PsStudentFinancialAidViewModel as the data context for the view
+        /// Inject the IPsStudentFinancialAidViewModel as the data context for the view
         /// </summary>
-        public PsStudentFinancialAidView(PsStudentFinancialAidViewModel vm)
+        public PsStudentFinancialAidView(IPsStudentFinancialAidViewModel vm)
         {
             BindingContext  = vm;
         }

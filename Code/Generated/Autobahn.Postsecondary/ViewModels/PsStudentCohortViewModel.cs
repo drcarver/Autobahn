@@ -11,7 +11,7 @@ namespace Autobahn.Postsecondary.ViewModels
      /// <summary>
      /// The PsStudentCohortViewModel
      /// </summary>
-    public partial class PsStudentCohortViewModel : ViewModelBase, Interfaces.IPsStudentCohort
+    public partial class PsStudentCohortViewModel : ViewModelBase, Interfaces.IPsStudentCohortViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

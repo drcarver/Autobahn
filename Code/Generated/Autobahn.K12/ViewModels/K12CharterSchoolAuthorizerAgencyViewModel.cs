@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12CharterSchoolAuthorizerAgencyViewModel
      /// </summary>
-    public partial class K12CharterSchoolAuthorizerAgencyViewModel : ViewModelBase, Interfaces.IK12CharterSchoolAuthorizerAgency
+    public partial class K12CharterSchoolAuthorizerAgencyViewModel : ViewModelBase, Interfaces.IK12CharterSchoolAuthorizerAgencyViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

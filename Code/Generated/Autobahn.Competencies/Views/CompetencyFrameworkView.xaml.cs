@@ -14,9 +14,9 @@ namespace Autobahn.Competencies.Views
     public partial class CompetencyFrameworkView : ContentPage
     {
         /// <summary>
-        /// Inject the CompetencyFrameworkViewModel as the data context for the view
+        /// Inject the ICompetencyFrameworkViewModel as the data context for the view
         /// </summary>
-        public CompetencyFrameworkView(CompetencyFrameworkViewModel vm)
+        public CompetencyFrameworkView(ICompetencyFrameworkViewModel vm)
         {
             BindingContext  = vm;
         }

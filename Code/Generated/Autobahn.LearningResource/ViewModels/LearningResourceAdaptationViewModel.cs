@@ -11,7 +11,7 @@ namespace Autobahn.LearningResource.ViewModels
      /// <summary>
      /// The LearningResourceAdaptationViewModel
      /// </summary>
-    public partial class LearningResourceAdaptationViewModel : ViewModelBase, Interfaces.ILearningResourceAdaptation
+    public partial class LearningResourceAdaptationViewModel : ViewModelBase, Interfaces.ILearningResourceAdaptationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

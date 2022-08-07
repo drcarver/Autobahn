@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12SeaFederalFundsView : ContentPage
     {
         /// <summary>
-        /// Inject the K12SeaFederalFundsViewModel as the data context for the view
+        /// Inject the IK12SeaFederalFundsViewModel as the data context for the view
         /// </summary>
-        public K12SeaFederalFundsView(K12SeaFederalFundsViewModel vm)
+        public K12SeaFederalFundsView(IK12SeaFederalFundsViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -11,7 +11,7 @@ namespace Autobahn.LearningResource.ViewModels
      /// <summary>
      /// The LearningResourcePeerRatingViewModel
      /// </summary>
-    public partial class LearningResourcePeerRatingViewModel : ViewModelBase, Interfaces.ILearningResourcePeerRating
+    public partial class LearningResourcePeerRatingViewModel : ViewModelBase, Interfaces.ILearningResourcePeerRatingViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

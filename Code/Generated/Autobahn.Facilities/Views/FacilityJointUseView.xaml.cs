@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class FacilityJointUseView : ContentPage
     {
         /// <summary>
-        /// Inject the FacilityJointUseViewModel as the data context for the view
+        /// Inject the IFacilityJointUseViewModel as the data context for the view
         /// </summary>
-        public FacilityJointUseView(FacilityJointUseViewModel vm)
+        public FacilityJointUseView(IFacilityJointUseViewModel vm)
         {
             BindingContext  = vm;
         }

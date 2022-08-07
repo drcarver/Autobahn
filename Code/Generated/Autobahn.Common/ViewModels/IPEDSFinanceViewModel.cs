@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IPEDSFinanceViewModel
      /// </summary>
-    public partial class IPEDSFinanceViewModel : ViewModelBase, Interfaces.IIPEDSFinance
+    public partial class IPEDSFinanceViewModel : ViewModelBase, Interfaces.IIPEDSFinanceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -14,9 +14,9 @@ namespace Autobahn.AdultEducation.Views
     public partial class AeProviderView : ContentPage
     {
         /// <summary>
-        /// Inject the AeProviderViewModel as the data context for the view
+        /// Inject the IAeProviderViewModel as the data context for the view
         /// </summary>
-        public AeProviderView(AeProviderViewModel vm)
+        public AeProviderView(IAeProviderViewModel vm)
         {
             BindingContext  = vm;
         }

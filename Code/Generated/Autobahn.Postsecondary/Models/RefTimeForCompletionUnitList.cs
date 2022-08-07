@@ -13,16 +13,16 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTimeForCompletionUnit"> List
+        /// The complete <see cref="RefTimeForCompletionUnitModel"> List
          /// </summary>
-        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitList = new List<RefTimeForCompletionUnit>
+        public static List<RefTimeForCompletionUnitModel> RefTimeForCompletionUnitList = new List<RefTimeForCompletionUnitModel>
         {
         };
 
         /// <summary>
-        /// The RefTimeForCompletionUnit Pick List
+        /// The Reference RefTimeForCompletionUnit Pick List
          /// </summary>
-        public static List<RefTimeForCompletionUnit> RefTimeForCompletionUnitPickList = new List<RefTimeForCompletionUnit>
+        public static List<ReferencePickListItemViewModel> RefTimeForCompletionUnitViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

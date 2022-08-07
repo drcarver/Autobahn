@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELQualityRatingImprovementView : ContentPage
     {
         /// <summary>
-        /// Inject the ELQualityRatingImprovementViewModel as the data context for the view
+        /// Inject the IELQualityRatingImprovementViewModel as the data context for the view
         /// </summary>
-        public ELQualityRatingImprovementView(ELQualityRatingImprovementViewModel vm)
+        public ELQualityRatingImprovementView(IELQualityRatingImprovementViewModel vm)
         {
             BindingContext  = vm;
         }

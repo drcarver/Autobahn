@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonHealthViewModel
      /// </summary>
-    public partial class PersonHealthViewModel : ViewModelBase, Interfaces.IPersonHealth
+    public partial class PersonHealthViewModel : ViewModelBase, Interfaces.IPersonHealthViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

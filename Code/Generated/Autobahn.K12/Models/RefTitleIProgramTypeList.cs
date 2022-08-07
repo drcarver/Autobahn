@@ -13,25 +13,25 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTitleIProgramType"> List
+        /// The complete <see cref="RefTitleIProgramTypeModel"> List
          /// </summary>
-        public static List<RefTitleIProgramType> RefTitleIProgramTypeList = new List<RefTitleIProgramType>
+        public static List<RefTitleIProgramTypeModel> RefTitleIProgramTypeList = new List<RefTitleIProgramTypeModel>
         {
-            new RefTitleIProgramType { Id=Guid.Parse("3117ab0f-8147-4d71-970b-f6cadfcc3489"), Code="TargetedAssistanceProgram", Description="Public Targeted Assistance Program", Definition="The type of Title I program offered in the school or district Is Public Targeted Assistance Program", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("a231ef5a-be09-49e8-8ac4-22b0d3a995cf"), Code="SchoolwideProgram", Description="Public Schoolwide Program", Definition="The type of Title I program offered in the school or district Is Public Schoolwide Program", SortOrder=Convert.ToDecimal("2.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("e8d42575-7728-40d4-98cf-699194a87846"), Code="PrivateSchoolStudents", Description="Private School Students Participating", Definition="The type of Title I program offered in the school or district Is Private School Students Participating", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("aef35d48-bf04-4119-b4d6-c6d966803839"), Code="LocalNeglectedProgram", Description="Local Neglected Program", Definition="The type of Title I program offered in the school or district Is Local Neglected Program", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("03fe959f-477d-4827-897a-100ad1fa4610"), Code="TargetedAssistanceProgram", Description="Public Targeted Assistance Program", Definition="The type of Title I program offered in the school or district Is Public Targeted Assistance Program", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("0a4b3757-6d53-4edf-adc6-88f3cc6b1b3a"), Code="SchoolwideProgram", Description="Public Schoolwide Program", Definition="The type of Title I program offered in the school or district Is Public Schoolwide Program", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("7a43fe71-ca41-46fb-be5e-de718f1826a8"), Code="PrivateSchoolStudents", Description="Private School Students Participating", Definition="The type of Title I program offered in the school or district Is Private School Students Participating", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("c955befb-03f8-4340-9cc8-848cb6d2a7aa"), Code="LocalNeglectedProgram", Description="Local Neglected Program", Definition="The type of Title I program offered in the school or district Is Local Neglected Program", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefTitleIProgramType Pick List
+        /// The Reference RefTitleIProgramType Pick List
          /// </summary>
-        public static List<RefTitleIProgramType> RefTitleIProgramTypePickList = new List<RefTitleIProgramType>
+        public static List<ReferencePickListItemViewModel> RefTitleIProgramTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefTitleIProgramType { Id=Guid.Parse("3117ab0f-8147-4d71-970b-f6cadfcc3489"), Code="TargetedAssistanceProgram", Description="Public Targeted Assistance Program", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("a231ef5a-be09-49e8-8ac4-22b0d3a995cf"), Code="SchoolwideProgram", Description="Public Schoolwide Program", SortOrder=Convert.ToDecimal("2.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("e8d42575-7728-40d4-98cf-699194a87846"), Code="PrivateSchoolStudents", Description="Private School Students Participating", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTitleIProgramType { Id=Guid.Parse("aef35d48-bf04-4119-b4d6-c6d966803839"), Code="LocalNeglectedProgram", Description="Local Neglected Program", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("03fe959f-477d-4827-897a-100ad1fa4610"), Description="Public Targeted Assistance Program", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("0a4b3757-6d53-4edf-adc6-88f3cc6b1b3a"), Description="Public Schoolwide Program", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("7a43fe71-ca41-46fb-be5e-de718f1826a8"), Description="Private School Students Participating", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTitleIProgramType { Id=Guid.Parse("c955befb-03f8-4340-9cc8-848cb6d2a7aa"), Description="Local Neglected Program", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

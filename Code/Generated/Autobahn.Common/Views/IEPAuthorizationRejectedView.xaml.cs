@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IEPAuthorizationRejectedView : ContentPage
     {
         /// <summary>
-        /// Inject the IEPAuthorizationRejectedViewModel as the data context for the view
+        /// Inject the IIEPAuthorizationRejectedViewModel as the data context for the view
         /// </summary>
-        public IEPAuthorizationRejectedView(IEPAuthorizationRejectedViewModel vm)
+        public IEPAuthorizationRejectedView(IIEPAuthorizationRejectedViewModel vm)
         {
             BindingContext  = vm;
         }

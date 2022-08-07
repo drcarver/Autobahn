@@ -14,9 +14,9 @@ namespace Autobahn.CareerandTechnical.Views
     public partial class CteCourseView : ContentPage
     {
         /// <summary>
-        /// Inject the CteCourseViewModel as the data context for the view
+        /// Inject the ICteCourseViewModel as the data context for the view
         /// </summary>
-        public CteCourseView(CteCourseViewModel vm)
+        public CteCourseView(ICteCourseViewModel vm)
         {
             BindingContext  = vm;
         }

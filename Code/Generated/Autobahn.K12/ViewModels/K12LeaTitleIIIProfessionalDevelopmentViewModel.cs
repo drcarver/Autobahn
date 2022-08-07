@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12LeaTitleIIIProfessionalDevelopmentViewModel
      /// </summary>
-    public partial class K12LeaTitleIIIProfessionalDevelopmentViewModel : ViewModelBase, Interfaces.IK12LeaTitleIIIProfessionalDevelopment
+    public partial class K12LeaTitleIIIProfessionalDevelopmentViewModel : ViewModelBase, Interfaces.IK12LeaTitleIIIProfessionalDevelopmentViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

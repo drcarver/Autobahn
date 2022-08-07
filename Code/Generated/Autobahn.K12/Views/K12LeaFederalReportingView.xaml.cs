@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaFederalReportingView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaFederalReportingViewModel as the data context for the view
+        /// Inject the IK12LeaFederalReportingViewModel as the data context for the view
         /// </summary>
-        public K12LeaFederalReportingView(K12LeaFederalReportingViewModel vm)
+        public K12LeaFederalReportingView(IK12LeaFederalReportingViewModel vm)
         {
             BindingContext  = vm;
         }

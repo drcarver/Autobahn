@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The AssessmentNeedBrailleViewModel
      /// </summary>
-    public partial class AssessmentNeedBrailleViewModel : ViewModelBase, Interfaces.IAssessmentNeedBraille
+    public partial class AssessmentNeedBrailleViewModel : ViewModelBase, Interfaces.IAssessmentNeedBrailleViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

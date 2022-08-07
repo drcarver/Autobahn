@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class FacilityDesignConstructionView : ContentPage
     {
         /// <summary>
-        /// Inject the FacilityDesignConstructionViewModel as the data context for the view
+        /// Inject the IFacilityDesignConstructionViewModel as the data context for the view
         /// </summary>
-        public FacilityDesignConstructionView(FacilityDesignConstructionViewModel vm)
+        public FacilityDesignConstructionView(IFacilityDesignConstructionViewModel vm)
         {
             BindingContext  = vm;
         }

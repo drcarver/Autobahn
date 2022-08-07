@@ -13,25 +13,25 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefEmploymentContractType"> List
+        /// The complete <see cref="RefEmploymentContractTypeModel"> List
          /// </summary>
-        public static List<RefEmploymentContractType> RefEmploymentContractTypeList = new List<RefEmploymentContractType>
+        public static List<RefEmploymentContractTypeModel> RefEmploymentContractTypeList = new List<RefEmploymentContractTypeModel>
         {
-            new RefEmploymentContractType { Id=Guid.Parse("7e3242cc-70bb-42fe-8755-a0a63ccb209a"), Code="Multi-year", Description="Multi-year", Definition="Multi-year employment contract is specified.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("50851c0f-982a-49b8-bc61-245e03401bdd"), Code="Annual", Description="Annual", Definition="Annual employment contract is specified.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("c8cdc6fd-6b6c-458b-80c5-ed25349dd001"), Code="LessThanAnnual", Description="Less than annual", Definition="Less than annual employment contract is specified.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("fd6d7f83-ccdb-49eb-b4d7-3d531431ed6a"), Code="NotApplicable", Description="Not applicable", Definition="Not applicable is specified as the contact type.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("64996d2a-b619-4aa5-9292-37494444bdd9"), Code="Multi-year", Description="Multi-year", Definition="Multi-year employment contract is specified.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("54cb0e84-6a66-4a26-84f6-44bd2275f0eb"), Code="Annual", Description="Annual", Definition="Annual employment contract is specified.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("bfed1284-f49a-4e46-b76e-54254de4f173"), Code="LessThanAnnual", Description="Less than annual", Definition="Less than annual employment contract is specified.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("a213604c-9e1f-44ab-94f5-4bd2d5ae04d6"), Code="NotApplicable", Description="Not applicable", Definition="Not applicable is specified as the contact type.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefEmploymentContractType Pick List
+        /// The Reference RefEmploymentContractType Pick List
          /// </summary>
-        public static List<RefEmploymentContractType> RefEmploymentContractTypePickList = new List<RefEmploymentContractType>
+        public static List<ReferencePickListItemViewModel> RefEmploymentContractTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefEmploymentContractType { Id=Guid.Parse("7e3242cc-70bb-42fe-8755-a0a63ccb209a"), Code="Multi-year", Description="Multi-year", SortOrder=Convert.ToDecimal("1.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("50851c0f-982a-49b8-bc61-245e03401bdd"), Code="Annual", Description="Annual", SortOrder=Convert.ToDecimal("2.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("c8cdc6fd-6b6c-458b-80c5-ed25349dd001"), Code="LessThanAnnual", Description="Less than annual", SortOrder=Convert.ToDecimal("3.00") },
-            new RefEmploymentContractType { Id=Guid.Parse("fd6d7f83-ccdb-49eb-b4d7-3d531431ed6a"), Code="NotApplicable", Description="Not applicable", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("64996d2a-b619-4aa5-9292-37494444bdd9"), Description="Multi-year", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("54cb0e84-6a66-4a26-84f6-44bd2275f0eb"), Description="Annual", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("bfed1284-f49a-4e46-b76e-54254de4f173"), Description="Less than annual", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEmploymentContractType { Id=Guid.Parse("a213604c-9e1f-44ab-94f5-4bd2d5ae04d6"), Description="Not applicable", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationFinancialView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationFinancialViewModel as the data context for the view
+        /// Inject the IOrganizationFinancialViewModel as the data context for the view
         /// </summary>
-        public OrganizationFinancialView(OrganizationFinancialViewModel vm)
+        public OrganizationFinancialView(IOrganizationFinancialViewModel vm)
         {
             BindingContext  = vm;
         }

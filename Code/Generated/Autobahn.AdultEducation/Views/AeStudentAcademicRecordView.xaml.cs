@@ -14,9 +14,9 @@ namespace Autobahn.AdultEducation.Views
     public partial class AeStudentAcademicRecordView : ContentPage
     {
         /// <summary>
-        /// Inject the AeStudentAcademicRecordViewModel as the data context for the view
+        /// Inject the IAeStudentAcademicRecordViewModel as the data context for the view
         /// </summary>
-        public AeStudentAcademicRecordView(AeStudentAcademicRecordViewModel vm)
+        public AeStudentAcademicRecordView(IAeStudentAcademicRecordViewModel vm)
         {
             BindingContext  = vm;
         }

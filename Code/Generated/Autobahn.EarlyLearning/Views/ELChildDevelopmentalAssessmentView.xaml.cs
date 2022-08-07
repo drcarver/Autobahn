@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildDevelopmentalAssessmentView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildDevelopmentalAssessmentViewModel as the data context for the view
+        /// Inject the IELChildDevelopmentalAssessmentViewModel as the data context for the view
         /// </summary>
-        public ELChildDevelopmentalAssessmentView(ELChildDevelopmentalAssessmentViewModel vm)
+        public ELChildDevelopmentalAssessmentView(IELChildDevelopmentalAssessmentViewModel vm)
         {
             BindingContext  = vm;
         }

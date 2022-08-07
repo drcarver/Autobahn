@@ -3,7 +3,6 @@
 //* FileName:   RefCteGraduationRateInclusionList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCteGraduationRateInclusion"> List
+        /// The complete <see cref="RefCteGraduationRateInclusionModel"> List
          /// </summary>
-        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionList = new List<RefCteGraduationRateInclusion>
+        public static List<RefCteGraduationRateInclusionModel> RefCteGraduationRateInclusionList = new List<RefCteGraduationRateInclusionModel>
         {
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("4d82ca07-7b9b-4134-a0bf-4c321ca58c53"), Code="IncludedAsGraduated", Description="Included in computation as graduated  ", Definition="CTE concentrators are included in the state's computation of its graduation rate as graduated.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("fe46de28-907a-4b7a-a0f3-4c20066e66ca"), Code="NotIncludedAsGraduated", Description="Included in computation as not graduated.", Definition="CTE concentrators are included in the state's computation of its graduation rate as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("751903f2-cb9c-4d03-98cb-059adb97738b"), Code="IncludedAsGraduated", Description="Included in computation as graduated  ", Definition="CTE concentrators are included in the state's computation of its graduation rate as graduated.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("056aef72-b15e-4847-819e-303d027f5f06"), Code="NotIncludedAsGraduated", Description="Included in computation as not graduated.", Definition="CTE concentrators are included in the state's computation of its graduation rate as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefCteGraduationRateInclusion Pick List
+        /// The Reference RefCteGraduationRateInclusion Pick List
          /// </summary>
-        public static List<RefCteGraduationRateInclusion> RefCteGraduationRateInclusionPickList = new List<RefCteGraduationRateInclusion>
+        public static List<ReferencePickListItemViewModel> RefCteGraduationRateInclusionViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("4d82ca07-7b9b-4134-a0bf-4c321ca58c53"), Code="IncludedAsGraduated", Description="Included in computation as graduated  ", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCteGraduationRateInclusion { Id=Guid.Parse("fe46de28-907a-4b7a-a0f3-4c20066e66ca"), Code="NotIncludedAsGraduated", Description="Included in computation as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("751903f2-cb9c-4d03-98cb-059adb97738b"), Description="Included in computation as graduated  ", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCteGraduationRateInclusion { Id=Guid.Parse("056aef72-b15e-4847-819e-303d027f5f06"), Description="Included in computation as not graduated.", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

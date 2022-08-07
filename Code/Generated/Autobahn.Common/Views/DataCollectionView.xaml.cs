@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class DataCollectionView : ContentPage
     {
         /// <summary>
-        /// Inject the DataCollectionViewModel as the data context for the view
+        /// Inject the IDataCollectionViewModel as the data context for the view
         /// </summary>
-        public DataCollectionView(DataCollectionViewModel vm)
+        public DataCollectionView(IDataCollectionViewModel vm)
         {
             BindingContext  = vm;
         }

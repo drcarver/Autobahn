@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PDActivityEducationLevelView : ContentPage
     {
         /// <summary>
-        /// Inject the PDActivityEducationLevelViewModel as the data context for the view
+        /// Inject the IPDActivityEducationLevelViewModel as the data context for the view
         /// </summary>
-        public PDActivityEducationLevelView(PDActivityEducationLevelViewModel vm)
+        public PDActivityEducationLevelView(IPDActivityEducationLevelViewModel vm)
         {
             BindingContext  = vm;
         }

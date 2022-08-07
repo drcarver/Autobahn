@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationAccreditationView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationAccreditationViewModel as the data context for the view
+        /// Inject the IOrganizationAccreditationViewModel as the data context for the view
         /// </summary>
-        public OrganizationAccreditationView(OrganizationAccreditationViewModel vm)
+        public OrganizationAccreditationView(IOrganizationAccreditationViewModel vm)
         {
             BindingContext  = vm;
         }

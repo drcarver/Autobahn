@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12SchoolIndicatorStatusViewModel
      /// </summary>
-    public partial class K12SchoolIndicatorStatusViewModel : ViewModelBase, Interfaces.IK12SchoolIndicatorStatus
+    public partial class K12SchoolIndicatorStatusViewModel : ViewModelBase, Interfaces.IK12SchoolIndicatorStatusViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

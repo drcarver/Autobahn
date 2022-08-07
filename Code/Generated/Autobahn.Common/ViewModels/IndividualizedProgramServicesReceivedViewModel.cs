@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IndividualizedProgramServicesReceivedViewModel
      /// </summary>
-    public partial class IndividualizedProgramServicesReceivedViewModel : ViewModelBase, Interfaces.IIndividualizedProgramServicesReceived
+    public partial class IndividualizedProgramServicesReceivedViewModel : ViewModelBase, Interfaces.IIndividualizedProgramServicesReceivedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

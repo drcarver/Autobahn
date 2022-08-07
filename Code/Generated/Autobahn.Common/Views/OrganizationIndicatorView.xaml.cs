@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationIndicatorView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationIndicatorViewModel as the data context for the view
+        /// Inject the IOrganizationIndicatorViewModel as the data context for the view
         /// </summary>
-        public OrganizationIndicatorView(OrganizationIndicatorViewModel vm)
+        public OrganizationIndicatorView(IOrganizationIndicatorViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.AdultEducation.Views
     public partial class AeStudentEmploymentView : ContentPage
     {
         /// <summary>
-        /// Inject the AeStudentEmploymentViewModel as the data context for the view
+        /// Inject the IAeStudentEmploymentViewModel as the data context for the view
         /// </summary>
-        public AeStudentEmploymentView(AeStudentEmploymentViewModel vm)
+        public AeStudentEmploymentView(IAeStudentEmploymentViewModel vm)
         {
             BindingContext  = vm;
         }

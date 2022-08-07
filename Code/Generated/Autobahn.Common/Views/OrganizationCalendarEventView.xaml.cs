@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationCalendarEventView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationCalendarEventViewModel as the data context for the view
+        /// Inject the IOrganizationCalendarEventViewModel as the data context for the view
         /// </summary>
-        public OrganizationCalendarEventView(OrganizationCalendarEventViewModel vm)
+        public OrganizationCalendarEventView(IOrganizationCalendarEventViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentNeedBrailleView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentNeedBrailleViewModel as the data context for the view
+        /// Inject the IAssessmentNeedBrailleViewModel as the data context for the view
         /// </summary>
-        public AssessmentNeedBrailleView(AssessmentNeedBrailleViewModel vm)
+        public AssessmentNeedBrailleView(IAssessmentNeedBrailleViewModel vm)
         {
             BindingContext  = vm;
         }

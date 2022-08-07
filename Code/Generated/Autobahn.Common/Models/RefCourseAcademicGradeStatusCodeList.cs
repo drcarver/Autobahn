@@ -3,7 +3,6 @@
 //* FileName:   RefCourseAcademicGradeStatusCodeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,47 +12,47 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCourseAcademicGradeStatusCode"> List
+        /// The complete <see cref="RefCourseAcademicGradeStatusCodeModel"> List
          /// </summary>
-        public static List<RefCourseAcademicGradeStatusCode> RefCourseAcademicGradeStatusCodeList = new List<RefCourseAcademicGradeStatusCode>
+        public static List<RefCourseAcademicGradeStatusCodeModel> RefCourseAcademicGradeStatusCodeList = new List<RefCourseAcademicGradeStatusCodeModel>
         {
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("0397f8f5-d0ca-4eb9-a5cd-82bdb6bd8497"), Code="AuditedCourse", Description="Audited or visited the course", Definition="Audited or visited the course is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4d36abd4-b46b-4176-9911-fe8d232582b5"), Code="HonorsGrade", Description="Honors grade", Definition="Honors grade is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4c0bebed-e873-42d4-91a4-1b9ebed95f49"), Code="Incomplete", Description="Incomplete", Definition="Incomplete is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4456d1c5-e1f3-4c63-804d-6efd30aeba0e"), Code="IncompleteNotResolvedFail", Description="Incomplete Not Resolved Fail", Definition="Failing/no pass/unsatisfactory grade awarded because incomplete not resolved satisfactorily is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("c5a5b467-558a-4747-a1f4-47da19a59157"), Code="InProgress", Description="In Progress", Definition="Current enrollment course in progress, permanent grade not yet assigned is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("9.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("639d340c-7ea9-4afd-bf5d-e600ed0fe3a5"), Code="NotYetReported", Description="Not Yet Reported", Definition="No grade reported yet by instructor (although the course has ended) is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("11.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a96f5f4d-6910-4281-b260-002fa46bf4fe"), Code="OtherFail", Description="Other Fail", Definition="Other not passing/unsatisfactory grade not described by other options is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("13.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("abb846c9-8789-4819-92bc-537552be92a9"), Code="OtherPass", Description="Other Pass", Definition="Other passing/satisfactory grade not described by other options is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("15.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("921e17ae-4527-4ac7-a389-72f98b21fe77"), Code="PassFailFail", Description="Pass-Fail : Fail", Definition="Failing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("17.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("2aa7164a-c04f-42e2-a3a0-6cef21240307"), Code="PassFailPass", Description="Pass-Fail : Pass", Definition="Passing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("19.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("384ca13c-1e0e-4b94-8da5-3eb06a58194a"), Code="TransferNoGrade", Description="Transfer No Grade", Definition="Transfer credit; grade not carried on receiving institution's transcript is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("21.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("878f5325-06e4-4780-8e35-a92658bc5b76"), Code="Withdrew", Description="Withdrew", Definition="Withdrew is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("23.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("f4ca5b50-f5eb-4b17-b5cf-6abb7f5aab37"), Code="WithdrewFailing", Description="Withdrew failing", Definition="Withdrew failing is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("25.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("e865502e-0556-4df9-9791-bfe2f6528778"), Code="WithdrewNoPenalty", Description="Withdrew No Penalty", Definition="Withdrew without penalty or pass/fail designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("27.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("1ec03c45-7230-44ee-aff3-67a0371e7b85"), Code="WithdrewPassing", Description="Withdrew passing", Definition="Withdrew passing is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("29.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("f199482e-2554-4443-af89-a15521748510"), Code="AuditedCourse", Description="Audited or visited the course", Definition="Audited or visited the course is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("b7bc36c0-59eb-4b20-83a4-16f6f2ff2914"), Code="HonorsGrade", Description="Honors grade", Definition="Honors grade is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("7888c4b5-5b38-4c1d-8331-01c7791396e0"), Code="Incomplete", Description="Incomplete", Definition="Incomplete is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("79efd669-3123-44ea-b7e4-217407bd2ab7"), Code="IncompleteNotResolvedFail", Description="Incomplete Not Resolved Fail", Definition="Failing/no pass/unsatisfactory grade awarded because incomplete not resolved satisfactorily is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("9581c22c-42a7-4fbd-9441-d194a0f14114"), Code="InProgress", Description="In Progress", Definition="Current enrollment course in progress, permanent grade not yet assigned is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("c8fff70c-4d68-4219-96ce-7621b1f8720a"), Code="NotYetReported", Description="Not Yet Reported", Definition="No grade reported yet by instructor (although the course has ended) is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("59f5820d-fe44-4805-8ce3-288e56fe9fec"), Code="OtherFail", Description="Other Fail", Definition="Other not passing/unsatisfactory grade not described by other options is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a1b01640-4d5e-44bc-961c-8b4b60f7fd5e"), Code="OtherPass", Description="Other Pass", Definition="Other passing/satisfactory grade not described by other options is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("15.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("5d9c6362-778c-4ed5-9014-acc4e95ec1c5"), Code="PassFailFail", Description="Pass-Fail : Fail", Definition="Failing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("17.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("3112a30c-837f-49f0-a21d-ca6883de1aaf"), Code="PassFailPass", Description="Pass-Fail : Pass", Definition="Passing grade in a course (credit or non-credit) which is normally, or based on student option, given a pass/fail or satisfactory/unsatisfactory designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("19.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("5571a705-9b54-4a0b-bdcd-bba2895d389d"), Code="TransferNoGrade", Description="Transfer No Grade", Definition="Transfer credit; grade not carried on receiving institution's transcript is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("21.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a5528375-de93-4177-a503-9a9e4c2aa180"), Code="Withdrew", Description="Withdrew", Definition="Withdrew is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("23.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("15f019d7-836f-4a46-a1cb-ac608581c0d0"), Code="WithdrewFailing", Description="Withdrew failing", Definition="Withdrew failing is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("25.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("15adf281-de9b-4094-a705-6f13f1266d1f"), Code="WithdrewNoPenalty", Description="Withdrew No Penalty", Definition="Withdrew without penalty or pass/fail designation is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("27.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("9af84e5c-c410-478e-b4d0-4d60e12e4bab"), Code="WithdrewPassing", Description="Withdrew passing", Definition="Withdrew passing is specified as additional information regarding the context of the given grade.", SortOrder=Convert.ToDecimal("29.00") },
         };
 
         /// <summary>
-        /// The RefCourseAcademicGradeStatusCode Pick List
+        /// The Reference RefCourseAcademicGradeStatusCode Pick List
          /// </summary>
-        public static List<RefCourseAcademicGradeStatusCode> RefCourseAcademicGradeStatusCodePickList = new List<RefCourseAcademicGradeStatusCode>
+        public static List<ReferencePickListItemViewModel> RefCourseAcademicGradeStatusCodeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("0397f8f5-d0ca-4eb9-a5cd-82bdb6bd8497"), Code="AuditedCourse", Description="Audited or visited the course", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4d36abd4-b46b-4176-9911-fe8d232582b5"), Code="HonorsGrade", Description="Honors grade", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4c0bebed-e873-42d4-91a4-1b9ebed95f49"), Code="Incomplete", Description="Incomplete", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("4456d1c5-e1f3-4c63-804d-6efd30aeba0e"), Code="IncompleteNotResolvedFail", Description="Incomplete Not Resolved Fail", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("c5a5b467-558a-4747-a1f4-47da19a59157"), Code="InProgress", Description="In Progress", SortOrder=Convert.ToDecimal("9.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("639d340c-7ea9-4afd-bf5d-e600ed0fe3a5"), Code="NotYetReported", Description="Not Yet Reported", SortOrder=Convert.ToDecimal("11.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a96f5f4d-6910-4281-b260-002fa46bf4fe"), Code="OtherFail", Description="Other Fail", SortOrder=Convert.ToDecimal("13.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("abb846c9-8789-4819-92bc-537552be92a9"), Code="OtherPass", Description="Other Pass", SortOrder=Convert.ToDecimal("15.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("921e17ae-4527-4ac7-a389-72f98b21fe77"), Code="PassFailFail", Description="Pass-Fail : Fail", SortOrder=Convert.ToDecimal("17.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("2aa7164a-c04f-42e2-a3a0-6cef21240307"), Code="PassFailPass", Description="Pass-Fail : Pass", SortOrder=Convert.ToDecimal("19.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("384ca13c-1e0e-4b94-8da5-3eb06a58194a"), Code="TransferNoGrade", Description="Transfer No Grade", SortOrder=Convert.ToDecimal("21.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("878f5325-06e4-4780-8e35-a92658bc5b76"), Code="Withdrew", Description="Withdrew", SortOrder=Convert.ToDecimal("23.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("f4ca5b50-f5eb-4b17-b5cf-6abb7f5aab37"), Code="WithdrewFailing", Description="Withdrew failing", SortOrder=Convert.ToDecimal("25.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("e865502e-0556-4df9-9791-bfe2f6528778"), Code="WithdrewNoPenalty", Description="Withdrew No Penalty", SortOrder=Convert.ToDecimal("27.00") },
-            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("1ec03c45-7230-44ee-aff3-67a0371e7b85"), Code="WithdrewPassing", Description="Withdrew passing", SortOrder=Convert.ToDecimal("29.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("f199482e-2554-4443-af89-a15521748510"), Description="Audited or visited the course", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("b7bc36c0-59eb-4b20-83a4-16f6f2ff2914"), Description="Honors grade", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("7888c4b5-5b38-4c1d-8331-01c7791396e0"), Description="Incomplete", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("79efd669-3123-44ea-b7e4-217407bd2ab7"), Description="Incomplete Not Resolved Fail", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("9581c22c-42a7-4fbd-9441-d194a0f14114"), Description="In Progress", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("c8fff70c-4d68-4219-96ce-7621b1f8720a"), Description="Not Yet Reported", SortOrder=Convert.ToDecimal("11.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("59f5820d-fe44-4805-8ce3-288e56fe9fec"), Description="Other Fail", SortOrder=Convert.ToDecimal("13.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a1b01640-4d5e-44bc-961c-8b4b60f7fd5e"), Description="Other Pass", SortOrder=Convert.ToDecimal("15.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("5d9c6362-778c-4ed5-9014-acc4e95ec1c5"), Description="Pass-Fail : Fail", SortOrder=Convert.ToDecimal("17.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("3112a30c-837f-49f0-a21d-ca6883de1aaf"), Description="Pass-Fail : Pass", SortOrder=Convert.ToDecimal("19.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("5571a705-9b54-4a0b-bdcd-bba2895d389d"), Description="Transfer No Grade", SortOrder=Convert.ToDecimal("21.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("a5528375-de93-4177-a503-9a9e4c2aa180"), Description="Withdrew", SortOrder=Convert.ToDecimal("23.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("15f019d7-836f-4a46-a1cb-ac608581c0d0"), Description="Withdrew failing", SortOrder=Convert.ToDecimal("25.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("15adf281-de9b-4094-a705-6f13f1266d1f"), Description="Withdrew No Penalty", SortOrder=Convert.ToDecimal("27.00") },
+            new RefCourseAcademicGradeStatusCode { Id=Guid.Parse("9af84e5c-c410-478e-b4d0-4d60e12e4bab"), Description="Withdrew passing", SortOrder=Convert.ToDecimal("29.00") },
        };
    }
 }

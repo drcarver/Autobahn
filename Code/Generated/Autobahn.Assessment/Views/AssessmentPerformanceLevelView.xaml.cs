@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentPerformanceLevelView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentPerformanceLevelViewModel as the data context for the view
+        /// Inject the IAssessmentPerformanceLevelViewModel as the data context for the view
         /// </summary>
-        public AssessmentPerformanceLevelView(AssessmentPerformanceLevelViewModel vm)
+        public AssessmentPerformanceLevelView(IAssessmentPerformanceLevelViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -3,7 +3,6 @@
 //* FileName:   RefVisaTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,31 +12,31 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefVisaType"> List
+        /// The complete <see cref="RefVisaTypeModel"> List
          /// </summary>
-        public static List<RefVisaType> RefVisaTypeList = new List<RefVisaType>
+        public static List<RefVisaTypeModel> RefVisaTypeList = new List<RefVisaTypeModel>
         {
-            new RefVisaType { Id=Guid.Parse("d79725cf-512d-4ecb-9158-d31459d96b8e"), Code="F1", Description="Foreign Student Visa", Definition="The non-US citizen's Visa type is Foreign Student Visa.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefVisaType { Id=Guid.Parse("b43f7f2a-ff95-4bfe-9148-e31b7b507dd4"), Code="M1", Description="Foreign Student pursuing vocational or non-academic studies Visa", Definition="The non-US citizen's Visa type is Foreign Student pursuing vocational or non-academic studies Visa.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefVisaType { Id=Guid.Parse("228ed8d6-f923-47bb-be8c-d0ad843345c6"), Code="H1", Description="Employment Visa", Definition="The non-US citizen's Visa type is Employment Visa.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefVisaType { Id=Guid.Parse("37ad7182-46e3-4171-a31a-80725f31f044"), Code="B1", Description="Business Visa", Definition="The non-US citizen's Visa type is Business Visa.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefVisaType { Id=Guid.Parse("81e68f60-0cac-4f80-9c78-3a80b8b10ddb"), Code="B2", Description="Tourist Visa", Definition="The non-US citizen's Visa type is Tourist Visa.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefVisaType { Id=Guid.Parse("4a5eb374-acfb-4b9f-8522-c96610bd3e02"), Code="J1", Description="Exchange Scholar Visa", Definition="The non-US citizen's Visa type is Exchange Scholar Visa.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefVisaType { Id=Guid.Parse("41b7a00b-4a32-45d7-aa55-87fbeffd7a0b"), Code="OV", Description="Other Visa", Definition="The non-US citizen's Visa type is Other Visa.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefVisaType { Id=Guid.Parse("26e2779d-6c09-4374-ad4a-7c0635a52daf"), Code="F1", Description="Foreign Student Visa", Definition="The non-US citizen's Visa type is Foreign Student Visa.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefVisaType { Id=Guid.Parse("6497228c-c69f-41ff-a56e-5b6675f6a70c"), Code="M1", Description="Foreign Student pursuing vocational or non-academic studies Visa", Definition="The non-US citizen's Visa type is Foreign Student pursuing vocational or non-academic studies Visa.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefVisaType { Id=Guid.Parse("9fc0b44f-8bba-4d68-81d8-fce44685f5ce"), Code="H1", Description="Employment Visa", Definition="The non-US citizen's Visa type is Employment Visa.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefVisaType { Id=Guid.Parse("3467bd54-8d96-4b08-ace7-77658e9b7b62"), Code="B1", Description="Business Visa", Definition="The non-US citizen's Visa type is Business Visa.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefVisaType { Id=Guid.Parse("98a92660-4502-4198-9177-236fea34cb09"), Code="B2", Description="Tourist Visa", Definition="The non-US citizen's Visa type is Tourist Visa.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefVisaType { Id=Guid.Parse("a698dce8-ff2d-43f5-b2e7-ff3128976e76"), Code="J1", Description="Exchange Scholar Visa", Definition="The non-US citizen's Visa type is Exchange Scholar Visa.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefVisaType { Id=Guid.Parse("a3f62712-0f9e-4472-b861-2227b1ea9f31"), Code="OV", Description="Other Visa", Definition="The non-US citizen's Visa type is Other Visa.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefVisaType Pick List
+        /// The Reference RefVisaType Pick List
          /// </summary>
-        public static List<RefVisaType> RefVisaTypePickList = new List<RefVisaType>
+        public static List<ReferencePickListItemViewModel> RefVisaTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefVisaType { Id=Guid.Parse("d79725cf-512d-4ecb-9158-d31459d96b8e"), Code="F1", Description="Foreign Student Visa", SortOrder=Convert.ToDecimal("1.00") },
-            new RefVisaType { Id=Guid.Parse("b43f7f2a-ff95-4bfe-9148-e31b7b507dd4"), Code="M1", Description="Foreign Student pursuing vocational or non-academic studies Visa", SortOrder=Convert.ToDecimal("2.00") },
-            new RefVisaType { Id=Guid.Parse("228ed8d6-f923-47bb-be8c-d0ad843345c6"), Code="H1", Description="Employment Visa", SortOrder=Convert.ToDecimal("3.00") },
-            new RefVisaType { Id=Guid.Parse("37ad7182-46e3-4171-a31a-80725f31f044"), Code="B1", Description="Business Visa", SortOrder=Convert.ToDecimal("4.00") },
-            new RefVisaType { Id=Guid.Parse("81e68f60-0cac-4f80-9c78-3a80b8b10ddb"), Code="B2", Description="Tourist Visa", SortOrder=Convert.ToDecimal("5.00") },
-            new RefVisaType { Id=Guid.Parse("4a5eb374-acfb-4b9f-8522-c96610bd3e02"), Code="J1", Description="Exchange Scholar Visa", SortOrder=Convert.ToDecimal("6.00") },
-            new RefVisaType { Id=Guid.Parse("41b7a00b-4a32-45d7-aa55-87fbeffd7a0b"), Code="OV", Description="Other Visa", SortOrder=Convert.ToDecimal("7.00") },
+            new RefVisaType { Id=Guid.Parse("26e2779d-6c09-4374-ad4a-7c0635a52daf"), Description="Foreign Student Visa", SortOrder=Convert.ToDecimal("1.00") },
+            new RefVisaType { Id=Guid.Parse("6497228c-c69f-41ff-a56e-5b6675f6a70c"), Description="Foreign Student pursuing vocational or non-academic studies Visa", SortOrder=Convert.ToDecimal("2.00") },
+            new RefVisaType { Id=Guid.Parse("9fc0b44f-8bba-4d68-81d8-fce44685f5ce"), Description="Employment Visa", SortOrder=Convert.ToDecimal("3.00") },
+            new RefVisaType { Id=Guid.Parse("3467bd54-8d96-4b08-ace7-77658e9b7b62"), Description="Business Visa", SortOrder=Convert.ToDecimal("4.00") },
+            new RefVisaType { Id=Guid.Parse("98a92660-4502-4198-9177-236fea34cb09"), Description="Tourist Visa", SortOrder=Convert.ToDecimal("5.00") },
+            new RefVisaType { Id=Guid.Parse("a698dce8-ff2d-43f5-b2e7-ff3128976e76"), Description="Exchange Scholar Visa", SortOrder=Convert.ToDecimal("6.00") },
+            new RefVisaType { Id=Guid.Parse("a3f62712-0f9e-4472-b861-2227b1ea9f31"), Description="Other Visa", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

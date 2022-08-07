@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The DataCollectionViewModel
      /// </summary>
-    public partial class DataCollectionViewModel : ViewModelBase, Interfaces.IDataCollection
+    public partial class DataCollectionViewModel : ViewModelBase, Interfaces.IDataCollectionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -14,9 +14,9 @@ namespace Autobahn.Competencies.Views
     public partial class CompetencySet_RubricCriterionView : ContentPage
     {
         /// <summary>
-        /// Inject the CompetencySet_RubricCriterionViewModel as the data context for the view
+        /// Inject the ICompetencySet_RubricCriterionViewModel as the data context for the view
         /// </summary>
-        public CompetencySet_RubricCriterionView(CompetencySet_RubricCriterionViewModel vm)
+        public CompetencySet_RubricCriterionView(ICompetencySet_RubricCriterionViewModel vm)
         {
             BindingContext  = vm;
         }

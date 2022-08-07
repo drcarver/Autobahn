@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonAllergyViewModel
      /// </summary>
-    public partial class PersonAllergyViewModel : ViewModelBase, Interfaces.IPersonAllergy
+    public partial class PersonAllergyViewModel : ViewModelBase, Interfaces.IPersonAllergyViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

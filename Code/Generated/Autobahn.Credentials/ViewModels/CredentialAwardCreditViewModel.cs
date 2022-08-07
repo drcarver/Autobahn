@@ -11,7 +11,7 @@ namespace Autobahn.Credentials.ViewModels
      /// <summary>
      /// The CredentialAwardCreditViewModel
      /// </summary>
-    public partial class CredentialAwardCreditViewModel : ViewModelBase, Interfaces.ICredentialAwardCredit
+    public partial class CredentialAwardCreditViewModel : ViewModelBase, Interfaces.ICredentialAwardCreditViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

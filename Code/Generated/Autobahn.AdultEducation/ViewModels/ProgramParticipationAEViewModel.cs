@@ -11,7 +11,7 @@ namespace Autobahn.AdultEducation.ViewModels
      /// <summary>
      /// The ProgramParticipationAEViewModel
      /// </summary>
-    public partial class ProgramParticipationAEViewModel : ViewModelBase, Interfaces.IProgramParticipationAE
+    public partial class ProgramParticipationAEViewModel : ViewModelBase, Interfaces.IProgramParticipationAEViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

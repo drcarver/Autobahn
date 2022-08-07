@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationEmployeeBenefitView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationEmployeeBenefitViewModel as the data context for the view
+        /// Inject the IOrganizationEmployeeBenefitViewModel as the data context for the view
         /// </summary>
-        public OrganizationEmployeeBenefitView(OrganizationEmployeeBenefitViewModel vm)
+        public OrganizationEmployeeBenefitView(IOrganizationEmployeeBenefitViewModel vm)
         {
             BindingContext  = vm;
         }

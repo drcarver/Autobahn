@@ -3,7 +3,6 @@
 //* FileName:   RefTeacherEducationExamScoreTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTeacherEducationExamScoreType"> List
+        /// The complete <see cref="RefTeacherEducationExamScoreTypeModel"> List
          /// </summary>
-        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypeList = new List<RefTeacherEducationExamScoreType>
+        public static List<RefTeacherEducationExamScoreTypeModel> RefTeacherEducationExamScoreTypeList = new List<RefTeacherEducationExamScoreTypeModel>
         {
         };
 
         /// <summary>
-        /// The RefTeacherEducationExamScoreType Pick List
+        /// The Reference RefTeacherEducationExamScoreType Pick List
          /// </summary>
-        public static List<RefTeacherEducationExamScoreType> RefTeacherEducationExamScoreTypePickList = new List<RefTeacherEducationExamScoreType>
+        public static List<ReferencePickListItemViewModel> RefTeacherEducationExamScoreTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

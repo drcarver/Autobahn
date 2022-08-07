@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaSafeDrugFreeView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaSafeDrugFreeViewModel as the data context for the view
+        /// Inject the IK12LeaSafeDrugFreeViewModel as the data context for the view
         /// </summary>
-        public K12LeaSafeDrugFreeView(K12LeaSafeDrugFreeViewModel vm)
+        public K12LeaSafeDrugFreeView(IK12LeaSafeDrugFreeViewModel vm)
         {
             BindingContext  = vm;
         }

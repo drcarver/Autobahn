@@ -3,7 +3,6 @@
 //* FileName:   RefFrequencyUnitList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,29 +12,29 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefFrequencyUnit"> List
+        /// The complete <see cref="RefFrequencyUnitModel"> List
          /// </summary>
-        public static List<RefFrequencyUnit> RefFrequencyUnitList = new List<RefFrequencyUnit>
+        public static List<RefFrequencyUnitModel> RefFrequencyUnitList = new List<RefFrequencyUnitModel>
         {
-            new RefFrequencyUnit { Id=Guid.Parse("d7b93a07-e98d-4408-9d82-5d66fa5c9d61"), Code="Day", Description="Day", Definition="Day is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("957f489e-1fc7-406f-b344-4b931581e249"), Code="Hour", Description="Hour", Definition="Hour is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("938b595c-9923-461a-ad0f-8eb29ceea3f1"), Code="Minute", Description="Minute", Definition="Minute is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("56783418-618f-4253-9dbf-2cc624c1cd9e"), Code="Month", Description="Month", Definition="Month is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("3376569c-e6e5-41f5-a2af-510eb89cdc6c"), Code="Week", Description="Week", Definition="Week is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("75aa7df9-d5a5-4244-a70e-84434ff64822"), Code="Year", Description="Year", Definition="Year is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("9a086d62-2f04-4057-80da-987741dda5e5"), Code="Day", Description="Day", Definition="Day is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("d6c0394f-8dcb-4d97-aeb7-de641596c079"), Code="Hour", Description="Hour", Definition="Hour is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("8ccb7064-8fd3-46ec-98fc-87a9c0459f30"), Code="Minute", Description="Minute", Definition="Minute is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("7b4ac4b3-ac04-4c0c-bea9-8c9e36a353c9"), Code="Month", Description="Month", Definition="Month is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("1901375a-945c-4564-8f48-9a0eb8991c63"), Code="Week", Description="Week", Definition="Week is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("e23790d4-b4dc-4fa1-9ddb-16cc55a01d0e"), Code="Year", Description="Year", Definition="Year is the unit of time by which a cycle is defined.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefFrequencyUnit Pick List
+        /// The Reference RefFrequencyUnit Pick List
          /// </summary>
-        public static List<RefFrequencyUnit> RefFrequencyUnitPickList = new List<RefFrequencyUnit>
+        public static List<ReferencePickListItemViewModel> RefFrequencyUnitViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefFrequencyUnit { Id=Guid.Parse("d7b93a07-e98d-4408-9d82-5d66fa5c9d61"), Code="Day", Description="Day", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("957f489e-1fc7-406f-b344-4b931581e249"), Code="Hour", Description="Hour", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("938b595c-9923-461a-ad0f-8eb29ceea3f1"), Code="Minute", Description="Minute", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("56783418-618f-4253-9dbf-2cc624c1cd9e"), Code="Month", Description="Month", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("3376569c-e6e5-41f5-a2af-510eb89cdc6c"), Code="Week", Description="Week", SortOrder=Convert.ToDecimal("") },
-            new RefFrequencyUnit { Id=Guid.Parse("75aa7df9-d5a5-4244-a70e-84434ff64822"), Code="Year", Description="Year", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("9a086d62-2f04-4057-80da-987741dda5e5"), Description="Day", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("d6c0394f-8dcb-4d97-aeb7-de641596c079"), Description="Hour", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("8ccb7064-8fd3-46ec-98fc-87a9c0459f30"), Description="Minute", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("7b4ac4b3-ac04-4c0c-bea9-8c9e36a353c9"), Description="Month", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("1901375a-945c-4564-8f48-9a0eb8991c63"), Description="Week", SortOrder=Convert.ToDecimal("") },
+            new RefFrequencyUnit { Id=Guid.Parse("e23790d4-b4dc-4fa1-9ddb-16cc55a01d0e"), Description="Year", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

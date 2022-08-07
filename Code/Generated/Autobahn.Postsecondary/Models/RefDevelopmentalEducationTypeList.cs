@@ -13,27 +13,27 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefDevelopmentalEducationType"> List
+        /// The complete <see cref="RefDevelopmentalEducationTypeModel"> List
          /// </summary>
-        public static List<RefDevelopmentalEducationType> RefDevelopmentalEducationTypeList = new List<RefDevelopmentalEducationType>
+        public static List<RefDevelopmentalEducationTypeModel> RefDevelopmentalEducationTypeList = new List<RefDevelopmentalEducationTypeModel>
         {
-            new RefDevelopmentalEducationType { Id=Guid.Parse("45bc261c-28a6-405a-a3f8-a94a91da4ddb"), Code="DevelopmentalMath", Description="Developmental Math", Definition="Developmental Math is the category of developmental education.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("5192d498-70c1-49a4-9617-6d6017efc51e"), Code="DevelopmentalEnglish", Description="Developmental English", Definition="Developmental English is the category of developmental education.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("feff5216-29b7-474d-b7fa-4183522ea9f8"), Code="DevelopmentalReading", Description="Developmental Reading", Definition="Developmental Reading is the category of developmental education.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("5712bdd1-ad17-49e7-8186-faac29bd2956"), Code="DevelopmentalEnglishReading", Description="Developmental English/Reading", Definition="Developmental English/Reading is the category of developmental education.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("3995b913-b560-4936-80d7-b43db21db308"), Code="DevelopmentalOther", Description="Developmental Other", Definition="Developmental Other is the category of developmental education.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("90da948c-b7ec-478f-8b10-b29edb252ee6"), Code="DevelopmentalMath", Description="Developmental Math", Definition="Developmental Math is the category of developmental education.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("d4af4661-4eae-488b-81a2-fe276a71d423"), Code="DevelopmentalEnglish", Description="Developmental English", Definition="Developmental English is the category of developmental education.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("8b95326b-de68-46c5-b727-b3ec74b842c8"), Code="DevelopmentalReading", Description="Developmental Reading", Definition="Developmental Reading is the category of developmental education.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("5254e245-b94d-45e9-982f-65b046132791"), Code="DevelopmentalEnglishReading", Description="Developmental English/Reading", Definition="Developmental English/Reading is the category of developmental education.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("fbdf5cc5-e8e7-4093-a442-0201a461f2dd"), Code="DevelopmentalOther", Description="Developmental Other", Definition="Developmental Other is the category of developmental education.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
-        /// The RefDevelopmentalEducationType Pick List
+        /// The Reference RefDevelopmentalEducationType Pick List
          /// </summary>
-        public static List<RefDevelopmentalEducationType> RefDevelopmentalEducationTypePickList = new List<RefDevelopmentalEducationType>
+        public static List<ReferencePickListItemViewModel> RefDevelopmentalEducationTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefDevelopmentalEducationType { Id=Guid.Parse("45bc261c-28a6-405a-a3f8-a94a91da4ddb"), Code="DevelopmentalMath", Description="Developmental Math", SortOrder=Convert.ToDecimal("1.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("5192d498-70c1-49a4-9617-6d6017efc51e"), Code="DevelopmentalEnglish", Description="Developmental English", SortOrder=Convert.ToDecimal("3.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("feff5216-29b7-474d-b7fa-4183522ea9f8"), Code="DevelopmentalReading", Description="Developmental Reading", SortOrder=Convert.ToDecimal("5.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("5712bdd1-ad17-49e7-8186-faac29bd2956"), Code="DevelopmentalEnglishReading", Description="Developmental English/Reading", SortOrder=Convert.ToDecimal("7.00") },
-            new RefDevelopmentalEducationType { Id=Guid.Parse("3995b913-b560-4936-80d7-b43db21db308"), Code="DevelopmentalOther", Description="Developmental Other", SortOrder=Convert.ToDecimal("9.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("90da948c-b7ec-478f-8b10-b29edb252ee6"), Description="Developmental Math", SortOrder=Convert.ToDecimal("1.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("d4af4661-4eae-488b-81a2-fe276a71d423"), Description="Developmental English", SortOrder=Convert.ToDecimal("3.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("8b95326b-de68-46c5-b727-b3ec74b842c8"), Description="Developmental Reading", SortOrder=Convert.ToDecimal("5.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("5254e245-b94d-45e9-982f-65b046132791"), Description="Developmental English/Reading", SortOrder=Convert.ToDecimal("7.00") },
+            new RefDevelopmentalEducationType { Id=Guid.Parse("fbdf5cc5-e8e7-4093-a442-0201a461f2dd"), Description="Developmental Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12SeaViewModel
      /// </summary>
-    public partial class K12SeaViewModel : ViewModelBase, Interfaces.IK12Sea
+    public partial class K12SeaViewModel : ViewModelBase, Interfaces.IK12SeaViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

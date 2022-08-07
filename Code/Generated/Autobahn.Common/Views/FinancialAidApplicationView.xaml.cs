@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class FinancialAidApplicationView : ContentPage
     {
         /// <summary>
-        /// Inject the FinancialAidApplicationViewModel as the data context for the view
+        /// Inject the IFinancialAidApplicationViewModel as the data context for the view
         /// </summary>
-        public FinancialAidApplicationView(FinancialAidApplicationViewModel vm)
+        public FinancialAidApplicationView(IFinancialAidApplicationViewModel vm)
         {
             BindingContext  = vm;
         }

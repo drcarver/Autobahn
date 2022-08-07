@@ -3,7 +3,6 @@
 //* FileName:   RefElementaryMiddleAdditionalList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,27 +12,27 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefElementaryMiddleAdditional"> List
+        /// The complete <see cref="RefElementaryMiddleAdditionalModel"> List
          /// </summary>
-        public static List<RefElementaryMiddleAdditional> RefElementaryMiddleAdditionalList = new List<RefElementaryMiddleAdditional>
+        public static List<RefElementaryMiddleAdditionalModel> RefElementaryMiddleAdditionalList = new List<RefElementaryMiddleAdditionalModel>
         {
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("4ea7bced-3eeb-4d45-b75f-b20a3fc7db26"), Code="MetAdditionalIndicator", Description="Met Additional Indicator", Definition="The school or district met the additional indicator for all students.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("a77bb5cc-248d-4388-af32-647c4f9f7d81"), Code="DidNotMeet", Description="Did Not Meet", Definition="The school or district did not meet the additional indicator for all students.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("436f47f7-c065-4ef5-b425-dcce74234836"), Code="TooFewStudents", Description="Too Few Students", Definition="The number of students in the school or district was less than the minimum group size outlined in a state's consolidated accountability workbook necessary required to reliably calculate the additional indicator status.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("9a0d87bb-41e3-4e73-baaa-046de4098e2d"), Code="NoStudents", Description="No Students", Definition="There were no students.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("fbd95694-6ea5-4fd3-add5-f31895cad99b"), Code="NA", Description="Not applicable", Definition="Elementary/Middle Additional Indicator status is not applicable.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("e988ca87-c571-471a-ab82-e1341dbfd979"), Code="MetAdditionalIndicator", Description="Met Additional Indicator", Definition="The school or district met the additional indicator for all students.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("3e07c24f-3442-475c-b226-0ff19e13b256"), Code="DidNotMeet", Description="Did Not Meet", Definition="The school or district did not meet the additional indicator for all students.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("c5d2edbb-7779-4ce6-94da-fa54a7930d82"), Code="TooFewStudents", Description="Too Few Students", Definition="The number of students in the school or district was less than the minimum group size outlined in a state's consolidated accountability workbook necessary required to reliably calculate the additional indicator status.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("188a42ad-a7c3-4226-89f7-3f450b757ff8"), Code="NoStudents", Description="No Students", Definition="There were no students.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("84b6ac95-c88c-47a0-81a4-b248ffe7598a"), Code="NA", Description="Not applicable", Definition="Elementary/Middle Additional Indicator status is not applicable.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
-        /// The RefElementaryMiddleAdditional Pick List
+        /// The Reference RefElementaryMiddleAdditional Pick List
          /// </summary>
-        public static List<RefElementaryMiddleAdditional> RefElementaryMiddleAdditionalPickList = new List<RefElementaryMiddleAdditional>
+        public static List<ReferencePickListItemViewModel> RefElementaryMiddleAdditionalViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("4ea7bced-3eeb-4d45-b75f-b20a3fc7db26"), Code="MetAdditionalIndicator", Description="Met Additional Indicator", SortOrder=Convert.ToDecimal("1.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("a77bb5cc-248d-4388-af32-647c4f9f7d81"), Code="DidNotMeet", Description="Did Not Meet", SortOrder=Convert.ToDecimal("2.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("436f47f7-c065-4ef5-b425-dcce74234836"), Code="TooFewStudents", Description="Too Few Students", SortOrder=Convert.ToDecimal("3.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("9a0d87bb-41e3-4e73-baaa-046de4098e2d"), Code="NoStudents", Description="No Students", SortOrder=Convert.ToDecimal("4.00") },
-            new RefElementaryMiddleAdditional { Id=Guid.Parse("fbd95694-6ea5-4fd3-add5-f31895cad99b"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("10.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("e988ca87-c571-471a-ab82-e1341dbfd979"), Description="Met Additional Indicator", SortOrder=Convert.ToDecimal("1.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("3e07c24f-3442-475c-b226-0ff19e13b256"), Description="Did Not Meet", SortOrder=Convert.ToDecimal("2.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("c5d2edbb-7779-4ce6-94da-fa54a7930d82"), Description="Too Few Students", SortOrder=Convert.ToDecimal("3.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("188a42ad-a7c3-4226-89f7-3f450b757ff8"), Description="No Students", SortOrder=Convert.ToDecimal("4.00") },
+            new RefElementaryMiddleAdditional { Id=Guid.Parse("84b6ac95-c88c-47a0-81a4-b248ffe7598a"), Description="Not applicable", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

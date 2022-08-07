@@ -13,21 +13,21 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefActivityTimeMeasurementType"> List
+        /// The complete <see cref="RefActivityTimeMeasurementTypeModel"> List
          /// </summary>
-        public static List<RefActivityTimeMeasurementType> RefActivityTimeMeasurementTypeList = new List<RefActivityTimeMeasurementType>
+        public static List<RefActivityTimeMeasurementTypeModel> RefActivityTimeMeasurementTypeList = new List<RefActivityTimeMeasurementTypeModel>
         {
-            new RefActivityTimeMeasurementType { Id=Guid.Parse("ae6f7aae-642c-4d2f-8595-16d090161a52"), Code="WeeklyHours", Description="Weekly hours", Definition="Weekly hours is specified as the type of measurement for the amount of time the student participated in the events and procedures of an activity.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefActivityTimeMeasurementType { Id=Guid.Parse("197464d0-6f46-4229-a92b-e30ce3ee7a6d"), Code="YearlyWeeks", Description="Yearly weeks", Definition="Yearly weeks is specified as the type of measurement for the amount of time the student participated in the events and procedures of an activity.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefActivityTimeMeasurementType { Id=Guid.Parse("0000a3b1-3139-4f88-8bdc-da533c6a296d"), Code="WeeklyHours", Description="Weekly hours", Definition="Weekly hours is specified as the type of measurement for the amount of time the student participated in the events and procedures of an activity.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefActivityTimeMeasurementType { Id=Guid.Parse("606f350a-309f-4411-8105-abf00cb867c3"), Code="YearlyWeeks", Description="Yearly weeks", Definition="Yearly weeks is specified as the type of measurement for the amount of time the student participated in the events and procedures of an activity.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefActivityTimeMeasurementType Pick List
+        /// The Reference RefActivityTimeMeasurementType Pick List
          /// </summary>
-        public static List<RefActivityTimeMeasurementType> RefActivityTimeMeasurementTypePickList = new List<RefActivityTimeMeasurementType>
+        public static List<ReferencePickListItemViewModel> RefActivityTimeMeasurementTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefActivityTimeMeasurementType { Id=Guid.Parse("ae6f7aae-642c-4d2f-8595-16d090161a52"), Code="WeeklyHours", Description="Weekly hours", SortOrder=Convert.ToDecimal("1.00") },
-            new RefActivityTimeMeasurementType { Id=Guid.Parse("197464d0-6f46-4229-a92b-e30ce3ee7a6d"), Code="YearlyWeeks", Description="Yearly weeks", SortOrder=Convert.ToDecimal("2.00") },
+            new RefActivityTimeMeasurementType { Id=Guid.Parse("0000a3b1-3139-4f88-8bdc-da533c6a296d"), Description="Weekly hours", SortOrder=Convert.ToDecimal("1.00") },
+            new RefActivityTimeMeasurementType { Id=Guid.Parse("606f350a-309f-4411-8105-abf00cb867c3"), Description="Yearly weeks", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

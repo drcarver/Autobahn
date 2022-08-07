@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The AssessmentFormViewModel
      /// </summary>
-    public partial class AssessmentFormViewModel : ViewModelBase, Interfaces.IAssessmentForm
+    public partial class AssessmentFormViewModel : ViewModelBase, Interfaces.IAssessmentFormViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

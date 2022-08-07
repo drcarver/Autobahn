@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELChildOutcomeSummaryViewModel
      /// </summary>
-    public partial class ELChildOutcomeSummaryViewModel : ViewModelBase, Interfaces.IELChildOutcomeSummary
+    public partial class ELChildOutcomeSummaryViewModel : ViewModelBase, Interfaces.IELChildOutcomeSummaryViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

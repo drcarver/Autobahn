@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IndividualizedProgramProgressReportView : ContentPage
     {
         /// <summary>
-        /// Inject the IndividualizedProgramProgressReportViewModel as the data context for the view
+        /// Inject the IIndividualizedProgramProgressReportViewModel as the data context for the view
         /// </summary>
-        public IndividualizedProgramProgressReportView(IndividualizedProgramProgressReportViewModel vm)
+        public IndividualizedProgramProgressReportView(IIndividualizedProgramProgressReportViewModel vm)
         {
             BindingContext  = vm;
         }

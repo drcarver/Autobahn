@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonPersonalInformationVerificationView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonPersonalInformationVerificationViewModel as the data context for the view
+        /// Inject the IPersonPersonalInformationVerificationViewModel as the data context for the view
         /// </summary>
-        public PersonPersonalInformationVerificationView(PersonPersonalInformationVerificationViewModel vm)
+        public PersonPersonalInformationVerificationView(IPersonPersonalInformationVerificationViewModel vm)
         {
             BindingContext  = vm;
         }

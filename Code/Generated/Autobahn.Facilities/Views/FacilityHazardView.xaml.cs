@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class FacilityHazardView : ContentPage
     {
         /// <summary>
-        /// Inject the FacilityHazardViewModel as the data context for the view
+        /// Inject the IFacilityHazardViewModel as the data context for the view
         /// </summary>
-        public FacilityHazardView(FacilityHazardViewModel vm)
+        public FacilityHazardView(IFacilityHazardViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentPersonalNeedScreenReaderView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentPersonalNeedScreenReaderViewModel as the data context for the view
+        /// Inject the IAssessmentPersonalNeedScreenReaderViewModel as the data context for the view
         /// </summary>
-        public AssessmentPersonalNeedScreenReaderView(AssessmentPersonalNeedScreenReaderViewModel vm)
+        public AssessmentPersonalNeedScreenReaderView(IAssessmentPersonalNeedScreenReaderViewModel vm)
         {
             BindingContext  = vm;
         }

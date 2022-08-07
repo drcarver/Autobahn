@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class CoreKnowledgeAreaView : ContentPage
     {
         /// <summary>
-        /// Inject the CoreKnowledgeAreaViewModel as the data context for the view
+        /// Inject the ICoreKnowledgeAreaViewModel as the data context for the view
         /// </summary>
-        public CoreKnowledgeAreaView(CoreKnowledgeAreaViewModel vm)
+        public CoreKnowledgeAreaView(ICoreKnowledgeAreaViewModel vm)
         {
             BindingContext  = vm;
         }

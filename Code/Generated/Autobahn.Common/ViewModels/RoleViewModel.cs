@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The RoleViewModel
      /// </summary>
-    public partial class RoleViewModel : ViewModelBase, Interfaces.IRole
+    public partial class RoleViewModel : ViewModelBase, Interfaces.IRoleViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

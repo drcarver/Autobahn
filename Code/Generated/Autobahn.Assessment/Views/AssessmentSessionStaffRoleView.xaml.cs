@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentSessionStaffRoleView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentSessionStaffRoleViewModel as the data context for the view
+        /// Inject the IAssessmentSessionStaffRoleViewModel as the data context for the view
         /// </summary>
-        public AssessmentSessionStaffRoleView(AssessmentSessionStaffRoleViewModel vm)
+        public AssessmentSessionStaffRoleView(IAssessmentSessionStaffRoleViewModel vm)
         {
             BindingContext  = vm;
         }

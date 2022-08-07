@@ -3,7 +3,6 @@
 //* FileName:   RefCountyList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCounty"> List
+        /// The complete <see cref="RefCountyModel"> List
          /// </summary>
-        public static List<RefCounty> RefCountyList = new List<RefCounty>
+        public static List<RefCountyModel> RefCountyList = new List<RefCountyModel>
         {
         };
 
         /// <summary>
-        /// The RefCounty Pick List
+        /// The Reference RefCounty Pick List
          /// </summary>
-        public static List<RefCounty> RefCountyPickList = new List<RefCounty>
+        public static List<ReferencePickListItemViewModel> RefCountyViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

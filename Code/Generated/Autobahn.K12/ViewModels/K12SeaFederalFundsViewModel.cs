@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12SeaFederalFundsViewModel
      /// </summary>
-    public partial class K12SeaFederalFundsViewModel : ViewModelBase, Interfaces.IK12SeaFederalFunds
+    public partial class K12SeaFederalFundsViewModel : ViewModelBase, Interfaces.IK12SeaFederalFundsViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

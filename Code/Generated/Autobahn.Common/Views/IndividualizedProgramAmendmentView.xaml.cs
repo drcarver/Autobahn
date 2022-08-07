@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IndividualizedProgramAmendmentView : ContentPage
     {
         /// <summary>
-        /// Inject the IndividualizedProgramAmendmentViewModel as the data context for the view
+        /// Inject the IIndividualizedProgramAmendmentViewModel as the data context for the view
         /// </summary>
-        public IndividualizedProgramAmendmentView(IndividualizedProgramAmendmentViewModel vm)
+        public IndividualizedProgramAmendmentView(IIndividualizedProgramAmendmentViewModel vm)
         {
             BindingContext  = vm;
         }

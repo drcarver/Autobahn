@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The StaffEvaluationPartViewModel
      /// </summary>
-    public partial class StaffEvaluationPartViewModel : ViewModelBase, Interfaces.IStaffEvaluationPart
+    public partial class StaffEvaluationPartViewModel : ViewModelBase, Interfaces.IStaffEvaluationPartViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

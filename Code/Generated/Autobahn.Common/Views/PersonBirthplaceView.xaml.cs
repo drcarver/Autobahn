@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonBirthplaceView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonBirthplaceViewModel as the data context for the view
+        /// Inject the IPersonBirthplaceViewModel as the data context for the view
         /// </summary>
-        public PersonBirthplaceView(PersonBirthplaceViewModel vm)
+        public PersonBirthplaceView(IPersonBirthplaceViewModel vm)
         {
             BindingContext  = vm;
         }

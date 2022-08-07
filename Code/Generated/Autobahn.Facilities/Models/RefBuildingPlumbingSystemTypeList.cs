@@ -13,47 +13,47 @@ namespace Autobahn.Facilities.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefBuildingPlumbingSystemType"> List
+        /// The complete <see cref="RefBuildingPlumbingSystemTypeModel"> List
          /// </summary>
-        public static List<RefBuildingPlumbingSystemType> RefBuildingPlumbingSystemTypeList = new List<RefBuildingPlumbingSystemType>
+        public static List<RefBuildingPlumbingSystemTypeModel> RefBuildingPlumbingSystemTypeList = new List<RefBuildingPlumbingSystemTypeModel>
         {
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("7fc1c6d5-681d-4b84-936b-af115b3eff4b"), Code="02470", Description="Detention ponds", Definition="Detention ponds is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("69bbc264-0077-4c4b-b2cd-94af4592a5db"), Code="13596", Description="Domestic water distribution", Definition="Domestic water distribution is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("1fa556c9-dea6-44ba-bced-01587165b478"), Code="02463", Description="Drains", Definition="Drains is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d8742aba-0e9a-4558-9c7b-282a4a5a46dc"), Code="02471", Description="Filtration system", Definition="Filtration system is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("ac1ef624-f6c0-4c6e-b3c2-82821ac2e8dc"), Code="02467", Description="Parcel drainage", Definition="Parcel drainage is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("ae13e9da-2655-4019-8b96-3f91bf3a46b1"), Code="02468", Description="Piping", Definition="Piping is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("7481792e-6137-4fb6-9331-c5f3973b1e13"), Code="13597", Description="Plumbing fixtures", Definition="Plumbing fixtures is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d8a4540d-688c-4291-b98d-59b1aa452695"), Code="13598", Description="Rain water drainage", Definition="Rain water drainage is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("8.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b89febb9-199c-4598-9cac-bc6da5c19ff0"), Code="13599", Description="Sanitary waste", Definition="Sanitary waste is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("9.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("f3323edb-193f-4fc8-b9a3-733c463ad3c7"), Code="02465", Description="Sewage treatment", Definition="Sewage treatment is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("10.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("f80d14b4-0a8e-45dd-b0cd-b94cb2cc212a"), Code="02464", Description="Vents", Definition="Vents is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("11.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("43761f6d-05f7-407c-a8f0-b6693268762f"), Code="02469", Description="Water softeners", Definition="Water softeners is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("12.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("a2f3b903-280d-429b-875a-93c25b63331d"), Code="02466", Description="Water source", Definition="Water source is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("13.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("2bc45ce5-40b6-4336-9789-dbedb642ce08"), Code="02462", Description="Water supply", Definition="Water supply is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("14.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("928e8b48-26cf-467f-879f-b5c8b63ce51b"), Code="09999", Description="Other", Definition="Other is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("99.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b60cd711-dc77-43fc-8140-fd26976d3095"), Code="02470", Description="Detention ponds", Definition="Detention ponds is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("22a3e836-eba2-4178-b32e-c2261a1b9a01"), Code="13596", Description="Domestic water distribution", Definition="Domestic water distribution is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("231a5615-c194-43f8-809d-01fef57d2dab"), Code="02463", Description="Drains", Definition="Drains is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("1ef804b7-caf8-404c-a407-120f319192bc"), Code="02471", Description="Filtration system", Definition="Filtration system is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("6fe56913-259d-4c4d-a57a-f31e7a7f508b"), Code="02467", Description="Parcel drainage", Definition="Parcel drainage is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("426daa60-787d-41dc-9f5f-54e1dde9488c"), Code="02468", Description="Piping", Definition="Piping is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("4392ad23-ea08-4a4e-a9ca-8a084154d910"), Code="13597", Description="Plumbing fixtures", Definition="Plumbing fixtures is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("220a53e7-e03c-4b08-b3bd-3271064105b9"), Code="13598", Description="Rain water drainage", Definition="Rain water drainage is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("cdbb6781-11fe-465c-b919-f0e5a36a38dc"), Code="13599", Description="Sanitary waste", Definition="Sanitary waste is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("07b30e31-ff7b-491d-a3af-3dc353eec16c"), Code="02465", Description="Sewage treatment", Definition="Sewage treatment is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("75a0c69c-68b2-4998-8f1b-338989a56fb5"), Code="02464", Description="Vents", Definition="Vents is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("11.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d442bf64-b5f3-46fa-acec-b53b29b6eccf"), Code="02469", Description="Water softeners", Definition="Water softeners is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d6a7b3fc-2247-42d8-a8ae-391b0300e67c"), Code="02466", Description="Water source", Definition="Water source is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("13.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("a20753f0-7790-40b5-a012-a2ddd6f24773"), Code="02462", Description="Water supply", Definition="Water supply is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b13c59f2-3bd1-4245-8cb2-479ab70d6491"), Code="09999", Description="Other", Definition="Other is specified as the component of an on-site system for supplying, eliminating, and treating water.", SortOrder=Convert.ToDecimal("99.00") },
         };
 
         /// <summary>
-        /// The RefBuildingPlumbingSystemType Pick List
+        /// The Reference RefBuildingPlumbingSystemType Pick List
          /// </summary>
-        public static List<RefBuildingPlumbingSystemType> RefBuildingPlumbingSystemTypePickList = new List<RefBuildingPlumbingSystemType>
+        public static List<ReferencePickListItemViewModel> RefBuildingPlumbingSystemTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("7fc1c6d5-681d-4b84-936b-af115b3eff4b"), Code="02470", Description="Detention ponds", SortOrder=Convert.ToDecimal("1.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("69bbc264-0077-4c4b-b2cd-94af4592a5db"), Code="13596", Description="Domestic water distribution", SortOrder=Convert.ToDecimal("2.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("1fa556c9-dea6-44ba-bced-01587165b478"), Code="02463", Description="Drains", SortOrder=Convert.ToDecimal("3.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d8742aba-0e9a-4558-9c7b-282a4a5a46dc"), Code="02471", Description="Filtration system", SortOrder=Convert.ToDecimal("4.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("ac1ef624-f6c0-4c6e-b3c2-82821ac2e8dc"), Code="02467", Description="Parcel drainage", SortOrder=Convert.ToDecimal("5.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("ae13e9da-2655-4019-8b96-3f91bf3a46b1"), Code="02468", Description="Piping", SortOrder=Convert.ToDecimal("6.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("7481792e-6137-4fb6-9331-c5f3973b1e13"), Code="13597", Description="Plumbing fixtures", SortOrder=Convert.ToDecimal("7.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d8a4540d-688c-4291-b98d-59b1aa452695"), Code="13598", Description="Rain water drainage", SortOrder=Convert.ToDecimal("8.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b89febb9-199c-4598-9cac-bc6da5c19ff0"), Code="13599", Description="Sanitary waste", SortOrder=Convert.ToDecimal("9.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("f3323edb-193f-4fc8-b9a3-733c463ad3c7"), Code="02465", Description="Sewage treatment", SortOrder=Convert.ToDecimal("10.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("f80d14b4-0a8e-45dd-b0cd-b94cb2cc212a"), Code="02464", Description="Vents", SortOrder=Convert.ToDecimal("11.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("43761f6d-05f7-407c-a8f0-b6693268762f"), Code="02469", Description="Water softeners", SortOrder=Convert.ToDecimal("12.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("a2f3b903-280d-429b-875a-93c25b63331d"), Code="02466", Description="Water source", SortOrder=Convert.ToDecimal("13.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("2bc45ce5-40b6-4336-9789-dbedb642ce08"), Code="02462", Description="Water supply", SortOrder=Convert.ToDecimal("14.00") },
-            new RefBuildingPlumbingSystemType { Id=Guid.Parse("928e8b48-26cf-467f-879f-b5c8b63ce51b"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("99.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b60cd711-dc77-43fc-8140-fd26976d3095"), Description="Detention ponds", SortOrder=Convert.ToDecimal("1.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("22a3e836-eba2-4178-b32e-c2261a1b9a01"), Description="Domestic water distribution", SortOrder=Convert.ToDecimal("2.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("231a5615-c194-43f8-809d-01fef57d2dab"), Description="Drains", SortOrder=Convert.ToDecimal("3.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("1ef804b7-caf8-404c-a407-120f319192bc"), Description="Filtration system", SortOrder=Convert.ToDecimal("4.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("6fe56913-259d-4c4d-a57a-f31e7a7f508b"), Description="Parcel drainage", SortOrder=Convert.ToDecimal("5.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("426daa60-787d-41dc-9f5f-54e1dde9488c"), Description="Piping", SortOrder=Convert.ToDecimal("6.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("4392ad23-ea08-4a4e-a9ca-8a084154d910"), Description="Plumbing fixtures", SortOrder=Convert.ToDecimal("7.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("220a53e7-e03c-4b08-b3bd-3271064105b9"), Description="Rain water drainage", SortOrder=Convert.ToDecimal("8.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("cdbb6781-11fe-465c-b919-f0e5a36a38dc"), Description="Sanitary waste", SortOrder=Convert.ToDecimal("9.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("07b30e31-ff7b-491d-a3af-3dc353eec16c"), Description="Sewage treatment", SortOrder=Convert.ToDecimal("10.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("75a0c69c-68b2-4998-8f1b-338989a56fb5"), Description="Vents", SortOrder=Convert.ToDecimal("11.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d442bf64-b5f3-46fa-acec-b53b29b6eccf"), Description="Water softeners", SortOrder=Convert.ToDecimal("12.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("d6a7b3fc-2247-42d8-a8ae-391b0300e67c"), Description="Water source", SortOrder=Convert.ToDecimal("13.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("a20753f0-7790-40b5-a012-a2ddd6f24773"), Description="Water supply", SortOrder=Convert.ToDecimal("14.00") },
+            new RefBuildingPlumbingSystemType { Id=Guid.Parse("b13c59f2-3bd1-4245-8cb2-479ab70d6491"), Description="Other", SortOrder=Convert.ToDecimal("99.00") },
        };
    }
 }

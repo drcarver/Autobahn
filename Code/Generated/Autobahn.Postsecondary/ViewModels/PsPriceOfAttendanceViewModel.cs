@@ -11,7 +11,7 @@ namespace Autobahn.Postsecondary.ViewModels
      /// <summary>
      /// The PsPriceOfAttendanceViewModel
      /// </summary>
-    public partial class PsPriceOfAttendanceViewModel : ViewModelBase, Interfaces.IPsPriceOfAttendance
+    public partial class PsPriceOfAttendanceViewModel : ViewModelBase, Interfaces.IPsPriceOfAttendanceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

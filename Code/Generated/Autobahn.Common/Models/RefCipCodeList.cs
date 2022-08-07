@@ -3,7 +3,6 @@
 //* FileName:   RefCipCodeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCipCode"> List
+        /// The complete <see cref="RefCipCodeModel"> List
          /// </summary>
-        public static List<RefCipCode> RefCipCodeList = new List<RefCipCode>
+        public static List<RefCipCodeModel> RefCipCodeList = new List<RefCipCodeModel>
         {
         };
 
         /// <summary>
-        /// The RefCipCode Pick List
+        /// The Reference RefCipCode Pick List
          /// </summary>
-        public static List<RefCipCode> RefCipCodePickList = new List<RefCipCode>
+        public static List<ReferencePickListItemViewModel> RefCipCodeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IncidentView : ContentPage
     {
         /// <summary>
-        /// Inject the IncidentViewModel as the data context for the view
+        /// Inject the IIncidentViewModel as the data context for the view
         /// </summary>
-        public IncidentView(IncidentViewModel vm)
+        public IncidentView(IIncidentViewModel vm)
         {
             BindingContext  = vm;
         }

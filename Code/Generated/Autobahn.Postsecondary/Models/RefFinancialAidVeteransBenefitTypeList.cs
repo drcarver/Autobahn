@@ -13,21 +13,21 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefFinancialAidVeteransBenefitType"> List
+        /// The complete <see cref="RefFinancialAidVeteransBenefitTypeModel"> List
          /// </summary>
-        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypeList = new List<RefFinancialAidVeteransBenefitType>
+        public static List<RefFinancialAidVeteransBenefitTypeModel> RefFinancialAidVeteransBenefitTypeList = new List<RefFinancialAidVeteransBenefitTypeModel>
         {
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c999cfb0-766e-4013-8ab6-89c88a90bb76"), Code="Post911GIBill", Description="Post-9/11 GI Bill", Definition="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("a6fb0b1a-f0c5-4868-a34c-1a963cc5d9c3"), Code="DODTuitionAssistance", Description="Department of Defense Tuition Assistance", Definition="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c2b75270-1cf8-4582-a100-4eb5039afa32"), Code="Post911GIBill", Description="Post-9/11 GI Bill", Definition="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("680d134f-542a-4652-bf5e-f1921b2eadac"), Code="DODTuitionAssistance", Description="Department of Defense Tuition Assistance", Definition="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefFinancialAidVeteransBenefitType Pick List
+        /// The Reference RefFinancialAidVeteransBenefitType Pick List
          /// </summary>
-        public static List<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypePickList = new List<RefFinancialAidVeteransBenefitType>
+        public static List<ReferencePickListItemViewModel> RefFinancialAidVeteransBenefitTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c999cfb0-766e-4013-8ab6-89c88a90bb76"), Code="Post911GIBill", Description="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("a6fb0b1a-f0c5-4868-a34c-1a963cc5d9c3"), Code="DODTuitionAssistance", Description="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("c2b75270-1cf8-4582-a100-4eb5039afa32"), Description="Post-9/11 GI Bill", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFinancialAidVeteransBenefitType { Id=Guid.Parse("680d134f-542a-4652-bf5e-f1921b2eadac"), Description="Department of Defense Tuition Assistance", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

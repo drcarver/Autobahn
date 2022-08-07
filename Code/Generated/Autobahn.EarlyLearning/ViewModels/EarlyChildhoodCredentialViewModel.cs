@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The EarlyChildhoodCredentialViewModel
      /// </summary>
-    public partial class EarlyChildhoodCredentialViewModel : ViewModelBase, Interfaces.IEarlyChildhoodCredential
+    public partial class EarlyChildhoodCredentialViewModel : ViewModelBase, Interfaces.IEarlyChildhoodCredentialViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

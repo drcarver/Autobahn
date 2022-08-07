@@ -13,25 +13,25 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTuitionResidencyType"> List
+        /// The complete <see cref="RefTuitionResidencyTypeModel"> List
          /// </summary>
-        public static List<RefTuitionResidencyType> RefTuitionResidencyTypeList = new List<RefTuitionResidencyType>
+        public static List<RefTuitionResidencyTypeModel> RefTuitionResidencyTypeList = new List<RefTuitionResidencyTypeModel>
         {
-            new RefTuitionResidencyType { Id=Guid.Parse("c8d34401-7122-4192-a568-4a8514609020"), Code="InDistrict", Description="In-district", Definition="The person's residency status for tuition purposes is: In-district.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("b766dbea-434d-43a8-b8fa-280ff92b061c"), Code="InState", Description="In-state", Definition="The person's residency status for tuition purposes is: In-state.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("2abb9ec1-9a5d-4be2-8df9-a757bf280cf5"), Code="OutOfState", Description="Out-of-state", Definition="The person's residency status for tuition purposes is: Out-of-state.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("ed99a945-f48c-4171-a86c-2633c1fb7357"), Code="NoDifferential", Description="No differential tuition based on residency", Definition="No differential tuition based on residency is provided.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("10ceee90-6772-4220-9ae3-d77cf9840b7f"), Code="InDistrict", Description="In-district", Definition="The person's residency status for tuition purposes is: In-district.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("620c1cd7-6fb6-4776-b978-e528c0822a93"), Code="InState", Description="In-state", Definition="The person's residency status for tuition purposes is: In-state.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("8ab40cf3-b626-4117-b2da-1bf21d6793ff"), Code="OutOfState", Description="Out-of-state", Definition="The person's residency status for tuition purposes is: Out-of-state.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("52a4d681-a3fc-41fb-a147-cb1b53352aa7"), Code="NoDifferential", Description="No differential tuition based on residency", Definition="No differential tuition based on residency is provided.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefTuitionResidencyType Pick List
+        /// The Reference RefTuitionResidencyType Pick List
          /// </summary>
-        public static List<RefTuitionResidencyType> RefTuitionResidencyTypePickList = new List<RefTuitionResidencyType>
+        public static List<ReferencePickListItemViewModel> RefTuitionResidencyTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefTuitionResidencyType { Id=Guid.Parse("c8d34401-7122-4192-a568-4a8514609020"), Code="InDistrict", Description="In-district", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("b766dbea-434d-43a8-b8fa-280ff92b061c"), Code="InState", Description="In-state", SortOrder=Convert.ToDecimal("2.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("2abb9ec1-9a5d-4be2-8df9-a757bf280cf5"), Code="OutOfState", Description="Out-of-state", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTuitionResidencyType { Id=Guid.Parse("ed99a945-f48c-4171-a86c-2633c1fb7357"), Code="NoDifferential", Description="No differential tuition based on residency", SortOrder=Convert.ToDecimal("4.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("10ceee90-6772-4220-9ae3-d77cf9840b7f"), Description="In-district", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("620c1cd7-6fb6-4776-b978-e528c0822a93"), Description="In-state", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("8ab40cf3-b626-4117-b2da-1bf21d6793ff"), Description="Out-of-state", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTuitionResidencyType { Id=Guid.Parse("52a4d681-a3fc-41fb-a147-cb1b53352aa7"), Description="No differential tuition based on residency", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

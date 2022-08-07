@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class RecordStatusView : ContentPage
     {
         /// <summary>
-        /// Inject the RecordStatusViewModel as the data context for the view
+        /// Inject the IRecordStatusViewModel as the data context for the view
         /// </summary>
-        public RecordStatusView(RecordStatusViewModel vm)
+        public RecordStatusView(IRecordStatusViewModel vm)
         {
             BindingContext  = vm;
         }

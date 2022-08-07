@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IndividualizedProgramMeetingAttendeeViewModel
      /// </summary>
-    public partial class IndividualizedProgramMeetingAttendeeViewModel : ViewModelBase, Interfaces.IIndividualizedProgramMeetingAttendee
+    public partial class IndividualizedProgramMeetingAttendeeViewModel : ViewModelBase, Interfaces.IIndividualizedProgramMeetingAttendeeViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

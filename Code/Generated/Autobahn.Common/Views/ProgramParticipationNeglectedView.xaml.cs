@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationNeglectedView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationNeglectedViewModel as the data context for the view
+        /// Inject the IProgramParticipationNeglectedViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationNeglectedView(ProgramParticipationNeglectedViewModel vm)
+        public ProgramParticipationNeglectedView(IProgramParticipationNeglectedViewModel vm)
         {
             BindingContext  = vm;
         }

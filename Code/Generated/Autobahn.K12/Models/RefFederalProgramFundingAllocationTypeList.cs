@@ -13,25 +13,25 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefFederalProgramFundingAllocationType"> List
+        /// The complete <see cref="RefFederalProgramFundingAllocationTypeModel"> List
          /// </summary>
-        public static List<RefFederalProgramFundingAllocationType> RefFederalProgramFundingAllocationTypeList = new List<RefFederalProgramFundingAllocationType>
+        public static List<RefFederalProgramFundingAllocationTypeModel> RefFederalProgramFundingAllocationTypeList = new List<RefFederalProgramFundingAllocationTypeModel>
         {
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("68b1eac0-cb17-413c-9861-48c7f7ff920b"), Code="RETAINED", Description="Retained by SEA for program administration, etc.", Definition="Retained by SEA for program administration, etc. is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("5c9c9045-a1da-471a-b9a6-e240f258d187"), Code="TRANSFER", Description="Transferred to another state agency", Definition="Transferred to another state agency is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("9b4d675c-ae9d-4654-9b44-789582b803d9"), Code="DISTNONLEA", Description="Distributed to entities other  than LEAs", Definition="Distributed to entities other  than LEAs is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("b11febc6-6c10-4556-a418-2f88560ea01f"), Code="UNALLOC", Description="Unallocated or returned funds", Definition="Unallocated or returned funds is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("096bd77c-3a78-4fb1-bf40-ebc24a52541c"), Code="RETAINED", Description="Retained by SEA for program administration, etc.", Definition="Retained by SEA for program administration, etc. is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("5c0c24ff-f1a3-43d3-bffe-923aec23c273"), Code="TRANSFER", Description="Transferred to another state agency", Definition="Transferred to another state agency is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("76ca5d2d-216e-4f99-8fb1-862582364816"), Code="DISTNONLEA", Description="Distributed to entities other  than LEAs", Definition="Distributed to entities other  than LEAs is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("d3394249-9f1f-40e3-b295-edfe382d6f2e"), Code="UNALLOC", Description="Unallocated or returned funds", Definition="Unallocated or returned funds is the type of federal program funding allocation or distribution made.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefFederalProgramFundingAllocationType Pick List
+        /// The Reference RefFederalProgramFundingAllocationType Pick List
          /// </summary>
-        public static List<RefFederalProgramFundingAllocationType> RefFederalProgramFundingAllocationTypePickList = new List<RefFederalProgramFundingAllocationType>
+        public static List<ReferencePickListItemViewModel> RefFederalProgramFundingAllocationTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("68b1eac0-cb17-413c-9861-48c7f7ff920b"), Code="RETAINED", Description="Retained by SEA for program administration, etc.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("5c9c9045-a1da-471a-b9a6-e240f258d187"), Code="TRANSFER", Description="Transferred to another state agency", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("9b4d675c-ae9d-4654-9b44-789582b803d9"), Code="DISTNONLEA", Description="Distributed to entities other  than LEAs", SortOrder=Convert.ToDecimal("3.00") },
-            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("b11febc6-6c10-4556-a418-2f88560ea01f"), Code="UNALLOC", Description="Unallocated or returned funds", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("096bd77c-3a78-4fb1-bf40-ebc24a52541c"), Description="Retained by SEA for program administration, etc.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("5c0c24ff-f1a3-43d3-bffe-923aec23c273"), Description="Transferred to another state agency", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("76ca5d2d-216e-4f99-8fb1-862582364816"), Description="Distributed to entities other  than LEAs", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFederalProgramFundingAllocationType { Id=Guid.Parse("d3394249-9f1f-40e3-b295-edfe382d6f2e"), Description="Unallocated or returned funds", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

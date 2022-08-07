@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsSectionView : ContentPage
     {
         /// <summary>
-        /// Inject the PsSectionViewModel as the data context for the view
+        /// Inject the IPsSectionViewModel as the data context for the view
         /// </summary>
-        public PsSectionView(PsSectionViewModel vm)
+        public PsSectionView(IPsSectionViewModel vm)
         {
             BindingContext  = vm;
         }

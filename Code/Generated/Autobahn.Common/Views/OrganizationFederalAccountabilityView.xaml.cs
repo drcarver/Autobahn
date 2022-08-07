@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationFederalAccountabilityView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationFederalAccountabilityViewModel as the data context for the view
+        /// Inject the IOrganizationFederalAccountabilityViewModel as the data context for the view
         /// </summary>
-        public OrganizationFederalAccountabilityView(OrganizationFederalAccountabilityViewModel vm)
+        public OrganizationFederalAccountabilityView(IOrganizationFederalAccountabilityViewModel vm)
         {
             BindingContext  = vm;
         }

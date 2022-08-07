@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IDSVersionView : ContentPage
     {
         /// <summary>
-        /// Inject the IDSVersionViewModel as the data context for the view
+        /// Inject the IIDSVersionViewModel as the data context for the view
         /// </summary>
-        public IDSVersionView(IDSVersionViewModel vm)
+        public IDSVersionView(IIDSVersionViewModel vm)
         {
             BindingContext  = vm;
         }

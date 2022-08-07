@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELStaffAssignmentView : ContentPage
     {
         /// <summary>
-        /// Inject the ELStaffAssignmentViewModel as the data context for the view
+        /// Inject the IELStaffAssignmentViewModel as the data context for the view
         /// </summary>
-        public ELStaffAssignmentView(ELStaffAssignmentViewModel vm)
+        public ELStaffAssignmentView(IELStaffAssignmentViewModel vm)
         {
             BindingContext  = vm;
         }

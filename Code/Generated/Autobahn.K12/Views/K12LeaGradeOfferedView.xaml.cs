@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaGradeOfferedView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaGradeOfferedViewModel as the data context for the view
+        /// Inject the IK12LeaGradeOfferedViewModel as the data context for the view
         /// </summary>
-        public K12LeaGradeOfferedView(K12LeaGradeOfferedViewModel vm)
+        public K12LeaGradeOfferedView(IK12LeaGradeOfferedViewModel vm)
         {
             BindingContext  = vm;
         }

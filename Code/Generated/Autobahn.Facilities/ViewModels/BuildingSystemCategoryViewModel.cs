@@ -11,7 +11,7 @@ namespace Autobahn.Facilities.ViewModels
      /// <summary>
      /// The BuildingSystemCategoryViewModel
      /// </summary>
-    public partial class BuildingSystemCategoryViewModel : ViewModelBase, Interfaces.IBuildingSystemCategory
+    public partial class BuildingSystemCategoryViewModel : ViewModelBase, Interfaces.IBuildingSystemCategoryViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

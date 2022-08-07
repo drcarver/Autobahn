@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildHealthView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildHealthViewModel as the data context for the view
+        /// Inject the IELChildHealthViewModel as the data context for the view
         /// </summary>
-        public ELChildHealthView(ELChildHealthViewModel vm)
+        public ELChildHealthView(IELChildHealthViewModel vm)
         {
             BindingContext  = vm;
         }

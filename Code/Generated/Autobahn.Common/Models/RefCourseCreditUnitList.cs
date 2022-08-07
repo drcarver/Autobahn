@@ -3,7 +3,6 @@
 //* FileName:   RefCourseCreditUnitList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,35 +12,35 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCourseCreditUnit"> List
+        /// The complete <see cref="RefCourseCreditUnitModel"> List
          /// </summary>
-        public static List<RefCourseCreditUnit> RefCourseCreditUnitList = new List<RefCourseCreditUnit>
+        public static List<RefCourseCreditUnitModel> RefCourseCreditUnitList = new List<RefCourseCreditUnitModel>
         {
-            new RefCourseCreditUnit { Id=Guid.Parse("d18376aa-8ef4-4312-9892-5a4632aeac05"), Code="NoCredit", Description="No Credit", Definition="No Credit is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("a7143af1-c539-4dca-bd2c-dc86249c5c31"), Code="Quarter", Description="Quarter ", Definition="Quarter is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("dca651de-25fd-4153-9908-eebea32cf167"), Code="Semester", Description="Semester ", Definition="Semester is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("3c2b0a4b-a9d5-4197-bcd7-6b02b387ac2b"), Code="Units", Description="Units ", Definition="Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("03a9be99-e302-4cb4-b2d2-98bb470f6801"), Code="CarnegieUnits", Description="Carnegie Units ", Definition="Carnegie Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("1a98a14d-bc78-4a2d-bbde-d0b43d48afaf"), Code="ContinuingEducationUnits", Description="Continuing Education Units ", Definition="Continuing Education Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("0b218abc-db27-4de4-a8be-99b865a02db3"), Code="ClockHours", Description="Clock Hours ", Definition="Clock Hours is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("6a72878e-5aaf-47ad-bd41-08064cd81a7d"), Code="Other", Description="Other", Definition="Other is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("8.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("771f14e6-488e-4fec-9503-fe57cb7f6584"), Code="Unreported", Description="Unreported", Definition="Unreported is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d462c718-1c4a-459f-9c81-7bc25b19c206"), Code="NoCredit", Description="No Credit", Definition="No Credit is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("3f5038f6-c456-4996-ad19-1523e80ebd3c"), Code="Quarter", Description="Quarter ", Definition="Quarter is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d972c627-610e-42c5-95d6-c9ccaf408059"), Code="Semester", Description="Semester ", Definition="Semester is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("7da8b942-a4a4-4edb-98b9-ed23eee2e216"), Code="Units", Description="Units ", Definition="Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("9aa2c6a3-409d-4cb7-bfb3-1d4a40adce60"), Code="CarnegieUnits", Description="Carnegie Units ", Definition="Carnegie Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d47e8255-29d7-48c4-805f-6519061cf609"), Code="ContinuingEducationUnits", Description="Continuing Education Units ", Definition="Continuing Education Units is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("eb610c7e-f697-4252-82ed-81861551489a"), Code="ClockHours", Description="Clock Hours ", Definition="Clock Hours is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("58c93cbf-ad7f-48b6-afbc-a220b91bdac6"), Code="Other", Description="Other", Definition="Other is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("c2d345ba-b53b-4c8c-a426-5aeec060ff4a"), Code="Unreported", Description="Unreported", Definition="Unreported is specified as the type of credit associated with the credit hours earned for the course.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
-        /// The RefCourseCreditUnit Pick List
+        /// The Reference RefCourseCreditUnit Pick List
          /// </summary>
-        public static List<RefCourseCreditUnit> RefCourseCreditUnitPickList = new List<RefCourseCreditUnit>
+        public static List<ReferencePickListItemViewModel> RefCourseCreditUnitViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCourseCreditUnit { Id=Guid.Parse("d18376aa-8ef4-4312-9892-5a4632aeac05"), Code="NoCredit", Description="No Credit", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("a7143af1-c539-4dca-bd2c-dc86249c5c31"), Code="Quarter", Description="Quarter ", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("dca651de-25fd-4153-9908-eebea32cf167"), Code="Semester", Description="Semester ", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("3c2b0a4b-a9d5-4197-bcd7-6b02b387ac2b"), Code="Units", Description="Units ", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("03a9be99-e302-4cb4-b2d2-98bb470f6801"), Code="CarnegieUnits", Description="Carnegie Units ", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("1a98a14d-bc78-4a2d-bbde-d0b43d48afaf"), Code="ContinuingEducationUnits", Description="Continuing Education Units ", SortOrder=Convert.ToDecimal("6.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("0b218abc-db27-4de4-a8be-99b865a02db3"), Code="ClockHours", Description="Clock Hours ", SortOrder=Convert.ToDecimal("7.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("6a72878e-5aaf-47ad-bd41-08064cd81a7d"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("8.00") },
-            new RefCourseCreditUnit { Id=Guid.Parse("771f14e6-488e-4fec-9503-fe57cb7f6584"), Code="Unreported", Description="Unreported", SortOrder=Convert.ToDecimal("9.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d462c718-1c4a-459f-9c81-7bc25b19c206"), Description="No Credit", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("3f5038f6-c456-4996-ad19-1523e80ebd3c"), Description="Quarter ", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d972c627-610e-42c5-95d6-c9ccaf408059"), Description="Semester ", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("7da8b942-a4a4-4edb-98b9-ed23eee2e216"), Description="Units ", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("9aa2c6a3-409d-4cb7-bfb3-1d4a40adce60"), Description="Carnegie Units ", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("d47e8255-29d7-48c4-805f-6519061cf609"), Description="Continuing Education Units ", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("eb610c7e-f697-4252-82ed-81861551489a"), Description="Clock Hours ", SortOrder=Convert.ToDecimal("7.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("58c93cbf-ad7f-48b6-afbc-a220b91bdac6"), Description="Other", SortOrder=Convert.ToDecimal("8.00") },
+            new RefCourseCreditUnit { Id=Guid.Parse("c2d345ba-b53b-4c8c-a426-5aeec060ff4a"), Description="Unreported", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

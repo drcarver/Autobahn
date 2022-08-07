@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonEmailAddressViewModel
      /// </summary>
-    public partial class PersonEmailAddressViewModel : ViewModelBase, Interfaces.IPersonEmailAddress
+    public partial class PersonEmailAddressViewModel : ViewModelBase, Interfaces.IPersonEmailAddressViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

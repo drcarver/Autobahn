@@ -11,7 +11,7 @@ namespace Autobahn.CareerandTechnical.ViewModels
      /// <summary>
      /// The ProgramParticipationCteViewModel
      /// </summary>
-    public partial class ProgramParticipationCteViewModel : ViewModelBase, Interfaces.IProgramParticipationCte
+    public partial class ProgramParticipationCteViewModel : ViewModelBase, Interfaces.IProgramParticipationCteViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

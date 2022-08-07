@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsStudentCourseSectionMarkView : ContentPage
     {
         /// <summary>
-        /// Inject the PsStudentCourseSectionMarkViewModel as the data context for the view
+        /// Inject the IPsStudentCourseSectionMarkViewModel as the data context for the view
         /// </summary>
-        public PsStudentCourseSectionMarkView(PsStudentCourseSectionMarkViewModel vm)
+        public PsStudentCourseSectionMarkView(IPsStudentCourseSectionMarkViewModel vm)
         {
             BindingContext  = vm;
         }

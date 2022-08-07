@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonStatusViewModel
      /// </summary>
-    public partial class PersonStatusViewModel : ViewModelBase, Interfaces.IPersonStatus
+    public partial class PersonStatusViewModel : ViewModelBase, Interfaces.IPersonStatusViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -11,7 +11,7 @@ namespace Autobahn.Workforce.ViewModels
      /// <summary>
      /// The WorkforceEmploymentQuarterlyDataViewModel
      /// </summary>
-    public partial class WorkforceEmploymentQuarterlyDataViewModel : ViewModelBase, Interfaces.IWorkforceEmploymentQuarterlyData
+    public partial class WorkforceEmploymentQuarterlyDataViewModel : ViewModelBase, Interfaces.IWorkforceEmploymentQuarterlyDataViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class StaffCredentialView : ContentPage
     {
         /// <summary>
-        /// Inject the StaffCredentialViewModel as the data context for the view
+        /// Inject the IStaffCredentialViewModel as the data context for the view
         /// </summary>
-        public StaffCredentialView(StaffCredentialViewModel vm)
+        public StaffCredentialView(IStaffCredentialViewModel vm)
         {
             BindingContext  = vm;
         }

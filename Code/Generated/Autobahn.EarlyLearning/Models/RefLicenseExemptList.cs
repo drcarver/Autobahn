@@ -13,23 +13,23 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefLicenseExempt"> List
+        /// The complete <see cref="RefLicenseExemptModel"> List
          /// </summary>
-        public static List<RefLicenseExempt> RefLicenseExemptList = new List<RefLicenseExempt>
+        public static List<RefLicenseExemptModel> RefLicenseExemptList = new List<RefLicenseExemptModel>
         {
-            new RefLicenseExempt { Id=Guid.Parse("9c31150b-cead-40dc-9df2-84ef92449394"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLicenseExempt { Id=Guid.Parse("38149f6a-1da8-469c-b928-4ccf3d0c454d"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new RefLicenseExempt { Id=Guid.Parse("79893d18-d4fc-4e50-b581-c8b709203d4d"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLicenseExempt { Id=Guid.Parse("a55af854-495a-4564-bc59-6b428df8b153"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLicenseExempt { Id=Guid.Parse("c64eac2f-f7d2-4d7c-8fdc-b01c35feb14c"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLicenseExempt { Id=Guid.Parse("92c3aa5e-4843-4fbf-8da8-52db8d056a8a"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefLicenseExempt Pick List
+        /// The Reference RefLicenseExempt Pick List
          /// </summary>
-        public static List<RefLicenseExempt> RefLicenseExemptPickList = new List<RefLicenseExempt>
+        public static List<ReferencePickListItemViewModel> RefLicenseExemptViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefLicenseExempt { Id=Guid.Parse("9c31150b-cead-40dc-9df2-84ef92449394"), Code="Yes", Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
-            new RefLicenseExempt { Id=Guid.Parse("38149f6a-1da8-469c-b928-4ccf3d0c454d"), Code="No", Description="No", SortOrder=Convert.ToDecimal("2.00") },
-            new RefLicenseExempt { Id=Guid.Parse("79893d18-d4fc-4e50-b581-c8b709203d4d"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("3.00") },
+            new RefLicenseExempt { Id=Guid.Parse("a55af854-495a-4564-bc59-6b428df8b153"), Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
+            new RefLicenseExempt { Id=Guid.Parse("c64eac2f-f7d2-4d7c-8fdc-b01c35feb14c"), Description="No", SortOrder=Convert.ToDecimal("2.00") },
+            new RefLicenseExempt { Id=Guid.Parse("92c3aa5e-4843-4fbf-8da8-52db8d056a8a"), Description="Not applicable", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

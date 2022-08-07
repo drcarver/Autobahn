@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12StaffAssignmentView : ContentPage
     {
         /// <summary>
-        /// Inject the K12StaffAssignmentViewModel as the data context for the view
+        /// Inject the IK12StaffAssignmentViewModel as the data context for the view
         /// </summary>
-        public K12StaffAssignmentView(K12StaffAssignmentViewModel vm)
+        public K12StaffAssignmentView(IK12StaffAssignmentViewModel vm)
         {
             BindingContext  = vm;
         }

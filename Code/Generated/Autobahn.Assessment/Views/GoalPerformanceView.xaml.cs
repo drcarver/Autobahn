@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class GoalPerformanceView : ContentPage
     {
         /// <summary>
-        /// Inject the GoalPerformanceViewModel as the data context for the view
+        /// Inject the IGoalPerformanceViewModel as the data context for the view
         /// </summary>
-        public GoalPerformanceView(GoalPerformanceViewModel vm)
+        public GoalPerformanceView(IGoalPerformanceViewModel vm)
         {
             BindingContext  = vm;
         }

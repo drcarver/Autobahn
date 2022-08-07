@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationFoodServiceView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationFoodServiceViewModel as the data context for the view
+        /// Inject the IProgramParticipationFoodServiceViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationFoodServiceView(ProgramParticipationFoodServiceViewModel vm)
+        public ProgramParticipationFoodServiceView(IProgramParticipationFoodServiceViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ActivityRecognitionView : ContentPage
     {
         /// <summary>
-        /// Inject the ActivityRecognitionViewModel as the data context for the view
+        /// Inject the IActivityRecognitionViewModel as the data context for the view
         /// </summary>
-        public ActivityRecognitionView(ActivityRecognitionViewModel vm)
+        public ActivityRecognitionView(IActivityRecognitionViewModel vm)
         {
             BindingContext  = vm;
         }

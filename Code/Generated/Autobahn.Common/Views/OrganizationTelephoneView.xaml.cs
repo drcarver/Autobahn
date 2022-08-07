@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationTelephoneView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationTelephoneViewModel as the data context for the view
+        /// Inject the IOrganizationTelephoneViewModel as the data context for the view
         /// </summary>
-        public OrganizationTelephoneView(OrganizationTelephoneViewModel vm)
+        public OrganizationTelephoneView(IOrganizationTelephoneViewModel vm)
         {
             BindingContext  = vm;
         }

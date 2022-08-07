@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12CharterSchoolManagementOrganizationView : ContentPage
     {
         /// <summary>
-        /// Inject the K12CharterSchoolManagementOrganizationViewModel as the data context for the view
+        /// Inject the IK12CharterSchoolManagementOrganizationViewModel as the data context for the view
         /// </summary>
-        public K12CharterSchoolManagementOrganizationView(K12CharterSchoolManagementOrganizationViewModel vm)
+        public K12CharterSchoolManagementOrganizationView(IK12CharterSchoolManagementOrganizationViewModel vm)
         {
             BindingContext  = vm;
         }

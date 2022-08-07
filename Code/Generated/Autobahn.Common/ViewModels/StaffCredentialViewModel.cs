@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The StaffCredentialViewModel
      /// </summary>
-    public partial class StaffCredentialViewModel : ViewModelBase, Interfaces.IStaffCredential
+    public partial class StaffCredentialViewModel : ViewModelBase, Interfaces.IStaffCredentialViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

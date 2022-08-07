@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonImmunizationViewModel
      /// </summary>
-    public partial class PersonImmunizationViewModel : ViewModelBase, Interfaces.IPersonImmunization
+    public partial class PersonImmunizationViewModel : ViewModelBase, Interfaces.IPersonImmunizationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

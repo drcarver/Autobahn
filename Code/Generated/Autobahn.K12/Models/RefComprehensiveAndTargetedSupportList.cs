@@ -13,16 +13,16 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefComprehensiveAndTargetedSupport"> List
+        /// The complete <see cref="RefComprehensiveAndTargetedSupportModel"> List
          /// </summary>
-        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportList = new List<RefComprehensiveAndTargetedSupport>
+        public static List<RefComprehensiveAndTargetedSupportModel> RefComprehensiveAndTargetedSupportList = new List<RefComprehensiveAndTargetedSupportModel>
         {
         };
 
         /// <summary>
-        /// The RefComprehensiveAndTargetedSupport Pick List
+        /// The Reference RefComprehensiveAndTargetedSupport Pick List
          /// </summary>
-        public static List<RefComprehensiveAndTargetedSupport> RefComprehensiveAndTargetedSupportPickList = new List<RefComprehensiveAndTargetedSupport>
+        public static List<ReferencePickListItemViewModel> RefComprehensiveAndTargetedSupportViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

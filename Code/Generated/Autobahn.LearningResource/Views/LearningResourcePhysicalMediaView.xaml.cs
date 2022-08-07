@@ -14,9 +14,9 @@ namespace Autobahn.LearningResource.Views
     public partial class LearningResourcePhysicalMediaView : ContentPage
     {
         /// <summary>
-        /// Inject the LearningResourcePhysicalMediaViewModel as the data context for the view
+        /// Inject the ILearningResourcePhysicalMediaViewModel as the data context for the view
         /// </summary>
-        public LearningResourcePhysicalMediaView(LearningResourcePhysicalMediaViewModel vm)
+        public LearningResourcePhysicalMediaView(ILearningResourcePhysicalMediaViewModel vm)
         {
             BindingContext  = vm;
         }

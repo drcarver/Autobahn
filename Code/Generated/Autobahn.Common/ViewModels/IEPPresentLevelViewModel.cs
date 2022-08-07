@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IEPPresentLevelViewModel
      /// </summary>
-    public partial class IEPPresentLevelViewModel : ViewModelBase, Interfaces.IIEPPresentLevel
+    public partial class IEPPresentLevelViewModel : ViewModelBase, Interfaces.IIEPPresentLevelViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class EarlyChildhoodProgramTypeOfferedView : ContentPage
     {
         /// <summary>
-        /// Inject the EarlyChildhoodProgramTypeOfferedViewModel as the data context for the view
+        /// Inject the IEarlyChildhoodProgramTypeOfferedViewModel as the data context for the view
         /// </summary>
-        public EarlyChildhoodProgramTypeOfferedView(EarlyChildhoodProgramTypeOfferedViewModel vm)
+        public EarlyChildhoodProgramTypeOfferedView(IEarlyChildhoodProgramTypeOfferedViewModel vm)
         {
             BindingContext  = vm;
         }

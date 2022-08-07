@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ServiceFrequencyView : ContentPage
     {
         /// <summary>
-        /// Inject the ServiceFrequencyViewModel as the data context for the view
+        /// Inject the IServiceFrequencyViewModel as the data context for the view
         /// </summary>
-        public ServiceFrequencyView(ServiceFrequencyViewModel vm)
+        public ServiceFrequencyView(IServiceFrequencyViewModel vm)
         {
             BindingContext  = vm;
         }

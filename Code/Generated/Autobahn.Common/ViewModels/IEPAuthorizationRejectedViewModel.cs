@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IEPAuthorizationRejectedViewModel
      /// </summary>
-    public partial class IEPAuthorizationRejectedViewModel : ViewModelBase, Interfaces.IIEPAuthorizationRejected
+    public partial class IEPAuthorizationRejectedViewModel : ViewModelBase, Interfaces.IIEPAuthorizationRejectedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

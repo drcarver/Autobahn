@@ -13,23 +13,23 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIDEAPartCEligibilityCategory"> List
+        /// The complete <see cref="RefIDEAPartCEligibilityCategoryModel"> List
          /// </summary>
-        public static List<RefIDEAPartCEligibilityCategory> RefIDEAPartCEligibilityCategoryList = new List<RefIDEAPartCEligibilityCategory>
+        public static List<RefIDEAPartCEligibilityCategoryModel> RefIDEAPartCEligibilityCategoryList = new List<RefIDEAPartCEligibilityCategoryModel>
         {
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("50b1f26a-f716-491e-8d95-d09ee4bcdc70"), Code="DevelopmentalDelay", Description="Developmental Delay", Definition="The child has one or more delays as measured by appropriate diagnostic instruments and procedures in 1 or more of the areas of cognitive development, physical development, communication  development, social or emotional development, and adaptive development.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("5fcd420b-40ce-4ea9-9ab3-2e24be3086f4"), Code="DiagnosedCondition", Description="Diagnosed Condition", Definition="The child has a diagnosed physical or mental condition that has a high probability of resulting in developmental delay.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("4c8c2970-0b62-428b-ae34-fbb7a4a51c88"), Code="AtRisk", Description="At-risk", Definition="The child would be at risk of experiencing a substantial developmental delay if early intervention services were not provided to the child.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("f009fde5-5a59-4bbc-acaa-f8513c1a0019"), Code="DevelopmentalDelay", Description="Developmental Delay", Definition="The child has one or more delays as measured by appropriate diagnostic instruments and procedures in 1 or more of the areas of cognitive development, physical development, communication  development, social or emotional development, and adaptive development.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("0c4877f6-36dd-4197-9ea6-7150f1a5ac0f"), Code="DiagnosedCondition", Description="Diagnosed Condition", Definition="The child has a diagnosed physical or mental condition that has a high probability of resulting in developmental delay.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("8fcfb353-ec76-4e14-bc97-f3cc1f725da3"), Code="AtRisk", Description="At-risk", Definition="The child would be at risk of experiencing a substantial developmental delay if early intervention services were not provided to the child.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefIDEAPartCEligibilityCategory Pick List
+        /// The Reference RefIDEAPartCEligibilityCategory Pick List
          /// </summary>
-        public static List<RefIDEAPartCEligibilityCategory> RefIDEAPartCEligibilityCategoryPickList = new List<RefIDEAPartCEligibilityCategory>
+        public static List<ReferencePickListItemViewModel> RefIDEAPartCEligibilityCategoryViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("50b1f26a-f716-491e-8d95-d09ee4bcdc70"), Code="DevelopmentalDelay", Description="Developmental Delay", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("5fcd420b-40ce-4ea9-9ab3-2e24be3086f4"), Code="DiagnosedCondition", Description="Diagnosed Condition", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("4c8c2970-0b62-428b-ae34-fbb7a4a51c88"), Code="AtRisk", Description="At-risk", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("f009fde5-5a59-4bbc-acaa-f8513c1a0019"), Description="Developmental Delay", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("0c4877f6-36dd-4197-9ea6-7150f1a5ac0f"), Description="Diagnosed Condition", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIDEAPartCEligibilityCategory { Id=Guid.Parse("8fcfb353-ec76-4e14-bc97-f3cc1f725da3"), Description="At-risk", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

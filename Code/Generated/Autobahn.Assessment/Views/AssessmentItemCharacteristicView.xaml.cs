@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentItemCharacteristicView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentItemCharacteristicViewModel as the data context for the view
+        /// Inject the IAssessmentItemCharacteristicViewModel as the data context for the view
         /// </summary>
-        public AssessmentItemCharacteristicView(AssessmentItemCharacteristicViewModel vm)
+        public AssessmentItemCharacteristicView(IAssessmentItemCharacteristicViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -11,7 +11,7 @@ namespace Autobahn.AdultEducation.ViewModels
      /// <summary>
      /// The AeCourseViewModel
      /// </summary>
-    public partial class AeCourseViewModel : ViewModelBase, Interfaces.IAeCourse
+    public partial class AeCourseViewModel : ViewModelBase, Interfaces.IAeCourseViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

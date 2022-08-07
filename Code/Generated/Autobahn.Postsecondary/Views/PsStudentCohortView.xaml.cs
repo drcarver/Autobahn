@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsStudentCohortView : ContentPage
     {
         /// <summary>
-        /// Inject the PsStudentCohortViewModel as the data context for the view
+        /// Inject the IPsStudentCohortViewModel as the data context for the view
         /// </summary>
-        public PsStudentCohortView(PsStudentCohortViewModel vm)
+        public PsStudentCohortView(IPsStudentCohortViewModel vm)
         {
             BindingContext  = vm;
         }

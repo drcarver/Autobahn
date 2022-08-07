@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12SeaView : ContentPage
     {
         /// <summary>
-        /// Inject the K12SeaViewModel as the data context for the view
+        /// Inject the IK12SeaViewModel as the data context for the view
         /// </summary>
-        public K12SeaView(K12SeaViewModel vm)
+        public K12SeaView(IK12SeaViewModel vm)
         {
             BindingContext  = vm;
         }

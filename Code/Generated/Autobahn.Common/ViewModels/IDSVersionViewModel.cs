@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IDSVersionViewModel
      /// </summary>
-    public partial class IDSVersionViewModel : ViewModelBase, Interfaces.IIDSVersion
+    public partial class IDSVersionViewModel : ViewModelBase, Interfaces.IIDSVersionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

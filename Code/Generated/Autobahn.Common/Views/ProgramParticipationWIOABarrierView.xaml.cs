@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationWIOABarrierView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationWIOABarrierViewModel as the data context for the view
+        /// Inject the IProgramParticipationWIOABarrierViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationWIOABarrierView(ProgramParticipationWIOABarrierViewModel vm)
+        public ProgramParticipationWIOABarrierView(IProgramParticipationWIOABarrierViewModel vm)
         {
             BindingContext  = vm;
         }

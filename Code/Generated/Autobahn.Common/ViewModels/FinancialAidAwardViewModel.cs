@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The FinancialAidAwardViewModel
      /// </summary>
-    public partial class FinancialAidAwardViewModel : ViewModelBase, Interfaces.IFinancialAidAward
+    public partial class FinancialAidAwardViewModel : ViewModelBase, Interfaces.IFinancialAidAwardViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

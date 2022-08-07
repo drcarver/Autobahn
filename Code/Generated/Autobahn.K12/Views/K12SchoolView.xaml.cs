@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12SchoolView : ContentPage
     {
         /// <summary>
-        /// Inject the K12SchoolViewModel as the data context for the view
+        /// Inject the IK12SchoolViewModel as the data context for the view
         /// </summary>
-        public K12SchoolView(K12SchoolViewModel vm)
+        public K12SchoolView(IK12SchoolViewModel vm)
         {
             BindingContext  = vm;
         }

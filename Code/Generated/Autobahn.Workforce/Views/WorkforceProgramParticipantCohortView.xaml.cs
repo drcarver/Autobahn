@@ -14,9 +14,9 @@ namespace Autobahn.Workforce.Views
     public partial class WorkforceProgramParticipantCohortView : ContentPage
     {
         /// <summary>
-        /// Inject the WorkforceProgramParticipantCohortViewModel as the data context for the view
+        /// Inject the IWorkforceProgramParticipantCohortViewModel as the data context for the view
         /// </summary>
-        public WorkforceProgramParticipantCohortView(WorkforceProgramParticipantCohortViewModel vm)
+        public WorkforceProgramParticipantCohortView(IWorkforceProgramParticipantCohortViewModel vm)
         {
             BindingContext  = vm;
         }

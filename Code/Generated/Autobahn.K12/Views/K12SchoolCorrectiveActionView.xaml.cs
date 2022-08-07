@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12SchoolCorrectiveActionView : ContentPage
     {
         /// <summary>
-        /// Inject the K12SchoolCorrectiveActionViewModel as the data context for the view
+        /// Inject the IK12SchoolCorrectiveActionViewModel as the data context for the view
         /// </summary>
-        public K12SchoolCorrectiveActionView(K12SchoolCorrectiveActionViewModel vm)
+        public K12SchoolCorrectiveActionView(IK12SchoolCorrectiveActionViewModel vm)
         {
             BindingContext  = vm;
         }

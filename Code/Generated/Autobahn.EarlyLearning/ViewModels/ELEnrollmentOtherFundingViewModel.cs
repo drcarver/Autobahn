@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELEnrollmentOtherFundingViewModel
      /// </summary>
-    public partial class ELEnrollmentOtherFundingViewModel : ViewModelBase, Interfaces.IELEnrollmentOtherFunding
+    public partial class ELEnrollmentOtherFundingViewModel : ViewModelBase, Interfaces.IELEnrollmentOtherFundingViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

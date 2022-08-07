@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class StaffProfessionalDevelopmentActivityView : ContentPage
     {
         /// <summary>
-        /// Inject the StaffProfessionalDevelopmentActivityViewModel as the data context for the view
+        /// Inject the IStaffProfessionalDevelopmentActivityViewModel as the data context for the view
         /// </summary>
-        public StaffProfessionalDevelopmentActivityView(StaffProfessionalDevelopmentActivityViewModel vm)
+        public StaffProfessionalDevelopmentActivityView(IStaffProfessionalDevelopmentActivityViewModel vm)
         {
             BindingContext  = vm;
         }

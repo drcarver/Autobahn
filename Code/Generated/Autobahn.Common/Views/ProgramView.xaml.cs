@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramViewModel as the data context for the view
+        /// Inject the IProgramViewModel as the data context for the view
         /// </summary>
-        public ProgramView(ProgramViewModel vm)
+        public ProgramView(IProgramViewModel vm)
         {
             BindingContext  = vm;
         }

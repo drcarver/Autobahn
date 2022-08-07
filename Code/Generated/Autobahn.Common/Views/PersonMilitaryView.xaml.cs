@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonMilitaryView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonMilitaryViewModel as the data context for the view
+        /// Inject the IPersonMilitaryViewModel as the data context for the view
         /// </summary>
-        public PersonMilitaryView(PersonMilitaryViewModel vm)
+        public PersonMilitaryView(IPersonMilitaryViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -3,7 +3,6 @@
 //* FileName:   RefTeachingCredentialBasiList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTeachingCredentialBasi"> List
+        /// The complete <see cref="RefTeachingCredentialBasiModel"> List
          /// </summary>
-        public static List<RefTeachingCredentialBasi> RefTeachingCredentialBasiList = new List<RefTeachingCredentialBasi>
+        public static List<RefTeachingCredentialBasiModel> RefTeachingCredentialBasiList = new List<RefTeachingCredentialBasiModel>
         {
         };
 
         /// <summary>
-        /// The RefTeachingCredentialBasi Pick List
+        /// The Reference RefTeachingCredentialBasi Pick List
          /// </summary>
-        public static List<RefTeachingCredentialBasi> RefTeachingCredentialBasiPickList = new List<RefTeachingCredentialBasi>
+        public static List<ReferencePickListItemViewModel> RefTeachingCredentialBasiViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

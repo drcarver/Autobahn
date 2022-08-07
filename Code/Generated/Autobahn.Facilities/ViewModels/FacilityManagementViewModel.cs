@@ -11,7 +11,7 @@ namespace Autobahn.Facilities.ViewModels
      /// <summary>
      /// The FacilityManagementViewModel
      /// </summary>
-    public partial class FacilityManagementViewModel : ViewModelBase, Interfaces.IFacilityManagement
+    public partial class FacilityManagementViewModel : ViewModelBase, Interfaces.IFacilityManagementViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

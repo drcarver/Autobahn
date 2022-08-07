@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentNeedScreenEnhancementView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentNeedScreenEnhancementViewModel as the data context for the view
+        /// Inject the IAssessmentNeedScreenEnhancementViewModel as the data context for the view
         /// </summary>
-        public AssessmentNeedScreenEnhancementView(AssessmentNeedScreenEnhancementViewModel vm)
+        public AssessmentNeedScreenEnhancementView(IAssessmentNeedScreenEnhancementViewModel vm)
         {
             BindingContext  = vm;
         }

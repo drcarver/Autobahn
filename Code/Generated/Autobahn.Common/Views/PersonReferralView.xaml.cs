@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonReferralView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonReferralViewModel as the data context for the view
+        /// Inject the IPersonReferralViewModel as the data context for the view
         /// </summary>
-        public PersonReferralView(PersonReferralViewModel vm)
+        public PersonReferralView(IPersonReferralViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Competencies.Views
     public partial class CompetencyDefEducationLevelView : ContentPage
     {
         /// <summary>
-        /// Inject the CompetencyDefEducationLevelViewModel as the data context for the view
+        /// Inject the ICompetencyDefEducationLevelViewModel as the data context for the view
         /// </summary>
-        public CompetencyDefEducationLevelView(CompetencyDefEducationLevelViewModel vm)
+        public CompetencyDefEducationLevelView(ICompetencyDefEducationLevelViewModel vm)
         {
             BindingContext  = vm;
         }

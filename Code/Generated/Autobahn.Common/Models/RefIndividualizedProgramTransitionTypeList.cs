@@ -3,7 +3,6 @@
 //* FileName:   RefIndividualizedProgramTransitionTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,23 +12,23 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIndividualizedProgramTransitionType"> List
+        /// The complete <see cref="RefIndividualizedProgramTransitionTypeModel"> List
          /// </summary>
-        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypeList = new List<RefIndividualizedProgramTransitionType>
+        public static List<RefIndividualizedProgramTransitionTypeModel> RefIndividualizedProgramTransitionTypeList = new List<RefIndividualizedProgramTransitionTypeModel>
         {
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("0e4d41a1-cc8f-4471-ba71-3070f2210af3"), Code="03426", Description="Postsecondary education or training", Definition="Postsecondary education or training is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b46ef99e-400d-4944-a708-48d5271c8d48"), Code="00518", Description="Work", Definition="Work is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("97865346-eebf-4f87-8de9-6eb8df67b1ed"), Code="09998", Description="None", Definition="No post-school transition plan for the student was recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b3b77c20-3353-463a-8081-5c7b980bb7f9"), Code="03426", Description="Postsecondary education or training", Definition="Postsecondary education or training is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("d3c992b1-a6c5-4611-8538-4e0c9b1b6b72"), Code="00518", Description="Work", Definition="Work is the type of post-school transition plan for the student recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("a2a73e36-0b9c-44f7-860b-e0f978b0f9b6"), Code="09998", Description="None", Definition="No post-school transition plan for the student was recorded on their Individualized Education Program.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefIndividualizedProgramTransitionType Pick List
+        /// The Reference RefIndividualizedProgramTransitionType Pick List
          /// </summary>
-        public static List<RefIndividualizedProgramTransitionType> RefIndividualizedProgramTransitionTypePickList = new List<RefIndividualizedProgramTransitionType>
+        public static List<ReferencePickListItemViewModel> RefIndividualizedProgramTransitionTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("0e4d41a1-cc8f-4471-ba71-3070f2210af3"), Code="03426", Description="Postsecondary education or training", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b46ef99e-400d-4944-a708-48d5271c8d48"), Code="00518", Description="Work", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("97865346-eebf-4f87-8de9-6eb8df67b1ed"), Code="09998", Description="None", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("b3b77c20-3353-463a-8081-5c7b980bb7f9"), Description="Postsecondary education or training", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("d3c992b1-a6c5-4611-8538-4e0c9b1b6b72"), Description="Work", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIndividualizedProgramTransitionType { Id=Guid.Parse("a2a73e36-0b9c-44f7-860b-e0f978b0f9b6"), Description="None", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

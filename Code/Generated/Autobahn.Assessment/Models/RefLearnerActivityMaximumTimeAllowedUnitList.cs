@@ -13,16 +13,16 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefLearnerActivityMaximumTimeAllowedUnit"> List
+        /// The complete <see cref="RefLearnerActivityMaximumTimeAllowedUnitModel"> List
          /// </summary>
-        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitList = new List<RefLearnerActivityMaximumTimeAllowedUnit>
+        public static List<RefLearnerActivityMaximumTimeAllowedUnitModel> RefLearnerActivityMaximumTimeAllowedUnitList = new List<RefLearnerActivityMaximumTimeAllowedUnitModel>
         {
         };
 
         /// <summary>
-        /// The RefLearnerActivityMaximumTimeAllowedUnit Pick List
+        /// The Reference RefLearnerActivityMaximumTimeAllowedUnit Pick List
          /// </summary>
-        public static List<RefLearnerActivityMaximumTimeAllowedUnit> RefLearnerActivityMaximumTimeAllowedUnitPickList = new List<RefLearnerActivityMaximumTimeAllowedUnit>
+        public static List<ReferencePickListItemViewModel> RefLearnerActivityMaximumTimeAllowedUnitViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

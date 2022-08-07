@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12StaffEmploymentViewModel
      /// </summary>
-    public partial class K12StaffEmploymentViewModel : ViewModelBase, Interfaces.IK12StaffEmployment
+    public partial class K12StaffEmploymentViewModel : ViewModelBase, Interfaces.IK12StaffEmploymentViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

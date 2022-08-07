@@ -3,7 +3,6 @@
 //* FileName:   RefPrimaryLearningDeviceAccessList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,23 +12,23 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefPrimaryLearningDeviceAccess"> List
+        /// The complete <see cref="RefPrimaryLearningDeviceAccessModel"> List
          /// </summary>
-        public static List<RefPrimaryLearningDeviceAccess> RefPrimaryLearningDeviceAccessList = new List<RefPrimaryLearningDeviceAccess>
+        public static List<RefPrimaryLearningDeviceAccessModel> RefPrimaryLearningDeviceAccessList = new List<RefPrimaryLearningDeviceAccessModel>
         {
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("f7a189a4-761b-472c-817a-b979cd1acc68"), Code="NotShared", Description="Not Shared", Definition="The primary learning device is not shared with another individual.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("6852c580-599f-4025-9fa2-20ad24f9601f"), Code="Shared", Description="Shared", Definition="The primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("d18d62d5-162b-4527-b051-afb2f960cd12"), Code="Unknown", Description="Unknown", Definition="It is not known whether the primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("282df8a5-3a40-4dc7-a43e-8ec0f6ab3f5a"), Code="NotShared", Description="Not Shared", Definition="The primary learning device is not shared with another individual.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("305de7bf-6753-46a7-8a2a-21fa3c008d8d"), Code="Shared", Description="Shared", Definition="The primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("c9c75a52-18c2-48b3-a6a0-8a54b1e8f450"), Code="Unknown", Description="Unknown", Definition="It is not known whether the primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefPrimaryLearningDeviceAccess Pick List
+        /// The Reference RefPrimaryLearningDeviceAccess Pick List
          /// </summary>
-        public static List<RefPrimaryLearningDeviceAccess> RefPrimaryLearningDeviceAccessPickList = new List<RefPrimaryLearningDeviceAccess>
+        public static List<ReferencePickListItemViewModel> RefPrimaryLearningDeviceAccessViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("f7a189a4-761b-472c-817a-b979cd1acc68"), Code="NotShared", Description="Not Shared", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("6852c580-599f-4025-9fa2-20ad24f9601f"), Code="Shared", Description="Shared", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("d18d62d5-162b-4527-b051-afb2f960cd12"), Code="Unknown", Description="Unknown", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("282df8a5-3a40-4dc7-a43e-8ec0f6ab3f5a"), Description="Not Shared", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("305de7bf-6753-46a7-8a2a-21fa3c008d8d"), Description="Shared", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPrimaryLearningDeviceAccess { Id=Guid.Parse("c9c75a52-18c2-48b3-a6a0-8a54b1e8f450"), Description="Unknown", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

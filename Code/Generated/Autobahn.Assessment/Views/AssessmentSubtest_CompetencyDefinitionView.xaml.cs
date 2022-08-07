@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentSubtest_CompetencyDefinitionView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentSubtest_CompetencyDefinitionViewModel as the data context for the view
+        /// Inject the IAssessmentSubtest_CompetencyDefinitionViewModel as the data context for the view
         /// </summary>
-        public AssessmentSubtest_CompetencyDefinitionView(AssessmentSubtest_CompetencyDefinitionViewModel vm)
+        public AssessmentSubtest_CompetencyDefinitionView(IAssessmentSubtest_CompetencyDefinitionViewModel vm)
         {
             BindingContext  = vm;
         }

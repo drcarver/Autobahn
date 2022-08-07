@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildDemographicView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildDemographicViewModel as the data context for the view
+        /// Inject the IELChildDemographicViewModel as the data context for the view
         /// </summary>
-        public ELChildDemographicView(ELChildDemographicViewModel vm)
+        public ELChildDemographicView(IELChildDemographicViewModel vm)
         {
             BindingContext  = vm;
         }

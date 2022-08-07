@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationPersonRoleFTEView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationPersonRoleFTEViewModel as the data context for the view
+        /// Inject the IOrganizationPersonRoleFTEViewModel as the data context for the view
         /// </summary>
-        public OrganizationPersonRoleFTEView(OrganizationPersonRoleFTEViewModel vm)
+        public OrganizationPersonRoleFTEView(IOrganizationPersonRoleFTEViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class LearnerActivityView : ContentPage
     {
         /// <summary>
-        /// Inject the LearnerActivityViewModel as the data context for the view
+        /// Inject the ILearnerActivityViewModel as the data context for the view
         /// </summary>
-        public LearnerActivityView(LearnerActivityViewModel vm)
+        public LearnerActivityView(ILearnerActivityViewModel vm)
         {
             BindingContext  = vm;
         }

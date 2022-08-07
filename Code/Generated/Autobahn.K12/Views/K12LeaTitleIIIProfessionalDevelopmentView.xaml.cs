@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaTitleIIIProfessionalDevelopmentView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaTitleIIIProfessionalDevelopmentViewModel as the data context for the view
+        /// Inject the IK12LeaTitleIIIProfessionalDevelopmentViewModel as the data context for the view
         /// </summary>
-        public K12LeaTitleIIIProfessionalDevelopmentView(K12LeaTitleIIIProfessionalDevelopmentViewModel vm)
+        public K12LeaTitleIIIProfessionalDevelopmentView(IK12LeaTitleIIIProfessionalDevelopmentViewModel vm)
         {
             BindingContext  = vm;
         }

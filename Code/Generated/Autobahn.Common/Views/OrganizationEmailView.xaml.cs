@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationEmailView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationEmailViewModel as the data context for the view
+        /// Inject the IOrganizationEmailViewModel as the data context for the view
         /// </summary>
-        public OrganizationEmailView(OrganizationEmailViewModel vm)
+        public OrganizationEmailView(IOrganizationEmailViewModel vm)
         {
             BindingContext  = vm;
         }

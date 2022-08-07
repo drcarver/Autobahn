@@ -13,21 +13,21 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAssessmentNeedSpokenSourcePreferenceType"> List
+        /// The complete <see cref="RefAssessmentNeedSpokenSourcePreferenceTypeModel"> List
          /// </summary>
-        public static List<RefAssessmentNeedSpokenSourcePreferenceType> RefAssessmentNeedSpokenSourcePreferenceTypeList = new List<RefAssessmentNeedSpokenSourcePreferenceType>
+        public static List<RefAssessmentNeedSpokenSourcePreferenceTypeModel> RefAssessmentNeedSpokenSourcePreferenceTypeList = new List<RefAssessmentNeedSpokenSourcePreferenceTypeModel>
         {
-            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("ea1834ae-738e-4b04-b2fd-82e416b8765f"), Code="Human", Description="Human", Definition="Human is specified as the preferred spoken audio form  as part of an Assessment Personal Needs Profile.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("9f96647e-b8c5-4734-8e16-559ac5f80acc"), Code="Synthetic", Description="Synthetic", Definition="Synthetic is specified as the preferred spoken audio form  as part of an Assessment Personal Needs Profile.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("46d4cb1e-1e94-4a64-bd21-3234857ee8dc"), Code="Human", Description="Human", Definition="Human is specified as the preferred spoken audio form  as part of an Assessment Personal Needs Profile.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("aa3224e6-7d24-452c-9709-2a7597a03cad"), Code="Synthetic", Description="Synthetic", Definition="Synthetic is specified as the preferred spoken audio form  as part of an Assessment Personal Needs Profile.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefAssessmentNeedSpokenSourcePreferenceType Pick List
+        /// The Reference RefAssessmentNeedSpokenSourcePreferenceType Pick List
          /// </summary>
-        public static List<RefAssessmentNeedSpokenSourcePreferenceType> RefAssessmentNeedSpokenSourcePreferenceTypePickList = new List<RefAssessmentNeedSpokenSourcePreferenceType>
+        public static List<ReferencePickListItemViewModel> RefAssessmentNeedSpokenSourcePreferenceTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("ea1834ae-738e-4b04-b2fd-82e416b8765f"), Code="Human", Description="Human", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("9f96647e-b8c5-4734-8e16-559ac5f80acc"), Code="Synthetic", Description="Synthetic", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("46d4cb1e-1e94-4a64-bd21-3234857ee8dc"), Description="Human", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAssessmentNeedSpokenSourcePreferenceType { Id=Guid.Parse("aa3224e6-7d24-452c-9709-2a7597a03cad"), Description="Synthetic", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

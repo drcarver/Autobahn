@@ -13,27 +13,27 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefELLevelOfSpecialization"> List
+        /// The complete <see cref="RefELLevelOfSpecializationModel"> List
          /// </summary>
-        public static List<RefELLevelOfSpecialization> RefELLevelOfSpecializationList = new List<RefELLevelOfSpecialization>
+        public static List<RefELLevelOfSpecializationModel> RefELLevelOfSpecializationList = new List<RefELLevelOfSpecializationModel>
         {
-            new RefELLevelOfSpecialization { Id=Guid.Parse("2bd8dcda-60d2-4e61-93ef-5bc8fd680eef"), Code="Major", Description="Major", Definition="The person majored in early learning.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("384146a0-1e91-494c-856c-586e8d2bb465"), Code="Minor", Description="Minor", Definition="The person minored in early learning.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("d7b74742-3b5c-4d62-95fe-6874c71d36e4"), Code="AreaOfEmphasis", Description="Area of emphasis or concentration", Definition="The person had early learning as an area of emphasis or concentration.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("76495d57-047a-45f4-af7d-a301dcf6dbd8"), Code="PostDegreeStudy", Description="Post-degree study", Definition="Early learning was a focus of post-degree study by the person.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("76a907de-0e8a-4bb7-a50b-2e58b09c3e88"), Code="AreaOfInterest", Description="Area of Interest", Definition="Early learning was as area of Interest for the person.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("db25a63b-4870-4df3-8d42-3ada358c1928"), Code="Major", Description="Major", Definition="The person majored in early learning.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("b3809157-1a8e-4fa6-9334-95ab32092967"), Code="Minor", Description="Minor", Definition="The person minored in early learning.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("45211d0e-71cd-4397-8f97-6e8e37652a0e"), Code="AreaOfEmphasis", Description="Area of emphasis or concentration", Definition="The person had early learning as an area of emphasis or concentration.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("3d45f8d5-09b7-4474-a335-0b43bbe49935"), Code="PostDegreeStudy", Description="Post-degree study", Definition="Early learning was a focus of post-degree study by the person.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("96c3f48f-8c56-4483-a06a-4f1175a5e404"), Code="AreaOfInterest", Description="Area of Interest", Definition="Early learning was as area of Interest for the person.", SortOrder=Convert.ToDecimal("5.00") },
         };
 
         /// <summary>
-        /// The RefELLevelOfSpecialization Pick List
+        /// The Reference RefELLevelOfSpecialization Pick List
          /// </summary>
-        public static List<RefELLevelOfSpecialization> RefELLevelOfSpecializationPickList = new List<RefELLevelOfSpecialization>
+        public static List<ReferencePickListItemViewModel> RefELLevelOfSpecializationViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefELLevelOfSpecialization { Id=Guid.Parse("2bd8dcda-60d2-4e61-93ef-5bc8fd680eef"), Code="Major", Description="Major", SortOrder=Convert.ToDecimal("1.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("384146a0-1e91-494c-856c-586e8d2bb465"), Code="Minor", Description="Minor", SortOrder=Convert.ToDecimal("2.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("d7b74742-3b5c-4d62-95fe-6874c71d36e4"), Code="AreaOfEmphasis", Description="Area of emphasis or concentration", SortOrder=Convert.ToDecimal("3.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("76495d57-047a-45f4-af7d-a301dcf6dbd8"), Code="PostDegreeStudy", Description="Post-degree study", SortOrder=Convert.ToDecimal("4.00") },
-            new RefELLevelOfSpecialization { Id=Guid.Parse("76a907de-0e8a-4bb7-a50b-2e58b09c3e88"), Code="AreaOfInterest", Description="Area of Interest", SortOrder=Convert.ToDecimal("5.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("db25a63b-4870-4df3-8d42-3ada358c1928"), Description="Major", SortOrder=Convert.ToDecimal("1.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("b3809157-1a8e-4fa6-9334-95ab32092967"), Description="Minor", SortOrder=Convert.ToDecimal("2.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("45211d0e-71cd-4397-8f97-6e8e37652a0e"), Description="Area of emphasis or concentration", SortOrder=Convert.ToDecimal("3.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("3d45f8d5-09b7-4474-a335-0b43bbe49935"), Description="Post-degree study", SortOrder=Convert.ToDecimal("4.00") },
+            new RefELLevelOfSpecialization { Id=Guid.Parse("96c3f48f-8c56-4483-a06a-4f1175a5e404"), Description="Area of Interest", SortOrder=Convert.ToDecimal("5.00") },
        };
    }
 }

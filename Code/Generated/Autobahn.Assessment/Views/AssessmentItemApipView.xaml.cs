@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentItemApipView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentItemApipViewModel as the data context for the view
+        /// Inject the IAssessmentItemApipViewModel as the data context for the view
         /// </summary>
-        public AssessmentItemApipView(AssessmentItemApipViewModel vm)
+        public AssessmentItemApipView(IAssessmentItemApipViewModel vm)
         {
             BindingContext  = vm;
         }

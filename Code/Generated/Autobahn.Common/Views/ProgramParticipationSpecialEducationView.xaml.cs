@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ProgramParticipationSpecialEducationView : ContentPage
     {
         /// <summary>
-        /// Inject the ProgramParticipationSpecialEducationViewModel as the data context for the view
+        /// Inject the IProgramParticipationSpecialEducationViewModel as the data context for the view
         /// </summary>
-        public ProgramParticipationSpecialEducationView(ProgramParticipationSpecialEducationViewModel vm)
+        public ProgramParticipationSpecialEducationView(IProgramParticipationSpecialEducationViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class TeacherStudentDataLinkExclusionView : ContentPage
     {
         /// <summary>
-        /// Inject the TeacherStudentDataLinkExclusionViewModel as the data context for the view
+        /// Inject the ITeacherStudentDataLinkExclusionViewModel as the data context for the view
         /// </summary>
-        public TeacherStudentDataLinkExclusionView(TeacherStudentDataLinkExclusionViewModel vm)
+        public TeacherStudentDataLinkExclusionView(ITeacherStudentDataLinkExclusionViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -13,21 +13,21 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTenureSystem"> List
+        /// The complete <see cref="RefTenureSystemModel"> List
          /// </summary>
-        public static List<RefTenureSystem> RefTenureSystemList = new List<RefTenureSystem>
+        public static List<RefTenureSystemModel> RefTenureSystemList = new List<RefTenureSystemModel>
         {
-            new RefTenureSystem { Id=Guid.Parse("59bb4f3a-1815-4306-a8d4-7938518a34d3"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTenureSystem { Id=Guid.Parse("6e1dfe76-c239-4b86-a1af-02e974a8a888"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTenureSystem { Id=Guid.Parse("7c1e96c9-b60e-44b5-8c37-ce0eb97108ed"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTenureSystem { Id=Guid.Parse("0b5824a5-4c6e-4056-bf6a-9c80772329b9"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefTenureSystem Pick List
+        /// The Reference RefTenureSystem Pick List
          /// </summary>
-        public static List<RefTenureSystem> RefTenureSystemPickList = new List<RefTenureSystem>
+        public static List<ReferencePickListItemViewModel> RefTenureSystemViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefTenureSystem { Id=Guid.Parse("59bb4f3a-1815-4306-a8d4-7938518a34d3"), Code="Yes", Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTenureSystem { Id=Guid.Parse("6e1dfe76-c239-4b86-a1af-02e974a8a888"), Code="No", Description="No", SortOrder=Convert.ToDecimal("2.00") },
+            new RefTenureSystem { Id=Guid.Parse("7c1e96c9-b60e-44b5-8c37-ce0eb97108ed"), Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTenureSystem { Id=Guid.Parse("0b5824a5-4c6e-4056-bf6a-9c80772329b9"), Description="No", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

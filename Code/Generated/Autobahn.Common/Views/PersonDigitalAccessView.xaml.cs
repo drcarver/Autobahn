@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonDigitalAccessView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonDigitalAccessViewModel as the data context for the view
+        /// Inject the IPersonDigitalAccessViewModel as the data context for the view
         /// </summary>
-        public PersonDigitalAccessView(PersonDigitalAccessViewModel vm)
+        public PersonDigitalAccessView(IPersonDigitalAccessViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -11,7 +11,7 @@ namespace Autobahn.Facilities.ViewModels
      /// <summary>
      /// The BuildingSpaceViewModel
      /// </summary>
-    public partial class BuildingSpaceViewModel : ViewModelBase, Interfaces.IBuildingSpace
+    public partial class BuildingSpaceViewModel : ViewModelBase, Interfaces.IBuildingSpaceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

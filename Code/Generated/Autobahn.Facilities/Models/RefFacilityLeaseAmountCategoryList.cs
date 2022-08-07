@@ -13,23 +13,23 @@ namespace Autobahn.Facilities.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefFacilityLeaseAmountCategory"> List
+        /// The complete <see cref="RefFacilityLeaseAmountCategoryModel"> List
          /// </summary>
-        public static List<RefFacilityLeaseAmountCategory> RefFacilityLeaseAmountCategoryList = new List<RefFacilityLeaseAmountCategory>
+        public static List<RefFacilityLeaseAmountCategoryModel> RefFacilityLeaseAmountCategoryList = new List<RefFacilityLeaseAmountCategoryModel>
         {
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("8c8a22cb-4f69-407d-89f0-ddc6635493e5"), Code="13720", Description="Base rent", Definition="Base rent is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("8103e2e6-fb38-4b9a-b34d-f14d47cd3d29"), Code="13721", Description="Credit", Definition="Credit is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("ddfa767b-93a1-4117-8618-e3b442580e4b"), Code="13722", Description="Escalator", Definition="Escalator is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("fe6faf8a-6d5e-40b9-8722-2127cd23e9b3"), Code="13720", Description="Base rent", Definition="Base rent is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("7e021f6b-a048-4ef1-8144-84c42e59b0ba"), Code="13721", Description="Credit", Definition="Credit is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("2794f343-5bfd-4817-a827-b34864413a13"), Code="13722", Description="Escalator", Definition="Escalator is specified as the category of payment that a school must pay to rent the facility that it is in.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefFacilityLeaseAmountCategory Pick List
+        /// The Reference RefFacilityLeaseAmountCategory Pick List
          /// </summary>
-        public static List<RefFacilityLeaseAmountCategory> RefFacilityLeaseAmountCategoryPickList = new List<RefFacilityLeaseAmountCategory>
+        public static List<ReferencePickListItemViewModel> RefFacilityLeaseAmountCategoryViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("8c8a22cb-4f69-407d-89f0-ddc6635493e5"), Code="13720", Description="Base rent", SortOrder=Convert.ToDecimal("1.00") },
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("8103e2e6-fb38-4b9a-b34d-f14d47cd3d29"), Code="13721", Description="Credit", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("ddfa767b-93a1-4117-8618-e3b442580e4b"), Code="13722", Description="Escalator", SortOrder=Convert.ToDecimal("3.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("fe6faf8a-6d5e-40b9-8722-2127cd23e9b3"), Description="Base rent", SortOrder=Convert.ToDecimal("1.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("7e021f6b-a048-4ef1-8144-84c42e59b0ba"), Description="Credit", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFacilityLeaseAmountCategory { Id=Guid.Parse("2794f343-5bfd-4817-a827-b34864413a13"), Description="Escalator", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

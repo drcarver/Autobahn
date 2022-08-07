@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12StudentHomeLanguageSurveyView : ContentPage
     {
         /// <summary>
-        /// Inject the K12StudentHomeLanguageSurveyViewModel as the data context for the view
+        /// Inject the IK12StudentHomeLanguageSurveyViewModel as the data context for the view
         /// </summary>
-        public K12StudentHomeLanguageSurveyView(K12StudentHomeLanguageSurveyViewModel vm)
+        public K12StudentHomeLanguageSurveyView(IK12StudentHomeLanguageSurveyViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -3,7 +3,6 @@
 //* FileName:   RefIDEAEducationalEnvironmentSchoolAgeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,33 +12,33 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIDEAEducationalEnvironmentSchoolAge"> List
+        /// The complete <see cref="RefIDEAEducationalEnvironmentSchoolAgeModel"> List
          /// </summary>
-        public static List<RefIDEAEducationalEnvironmentSchoolAge> RefIDEAEducationalEnvironmentSchoolAgeList = new List<RefIDEAEducationalEnvironmentSchoolAge>
+        public static List<RefIDEAEducationalEnvironmentSchoolAgeModel> RefIDEAEducationalEnvironmentSchoolAgeList = new List<RefIDEAEducationalEnvironmentSchoolAgeModel>
         {
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cfabb70a-a922-43cf-8363-79337f67145e"), Code="RC80", Description="Inside regular class 80% or more of the day", Definition="Inside regular class 80% or more of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("40ea573a-e9fa-4511-a909-95b31f24046d"), Code="RC79TO40", Description="Inside regular class 40% through 79% of the day", Definition="Inside regular class 40% through 79% of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("91462551-63eb-4db0-ba68-1c34e41b3bb1"), Code="RC39", Description="Inside regular class less than 40% of the day", Definition="Inside regular class less than 40% of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("1182cdbd-5e3c-41bb-ad97-0a20c3322f8b"), Code="SS", Description="Separate school", Definition="Separate school is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("c1a79d8a-c160-44e4-b200-06e2706a4410"), Code="RF", Description="Residential facility", Definition="Residential facility is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cfd2a599-4de2-48b0-a87d-4d2c721f015c"), Code="HH", Description="Homebound/hospital", Definition="Homebound/hospital is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("4bcd8c74-84df-4312-a178-907e725e5423"), Code="CF", Description="Correctional facility", Definition="Correctional facility is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cb71e6c4-138d-434a-aef3-6093819c46bc"), Code="PPPS", Description="Parentally placed in private school", Definition="Parentally placed in private school is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cf23d4e8-50aa-4e44-8364-c888236acb73"), Code="RC80", Description="Inside regular class 80% or more of the day", Definition="Inside regular class 80% or more of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("8c0f91a6-a074-49a8-b423-3357586281a4"), Code="RC79TO40", Description="Inside regular class 40% through 79% of the day", Definition="Inside regular class 40% through 79% of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("413b5888-7376-40f7-a22b-189ccc67eb81"), Code="RC39", Description="Inside regular class less than 40% of the day", Definition="Inside regular class less than 40% of the day is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("0debf3a3-7be6-47a9-8042-e74a4a048520"), Code="SS", Description="Separate school", Definition="Separate school is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("fccccbe3-9971-41b2-8b11-f0cb9bfabf35"), Code="RF", Description="Residential facility", Definition="Residential facility is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("2a5ae9ec-4973-462c-973d-6f1e426dd1dd"), Code="HH", Description="Homebound/hospital", Definition="Homebound/hospital is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("96b94265-20fb-4dc2-878d-f8524c5ef0f2"), Code="CF", Description="Correctional facility", Definition="Correctional facility is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("9fdc6fd7-3f20-4385-895c-cc51b99980af"), Code="PPPS", Description="Parentally placed in private school", Definition="Parentally placed in private school is the setting in which children ages 6 through 21, receive special education and related services.", SortOrder=Convert.ToDecimal("8.00") },
         };
 
         /// <summary>
-        /// The RefIDEAEducationalEnvironmentSchoolAge Pick List
+        /// The Reference RefIDEAEducationalEnvironmentSchoolAge Pick List
          /// </summary>
-        public static List<RefIDEAEducationalEnvironmentSchoolAge> RefIDEAEducationalEnvironmentSchoolAgePickList = new List<RefIDEAEducationalEnvironmentSchoolAge>
+        public static List<ReferencePickListItemViewModel> RefIDEAEducationalEnvironmentSchoolAgeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cfabb70a-a922-43cf-8363-79337f67145e"), Code="RC80", Description="Inside regular class 80% or more of the day", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("40ea573a-e9fa-4511-a909-95b31f24046d"), Code="RC79TO40", Description="Inside regular class 40% through 79% of the day", SortOrder=Convert.ToDecimal("2.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("91462551-63eb-4db0-ba68-1c34e41b3bb1"), Code="RC39", Description="Inside regular class less than 40% of the day", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("1182cdbd-5e3c-41bb-ad97-0a20c3322f8b"), Code="SS", Description="Separate school", SortOrder=Convert.ToDecimal("4.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("c1a79d8a-c160-44e4-b200-06e2706a4410"), Code="RF", Description="Residential facility", SortOrder=Convert.ToDecimal("5.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cfd2a599-4de2-48b0-a87d-4d2c721f015c"), Code="HH", Description="Homebound/hospital", SortOrder=Convert.ToDecimal("6.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("4bcd8c74-84df-4312-a178-907e725e5423"), Code="CF", Description="Correctional facility", SortOrder=Convert.ToDecimal("7.00") },
-            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cb71e6c4-138d-434a-aef3-6093819c46bc"), Code="PPPS", Description="Parentally placed in private school", SortOrder=Convert.ToDecimal("8.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("cf23d4e8-50aa-4e44-8364-c888236acb73"), Description="Inside regular class 80% or more of the day", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("8c0f91a6-a074-49a8-b423-3357586281a4"), Description="Inside regular class 40% through 79% of the day", SortOrder=Convert.ToDecimal("2.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("413b5888-7376-40f7-a22b-189ccc67eb81"), Description="Inside regular class less than 40% of the day", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("0debf3a3-7be6-47a9-8042-e74a4a048520"), Description="Separate school", SortOrder=Convert.ToDecimal("4.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("fccccbe3-9971-41b2-8b11-f0cb9bfabf35"), Description="Residential facility", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("2a5ae9ec-4973-462c-973d-6f1e426dd1dd"), Description="Homebound/hospital", SortOrder=Convert.ToDecimal("6.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("96b94265-20fb-4dc2-878d-f8524c5ef0f2"), Description="Correctional facility", SortOrder=Convert.ToDecimal("7.00") },
+            new RefIDEAEducationalEnvironmentSchoolAge { Id=Guid.Parse("9fdc6fd7-3f20-4385-895c-cc51b99980af"), Description="Parentally placed in private school", SortOrder=Convert.ToDecimal("8.00") },
        };
    }
 }

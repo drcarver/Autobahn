@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELOrganizationAvailabilityView : ContentPage
     {
         /// <summary>
-        /// Inject the ELOrganizationAvailabilityViewModel as the data context for the view
+        /// Inject the IELOrganizationAvailabilityViewModel as the data context for the view
         /// </summary>
-        public ELOrganizationAvailabilityView(ELOrganizationAvailabilityViewModel vm)
+        public ELOrganizationAvailabilityView(IELOrganizationAvailabilityViewModel vm)
         {
             BindingContext  = vm;
         }

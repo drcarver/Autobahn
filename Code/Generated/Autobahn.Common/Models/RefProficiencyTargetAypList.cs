@@ -3,7 +3,6 @@
 //* FileName:   RefProficiencyTargetAypList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,31 +12,31 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefProficiencyTargetAyp"> List
+        /// The complete <see cref="RefProficiencyTargetAypModel"> List
          /// </summary>
-        public static List<RefProficiencyTargetAyp> RefProficiencyTargetAypList = new List<RefProficiencyTargetAyp>
+        public static List<RefProficiencyTargetAypModel> RefProficiencyTargetAypList = new List<RefProficiencyTargetAypModel>
         {
-            new RefProficiencyTargetAyp { Id=Guid.Parse("488050bf-0778-4b9f-8a58-83904be1cca6"), Code="Met", Description="Met: Regular Determination", Definition="The school or district met the proficiency target using the Regular Determination.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("8b53c809-f5bd-4e12-aeb1-b556ea086136"), Code="MetGrowthModel", Description="Met: Growth Model ", Definition="The school or district met the proficiency target using the Growth Model.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("0e084e75-43be-49ea-983a-051b888afe2a"), Code="MetBecauseSafeHarbor", Description="Met Because of Safe Harbor", Definition="The school or district met the proficiency target using the Because of Safe Harbor.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("f7e06323-3f1d-42cf-9d20-1ad85b312d14"), Code="DidNotMeetTarget", Description="Did Not Meet Target", Definition="The school or district did NOT meet the proficiency target.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("9ea61958-1fc4-4076-afeb-74f8c8162d66"), Code="TooFewStudents", Description="Too Few Students for Reliability", Definition="Too Few Students for Reliability.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("d3aa06a3-7c5f-4aa2-acf6-211ce54b5b8c"), Code="NoStudents", Description="No Students in the Sub-group", Definition="No Students in the Sub-group.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("1ba2611d-bad5-4a11-96f0-7e7ee032505b"), Code="NA", Description="Not applicable", Definition="Not applicable.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("7cad89b9-7af2-45e4-8244-e8bbcc6de628"), Code="Met", Description="Met: Regular Determination", Definition="The school or district met the proficiency target using the Regular Determination.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("965c320c-bec6-4155-a00f-fd0311fc6985"), Code="MetGrowthModel", Description="Met: Growth Model ", Definition="The school or district met the proficiency target using the Growth Model.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("74d0e2b2-94b5-4e20-bf7e-0870aab2277b"), Code="MetBecauseSafeHarbor", Description="Met Because of Safe Harbor", Definition="The school or district met the proficiency target using the Because of Safe Harbor.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("fd99ed3a-fb07-485f-9369-f029b9c5c336"), Code="DidNotMeetTarget", Description="Did Not Meet Target", Definition="The school or district did NOT meet the proficiency target.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("706e4c32-33d1-46c4-8ad6-2b68ed98619b"), Code="TooFewStudents", Description="Too Few Students for Reliability", Definition="Too Few Students for Reliability.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("56ab250f-581d-4d80-8d21-62c7535153c6"), Code="NoStudents", Description="No Students in the Sub-group", Definition="No Students in the Sub-group.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("b0f9bf85-7680-4c5a-b805-103617ab82cd"), Code="NA", Description="Not applicable", Definition="Not applicable.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefProficiencyTargetAyp Pick List
+        /// The Reference RefProficiencyTargetAyp Pick List
          /// </summary>
-        public static List<RefProficiencyTargetAyp> RefProficiencyTargetAypPickList = new List<RefProficiencyTargetAyp>
+        public static List<ReferencePickListItemViewModel> RefProficiencyTargetAypViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefProficiencyTargetAyp { Id=Guid.Parse("488050bf-0778-4b9f-8a58-83904be1cca6"), Code="Met", Description="Met: Regular Determination", SortOrder=Convert.ToDecimal("1.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("8b53c809-f5bd-4e12-aeb1-b556ea086136"), Code="MetGrowthModel", Description="Met: Growth Model ", SortOrder=Convert.ToDecimal("2.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("0e084e75-43be-49ea-983a-051b888afe2a"), Code="MetBecauseSafeHarbor", Description="Met Because of Safe Harbor", SortOrder=Convert.ToDecimal("3.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("f7e06323-3f1d-42cf-9d20-1ad85b312d14"), Code="DidNotMeetTarget", Description="Did Not Meet Target", SortOrder=Convert.ToDecimal("4.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("9ea61958-1fc4-4076-afeb-74f8c8162d66"), Code="TooFewStudents", Description="Too Few Students for Reliability", SortOrder=Convert.ToDecimal("5.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("d3aa06a3-7c5f-4aa2-acf6-211ce54b5b8c"), Code="NoStudents", Description="No Students in the Sub-group", SortOrder=Convert.ToDecimal("6.00") },
-            new RefProficiencyTargetAyp { Id=Guid.Parse("1ba2611d-bad5-4a11-96f0-7e7ee032505b"), Code="NA", Description="Not applicable", SortOrder=Convert.ToDecimal("7.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("7cad89b9-7af2-45e4-8244-e8bbcc6de628"), Description="Met: Regular Determination", SortOrder=Convert.ToDecimal("1.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("965c320c-bec6-4155-a00f-fd0311fc6985"), Description="Met: Growth Model ", SortOrder=Convert.ToDecimal("2.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("74d0e2b2-94b5-4e20-bf7e-0870aab2277b"), Description="Met Because of Safe Harbor", SortOrder=Convert.ToDecimal("3.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("fd99ed3a-fb07-485f-9369-f029b9c5c336"), Description="Did Not Meet Target", SortOrder=Convert.ToDecimal("4.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("706e4c32-33d1-46c4-8ad6-2b68ed98619b"), Description="Too Few Students for Reliability", SortOrder=Convert.ToDecimal("5.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("56ab250f-581d-4d80-8d21-62c7535153c6"), Description="No Students in the Sub-group", SortOrder=Convert.ToDecimal("6.00") },
+            new RefProficiencyTargetAyp { Id=Guid.Parse("b0f9bf85-7680-4c5a-b805-103617ab82cd"), Description="Not applicable", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

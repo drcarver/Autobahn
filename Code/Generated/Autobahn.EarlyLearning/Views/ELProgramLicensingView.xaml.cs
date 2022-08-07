@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELProgramLicensingView : ContentPage
     {
         /// <summary>
-        /// Inject the ELProgramLicensingViewModel as the data context for the view
+        /// Inject the IELProgramLicensingViewModel as the data context for the view
         /// </summary>
-        public ELProgramLicensingView(ELProgramLicensingViewModel vm)
+        public ELProgramLicensingView(IELProgramLicensingViewModel vm)
         {
             BindingContext  = vm;
         }

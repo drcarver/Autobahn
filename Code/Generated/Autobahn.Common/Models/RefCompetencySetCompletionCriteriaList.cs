@@ -3,7 +3,6 @@
 //* FileName:   RefCompetencySetCompletionCriteriaList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCompetencySetCompletionCriteria"> List
+        /// The complete <see cref="RefCompetencySetCompletionCriteriaModel"> List
          /// </summary>
-        public static List<RefCompetencySetCompletionCriteria> RefCompetencySetCompletionCriteriaList = new List<RefCompetencySetCompletionCriteria>
+        public static List<RefCompetencySetCompletionCriteriaModel> RefCompetencySetCompletionCriteriaList = new List<RefCompetencySetCompletionCriteriaModel>
         {
-            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("864f9d05-18c3-46eb-a7e0-f96a922587df"), Code="All", Description="All", Definition="All items in the set must be achieved.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("de79fbba-e43e-4741-ab0f-7781b734fa08"), Code="AtLeast", Description="At Least", Definition="At least the number of items in the set specified by Competency Set Completion Criteria Threshold must be achieved.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("ad278d48-4a50-416d-8a1c-f0636d332094"), Code="All", Description="All", Definition="All items in the set must be achieved.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("ea051fc2-bd81-4eaf-85d1-dacaa7eda014"), Code="AtLeast", Description="At Least", Definition="At least the number of items in the set specified by Competency Set Completion Criteria Threshold must be achieved.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefCompetencySetCompletionCriteria Pick List
+        /// The Reference RefCompetencySetCompletionCriteria Pick List
          /// </summary>
-        public static List<RefCompetencySetCompletionCriteria> RefCompetencySetCompletionCriteriaPickList = new List<RefCompetencySetCompletionCriteria>
+        public static List<ReferencePickListItemViewModel> RefCompetencySetCompletionCriteriaViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("864f9d05-18c3-46eb-a7e0-f96a922587df"), Code="All", Description="All", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("de79fbba-e43e-4741-ab0f-7781b734fa08"), Code="AtLeast", Description="At Least", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("ad278d48-4a50-416d-8a1c-f0636d332094"), Description="All", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCompetencySetCompletionCriteria { Id=Guid.Parse("ea051fc2-bd81-4eaf-85d1-dacaa7eda014"), Description="At Least", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

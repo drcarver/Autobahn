@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PDActivityEducationLevelViewModel
      /// </summary>
-    public partial class PDActivityEducationLevelViewModel : ViewModelBase, Interfaces.IPDActivityEducationLevel
+    public partial class PDActivityEducationLevelViewModel : ViewModelBase, Interfaces.IPDActivityEducationLevelViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -13,16 +13,16 @@ namespace Autobahn.Credentials.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefONETSOCOccupationType"> List
+        /// The complete <see cref="RefONETSOCOccupationTypeModel"> List
          /// </summary>
-        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypeList = new List<RefONETSOCOccupationType>
+        public static List<RefONETSOCOccupationTypeModel> RefONETSOCOccupationTypeList = new List<RefONETSOCOccupationTypeModel>
         {
         };
 
         /// <summary>
-        /// The RefONETSOCOccupationType Pick List
+        /// The Reference RefONETSOCOccupationType Pick List
          /// </summary>
-        public static List<RefONETSOCOccupationType> RefONETSOCOccupationTypePickList = new List<RefONETSOCOccupationType>
+        public static List<ReferencePickListItemViewModel> RefONETSOCOccupationTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

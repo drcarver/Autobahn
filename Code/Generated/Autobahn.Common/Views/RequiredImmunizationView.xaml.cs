@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class RequiredImmunizationView : ContentPage
     {
         /// <summary>
-        /// Inject the RequiredImmunizationViewModel as the data context for the view
+        /// Inject the IRequiredImmunizationViewModel as the data context for the view
         /// </summary>
-        public RequiredImmunizationView(RequiredImmunizationViewModel vm)
+        public RequiredImmunizationView(IRequiredImmunizationViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -11,7 +11,7 @@ namespace Autobahn.AuthenticationandAuthorization.ViewModels
      /// <summary>
      /// The ApplicationViewModel
      /// </summary>
-    public partial class ApplicationViewModel : ViewModelBase, Interfaces.IApplication
+    public partial class ApplicationViewModel : ViewModelBase, Interfaces.IApplicationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

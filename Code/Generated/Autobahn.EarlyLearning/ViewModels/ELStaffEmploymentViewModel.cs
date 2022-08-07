@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELStaffEmploymentViewModel
      /// </summary>
-    public partial class ELStaffEmploymentViewModel : ViewModelBase, Interfaces.IELStaffEmployment
+    public partial class ELStaffEmploymentViewModel : ViewModelBase, Interfaces.IELStaffEmploymentViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

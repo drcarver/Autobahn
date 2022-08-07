@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ServiceFrequencyViewModel
      /// </summary>
-    public partial class ServiceFrequencyViewModel : ViewModelBase, Interfaces.IServiceFrequency
+    public partial class ServiceFrequencyViewModel : ViewModelBase, Interfaces.IServiceFrequencyViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

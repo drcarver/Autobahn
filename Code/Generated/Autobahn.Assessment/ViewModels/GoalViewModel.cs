@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The GoalViewModel
      /// </summary>
-    public partial class GoalViewModel : ViewModelBase, Interfaces.IGoal
+    public partial class GoalViewModel : ViewModelBase, Interfaces.IGoalViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

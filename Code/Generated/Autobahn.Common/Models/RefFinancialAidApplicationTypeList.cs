@@ -3,7 +3,6 @@
 //* FileName:   RefFinancialAidApplicationTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,27 +12,27 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefFinancialAidApplicationType"> List
+        /// The complete <see cref="RefFinancialAidApplicationTypeModel"> List
          /// </summary>
-        public static List<RefFinancialAidApplicationType> RefFinancialAidApplicationTypeList = new List<RefFinancialAidApplicationType>
+        public static List<RefFinancialAidApplicationTypeModel> RefFinancialAidApplicationTypeList = new List<RefFinancialAidApplicationTypeModel>
         {
-            new RefFinancialAidApplicationType { Id=Guid.Parse("c93f6a97-cf28-44d5-90e1-d20472a6ffa8"), Code="FAFSA", Description="Free Application for Federal Student Aid (FAFSA)", Definition="Free Application for Federal Student Aid (FAFSA)", SortOrder=Convert.ToDecimal("0.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("065bb011-de92-408a-a999-b68fd01afcdf"), Code="StateApplication", Description="State Application", Definition="State Application", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("1f900f29-1d1f-4c8e-8369-4fffb0f577ac"), Code="InstitutionApplication", Description="Institution Application", Definition="Institution Application", SortOrder=Convert.ToDecimal("4.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("9041cc01-79ab-4795-8085-aad7ee9bfd8f"), Code="Other", Description="Other", Definition="Other", SortOrder=Convert.ToDecimal("6.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("21823337-ebab-4d55-975a-c1d2f0bd883c"), Code="None", Description="None", Definition="None", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("0872386a-ae91-49f5-a05c-307340231bec"), Code="FAFSA", Description="Free Application for Federal Student Aid (FAFSA)", Definition="Free Application for Federal Student Aid (FAFSA)", SortOrder=Convert.ToDecimal("0.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("17820ab9-1849-4670-82e2-ef48c3906908"), Code="StateApplication", Description="State Application", Definition="State Application", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("93294249-3a54-4b25-8fd5-4a71049a7f1a"), Code="InstitutionApplication", Description="Institution Application", Definition="Institution Application", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("fab58834-673d-401e-acef-ec8b83115832"), Code="Other", Description="Other", Definition="Other", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("52f1b5cb-770c-4a7a-a566-27778f8782e5"), Code="None", Description="None", Definition="None", SortOrder=Convert.ToDecimal("8.00") },
         };
 
         /// <summary>
-        /// The RefFinancialAidApplicationType Pick List
+        /// The Reference RefFinancialAidApplicationType Pick List
          /// </summary>
-        public static List<RefFinancialAidApplicationType> RefFinancialAidApplicationTypePickList = new List<RefFinancialAidApplicationType>
+        public static List<ReferencePickListItemViewModel> RefFinancialAidApplicationTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefFinancialAidApplicationType { Id=Guid.Parse("c93f6a97-cf28-44d5-90e1-d20472a6ffa8"), Code="FAFSA", Description="Free Application for Federal Student Aid (FAFSA)", SortOrder=Convert.ToDecimal("0.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("065bb011-de92-408a-a999-b68fd01afcdf"), Code="StateApplication", Description="State Application", SortOrder=Convert.ToDecimal("2.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("1f900f29-1d1f-4c8e-8369-4fffb0f577ac"), Code="InstitutionApplication", Description="Institution Application", SortOrder=Convert.ToDecimal("4.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("9041cc01-79ab-4795-8085-aad7ee9bfd8f"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("6.00") },
-            new RefFinancialAidApplicationType { Id=Guid.Parse("21823337-ebab-4d55-975a-c1d2f0bd883c"), Code="None", Description="None", SortOrder=Convert.ToDecimal("8.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("0872386a-ae91-49f5-a05c-307340231bec"), Description="Free Application for Federal Student Aid (FAFSA)", SortOrder=Convert.ToDecimal("0.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("17820ab9-1849-4670-82e2-ef48c3906908"), Description="State Application", SortOrder=Convert.ToDecimal("2.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("93294249-3a54-4b25-8fd5-4a71049a7f1a"), Description="Institution Application", SortOrder=Convert.ToDecimal("4.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("fab58834-673d-401e-acef-ec8b83115832"), Description="Other", SortOrder=Convert.ToDecimal("6.00") },
+            new RefFinancialAidApplicationType { Id=Guid.Parse("52f1b5cb-770c-4a7a-a566-27778f8782e5"), Description="None", SortOrder=Convert.ToDecimal("8.00") },
        };
    }
 }

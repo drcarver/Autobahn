@@ -14,9 +14,9 @@ namespace Autobahn.Credentials.Views
     public partial class CredentialIssuerView : ContentPage
     {
         /// <summary>
-        /// Inject the CredentialIssuerViewModel as the data context for the view
+        /// Inject the ICredentialIssuerViewModel as the data context for the view
         /// </summary>
-        public CredentialIssuerView(CredentialIssuerViewModel vm)
+        public CredentialIssuerView(ICredentialIssuerViewModel vm)
         {
             BindingContext  = vm;
         }

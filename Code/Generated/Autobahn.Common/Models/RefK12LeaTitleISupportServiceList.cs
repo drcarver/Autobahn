@@ -3,7 +3,6 @@
 //* FileName:   RefK12LeaTitleISupportServiceList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,23 +12,23 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefK12LeaTitleISupportService"> List
+        /// The complete <see cref="RefK12LeaTitleISupportServiceModel"> List
          /// </summary>
-        public static List<RefK12LeaTitleISupportService> RefK12LeaTitleISupportServiceList = new List<RefK12LeaTitleISupportService>
+        public static List<RefK12LeaTitleISupportServiceModel> RefK12LeaTitleISupportServiceList = new List<RefK12LeaTitleISupportServiceModel>
         {
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("f3e5443f-ad5e-43d0-9078-9a0af5748064"), Code="HealthDentalEyeCare", Description="Health, Dental and Eye Care", Definition="Health, Dental and Eye Care is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("1e961676-a8d0-419b-a0fd-6caabf718933"), Code="GuidanceAdvocacy", Description="Supporting Guidance/Advocacy", Definition="Supporting Guidance/Advocacy is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("bcd5ee4e-cb08-4365-b133-c6f90fa64cef"), Code="Other", Description="Other", Definition="Any other type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("4ea1aeef-f4e8-4276-a173-adbd04418c96"), Code="HealthDentalEyeCare", Description="Health, Dental and Eye Care", Definition="Health, Dental and Eye Care is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("59d02814-4ade-4a35-b79c-1f0375edfe17"), Code="GuidanceAdvocacy", Description="Supporting Guidance/Advocacy", Definition="Supporting Guidance/Advocacy is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("02dddd0c-e275-4f59-81bd-a9947790213a"), Code="Other", Description="Other", Definition="Any other type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefK12LeaTitleISupportService Pick List
+        /// The Reference RefK12LeaTitleISupportService Pick List
          /// </summary>
-        public static List<RefK12LeaTitleISupportService> RefK12LeaTitleISupportServicePickList = new List<RefK12LeaTitleISupportService>
+        public static List<ReferencePickListItemViewModel> RefK12LeaTitleISupportServiceViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("f3e5443f-ad5e-43d0-9078-9a0af5748064"), Code="HealthDentalEyeCare", Description="Health, Dental and Eye Care", SortOrder=Convert.ToDecimal("1.00") },
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("1e961676-a8d0-419b-a0fd-6caabf718933"), Code="GuidanceAdvocacy", Description="Supporting Guidance/Advocacy", SortOrder=Convert.ToDecimal("2.00") },
-            new RefK12LeaTitleISupportService { Id=Guid.Parse("bcd5ee4e-cb08-4365-b133-c6f90fa64cef"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("3.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("4ea1aeef-f4e8-4276-a173-adbd04418c96"), Description="Health, Dental and Eye Care", SortOrder=Convert.ToDecimal("1.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("59d02814-4ade-4a35-b79c-1f0375edfe17"), Description="Supporting Guidance/Advocacy", SortOrder=Convert.ToDecimal("2.00") },
+            new RefK12LeaTitleISupportService { Id=Guid.Parse("02dddd0c-e275-4f59-81bd-a9947790213a"), Description="Other", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The RecordStatusViewModel
      /// </summary>
-    public partial class RecordStatusViewModel : ViewModelBase, Interfaces.IRecordStatus
+    public partial class RecordStatusViewModel : ViewModelBase, Interfaces.IRecordStatusViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

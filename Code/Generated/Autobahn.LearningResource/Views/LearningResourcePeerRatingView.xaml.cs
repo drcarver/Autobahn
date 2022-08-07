@@ -14,9 +14,9 @@ namespace Autobahn.LearningResource.Views
     public partial class LearningResourcePeerRatingView : ContentPage
     {
         /// <summary>
-        /// Inject the LearningResourcePeerRatingViewModel as the data context for the view
+        /// Inject the ILearningResourcePeerRatingViewModel as the data context for the view
         /// </summary>
-        public LearningResourcePeerRatingView(LearningResourcePeerRatingViewModel vm)
+        public LearningResourcePeerRatingView(ILearningResourcePeerRatingViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class StaffEmploymentView : ContentPage
     {
         /// <summary>
-        /// Inject the StaffEmploymentViewModel as the data context for the view
+        /// Inject the IStaffEmploymentViewModel as the data context for the view
         /// </summary>
-        public StaffEmploymentView(StaffEmploymentViewModel vm)
+        public StaffEmploymentView(IStaffEmploymentViewModel vm)
         {
             BindingContext  = vm;
         }

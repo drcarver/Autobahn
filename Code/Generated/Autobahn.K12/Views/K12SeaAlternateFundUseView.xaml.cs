@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12SeaAlternateFundUseView : ContentPage
     {
         /// <summary>
-        /// Inject the K12SeaAlternateFundUseViewModel as the data context for the view
+        /// Inject the IK12SeaAlternateFundUseViewModel as the data context for the view
         /// </summary>
-        public K12SeaAlternateFundUseView(K12SeaAlternateFundUseViewModel vm)
+        public K12SeaAlternateFundUseView(IK12SeaAlternateFundUseViewModel vm)
         {
             BindingContext  = vm;
         }

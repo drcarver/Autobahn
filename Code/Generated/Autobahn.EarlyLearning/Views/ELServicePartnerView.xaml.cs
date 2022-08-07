@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELServicePartnerView : ContentPage
     {
         /// <summary>
-        /// Inject the ELServicePartnerViewModel as the data context for the view
+        /// Inject the IELServicePartnerViewModel as the data context for the view
         /// </summary>
-        public ELServicePartnerView(ELServicePartnerViewModel vm)
+        public ELServicePartnerView(IELServicePartnerViewModel vm)
         {
             BindingContext  = vm;
         }

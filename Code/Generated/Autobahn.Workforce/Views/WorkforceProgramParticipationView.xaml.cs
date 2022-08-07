@@ -14,9 +14,9 @@ namespace Autobahn.Workforce.Views
     public partial class WorkforceProgramParticipationView : ContentPage
     {
         /// <summary>
-        /// Inject the WorkforceProgramParticipationViewModel as the data context for the view
+        /// Inject the IWorkforceProgramParticipationViewModel as the data context for the view
         /// </summary>
-        public WorkforceProgramParticipationView(WorkforceProgramParticipationViewModel vm)
+        public WorkforceProgramParticipationView(IWorkforceProgramParticipationViewModel vm)
         {
             BindingContext  = vm;
         }

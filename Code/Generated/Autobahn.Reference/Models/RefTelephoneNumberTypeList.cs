@@ -13,27 +13,27 @@ namespace Autobahn.Reference.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTelephoneNumberType"> List
+        /// The complete <see cref="RefTelephoneNumberTypeModel"> List
          /// </summary>
-        public static List<RefTelephoneNumberType> RefTelephoneNumberTypeList = new List<RefTelephoneNumberType>
+        public static List<RefTelephoneNumberTypeModel> RefTelephoneNumberTypeList = new List<RefTelephoneNumberTypeModel>
         {
-            new RefTelephoneNumberType { Id=Guid.Parse("943cba74-1c92-43e8-8822-f2e49370fb32"), Code="Home", Description="Home phone number", Definition="Home phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("cbf79431-185d-4b20-9743-a9b0819a70db"), Code="Work", Description="Work phone number", Definition="Work phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("1ea3b336-00ed-41de-92d1-c6eb4a47a475"), Code="Mobile", Description="Mobile phone number", Definition="Mobile phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("37330137-13e1-4cf8-a331-a645028467e2"), Code="Fax", Description="Fax number", Definition="Fax number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("144c5566-f433-4a3d-b48b-7285443e70e1"), Code="Other", Description="Other", Definition="The type of communication number listed for a person is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("7b7773f2-d68b-45ce-b78b-358dfa5979da"), Code="Home", Description="Home phone number", Definition="Home phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("bf0d9928-954e-45c5-bf57-e08cb83a1248"), Code="Work", Description="Work phone number", Definition="Work phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("8f84ca8d-b095-4a01-a41f-63f7ce9606ab"), Code="Mobile", Description="Mobile phone number", Definition="Mobile phone number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("6cf3596a-36ba-408f-98a6-78266b0c8e6b"), Code="Fax", Description="Fax number", Definition="Fax number is the type of communication number listed for a person.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("cf2b8a88-6191-43d1-be40-0d1b4ed6bb01"), Code="Other", Description="Other", Definition="The type of communication number listed for a person is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
         };
 
         /// <summary>
-        /// The RefTelephoneNumberType Pick List
+        /// The Reference RefTelephoneNumberType Pick List
          /// </summary>
-        public static List<RefTelephoneNumberType> RefTelephoneNumberTypePickList = new List<RefTelephoneNumberType>
+        public static List<ReferencePickListItemViewModel> RefTelephoneNumberTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefTelephoneNumberType { Id=Guid.Parse("943cba74-1c92-43e8-8822-f2e49370fb32"), Code="Home", Description="Home phone number", SortOrder=Convert.ToDecimal("1.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("cbf79431-185d-4b20-9743-a9b0819a70db"), Code="Work", Description="Work phone number", SortOrder=Convert.ToDecimal("3.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("1ea3b336-00ed-41de-92d1-c6eb4a47a475"), Code="Mobile", Description="Mobile phone number", SortOrder=Convert.ToDecimal("5.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("37330137-13e1-4cf8-a331-a645028467e2"), Code="Fax", Description="Fax number", SortOrder=Convert.ToDecimal("7.00") },
-            new RefTelephoneNumberType { Id=Guid.Parse("144c5566-f433-4a3d-b48b-7285443e70e1"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("9.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("7b7773f2-d68b-45ce-b78b-358dfa5979da"), Description="Home phone number", SortOrder=Convert.ToDecimal("1.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("bf0d9928-954e-45c5-bf57-e08cb83a1248"), Description="Work phone number", SortOrder=Convert.ToDecimal("3.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("8f84ca8d-b095-4a01-a41f-63f7ce9606ab"), Description="Mobile phone number", SortOrder=Convert.ToDecimal("5.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("6cf3596a-36ba-408f-98a6-78266b0c8e6b"), Description="Fax number", SortOrder=Convert.ToDecimal("7.00") },
+            new RefTelephoneNumberType { Id=Guid.Parse("cf2b8a88-6191-43d1-be40-0d1b4ed6bb01"), Description="Other", SortOrder=Convert.ToDecimal("9.00") },
        };
    }
 }

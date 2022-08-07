@@ -3,7 +3,6 @@
 //* FileName:   RefTargetedSupportList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefTargetedSupport"> List
+        /// The complete <see cref="RefTargetedSupportModel"> List
          /// </summary>
-        public static List<RefTargetedSupport> RefTargetedSupportList = new List<RefTargetedSupport>
+        public static List<RefTargetedSupportModel> RefTargetedSupportList = new List<RefTargetedSupportModel>
         {
         };
 
         /// <summary>
-        /// The RefTargetedSupport Pick List
+        /// The Reference RefTargetedSupport Pick List
          /// </summary>
-        public static List<RefTargetedSupport> RefTargetedSupportPickList = new List<RefTargetedSupport>
+        public static List<ReferencePickListItemViewModel> RefTargetedSupportViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12ProgramOrServiceView : ContentPage
     {
         /// <summary>
-        /// Inject the K12ProgramOrServiceViewModel as the data context for the view
+        /// Inject the IK12ProgramOrServiceViewModel as the data context for the view
         /// </summary>
-        public K12ProgramOrServiceView(K12ProgramOrServiceViewModel vm)
+        public K12ProgramOrServiceView(IK12ProgramOrServiceViewModel vm)
         {
             BindingContext  = vm;
         }

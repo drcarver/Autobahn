@@ -11,7 +11,7 @@ namespace Autobahn.Competencies.ViewModels
      /// <summary>
      /// The CompetencySet_RubricCriterionViewModel
      /// </summary>
-    public partial class CompetencySet_RubricCriterionViewModel : ViewModelBase, Interfaces.ICompetencySet_RubricCriterion
+    public partial class CompetencySet_RubricCriterionViewModel : ViewModelBase, Interfaces.ICompetencySet_RubricCriterionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

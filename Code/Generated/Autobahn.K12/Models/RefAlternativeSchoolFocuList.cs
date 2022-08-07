@@ -13,16 +13,16 @@ namespace Autobahn.K12.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAlternativeSchoolFocu"> List
+        /// The complete <see cref="RefAlternativeSchoolFocuModel"> List
          /// </summary>
-        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuList = new List<RefAlternativeSchoolFocu>
+        public static List<RefAlternativeSchoolFocuModel> RefAlternativeSchoolFocuList = new List<RefAlternativeSchoolFocuModel>
         {
         };
 
         /// <summary>
-        /// The RefAlternativeSchoolFocu Pick List
+        /// The Reference RefAlternativeSchoolFocu Pick List
          /// </summary>
-        public static List<RefAlternativeSchoolFocu> RefAlternativeSchoolFocuPickList = new List<RefAlternativeSchoolFocu>
+        public static List<ReferencePickListItemViewModel> RefAlternativeSchoolFocuViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

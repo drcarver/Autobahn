@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The EarlyChildhoodProgramTypeOfferedViewModel
      /// </summary>
-    public partial class EarlyChildhoodProgramTypeOfferedViewModel : ViewModelBase, Interfaces.IEarlyChildhoodProgramTypeOffered
+    public partial class EarlyChildhoodProgramTypeOfferedViewModel : ViewModelBase, Interfaces.IEarlyChildhoodProgramTypeOfferedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

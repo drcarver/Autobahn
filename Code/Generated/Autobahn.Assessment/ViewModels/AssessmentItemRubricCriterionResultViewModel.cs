@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The AssessmentItemRubricCriterionResultViewModel
      /// </summary>
-    public partial class AssessmentItemRubricCriterionResultViewModel : ViewModelBase, Interfaces.IAssessmentItemRubricCriterionResult
+    public partial class AssessmentItemRubricCriterionResultViewModel : ViewModelBase, Interfaces.IAssessmentItemRubricCriterionResultViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The TeacherStudentDataLinkExclusionViewModel
      /// </summary>
-    public partial class TeacherStudentDataLinkExclusionViewModel : ViewModelBase, Interfaces.ITeacherStudentDataLinkExclusion
+    public partial class TeacherStudentDataLinkExclusionViewModel : ViewModelBase, Interfaces.ITeacherStudentDataLinkExclusionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

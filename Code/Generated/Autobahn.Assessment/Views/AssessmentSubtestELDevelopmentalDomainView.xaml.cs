@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentSubtestELDevelopmentalDomainView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentSubtestELDevelopmentalDomainViewModel as the data context for the view
+        /// Inject the IAssessmentSubtestELDevelopmentalDomainViewModel as the data context for the view
         /// </summary>
-        public AssessmentSubtestELDevelopmentalDomainView(AssessmentSubtestELDevelopmentalDomainViewModel vm)
+        public AssessmentSubtestELDevelopmentalDomainView(IAssessmentSubtestELDevelopmentalDomainViewModel vm)
         {
             BindingContext  = vm;
         }

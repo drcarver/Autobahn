@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The EligibilityEvaluationViewModel
      /// </summary>
-    public partial class EligibilityEvaluationViewModel : ViewModelBase, Interfaces.IEligibilityEvaluation
+    public partial class EligibilityEvaluationViewModel : ViewModelBase, Interfaces.IEligibilityEvaluationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

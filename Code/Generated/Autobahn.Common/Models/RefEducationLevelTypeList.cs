@@ -3,7 +3,6 @@
 //* FileName:   RefEducationLevelTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,27 +12,27 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefEducationLevelType"> List
+        /// The complete <see cref="RefEducationLevelTypeModel"> List
          /// </summary>
-        public static List<RefEducationLevelType> RefEducationLevelTypeList = new List<RefEducationLevelType>
+        public static List<RefEducationLevelTypeModel> RefEducationLevelTypeList = new List<RefEducationLevelTypeModel>
         {
-            new RefEducationLevelType { Id=Guid.Parse("53e2e156-16b4-4df8-b3f1-c1762afeffab"), Code="000141", Description="Highest Level of Education Completed", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("9eeb512f-0c89-44f7-9f66-5658fe7b447a"), Code="000725", Description="Competency Definition Education Level", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("10527461-a02a-43d6-af2c-8330396a5b88"), Code="001229", Description="Maternal Guardian Education", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("4d8a9089-c95f-4864-99fd-8e2b331b162a"), Code="001230", Description="Paternal Guardian Education", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("bc584979-0cdd-4758-9bcf-bc202d9593db"), Code="001246", Description="Learning Resource Education Level�", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("4e85d669-9b75-4674-bceb-131bbb569e42"), Code="000141", Description="Highest Level of Education Completed", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("672dcf11-ff71-4a7e-9656-64f4602ec8a8"), Code="000725", Description="Competency Definition Education Level", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("79a59e26-957a-4454-9109-82d588064392"), Code="001229", Description="Maternal Guardian Education", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("e0de6e73-dc73-48e3-905f-c192a8476881"), Code="001230", Description="Paternal Guardian Education", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("6aa5f859-fb96-4280-89e3-289b3ca4db6a"), Code="001246", Description="Learning Resource Education Level�", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefEducationLevelType Pick List
+        /// The Reference RefEducationLevelType Pick List
          /// </summary>
-        public static List<RefEducationLevelType> RefEducationLevelTypePickList = new List<RefEducationLevelType>
+        public static List<ReferencePickListItemViewModel> RefEducationLevelTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefEducationLevelType { Id=Guid.Parse("53e2e156-16b4-4df8-b3f1-c1762afeffab"), Code="000141", Description="Highest Level of Education Completed", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("9eeb512f-0c89-44f7-9f66-5658fe7b447a"), Code="000725", Description="Competency Definition Education Level", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("10527461-a02a-43d6-af2c-8330396a5b88"), Code="001229", Description="Maternal Guardian Education", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("4d8a9089-c95f-4864-99fd-8e2b331b162a"), Code="001230", Description="Paternal Guardian Education", SortOrder=Convert.ToDecimal("") },
-            new RefEducationLevelType { Id=Guid.Parse("bc584979-0cdd-4758-9bcf-bc202d9593db"), Code="001246", Description="Learning Resource Education Level�", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("4e85d669-9b75-4674-bceb-131bbb569e42"), Description="Highest Level of Education Completed", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("672dcf11-ff71-4a7e-9656-64f4602ec8a8"), Description="Competency Definition Education Level", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("79a59e26-957a-4454-9109-82d588064392"), Description="Maternal Guardian Education", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("e0de6e73-dc73-48e3-905f-c192a8476881"), Description="Paternal Guardian Education", SortOrder=Convert.ToDecimal("") },
+            new RefEducationLevelType { Id=Guid.Parse("6aa5f859-fb96-4280-89e3-289b3ca4db6a"), Description="Learning Resource Education Level�", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

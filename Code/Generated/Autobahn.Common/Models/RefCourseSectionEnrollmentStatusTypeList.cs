@@ -3,7 +3,6 @@
 //* FileName:   RefCourseSectionEnrollmentStatusTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,29 +12,29 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCourseSectionEnrollmentStatusType"> List
+        /// The complete <see cref="RefCourseSectionEnrollmentStatusTypeModel"> List
          /// </summary>
-        public static List<RefCourseSectionEnrollmentStatusType> RefCourseSectionEnrollmentStatusTypeList = new List<RefCourseSectionEnrollmentStatusType>
+        public static List<RefCourseSectionEnrollmentStatusTypeModel> RefCourseSectionEnrollmentStatusTypeList = new List<RefCourseSectionEnrollmentStatusTypeModel>
         {
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("3f81d227-319a-40df-8a74-9d76645643c4"), Code="Pre-registered", Description="Pre-registered", Definition="Pre-registered is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("513c9b9c-463e-4172-82e6-4f43a025040f"), Code="Registered", Description="Registered", Definition="Registered is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("3db80f1f-d900-4583-bf07-f27ce3e24d3e"), Code="Enrolled", Description="Enrolled", Definition="Enrolled is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("27b17ef9-dec6-45a9-bae6-bd81a91d98df"), Code="WaitListed", Description="Wait Listed", Definition="Wait Listed is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("28ba8a4d-9317-4296-8aa7-96ad56ecd3f9"), Code="Dropped", Description="Dropped", Definition="Dropped is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("e0a4a8eb-a4e3-4210-a4ed-ec2a080e600d"), Code="Completed", Description="Completed", Definition="Completed is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("0162f5d9-5241-4cab-a552-964bc1981c5b"), Code="Pre-registered", Description="Pre-registered", Definition="Pre-registered is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("0a4d88bc-d74b-4485-a284-b34f80d509f5"), Code="Registered", Description="Registered", Definition="Registered is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("499e75e8-091a-4600-81b8-6c915c8e6350"), Code="Enrolled", Description="Enrolled", Definition="Enrolled is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("35615ada-064e-4e36-a2f0-0c982f563ce0"), Code="WaitListed", Description="Wait Listed", Definition="Wait Listed is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("4e36d273-2fcd-490a-8cf8-240676b7780b"), Code="Dropped", Description="Dropped", Definition="Dropped is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("778bee71-5a60-44a2-bf61-9a8cd4df3f5f"), Code="Completed", Description="Completed", Definition="Completed is the status related to a student enrollment in an instance of a course.", SortOrder=Convert.ToDecimal("6.00") },
         };
 
         /// <summary>
-        /// The RefCourseSectionEnrollmentStatusType Pick List
+        /// The Reference RefCourseSectionEnrollmentStatusType Pick List
          /// </summary>
-        public static List<RefCourseSectionEnrollmentStatusType> RefCourseSectionEnrollmentStatusTypePickList = new List<RefCourseSectionEnrollmentStatusType>
+        public static List<ReferencePickListItemViewModel> RefCourseSectionEnrollmentStatusTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("3f81d227-319a-40df-8a74-9d76645643c4"), Code="Pre-registered", Description="Pre-registered", SortOrder=Convert.ToDecimal("1.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("513c9b9c-463e-4172-82e6-4f43a025040f"), Code="Registered", Description="Registered", SortOrder=Convert.ToDecimal("2.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("3db80f1f-d900-4583-bf07-f27ce3e24d3e"), Code="Enrolled", Description="Enrolled", SortOrder=Convert.ToDecimal("3.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("27b17ef9-dec6-45a9-bae6-bd81a91d98df"), Code="WaitListed", Description="Wait Listed", SortOrder=Convert.ToDecimal("4.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("28ba8a4d-9317-4296-8aa7-96ad56ecd3f9"), Code="Dropped", Description="Dropped", SortOrder=Convert.ToDecimal("5.00") },
-            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("e0a4a8eb-a4e3-4210-a4ed-ec2a080e600d"), Code="Completed", Description="Completed", SortOrder=Convert.ToDecimal("6.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("0162f5d9-5241-4cab-a552-964bc1981c5b"), Description="Pre-registered", SortOrder=Convert.ToDecimal("1.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("0a4d88bc-d74b-4485-a284-b34f80d509f5"), Description="Registered", SortOrder=Convert.ToDecimal("2.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("499e75e8-091a-4600-81b8-6c915c8e6350"), Description="Enrolled", SortOrder=Convert.ToDecimal("3.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("35615ada-064e-4e36-a2f0-0c982f563ce0"), Description="Wait Listed", SortOrder=Convert.ToDecimal("4.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("4e36d273-2fcd-490a-8cf8-240676b7780b"), Description="Dropped", SortOrder=Convert.ToDecimal("5.00") },
+            new RefCourseSectionEnrollmentStatusType { Id=Guid.Parse("778bee71-5a60-44a2-bf61-9a8cd4df3f5f"), Description="Completed", SortOrder=Convert.ToDecimal("6.00") },
        };
    }
 }

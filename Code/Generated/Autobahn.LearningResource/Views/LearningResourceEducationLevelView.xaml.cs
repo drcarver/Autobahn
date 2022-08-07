@@ -14,9 +14,9 @@ namespace Autobahn.LearningResource.Views
     public partial class LearningResourceEducationLevelView : ContentPage
     {
         /// <summary>
-        /// Inject the LearningResourceEducationLevelViewModel as the data context for the view
+        /// Inject the ILearningResourceEducationLevelViewModel as the data context for the view
         /// </summary>
-        public LearningResourceEducationLevelView(LearningResourceEducationLevelViewModel vm)
+        public LearningResourceEducationLevelView(ILearningResourceEducationLevelViewModel vm)
         {
             BindingContext  = vm;
         }

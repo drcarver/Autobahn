@@ -14,9 +14,9 @@ namespace Autobahn.Competencies.Views
     public partial class CompetencyDefAssociationView : ContentPage
     {
         /// <summary>
-        /// Inject the CompetencyDefAssociationViewModel as the data context for the view
+        /// Inject the ICompetencyDefAssociationViewModel as the data context for the view
         /// </summary>
-        public CompetencyDefAssociationView(CompetencyDefAssociationViewModel vm)
+        public CompetencyDefAssociationView(ICompetencyDefAssociationViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class FacilityMortgageView : ContentPage
     {
         /// <summary>
-        /// Inject the FacilityMortgageViewModel as the data context for the view
+        /// Inject the IFacilityMortgageViewModel as the data context for the view
         /// </summary>
-        public FacilityMortgageView(FacilityMortgageViewModel vm)
+        public FacilityMortgageView(IFacilityMortgageViewModel vm)
         {
             BindingContext  = vm;
         }

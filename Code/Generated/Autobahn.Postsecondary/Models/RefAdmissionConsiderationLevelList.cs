@@ -13,25 +13,25 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAdmissionConsiderationLevel"> List
+        /// The complete <see cref="RefAdmissionConsiderationLevelModel"> List
          /// </summary>
-        public static List<RefAdmissionConsiderationLevel> RefAdmissionConsiderationLevelList = new List<RefAdmissionConsiderationLevel>
+        public static List<RefAdmissionConsiderationLevelModel> RefAdmissionConsiderationLevelList = new List<RefAdmissionConsiderationLevelModel>
         {
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("93f29312-dbb2-48e9-80b4-f655666635f8"), Code="Required", Description="Required", Definition="This admission criteria is Required.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("b4b76f68-b040-462c-8b53-7b52538a1f1a"), Code="Recommended", Description="Recommended", Definition="This admission criteria is Recommended.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("bb8e8a0f-6f13-4a91-b802-3d252fb614d8"), Code="NeitherRequiredRecommended", Description="Neither Required nor Recommended", Definition="This admission criteria is Neither Required nor Recommended.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("6d8a471d-3ddd-4554-a231-2865b8180176"), Code="DontKnow", Description="Don't Know", Definition="The consideration level for this admission criteria is unknown.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("a39a28a5-81d1-4443-bf62-e5e5cabb1eb8"), Code="Required", Description="Required", Definition="This admission criteria is Required.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("989a4896-9b72-4f7e-a1f1-485125c86703"), Code="Recommended", Description="Recommended", Definition="This admission criteria is Recommended.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("ef8aa061-ccd8-47f5-ba0b-c30309422a5b"), Code="NeitherRequiredRecommended", Description="Neither Required nor Recommended", Definition="This admission criteria is Neither Required nor Recommended.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("8895d62a-f3ab-49f7-a435-74f10cc56a8f"), Code="DontKnow", Description="Don't Know", Definition="The consideration level for this admission criteria is unknown.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefAdmissionConsiderationLevel Pick List
+        /// The Reference RefAdmissionConsiderationLevel Pick List
          /// </summary>
-        public static List<RefAdmissionConsiderationLevel> RefAdmissionConsiderationLevelPickList = new List<RefAdmissionConsiderationLevel>
+        public static List<ReferencePickListItemViewModel> RefAdmissionConsiderationLevelViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("93f29312-dbb2-48e9-80b4-f655666635f8"), Code="Required", Description="Required", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("b4b76f68-b040-462c-8b53-7b52538a1f1a"), Code="Recommended", Description="Recommended", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("bb8e8a0f-6f13-4a91-b802-3d252fb614d8"), Code="NeitherRequiredRecommended", Description="Neither Required nor Recommended", SortOrder=Convert.ToDecimal("5.00") },
-            new RefAdmissionConsiderationLevel { Id=Guid.Parse("6d8a471d-3ddd-4554-a231-2865b8180176"), Code="DontKnow", Description="Don't Know", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("a39a28a5-81d1-4443-bf62-e5e5cabb1eb8"), Description="Required", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("989a4896-9b72-4f7e-a1f1-485125c86703"), Description="Recommended", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("ef8aa061-ccd8-47f5-ba0b-c30309422a5b"), Description="Neither Required nor Recommended", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAdmissionConsiderationLevel { Id=Guid.Parse("8895d62a-f3ab-49f7-a435-74f10cc56a8f"), Description="Don't Know", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

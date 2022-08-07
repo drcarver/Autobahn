@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The CoreKnowledgeAreaViewModel
      /// </summary>
-    public partial class CoreKnowledgeAreaViewModel : ViewModelBase, Interfaces.ICoreKnowledgeArea
+    public partial class CoreKnowledgeAreaViewModel : ViewModelBase, Interfaces.ICoreKnowledgeAreaViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

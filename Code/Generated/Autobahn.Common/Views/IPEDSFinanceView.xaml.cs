@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IPEDSFinanceView : ContentPage
     {
         /// <summary>
-        /// Inject the IPEDSFinanceViewModel as the data context for the view
+        /// Inject the IIPEDSFinanceViewModel as the data context for the view
         /// </summary>
-        public IPEDSFinanceView(IPEDSFinanceViewModel vm)
+        public IPEDSFinanceView(IIPEDSFinanceViewModel vm)
         {
             BindingContext  = vm;
         }

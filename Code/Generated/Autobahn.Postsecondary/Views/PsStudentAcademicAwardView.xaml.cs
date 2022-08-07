@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsStudentAcademicAwardView : ContentPage
     {
         /// <summary>
-        /// Inject the PsStudentAcademicAwardViewModel as the data context for the view
+        /// Inject the IPsStudentAcademicAwardViewModel as the data context for the view
         /// </summary>
-        public PsStudentAcademicAwardView(PsStudentAcademicAwardViewModel vm)
+        public PsStudentAcademicAwardView(IPsStudentAcademicAwardViewModel vm)
         {
             BindingContext  = vm;
         }

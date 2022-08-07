@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class BuildingSpaceView : ContentPage
     {
         /// <summary>
-        /// Inject the BuildingSpaceViewModel as the data context for the view
+        /// Inject the IBuildingSpaceViewModel as the data context for the view
         /// </summary>
-        public BuildingSpaceView(BuildingSpaceViewModel vm)
+        public BuildingSpaceView(IBuildingSpaceViewModel vm)
         {
             BindingContext  = vm;
         }

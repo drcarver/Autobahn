@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELOrganizationFundView : ContentPage
     {
         /// <summary>
-        /// Inject the ELOrganizationFundViewModel as the data context for the view
+        /// Inject the IELOrganizationFundViewModel as the data context for the view
         /// </summary>
-        public ELOrganizationFundView(ELOrganizationFundViewModel vm)
+        public ELOrganizationFundView(IELOrganizationFundViewModel vm)
         {
             BindingContext  = vm;
         }

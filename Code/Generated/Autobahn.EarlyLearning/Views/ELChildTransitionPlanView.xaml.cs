@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELChildTransitionPlanView : ContentPage
     {
         /// <summary>
-        /// Inject the ELChildTransitionPlanViewModel as the data context for the view
+        /// Inject the IELChildTransitionPlanViewModel as the data context for the view
         /// </summary>
-        public ELChildTransitionPlanView(ELChildTransitionPlanViewModel vm)
+        public ELChildTransitionPlanView(IELChildTransitionPlanViewModel vm)
         {
             BindingContext  = vm;
         }

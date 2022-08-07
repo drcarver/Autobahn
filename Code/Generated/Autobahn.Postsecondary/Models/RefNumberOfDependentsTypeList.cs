@@ -13,25 +13,25 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefNumberOfDependentsType"> List
+        /// The complete <see cref="RefNumberOfDependentsTypeModel"> List
          /// </summary>
-        public static List<RefNumberOfDependentsType> RefNumberOfDependentsTypeList = new List<RefNumberOfDependentsType>
+        public static List<RefNumberOfDependentsTypeModel> RefNumberOfDependentsTypeList = new List<RefNumberOfDependentsTypeModel>
         {
-            new RefNumberOfDependentsType { Id=Guid.Parse("e1960b9b-fd78-4538-a531-a2765bf162b3"), Code="All", Description="All", Definition="The dependents are the person's children, spouse, and person other than the children or spouse", SortOrder=Convert.ToDecimal("1.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("f6db6b79-99ae-407f-966f-c672472cb8a8"), Code="Children", Description="Children", Definition="The dependents are the person's children.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("d1d4e4e1-eaf7-4c70-be5f-73301819c726"), Code="PersonOtherThanChildrenOrSpouse", Description="Person other than children or spouse", Definition="The dependent is a person other than the person's children or spouse", SortOrder=Convert.ToDecimal("3.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("a255802f-9714-45ec-93da-654bc056fe76"), Code="Spouse", Description="Spouse", Definition="The dependent is the person's spouse.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("c99c4b5c-2358-438e-8e66-eb6fac8c0896"), Code="All", Description="All", Definition="The dependents are the person's children, spouse, and person other than the children or spouse", SortOrder=Convert.ToDecimal("1.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("a0461586-3271-4d1f-bba2-2c3348b1d91a"), Code="Children", Description="Children", Definition="The dependents are the person's children.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("c182a01c-eb39-4354-a324-00ed5d51591a"), Code="PersonOtherThanChildrenOrSpouse", Description="Person other than children or spouse", Definition="The dependent is a person other than the person's children or spouse", SortOrder=Convert.ToDecimal("3.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("bd2ca633-bbfb-4d7f-a85d-ed03b06c6f9d"), Code="Spouse", Description="Spouse", Definition="The dependent is the person's spouse.", SortOrder=Convert.ToDecimal("4.00") },
         };
 
         /// <summary>
-        /// The RefNumberOfDependentsType Pick List
+        /// The Reference RefNumberOfDependentsType Pick List
          /// </summary>
-        public static List<RefNumberOfDependentsType> RefNumberOfDependentsTypePickList = new List<RefNumberOfDependentsType>
+        public static List<ReferencePickListItemViewModel> RefNumberOfDependentsTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefNumberOfDependentsType { Id=Guid.Parse("e1960b9b-fd78-4538-a531-a2765bf162b3"), Code="All", Description="All", SortOrder=Convert.ToDecimal("1.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("f6db6b79-99ae-407f-966f-c672472cb8a8"), Code="Children", Description="Children", SortOrder=Convert.ToDecimal("2.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("d1d4e4e1-eaf7-4c70-be5f-73301819c726"), Code="PersonOtherThanChildrenOrSpouse", Description="Person other than children or spouse", SortOrder=Convert.ToDecimal("3.00") },
-            new RefNumberOfDependentsType { Id=Guid.Parse("a255802f-9714-45ec-93da-654bc056fe76"), Code="Spouse", Description="Spouse", SortOrder=Convert.ToDecimal("4.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("c99c4b5c-2358-438e-8e66-eb6fac8c0896"), Description="All", SortOrder=Convert.ToDecimal("1.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("a0461586-3271-4d1f-bba2-2c3348b1d91a"), Description="Children", SortOrder=Convert.ToDecimal("2.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("c182a01c-eb39-4354-a324-00ed5d51591a"), Description="Person other than children or spouse", SortOrder=Convert.ToDecimal("3.00") },
+            new RefNumberOfDependentsType { Id=Guid.Parse("bd2ca633-bbfb-4d7f-a85d-ed03b06c6f9d"), Description="Spouse", SortOrder=Convert.ToDecimal("4.00") },
        };
    }
 }

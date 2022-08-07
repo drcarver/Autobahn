@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class OrganizationIdentifierView : ContentPage
     {
         /// <summary>
-        /// Inject the OrganizationIdentifierViewModel as the data context for the view
+        /// Inject the IOrganizationIdentifierViewModel as the data context for the view
         /// </summary>
-        public OrganizationIdentifierView(OrganizationIdentifierViewModel vm)
+        public OrganizationIdentifierView(IOrganizationIdentifierViewModel vm)
         {
             BindingContext  = vm;
         }

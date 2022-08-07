@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The RoleAttendanceEventViewModel
      /// </summary>
-    public partial class RoleAttendanceEventViewModel : ViewModelBase, Interfaces.IRoleAttendanceEvent
+    public partial class RoleAttendanceEventViewModel : ViewModelBase, Interfaces.IRoleAttendanceEventViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

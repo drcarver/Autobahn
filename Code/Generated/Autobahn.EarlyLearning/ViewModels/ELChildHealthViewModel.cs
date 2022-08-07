@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELChildHealthViewModel
      /// </summary>
-    public partial class ELChildHealthViewModel : ViewModelBase, Interfaces.IELChildHealth
+    public partial class ELChildHealthViewModel : ViewModelBase, Interfaces.IELChildHealthViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

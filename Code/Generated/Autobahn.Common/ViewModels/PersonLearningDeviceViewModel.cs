@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonLearningDeviceViewModel
      /// </summary>
-    public partial class PersonLearningDeviceViewModel : ViewModelBase, Interfaces.IPersonLearningDevice
+    public partial class PersonLearningDeviceViewModel : ViewModelBase, Interfaces.IPersonLearningDeviceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

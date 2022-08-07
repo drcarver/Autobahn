@@ -3,7 +3,6 @@
 //* FileName:   RefIncidentPersonRoleTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,25 +12,25 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIncidentPersonRoleType"> List
+        /// The complete <see cref="RefIncidentPersonRoleTypeModel"> List
          /// </summary>
-        public static List<RefIncidentPersonRoleType> RefIncidentPersonRoleTypeList = new List<RefIncidentPersonRoleType>
+        public static List<RefIncidentPersonRoleTypeModel> RefIncidentPersonRoleTypeList = new List<RefIncidentPersonRoleTypeModel>
         {
-            new RefIncidentPersonRoleType { Id=Guid.Parse("f83a0e70-5507-474f-9b3f-e711c7932704"), Code="Victim", Description="Victim", Definition="Victim is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("2fe3dae2-ca5a-4525-94fd-4530292639c7"), Code="Perpetrator", Description="Perpetrator", Definition="Perpetrator is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("39250c80-3311-4828-9ac0-073e4894c929"), Code="Witness", Description="Witness", Definition="Witness is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("8269c2e8-23fe-4cb3-9bb7-654583c08613"), Code="Reporter", Description="Reporter", Definition="Reporter is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("4b6e648b-f8f4-43a3-a346-38a7b596b07a"), Code="Victim", Description="Victim", Definition="Victim is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("adfc1b4e-37cd-4624-81ed-eb41eda5fe04"), Code="Perpetrator", Description="Perpetrator", Definition="Perpetrator is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("83d598d1-7b83-4ab3-bd35-54d771b3fd54"), Code="Witness", Description="Witness", Definition="Witness is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("c6b39d6e-2baf-4604-b965-ba06b0e204a3"), Code="Reporter", Description="Reporter", Definition="Reporter is the role or type of participation of the person in the discipline incident.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefIncidentPersonRoleType Pick List
+        /// The Reference RefIncidentPersonRoleType Pick List
          /// </summary>
-        public static List<RefIncidentPersonRoleType> RefIncidentPersonRoleTypePickList = new List<RefIncidentPersonRoleType>
+        public static List<ReferencePickListItemViewModel> RefIncidentPersonRoleTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefIncidentPersonRoleType { Id=Guid.Parse("f83a0e70-5507-474f-9b3f-e711c7932704"), Code="Victim", Description="Victim", SortOrder=Convert.ToDecimal("1.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("2fe3dae2-ca5a-4525-94fd-4530292639c7"), Code="Perpetrator", Description="Perpetrator", SortOrder=Convert.ToDecimal("3.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("39250c80-3311-4828-9ac0-073e4894c929"), Code="Witness", Description="Witness", SortOrder=Convert.ToDecimal("5.00") },
-            new RefIncidentPersonRoleType { Id=Guid.Parse("8269c2e8-23fe-4cb3-9bb7-654583c08613"), Code="Reporter", Description="Reporter", SortOrder=Convert.ToDecimal("7.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("4b6e648b-f8f4-43a3-a346-38a7b596b07a"), Description="Victim", SortOrder=Convert.ToDecimal("1.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("adfc1b4e-37cd-4624-81ed-eb41eda5fe04"), Description="Perpetrator", SortOrder=Convert.ToDecimal("3.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("83d598d1-7b83-4ab3-bd35-54d771b3fd54"), Description="Witness", SortOrder=Convert.ToDecimal("5.00") },
+            new RefIncidentPersonRoleType { Id=Guid.Parse("c6b39d6e-2baf-4604-b965-ba06b0e204a3"), Description="Reporter", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

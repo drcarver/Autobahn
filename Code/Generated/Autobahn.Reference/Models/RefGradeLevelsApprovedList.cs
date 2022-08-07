@@ -13,16 +13,16 @@ namespace Autobahn.Reference.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefGradeLevelsApproved"> List
+        /// The complete <see cref="RefGradeLevelsApprovedModel"> List
          /// </summary>
-        public static List<RefGradeLevelsApproved> RefGradeLevelsApprovedList = new List<RefGradeLevelsApproved>
+        public static List<RefGradeLevelsApprovedModel> RefGradeLevelsApprovedList = new List<RefGradeLevelsApprovedModel>
         {
         };
 
         /// <summary>
-        /// The RefGradeLevelsApproved Pick List
+        /// The Reference RefGradeLevelsApproved Pick List
          /// </summary>
-        public static List<RefGradeLevelsApproved> RefGradeLevelsApprovedPickList = new List<RefGradeLevelsApproved>
+        public static List<ReferencePickListItemViewModel> RefGradeLevelsApprovedViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

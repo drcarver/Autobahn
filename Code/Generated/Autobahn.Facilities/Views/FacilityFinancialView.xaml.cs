@@ -14,9 +14,9 @@ namespace Autobahn.Facilities.Views
     public partial class FacilityFinancialView : ContentPage
     {
         /// <summary>
-        /// Inject the FacilityFinancialViewModel as the data context for the view
+        /// Inject the IFacilityFinancialViewModel as the data context for the view
         /// </summary>
-        public FacilityFinancialView(FacilityFinancialViewModel vm)
+        public FacilityFinancialView(IFacilityFinancialViewModel vm)
         {
             BindingContext  = vm;
         }

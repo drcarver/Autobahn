@@ -14,9 +14,9 @@ namespace Autobahn.LearningResource.Views
     public partial class LearningResourceAdaptationView : ContentPage
     {
         /// <summary>
-        /// Inject the LearningResourceAdaptationViewModel as the data context for the view
+        /// Inject the ILearningResourceAdaptationViewModel as the data context for the view
         /// </summary>
-        public LearningResourceAdaptationView(LearningResourceAdaptationViewModel vm)
+        public LearningResourceAdaptationView(ILearningResourceAdaptationViewModel vm)
         {
             BindingContext  = vm;
         }

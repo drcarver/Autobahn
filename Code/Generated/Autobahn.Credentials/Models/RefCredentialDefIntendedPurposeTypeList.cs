@@ -13,25 +13,25 @@ namespace Autobahn.Credentials.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefCredentialDefIntendedPurposeType"> List
+        /// The complete <see cref="RefCredentialDefIntendedPurposeTypeModel"> List
          /// </summary>
-        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypeList = new List<RefCredentialDefIntendedPurposeType>
+        public static List<RefCredentialDefIntendedPurposeTypeModel> RefCredentialDefIntendedPurposeTypeList = new List<RefCredentialDefIntendedPurposeTypeModel>
         {
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("11736fc1-3ef1-40ee-a6ca-0f76e88c76a8"), Code="GeneralEducation", Description="General Education", Definition="The intended purpose of the credential by the holder is general education.", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("cb79137d-cb0b-4ff9-9c48-a4c74cbba2a9"), Code="JobOrCareerPreparation", Description="Job/Career Preparation", Definition="The intended purpose of the credential by the holder is job or career preparation.", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("6bb1f603-5648-4afd-85ce-9ef1aefaa169"), Code="MidCareer", Description="Mid-Career Level", Definition="The intended purpose of the credential by the holder is for mid-career, experienced worker preparation and advancement.", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("40b2d40b-8a96-4550-940b-8e5d5fc934b0"), Code="PriorExperience", Description="Prior Learning Experience", Definition="The intended purpose of the credential by the holder is for determining prior learning experience of the holder, including but not limited to college credit.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("9b37dd22-e698-44bd-bcf0-32875641f1f5"), Code="GeneralEducation", Description="General Education", Definition="The intended purpose of the credential by the holder is general education.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("f092bfd8-aba0-444c-b819-c8ac109c6cc5"), Code="JobOrCareerPreparation", Description="Job/Career Preparation", Definition="The intended purpose of the credential by the holder is job or career preparation.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("60ae8712-7844-41c9-b131-15843d3c3e92"), Code="MidCareer", Description="Mid-Career Level", Definition="The intended purpose of the credential by the holder is for mid-career, experienced worker preparation and advancement.", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("826a3061-57f1-4475-b4c7-336ca4f63971"), Code="PriorExperience", Description="Prior Learning Experience", Definition="The intended purpose of the credential by the holder is for determining prior learning experience of the holder, including but not limited to college credit.", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefCredentialDefIntendedPurposeType Pick List
+        /// The Reference RefCredentialDefIntendedPurposeType Pick List
          /// </summary>
-        public static List<RefCredentialDefIntendedPurposeType> RefCredentialDefIntendedPurposeTypePickList = new List<RefCredentialDefIntendedPurposeType>
+        public static List<ReferencePickListItemViewModel> RefCredentialDefIntendedPurposeTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("11736fc1-3ef1-40ee-a6ca-0f76e88c76a8"), Code="GeneralEducation", Description="General Education", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("cb79137d-cb0b-4ff9-9c48-a4c74cbba2a9"), Code="JobOrCareerPreparation", Description="Job/Career Preparation", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("6bb1f603-5648-4afd-85ce-9ef1aefaa169"), Code="MidCareer", Description="Mid-Career Level", SortOrder=Convert.ToDecimal("") },
-            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("40b2d40b-8a96-4550-940b-8e5d5fc934b0"), Code="PriorExperience", Description="Prior Learning Experience", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("9b37dd22-e698-44bd-bcf0-32875641f1f5"), Description="General Education", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("f092bfd8-aba0-444c-b819-c8ac109c6cc5"), Description="Job/Career Preparation", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("60ae8712-7844-41c9-b131-15843d3c3e92"), Description="Mid-Career Level", SortOrder=Convert.ToDecimal("") },
+            new RefCredentialDefIntendedPurposeType { Id=Guid.Parse("826a3061-57f1-4475-b4c7-336ca4f63971"), Description="Prior Learning Experience", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

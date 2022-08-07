@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The StaffTechnicalAssistanceViewModel
      /// </summary>
-    public partial class StaffTechnicalAssistanceViewModel : ViewModelBase, Interfaces.IStaffTechnicalAssistance
+    public partial class StaffTechnicalAssistanceViewModel : ViewModelBase, Interfaces.IStaffTechnicalAssistanceViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

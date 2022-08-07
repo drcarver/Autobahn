@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12StudentAcademicHonorView : ContentPage
     {
         /// <summary>
-        /// Inject the K12StudentAcademicHonorViewModel as the data context for the view
+        /// Inject the IK12StudentAcademicHonorViewModel as the data context for the view
         /// </summary>
-        public K12StudentAcademicHonorView(K12StudentAcademicHonorViewModel vm)
+        public K12StudentAcademicHonorView(IK12StudentAcademicHonorViewModel vm)
         {
             BindingContext  = vm;
         }

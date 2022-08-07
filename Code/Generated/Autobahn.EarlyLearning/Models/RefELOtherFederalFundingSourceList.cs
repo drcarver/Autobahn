@@ -13,16 +13,16 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefELOtherFederalFundingSource"> List
+        /// The complete <see cref="RefELOtherFederalFundingSourceModel"> List
          /// </summary>
-        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourceList = new List<RefELOtherFederalFundingSource>
+        public static List<RefELOtherFederalFundingSourceModel> RefELOtherFederalFundingSourceList = new List<RefELOtherFederalFundingSourceModel>
         {
         };
 
         /// <summary>
-        /// The RefELOtherFederalFundingSource Pick List
+        /// The Reference RefELOtherFederalFundingSource Pick List
          /// </summary>
-        public static List<RefELOtherFederalFundingSource> RefELOtherFederalFundingSourcePickList = new List<RefELOtherFederalFundingSource>
+        public static List<ReferencePickListItemViewModel> RefELOtherFederalFundingSourceViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

@@ -3,7 +3,6 @@
 //* FileName:   RefIPEDSFASBPellGrantTransactionList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIPEDSFASBPellGrantTransaction"> List
+        /// The complete <see cref="RefIPEDSFASBPellGrantTransactionModel"> List
          /// </summary>
-        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionList = new List<RefIPEDSFASBPellGrantTransaction>
+        public static List<RefIPEDSFASBPellGrantTransactionModel> RefIPEDSFASBPellGrantTransactionList = new List<RefIPEDSFASBPellGrantTransactionModel>
         {
         };
 
         /// <summary>
-        /// The RefIPEDSFASBPellGrantTransaction Pick List
+        /// The Reference RefIPEDSFASBPellGrantTransaction Pick List
          /// </summary>
-        public static List<RefIPEDSFASBPellGrantTransaction> RefIPEDSFASBPellGrantTransactionPickList = new List<RefIPEDSFASBPellGrantTransaction>
+        public static List<ReferencePickListItemViewModel> RefIPEDSFASBPellGrantTransactionViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

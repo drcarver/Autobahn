@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ProgramParticipationTitleIIILepViewModel
      /// </summary>
-    public partial class ProgramParticipationTitleIIILepViewModel : ViewModelBase, Interfaces.IProgramParticipationTitleIIILep
+    public partial class ProgramParticipationTitleIIILepViewModel : ViewModelBase, Interfaces.IProgramParticipationTitleIIILepViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

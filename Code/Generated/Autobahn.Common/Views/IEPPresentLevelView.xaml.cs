@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class IEPPresentLevelView : ContentPage
     {
         /// <summary>
-        /// Inject the IEPPresentLevelViewModel as the data context for the view
+        /// Inject the IIEPPresentLevelViewModel as the data context for the view
         /// </summary>
-        public IEPPresentLevelView(IEPPresentLevelViewModel vm)
+        public IEPPresentLevelView(IIEPPresentLevelViewModel vm)
         {
             BindingContext  = vm;
         }

@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12TitleIIILanguageInstructionView : ContentPage
     {
         /// <summary>
-        /// Inject the K12TitleIIILanguageInstructionViewModel as the data context for the view
+        /// Inject the IK12TitleIIILanguageInstructionViewModel as the data context for the view
         /// </summary>
-        public K12TitleIIILanguageInstructionView(K12TitleIIILanguageInstructionViewModel vm)
+        public K12TitleIIILanguageInstructionView(IK12TitleIIILanguageInstructionViewModel vm)
         {
             BindingContext  = vm;
         }

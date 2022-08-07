@@ -14,9 +14,9 @@ namespace Autobahn.LearningResource.Views
     public partial class LearningResourceMediaFeatureView : ContentPage
     {
         /// <summary>
-        /// Inject the LearningResourceMediaFeatureViewModel as the data context for the view
+        /// Inject the ILearningResourceMediaFeatureViewModel as the data context for the view
         /// </summary>
-        public LearningResourceMediaFeatureView(LearningResourceMediaFeatureViewModel vm)
+        public LearningResourceMediaFeatureView(ILearningResourceMediaFeatureViewModel vm)
         {
             BindingContext  = vm;
         }

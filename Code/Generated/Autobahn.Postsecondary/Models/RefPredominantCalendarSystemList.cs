@@ -13,31 +13,31 @@ namespace Autobahn.Postsecondary.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefPredominantCalendarSystem"> List
+        /// The complete <see cref="RefPredominantCalendarSystemModel"> List
          /// </summary>
-        public static List<RefPredominantCalendarSystem> RefPredominantCalendarSystemList = new List<RefPredominantCalendarSystem>
+        public static List<RefPredominantCalendarSystemModel> RefPredominantCalendarSystemList = new List<RefPredominantCalendarSystemModel>
         {
-            new RefPredominantCalendarSystem { Id=Guid.Parse("e44b84e8-677f-4738-b8de-1895613fbe17"), Code="Semester", Description="Semester ", Definition="The institution structures most of its courses for the academic year by Semester.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("35b183ca-59b1-421b-bc21-a1db740a97a4"), Code="Quarter", Description="Quarter ", Definition="The institution structures most of its courses for the academic year by Quarter.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("07148183-9691-43b7-a11e-c2fe643cce1a"), Code="Trimester", Description="Trimester", Definition="The institution structures most of its courses for the academic year by Trimester.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("3fd4156d-0777-403f-9e4c-6e93017da9ff"), Code="4-1-4", Description="4-1-4 or similar plan", Definition="The institution structures most of its courses for the academic year by 4-1-4 or similar plan.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("1014a379-457f-4b65-9d7f-14cc235732ae"), Code="Other", Description="Other academic plan", Definition="The institution structures most of its courses for the academic year by an academic plan not yet defined in CEDS.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("f27b44cd-dc09-47dd-971b-00fdcffc0d4a"), Code="DiffersByProgram", Description="Differs by program", Definition="The method by which an institution structures most of its courses for the academic year differs by program.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("e9c8fc1f-39d3-4e9a-a57f-585df441584b"), Code="ContinuousBasis", Description="Continuous basis", Definition="The institution structures most of its courses for the academic year on a continuous basis.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("304a55bc-5ecd-4f97-88e3-10e39fa6d314"), Code="Semester", Description="Semester ", Definition="The institution structures most of its courses for the academic year by Semester.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("14858237-e6c2-4c91-ae79-bfd791a540d6"), Code="Quarter", Description="Quarter ", Definition="The institution structures most of its courses for the academic year by Quarter.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("bffbe3f3-159f-4bbf-9ad9-bb007b7a13f1"), Code="Trimester", Description="Trimester", Definition="The institution structures most of its courses for the academic year by Trimester.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("8a3234a1-aef2-4a68-a617-d3ca17b71ab3"), Code="4-1-4", Description="4-1-4 or similar plan", Definition="The institution structures most of its courses for the academic year by 4-1-4 or similar plan.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("a4f3c2a1-0d75-43bf-9338-c75f6971f0ef"), Code="Other", Description="Other academic plan", Definition="The institution structures most of its courses for the academic year by an academic plan not yet defined in CEDS.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("eb284d3e-df50-47de-b3b4-36bb79b2845f"), Code="DiffersByProgram", Description="Differs by program", Definition="The method by which an institution structures most of its courses for the academic year differs by program.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("4457ef3f-7d61-4d93-9437-1430be3753c9"), Code="ContinuousBasis", Description="Continuous basis", Definition="The institution structures most of its courses for the academic year on a continuous basis.", SortOrder=Convert.ToDecimal("7.00") },
         };
 
         /// <summary>
-        /// The RefPredominantCalendarSystem Pick List
+        /// The Reference RefPredominantCalendarSystem Pick List
          /// </summary>
-        public static List<RefPredominantCalendarSystem> RefPredominantCalendarSystemPickList = new List<RefPredominantCalendarSystem>
+        public static List<ReferencePickListItemViewModel> RefPredominantCalendarSystemViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefPredominantCalendarSystem { Id=Guid.Parse("e44b84e8-677f-4738-b8de-1895613fbe17"), Code="Semester", Description="Semester ", SortOrder=Convert.ToDecimal("1.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("35b183ca-59b1-421b-bc21-a1db740a97a4"), Code="Quarter", Description="Quarter ", SortOrder=Convert.ToDecimal("2.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("07148183-9691-43b7-a11e-c2fe643cce1a"), Code="Trimester", Description="Trimester", SortOrder=Convert.ToDecimal("3.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("3fd4156d-0777-403f-9e4c-6e93017da9ff"), Code="4-1-4", Description="4-1-4 or similar plan", SortOrder=Convert.ToDecimal("4.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("1014a379-457f-4b65-9d7f-14cc235732ae"), Code="Other", Description="Other academic plan", SortOrder=Convert.ToDecimal("5.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("f27b44cd-dc09-47dd-971b-00fdcffc0d4a"), Code="DiffersByProgram", Description="Differs by program", SortOrder=Convert.ToDecimal("6.00") },
-            new RefPredominantCalendarSystem { Id=Guid.Parse("e9c8fc1f-39d3-4e9a-a57f-585df441584b"), Code="ContinuousBasis", Description="Continuous basis", SortOrder=Convert.ToDecimal("7.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("304a55bc-5ecd-4f97-88e3-10e39fa6d314"), Description="Semester ", SortOrder=Convert.ToDecimal("1.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("14858237-e6c2-4c91-ae79-bfd791a540d6"), Description="Quarter ", SortOrder=Convert.ToDecimal("2.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("bffbe3f3-159f-4bbf-9ad9-bb007b7a13f1"), Description="Trimester", SortOrder=Convert.ToDecimal("3.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("8a3234a1-aef2-4a68-a617-d3ca17b71ab3"), Description="4-1-4 or similar plan", SortOrder=Convert.ToDecimal("4.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("a4f3c2a1-0d75-43bf-9338-c75f6971f0ef"), Description="Other academic plan", SortOrder=Convert.ToDecimal("5.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("eb284d3e-df50-47de-b3b4-36bb79b2845f"), Description="Differs by program", SortOrder=Convert.ToDecimal("6.00") },
+            new RefPredominantCalendarSystem { Id=Guid.Parse("4457ef3f-7d61-4d93-9437-1430be3753c9"), Description="Continuous basis", SortOrder=Convert.ToDecimal("7.00") },
        };
    }
 }

@@ -3,7 +3,6 @@
 //* FileName:   RefIPEDSIntercollegiateAthleticsExpensList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefIPEDSIntercollegiateAthleticsExpens"> List
+        /// The complete <see cref="RefIPEDSIntercollegiateAthleticsExpensModel"> List
          /// </summary>
-        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensList = new List<RefIPEDSIntercollegiateAthleticsExpens>
+        public static List<RefIPEDSIntercollegiateAthleticsExpensModel> RefIPEDSIntercollegiateAthleticsExpensList = new List<RefIPEDSIntercollegiateAthleticsExpensModel>
         {
         };
 
         /// <summary>
-        /// The RefIPEDSIntercollegiateAthleticsExpens Pick List
+        /// The Reference RefIPEDSIntercollegiateAthleticsExpens Pick List
          /// </summary>
-        public static List<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpensPickList = new List<RefIPEDSIntercollegiateAthleticsExpens>
+        public static List<ReferencePickListItemViewModel> RefIPEDSIntercollegiateAthleticsExpensViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

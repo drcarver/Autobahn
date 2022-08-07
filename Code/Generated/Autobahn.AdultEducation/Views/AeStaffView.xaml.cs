@@ -14,9 +14,9 @@ namespace Autobahn.AdultEducation.Views
     public partial class AeStaffView : ContentPage
     {
         /// <summary>
-        /// Inject the AeStaffViewModel as the data context for the view
+        /// Inject the IAeStaffViewModel as the data context for the view
         /// </summary>
-        public AeStaffView(AeStaffViewModel vm)
+        public AeStaffView(IAeStaffViewModel vm)
         {
             BindingContext  = vm;
         }

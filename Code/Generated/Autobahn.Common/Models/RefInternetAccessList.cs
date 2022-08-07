@@ -3,7 +3,6 @@
 //* FileName:   RefInternetAccessList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefInternetAccess"> List
+        /// The complete <see cref="RefInternetAccessModel"> List
          /// </summary>
-        public static List<RefInternetAccess> RefInternetAccessList = new List<RefInternetAccess>
+        public static List<RefInternetAccessModel> RefInternetAccessList = new List<RefInternetAccessModel>
         {
-            new RefInternetAccess { Id=Guid.Parse("b15c7b1a-6644-49d0-80cc-a4dadde7ebfa"), Code="HighSpeed", Description="High speed connectivity", Definition="High speed internet connectivity is available.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefInternetAccess { Id=Guid.Parse("84f2725e-3697-4333-9748-1c6cf24aaedc"), Code="LessThanHighSpeed", Description="Less than high speed connectivity", Definition="Less than high speed internet connectivity is available.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInternetAccess { Id=Guid.Parse("cc920f33-071d-47f8-9527-084ada80fe6b"), Code="HighSpeed", Description="High speed connectivity", Definition="High speed internet connectivity is available.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInternetAccess { Id=Guid.Parse("f27440d6-6ca2-4669-8be4-f0786af2bc47"), Code="LessThanHighSpeed", Description="Less than high speed connectivity", Definition="Less than high speed internet connectivity is available.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefInternetAccess Pick List
+        /// The Reference RefInternetAccess Pick List
          /// </summary>
-        public static List<RefInternetAccess> RefInternetAccessPickList = new List<RefInternetAccess>
+        public static List<ReferencePickListItemViewModel> RefInternetAccessViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefInternetAccess { Id=Guid.Parse("b15c7b1a-6644-49d0-80cc-a4dadde7ebfa"), Code="HighSpeed", Description="High speed connectivity", SortOrder=Convert.ToDecimal("1.00") },
-            new RefInternetAccess { Id=Guid.Parse("84f2725e-3697-4333-9748-1c6cf24aaedc"), Code="LessThanHighSpeed", Description="Less than high speed connectivity", SortOrder=Convert.ToDecimal("2.00") },
+            new RefInternetAccess { Id=Guid.Parse("cc920f33-071d-47f8-9527-084ada80fe6b"), Description="High speed connectivity", SortOrder=Convert.ToDecimal("1.00") },
+            new RefInternetAccess { Id=Guid.Parse("f27440d6-6ca2-4669-8be4-f0786af2bc47"), Description="Less than high speed connectivity", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

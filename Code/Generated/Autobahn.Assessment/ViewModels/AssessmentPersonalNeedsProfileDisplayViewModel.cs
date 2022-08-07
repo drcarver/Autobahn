@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The AssessmentPersonalNeedsProfileDisplayViewModel
      /// </summary>
-    public partial class AssessmentPersonalNeedsProfileDisplayViewModel : ViewModelBase, Interfaces.IAssessmentPersonalNeedsProfileDisplay
+    public partial class AssessmentPersonalNeedsProfileDisplayViewModel : ViewModelBase, Interfaces.IAssessmentPersonalNeedsProfileDisplayViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -3,7 +3,6 @@
 //* FileName:   RefAssessmentReportingMethodList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAssessmentReportingMethod"> List
+        /// The complete <see cref="RefAssessmentReportingMethodModel"> List
          /// </summary>
-        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodList = new List<RefAssessmentReportingMethod>
+        public static List<RefAssessmentReportingMethodModel> RefAssessmentReportingMethodList = new List<RefAssessmentReportingMethodModel>
         {
         };
 
         /// <summary>
-        /// The RefAssessmentReportingMethod Pick List
+        /// The Reference RefAssessmentReportingMethod Pick List
          /// </summary>
-        public static List<RefAssessmentReportingMethod> RefAssessmentReportingMethodPickList = new List<RefAssessmentReportingMethod>
+        public static List<ReferencePickListItemViewModel> RefAssessmentReportingMethodViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

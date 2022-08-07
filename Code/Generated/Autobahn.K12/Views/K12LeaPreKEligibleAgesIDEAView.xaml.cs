@@ -14,9 +14,9 @@ namespace Autobahn.K12.Views
     public partial class K12LeaPreKEligibleAgesIDEAView : ContentPage
     {
         /// <summary>
-        /// Inject the K12LeaPreKEligibleAgesIDEAViewModel as the data context for the view
+        /// Inject the IK12LeaPreKEligibleAgesIDEAViewModel as the data context for the view
         /// </summary>
-        public K12LeaPreKEligibleAgesIDEAView(K12LeaPreKEligibleAgesIDEAViewModel vm)
+        public K12LeaPreKEligibleAgesIDEAView(IK12LeaPreKEligibleAgesIDEAViewModel vm)
         {
             BindingContext  = vm;
         }

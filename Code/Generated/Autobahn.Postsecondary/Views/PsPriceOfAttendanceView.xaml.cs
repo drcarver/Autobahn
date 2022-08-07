@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsPriceOfAttendanceView : ContentPage
     {
         /// <summary>
-        /// Inject the PsPriceOfAttendanceViewModel as the data context for the view
+        /// Inject the IPsPriceOfAttendanceViewModel as the data context for the view
         /// </summary>
-        public PsPriceOfAttendanceView(PsPriceOfAttendanceViewModel vm)
+        public PsPriceOfAttendanceView(IPsPriceOfAttendanceViewModel vm)
         {
             BindingContext  = vm;
         }

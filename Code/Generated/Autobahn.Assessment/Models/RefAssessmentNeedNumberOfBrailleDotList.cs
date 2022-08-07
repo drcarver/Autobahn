@@ -13,16 +13,16 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAssessmentNeedNumberOfBrailleDot"> List
+        /// The complete <see cref="RefAssessmentNeedNumberOfBrailleDotModel"> List
          /// </summary>
-        public static List<RefAssessmentNeedNumberOfBrailleDot> RefAssessmentNeedNumberOfBrailleDotList = new List<RefAssessmentNeedNumberOfBrailleDot>
+        public static List<RefAssessmentNeedNumberOfBrailleDotModel> RefAssessmentNeedNumberOfBrailleDotList = new List<RefAssessmentNeedNumberOfBrailleDotModel>
         {
         };
 
         /// <summary>
-        /// The RefAssessmentNeedNumberOfBrailleDot Pick List
+        /// The Reference RefAssessmentNeedNumberOfBrailleDot Pick List
          /// </summary>
-        public static List<RefAssessmentNeedNumberOfBrailleDot> RefAssessmentNeedNumberOfBrailleDotPickList = new List<RefAssessmentNeedNumberOfBrailleDot>
+        public static List<ReferencePickListItemViewModel> RefAssessmentNeedNumberOfBrailleDotViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

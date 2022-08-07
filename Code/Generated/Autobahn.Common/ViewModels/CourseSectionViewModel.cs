@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The CourseSectionViewModel
      /// </summary>
-    public partial class CourseSectionViewModel : ViewModelBase, Interfaces.ICourseSection
+    public partial class CourseSectionViewModel : ViewModelBase, Interfaces.ICourseSectionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

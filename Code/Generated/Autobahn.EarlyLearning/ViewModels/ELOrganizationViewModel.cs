@@ -11,7 +11,7 @@ namespace Autobahn.EarlyLearning.ViewModels
      /// <summary>
      /// The ELOrganizationViewModel
      /// </summary>
-    public partial class ELOrganizationViewModel : ViewModelBase, Interfaces.IELOrganization
+    public partial class ELOrganizationViewModel : ViewModelBase, Interfaces.IELOrganizationViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

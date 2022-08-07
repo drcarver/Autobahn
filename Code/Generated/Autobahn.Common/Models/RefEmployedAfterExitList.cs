@@ -3,7 +3,6 @@
 //* FileName:   RefEmployedAfterExitList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefEmployedAfterExit"> List
+        /// The complete <see cref="RefEmployedAfterExitModel"> List
          /// </summary>
-        public static List<RefEmployedAfterExit> RefEmployedAfterExitList = new List<RefEmployedAfterExit>
+        public static List<RefEmployedAfterExitModel> RefEmployedAfterExitList = new List<RefEmployedAfterExitModel>
         {
-            new RefEmployedAfterExit { Id=Guid.Parse("ba0da1db-89d3-4e98-bbe9-b4adff274819"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new RefEmployedAfterExit { Id=Guid.Parse("297005bf-aed6-491d-8d7f-f3244541fb68"), Code="Unknown", Description="Unknown", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("2b3428ea-adb1-471f-837d-6a24c4dd3da1"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("9f52a1c5-9970-4581-af0c-ca93f73b9199"), Code="Unknown", Description="Unknown", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
 
         /// <summary>
-        /// The RefEmployedAfterExit Pick List
+        /// The Reference RefEmployedAfterExit Pick List
          /// </summary>
-        public static List<RefEmployedAfterExit> RefEmployedAfterExitPickList = new List<RefEmployedAfterExit>
+        public static List<ReferencePickListItemViewModel> RefEmployedAfterExitViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefEmployedAfterExit { Id=Guid.Parse("ba0da1db-89d3-4e98-bbe9-b4adff274819"), Code="Yes", Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
-            new RefEmployedAfterExit { Id=Guid.Parse("297005bf-aed6-491d-8d7f-f3244541fb68"), Code="Unknown", Description="Unknown", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("2b3428ea-adb1-471f-837d-6a24c4dd3da1"), Description="Yes", SortOrder=Convert.ToDecimal("1.00") },
+            new RefEmployedAfterExit { Id=Guid.Parse("9f52a1c5-9970-4581-af0c-ca93f73b9199"), Description="Unknown", SortOrder=Convert.ToDecimal("3.00") },
        };
    }
 }

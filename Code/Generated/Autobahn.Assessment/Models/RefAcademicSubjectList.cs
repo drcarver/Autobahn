@@ -13,53 +13,53 @@ namespace Autobahn.Assessment.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAcademicSubject"> List
+        /// The complete <see cref="RefAcademicSubjectModel"> List
          /// </summary>
-        public static List<RefAcademicSubject> RefAcademicSubjectList = new List<RefAcademicSubject>
+        public static List<RefAcademicSubjectModel> RefAcademicSubjectList = new List<RefAcademicSubjectModel>
         {
-            new RefAcademicSubject { Id=Guid.Parse("ebc4ac25-fdce-4399-8e17-d88d7cd44413"), Code="13371", Description="Arts", Definition="Arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAcademicSubject { Id=Guid.Parse("396de7d7-15fa-44ea-8c76-01d51d64f5ac"), Code="73065", Description="Career and Technical Education", Definition="Career and Technical Education is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAcademicSubject { Id=Guid.Parse("7067a095-4d34-4d0b-a1d3-6882fc9427db"), Code="13372", Description="English", Definition="English is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAcademicSubject { Id=Guid.Parse("18e29273-b9b4-4b0f-a1ea-e89b193006af"), Code="00256", Description="English as a second language (ESL)", Definition="English as a second language (ESL) is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1b2a84e6-434e-4f5c-9320-4869a539df77"), Code="00546", Description="Foreign Languages", Definition="Foreign Languages is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefAcademicSubject { Id=Guid.Parse("45e54b79-f084-4310-b334-fa18d8423653"), Code="73088", Description="History Government - US", Definition="History Government - US is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("7.00") },
-            new RefAcademicSubject { Id=Guid.Parse("6ad3b9d4-ef93-44e3-a917-53cfb283cfca"), Code="73089", Description="History Government - World", Definition="History Government - World is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("8.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1360e988-544b-4226-a259-a3aac6b9b95f"), Code="00554", Description="Language arts", Definition="Language arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("9.00") },
-            new RefAcademicSubject { Id=Guid.Parse("b58487fe-6dce-4c37-9c69-14e54273232e"), Code="01166", Description="Mathematics", Definition="Mathematics is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("12.00") },
-            new RefAcademicSubject { Id=Guid.Parse("10aaae53-6ca5-4508-8e67-c319d797e299"), Code="00560", Description="Reading", Definition="Reading is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("14.00") },
-            new RefAcademicSubject { Id=Guid.Parse("7c66feac-a8ed-468d-90e3-89140d0f7ea6"), Code="13373", Description="Reading/Language Arts", Definition="Reading/Language Arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("16.00") },
-            new RefAcademicSubject { Id=Guid.Parse("d78dbcaf-55fe-49ef-8e11-02858a8e75a9"), Code="00562", Description="Science", Definition="Science is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("18.00") },
-            new RefAcademicSubject { Id=Guid.Parse("9979fdef-2971-4658-a70b-e9f90e0578cb"), Code="73086", Description="Science - Life", Definition="Science - Life is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("20.00") },
-            new RefAcademicSubject { Id=Guid.Parse("25cf9b29-23d2-4cfb-85b5-a4293ae150dd"), Code="73087", Description="Science - Physical", Definition="Science - Physical is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("22.00") },
-            new RefAcademicSubject { Id=Guid.Parse("30e22971-47b9-4cf0-854c-3f2d0a1669f9"), Code="13374", Description="Social Sciences (History, Geography, Economics, Civics and Government)", Definition="Social Sciences (History, Geography, Economics, Civics and Government) is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("24.00") },
-            new RefAcademicSubject { Id=Guid.Parse("a04eca5d-95c1-495d-b228-a635bb113a28"), Code="02043", Description="Special education", Definition="Special education is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("26.00") },
-            new RefAcademicSubject { Id=Guid.Parse("2b80a6d6-c64e-4f0a-9aa6-3b84d9e8d5c5"), Code="01287", Description="Writing", Definition="Writing is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("28.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1eec2a10-5e0f-42bf-b5d3-0b01115b10de"), Code="09999", Description="Other", Definition="Other is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("30.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e4e35a88-5352-4265-9891-545730d39991"), Code="13371", Description="Arts", Definition="Arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAcademicSubject { Id=Guid.Parse("169b15c0-c05e-4512-9381-c43b98111e4b"), Code="73065", Description="Career and Technical Education", Definition="Career and Technical Education is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e55ede23-75b1-4a3a-b330-e06fff6a9ae4"), Code="13372", Description="English", Definition="English is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAcademicSubject { Id=Guid.Parse("f9e19d67-c6b1-43d2-8a0e-c0944ae56015"), Code="00256", Description="English as a second language (ESL)", Definition="English as a second language (ESL) is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e5ba2662-6ae3-41f2-b4ef-04cf817e1deb"), Code="00546", Description="Foreign Languages", Definition="Foreign Languages is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAcademicSubject { Id=Guid.Parse("c0f9a3fc-1c60-42fd-bbbe-5a7feea4b587"), Code="73088", Description="History Government - US", Definition="History Government - US is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e96e2cae-a664-431f-88ad-761d022b5469"), Code="73089", Description="History Government - World", Definition="History Government - World is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAcademicSubject { Id=Guid.Parse("b38131ed-7bac-487c-b346-2f9ad0d6acb3"), Code="00554", Description="Language arts", Definition="Language arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("9.00") },
+            new RefAcademicSubject { Id=Guid.Parse("d4f277dc-fb27-40ef-a68b-805e60af9879"), Code="01166", Description="Mathematics", Definition="Mathematics is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("12.00") },
+            new RefAcademicSubject { Id=Guid.Parse("befee44d-eaf7-4fbf-b329-386dedffa4fa"), Code="00560", Description="Reading", Definition="Reading is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("14.00") },
+            new RefAcademicSubject { Id=Guid.Parse("b85e2f85-9517-4025-84a3-c1550630510a"), Code="13373", Description="Reading/Language Arts", Definition="Reading/Language Arts is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("16.00") },
+            new RefAcademicSubject { Id=Guid.Parse("4d3f8f65-b8c8-45f5-99c8-8fe113f5e370"), Code="00562", Description="Science", Definition="Science is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("18.00") },
+            new RefAcademicSubject { Id=Guid.Parse("1aa13ca5-dbfd-4c2f-903d-2385807b2a8d"), Code="73086", Description="Science - Life", Definition="Science - Life is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("20.00") },
+            new RefAcademicSubject { Id=Guid.Parse("8b6925f4-3c19-4737-a26e-bef8e41ff3b9"), Code="73087", Description="Science - Physical", Definition="Science - Physical is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("22.00") },
+            new RefAcademicSubject { Id=Guid.Parse("7fdd8bb9-1046-4efe-9826-c67a69852e17"), Code="13374", Description="Social Sciences (History, Geography, Economics, Civics and Government)", Definition="Social Sciences (History, Geography, Economics, Civics and Government) is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("24.00") },
+            new RefAcademicSubject { Id=Guid.Parse("871664b6-8645-499e-9fec-0087d2103075"), Code="02043", Description="Special education", Definition="Special education is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("26.00") },
+            new RefAcademicSubject { Id=Guid.Parse("f0d61b65-7c13-49ea-988c-31329cfaeffd"), Code="01287", Description="Writing", Definition="Writing is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("28.00") },
+            new RefAcademicSubject { Id=Guid.Parse("89e4c19f-cc7d-4292-b382-2bb9b50b4127"), Code="09999", Description="Other", Definition="Other is specified as the academic content or subject area being evaluated.", SortOrder=Convert.ToDecimal("30.00") },
         };
 
         /// <summary>
-        /// The RefAcademicSubject Pick List
+        /// The Reference RefAcademicSubject Pick List
          /// </summary>
-        public static List<RefAcademicSubject> RefAcademicSubjectPickList = new List<RefAcademicSubject>
+        public static List<ReferencePickListItemViewModel> RefAcademicSubjectViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAcademicSubject { Id=Guid.Parse("ebc4ac25-fdce-4399-8e17-d88d7cd44413"), Code="13371", Description="Arts", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAcademicSubject { Id=Guid.Parse("396de7d7-15fa-44ea-8c76-01d51d64f5ac"), Code="73065", Description="Career and Technical Education", SortOrder=Convert.ToDecimal("2.00") },
-            new RefAcademicSubject { Id=Guid.Parse("7067a095-4d34-4d0b-a1d3-6882fc9427db"), Code="13372", Description="English", SortOrder=Convert.ToDecimal("3.00") },
-            new RefAcademicSubject { Id=Guid.Parse("18e29273-b9b4-4b0f-a1ea-e89b193006af"), Code="00256", Description="English as a second language (ESL)", SortOrder=Convert.ToDecimal("4.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1b2a84e6-434e-4f5c-9320-4869a539df77"), Code="00546", Description="Foreign Languages", SortOrder=Convert.ToDecimal("5.00") },
-            new RefAcademicSubject { Id=Guid.Parse("45e54b79-f084-4310-b334-fa18d8423653"), Code="73088", Description="History Government - US", SortOrder=Convert.ToDecimal("7.00") },
-            new RefAcademicSubject { Id=Guid.Parse("6ad3b9d4-ef93-44e3-a917-53cfb283cfca"), Code="73089", Description="History Government - World", SortOrder=Convert.ToDecimal("8.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1360e988-544b-4226-a259-a3aac6b9b95f"), Code="00554", Description="Language arts", SortOrder=Convert.ToDecimal("9.00") },
-            new RefAcademicSubject { Id=Guid.Parse("b58487fe-6dce-4c37-9c69-14e54273232e"), Code="01166", Description="Mathematics", SortOrder=Convert.ToDecimal("12.00") },
-            new RefAcademicSubject { Id=Guid.Parse("10aaae53-6ca5-4508-8e67-c319d797e299"), Code="00560", Description="Reading", SortOrder=Convert.ToDecimal("14.00") },
-            new RefAcademicSubject { Id=Guid.Parse("7c66feac-a8ed-468d-90e3-89140d0f7ea6"), Code="13373", Description="Reading/Language Arts", SortOrder=Convert.ToDecimal("16.00") },
-            new RefAcademicSubject { Id=Guid.Parse("d78dbcaf-55fe-49ef-8e11-02858a8e75a9"), Code="00562", Description="Science", SortOrder=Convert.ToDecimal("18.00") },
-            new RefAcademicSubject { Id=Guid.Parse("9979fdef-2971-4658-a70b-e9f90e0578cb"), Code="73086", Description="Science - Life", SortOrder=Convert.ToDecimal("20.00") },
-            new RefAcademicSubject { Id=Guid.Parse("25cf9b29-23d2-4cfb-85b5-a4293ae150dd"), Code="73087", Description="Science - Physical", SortOrder=Convert.ToDecimal("22.00") },
-            new RefAcademicSubject { Id=Guid.Parse("30e22971-47b9-4cf0-854c-3f2d0a1669f9"), Code="13374", Description="Social Sciences (History, Geography, Economics, Civics and Government)", SortOrder=Convert.ToDecimal("24.00") },
-            new RefAcademicSubject { Id=Guid.Parse("a04eca5d-95c1-495d-b228-a635bb113a28"), Code="02043", Description="Special education", SortOrder=Convert.ToDecimal("26.00") },
-            new RefAcademicSubject { Id=Guid.Parse("2b80a6d6-c64e-4f0a-9aa6-3b84d9e8d5c5"), Code="01287", Description="Writing", SortOrder=Convert.ToDecimal("28.00") },
-            new RefAcademicSubject { Id=Guid.Parse("1eec2a10-5e0f-42bf-b5d3-0b01115b10de"), Code="09999", Description="Other", SortOrder=Convert.ToDecimal("30.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e4e35a88-5352-4265-9891-545730d39991"), Description="Arts", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAcademicSubject { Id=Guid.Parse("169b15c0-c05e-4512-9381-c43b98111e4b"), Description="Career and Technical Education", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e55ede23-75b1-4a3a-b330-e06fff6a9ae4"), Description="English", SortOrder=Convert.ToDecimal("3.00") },
+            new RefAcademicSubject { Id=Guid.Parse("f9e19d67-c6b1-43d2-8a0e-c0944ae56015"), Description="English as a second language (ESL)", SortOrder=Convert.ToDecimal("4.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e5ba2662-6ae3-41f2-b4ef-04cf817e1deb"), Description="Foreign Languages", SortOrder=Convert.ToDecimal("5.00") },
+            new RefAcademicSubject { Id=Guid.Parse("c0f9a3fc-1c60-42fd-bbbe-5a7feea4b587"), Description="History Government - US", SortOrder=Convert.ToDecimal("7.00") },
+            new RefAcademicSubject { Id=Guid.Parse("e96e2cae-a664-431f-88ad-761d022b5469"), Description="History Government - World", SortOrder=Convert.ToDecimal("8.00") },
+            new RefAcademicSubject { Id=Guid.Parse("b38131ed-7bac-487c-b346-2f9ad0d6acb3"), Description="Language arts", SortOrder=Convert.ToDecimal("9.00") },
+            new RefAcademicSubject { Id=Guid.Parse("d4f277dc-fb27-40ef-a68b-805e60af9879"), Description="Mathematics", SortOrder=Convert.ToDecimal("12.00") },
+            new RefAcademicSubject { Id=Guid.Parse("befee44d-eaf7-4fbf-b329-386dedffa4fa"), Description="Reading", SortOrder=Convert.ToDecimal("14.00") },
+            new RefAcademicSubject { Id=Guid.Parse("b85e2f85-9517-4025-84a3-c1550630510a"), Description="Reading/Language Arts", SortOrder=Convert.ToDecimal("16.00") },
+            new RefAcademicSubject { Id=Guid.Parse("4d3f8f65-b8c8-45f5-99c8-8fe113f5e370"), Description="Science", SortOrder=Convert.ToDecimal("18.00") },
+            new RefAcademicSubject { Id=Guid.Parse("1aa13ca5-dbfd-4c2f-903d-2385807b2a8d"), Description="Science - Life", SortOrder=Convert.ToDecimal("20.00") },
+            new RefAcademicSubject { Id=Guid.Parse("8b6925f4-3c19-4737-a26e-bef8e41ff3b9"), Description="Science - Physical", SortOrder=Convert.ToDecimal("22.00") },
+            new RefAcademicSubject { Id=Guid.Parse("7fdd8bb9-1046-4efe-9826-c67a69852e17"), Description="Social Sciences (History, Geography, Economics, Civics and Government)", SortOrder=Convert.ToDecimal("24.00") },
+            new RefAcademicSubject { Id=Guid.Parse("871664b6-8645-499e-9fec-0087d2103075"), Description="Special education", SortOrder=Convert.ToDecimal("26.00") },
+            new RefAcademicSubject { Id=Guid.Parse("f0d61b65-7c13-49ea-988c-31329cfaeffd"), Description="Writing", SortOrder=Convert.ToDecimal("28.00") },
+            new RefAcademicSubject { Id=Guid.Parse("89e4c19f-cc7d-4292-b382-2bb9b50b4127"), Description="Other", SortOrder=Convert.ToDecimal("30.00") },
        };
    }
 }

@@ -11,7 +11,7 @@ namespace Autobahn.AdultEducation.ViewModels
      /// <summary>
      /// The AeStudentAcademicRecordViewModel
      /// </summary>
-    public partial class AeStudentAcademicRecordViewModel : ViewModelBase, Interfaces.IAeStudentAcademicRecord
+    public partial class AeStudentAcademicRecordViewModel : ViewModelBase, Interfaces.IAeStudentAcademicRecordViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The OrganizationCalendarCrisiViewModel
      /// </summary>
-    public partial class OrganizationCalendarCrisiViewModel : ViewModelBase, Interfaces.IOrganizationCalendarCrisi
+    public partial class OrganizationCalendarCrisiViewModel : ViewModelBase, Interfaces.IOrganizationCalendarCrisiViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

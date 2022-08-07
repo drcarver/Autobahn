@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The TeacherEducationCredentialExamViewModel
      /// </summary>
-    public partial class TeacherEducationCredentialExamViewModel : ViewModelBase, Interfaces.ITeacherEducationCredentialExam
+    public partial class TeacherEducationCredentialExamViewModel : ViewModelBase, Interfaces.ITeacherEducationCredentialExamViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

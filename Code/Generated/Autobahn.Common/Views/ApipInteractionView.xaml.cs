@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class ApipInteractionView : ContentPage
     {
         /// <summary>
-        /// Inject the ApipInteractionViewModel as the data context for the view
+        /// Inject the IApipInteractionViewModel as the data context for the view
         /// </summary>
-        public ApipInteractionView(ApipInteractionViewModel vm)
+        public ApipInteractionView(IApipInteractionViewModel vm)
         {
             BindingContext  = vm;
         }

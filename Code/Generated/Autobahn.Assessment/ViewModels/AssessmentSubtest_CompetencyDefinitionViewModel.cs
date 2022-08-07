@@ -11,7 +11,7 @@ namespace Autobahn.Assessment.ViewModels
      /// <summary>
      /// The AssessmentSubtest_CompetencyDefinitionViewModel
      /// </summary>
-    public partial class AssessmentSubtest_CompetencyDefinitionViewModel : ViewModelBase, Interfaces.IAssessmentSubtest_CompetencyDefinition
+    public partial class AssessmentSubtest_CompetencyDefinitionViewModel : ViewModelBase, Interfaces.IAssessmentSubtest_CompetencyDefinitionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

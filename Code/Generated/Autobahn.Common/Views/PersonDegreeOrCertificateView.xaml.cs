@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonDegreeOrCertificateView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonDegreeOrCertificateViewModel as the data context for the view
+        /// Inject the IPersonDegreeOrCertificateViewModel as the data context for the view
         /// </summary>
-        public PersonDegreeOrCertificateView(PersonDegreeOrCertificateViewModel vm)
+        public PersonDegreeOrCertificateView(IPersonDegreeOrCertificateViewModel vm)
         {
             BindingContext  = vm;
         }

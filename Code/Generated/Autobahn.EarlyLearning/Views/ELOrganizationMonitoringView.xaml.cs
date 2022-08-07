@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELOrganizationMonitoringView : ContentPage
     {
         /// <summary>
-        /// Inject the ELOrganizationMonitoringViewModel as the data context for the view
+        /// Inject the IELOrganizationMonitoringViewModel as the data context for the view
         /// </summary>
-        public ELOrganizationMonitoringView(ELOrganizationMonitoringViewModel vm)
+        public ELOrganizationMonitoringView(IELOrganizationMonitoringViewModel vm)
         {
             BindingContext  = vm;
         }

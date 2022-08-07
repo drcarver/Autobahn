@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class RubricView : ContentPage
     {
         /// <summary>
-        /// Inject the RubricViewModel as the data context for the view
+        /// Inject the IRubricViewModel as the data context for the view
         /// </summary>
-        public RubricView(RubricViewModel vm)
+        public RubricView(IRubricViewModel vm)
         {
             BindingContext  = vm;
         }

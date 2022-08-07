@@ -11,7 +11,7 @@ namespace Autobahn.K12.ViewModels
      /// <summary>
      /// The K12LeaGradeOfferedViewModel
      /// </summary>
-    public partial class K12LeaGradeOfferedViewModel : ViewModelBase, Interfaces.IK12LeaGradeOffered
+    public partial class K12LeaGradeOfferedViewModel : ViewModelBase, Interfaces.IK12LeaGradeOfferedViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The PersonLanguageViewModel
      /// </summary>
-    public partial class PersonLanguageViewModel : ViewModelBase, Interfaces.IPersonLanguage
+    public partial class PersonLanguageViewModel : ViewModelBase, Interfaces.IPersonLanguageViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

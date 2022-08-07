@@ -14,9 +14,9 @@ namespace Autobahn.Postsecondary.Views
     public partial class PsStaffEmploymentView : ContentPage
     {
         /// <summary>
-        /// Inject the PsStaffEmploymentViewModel as the data context for the view
+        /// Inject the IPsStaffEmploymentViewModel as the data context for the view
         /// </summary>
-        public PsStaffEmploymentView(PsStaffEmploymentViewModel vm)
+        public PsStaffEmploymentView(IPsStaffEmploymentViewModel vm)
         {
             BindingContext  = vm;
         }

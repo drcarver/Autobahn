@@ -3,7 +3,6 @@
 //* FileName:   RefAddressTypeList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAddressType"> List
+        /// The complete <see cref="RefAddressTypeModel"> List
          /// </summary>
-        public static List<RefAddressType> RefAddressTypeList = new List<RefAddressType>
+        public static List<RefAddressTypeModel> RefAddressTypeList = new List<RefAddressTypeModel>
         {
-            new RefAddressType { Id=Guid.Parse("033a4097-d056-4767-95ef-5fa51b35c467"), Code="000010", Description="Address Type for Learner or Family", Definition="", SortOrder=Convert.ToDecimal("") },
-            new RefAddressType { Id=Guid.Parse("2abf15db-377f-4744-94f4-b29ac85f5b99"), Code="000722", Description="Address Type for Staff", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefAddressType { Id=Guid.Parse("781ec16a-a4cc-493d-b3a3-23f0ee88b3ff"), Code="000010", Description="Address Type for Learner or Family", Definition="", SortOrder=Convert.ToDecimal("") },
+            new RefAddressType { Id=Guid.Parse("46b186d6-5c4d-4566-9781-67df8bf8869a"), Code="000722", Description="Address Type for Staff", Definition="", SortOrder=Convert.ToDecimal("") },
         };
 
         /// <summary>
-        /// The RefAddressType Pick List
+        /// The Reference RefAddressType Pick List
          /// </summary>
-        public static List<RefAddressType> RefAddressTypePickList = new List<RefAddressType>
+        public static List<ReferencePickListItemViewModel> RefAddressTypeViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAddressType { Id=Guid.Parse("033a4097-d056-4767-95ef-5fa51b35c467"), Code="000010", Description="Address Type for Learner or Family", SortOrder=Convert.ToDecimal("") },
-            new RefAddressType { Id=Guid.Parse("2abf15db-377f-4744-94f4-b29ac85f5b99"), Code="000722", Description="Address Type for Staff", SortOrder=Convert.ToDecimal("") },
+            new RefAddressType { Id=Guid.Parse("781ec16a-a4cc-493d-b3a3-23f0ee88b3ff"), Description="Address Type for Learner or Family", SortOrder=Convert.ToDecimal("") },
+            new RefAddressType { Id=Guid.Parse("46b186d6-5c4d-4566-9781-67df8bf8869a"), Description="Address Type for Staff", SortOrder=Convert.ToDecimal("") },
        };
    }
 }

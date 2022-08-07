@@ -3,7 +3,6 @@
 //* FileName:   RefAllergySeverityList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,21 +12,21 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefAllergySeverity"> List
+        /// The complete <see cref="RefAllergySeverityModel"> List
          /// </summary>
-        public static List<RefAllergySeverity> RefAllergySeverityList = new List<RefAllergySeverity>
+        public static List<RefAllergySeverityModel> RefAllergySeverityList = new List<RefAllergySeverityModel>
         {
-            new RefAllergySeverity { Id=Guid.Parse("4a06dff3-df72-41ff-beba-b9dcf0f6868e"), Code="Mild", Description="Mild allergic reaction", Definition="The level of severity of a person's reaction to an allergen is mild.", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAllergySeverity { Id=Guid.Parse("d009e6f7-34d2-41b8-9f77-965aaa8ae63e"), Code="Severe", Description="Severe allergic reaction", Definition="The level of severity of a person's reaction to an allergen is severe.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAllergySeverity { Id=Guid.Parse("10e397b9-1c4e-4983-8b66-64f30985cd8e"), Code="Mild", Description="Mild allergic reaction", Definition="The level of severity of a person's reaction to an allergen is mild.", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAllergySeverity { Id=Guid.Parse("1ad349e1-0c2a-44fa-824a-372a8c0026e3"), Code="Severe", Description="Severe allergic reaction", Definition="The level of severity of a person's reaction to an allergen is severe.", SortOrder=Convert.ToDecimal("2.00") },
         };
 
         /// <summary>
-        /// The RefAllergySeverity Pick List
+        /// The Reference RefAllergySeverity Pick List
          /// </summary>
-        public static List<RefAllergySeverity> RefAllergySeverityPickList = new List<RefAllergySeverity>
+        public static List<ReferencePickListItemViewModel> RefAllergySeverityViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefAllergySeverity { Id=Guid.Parse("4a06dff3-df72-41ff-beba-b9dcf0f6868e"), Code="Mild", Description="Mild allergic reaction", SortOrder=Convert.ToDecimal("1.00") },
-            new RefAllergySeverity { Id=Guid.Parse("d009e6f7-34d2-41b8-9f77-965aaa8ae63e"), Code="Severe", Description="Severe allergic reaction", SortOrder=Convert.ToDecimal("2.00") },
+            new RefAllergySeverity { Id=Guid.Parse("10e397b9-1c4e-4983-8b66-64f30985cd8e"), Description="Mild allergic reaction", SortOrder=Convert.ToDecimal("1.00") },
+            new RefAllergySeverity { Id=Guid.Parse("1ad349e1-0c2a-44fa-824a-372a8c0026e3"), Description="Severe allergic reaction", SortOrder=Convert.ToDecimal("2.00") },
        };
    }
 }

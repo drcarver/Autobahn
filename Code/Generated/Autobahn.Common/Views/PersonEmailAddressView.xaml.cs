@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonEmailAddressView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonEmailAddressViewModel as the data context for the view
+        /// Inject the IPersonEmailAddressViewModel as the data context for the view
         /// </summary>
-        public PersonEmailAddressView(PersonEmailAddressViewModel vm)
+        public PersonEmailAddressView(IPersonEmailAddressViewModel vm)
         {
             BindingContext  = vm;
         }

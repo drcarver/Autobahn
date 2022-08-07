@@ -13,16 +13,16 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefOrganizationMonitoringNotification"> List
+        /// The complete <see cref="RefOrganizationMonitoringNotificationModel"> List
          /// </summary>
-        public static List<RefOrganizationMonitoringNotification> RefOrganizationMonitoringNotificationList = new List<RefOrganizationMonitoringNotification>
+        public static List<RefOrganizationMonitoringNotificationModel> RefOrganizationMonitoringNotificationList = new List<RefOrganizationMonitoringNotificationModel>
         {
         };
 
         /// <summary>
-        /// The RefOrganizationMonitoringNotification Pick List
+        /// The Reference RefOrganizationMonitoringNotification Pick List
          /// </summary>
-        public static List<RefOrganizationMonitoringNotification> RefOrganizationMonitoringNotificationPickList = new List<RefOrganizationMonitoringNotification>
+        public static List<ReferencePickListItemViewModel> RefOrganizationMonitoringNotificationViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }

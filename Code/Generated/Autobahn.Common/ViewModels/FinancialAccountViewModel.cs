@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The FinancialAccountViewModel
      /// </summary>
-    public partial class FinancialAccountViewModel : ViewModelBase, Interfaces.IFinancialAccount
+    public partial class FinancialAccountViewModel : ViewModelBase, Interfaces.IFinancialAccountViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

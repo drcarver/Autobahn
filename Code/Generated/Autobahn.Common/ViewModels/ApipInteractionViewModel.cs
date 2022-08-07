@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The ApipInteractionViewModel
      /// </summary>
-    public partial class ApipInteractionViewModel : ViewModelBase, Interfaces.IApipInteraction
+    public partial class ApipInteractionViewModel : ViewModelBase, Interfaces.IApipInteractionViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

@@ -13,29 +13,29 @@ namespace Autobahn.EarlyLearning.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefEarlyChildhoodCredential"> List
+        /// The complete <see cref="RefEarlyChildhoodCredentialModel"> List
          /// </summary>
-        public static List<RefEarlyChildhoodCredential> RefEarlyChildhoodCredentialList = new List<RefEarlyChildhoodCredential>
+        public static List<RefEarlyChildhoodCredentialModel> RefEarlyChildhoodCredentialList = new List<RefEarlyChildhoodCredentialModel>
         {
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("df5a2e72-288b-44bf-b485-9a9341790f5a"), Code="ChildDevelopmentAssociate", Description="Child Development Associate (CDA)", Definition="Child Development Associate (CDA) is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("2.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("bc792064-d2bf-4c3d-b23e-feb4e1701bb0"), Code="DirectorsLevelCredential", Description="Directors Level Credential", Definition="Directors Level Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("3.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("f9aad5ac-fda0-4037-96b7-26fb34727163"), Code="StateInfantToddler", Description="State Awarded Credential for Infant/Toddler", Definition="State Awarded Credential for Infant/Toddler is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("4.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("040bf509-9710-439f-9bb7-6a65ecb9bd4c"), Code="StatePreschool", Description="State Awarded Preschool Credential", Definition="State Awarded Preschool Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("5.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("bc70b598-cc9c-4d04-883f-c04310adabf3"), Code="StateSchoolAge", Description="State Awarded School-Age Credential", Definition="State Awarded School-Age Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("6.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("c0464f04-71a9-4e29-b1ef-ebbc8dd55438"), Code="Other", Description="Other", Definition="The credential related to early childhood education or development held by a person is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("10.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("e0468425-f9a8-4b01-b2d1-e4b90940ebbe"), Code="ChildDevelopmentAssociate", Description="Child Development Associate (CDA)", Definition="Child Development Associate (CDA) is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("bd03753a-50e4-4ddb-957b-b805936cb0bc"), Code="DirectorsLevelCredential", Description="Directors Level Credential", Definition="Directors Level Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("6131eaf5-62d8-45ea-9ad7-dc25de977738"), Code="StateInfantToddler", Description="State Awarded Credential for Infant/Toddler", Definition="State Awarded Credential for Infant/Toddler is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("dfc076f0-7ae7-4186-8302-192bc95abe40"), Code="StatePreschool", Description="State Awarded Preschool Credential", Definition="State Awarded Preschool Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("f4ec70f7-7863-4318-ac9a-a7a09f2db22a"), Code="StateSchoolAge", Description="State Awarded School-Age Credential", Definition="State Awarded School-Age Credential is the credential related to early childhood education or development held by a person.", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("bee1f5d5-b853-47b8-a151-e1967ab1dcd0"), Code="Other", Description="Other", Definition="The credential related to early childhood education or development held by a person is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("10.00") },
         };
 
         /// <summary>
-        /// The RefEarlyChildhoodCredential Pick List
+        /// The Reference RefEarlyChildhoodCredential Pick List
          /// </summary>
-        public static List<RefEarlyChildhoodCredential> RefEarlyChildhoodCredentialPickList = new List<RefEarlyChildhoodCredential>
+        public static List<ReferencePickListItemViewModel> RefEarlyChildhoodCredentialViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("df5a2e72-288b-44bf-b485-9a9341790f5a"), Code="ChildDevelopmentAssociate", Description="Child Development Associate (CDA)", SortOrder=Convert.ToDecimal("2.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("bc792064-d2bf-4c3d-b23e-feb4e1701bb0"), Code="DirectorsLevelCredential", Description="Directors Level Credential", SortOrder=Convert.ToDecimal("3.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("f9aad5ac-fda0-4037-96b7-26fb34727163"), Code="StateInfantToddler", Description="State Awarded Credential for Infant/Toddler", SortOrder=Convert.ToDecimal("4.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("040bf509-9710-439f-9bb7-6a65ecb9bd4c"), Code="StatePreschool", Description="State Awarded Preschool Credential", SortOrder=Convert.ToDecimal("5.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("bc70b598-cc9c-4d04-883f-c04310adabf3"), Code="StateSchoolAge", Description="State Awarded School-Age Credential", SortOrder=Convert.ToDecimal("6.00") },
-            new RefEarlyChildhoodCredential { Id=Guid.Parse("c0464f04-71a9-4e29-b1ef-ebbc8dd55438"), Code="Other", Description="Other", SortOrder=Convert.ToDecimal("10.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("e0468425-f9a8-4b01-b2d1-e4b90940ebbe"), Description="Child Development Associate (CDA)", SortOrder=Convert.ToDecimal("2.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("bd03753a-50e4-4ddb-957b-b805936cb0bc"), Description="Directors Level Credential", SortOrder=Convert.ToDecimal("3.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("6131eaf5-62d8-45ea-9ad7-dc25de977738"), Description="State Awarded Credential for Infant/Toddler", SortOrder=Convert.ToDecimal("4.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("dfc076f0-7ae7-4186-8302-192bc95abe40"), Description="State Awarded Preschool Credential", SortOrder=Convert.ToDecimal("5.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("f4ec70f7-7863-4318-ac9a-a7a09f2db22a"), Description="State Awarded School-Age Credential", SortOrder=Convert.ToDecimal("6.00") },
+            new RefEarlyChildhoodCredential { Id=Guid.Parse("bee1f5d5-b853-47b8-a151-e1967ab1dcd0"), Description="Other", SortOrder=Convert.ToDecimal("10.00") },
        };
    }
 }

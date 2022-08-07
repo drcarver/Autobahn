@@ -14,9 +14,9 @@ namespace Autobahn.EarlyLearning.Views
     public partial class ELEnrollmentOtherFundingView : ContentPage
     {
         /// <summary>
-        /// Inject the ELEnrollmentOtherFundingViewModel as the data context for the view
+        /// Inject the IELEnrollmentOtherFundingViewModel as the data context for the view
         /// </summary>
-        public ELEnrollmentOtherFundingView(ELEnrollmentOtherFundingViewModel vm)
+        public ELEnrollmentOtherFundingView(IELEnrollmentOtherFundingViewModel vm)
         {
             BindingContext  = vm;
         }

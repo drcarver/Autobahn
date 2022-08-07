@@ -14,9 +14,9 @@ namespace Autobahn.Common.Views
     public partial class PersonAllergyView : ContentPage
     {
         /// <summary>
-        /// Inject the PersonAllergyViewModel as the data context for the view
+        /// Inject the IPersonAllergyViewModel as the data context for the view
         /// </summary>
-        public PersonAllergyView(PersonAllergyViewModel vm)
+        public PersonAllergyView(IPersonAllergyViewModel vm)
         {
             BindingContext  = vm;
         }

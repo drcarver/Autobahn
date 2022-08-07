@@ -11,7 +11,7 @@ namespace Autobahn.CareerandTechnical.ViewModels
      /// <summary>
      /// The CteStudentAcademicRecordViewModel
      /// </summary>
-    public partial class CteStudentAcademicRecordViewModel : ViewModelBase, Interfaces.ICteStudentAcademicRecord
+    public partial class CteStudentAcademicRecordViewModel : ViewModelBase, Interfaces.ICteStudentAcademicRecordViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

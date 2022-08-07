@@ -14,9 +14,9 @@ namespace Autobahn.Assessment.Views
     public partial class AssessmentParticipantSession_AccommodationView : ContentPage
     {
         /// <summary>
-        /// Inject the AssessmentParticipantSession_AccommodationViewModel as the data context for the view
+        /// Inject the IAssessmentParticipantSession_AccommodationViewModel as the data context for the view
         /// </summary>
-        public AssessmentParticipantSession_AccommodationView(AssessmentParticipantSession_AccommodationViewModel vm)
+        public AssessmentParticipantSession_AccommodationView(IAssessmentParticipantSession_AccommodationViewModel vm)
         {
             BindingContext  = vm;
         }

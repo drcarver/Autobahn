@@ -9,7 +9,7 @@ namespace Autobahn.Common.ViewModels
      /// <summary>
      /// The IndividualizedProgramProgressGoalViewModel
      /// </summary>
-    public partial class IndividualizedProgramProgressGoalViewModel : ViewModelBase, Interfaces.IIndividualizedProgramProgressGoal
+    public partial class IndividualizedProgramProgressGoalViewModel : ViewModelBase, Interfaces.IIndividualizedProgramProgressGoalViewModel
     {
 #region "Backing Fields"
         // Every viewmodel has a Title property

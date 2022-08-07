@@ -3,7 +3,6 @@
 //* FileName:   RefServiceList.cs
 //**********************************************************
 
-using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
@@ -13,16 +12,16 @@ namespace Autobahn.Common.Models
     public static partial class ReferenceLists
     {
         /// <summary>
-        /// The complete <see cref="RefService"> List
+        /// The complete <see cref="RefServiceModel"> List
          /// </summary>
-        public static List<RefService> RefServiceList = new List<RefService>
+        public static List<RefServiceModel> RefServiceList = new List<RefServiceModel>
         {
         };
 
         /// <summary>
-        /// The RefService Pick List
+        /// The Reference RefService Pick List
          /// </summary>
-        public static List<RefService> RefServicePickList = new List<RefService>
+        public static List<ReferencePickListItemViewModel> RefServiceViewModelPickerList = new List<ReferencePickListItemViewModel>
         {
        };
    }
