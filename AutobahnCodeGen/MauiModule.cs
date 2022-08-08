@@ -14,76 +14,64 @@ namespace AutobahnCodeGen
         public static Autobahn.Entities.Autobahn AutobahnContext { get; set; } =
             new Autobahn.Entities.Autobahn("data source=DESKTOP-6CQUBDS\\SQLEXPRESS;initial catalog=CEDS-IDS-V10_0_0_0;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
 
-        public static Dictionary<string, List<string>> RefModels { get; set; } = new Dictionary<string, List<string>>();
-
-        public static void GenerateModule(Dictionary<string, List<string>> CEDDomains,
-            List<CEDSTable> tables, List<Type> types, List<CEDSElement> elements)
+        public static void GenerateModule(Dictionary<string, List<ModelProperty>> modelProperties)
         {
-            var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
-            foreach (var dir in CEDDomains.Keys)
+            var domains = new List<string>();
+            foreach (var modelprop in modelProperties.Values)
             {
-                var fname = dir.Replace(" ", string.Empty);
-                var moduleName = $"Autobahn.{fname}";
-
-                GenerateTemplateProject(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList());
-                GenerateModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                GenerateInterfaces(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                GenerateViewModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                GenerateViews(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                FindReferenceProperties(types.ToList(), moduleName, tables.Where(t => t.Domain == fname).ToList());
-            }
-            GenerateReferenceModels(filePath, tables, types.OrderBy(o => o.Name).ToList(), elements);
-        }
-
-        private static void FindReferenceProperties(List<Type> types, string moduleName, List<CEDSTable> tables)
-        {
-            foreach (var model in types)
-            {
-                if (!model.IsClass 
-                    || tables.All(t => t.TableName != model.Name))
+                foreach (var item in modelprop)
                 {
-                    continue;
-                }
-                foreach(var prop in model.GetProperties())
-                {
-                    if (prop.Name.StartsWith("Ref"))
+                    if (!domains.Contains(item.Domain))
                     {
-                        var refmodelname = prop.Name.Replace("Id", string.Empty);
-                        if (refmodelname.EndsWith("Statu"))
-                        {
-                            refmodelname = refmodelname.Replace("Statu", "Status");
-                        }
-                        if (!RefModels.ContainsKey(refmodelname))
-                        {
-                            var vals = new List<string> { moduleName };
-                            RefModels.Add(refmodelname, vals);
-                        }
-                        else
-                        {
-                            if (!RefModels[refmodelname].Contains(moduleName))
-                            {
-                                RefModels[refmodelname].Add(moduleName);
-                            }
-                        }
+                        domains.Add(item.Domain);
                     }
                 }
             }
+
+            var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
+            foreach (var domain in domains)
+            {
+                // pull out all the model names for this domain
+                var models = new List<string>();
+                foreach (var item in modelProperties.Values)
+                {
+                    var domainmodels = item.Where(t => t.Domain == domain)
+                    foreach (var mp in domainmodels)
+                    {
+                        if (!models.Contains(mp.ModelName))
+                        {
+                            models.Add(mp.ModelName);
+                        }
+                    }
+                }
+
+                var fname = domain.Replace(" ", string.Empty);
+                var moduleName = $"Autobahn.{fname}";
+
+                GenerateTemplateProject(filePath, moduleName);
+                GenerateViewItemGroups($@"{filePath}\moduleName\{moduleName}.csproj", models);
+                //GenerateModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
+                //GenerateInterfaces(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
+                //GenerateViewModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
+                //GenerateViews(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
+            }
+            //GenerateReferenceModels(filePath, tables, types.OrderBy(o => o.Name).ToList(), elements);
         }
 
-        private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
-        {
-            foreach (var refmodel in RefModels.Keys)
-            {
-                var model = models.FirstOrDefault(m => m.Name == refmodel);
-                if (model != null)
-                {
-                    var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
-                    GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
-                    GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
-                    GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
-                }
-            }
-        }
+        //private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
+        //{
+        //    foreach (var refmodel in RefModels.Keys)
+        //    {
+        //        var model = models.FirstOrDefault(m => m.Name == refmodel);
+        //        if (model != null)
+        //        {
+        //            var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
+        //            GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
+        //            GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
+        //            GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
+        //        }
+        //    }
+        //}
 
         private static void GenerateReferenceList(string filePath, string moduleName, Type model)
         {
@@ -733,39 +721,37 @@ namespace AutobahnCodeGen
             stream.WriteLine();
         }
 
-        private static void GenerateTemplateProject(string filePath, string moduleName, List<CEDSTable> tables)
+        private static void GenerateTemplateProject(string filePath, string moduleName)
         {
             DirectoryInfo di = new DirectoryInfo($@"{filePath}\{moduleName}");
             RecursiveDelete(di);
             if (moduleName == "Autobahn.Common")
             {
                 ZipFile.ExtractToDirectory($@"Reference\Autobahn.Common.zip", filePath);
-                GenerateViewItemGroups($@"{filePath}\Autobahn.Common\Autobahn.Common.csproj", tables);
             }
             else
             {
                 ZipFile.ExtractToDirectory($@"Reference\mauiproject.zip", filePath);
                 File.Move($@"{filePath}\mauiproject\module.csproj", $@"{filePath}\mauiproject\{moduleName}.csproj");
-                GenerateViewItemGroups($@"{filePath}\mauiproject\{moduleName}.csproj", tables);
                 File.Move($@"{filePath}\mauiproject\mauimodule.cs", $@"{filePath}\mauiproject\{moduleName}Module.cs");
                 Directory.Move($@"{filePath}\mauiproject", $@"{filePath}\{moduleName}");
             }
         }
 
-        private static void GenerateViewItemGroups(string filePath, List<CEDSTable> tables)
+        private static void GenerateViewItemGroups(string filePath, List<string> models)
         {
             var project = XDocument.Load(filePath);
             var itemgroup = new XElement("ItemGroup");
             var itemgrouplist = new List<string>();
-            foreach (var model in tables.Where(t => !t.TableName.StartsWith("Ref")))
+            foreach (var model in models.Where(t => !t.StartsWith("Ref")))
             {
-                if (itemgrouplist.Contains(model.TableName))
+                if (itemgrouplist.Contains(model))
                 {
                     continue;
                 }
-                itemgrouplist.Add(model.TableName);
+                itemgrouplist.Add(model);
                 var mauixaml = new XElement("MauiXaml");
-                var updateattrib = new XAttribute("Update", $@"Views\{model.TableName}View.xaml");
+                var updateattrib = new XAttribute("Update", $@"Views\{model}View.xaml");
                 var buildaction = new XElement("Generator", "MSBuild:Compile"); 
                 mauixaml.Add(updateattrib);
                 mauixaml.Add(buildaction);

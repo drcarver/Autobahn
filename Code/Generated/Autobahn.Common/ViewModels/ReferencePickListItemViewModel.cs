@@ -16,15 +16,11 @@ namespace Autobahn.Common.ViewModels
         /// <summary>
         /// The description of the item in the list
         /// </summary>
-        public string Description { get => _description;
-            set => SetProperty(ref _description, value);
-        }
+        public string Description { get => _description; set => SetProperty(ref _description, value) }
 
         /// <summary>
         /// The sort order of the item in the list
         /// </summary>
-        public decimal SortOrder { get => _sortOrder;
-            set => SetProperty(ref _sortOrder, value);
-        }
+        public decimal SortOrder { get => _sortOrder; set => SetProperty(ref _sortOrder, value) }
     }
 }

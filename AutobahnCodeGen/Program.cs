@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -8,8 +9,7 @@ namespace AutobahnCodeGen
     {
         static void Main(string[] args)
         {
-            Dictionary<string, List<string>> CEDDomains = new Dictionary<string, List<string>>();
-            List<CEDSElement> CEDElements = new List<CEDSElement>();
+            Dictionary<string, List<ModelProperty>> ModelProperties = new Dictionary<string, List<ModelProperty>>();
             var csv = new CEDSService();
             var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
             var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
@@ -144,36 +144,107 @@ namespace AutobahnCodeGen
                 }
             }
 
-            //// Set the technical name
-            //foreach (var col in ndsElementsMetadata)
-            //{
-            //    var cedsElements = cedsElementsMetadata.Where(c => c.ElementName == col.ElementName);
-            //    foreach (var element in cedsElements)
-            //    {
-            //        col.TechnicalName = element.TechnicalName;
-            //    }
-            //}
-
-            // Create the Domains Dictionary
-            foreach (var table in tablesMetadata)
+            // create a lookup table of models to properties
+            foreach (var model in types.GetTypes().ToList())
             {
-                if (CEDDomains.ContainsKey(table.Domain))
+                var modelName = model.Name;
+                List<string> propertiesToIgnore = new List<string>
                 {
-                    if (!CEDDomains[table.Domain].Contains(table.TableName))
+                    "RecordStartDateTime",
+                    "RecordEndDateTime",
+                    "RecordStatusId",
+                    "Description",
+                    "Code",
+                    "Definition",
+                    "RefJurisdictionId",
+                    "SortOrder",
+                    "DataCollectionId",
+                    $"{modelName}Id"
+                };
+                foreach (var prop in model.GetProperties())
+                {
+                    // no virtual properties.  We will handle those later as service calls
+                    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
                     {
-                        CEDDomains[table.Domain].Add(table.TableName);
+                        continue;
                     }
-                }
-                else
-                {
-                    CEDDomains.Add(table.Domain, new List<string>());
-                    CEDDomains[table.Domain].Add(table.TableName);
+
+                    if (model.Name.EndsWith("Statu"))
+                    {
+                        modelName = modelName.Replace("Statu", "Status");
+                    }
+                    var propName = prop.Name;
+                    if (prop.Name.EndsWith("Statu"))
+                    {
+                        propName = propName.Replace("Statu", "Status");
+                    }
+                    var tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+                                                                       && t.ColumnName == prop.Name);
+                    if (model.Name.EndsWith("Statu") || tableMeta == null)
+                    {
+                        modelName = propName.Replace("Statu", "Status");
+                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == modelName
+                                                                       && t.ColumnName == propName);
+                    }
+                    if (prop.Name.EndsWith("Statu") || tableMeta == null)
+                    {
+                        propName = propName.Replace("Statu", "Status");
+                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+                                                                           && t.ColumnName == propName);
+                    }
+                    if (tableMeta == null)
+                    {
+                        if (prop.Name.EndsWith("Id"))
+                        {
+                            var id = "Id";
+                            Console.WriteLine($"retry table {model.Name} with column name {prop.Name} as {prop.Name.Replace(id,string.Empty)}");
+                            tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == prop.Name.Replace(id, string.Empty)
+                                                                           && t.ColumnName == null);
+                        }
+                    }
+                    if (tableMeta == null)
+                    {
+                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+                                                                       && t.ColumnName == null);
+                    }
+                    CEDSElement element = null;
+                    if (tableMeta?.GlobalID != null)
+                    {
+                        element = cedsElementsMetadata.FirstOrDefault(c => c.GlobalID == tableMeta.GlobalID);
+                    }
+
+                    var modelProperty = new ModelProperty
+                    {
+                        Domain = tableMeta?.Domain ?? "Reference",
+                        Element = element,
+                        GlobalId = tableMeta?.GlobalID,
+                        ModelName = modelName,
+                        ModelType = model,
+                        PropertyInfo = prop,
+                        PropertyName = propName
+                    };
+
+                    if (ModelProperties.Keys.Contains(propName))
+                    {
+                        var hasprop = ModelProperties[propName]
+                            .FirstOrDefault(p => p.ModelName == modelProperty.ModelName 
+                                                 && p.PropertyName == propName);
+                        if (hasprop == null)
+                        {
+                            ModelProperties[propName].Add(modelProperty);
+                        }
+                    }
+                    else
+                    {
+                        ModelProperties.Add(propName, new List<ModelProperty> { modelProperty });
+                    }
                 }
             }
 
-            MauiModule.GenerateModule(CEDDomains, tablesMetadata, types.GetTypes().ToList(), cedsElementsMetadata);
+            Console.ReadLine();
+            MauiModule.GenerateModule(ModelProperties);
 
-            csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
+            //csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
             //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
         }
     }
