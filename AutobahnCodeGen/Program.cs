@@ -164,7 +164,7 @@ namespace AutobahnCodeGen
 
             MauiModule.GenerateModule(autobahnDomains);
 
-            csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", autobahnTables);
+            csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", autobahnTables);
             //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
 
             // create a lookup table of models to properties
