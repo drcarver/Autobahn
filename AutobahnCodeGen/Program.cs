@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Reflection;
+using Autobahn.Entities;
 
 namespace AutobahnCodeGen
 {
@@ -12,21 +14,23 @@ namespace AutobahnCodeGen
             Dictionary<string, List<ModelProperty>> ModelProperties = new Dictionary<string, List<ModelProperty>>();
             var csv = new CEDSService();
             var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
-            var tablesMetadata = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
+            var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
+            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
 
-            // Add any missing clases and columns from the entites
+            //Add any missing clases and columns from the entites
             foreach (var classtype in types.GetTypes().ToList())
             {
                 if (!classtype.IsClass
                     || classtype.Name == "C_CEDSElements"
                     || classtype.Name == "C_CEDStoNDSMapping"
-                    || classtype.Name == "Autobahn")
+                    || classtype.Name.StartsWith("Autobahn"))
                 {
                     continue;
                 }
 
-                var model = tablesMetadata.FirstOrDefault(t => t.TableName == classtype.Name.Replace("Statu", "Status"));
+                var model = autobahnTables.FirstOrDefault(t => t.ModelName == classtype.Name.Replace("Statu", "Status")) ??
+                            autobahnTables.FirstOrDefault(t => t.ModelName == classtype.Name.Replace("Id", string.Empty));
                 if (model == null)
                 {
                     foreach (var prop in classtype.GetProperties())
@@ -37,11 +41,11 @@ namespace AutobahnCodeGen
                         }
 
                         var existing = cedsElementsMetadata.FirstOrDefault(t => t.TechnicalName == prop.Name);
-                        tablesMetadata.Add(new CEDSTable
+                        autobahnTables.Add(new AutobahnTable
                         {
-                            TableName = classtype.Name.EndsWith("Statu") ? classtype.Name.Replace("Statu", "Status") : classtype.Name,
+                            ModelName = classtype.Name.EndsWith("Statu") ? classtype.Name.Replace("Statu", "Status") : classtype.Name,
                             ColumnName = prop.Name,
-                            GlobalID = existing?.GlobalID,
+                            GlobalId = existing?.GlobalID,
                             Version = "--dbtable--"
                         });
                     }
@@ -49,203 +53,234 @@ namespace AutobahnCodeGen
             }
 
             // Set the domains in the tablesMetadata
-            foreach (var table in tablesMetadata)
+            var refdom = autobahnDomains.FirstOrDefault(d => d.Module == "Reference");
+            var comdom = autobahnDomains.FirstOrDefault(d => d.Module == "Common");
+            foreach (var table in autobahnTables)
             {
-                if (table.TableName.StartsWith("Ae")
-                    || table.TableName.EndsWith("AE"))
+                var aedom = autobahnDomains.FirstOrDefault(d => d.Module == "AdultEducation");
+                if (table.ModelName.StartsWith("Ae")
+                    || table.ModelName.EndsWith("AE"))
                 {
-                    table.Domain = "AdultEducation";
+                    table.AutobahnDomainId = aedom?.Id;
                 }
-                if (table.TableName.StartsWith("EL") 
-                    || table.TableName.StartsWith("EarlyChildhood"))
+                var eldom = autobahnDomains.FirstOrDefault(d => d.Module == "EarlyLearning");
+                if (table.ModelName.StartsWith("EL")
+                    || table.ModelName.StartsWith("EarlyChildhood"))
                 {
-                    table.Domain = "EarlyLearning";
+                    table.AutobahnDomainId = eldom?.Id;
                 }
-                if (table.TableName.StartsWith("Assessment")
-                    || table.TableName.StartsWith("Rubric")
-                    || table.TableName.StartsWith("Goal")
-                    || table.TableName.StartsWith("Learner"))
+                var assesdom = autobahnDomains.FirstOrDefault(d => d.Module == "Assessment");
+                if (table.ModelName.StartsWith("Assessment")
+                    || table.ModelName.StartsWith("Rubric")
+                    || table.ModelName.StartsWith("Goal")
+                    || table.ModelName.StartsWith("Learner"))
                 {
-                    table.Domain = "Assessment";
+                    table.AutobahnDomainId = assesdom?.Id;
                 }
-                if (table.TableName.StartsWith("Learning")
-                    || table.TableName.StartsWith("Peer"))
+                var lrdom = autobahnDomains.FirstOrDefault(d => d.Module == "LearningResource");
+                if (table.ModelName.StartsWith("Learning")
+                    || table.ModelName.StartsWith("Peer"))
                 {
-                    table.Domain = "LearningResource";
+                    table.AutobahnDomainId = lrdom?.Id;
                 }
-                if (table.TableName.StartsWith("K12"))
+                var k12dom = autobahnDomains.FirstOrDefault(d => d.Module == "K12");
+                if (table.ModelName.StartsWith("K12"))
                 {
-                    table.Domain = "K12";
+                    table.AutobahnDomainId = k12dom?.Id;
                 }
-                if (table.TableName.StartsWith("Build")
-                    || table.TableName.StartsWith("Facility")
-                   )
+                var facdom = autobahnDomains.FirstOrDefault(d => d.Module == "Facilities");
+                if (table.ModelName.StartsWith("Build")
+                    || table.ModelName.StartsWith("Facility"))
                 {
-                    table.Domain = "Facilities";
+                    table.AutobahnDomainId = facdom?.Id;
                 }
-                if (table.TableName.StartsWith("Ps")
-                    || table.TableName.StartsWith("PS"))
+                var psdom = autobahnDomains.FirstOrDefault(d => d.Module == "Postsecondary");
+                if (table.ModelName.StartsWith("Ps")
+                    || table.ModelName.StartsWith("PS")
+                    || table.ModelName.IndexOf("IPEDS") > 0)
                 {
-                    table.Domain = "Postsecondary";
+                    table.AutobahnDomainId = psdom?.Id;
                 }
-                if (table.TableName.StartsWith("Competency"))
+                var compdom = autobahnDomains.FirstOrDefault(d => d.Module == "Competency");
+                if (table.ModelName.StartsWith("Competency"))
                 {
-                    table.Domain = "Competencies";
+                    table.AutobahnDomainId = compdom?.Id;
                 }
-                if (table.TableName.StartsWith("Credential"))
+                var creddom = autobahnDomains.FirstOrDefault(d => d.Module == "Credentials");
+                if (table.ModelName.StartsWith("Credential"))
                 {
-                    table.Domain = "Credentials";
+                    table.AutobahnDomainId = creddom?.Id;
                 }
-                if (table.TableName.StartsWith("Cte")
-                    || table.TableName.EndsWith("Cte"))
+                var ctedom = autobahnDomains.FirstOrDefault(d => d.Module == "CTE");
+                if (table.ModelName.StartsWith("Cte")
+                    || table.ModelName.EndsWith("Cte"))
                 {
-                    table.Domain = "CareerandTechnical";
+                    table.AutobahnDomainId = ctedom?.Id;
                 }
-                if (table.TableName.StartsWith("Organization") 
-                    || table.TableName.StartsWith("Person")
-                    || table.TableName.StartsWith("Staff")
-                    || table.TableName.StartsWith("Teacher")
-                    || table.TableName.StartsWith("Role"))
+                if (table.ModelName.StartsWith("Organization")
+                    || table.ModelName.StartsWith("Person")
+                    || table.ModelName.StartsWith("Staff")
+                    || table.ModelName.StartsWith("Teacher")
+                    || table.ModelName.StartsWith("Role"))
                 {
-                    table.Domain = "Common";
+                    table.AutobahnDomainId = comdom?.Id;
                 }
-                if (table.TableName.StartsWith("App")
-                    || table.TableName.StartsWith("Auth"))
+                var authdom = autobahnDomains.FirstOrDefault(d => d.Module == "Authorization");
+                if (table.ModelName.StartsWith("App")
+                    || table.ModelName.StartsWith("Auth"))
                 {
-                    table.Domain = "AuthenticationandAuthorization";
+                    table.AutobahnDomainId = authdom?.Id;
                 }
-                if (table.TableName.StartsWith("Ref"))
+                if (table.ModelName.StartsWith("Ref"))
                 {
-                    table.Domain = "Reference";
+                    table.AutobahnDomainId = refdom?.Id;
                 }
-                if (table.TableName.StartsWith("Workforce"))
+                var wfdom = autobahnDomains.FirstOrDefault(d => d.Module == "Workforce");
+                if (table.ModelName.StartsWith("Workforce"))
                 {
-                    table.Domain = "Workforce";
+                    table.AutobahnDomainId = wfdom?.Id;
                 }
-                if (string.IsNullOrEmpty(table.Domain))
+                if (table.AutobahnDomainId == null)
                 {
-                    table.Domain = "Common";
+                    table.AutobahnDomainId = authdom?.Id;
                 }
             }
 
             // Set the reference to the correct domain
-            foreach (var table in tablesMetadata.Where(t => t.TableName.StartsWith("Ref")))
+            foreach (var table in autobahnTables.Where(t => t.ModelName.StartsWith("Ref")))
             {
-                foreach (var col in tablesMetadata.Where(c => c.ColumnName.StartsWith(table.TableName)))
+                foreach (var col in autobahnTables.Where(c => c.ColumnName.StartsWith(table.ModelName)))
                 {
-                    if (table.Domain == "Reference")
+                    if (table.AutobahnDomainId != refdom?.Id)
                     {
-                        table.Domain = col.Domain;
+                        table.AutobahnDomainId = col.AutobahnDomainId;
                     }
-                    else if (table.Domain != col.Domain)
+                    else if (table.AutobahnDomainId != col.AutobahnDomainId)
                     {
-                        table.Domain = "Common";
+                        table.AutobahnDomainId = comdom.Id;
                     }
                 }
             }
+
+            MauiModule.GenerateModule(autobahnDomains);
+
+            csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", autobahnTables);
+            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
 
             // create a lookup table of models to properties
-            foreach (var model in types.GetTypes().ToList())
-            {
-                var modelName = model.Name;
-                List<string> propertiesToIgnore = new List<string>
-                {
-                    "RecordStartDateTime",
-                    "RecordEndDateTime",
-                    "RecordStatusId",
-                    "Description",
-                    "Code",
-                    "Definition",
-                    "RefJurisdictionId",
-                    "SortOrder",
-                    "DataCollectionId",
-                    $"{modelName}Id"
-                };
-                foreach (var prop in model.GetProperties())
-                {
-                    // no virtual properties.  We will handle those later as service calls
-                    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
-                    {
-                        continue;
-                    }
+            //foreach (var model in types.GetTypes().ToList())
+            //{
+            //    var modelName = model.Name;
+            //    List<string> propertiesToIgnore = new List<string>
+            //    {
+            //        "RecordStartDateTime",
+            //        "RecordEndDateTime",
+            //        "RecordStatusId",
+            //        "Description",
+            //        "Code",
+            //        "Definition",
+            //        "RefJurisdictionId",
+            //        "SortOrder",
+            //        "DataCollectionId",
+            //        $"{modelName}Id"
+            //    };
+            //    //foreach (var prop in model.GetProperties())
+            //    //{
+            //    //    // no virtual properties.  We will handle those later as service calls
+            //    //    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
+            //    //    {
+            //    //        continue;
+            //    //    }
 
-                    if (model.Name.EndsWith("Statu"))
-                    {
-                        modelName = modelName.Replace("Statu", "Status");
-                    }
-                    var propName = prop.Name;
-                    if (prop.Name.EndsWith("Statu"))
-                    {
-                        propName = propName.Replace("Statu", "Status");
-                    }
-                    var tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-                                                                       && t.ColumnName == prop.Name);
-                    if (model.Name.EndsWith("Statu") || tableMeta == null)
-                    {
-                        modelName = propName.Replace("Statu", "Status");
-                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == modelName
-                                                                       && t.ColumnName == propName);
-                    }
-                    if (prop.Name.EndsWith("Statu") || tableMeta == null)
-                    {
-                        propName = propName.Replace("Statu", "Status");
-                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-                                                                           && t.ColumnName == propName);
-                    }
-                    if (tableMeta == null)
-                    {
-                        if (prop.Name.EndsWith("Id"))
-                        {
-                            var id = "Id";
-                            Console.WriteLine($"retry table {model.Name} with column name {prop.Name} as {prop.Name.Replace(id,string.Empty)}");
-                            tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == prop.Name.Replace(id, string.Empty)
-                                                                           && t.ColumnName == null);
-                        }
-                    }
-                    if (tableMeta == null)
-                    {
-                        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-                                                                       && t.ColumnName == null);
-                    }
-                    CEDSElement element = null;
-                    if (tableMeta?.GlobalID != null)
-                    {
-                        element = cedsElementsMetadata.FirstOrDefault(c => c.GlobalID == tableMeta.GlobalID);
-                    }
+            //    //    if (model.Name.EndsWith("Statu"))
+            //    //    {
+            //    //        modelName = modelName.Replace("Statu", "Status");
+            //    //    }
+            //    //    var propName = prop.Name;
+            //    //    if (prop.Name.EndsWith("Statu"))
+            //    //    {
+            //    //        propName = propName.Replace("Statu", "Status");
+            //    //    }
+            //    //    var tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+            //    //                                                       && t.ColumnName == prop.Name);
+            //    //    if (model.Name.EndsWith("Statu") || tableMeta == null)
+            //    //    {
+            //    //        modelName = propName.Replace("Statu", "Status");
+            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == modelName
+            //    //                                                       && t.ColumnName == propName);
+            //    //    }
+            //    //    if (prop.Name.EndsWith("Statu") || tableMeta == null)
+            //    //    {
+            //    //        propName = propName.Replace("Statu", "Status");
+            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+            //    //                                                           && t.ColumnName == propName);
+            //    //    }
 
-                    var modelProperty = new ModelProperty
-                    {
-                        Domain = tableMeta?.Domain ?? "Reference",
-                        Element = element,
-                        GlobalId = tableMeta?.GlobalID,
-                        ModelName = modelName,
-                        ModelType = model,
-                        PropertyInfo = prop,
-                        PropertyName = propName
-                    };
+            //    //    var tableMetaOnly = false;
+            //    //    if (tableMeta == null)
+            //    //    {
+            //    //        if (prop.Name.EndsWith("Id"))
+            //    //        {
+            //    //            var id = "Id";
+            //    //            tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == prop.Name.Replace(id, string.Empty)
+            //    //                                                           && t.ColumnName == null);
+            //    //            if (tableMeta == null)
+            //    //            {
+            //    //                Console.WriteLine($"retry table {model.Name} with column name {prop.Name} as {prop.Name.Replace(id, string.Empty)}");
+            //    //            }
+            //    //            else
+            //    //            {
+            //    //                tableMetaOnly = true;
+            //    //            }
+            //    //        }
+            //    //    }
+            //    //    if (tableMeta == null)
+            //    //    {
+            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
+            //    //                                                       && t.ColumnName == null);
+            //    //        if (tableMeta != null)
+            //    //        {
+            //    //            tableMetaOnly = true;
+            //    //        }
+            //    //    }
+            //    //    CEDSElement element = null;
+            //    //    if (tableMeta?.GlobalID != null)
+            //    //    {
+            //    //        element = cedsElementsMetadata.FirstOrDefault(c => c.GlobalID == tableMeta.GlobalID);
+            //    //    }
 
-                    if (ModelProperties.Keys.Contains(propName))
-                    {
-                        var hasprop = ModelProperties[propName]
-                            .FirstOrDefault(p => p.ModelName == modelProperty.ModelName 
-                                                 && p.PropertyName == propName);
-                        if (hasprop == null)
-                        {
-                            ModelProperties[propName].Add(modelProperty);
-                        }
-                    }
-                    else
-                    {
-                        ModelProperties.Add(propName, new List<ModelProperty> { modelProperty });
-                    }
-                }
-            }
+            //    //    var modelProperty = new ModelProperty
+            //    //    {
+            //    //        Domain = tableMeta?.Domain ?? "Reference",
+            //    //        Element = element,
+            //    //        GlobalId = tableMeta?.GlobalID,
+            //    //        ModelName = modelName,
+            //    //        ModelType = model,
+            //    //        PropertyInfo = prop,
+            //    //        PropertyName = propName
+            //    //    };
+            //    //    if (tableMetaOnly)
+            //    //    {
+            //    //        modelProperty.PropertyInfo = null;
+            //    //        modelProperty.PropertyName = modelName;
+            //    //    }
 
-            Console.ReadLine();
-            MauiModule.GenerateModule(ModelProperties);
-
-            //csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\CEDSTablesWithDomain.csv", tablesMetadata);
-            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
+            //    //    if (ModelProperties.Keys.Contains(modelProperty.PropertyName))
+            //    //    {
+            //    //        var hasprop = ModelProperties[modelProperty.PropertyName]
+            //    //            .FirstOrDefault(p => p.ModelName == modelProperty.ModelName 
+            //    //                                 && p.PropertyName == modelProperty.PropertyName);
+            //    //        if (hasprop == null)
+            //    //        {
+            //    //            ModelProperties[propName].Add(modelProperty);
+            //    //        }
+            //    //    }
+            //    //    else
+            //    //    {
+            //    //        ModelProperties.Add(propName, new List<ModelProperty> { modelProperty });
+            //    //    }
+            //    //}
+            //}
         }
     }
 }

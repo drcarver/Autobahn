@@ -111,6 +111,8 @@
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationDocument.cs" />
     <Compile Include="Autobahn.cs" />
+    <Compile Include="AutobahnDomain.cs" />
+    <Compile Include="AutobahnElementModel.cs" />
     <Compile Include="BuildingSpace.cs" />
     <Compile Include="BuildingSpaceUtilization.cs" />
     <Compile Include="BuildingSystemCategory.cs" />
@@ -147,6 +149,7 @@
     <Compile Include="CteCourse.cs" />
     <Compile Include="CteStudentAcademicRecord.cs" />
     <Compile Include="C_CEDSElements.cs" />
+    <Compile Include="AutobahnTable.cs" />
     <Compile Include="C_CEDStoNDSMapping.cs" />
     <Compile Include="DataCollection.cs" />
     <Compile Include="EarlyChildhoodCredential.cs" />

@@ -5,6 +5,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
+using Autobahn.Entities;
 using File = System.IO.File;
 
 namespace AutobahnCodeGen
@@ -14,48 +15,22 @@ namespace AutobahnCodeGen
         public static Autobahn.Entities.Autobahn AutobahnContext { get; set; } =
             new Autobahn.Entities.Autobahn("data source=DESKTOP-6CQUBDS\\SQLEXPRESS;initial catalog=CEDS-IDS-V10_0_0_0;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
 
-        public static void GenerateModule(Dictionary<string, List<ModelProperty>> modelProperties)
+        public static void GenerateModule(List<AutobahnDomain> domains)
+            //Dictionary<string, List<ModelProperty>> modelProperties)
         {
-            var domains = new List<string>();
-            foreach (var modelprop in modelProperties.Values)
-            {
-                foreach (var item in modelprop)
-                {
-                    if (!domains.Contains(item.Domain))
-                    {
-                        domains.Add(item.Domain);
-                    }
-                }
-            }
-
             var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
             foreach (var domain in domains)
             {
-                // pull out all the model names for this domain
-                var models = new List<string>();
-                foreach (var item in modelProperties.Values)
-                {
-                    var domainmodels = item.Where(t => t.Domain == domain)
-                    foreach (var mp in domainmodels)
-                    {
-                        if (!models.Contains(mp.ModelName))
-                        {
-                            models.Add(mp.ModelName);
-                        }
-                    }
-                }
-
-                var fname = domain.Replace(" ", string.Empty);
-                var moduleName = $"Autobahn.{fname}";
+                var moduleName = $"Autobahn.{domain.Module}";
 
                 GenerateTemplateProject(filePath, moduleName);
-                GenerateViewItemGroups($@"{filePath}\moduleName\{moduleName}.csproj", models);
+                //GenerateViewItemGroups($@"{filePath}\{moduleName}\{moduleName}.csproj", models);
                 //GenerateModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
                 //GenerateInterfaces(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
                 //GenerateViewModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
                 //GenerateViews(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
+                //GenerateReferenceModels(filePath, tables, types.OrderBy(o => o.Name).ToList(), elements);
             }
-            //GenerateReferenceModels(filePath, tables, types.OrderBy(o => o.Name).ToList(), elements);
         }
 
         //private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
@@ -127,7 +102,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateReferenceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<CEDSElement> elements)
+        private static void GenerateReferenceFile(string filePath, string moduleName, Type model, List<AutobahnTable> tables, List<CEDSElement> elements)
         {
             var fullFilePath = $"{filePath}{model.Name}Model.cs";
             using (var stream = File.CreateText(fullFilePath))
@@ -165,7 +140,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateReferenceInterfaceFile(string filePath, string moduleName, Type model, List<CEDSTable> tables, List<CEDSElement> elements)
+        private static void GenerateReferenceInterfaceFile(string filePath, string moduleName, Type model, List<AutobahnTable> tables, List<CEDSElement> elements)
         {
             var fullFilePath = $"{filePath}I{model.Name}Model.cs";
             using (var stream = File.CreateText(fullFilePath))
@@ -202,7 +177,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViews(string filePath, string moduleName, List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
+        private static void GenerateViews(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var viewlist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -212,13 +187,12 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
-                var file = tables.FirstOrDefault(f => f.TableName == model.Name);
+                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
                 if (file != null)
                 {
                     if (!viewlist.Contains(model))
                     {
                         viewlist.Add(model);
-                        file.FilePath = $@"{filePath}\{moduleName}\Views\{model.Name}View.cs";
                     }
                 }
             }
@@ -226,7 +200,7 @@ namespace AutobahnCodeGen
             GenerateXAMLFile($@"{filePath}\{moduleName}\Views\", moduleName, tables, viewlist, elements);
         }
 
-        private static void GenerateXAMLFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
+        private static void GenerateXAMLFile(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -255,7 +229,7 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViewFile(string filePath, string moduleName, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
+        private static void GenerateViewFile(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> models, List<CEDSElement> elements)
         {
             foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -291,7 +265,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateViewModels(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
+            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var vmlist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -301,13 +275,12 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
-                var file = tables.FirstOrDefault(f => f.TableName == model.Name);
+                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
                 if (file != null)
                 {
                     if (!vmlist.Contains(model))
                     {
                         vmlist.Add(model);
-                        file.FilePath = $@"{filePath}\{moduleName}\ViewModels\{model.Name}ViewModel.cs";
                     }
                 }
             }
@@ -315,7 +288,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateViewModelFile(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
+            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
             {
@@ -355,7 +328,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateInterfaces(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
+            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var interfacelist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -365,7 +338,7 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
-                var file = tables.FirstOrDefault(f => f.TableName == model.Name);
+                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
                 if (file != null)
                 {
                     interfacelist.Add(model);
@@ -376,7 +349,7 @@ namespace AutobahnCodeGen
         }
 
         private static void GenerateModels(string filePath, string moduleName,
-            List<CEDSTable> tables, List<Type> classes, List<CEDSElement> elements)
+            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
         {
             var classlist = new List<Type>();
             foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
@@ -386,7 +359,7 @@ namespace AutobahnCodeGen
                     continue;
                 }
 
-                var file = tables.FirstOrDefault(f => f.TableName == model.Name);
+                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
                 if (file != null)
                 {
                     classlist.Add(model);

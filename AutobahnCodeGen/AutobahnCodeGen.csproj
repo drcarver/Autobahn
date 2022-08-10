@@ -104,6 +104,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutobahnTableMap.cs" />
     <Compile Include="ReferenceToModel.cs" />
     <Compile Include="ReferenceModelMap.cs" />
     <Compile Include="CSVReferenceModel.cs" />
@@ -112,8 +113,7 @@
     <Compile Include="NDSElementMap.cs" />
     <Compile Include="CEDSMap.cs" />
     <Compile Include="CEDSService.cs" />
-    <Compile Include="CEDSTable.cs" />
-    <Compile Include="CEDSTableMap.cs" />
+    <Compile Include="AutobahnDomainMap.cs" />
     <Compile Include="MauiModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

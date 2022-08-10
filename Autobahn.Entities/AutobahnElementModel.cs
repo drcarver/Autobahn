@@ -1,8 +1,11 @@
-﻿namespace AutobahnCodeGen
+﻿using System;
+using System.Collections.Generic;
+
+namespace Autobahn.Entities
 {
-    public class NDSElement
+    public class AutobahnElement
     {
-        public string GlobalID { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string ElementName { get; set; }
         public string AltName { get; set; }
         public string Definition { get; set; }
@@ -15,14 +18,15 @@
         public string ChangedInThisVersionInd { get; set; }
         public string ChangeNotes { get; set; }
         public string TechnicalName { get; set; }
-        public string TableName { get; set; }
-        public string Domain { get; set; }
+        public List<int> AutobahnTableList { get; set; } = new List<int>();
+        public int AutobahnDomainId { get; set; }
 
-        public NDSElement Clone()
+        public AutobahnElement Clone()
         {
-            return new NDSElement
+            var model = new AutobahnElement
             {
-                GlobalID = GlobalID,
+                Id = Id,
+                //GlobalId = GlobalId,
                 ElementName = ElementName,
                 AltName = AltName,
                 Definition = Definition,
@@ -34,8 +38,12 @@
                 TermID = TermID,
                 ChangedInThisVersionInd = ChangedInThisVersionInd,
                 ChangeNotes = ChangeNotes,
-                TechnicalName = TechnicalName
+                TechnicalName = TechnicalName,
+                AutobahnDomainId = AutobahnDomainId,
+                AutobahnTableList = new List<int>()
             };
+            model.AutobahnTableList.AddRange(AutobahnTableList);
+            return model;
         }
     }
 }
