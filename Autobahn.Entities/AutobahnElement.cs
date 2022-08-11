@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Autobahn.Entities
 {
-    public class AutobahnElement
+    public partial class AutobahnElement
     {
         public Guid Id { get; set; } = Guid.NewGuid();
+        public string GlobalId { get; set; }
         public string ElementName { get; set; }
         public string AltName { get; set; }
         public string Definition { get; set; }
@@ -15,18 +17,18 @@ namespace Autobahn.Entities
         public string URL { get; set; }
         public string Version { get; set; }
         public string TermID { get; set; }
-        public string ChangedInThisVersionInd { get; set; }
         public string ChangeNotes { get; set; }
         public string TechnicalName { get; set; }
-        public List<int> AutobahnTableList { get; set; } = new List<int>();
-        public int AutobahnDomainId { get; set; }
+        public List<Guid?> AutobahnTableList { get; set; } = new List<Guid?>();
+        public List<Guid?> AutobahnDomainList { get; set; } = new List<Guid?>();
+        public string PropertyType  { get; set; }
 
         public AutobahnElement Clone()
         {
             var model = new AutobahnElement
             {
                 Id = Id,
-                //GlobalId = GlobalId,
+                GlobalId = GlobalId,
                 ElementName = ElementName,
                 AltName = AltName,
                 Definition = Definition,
@@ -36,13 +38,12 @@ namespace Autobahn.Entities
                 URL = URL,
                 Version = Version,
                 TermID = TermID,
-                ChangedInThisVersionInd = ChangedInThisVersionInd,
                 ChangeNotes = ChangeNotes,
                 TechnicalName = TechnicalName,
-                AutobahnDomainId = AutobahnDomainId,
-                AutobahnTableList = new List<int>()
+                AutobahnDomainList = AutobahnDomainList,
+                AutobahnTableList = AutobahnTableList,
+                PropertyType = string.Empty
             };
-            model.AutobahnTableList.AddRange(AutobahnTableList);
             return model;
         }
     }

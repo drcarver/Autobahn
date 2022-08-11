@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Xml.Linq;
 using Autobahn.Entities;
 using File = System.IO.File;
@@ -15,8 +17,8 @@ namespace AutobahnCodeGen
         public static Autobahn.Entities.Autobahn AutobahnContext { get; set; } =
             new Autobahn.Entities.Autobahn("data source=DESKTOP-6CQUBDS\\SQLEXPRESS;initial catalog=CEDS-IDS-V10_0_0_0;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
 
-        public static void GenerateModule(List<AutobahnDomain> domains)
-            //Dictionary<string, List<ModelProperty>> modelProperties)
+        public static void GenerateModule(List<AutobahnDomain> domains, List<AutobahnTable> models,
+                List<AutobahnElement> elements)
         {
             var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
             foreach (var domain in domains)
@@ -24,55 +26,55 @@ namespace AutobahnCodeGen
                 var moduleName = $"Autobahn.{domain.Module}";
 
                 GenerateTemplateProject(filePath, moduleName);
-                //GenerateViewItemGroups($@"{filePath}\{moduleName}\{moduleName}.csproj", models);
-                //GenerateModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                //GenerateInterfaces(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                //GenerateViewModels(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                //GenerateViews(filePath, moduleName, tables.Where(t => t.Domain == fname).OrderBy(o => o.TableName).ToList(), types.OrderBy(o => o.Name).ToList(), elements);
-                //GenerateReferenceModels(filePath, tables, types.OrderBy(o => o.Name).ToList(), elements);
+                GenerateViewItemGroups($@"{filePath}\{moduleName}\{moduleName}.csproj", models.Where(t => t.ModelName.StartsWith("Ref") && t.AutobahnDomainId == domain.Id).ToList());
+                GenerateModelFiles($@"{filePath}\Autobahn.{domain.Module}\Models\", domain, models.Where(t => !t.ModelName.StartsWith("Ref") && t.AutobahnDomainId == domain.Id).ToList(), elements);
+                GenerateInterfaceFiles($@"{filePath}\Autobahn.{domain.Module}\Interfaces\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).ToList(), elements);
+                GenerateViewModelFiles($@"{filePath}\Autobahn.{moduleName}\ViewModels\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).ToList(), elements);
+                GenerateViewFiles($@"{filePath}\Autobahn.{moduleName}\Views\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).ToList().OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
+                GenerateXAMLFiles($@"{filePath}\Autobahn.{moduleName}\Views\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).ToList().OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
+                GenerateReferenceModels(filePath, domain, models.Where(m => m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
             }
         }
 
-        //private static void GenerateReferenceModels(string filePath, List<CEDSTable> tables, List<Type> models, List<CEDSElement> elements)
-        //{
-        //    foreach (var refmodel in RefModels.Keys)
-        //    {
-        //        var model = models.FirstOrDefault(m => m.Name == refmodel);
-        //        if (model != null)
-        //        {
-        //            var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
-        //            GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
-        //            GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
-        //            GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
-        //        }
-        //    }
-        //}
-
-        private static void GenerateReferenceList(string filePath, string moduleName, Type model)
+        private static void GenerateReferenceModels(string filePath, AutobahnDomain domin, List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            var csv = new CEDSService();
-            var refernceModelList = csv.ReadReferenceFile($@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{model.Name}.csv");
-            var fullFilePath = $"{filePath}{model.Name}List.cs";
-            using (var stream = File.CreateText(fullFilePath))
+            //foreach (var refmodel in RefModels.Keys)
+            //{
+            //    var model = models.FirstOrDefault(m => m.Name == refmodel);
+            //    if (model != null)
+            //    {
+            //        var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
+            //        GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
+            //        GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
+            //        GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
+            //    }
+            //}
+        }
+
+        private static void GenerateReferenceList(string filePath, AutobahnDomain domain, AutobahnTable model)
+        {
+            var csv = new CSVServices();
+            var refernceModelList = csv.ReadReferenceFile($@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{model.ModelName}.csv");
+            using (var stream = File.CreateText($"{filePath}{model.ModelName}List.cs"))
             {
                 stream.WriteLine($"//**********************************************************");
-                stream.WriteLine($"//* DomainName: {moduleName}");
-                stream.WriteLine($"//* FileName:   {model.Name}List.cs");
+                stream.WriteLine($"//* DomainName: {domain.Name}");
+                stream.WriteLine($"//* FileName:   {model.ModelName}List.cs");
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine("");
                 stream.WriteLine($"using Autobahn.Common.ViewModels;");
                 stream.WriteLine("");
-                stream.WriteLine($"namespace {moduleName}.Models");
+                stream.WriteLine($"namespace {domain.Module}.Models");
                 stream.WriteLine("{");
                 stream.WriteLine($"     /// <summary>");
-                stream.WriteLine($"     /// The list of {model.Name} Models");
+                stream.WriteLine($"     /// The list of {model.ModelName} Models");
                 stream.WriteLine($"     /// </summary>");
                 stream.WriteLine($@"    public static partial class ReferenceLists");
                 stream.WriteLine($@"    {{");
                 stream.WriteLine($@"        /// <summary>");
-                stream.WriteLine($@"        /// The complete <see cref=""{model.Name}Model""> List");
+                stream.WriteLine($@"        /// The complete <see cref=""{model.ModelName}Model""> List");
                 stream.WriteLine($"         /// </summary>");
-                stream.WriteLine($@"        public static List<{model.Name}Model> {model.Name}List = new List<{model.Name}Model>");
+                stream.WriteLine($@"        public static List<{model.ModelName}Model> {model.ModelName}List = new List<{model.ModelName}Model>");
                 stream.WriteLine($@"        {{");
                 var quote = "\"";
                 foreach (var item in refernceModelList)
@@ -81,14 +83,14 @@ namespace AutobahnCodeGen
                     var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
                     var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
                     var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
-                    stream.WriteLine($@"            new {model.Name}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+                    stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
                 }
                 stream.WriteLine($@"        }};");
                 stream.WriteLine();
                 stream.WriteLine($@"        /// <summary>");
-                stream.WriteLine($@"        /// The Reference {model.Name} Pick List");
+                stream.WriteLine($@"        /// The Reference {model.ModelName} Pick List");
                 stream.WriteLine($"         /// </summary>");
-                stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.Name}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
+                stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.ModelName}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
                 stream.WriteLine($@"        {{");
                 foreach (var item in refernceModelList)
                 {
@@ -102,121 +104,71 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateReferenceFile(string filePath, string moduleName, Type model, List<AutobahnTable> tables, List<CEDSElement> elements)
+        private static void GenerateReferenceFile(string filePath, AutobahnDomain domain, AutobahnTable model, List<AutobahnElement> elements)
         {
-            var fullFilePath = $"{filePath}{model.Name}Model.cs";
-            using (var stream = File.CreateText(fullFilePath))
+            using (var stream = File.CreateText($"{filePath}{model.ModelName}Model.cs"))
             {
                 stream.WriteLine($"//**********************************************************");
-                stream.WriteLine($"//* DomainName: {moduleName}");
-                stream.WriteLine($"//* FileName:   {model.Name}Model.cs");
+                stream.WriteLine($"//* DomainName: {domain.Name}");
+                stream.WriteLine($"//* FileName:   {model.ModelName}Model.cs");
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine("");
                 stream.WriteLine($"using Autobahn.Common.Models;");
-                stream.WriteLine($"using {moduleName}.Interfaces;");
+                stream.WriteLine($"using {model.ModelName}.Interfaces;");
                 stream.WriteLine("");
-                stream.WriteLine($"namespace {moduleName}.Models");
+                stream.WriteLine($"namespace {model.ModelName}.Models");
                 stream.WriteLine("{");
                 stream.WriteLine($"     /// <summary>");
-                stream.WriteLine($"     /// The {model.Name} Model");
+                stream.WriteLine($"     /// The {model.ModelName} Model");
                 stream.WriteLine($"     /// </summary>");
-                stream.WriteLine($@"    public partial class {model.Name}Model : ReferenceModelBase, I{model.Name}Model");
+                stream.WriteLine($@"    public partial class {model.ModelName}Model : ReferenceModelBase, I{model.ModelName}Model");
                 stream.WriteLine($@"    {{");
-                List<string> propertiesToIgnore = new List<string>
-                {
-                    "RecordStartDateTime",
-                    "RecordEndDateTime",
-                    "RecordStatusId",
-                    "Description",
-                    "Code",
-                    "Definition",
-                    "RefJurisdictionId",
-                    "SortOrder",
-                    "DataCollectionId"
-                };
-                GenerateProperties(stream, model, elements, moduleName, propertiesToIgnore, false);
+                GenerateProperties(stream, model, elements, false);
                 stream.WriteLine($@"    }}");
                 stream.WriteLine("}");
             }
         }
 
-        private static void GenerateReferenceInterfaceFile(string filePath, string moduleName, Type model, List<AutobahnTable> tables, List<CEDSElement> elements)
+        private static void GenerateReferenceInterfaceFile(string filePath, AutobahnDomain domain, AutobahnTable model, List<AutobahnElement> elements)
         {
-            var fullFilePath = $"{filePath}I{model.Name}Model.cs";
-            using (var stream = File.CreateText(fullFilePath))
+            using (var stream = File.CreateText($"{filePath}I{model.ModelName}Model.cs"))
             {
                 stream.WriteLine($"//**********************************************************");
-                stream.WriteLine($"//* DomainName: {moduleName}");
-                stream.WriteLine($"//* FileName:   I{model.Name}Model.cs");
+                stream.WriteLine($"//* DomainName: {domain.Name}");
+                stream.WriteLine($"//* FileName:   I{model.ModelName}Model.cs");
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine("");
                 stream.WriteLine($"using Autobahn.Common.Interfaces;");
                 stream.WriteLine("");
-                stream.WriteLine($"namespace {moduleName}.Interfaces");
+                stream.WriteLine($"namespace Autobahn.{domain.Module}.Interfaces");
                 stream.WriteLine("{");
                 stream.WriteLine($"     /// <summary>");
-                stream.WriteLine($"     /// The {model.Name} Interface Model");
+                stream.WriteLine($"     /// The {model.ModelName} Interface Model");
                 stream.WriteLine($"     /// </summary>");
-                stream.WriteLine($@"    public partial interface I{model.Name}Model : IReferenceModel");
+                stream.WriteLine($@"    public partial interface I{model.ModelName}Model : IReferenceModel");
                 stream.WriteLine($@"    {{");
-                List<string> propertiesToIgnore = new List<string>
-                {
-                    "RecordStartDateTime",
-                    "RecordEndDateTime",
-                    "RecordStatusId",
-                    "Description",
-                    "Code",
-                    "Definition",
-                    "RefJurisdictionId",
-                    "SortOrder",
-                    "DataCollectionId"
-                };
-                GenerateProperties(stream, model, elements, moduleName, propertiesToIgnore, true);
+                GenerateProperties(stream, model, elements, true);
                 stream.WriteLine($@"    }}");
                 stream.WriteLine("}");
             }
         }
 
-        private static void GenerateViews(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
+        private static void GenerateXAMLFiles(string filePath, AutobahnDomain domain, List<AutobahnTable> tables, List<AutobahnElement> elements)
         {
-            var viewlist = new List<Type>();
-            foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
+            foreach (var model in tables)
             {
-                if (!model.IsClass)
-                {
-                    continue;
-                }
-
-                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
-                if (file != null)
-                {
-                    if (!viewlist.Contains(model))
-                    {
-                        viewlist.Add(model);
-                    }
-                }
-            }
-            GenerateViewFile($@"{filePath}\{moduleName}\Views\", moduleName, tables, viewlist, elements);
-            GenerateXAMLFile($@"{filePath}\{moduleName}\Views\", moduleName, tables, viewlist, elements);
-        }
-
-        private static void GenerateXAMLFile(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> models, List<CEDSElement> elements)
-        {
-            foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
-            {
-                var fname = $@"{filePath}\{model.Name}View.xaml";
-                using (var stream = File.CreateText(fname))
+                using (var stream = File.CreateText($@"{filePath}\{model.ModelName}View.xaml"))
                 {
                     stream.WriteLine($"<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
                     stream.WriteLine($"<!--");
-                    stream.WriteLine($" DomainName: {moduleName}");
-                    stream.WriteLine($" FileName:   {model.Name}View.cs");
+                    stream.WriteLine($" DomainName: {domain.Name}");
+                    stream.WriteLine($" FileName:   {model.ModelName}View.cs");
                     stream.WriteLine($"-->");
                     stream.WriteLine($"<ContentPage xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"");
                     stream.WriteLine($"             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"");
-                    stream.WriteLine($"             xmlns:vm= \"clr-namespace:{moduleName}.ViewModels\"");
-                    stream.WriteLine($"             x:Class=\"{moduleName}.Views.{model.Name}View\"");
-                    stream.WriteLine($"             x:DataType=\"vm:{model.Name}ViewModel\"");
+                    stream.WriteLine($"             xmlns:vm= \"clr-namespace:Autobahn.{domain.Module}.ViewModels\"");
+                    stream.WriteLine($"             x:Class=\"Autobahn.{domain.Module}.Views.{model.ModelName}View\"");
+                    stream.WriteLine($"             x:DataType=\"vm:{model.ModelName}ViewModel\"");
                     stream.WriteLine($"             Title=\"{{Binding ViewTitle}}\">");
                     stream.WriteLine("    <VerticalStackLayout>");
                     stream.WriteLine("        <Label");
@@ -229,32 +181,31 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViewFile(string filePath, string moduleName, List<AutobahnTable> tables, List<Type> models, List<CEDSElement> elements)
+        private static void GenerateViewFiles(string filePath, AutobahnDomain domain, List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
+            foreach (var model in models.Where(m => !m.ModelName.StartsWith("Ref")))
             {
-                var fname = $@"{filePath}\{model.Name}View.xaml.cs";
-                using (var stream = File.CreateText(fname))
+                using (var stream = File.CreateText($@"{filePath}\{model.ModelName}View.xaml.cs"))
                 {
                     stream.WriteLine($"//**********************************************************");
-                    stream.WriteLine($"//* DomainName: {moduleName}");
-                    stream.WriteLine($"//* FileName:   {model.Name}View.cs");
+                    stream.WriteLine($"//* DomainName: {domain.Name}");
+                    stream.WriteLine($"//* FileName:   {model.ModelName}View.cs");
                     stream.WriteLine($"//**********************************************************");
                     stream.WriteLine("");
-                    stream.WriteLine($"using {moduleName}.ViewModels;");
+                    stream.WriteLine($"using Autobahn.{domain.Module}.ViewModels;");
                     stream.WriteLine("");
-                    stream.WriteLine($"namespace {moduleName}.Views");
+                    stream.WriteLine($"namespace Autobahn.{domain.Module}.Views");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
-                    stream.WriteLine($"     /// The {model.Name}View");
+                    stream.WriteLine($"     /// The {model.ModelName}View");
                     stream.WriteLine($"     /// </summary>");
                     stream.WriteLine($"     [XamlCompilation(XamlCompilationOptions.Compile)]");
-                    stream.WriteLine($@"    public partial class {model.Name}View : ContentPage");
+                    stream.WriteLine($@"    public partial class {model.ModelName}View : ContentPage");
                     stream.WriteLine($@"    {{");
                     stream.WriteLine($@"        /// <summary>");
-                    stream.WriteLine($@"        /// Inject the I{model.Name}ViewModel as the data context for the view");
+                    stream.WriteLine($@"        /// Inject the I{model.ModelName}ViewModel as the data context for the view");
                     stream.WriteLine($@"        /// </summary>");
-                    stream.WriteLine($@"        public {model.Name}View(I{model.Name}ViewModel vm)");
+                    stream.WriteLine($@"        public {model.ModelName}View(I{model.ModelName}ViewModel vm)");
                     stream.WriteLine($@"        {{");
                     stream.WriteLine($@"            BindingContext  = vm;");
                     stream.WriteLine($@"        }}");
@@ -264,346 +215,147 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViewModels(string filePath, string moduleName,
-            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
+        private static void GenerateViewModelFiles(string filePath, AutobahnDomain domain,
+            List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            var vmlist = new List<Type>();
-            foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
+            foreach (var model in models)
             {
-                if (!model.IsClass)
-                {
-                    continue;
-                }
-
-                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
-                if (file != null)
-                {
-                    if (!vmlist.Contains(model))
-                    {
-                        vmlist.Add(model);
-                    }
-                }
-            }
-            GenerateViewModelFile($@"{filePath}\{moduleName}\ViewModels\", moduleName, tables, vmlist, elements);
-        }
-
-        private static void GenerateViewModelFile(string filePath, string moduleName,
-            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
-        {
-            foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
-            {
-                var fullFilePath = $"{filePath}{model.Name}ViewModel.cs";
-                using (var stream = File.CreateText(fullFilePath))
+                using (var stream = File.CreateText($@"{filePath}\{model.ModelName}"))
                 {
                     stream.WriteLine($"//**********************************************************");
-                    stream.WriteLine($"//* DomainName: {moduleName}");
-                    stream.WriteLine($"//* FileName:   {model.Name}ViewModel.cs");
+                    stream.WriteLine($"//* DomainName: {domain.Name}");
+                    stream.WriteLine($"//* FileName:   {model.ModelName}ViewModel.cs");
                     stream.WriteLine($"//**********************************************************");
                     stream.WriteLine("");
-                    if (moduleName != "Autobahn.Common")
+                    if (domain.Module != "Common")
                     {
                         stream.WriteLine($"using Autobahn.Common.Interfaces;");
                         stream.WriteLine($"using Autobahn.Common.ViewModels;");
                     }
                     stream.WriteLine("");
-                    stream.WriteLine($"namespace {moduleName}.ViewModels");
+                    stream.WriteLine($"namespace Autobahn.{domain.Module}.ViewModels");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
-                    stream.WriteLine($"     /// The {model.Name}ViewModel");
+                    stream.WriteLine($"     /// The {model.ModelName}ViewModel");
                     stream.WriteLine($"     /// </summary>");
-                    stream.WriteLine($@"    public partial class {model.Name}ViewModel : ViewModelBase, Interfaces.I{model.Name}ViewModel");
+                    stream.WriteLine($@"    public partial class {model.ModelName}ViewModel : ViewModelBase, Interfaces.I{model.ModelName}ViewModel");
                     stream.WriteLine($@"    {{");
-                    List<string> propertiesToIgnore = new List<string>
-                    {
-                        "RecordStartDateTime",
-                        "RecordEndDateTime",
-                        "RecordStatusId",
-                        "DataCollectionId"
-                    };
-                    GenerateBindableProperties(stream, model, elements, moduleName, propertiesToIgnore);
+                    GenerateBindableProperties(stream, model, elements);
                     stream.WriteLine($@"    }}");
                     stream.WriteLine("}");
                 }
             }
         }
 
-        private static void GenerateInterfaces(string filePath, string moduleName,
-            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
+        private static void GenerateModelFiles(string filePath, AutobahnDomain domain, 
+            List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            var interfacelist = new List<Type>();
-            foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
+            foreach (var model in models.Where(m => !m.ModelName.StartsWith("Ref")))
             {
-                if (!model.IsClass)
-                {
-                    continue;
-                }
-
-                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
-                if (file != null)
-                {
-                    interfacelist.Add(model);
-                }
-            }
-            var fpath = $@"{filePath}\{moduleName}\Interfaces\";
-            GenerateModelInterfaceFiles(fpath, moduleName, interfacelist, elements);
-        }
-
-        private static void GenerateModels(string filePath, string moduleName,
-            List<AutobahnTable> tables, List<Type> classes, List<CEDSElement> elements)
-        {
-            var classlist = new List<Type>();
-            foreach (var model in classes.Where(m => !m.Name.StartsWith("Ref")))
-            {
-                if (!model.IsClass)
-                {
-                    continue;
-                }
-
-                var file = tables.FirstOrDefault(f => f.ModelName == model.Name);
-                if (file != null)
-                {
-                    classlist.Add(model);
-                }
-            }
-            var fpath = $@"{filePath}\{moduleName}\Models\";
-            GenerateModelFiles(fpath, moduleName, classlist, elements);
-        }
-
-        private static void GenerateModelFiles(string filePath, string moduleName, 
-            List<Type> models, List<CEDSElement> elements)
-        {
-            foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
-            {
-                var fname = $@"{filePath}\{model.Name}Model.cs";
-                using (var stream = File.CreateText(fname))
+                using (var stream = File.CreateText($@"{filePath}\{model.ModelName}Model.cs"))
                 {
                     stream.WriteLine($"//**********************************************************");
-                    stream.WriteLine($"//* DomainName: {moduleName}");
-                    stream.WriteLine($"//* FileName:   {model.Name}Model.cs");
+                    stream.WriteLine($"//* DomainName: {domain.Name}");
+                    stream.WriteLine($"//* FileName:   {model.ModelName}Model.cs");
                     stream.WriteLine($"//**********************************************************");
                     stream.WriteLine("");
-                    if (moduleName != "Autobahn.Common")
+                    if (domain.Module != "Common")
                     {
                         stream.WriteLine($"using Autobahn.Common.Interfaces;");
                         stream.WriteLine($"using Autobahn.Common.Models;");
                     }
                     stream.WriteLine("");
-                    stream.WriteLine($"namespace {moduleName}.Models");
+                    stream.WriteLine($"namespace Autobahn.{domain.Module}.Models");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
-                    stream.WriteLine($"     /// The {model.Name} Model");
+                    stream.WriteLine($"     /// The {model.ModelName} Model");
                     stream.WriteLine($"     /// </summary>");
-                    stream.WriteLine($@"    public partial class {model.Name}Model : AutobahnBase, Interfaces.I{model.Name}Model");
+                    stream.WriteLine($@"    public partial class {model.ModelName}Model : AutobahnBase, Interfaces.I{model.ModelName}Model");
                     stream.WriteLine($@"    {{");
-                    List<string> propertiesToIgnore = new List<string>
-                    {
-                        "RecordStartDateTime",
-                        "RecordEndDateTime",
-                        "RecordStatusId"
-                    };
-                    GenerateProperties(stream, model, elements, moduleName, propertiesToIgnore);
+                    GenerateProperties(stream, model, elements.Where(e => e.AutobahnTableList.Contains(model.Id)).ToList());
                     stream.WriteLine($@"    }}");
                     stream.WriteLine("}");
                 }
             }
         }
 
-        private static void GenerateModelInterfaceFiles(string filePath, string moduleName, 
-            List<Type> models, List<CEDSElement> elements)
+        private static void GenerateInterfaceFiles(string filePath, AutobahnDomain domain, 
+            List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")))
+            foreach (var model in models.Where(m => !m.ModelName.StartsWith("Ref")))
             {
-                var fname = $@"{filePath}\I{model.Name}Model.cs";
-                using (var stream = File.CreateText(fname))
+                using (var stream = File.CreateText($@"{filePath}\I{model.ModelName}Model.cs"))
                 {
                     stream.WriteLine($"//**********************************************************");
-                    stream.WriteLine($"//* DomainName: {moduleName}");
-                    stream.WriteLine($"//* FileName:   I{model.Name}Model.cs");
+                    stream.WriteLine($"//* DomainName: {domain.Name}");
+                    stream.WriteLine($"//* FileName:   I{model.ModelName}Model.cs");
                     stream.WriteLine($"//**********************************************************");
                     stream.WriteLine("");
-                    if (moduleName != "Autobahn.Common")
+                    if (domain.Module != "Common")
                     {
                         stream.WriteLine($"using Autobahn.Common.Interfaces;");
                     }
                     stream.WriteLine("");
-                    stream.WriteLine($"namespace {moduleName}.Interfaces");
+                    stream.WriteLine($"namespace Autobahn.{domain.Module}.Interfaces");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
-                    stream.WriteLine($"     /// The I{model.Name}Model Interface");
+                    stream.WriteLine($"     /// The I{model.ModelName}Model Interface");
                     stream.WriteLine($"     /// </summary>");
-                    stream.WriteLine($@"    public partial interface I{model.Name}Model : IAutobahnBase");
+                    stream.WriteLine($@"    public partial interface I{model.ModelName}Model : IAutobahnBase");
                     stream.WriteLine($@"    {{");
-                    List<string> propertiesToIgnore = new List<string>
-                    {
-                        "RecordStartDateTime",
-                        "RecordEndDateTime",
-                        "RecordStatusId",
-                        "DataCollectionId"
-                    };
-                    GenerateProperties(stream, model, elements, moduleName, propertiesToIgnore, true);
+                    GenerateProperties(stream, model, elements.Where(e => e.AutobahnTableList.Contains(model.Id)).ToList(), true);
                     stream.WriteLine($@"    }}");
                     stream.WriteLine("}");
                 }
             }
         }
 
-        private static void GenerateProperties(StreamWriter stream, Type model,
-            List<CEDSElement> elements, string moduleName, List<string> propertiesToIgnore, 
-            bool isInterface = false)
+        private static void GenerateProperties(StreamWriter stream, AutobahnTable model, 
+            List<AutobahnElement> elements, bool isInterface = false)
         {
-            foreach (var prop in model.GetProperties())
+            foreach (var prop in elements)
             {
-                // no virtual properties.  We will handle those later as service calls
-                if (prop.GetAccessors()[0].IsVirtual
-                    || prop.Name == $"{model.Name}Id"
-                    || propertiesToIgnore.Contains(prop.Name))
-                {
-                    continue;
-                }
-
-                var propName = prop.Name;
-                if (propName.EndsWith("Statu"))
-                {
-                    propName = propName.Replace("Statu", "Status");
-                }
-
                 var modifier = string.Empty;
                 if (!isInterface)
                 {
                     modifier = "public ";
                 }
-                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == propName);
+                var element = elements.FirstOrDefault(e => e.Id == model.AutobahnElementId);
                 if (element != null)
                 {
                     stream.WriteLine($"        /// <summary>");
                     stream.WriteLine($"        /// {element.Definition}");
                     stream.WriteLine($"        /// </summary>");
-                    if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                    {
-                        stream.WriteLine($"    {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get; set; }}");
-                    }
-                    else
-                    {
-                        stream.WriteLine($"    {modifier}{prop.PropertyType} {propName}  {{ get; set; }}");
-                    }
-                    stream.WriteLine();
-                    continue;
+                    stream.WriteLine($"        {modifier}{prop.PropertyType} {prop.TechnicalName} {{ get; set; }}");
                 }
-
-                if (prop.Name.EndsWith("Id"))
-                {
-                    var nospacesprop = prop.Name.Replace("Id", string.Empty);
-                    stream.WriteLine($"        /// <summary>");
-                    if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                    {
-                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{nospacesprop}\"/> model");
-                        stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid? {propName} {{ get; set; }}");
-                    }
-                    else
-                    {
-                        stream.WriteLine($"        /// Reference to a required instance of the <see cref=\"{nospacesprop}\"/> model");
-                        stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid {propName} {{ get; set; }}");
-                    }
-                    stream.WriteLine();
-                    continue;
-                }
-
-                if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                {
-                    stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// Defines the {model.Name}.{propName} nullable property");
-                    stream.WriteLine($"        /// </summary>");
-                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get; set; }}");
-                }
-                else
-                {
-                    stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// Defines the {model.Name}.{propName} non nullable property");
-                    stream.WriteLine($"        /// </summary>");
-                    stream.WriteLine($"        {modifier}{prop.PropertyType} {propName} {{ get; set; }}");
-                }
-                stream.WriteLine();
             }
         }
 
-        private static void GenerateBindableProperties(StreamWriter stream, Type model,
-            List<CEDSElement> elements, string moduleName, List<string> propertiesToIgnore, bool isInterface = false)
+        private static void GenerateBindableProperties(StreamWriter stream, AutobahnTable model,
+            List<AutobahnElement> elements)
         {
-            if (!isInterface)
-            {
-                GenerateBackingFields(stream, model, propertiesToIgnore);
-            }
+            GenerateBackingFields(stream, model, elements);
 
-            var proplist = new List<PropertyInfo>();
             stream.WriteLine($"        #region Properties");
             stream.WriteLine($"        /// <summary>");
-            stream.WriteLine($"        /// The title of the {model.Name}ViewModel");
+            stream.WriteLine($"        /// The title of the {model.ModelName}ViewModel");
             stream.WriteLine($"        /// </summary>");
             stream.WriteLine($"        public string ViewTitle {{ get => _viewTitle; set => SetProperty(ref _viewTitle, value); }}");
             stream.WriteLine();
-            foreach (var prop in model.GetProperties())
+            foreach (var prop in elements)
             {
-                // no virtual properties.  We will handle those later as service calls
-                if (prop.GetAccessors()[0].IsVirtual
-                    || prop.Name == $"{model.Name}Id"
-                    || propertiesToIgnore.Contains(prop.Name))
+                var modifier = "private";
+                stream.WriteLine($"        /// <summary>");
+                if (prop.TechnicalName.EndsWith("Id"))
                 {
-                    continue;
-                }
-
-                var propName = prop.Name;
-                if (propName.EndsWith("Statu"))
-                {
-                    propName = propName.Replace("Statu", "Status");
-                }
-
-                var modifier = string.Empty;
-                if (!isInterface)
-                {
-                    modifier = "public ";
-                }
-
-                if (prop.Name.EndsWith("Id"))
-                {
-                    if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                    {
-                        stream.WriteLine($"        /// <summary>");
-                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.Name}\"/> model");
-                        stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid? {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
-                    }
-                    else
-                    {
-                        stream.WriteLine($"        /// <summary>");
-                        stream.WriteLine($"        /// Reference to a required instance of the <see cref=\"{propName}\"/> model");
-                        stream.WriteLine($"        /// </summary>");
-                        stream.WriteLine($"        {modifier}Guid {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
-                    }
-                    stream.WriteLine();
-                    proplist.Add(prop);
-                    continue;
-                }
-
-                var element = elements.FirstOrDefault(e => e.TableName == model.Name && e.TechnicalName == propName);
-                if (element != null)
-                {
-                    stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// {element.Definition}");
-                    stream.WriteLine($"        /// </summary>");
-                }
-
-                if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                {
-                    stream.WriteLine($"        {modifier}{Nullable.GetUnderlyingType(prop.PropertyType)}? {propName} {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
+                    stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.TechnicalName.Replace("Id", string.Empty)}\"/> model");
                 }
                 else
                 {
-                    stream.WriteLine($"        {modifier}{prop.PropertyType} {propName}  {{ get => _{propName}; set => SetProperty(ref _{propName}, value); }}");
+                    stream.WriteLine($"        /// {prop.Definition}");
                 }
-                proplist.Add(prop);
-                stream.WriteLine();
+                stream.WriteLine($"        /// </summary>");
+                stream.WriteLine($"        {modifier}{prop.PropertyType} {prop.TechnicalName} {{ get => _{prop.TechnicalName}; set => SetProperty(ref _{prop.TechnicalName}, value); }}");
             }
             stream.WriteLine($"        #endregion");
 
@@ -612,22 +364,13 @@ namespace AutobahnCodeGen
             stream.WriteLine($"        /// <summary>");
             stream.WriteLine($"        /// Load the viewmodel from a model");
             stream.WriteLine($"        /// </summary>");
-            stream.WriteLine($"        public void Load(Interfaces.I{model.Name} model)");
+            stream.WriteLine($"        public void Load(Interfaces.I{model.ModelName} model)");
             stream.WriteLine($"        {{");
             stream.WriteLine($"            IsBusy = true;");
             stream.WriteLine($"            Id = model.Id;");
-            foreach (var prop in proplist)
+            foreach (var prop in elements)
             {
-                var propName = prop.Name;
-                if (propName.EndsWith("Statu"))
-                {
-                    propName = propName.Replace("Statu", "Status");
-                }
-                if (propertiesToIgnore.Contains(propName))
-                {
-                    continue;
-                }
-                stream.WriteLine($"            {propName} = model.{propName};");
+                stream.WriteLine($"            {prop.TechnicalName} = model.{prop.TechnicalName};");
             }
             stream.WriteLine($"            _isChanged = false;");
             stream.WriteLine($"            IsNew = false;");
@@ -635,60 +378,17 @@ namespace AutobahnCodeGen
             stream.WriteLine($"        }}");
         }
 
-        private static void GenerateBackingFields(StreamWriter stream, Type model, List<string> propertiesToIgnore)
+        private static void GenerateBackingFields(StreamWriter stream, AutobahnTable model, List<AutobahnElement> elements)
         {
             stream.WriteLine($"#region \"Backing Fields\"");
             stream.WriteLine($"        // Every viewmodel has a Title property");
-            stream.WriteLine($"        private string _viewTitle = \"Hello from {model.Name}\";");
+            stream.WriteLine($"        private string _viewTitle = \"Hello from {model.ModelName}\";");
             stream.WriteLine();
-            foreach (var prop in model.GetProperties())
+            foreach (var prop in elements)
             {
-                // no virtual properties.  We will handle those later as service calls
-                // the id property of the class is inherited
-                if (prop.GetAccessors()[0].IsVirtual 
-                    || prop.Name == $"{model.Name}Id"
-                    || propertiesToIgnore.Contains(model.Name))
-                {
-                    continue;
-                }
-
-                var propName = prop.Name;
-                if (propName.EndsWith("Statu"))
-                {
-                    propName = propName.Replace("Statu", "Status");
-                }
-
-                if (prop.Name.EndsWith("Id"))
-                {
-                    // Nullable regular property backing field.
-                    if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                    {
-                        stream.WriteLine($"        // member variable for the {propName} property");
-                        stream.WriteLine($"        private Guid? _{propName};");
-                        stream.WriteLine();
-                    }
-                    else
-                    {
-                        stream.WriteLine($"        // member variable for the {propName} property");
-                        stream.WriteLine($"        private Guid _{propName};");
-                        stream.WriteLine();
-                    }
-                    continue;
-                }
-
-                // Nullable regular property backing field.
-                if (Nullable.GetUnderlyingType(prop.PropertyType) != null)
-                {
-                    stream.WriteLine($"        // member variable for the {propName} property");
-                    stream.WriteLine($"        private {Nullable.GetUnderlyingType(prop.PropertyType)}? _{propName};");
+                    stream.WriteLine($"        // member variable for the {prop.TechnicalName} property");
+                    stream.WriteLine($"        private {prop.PropertyType} _{prop.TechnicalName};");
                     stream.WriteLine();
-                }
-                else
-                {
-                    stream.WriteLine($"        // member variable for the {propName} property");
-                    stream.WriteLine($"        private {prop.PropertyType} _{propName};");
-                    stream.WriteLine();
-                }
             }
             stream.WriteLine($"#endregion");
             stream.WriteLine();
@@ -711,20 +411,20 @@ namespace AutobahnCodeGen
             }
         }
 
-        private static void GenerateViewItemGroups(string filePath, List<string> models)
+        private static void GenerateViewItemGroups(string filePath, List<AutobahnTable> models)
         {
             var project = XDocument.Load(filePath);
             var itemgroup = new XElement("ItemGroup");
             var itemgrouplist = new List<string>();
-            foreach (var model in models.Where(t => !t.StartsWith("Ref")))
+            foreach (var model in models.Where(t => !t.ModelName.StartsWith("Ref")))
             {
-                if (itemgrouplist.Contains(model))
+                if (itemgrouplist.Contains(model.ModelName))
                 {
                     continue;
                 }
-                itemgrouplist.Add(model);
+                itemgrouplist.Add(model.ModelName);
                 var mauixaml = new XElement("MauiXaml");
-                var updateattrib = new XAttribute("Update", $@"Views\{model}View.xaml");
+                var updateattrib = new XAttribute("Update", $@"Views\{model.ModelName}View.xaml");
                 var buildaction = new XElement("Generator", "MSBuild:Compile"); 
                 mauixaml.Add(updateattrib);
                 mauixaml.Add(buildaction);

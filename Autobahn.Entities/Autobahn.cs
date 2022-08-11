@@ -9,7 +9,6 @@ namespace Autobahn.Entities
         {
         }
 
-        public virtual DbSet<C_CEDSElements> C_CEDSElements { get; set; }
         public virtual DbSet<Activity> Activities { get; set; }
         public virtual DbSet<ActivityRecognition> ActivityRecognitions { get; set; }
         public virtual DbSet<AeCourse> AeCourses { get; set; }
@@ -995,50 +994,9 @@ namespace Autobahn.Entities
         public virtual DbSet<WorkforceEmploymentQuarterlyData> WorkforceEmploymentQuarterlyDatas { get; set; }
         public virtual DbSet<WorkforceProgramParticipantCohort> WorkforceProgramParticipantCohorts { get; set; }
         public virtual DbSet<WorkforceProgramParticipation> WorkforceProgramParticipations { get; set; }
-        public virtual DbSet<C_CEDStoNDSMapping> C_CEDStoNDSMapping { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.GlobalID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.ElementName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.AltName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.Definition)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.Format)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.UsageNotes)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.URL)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.Version)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.ChangedInThisVersionInd)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDSElements>()
-                .Property(e => e.ChangeNotes)
-                .IsUnicode(false);
-
             modelBuilder.Entity<AeStaff>()
                 .Property(e => e.YearsOfPriorAeTeachingExperience)
                 .HasPrecision(4, 2);
@@ -9882,18 +9840,6 @@ namespace Autobahn.Entities
             modelBuilder.Entity<WorkforceProgramParticipation>()
                 .Property(e => e.DiplomaOrCredentialAwardDate)
                 .IsFixedLength();
-
-            modelBuilder.Entity<C_CEDStoNDSMapping>()
-                .Property(e => e.GlobalID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDStoNDSMapping>()
-                .Property(e => e.TableName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<C_CEDStoNDSMapping>()
-                .Property(e => e.ColumnName)
-                .IsUnicode(false);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Reflection;
@@ -9,16 +11,27 @@ namespace AutobahnCodeGen
 {
     internal class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Return the list of autobahn domains
+        /// </summary>
+        /// <returns>Return the list of Autobahn domains</returns>
+        private static List<AutobahnDomain> GetAutobahnDomains()
         {
-            Dictionary<string, List<ModelProperty>> ModelProperties = new Dictionary<string, List<ModelProperty>>();
-            var csv = new CEDSService();
-            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
-            var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
-            var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
+            var csv = new CSVServices();
+            return csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
+        }
 
-            //Add any missing clases and columns from the entites
+        /// <summary>
+        /// Return the list of autobahn tables
+        /// </summary>
+        /// <returns>Return the list of Autobahn tables</returns>
+        private static List<AutobahnTable> GetAutobahnTables(Assembly types, List<AutobahnDomain> autobahnDomains)
+        {
+            var csv = new CSVServices();
+            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
+            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+
+            //Add any missing classes and columns from the entities
             foreach (var classtype in types.GetTypes().ToList())
             {
                 if (!classtype.IsClass
@@ -162,125 +175,123 @@ namespace AutobahnCodeGen
                 }
             }
 
-            MauiModule.GenerateModule(autobahnDomains);
-
+            // Write the updated table file
             csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", autobahnTables);
-            //csv.WriteNDSElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\NDSElementsWithTechnicalName.csv", ndsElementsMetadata);
+
+            return autobahnTables;
+        }
+
+        private static List<AutobahnElement> GetAutobahnElments(List<AutobahnTable> tables, Assembly types)
+        {
+            var csv = new CSVServices();
+            var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+            var autobahnElements = new List<AutobahnElement>();
 
             // create a lookup table of models to properties
-            //foreach (var model in types.GetTypes().ToList())
-            //{
-            //    var modelName = model.Name;
-            //    List<string> propertiesToIgnore = new List<string>
-            //    {
-            //        "RecordStartDateTime",
-            //        "RecordEndDateTime",
-            //        "RecordStatusId",
-            //        "Description",
-            //        "Code",
-            //        "Definition",
-            //        "RefJurisdictionId",
-            //        "SortOrder",
-            //        "DataCollectionId",
-            //        $"{modelName}Id"
-            //    };
-            //    //foreach (var prop in model.GetProperties())
-            //    //{
-            //    //    // no virtual properties.  We will handle those later as service calls
-            //    //    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
-            //    //    {
-            //    //        continue;
-            //    //    }
+            foreach (var model in types.GetTypes().ToList())
+            {
+                var modelName = model.Name;
+                if (model.Name.EndsWith("Statu"))
+                {
+                    modelName = modelName.Replace("Statu", "Status");
+                }
+                var tableMeta = tables.FirstOrDefault(t => t.ModelName == modelName);
+                List<string> propertiesToIgnore = new List<string>
+                {
+                    "RecordStartDateTime",
+                    "RecordEndDateTime",
+                    "RecordStatusId",
+                    "Description",
+                    "Code",
+                    "Definition",
+                    "RefJurisdictionId",
+                    "SortOrder",
+                    "DataCollectionId",
+                    $"{modelName}Id"
+                };
 
-            //    //    if (model.Name.EndsWith("Statu"))
-            //    //    {
-            //    //        modelName = modelName.Replace("Statu", "Status");
-            //    //    }
-            //    //    var propName = prop.Name;
-            //    //    if (prop.Name.EndsWith("Statu"))
-            //    //    {
-            //    //        propName = propName.Replace("Statu", "Status");
-            //    //    }
-            //    //    var tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-            //    //                                                       && t.ColumnName == prop.Name);
-            //    //    if (model.Name.EndsWith("Statu") || tableMeta == null)
-            //    //    {
-            //    //        modelName = propName.Replace("Statu", "Status");
-            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == modelName
-            //    //                                                       && t.ColumnName == propName);
-            //    //    }
-            //    //    if (prop.Name.EndsWith("Statu") || tableMeta == null)
-            //    //    {
-            //    //        propName = propName.Replace("Statu", "Status");
-            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-            //    //                                                           && t.ColumnName == propName);
-            //    //    }
+                // Copy over the element data
+                foreach (var prop in model.GetProperties())
+                {
+                    CEDSElement elementMeta;
+        
+                    // no virtual properties.  We will handle those later as service calls
+                    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
+                    {
+                        continue;
+                    }
+                    var propName = prop.Name;
+                    if (prop.Name.EndsWith("Statu"))
+                    {
+                        propName = propName.Replace("Statu", "Status");
+                    }
+                    if (tableMeta == null)
+                    {
+                        string propAsTable = propName;
+                        if (propName.EndsWith("Id"))
+                        {
+                            propAsTable = propName.Replace("Id", String.Empty);
+                        }
+                        tableMeta = tables.FirstOrDefault(t => t.ModelName == modelName
+                                                               && t.ColumnName == propAsTable);
+                    }
 
-            //    //    var tableMetaOnly = false;
-            //    //    if (tableMeta == null)
-            //    //    {
-            //    //        if (prop.Name.EndsWith("Id"))
-            //    //        {
-            //    //            var id = "Id";
-            //    //            tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == prop.Name.Replace(id, string.Empty)
-            //    //                                                           && t.ColumnName == null);
-            //    //            if (tableMeta == null)
-            //    //            {
-            //    //                Console.WriteLine($"retry table {model.Name} with column name {prop.Name} as {prop.Name.Replace(id, string.Empty)}");
-            //    //            }
-            //    //            else
-            //    //            {
-            //    //                tableMetaOnly = true;
-            //    //            }
-            //    //        }
-            //    //    }
-            //    //    if (tableMeta == null)
-            //    //    {
-            //    //        tableMeta = tablesMetadata.FirstOrDefault(t => t.TableName == model.Name
-            //    //                                                       && t.ColumnName == null);
-            //    //        if (tableMeta != null)
-            //    //        {
-            //    //            tableMetaOnly = true;
-            //    //        }
-            //    //    }
-            //    //    CEDSElement element = null;
-            //    //    if (tableMeta?.GlobalID != null)
-            //    //    {
-            //    //        element = cedsElementsMetadata.FirstOrDefault(c => c.GlobalID == tableMeta.GlobalID);
-            //    //    }
+                    string propertype = string.Empty;
+                    if (propName.EndsWith("Id"))
+                    {
+                        propertype = Nullable.GetUnderlyingType(prop.PropertyType) != null ? "Guid?" : "Guid";
+                    }
+                    else
+                    {
+                        propertype = Nullable.GetUnderlyingType(prop.PropertyType) != null 
+                            ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?" 
+                            : $"{prop.PropertyType}";
+                    }
+                    elementMeta = CEDSElements.FirstOrDefault(e => e.GlobalID == tableMeta?.GlobalId);
+                    var autobahnElement = new AutobahnElement
+                    {
+                        PropertyType = propertype,
+                        TechnicalName = propName,
+                        AltName = elementMeta?.AlternateName,
+                        ChangeNotes = elementMeta?.ChangeNotes,
+                        Definition = elementMeta?.Definition,
+                        ElementName = elementMeta?.ElementName,
+                        Format = elementMeta?.Format,
+                        GlobalId = elementMeta?.GlobalID,
+                        HasOptionSet = elementMeta?.OptionSet,
+                        TermID = elementMeta?.TermId,
+                        URL = elementMeta?.URL,
+                        UsageNotes = elementMeta?.UsageNotes,
+                        Version = elementMeta?.Version
+                    };
+                    if (!autobahnElement.AutobahnDomainList.Contains(tableMeta?.AutobahnDomainId))
+                    {
+                        autobahnElement.AutobahnDomainList.Add(tableMeta?.AutobahnDomainId);
+                    }
+                    if (!autobahnElement.AutobahnTableList.Contains(tableMeta?.Id))
+                    {
+                        autobahnElement.AutobahnTableList.Add(tableMeta?.Id);
+                    }
+                    autobahnElements.Add(autobahnElement);
+                }
+            }
 
-            //    //    var modelProperty = new ModelProperty
-            //    //    {
-            //    //        Domain = tableMeta?.Domain ?? "Reference",
-            //    //        Element = element,
-            //    //        GlobalId = tableMeta?.GlobalID,
-            //    //        ModelName = modelName,
-            //    //        ModelType = model,
-            //    //        PropertyInfo = prop,
-            //    //        PropertyName = propName
-            //    //    };
-            //    //    if (tableMetaOnly)
-            //    //    {
-            //    //        modelProperty.PropertyInfo = null;
-            //    //        modelProperty.PropertyName = modelName;
-            //    //    }
+            // save off the updated elements
+            csv.WriteAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", autobahnElements);
 
-            //    //    if (ModelProperties.Keys.Contains(modelProperty.PropertyName))
-            //    //    {
-            //    //        var hasprop = ModelProperties[modelProperty.PropertyName]
-            //    //            .FirstOrDefault(p => p.ModelName == modelProperty.ModelName 
-            //    //                                 && p.PropertyName == modelProperty.PropertyName);
-            //    //        if (hasprop == null)
-            //    //        {
-            //    //            ModelProperties[propName].Add(modelProperty);
-            //    //        }
-            //    //    }
-            //    //    else
-            //    //    {
-            //    //        ModelProperties.Add(propName, new List<ModelProperty> { modelProperty });
-            //    //    }
-            //    //}
-            //}
+            return autobahnElements;
+        }
+
+        static void Main(string[] args)
+        {
+            Dictionary<string, List<ModelProperty>> ModelProperties = new Dictionary<string, List<ModelProperty>>();
+            var csv = new CSVServices();
+            var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
+            var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
+            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv");
+            var autobahnElements = GetAutobahnElments(autobahnTables, types);
+
+            MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements);
         }
     }
 }

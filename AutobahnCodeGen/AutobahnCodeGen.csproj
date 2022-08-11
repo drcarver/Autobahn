@@ -112,7 +112,7 @@
     <Compile Include="CEDSElement.cs" />
     <Compile Include="NDSElementMap.cs" />
     <Compile Include="CEDSMap.cs" />
-    <Compile Include="CEDSService.cs" />
+    <Compile Include="CSVServices.cs" />
     <Compile Include="AutobahnDomainMap.cs" />
     <Compile Include="MauiModule.cs" />
     <Compile Include="Program.cs" />
