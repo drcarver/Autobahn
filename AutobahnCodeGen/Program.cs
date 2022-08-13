@@ -181,7 +181,7 @@ namespace AutobahnCodeGen
             return autobahnTables;
         }
 
-        private static List<AutobahnElement> GetAutobahnElments(List<AutobahnTable> tables, Assembly types)
+        private static List<AutobahnElement> GetAutobahnElements(List<AutobahnTable> tables, Assembly types)
         {
             var csv = new CSVServices();
             var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
@@ -216,7 +216,7 @@ namespace AutobahnCodeGen
                     CEDSElement elementMeta;
         
                     // no virtual properties.  We will handle those later as service calls
-                    if (prop.GetAccessors()[0].IsVirtual || propertiesToIgnore.Contains(prop.Name))
+                    if (propertiesToIgnore.Contains(prop.Name))
                     {
                         continue;
                     }
@@ -262,7 +262,8 @@ namespace AutobahnCodeGen
                         TermID = elementMeta?.TermId,
                         URL = elementMeta?.URL,
                         UsageNotes = elementMeta?.UsageNotes,
-                        Version = elementMeta?.Version
+                        Version = elementMeta?.Version,
+                        IsVirtual = prop.GetAccessors()[0].IsVirtual
                     };
                     if (!autobahnElement.AutobahnDomainList.Contains(tableMeta?.AutobahnDomainId))
                     {
@@ -288,8 +289,8 @@ namespace AutobahnCodeGen
             var csv = new CSVServices();
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
             var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv");
-            var autobahnElements = GetAutobahnElments(autobahnTables, types);
+            var autobahnTables = GetAutobahnTables(types, autobahnDomains);
+            var autobahnElements = GetAutobahnElements(autobahnTables, types);
 
             MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements);
         }
