@@ -15,7 +15,7 @@ namespace Autobahn.Entities
             AssessmentPersonalNeedsProfileContents = new HashSet<AssessmentPersonalNeedsProfileContent>();
             AssessmentPersonalNeedsProfileControls = new HashSet<AssessmentPersonalNeedsProfileControl>();
             AssessmentPersonalNeedsProfileDisplays = new HashSet<AssessmentPersonalNeedsProfileDisplay>();
-            Person_AssessmentPersonalNeedsProfile = new HashSet<Person_AssessmentPersonalNeedsProfile>();
+            PersonAssessmentPersonalNeedsProfile = new HashSet<PersonAssessmentPersonalNeedsProfile>();
         }
 
         public int AssessmentPersonalNeedsProfileId { get; set; }
@@ -52,6 +52,6 @@ namespace Autobahn.Entities
         public virtual RecordStatus RecordStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_AssessmentPersonalNeedsProfile> Person_AssessmentPersonalNeedsProfile { get; set; }
+        public virtual ICollection<PersonAssessmentPersonalNeedsProfile> PersonAssessmentPersonalNeedsProfile { get; set; }
     }
 }

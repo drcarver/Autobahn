@@ -15,4 +15,16 @@
     <ProjectReference Include="..\Autobahn.Entities\Autobahn.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Reference\APi.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reference\Autobahn.Common.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reference\MauiProject.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

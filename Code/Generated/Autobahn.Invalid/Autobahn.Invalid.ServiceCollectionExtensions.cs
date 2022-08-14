@@ -21,10 +21,11 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IActivity, ActivityViewModel>();
         serviceCollection.AddTransient<IActivityRecognition, ActivityRecognitionViewModel>();
         serviceCollection.AddTransient<IApipInteraction, ApipInteractionViewModel>();
-        serviceCollection.AddTransient<IAutobahn, AutobahnViewModel>();
         serviceCollection.AddTransient<IAutobahnDomain, AutobahnDomainViewModel>();
         serviceCollection.AddTransient<IAutobahnElement, AutobahnElementViewModel>();
         serviceCollection.AddTransient<IAutobahnTable, AutobahnTableViewModel>();
+        serviceCollection.AddTransient<IC_CEDSElements, C_CEDSElementsViewModel>();
+        serviceCollection.AddTransient<IC_CEDStoNDSMapping, C_CEDStoNDSMappingViewModel>();
         serviceCollection.AddTransient<IClassroom, ClassroomViewModel>();
         serviceCollection.AddTransient<ICoreKnowledgeArea, CoreKnowledgeAreaViewModel>();
         serviceCollection.AddTransient<ICourse, CourseViewModel>();
@@ -79,7 +80,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IProgramParticipationTitleI, ProgramParticipationTitleIViewModel>();
         serviceCollection.AddTransient<IProgramParticipationTitleIIILep, ProgramParticipationTitleIIILepViewModel>();
         serviceCollection.AddTransient<IProgramParticipationWIOA, ProgramParticipationWIOAViewModel>();
-        serviceCollection.AddTransient<IProgramParticipationWIOABarrier, ProgramParticipationWIOABarrierViewModel>();
         serviceCollection.AddTransient<IProgramParticipationWIOABarriers, ProgramParticipationWIOABarriersViewModel>();
         serviceCollection.AddTransient<IQuarterlyEmploymentRecord, QuarterlyEmploymentRecordViewModel>();
         serviceCollection.AddTransient<IRecordStatus, RecordStatusViewModel>();
@@ -96,10 +96,11 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<ActivityView>();
         serviceCollection.AddTransient<ActivityRecognitionView>();
         serviceCollection.AddTransient<ApipInteractionView>();
-        serviceCollection.AddTransient<AutobahnView>();
         serviceCollection.AddTransient<AutobahnDomainView>();
         serviceCollection.AddTransient<AutobahnElementView>();
         serviceCollection.AddTransient<AutobahnTableView>();
+        serviceCollection.AddTransient<C_CEDSElementsView>();
+        serviceCollection.AddTransient<C_CEDStoNDSMappingView>();
         serviceCollection.AddTransient<ClassroomView>();
         serviceCollection.AddTransient<CoreKnowledgeAreaView>();
         serviceCollection.AddTransient<CourseView>();
@@ -154,7 +155,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<ProgramParticipationTitleIView>();
         serviceCollection.AddTransient<ProgramParticipationTitleIIILepView>();
         serviceCollection.AddTransient<ProgramParticipationWIOAView>();
-        serviceCollection.AddTransient<ProgramParticipationWIOABarrierView>();
         serviceCollection.AddTransient<ProgramParticipationWIOABarriersView>();
         serviceCollection.AddTransient<QuarterlyEmploymentRecordView>();
         serviceCollection.AddTransient<RecordStatusView>();

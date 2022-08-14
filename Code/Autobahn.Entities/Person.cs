@@ -30,7 +30,7 @@ namespace Autobahn.Entities
             LearningResourcePeerRatings = new HashSet<LearningResourcePeerRating>();
             OrganizationPersonRoles = new HashSet<OrganizationPersonRole>();
             PersonHomelessnesses = new HashSet<PersonHomelessness>();
-            Person_AssessmentPersonalNeedsProfile = new HashSet<Person_AssessmentPersonalNeedsProfile>();
+            Person_AssessmentPersonalNeedsProfile = new HashSet<PersonAssessmentPersonalNeedsProfile>();
             PersonEmailAddresses = new HashSet<PersonEmailAddress>();
             PersonAddresses = new HashSet<PersonAddress>();
             PersonAllergies = new HashSet<PersonAllergy>();
@@ -136,7 +136,7 @@ namespace Autobahn.Entities
         public virtual ICollection<PersonHomelessness> PersonHomelessnesses { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_AssessmentPersonalNeedsProfile> Person_AssessmentPersonalNeedsProfile { get; set; }
+        public virtual ICollection<PersonAssessmentPersonalNeedsProfile> Person_AssessmentPersonalNeedsProfile { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonEmailAddress> PersonEmailAddresses { get; set; }

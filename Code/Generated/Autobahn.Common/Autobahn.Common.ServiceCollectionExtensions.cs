@@ -21,7 +21,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganization, OrganizationViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationAccreditation, OrganizationAccreditationViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationCalendar, OrganizationCalendarViewModel>();
-        serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationCalendarCrisi, OrganizationCalendarCrisiViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationCalendarCrisis, OrganizationCalendarCrisisViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationCalendarDay, OrganizationCalendarDayViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationCalendarEvent, OrganizationCalendarEventViewModel>();
@@ -49,10 +48,10 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationTelephone, OrganizationTelephoneViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IOrganizationWebsite, OrganizationWebsiteViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPerson, PersonViewModel>();
-        serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPerson_AssessmentPersonalNeedsProfile, Person_AssessmentPersonalNeedsProfileViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonAddress, PersonAddressViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonAddressNcesSide, PersonAddressNcesSideViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonAllergy, PersonAllergyViewModel>();
+        serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonAssessmentPersonalNeedsProfile, PersonAssessmentPersonalNeedsProfileViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonBirthplace, PersonBirthplaceViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonCareerEducationPlan, PersonCareerEducationPlanViewModel>();
         serviceCollection.AddTransient<Autobahn.Common.Interfaces.IPersonCredential, PersonCredentialViewModel>();
@@ -99,7 +98,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<OrganizationView>();
         serviceCollection.AddTransient<OrganizationAccreditationView>();
         serviceCollection.AddTransient<OrganizationCalendarView>();
-        serviceCollection.AddTransient<OrganizationCalendarCrisiView>();
         serviceCollection.AddTransient<OrganizationCalendarCrisisView>();
         serviceCollection.AddTransient<OrganizationCalendarDayView>();
         serviceCollection.AddTransient<OrganizationCalendarEventView>();
@@ -127,10 +125,10 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<OrganizationTelephoneView>();
         serviceCollection.AddTransient<OrganizationWebsiteView>();
         serviceCollection.AddTransient<PersonView>();
-        serviceCollection.AddTransient<Person_AssessmentPersonalNeedsProfileView>();
         serviceCollection.AddTransient<PersonAddressView>();
         serviceCollection.AddTransient<PersonAddressNcesSideView>();
         serviceCollection.AddTransient<PersonAllergyView>();
+        serviceCollection.AddTransient<PersonAssessmentPersonalNeedsProfileView>();
         serviceCollection.AddTransient<PersonBirthplaceView>();
         serviceCollection.AddTransient<PersonCareerEducationPlanView>();
         serviceCollection.AddTransient<PersonCredentialView>();

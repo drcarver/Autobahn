@@ -28,16 +28,16 @@
     <MauiXaml Update="Views\AssessmentView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Assessment_AssessmentAdministrationView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
     <MauiXaml Update="Views\AssessmentAccommodationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentAdministrationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentAdministration_OrganizationView.xaml">
+    <MauiXaml Update="Views\AssessmentAdministrationOrganizationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\AssessmentAssessmentAdministrationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentAssetView.xaml">
@@ -49,19 +49,19 @@
     <MauiXaml Update="Views\AssessmentFormView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentForm_AssessmentAssetView.xaml">
+    <MauiXaml Update="Views\AssessmentFormAssessmentAssetView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentForm_AssessmentFormSectionView.xaml">
+    <MauiXaml Update="Views\AssessmentFormAssessmentFormSectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentFormSectionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentFormSection_AssessmentAssetView.xaml">
+    <MauiXaml Update="Views\AssessmentFormSectionAssessmentAssetView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentFormSection_AssessmentItemView.xaml">
+    <MauiXaml Update="Views\AssessmentFormSectionAssessmentItemView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentItemView.xaml">
@@ -112,7 +112,7 @@
     <MauiXaml Update="Views\AssessmentParticipantSessionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentParticipantSession_AccommodationView.xaml">
+    <MauiXaml Update="Views\AssessmentParticipantSessionAccommodationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentPerformanceLevelView.xaml">
@@ -142,13 +142,13 @@
     <MauiXaml Update="Views\AssessmentRegistrationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentRegistration_AccommodationView.xaml">
+    <MauiXaml Update="Views\AssessmentRegistrationAccommodationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentResultView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentResult_PerformanceLevelView.xaml">
+    <MauiXaml Update="Views\AssessmentResultPerformanceLevelView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentResultRubricCriterionResultView.xaml">
@@ -163,10 +163,10 @@
     <MauiXaml Update="Views\AssessmentSubtestView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentSubtest_AssessmentItemView.xaml">
+    <MauiXaml Update="Views\AssessmentSubtestAssessmentItemView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AssessmentSubtest_CompetencyDefinitionView.xaml">
+    <MauiXaml Update="Views\AssessmentSubtestCompetencyDefinitionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AssessmentSubtestELDevelopmentalDomainView.xaml">
@@ -193,7 +193,7 @@
     <MauiXaml Update="Views\LearnerActivityView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\LearnerActivity_LearningResourceView.xaml">
+    <MauiXaml Update="Views\LearnerActivityLearningResourceView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\RubricView.xaml">

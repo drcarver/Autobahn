@@ -21,21 +21,21 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<ICompetencyDefAssociation, CompetencyDefAssociationViewModel>();
         serviceCollection.AddTransient<ICompetencyDefEducationLevel, CompetencyDefEducationLevelViewModel>();
         serviceCollection.AddTransient<ICompetencyDefinition, CompetencyDefinitionViewModel>();
-        serviceCollection.AddTransient<ICompetencyDefinition_CompetencySet, CompetencyDefinition_CompetencySetViewModel>();
+        serviceCollection.AddTransient<ICompetencyDefinitionCompetencySet, CompetencyDefinitionCompetencySetViewModel>();
         serviceCollection.AddTransient<ICompetencyFramework, CompetencyFrameworkViewModel>();
         serviceCollection.AddTransient<ICompetencySet, CompetencySetViewModel>();
-        serviceCollection.AddTransient<ICompetencySet_Rubric, CompetencySet_RubricViewModel>();
-        serviceCollection.AddTransient<ICompetencySet_RubricCriterion, CompetencySet_RubricCriterionViewModel>();
+        serviceCollection.AddTransient<ICompetencySetRubric, CompetencySetRubricViewModel>();
+        serviceCollection.AddTransient<ICompetencySetRubricCriterion, CompetencySetRubricCriterionViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<CompetencyDefAssociationView>();
         serviceCollection.AddTransient<CompetencyDefEducationLevelView>();
         serviceCollection.AddTransient<CompetencyDefinitionView>();
-        serviceCollection.AddTransient<CompetencyDefinition_CompetencySetView>();
+        serviceCollection.AddTransient<CompetencyDefinitionCompetencySetView>();
         serviceCollection.AddTransient<CompetencyFrameworkView>();
         serviceCollection.AddTransient<CompetencySetView>();
-        serviceCollection.AddTransient<CompetencySet_RubricView>();
-        serviceCollection.AddTransient<CompetencySet_RubricCriterionView>();
+        serviceCollection.AddTransient<CompetencySetRubricView>();
+        serviceCollection.AddTransient<CompetencySetRubricCriterionView>();
 
         return serviceCollection;
     }

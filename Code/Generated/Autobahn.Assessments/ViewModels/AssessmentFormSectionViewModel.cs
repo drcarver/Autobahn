@@ -23,8 +23,8 @@ namespace Autobahn.Assessments.ViewModels
         // member variable for the AssessmentItemBankName property
         private System.String _AssessmentItemBankName;
 
-        // member variable for the ChildOf_FormSectionId property
-        private Guid? _ChildOf_FormSectionId;
+        // member variable for the ChildOfFormSectionId property
+        private Guid? _ChildOfFormSectionId;
 
         // member variable for the GUID property
         private System.String _GUID;
@@ -72,9 +72,9 @@ namespace Autobahn.Assessments.ViewModels
         public System.String AssessmentItemBankName { get => _AssessmentItemBankName; set => SetProperty(ref _AssessmentItemBankName, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="ChildOf_FormSection"/> model
+        /// Reference to an optional instance of the <see cref="ChildOfFormSection"/> model
         /// </summary>
-        public Guid? ChildOf_FormSectionId { get => _ChildOf_FormSectionId; set => SetProperty(ref _ChildOf_FormSectionId, value); }
+        public Guid? ChildOfFormSectionId { get => _ChildOfFormSectionId; set => SetProperty(ref _ChildOfFormSectionId, value); }
 
         /// <summary>
         /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
@@ -132,7 +132,7 @@ namespace Autobahn.Assessments.ViewModels
             Id = model.Id;
             AssessmentItemBankIdentifier = model.AssessmentItemBankIdentifier;
             AssessmentItemBankName = model.AssessmentItemBankName;
-            ChildOf_FormSectionId = model.ChildOf_FormSectionId;
+            ChildOfFormSectionId = model.ChildOfFormSectionId;
             GUID = model.GUID;
             Identifier = model.Identifier;
             LearningResourceId = model.LearningResourceId;

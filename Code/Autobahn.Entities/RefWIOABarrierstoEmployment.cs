@@ -11,7 +11,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RefWIOABarrierstoEmployment()
         {
-            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarrier>();
+            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarriers>();
         }
 
         public int RefWIOABarrierstoEmploymentId { get; set; }
@@ -37,6 +37,6 @@ namespace Autobahn.Entities
         public virtual Organization Organization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProgramParticipationWIOABarrier> ProgramParticipationWIOABarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWIOABarriers { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace Autobahn.Competencies.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CompetencySet";
 
-        // member variable for the ChildOf_CompetencySet property
-        private System.Int32? _ChildOf_CompetencySet;
+        // member variable for the ChildOfCompetencySet property
+        private System.Int32? _ChildOfCompetencySet;
 
         // member variable for the CompletionCriteriaThreshold property
         private System.Int32? _CompletionCriteriaThreshold;
@@ -37,7 +37,7 @@ namespace Autobahn.Competencies.ViewModels
         /// <summary>
         /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
         /// </summary>
-        public System.Int32? ChildOf_CompetencySet { get => _ChildOf_CompetencySet; set => SetProperty(ref _ChildOf_CompetencySet, value); }
+        public System.Int32? ChildOfCompetencySet { get => _ChildOfCompetencySet; set => SetProperty(ref _ChildOfCompetencySet, value); }
 
         /// <summary>
         /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
@@ -58,7 +58,7 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ChildOf_CompetencySet = model.ChildOf_CompetencySet;
+            ChildOfCompetencySet = model.ChildOfCompetencySet;
             CompletionCriteriaThreshold = model.CompletionCriteriaThreshold;
             RefCompletionCriteriaId = model.RefCompletionCriteriaId;
             _isChanged = false;

@@ -58,7 +58,7 @@ namespace Autobahn.Entities
 
         public virtual RefProgramSponsorType RefProgramSponsorType { get; set; }
 
-        public virtual RefTeachingCredentialBasi RefTeachingCredentialBasi { get; set; }
+        public virtual RefTeachingCredentialBasis RefTeachingCredentialBasis { get; set; }
 
         public virtual RefTeachingCredentialType RefTeachingCredentialType { get; set; }
     }

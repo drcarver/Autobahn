@@ -321,7 +321,7 @@ namespace Autobahn.Entities
             ProgramParticipationTitleIs = new HashSet<ProgramParticipationTitleI>();
             ProgramParticipationTitleIIILeps = new HashSet<ProgramParticipationTitleIIILep>();
             ProgramParticipationWIOAs = new HashSet<ProgramParticipationWIOA>();
-            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarrier>();
+            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarriers>();
             PsCourses = new HashSet<PsCourse>();
             PsInstitutions = new HashSet<PsInstitution>();
             PsPriceOfAttendances = new HashSet<PsPriceOfAttendance>();
@@ -1329,7 +1329,7 @@ namespace Autobahn.Entities
         public virtual ICollection<ProgramParticipationWIOA> ProgramParticipationWIOAs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProgramParticipationWIOABarrier> ProgramParticipationWIOABarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWIOABarriers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PsCourse> PsCourses { get; set; }

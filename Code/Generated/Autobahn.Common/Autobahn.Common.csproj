@@ -29,9 +29,6 @@
     <MauiXaml Update="Views\OrganizationCalendarView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\OrganizationCalendarCrisiView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
     <MauiXaml Update="Views\OrganizationCalendarCrisisView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -113,9 +110,6 @@
     <MauiXaml Update="Views\PersonView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\Person_AssessmentPersonalNeedsProfileView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
     <MauiXaml Update="Views\PersonAddressView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -123,6 +117,9 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\PersonAllergyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\PersonAssessmentPersonalNeedsProfileView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\PersonBirthplaceView.xaml">

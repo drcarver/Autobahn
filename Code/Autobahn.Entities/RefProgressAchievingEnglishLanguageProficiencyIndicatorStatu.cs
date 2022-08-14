@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    [Table("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus")
+    [Table("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus")]
     public partial class RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

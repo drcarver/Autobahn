@@ -1,9 +1,11 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class ProgramParticipationWIOABarrier
+    [Table("ProgramParticipationWIOABarriers")]
+    public partial class ProgramParticipationWIOABarriers
     {
         [Key]
         public int ProgramParticipationWIOABarriersId { get; set; }

@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefVisionScreeningStatu
+    [Table("RefVisionScreeningStatus")]
+    public partial class RefVisionScreeningStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefVisionScreeningStatu()
+        public RefVisionScreeningStatus()
         {
             PersonHealths = new HashSet<PersonHealth>();
         }

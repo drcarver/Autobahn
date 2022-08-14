@@ -25,7 +25,7 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
         /// </summary>
-        Guid? ChildOf_FormSectionId { get; set; }
+        Guid? ChildOfFormSectionId { get; set; }
 
         /// <summary>
         /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.

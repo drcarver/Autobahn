@@ -15,7 +15,7 @@ namespace Autobahn.Competencies.Interfaces
         /// <summary>
         /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
         /// </summary>
-        System.Int32? ChildOf_CompetencySet { get; set; }
+        System.Int32? ChildOfCompetencySet { get; set; }
 
         /// <summary>
         /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.

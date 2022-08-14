@@ -60,7 +60,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefAlternativeSchoolFocu RefAlternativeSchoolFocu { get; set; }
+        public virtual RefAlternativeSchoolFocus RefAlternativeSchoolFocus { get; set; }
 
         public virtual RefBlendedLearningModelType RefBlendedLearningModelType { get; set; }
 

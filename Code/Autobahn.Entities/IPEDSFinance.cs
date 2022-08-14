@@ -68,7 +68,7 @@ namespace Autobahn.Entities
 
         public virtual RefIPEDSGASBScholarshipsandFellowshipsRevenue RefIPEDSGASBScholarshipsandFellowshipsRevenue { get; set; }
 
-        public virtual RefIPEDSIntercollegiateAthleticsExpens RefIPEDSIntercollegiateAthleticsExpens { get; set; }
+        public virtual RefIPEDSIntercollegiateAthleticsExpenses RefIPEDSIntercollegiateAthleticsExpenses { get; set; }
 
         public virtual RefIPEDSNaturalExpense RefIPEDSNaturalExpense { get; set; }
     }

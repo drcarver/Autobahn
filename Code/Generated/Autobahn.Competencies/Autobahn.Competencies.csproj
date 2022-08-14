@@ -34,7 +34,7 @@
     <MauiXaml Update="Views\CompetencyDefinitionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\CompetencyDefinition_CompetencySetView.xaml">
+    <MauiXaml Update="Views\CompetencyDefinitionCompetencySetView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\CompetencyFrameworkView.xaml">
@@ -43,10 +43,10 @@
     <MauiXaml Update="Views\CompetencySetView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\CompetencySet_RubricView.xaml">
+    <MauiXaml Update="Views\CompetencySetRubricView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\CompetencySet_RubricCriterionView.xaml">
+    <MauiXaml Update="Views\CompetencySetRubricCriterionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

@@ -23,8 +23,8 @@ namespace Autobahn.Assessments.ViewModels
         // member variable for the AssessmentFormId property
         private Guid? _AssessmentFormId;
 
-        // member variable for the ChildOf_AssessmentSubtestId property
-        private Guid? _ChildOf_AssessmentSubtestId;
+        // member variable for the ChildOfAssessmentSubtestId property
+        private Guid? _ChildOfAssessmentSubtestId;
 
         // member variable for the ContainerOnly property
         private System.String _ContainerOnly;
@@ -90,9 +90,9 @@ namespace Autobahn.Assessments.ViewModels
         public Guid? AssessmentFormId { get => _AssessmentFormId; set => SetProperty(ref _AssessmentFormId, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="ChildOf_AssessmentSubtest"/> model
+        /// Reference to an optional instance of the <see cref="ChildOfAssessmentSubtest"/> model
         /// </summary>
-        public Guid? ChildOf_AssessmentSubtestId { get => _ChildOf_AssessmentSubtestId; set => SetProperty(ref _ChildOf_AssessmentSubtestId, value); }
+        public Guid? ChildOfAssessmentSubtestId { get => _ChildOfAssessmentSubtestId; set => SetProperty(ref _ChildOfAssessmentSubtestId, value); }
 
         /// <summary>
         /// The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.
@@ -180,7 +180,7 @@ namespace Autobahn.Assessments.ViewModels
             Id = model.Id;
             Abbreviation = model.Abbreviation;
             AssessmentFormId = model.AssessmentFormId;
-            ChildOf_AssessmentSubtestId = model.ChildOf_AssessmentSubtestId;
+            ChildOfAssessmentSubtestId = model.ChildOfAssessmentSubtestId;
             ContainerOnly = model.ContainerOnly;
             Identifier = model.Identifier;
             MaximumValue = model.MaximumValue;

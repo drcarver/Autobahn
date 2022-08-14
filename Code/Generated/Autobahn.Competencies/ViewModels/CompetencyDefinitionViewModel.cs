@@ -17,8 +17,8 @@ namespace Autobahn.Competencies.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CompetencyDefinition";
 
-        // member variable for the ChildOf_CompetencyDefinitionId property
-        private Guid? _ChildOf_CompetencyDefinitionId;
+        // member variable for the ChildOfCompetencyDefinitionId property
+        private Guid? _ChildOfCompetencyDefinitionId;
 
         // member variable for the CompetencyDefParentCode property
         private System.String _CompetencyDefParentCode;
@@ -122,9 +122,9 @@ namespace Autobahn.Competencies.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="ChildOf_CompetencyDefinition"/> model
+        /// Reference to an optional instance of the <see cref="ChildOfCompetencyDefinition"/> model
         /// </summary>
-        public Guid? ChildOf_CompetencyDefinitionId { get => _ChildOf_CompetencyDefinitionId; set => SetProperty(ref _ChildOf_CompetencyDefinitionId, value); }
+        public Guid? ChildOfCompetencyDefinitionId { get => _ChildOfCompetencyDefinitionId; set => SetProperty(ref _ChildOfCompetencyDefinitionId, value); }
 
         /// <summary>
         /// The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the definition in the hierarchy of competency definitions using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.
@@ -290,7 +290,7 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ChildOf_CompetencyDefinitionId = model.ChildOf_CompetencyDefinitionId;
+            ChildOfCompetencyDefinitionId = model.ChildOfCompetencyDefinitionId;
             CompetencyDefParentCode = model.CompetencyDefParentCode;
             CompetencyDefParentId = model.CompetencyDefParentId;
             CompetencyDefParentUrl = model.CompetencyDefParentUrl;

@@ -57,7 +57,7 @@ namespace Autobahn.Entities
             OrganizationImages = new HashSet<OrganizationImage>();
             OrganizationIndicators = new HashSet<OrganizationIndicator>();
             OrganizationLocations = new HashSet<OrganizationLocation>();
-            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatu>();
+            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatus>();
             OrganizationPersonRoles = new HashSet<OrganizationPersonRole>();
             OrganizationPolicies = new HashSet<OrganizationPolicy>();
             OrganizationPopulationServeds = new HashSet<OrganizationPopulationServed>();
@@ -86,7 +86,7 @@ namespace Autobahn.Entities
             RefActivityRecognitionTypes = new HashSet<RefActivityRecognitionType>();
             RefActivityTimeMeasurementTypes = new HashSet<RefActivityTimeMeasurementType>();
             RefAdditionalCreditTypes = new HashSet<RefAdditionalCreditType>();
-            RefAdditionalTargetedSupportAndImprovementStatus = new HashSet<RefAdditionalTargetedSupportAndImprovementStatu>();
+            RefAdditionalTargetedSupportAndImprovementStatus = new HashSet<RefAdditionalTargetedSupportAndImprovementStatus>();
             RefAddressTypes = new HashSet<RefAddressType>();
             RefAdministrativeFundingControls = new HashSet<RefAdministrativeFundingControl>();
             RefAdmissionConsiderationLevels = new HashSet<RefAdmissionConsiderationLevel>();
@@ -101,21 +101,21 @@ namespace Autobahn.Entities
             RefAePostsecondaryTransitionActions = new HashSet<RefAePostsecondaryTransitionAction>();
             RefAeSpecialProgramTypes = new HashSet<RefAeSpecialProgramType>();
             RefAeStaffClassifications = new HashSet<RefAeStaffClassification>();
-            RefAeStaffEmploymentStatus = new HashSet<RefAeStaffEmploymentStatu>();
+            RefAeStaffEmploymentStatus = new HashSet<RefAeStaffEmploymentStatus>();
             RefAllergySeverities = new HashSet<RefAllergySeverity>();
             RefAllergyTypes = new HashSet<RefAllergyType>();
             RefAlternateFundUses = new HashSet<RefAlternateFundUs>();
-            RefAlternativeSchoolFocus = new HashSet<RefAlternativeSchoolFocu>();
+            RefAlternativeSchoolFocus = new HashSet<RefAlternativeSchoolFocus>();
             RefAltRouteToCertificationOrLicensures = new HashSet<RefAltRouteToCertificationOrLicensure>();
-            RefAmaoAttainmentStatus = new HashSet<RefAmaoAttainmentStatu>();
+            RefAmaoAttainmentStatus = new HashSet<RefAmaoAttainmentStatus>();
             RefApipInteractionTypes = new HashSet<RefApipInteractionType>();
             RefAssessmentItemCharacteristicTypes = new HashSet<RefAssessmentItemCharacteristicType>();
-            RefAssessmentItemResponseStatus = new HashSet<RefAssessmentItemResponseStatu>();
+            RefAssessmentItemResponseStatus = new HashSet<RefAssessmentItemResponseStatus>();
             RefAssessmentAssetIdentifierTypes = new HashSet<RefAssessmentAssetIdentifierType>();
             RefAssessmentAssetTypes = new HashSet<RefAssessmentAssetType>();
             RefAssessmentELDevelopmentalDomains = new HashSet<RefAssessmentELDevelopmentalDomain>();
             RefAssessmentFormSectionIdentificationSystems = new HashSet<RefAssessmentFormSectionIdentificationSystem>();
-            RefAssessmentItemResponseScoreStatus = new HashSet<RefAssessmentItemResponseScoreStatu>();
+            RefAssessmentItemResponseScoreStatus = new HashSet<RefAssessmentItemResponseScoreStatus>();
             RefAssessmentItemTypes = new HashSet<RefAssessmentItemType>();
             RefAssessmentNeedAlternativeRepresentationTypes = new HashSet<RefAssessmentNeedAlternativeRepresentationType>();
             RefAssessmentNeedBrailleGradeTypes = new HashSet<RefAssessmentNeedBrailleGradeType>();
@@ -137,7 +137,7 @@ namespace Autobahn.Entities
             RefAssessmentPurposes = new HashSet<RefAssessmentPurpose>();
             RefAssessmentReasonNotCompletings = new HashSet<RefAssessmentReasonNotCompleting>();
             RefAssessmentReasonNotTesteds = new HashSet<RefAssessmentReasonNotTested>();
-            RefAssessmentRegistrationCompletionStatus = new HashSet<RefAssessmentRegistrationCompletionStatu>();
+            RefAssessmentRegistrationCompletionStatus = new HashSet<RefAssessmentRegistrationCompletionStatus>();
             RefAssessmentReportingMethods = new HashSet<RefAssessmentReportingMethod>();
             RefAssessmentResultDataTypes = new HashSet<RefAssessmentResultDataType>();
             RefAssessmentResultScoreTypes = new HashSet<RefAssessmentResultScoreType>();
@@ -150,9 +150,9 @@ namespace Autobahn.Entities
             RefAssessmentSubtestIdentifierTypes = new HashSet<RefAssessmentSubtestIdentifierType>();
             RefEntityTypes = new HashSet<RefEntityType>();
             RefAttendanceEventTypes = new HashSet<RefAttendanceEventType>();
-            RefAttendanceStatus = new HashSet<RefAttendanceStatu>();
+            RefAttendanceStatus = new HashSet<RefAttendanceStatus>();
             RefAuthorizerTypes = new HashSet<RefAuthorizerType>();
-            RefAypStatus = new HashSet<RefAypStatu>();
+            RefAypStatus = new HashSet<RefAypStatus>();
             RefBarrierToEducatingHomelesses = new HashSet<RefBarrierToEducatingHomeless>();
             RefBarrierToInternetAccessInResidences = new HashSet<RefBarrierToInternetAccessInResidence>();
             RefBillableBasisTypes = new HashSet<RefBillableBasisType>();
@@ -179,7 +179,7 @@ namespace Autobahn.Entities
             RefBuildingFoodServiceSpaceTypes = new HashSet<RefBuildingFoodServiceSpaceType>();
             RefBuildingFullServiceKitchenTypes = new HashSet<RefBuildingFullServiceKitchenType>();
             RefBuildingHeatingGenerationSystemTypes = new HashSet<RefBuildingHeatingGenerationSystemType>();
-            RefBuildingHistoricStatus = new HashSet<RefBuildingHistoricStatu>();
+            RefBuildingHistoricStatus = new HashSet<RefBuildingHistoricStatus>();
             RefBuildingHVACSystemTypes = new HashSet<RefBuildingHVACSystemType>();
             RefBuildingIndoorAthleticOrPhysEdSpaceTypes = new HashSet<RefBuildingIndoorAthleticOrPhysEdSpaceType>();
             RefBuildingInstructionalSpaceFactorTypes = new HashSet<RefBuildingInstructionalSpaceFactorType>();
@@ -208,17 +208,17 @@ namespace Autobahn.Entities
             RefBuildingVerticalTransportationSystemTypes = new HashSet<RefBuildingVerticalTransportationSystemType>();
             RefCalendarEventTypes = new HashSet<RefCalendarEventType>();
             RefCampusResidencyTypes = new HashSet<RefCampusResidencyType>();
-            RefCampusStatus = new HashSet<RefCampusStatu>();
+            RefCampusStatus = new HashSet<RefCampusStatus>();
             RefCampusTypes = new HashSet<RefCampusType>();
             RefCareerClusters = new HashSet<RefCareerCluster>();
             RefCareerEducationPlanTypes = new HashSet<RefCareerEducationPlanType>();
             RefCarnegieBasicClassifications = new HashSet<RefCarnegieBasicClassification>();
-            RefCharterLeaStatus = new HashSet<RefCharterLeaStatu>();
+            RefCharterLeaStatus = new HashSet<RefCharterLeaStatus>();
             RefCharterSchoolAuthorizerTypes = new HashSet<RefCharterSchoolAuthorizerType>();
             RefCharterSchoolManagementOrganizationTypes = new HashSet<RefCharterSchoolManagementOrganizationType>();
             RefCharterSchoolTypes = new HashSet<RefCharterSchoolType>();
             RefChildDevelopmentAssociateTypes = new HashSet<RefChildDevelopmentAssociateType>();
-            RefChildDevelopmentalScreeningStatus = new HashSet<RefChildDevelopmentalScreeningStatu>();
+            RefChildDevelopmentalScreeningStatus = new HashSet<RefChildDevelopmentalScreeningStatus>();
             RefChildOutcomesSummaryRatings = new HashSet<RefChildOutcomesSummaryRating>();
             RefCipCodes = new HashSet<RefCipCode>();
             RefCipUses = new HashSet<RefCipUse>();
@@ -230,11 +230,11 @@ namespace Autobahn.Entities
             RefCompetencyDefAssociationTypes = new HashSet<RefCompetencyDefAssociationType>();
             RefCompetencyDefNodeAccessibilityProfiles = new HashSet<RefCompetencyDefNodeAccessibilityProfile>();
             RefCompetencyDefTestabilityTypes = new HashSet<RefCompetencyDefTestabilityType>();
-            RefCompetencyFrameworkPublicationStatus = new HashSet<RefCompetencyFrameworkPublicationStatu>();
+            RefCompetencyFrameworkPublicationStatus = new HashSet<RefCompetencyFrameworkPublicationStatus>();
             RefCompetencySetCompletionCriterias = new HashSet<RefCompetencySetCompletionCriteria>();
             RefComprehensiveAndTargetedSupports = new HashSet<RefComprehensiveAndTargetedSupport>();
             RefComprehensiveSupports = new HashSet<RefComprehensiveSupport>();
-            RefComprehensiveSupportAndImprovementStatus = new HashSet<RefComprehensiveSupportAndImprovementStatu>();
+            RefComprehensiveSupportAndImprovementStatus = new HashSet<RefComprehensiveSupportAndImprovementStatus>();
             RefContentStandardTypes = new HashSet<RefContentStandardType>();
             RefContinuationOfServices = new HashSet<RefContinuationOfService>();
             RefControlOfInstitutions = new HashSet<RefControlOfInstitution>();
@@ -274,17 +274,17 @@ namespace Autobahn.Entities
             RefCTDLAudienceLevelTypes = new HashSet<RefCTDLAudienceLevelType>();
             RefCTDLOrganizationTypes = new HashSet<RefCTDLOrganizationType>();
             RefCteGraduationRateInclusions = new HashSet<RefCteGraduationRateInclusion>();
-            RefCteNonTraditionalGenderStatus = new HashSet<RefCteNonTraditionalGenderStatu>();
+            RefCteNonTraditionalGenderStatus = new HashSet<RefCteNonTraditionalGenderStatus>();
             RefCurriculumFrameworkTypes = new HashSet<RefCurriculumFrameworkType>();
-            RefDataCollectionStatus = new HashSet<RefDataCollectionStatu>();
+            RefDataCollectionStatus = new HashSet<RefDataCollectionStatus>();
             RefDegreeOrCertificateTypes = new HashSet<RefDegreeOrCertificateType>();
-            RefDentalScreeningStatus = new HashSet<RefDentalScreeningStatu>();
+            RefDentalScreeningStatus = new HashSet<RefDentalScreeningStatus>();
             RefDentalInsuranceCoverageTypes = new HashSet<RefDentalInsuranceCoverageType>();
-            RefDependencyStatus = new HashSet<RefDependencyStatu>();
-            RefDevelopmentalEducationReferralStatus = new HashSet<RefDevelopmentalEducationReferralStatu>();
+            RefDependencyStatus = new HashSet<RefDependencyStatus>();
+            RefDevelopmentalEducationReferralStatus = new HashSet<RefDevelopmentalEducationReferralStatus>();
             RefDevelopmentalEducationTypes = new HashSet<RefDevelopmentalEducationType>();
             RefDevelopmentalEvaluationFindings = new HashSet<RefDevelopmentalEvaluationFinding>();
-            RefDirectoryInformationBlockStatus = new HashSet<RefDirectoryInformationBlockStatu>();
+            RefDirectoryInformationBlockStatus = new HashSet<RefDirectoryInformationBlockStatus>();
             RefDisabilityTypes = new HashSet<RefDisabilityType>();
             RefDisabilityConditionStatusCodes = new HashSet<RefDisabilityConditionStatusCode>();
             RefDisabilityConditionTypes = new HashSet<RefDisabilityConditionType>();
@@ -302,7 +302,7 @@ namespace Autobahn.Entities
             RefEarlyChildhoodServices = new HashSet<RefEarlyChildhoodService>();
             RefEdFactsAcademicOrCareerAndTechnicalOutcomeExitTypes = new HashSet<RefEdFactsAcademicOrCareerAndTechnicalOutcomeExitType>();
             RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypes = new HashSet<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType>();
-            RefEDFactsTeacherInexperiencedStatus = new HashSet<RefEDFactsTeacherInexperiencedStatu>();
+            RefEDFactsTeacherInexperiencedStatus = new HashSet<RefEDFactsTeacherInexperiencedStatus>();
             RefEducationLevels = new HashSet<RefEducationLevel>();
             RefEducationLevelTypes = new HashSet<RefEducationLevelType>();
             RefK12StaffClassification = new HashSet<RefK12StaffClassification>();
@@ -310,7 +310,7 @@ namespace Autobahn.Entities
             RefELEducationStaffClassifications = new HashSet<RefELEducationStaffClassification>();
             RefElementaryMiddleAdditionals = new HashSet<RefElementaryMiddleAdditional>();
             RefELEmploymentSeparationReasons = new HashSet<RefELEmploymentSeparationReason>();
-            RefELFacilityLicensingStatus = new HashSet<RefELFacilityLicensingStatu>();
+            RefELFacilityLicensingStatus = new HashSet<RefELFacilityLicensingStatus>();
             RefELFederalFundingTypes = new HashSet<RefELFederalFundingType>();
             RefELGroupSizeStandardMets = new HashSet<RefELGroupSizeStandardMet>();
             RefELLevelOfSpecializations = new HashSet<RefELLevelOfSpecialization>();
@@ -319,14 +319,14 @@ namespace Autobahn.Entities
             RefELOutcomeMeasurementLevels = new HashSet<RefELOutcomeMeasurementLevel>();
             RefELProfessionalDevelopmentTopicAreas = new HashSet<RefELProfessionalDevelopmentTopicArea>();
             RefELProgramEligibilities = new HashSet<RefELProgramEligibility>();
-            RefELProgramEligibilityStatus = new HashSet<RefELProgramEligibilityStatu>();
-            RefELProgramLicenseStatus = new HashSet<RefELProgramLicenseStatu>();
+            RefELProgramEligibilityStatus = new HashSet<RefELProgramEligibilityStatus>();
+            RefELProgramLicenseStatus = new HashSet<RefELProgramLicenseStatus>();
             RefELServiceProfessionalStaffClassifications = new HashSet<RefELServiceProfessionalStaffClassification>();
             RefELServiceTypes = new HashSet<RefELServiceType>();
             RefELStateRevenueSources = new HashSet<RefELStateRevenueSource>();
             RefELTrainerCoreKnowledgeAreas = new HashSet<RefELTrainerCoreKnowledgeArea>();
             RefEmailTypes = new HashSet<RefEmailType>();
-            RefEmergencyOrProvisionalCredentialStatus = new HashSet<RefEmergencyOrProvisionalCredentialStatu>();
+            RefEmergencyOrProvisionalCredentialStatus = new HashSet<RefEmergencyOrProvisionalCredentialStatus>();
             RefEmployedAfterExits = new HashSet<RefEmployedAfterExit>();
             RefEmployedPriorToEnrollments = new HashSet<RefEmployedPriorToEnrollment>();
             RefEmployedWhileEnrolleds = new HashSet<RefEmployedWhileEnrolled>();
@@ -334,15 +334,15 @@ namespace Autobahn.Entities
             RefEmploymentContractTypes = new HashSet<RefEmploymentContractType>();
             RefEmploymentSeparationReasons = new HashSet<RefEmploymentSeparationReason>();
             RefEmploymentSeparationTypes = new HashSet<RefEmploymentSeparationType>();
-            RefEmploymentStatus = new HashSet<RefEmploymentStatu>();
+            RefEmploymentStatus = new HashSet<RefEmploymentStatus>();
             RefEmploymentStatusWhileEnrolleds = new HashSet<RefEmploymentStatusWhileEnrolled>();
-            RefEndOfTermStatus = new HashSet<RefEndOfTermStatu>();
-            RefEnrollmentStatus = new HashSet<RefEnrollmentStatu>();
+            RefEndOfTermStatus = new HashSet<RefEndOfTermStatus>();
+            RefEnrollmentStatus = new HashSet<RefEnrollmentStatus>();
             RefEntryTypes = new HashSet<RefEntryType>();
             RefEnvironmentSettings = new HashSet<RefEnvironmentSetting>();
             RefERAdministrativeDataSources = new HashSet<RefERAdministrativeDataSource>();
             RefERSRuralUrbanContinuumCodes = new HashSet<RefERSRuralUrbanContinuumCode>();
-            RefExitOrWithdrawalStatus = new HashSet<RefExitOrWithdrawalStatu>();
+            RefExitOrWithdrawalStatus = new HashSet<RefExitOrWithdrawalStatus>();
             RefExitOrWithdrawalTypes = new HashSet<RefExitOrWithdrawalType>();
             RefFacilitiesMandateAuthorityTypes = new HashSet<RefFacilitiesMandateAuthorityType>();
             RefFacilitiesMgmtEmergencyTypes = new HashSet<RefFacilitiesMgmtEmergencyType>();
@@ -351,7 +351,7 @@ namespace Autobahn.Entities
             RefFacilityAuditTypes = new HashSet<RefFacilityAuditType>();
             RefFacilityCapitalProgramMgmtTypes = new HashSet<RefFacilityCapitalProgramMgmtType>();
             RefFacilityComplianceAgencyTypes = new HashSet<RefFacilityComplianceAgencyType>();
-            RefFacilityComplianceStatus = new HashSet<RefFacilityComplianceStatu>();
+            RefFacilityComplianceStatus = new HashSet<RefFacilityComplianceStatus>();
             RefFacilityConstructionDateTypes = new HashSet<RefFacilityConstructionDateType>();
             RefFacilityConstructionMaterialTypes = new HashSet<RefFacilityConstructionMaterialType>();
             RefFacilityFederalMandateInterestTypes = new HashSet<RefFacilityFederalMandateInterestType>();
@@ -379,9 +379,9 @@ namespace Autobahn.Entities
             RefFinancialAccountFundClassifications = new HashSet<RefFinancialAccountFundClassification>();
             RefFinancialAccountProgramCodes = new HashSet<RefFinancialAccountProgramCode>();
             RefFinancialAidApplicationTypes = new HashSet<RefFinancialAidApplicationType>();
-            RefFinancialAidAwardStatus = new HashSet<RefFinancialAidAwardStatu>();
+            RefFinancialAidAwardStatus = new HashSet<RefFinancialAidAwardStatus>();
             RefFinancialAidAwardTypes = new HashSet<RefFinancialAidAwardType>();
-            RefFinancialAidVeteransBenefitStatus = new HashSet<RefFinancialAidVeteransBenefitStatu>();
+            RefFinancialAidVeteransBenefitStatus = new HashSet<RefFinancialAidVeteransBenefitStatus>();
             RefFinancialAidVeteransBenefitTypes = new HashSet<RefFinancialAidVeteransBenefitType>();
             RefFinancialAccountBalanceSheetCodes = new HashSet<RefFinancialAccountBalanceSheetCode>();
             RefFinancialExpenditureFunctionCodes = new HashSet<RefFinancialExpenditureFunctionCode>();
@@ -393,7 +393,7 @@ namespace Autobahn.Entities
             RefFoodServiceParticipations = new HashSet<RefFoodServiceParticipation>();
             RefFrequencyOfServices = new HashSet<RefFrequencyOfService>();
             RefFrequencyUnits = new HashSet<RefFrequencyUnit>();
-            RefFullTimeStatus = new HashSet<RefFullTimeStatu>();
+            RefFullTimeStatus = new HashSet<RefFullTimeStatus>();
             RefGoalMeasurementTypes = new HashSet<RefGoalMeasurementType>();
             RefGoalsForAttendingAdultEducations = new HashSet<RefGoalsForAttendingAdultEducation>();
             RefGoalStatusTypes = new HashSet<RefGoalStatusType>();
@@ -403,10 +403,10 @@ namespace Autobahn.Entities
             RefGradeLevelTypes = new HashSet<RefGradeLevelType>();
             RefGradePointAverageDomains = new HashSet<RefGradePointAverageDomain>();
             RefGraduateAssistantIpedsCategories = new HashSet<RefGraduateAssistantIpedsCategory>();
-            RefGraduateOrDoctoralExamResultsStatus = new HashSet<RefGraduateOrDoctoralExamResultsStatu>();
-            RefGunFreeSchoolsActReportingStatus = new HashSet<RefGunFreeSchoolsActReportingStatu>();
-            RefHearingScreeningStatus = new HashSet<RefHearingScreeningStatu>();
-            RefHigherEducationInstitutionAccreditationStatus = new HashSet<RefHigherEducationInstitutionAccreditationStatu>();
+            RefGraduateOrDoctoralExamResultsStatus = new HashSet<RefGraduateOrDoctoralExamResultsStatus>();
+            RefGunFreeSchoolsActReportingStatus = new HashSet<RefGunFreeSchoolsActReportingStatus>();
+            RefHearingScreeningStatus = new HashSet<RefHearingScreeningStatus>();
+            RefHigherEducationInstitutionAccreditationStatus = new HashSet<RefHigherEducationInstitutionAccreditationStatus>();
             RefHighSchoolDiplomaTypes = new HashSet<RefHighSchoolDiplomaType>();
             RefHomelessNighttimeResidences = new HashSet<RefHomelessNighttimeResidence>();
             RefHighSchoolDiplomaDistinctionTypes = new HashSet<RefHighSchoolDiplomaDistinctionType>();
@@ -417,7 +417,7 @@ namespace Autobahn.Entities
             RefIDEAEducationalEnvironmentSchoolAges = new HashSet<RefIDEAEducationalEnvironmentSchoolAge>();
             RefIDEAEligibilityEvaluationCategories = new HashSet<RefIDEAEligibilityEvaluationCategory>();
             RefIDEAEnvironmentELs = new HashSet<RefIDEAEnvironmentEL>();
-            RefIDEAIEPStatus = new HashSet<RefIDEAIEPStatu>();
+            RefIDEAIEPStatus = new HashSet<RefIDEAIEPStatus>();
             RefIDEAInterimRemovals = new HashSet<RefIDEAInterimRemoval>();
             RefIDEAInterimRemovalReasons = new HashSet<RefIDEAInterimRemovalReason>();
             RefIDEAPartCEligibilityCategories = new HashSet<RefIDEAPartCEligibilityCategory>();
@@ -440,7 +440,7 @@ namespace Autobahn.Entities
             RefIncomeCalculationMethods = new HashSet<RefIncomeCalculationMethod>();
             RefIncomeCalculationMethods1 = new HashSet<RefIncomeCalculationMethod>();
             RefIncreasedLearningTimeTypes = new HashSet<RefIncreasedLearningTimeType>();
-            RefIndicatorStateDefinedStatus = new HashSet<RefIndicatorStateDefinedStatu>();
+            RefIndicatorStateDefinedStatus = new HashSet<RefIndicatorStateDefinedStatus>();
             RefIndicatorStatusCustomTypes = new HashSet<RefIndicatorStatusCustomType>();
             RefIndicatorStatusSubgroupTypes = new HashSet<RefIndicatorStatusSubgroupType>();
             RefIndicatorStatusTypes = new HashSet<RefIndicatorStatusType>();
@@ -456,7 +456,7 @@ namespace Autobahn.Entities
             RefInstructionalStaffContractLengths = new HashSet<RefInstructionalStaffContractLength>();
             RefInstructionalStaffFacultyTenures = new HashSet<RefInstructionalStaffFacultyTenure>();
             RefHealthInsuranceCoverages = new HashSet<RefHealthInsuranceCoverage>();
-            RefIntegratedTechnologyStatus = new HashSet<RefIntegratedTechnologyStatu>();
+            RefIntegratedTechnologyStatus = new HashSet<RefIntegratedTechnologyStatus>();
             RefInternetAccesses = new HashSet<RefInternetAccess>();
             RefInternetAccessTypeInResidences = new HashSet<RefInternetAccessTypeInResidence>();
             RefInternetPerformanceInResidences = new HashSet<RefInternetPerformanceInResidence>();
@@ -470,7 +470,7 @@ namespace Autobahn.Entities
             RefIPEDSGASBFunctionalExpenses = new HashSet<RefIPEDSGASBFunctionalExpense>();
             RefIPEDSGASBRevenues = new HashSet<RefIPEDSGASBRevenue>();
             RefIPEDSGASBScholarshipsandFellowshipsRevenues = new HashSet<RefIPEDSGASBScholarshipsandFellowshipsRevenue>();
-            RefIPEDSIntercollegiateAthleticsExpenses = new HashSet<RefIPEDSIntercollegiateAthleticsExpens>();
+            RefIPEDSIntercollegiateAthleticsExpenses = new HashSet<RefIPEDSIntercollegiateAthleticsExpenses>();
             RefIPEDSNaturalExpenses = new HashSet<RefIPEDSNaturalExpense>();
             RefIpedsOccupationalCategories = new HashSet<RefIpedsOccupationalCategory>();
             RefIPSPProgressReportSchedules = new HashSet<RefIPSPProgressReportSchedule>();
@@ -487,7 +487,7 @@ namespace Autobahn.Entities
             RefTitleIIILanguageInstructionProgramTypes = new HashSet<RefTitleIIILanguageInstructionProgramType>();
             RefLanguageUseTypes = new HashSet<RefLanguageUseType>();
             RefLeaFundsTransferTypes = new HashSet<RefLeaFundsTransferType>();
-            RefLeaImprovementStatus = new HashSet<RefLeaImprovementStatu>();
+            RefLeaImprovementStatus = new HashSet<RefLeaImprovementStatus>();
             RefLearnerActionTypes = new HashSet<RefLearnerActionType>();
             RefLearnerActivityAddToGradeBookFlags = new HashSet<RefLearnerActivityAddToGradeBookFlag>();
             RefLearnerActivityTypes = new HashSet<RefLearnerActivityType>();
@@ -530,16 +530,16 @@ namespace Autobahn.Entities
             RefMultipleIntelligenceTypes = new HashSet<RefMultipleIntelligenceType>();
             RefNaepAspectsOfReadings = new HashSet<RefNaepAspectsOfReading>();
             RefNaepMathComplexityLevels = new HashSet<RefNaepMathComplexityLevel>();
-            RefNationalSchoolLunchProgramStatus = new HashSet<RefNationalSchoolLunchProgramStatu>();
+            RefNationalSchoolLunchProgramStatus = new HashSet<RefNationalSchoolLunchProgramStatus>();
             RefNCESCollegeCourseMapCodes = new HashSet<RefNCESCollegeCourseMapCode>();
             RefNeedDeterminationMethods = new HashSet<RefNeedDeterminationMethod>();
             RefNeglectedProgramTypes = new HashSet<RefNeglectedProgramType>();
             RefNonPromotionReasons = new HashSet<RefNonPromotionReason>();
-            RefNonTraditionalGenderStatus = new HashSet<RefNonTraditionalGenderStatu>();
-            RefNSLPStatus = new HashSet<RefNSLPStatu>();
+            RefNonTraditionalGenderStatus = new HashSet<RefNonTraditionalGenderStatus>();
+            RefNSLPStatus = new HashSet<RefNSLPStatus>();
             RefNumberOfDependentsTypes = new HashSet<RefNumberOfDependentsType>();
             RefONETSOCOccupationTypes = new HashSet<RefONETSOCOccupationType>();
-            RefOperationalStatus = new HashSet<RefOperationalStatu>();
+            RefOperationalStatus = new HashSet<RefOperationalStatus>();
             RefOperationalStatusTypes = new HashSet<RefOperationalStatusType>();
             RefOrganizationElementTypes = new HashSet<RefOrganizationElementType>();
             RefOrganizationIdentifierTypes = new HashSet<RefOrganizationIdentifierType>();
@@ -550,7 +550,7 @@ namespace Autobahn.Entities
             RefOrganizationTypes = new HashSet<RefOrganizationType>();
             RefOtherNameTypes = new HashSet<RefOtherNameType>();
             RefOutcomeTimePoints = new HashSet<RefOutcomeTimePoint>();
-            RefOutOfFieldStatus = new HashSet<RefOutOfFieldStatu>();
+            RefOutOfFieldStatus = new HashSet<RefOutOfFieldStatus>();
             RefParaprofessionalQualifications = new HashSet<RefParaprofessionalQualification>();
             RefParticipationStatusAyps = new HashSet<RefParticipationStatusAyp>();
             RefParticipationTypes = new HashSet<RefParticipationType>();
@@ -563,7 +563,7 @@ namespace Autobahn.Entities
             RefPDAudienceTypes = new HashSet<RefPDAudienceType>();
             RefPDDeliveryMethods = new HashSet<RefPDDeliveryMethod>();
             RefPDInstructionalDeliveryModes = new HashSet<RefPDInstructionalDeliveryMode>();
-            RefPDSessionStatus = new HashSet<RefPDSessionStatu>();
+            RefPDSessionStatus = new HashSet<RefPDSessionStatus>();
             RefPersonalInformationTypes = new HashSet<RefPersonalInformationType>();
             RefPersonalInformationVerifications = new HashSet<RefPersonalInformationVerification>();
             RefPersonIdentifierTypes = new HashSet<RefPersonIdentifierType>();
@@ -583,9 +583,9 @@ namespace Autobahn.Entities
             RefPrimaryLearningDeviceProviders = new HashSet<RefPrimaryLearningDeviceProvider>();
             RefProfessionalDevelopmentFinancialSupports = new HashSet<RefProfessionalDevelopmentFinancialSupport>();
             RefProfessionalEducationJobClassifications = new HashSet<RefProfessionalEducationJobClassification>();
-            RefProficiencyStatus = new HashSet<RefProficiencyStatu>();
+            RefProficiencyStatus = new HashSet<RefProficiencyStatus>();
             RefProficiencyTargetAyps = new HashSet<RefProficiencyTargetAyp>();
-            RefProfitStatus = new HashSet<RefProfitStatu>();
+            RefProfitStatus = new HashSet<RefProfitStatus>();
             RefProfessionalTechnicalCredentialTypes = new HashSet<RefProfessionalTechnicalCredentialType>();
             RefProgramDayLengths = new HashSet<RefProgramDayLength>();
             RefProgramEntryReasons = new HashSet<RefProgramEntryReason>();
@@ -599,19 +599,19 @@ namespace Autobahn.Entities
             RefProofOfResidencyTypes = new HashSet<RefProofOfResidencyType>();
             RefPsEnrollmentActions = new HashSet<RefPsEnrollmentAction>();
             RefPsEnrollmentAwardTypes = new HashSet<RefPsEnrollmentAwardType>();
-            RefPsEnrollmentStatus = new HashSet<RefPsEnrollmentStatu>();
+            RefPsEnrollmentStatus = new HashSet<RefPsEnrollmentStatus>();
             RefPsEnrollmentTypes = new HashSet<RefPsEnrollmentType>();
             RefPSExitOrWithdrawalTypes = new HashSet<RefPSExitOrWithdrawalType>();
             RefPSProgramLevels = new HashSet<RefPSProgramLevel>();
             RefPsStudentLevels = new HashSet<RefPsStudentLevel>();
-            RefPublicSchoolChoiceStatus = new HashSet<RefPublicSchoolChoiceStatu>();
+            RefPublicSchoolChoiceStatus = new HashSet<RefPublicSchoolChoiceStatus>();
             RefPublicSchoolResidences = new HashSet<RefPublicSchoolResidence>();
             RefPurposeOfMonitoringVisits = new HashSet<RefPurposeOfMonitoringVisit>();
             RefQrisParticipations = new HashSet<RefQrisParticipation>();
             RefRaces = new HashSet<RefRace>();
-            RefReapAlternativeFundingStatus = new HashSet<RefReapAlternativeFundingStatu>();
+            RefReapAlternativeFundingStatus = new HashSet<RefReapAlternativeFundingStatus>();
             RefReasonDelayTransitionConfs = new HashSet<RefReasonDelayTransitionConf>();
-            RefReconstitutedStatus = new HashSet<RefReconstitutedStatu>();
+            RefReconstitutedStatus = new HashSet<RefReconstitutedStatus>();
             RefRecordStatusCreatorEntities = new HashSet<RefRecordStatusCreatorEntity>();
             RefRecordStatusTypes = new HashSet<RefRecordStatusType>();
             RefReferralOutcomes = new HashSet<RefReferralOutcome>();
@@ -625,11 +625,11 @@ namespace Autobahn.Entities
             RefSCEDCourseLevels = new HashSet<RefSCEDCourseLevel>();
             RefSCEDCourseSubjectAreas = new HashSet<RefSCEDCourseSubjectArea>();
             RefScheduledWellChildScreenings = new HashSet<RefScheduledWellChildScreening>();
-            RefSchoolDangerousStatus = new HashSet<RefSchoolDangerousStatu>();
+            RefSchoolDangerousStatus = new HashSet<RefSchoolDangerousStatus>();
             RefSchoolFoodServicePrograms = new HashSet<RefSchoolFoodServiceProgram>();
             RefSchoolImprovementFunds = new HashSet<RefSchoolImprovementFund>();
             RefSchoolImprovementFunds1 = new HashSet<RefSchoolImprovementFund>();
-            RefSchoolImprovementStatus = new HashSet<RefSchoolImprovementStatu>();
+            RefSchoolImprovementStatus = new HashSet<RefSchoolImprovementStatus>();
             RefSchoolLevels = new HashSet<RefSchoolLevel>();
             RefSchoolTypes = new HashSet<RefSchoolType>();
             RefScoreMetricTypes = new HashSet<RefScoreMetricType>();
@@ -639,7 +639,7 @@ namespace Autobahn.Entities
             RefSessionTypes = new HashSet<RefSessionType>();
             RefSexes = new HashSet<RefSex>();
             RefSigInterventionTypes = new HashSet<RefSigInterventionType>();
-            RefSingleSexClassStatus = new HashSet<RefSingleSexClassStatu>();
+            RefSingleSexClassStatus = new HashSet<RefSingleSexClassStatus>();
             RefSpaceUseTypes = new HashSet<RefSpaceUseType>();
             RefSpecialEducationAgeGroupTaughts = new HashSet<RefSpecialEducationAgeGroupTaught>();
             RefSpecialEducationExitReasons = new HashSet<RefSpecialEducationExitReason>();
@@ -651,28 +651,28 @@ namespace Autobahn.Entities
             RefStateANSICodes = new HashSet<RefStateANSICode>();
             RefStatePovertyDesignations = new HashSet<RefStatePovertyDesignation>();
             RefStudentEnrollmentAccessTypes = new HashSet<RefStudentEnrollmentAccessType>();
-            RefStudentSchoolAffiliationStateDefinedStatus = new HashSet<RefStudentSchoolAffiliationStateDefinedStatu>();
+            RefStudentSchoolAffiliationStateDefinedStatus = new HashSet<RefStudentSchoolAffiliationStateDefinedStatus>();
             RefStudentSupportServiceTypes = new HashSet<RefStudentSupportServiceType>();
             RefSupervisedClinicalExperiences = new HashSet<RefSupervisedClinicalExperience>();
             RefTargetedSupports = new HashSet<RefTargetedSupport>();
-            RefTargetedSupportAndImprovementStatus = new HashSet<RefTargetedSupportAndImprovementStatu>();
+            RefTargetedSupportAndImprovementStatus = new HashSet<RefTargetedSupportAndImprovementStatus>();
             RefTeacherEducationCredentialExams = new HashSet<RefTeacherEducationCredentialExam>();
             RefTeacherEducationExamScoreTypes = new HashSet<RefTeacherEducationExamScoreType>();
             RefTeacherEducationTestCompanies = new HashSet<RefTeacherEducationTestCompany>();
-            RefTeacherPrepCompleterStatus = new HashSet<RefTeacherPrepCompleterStatu>();
-            RefTeacherPrepEnrollmentStatus = new HashSet<RefTeacherPrepEnrollmentStatu>();
+            RefTeacherPrepCompleterStatus = new HashSet<RefTeacherPrepCompleterStatus>();
+            RefTeacherPrepEnrollmentStatus = new HashSet<RefTeacherPrepEnrollmentStatus>();
             RefTeachingAssignmentRoles = new HashSet<RefTeachingAssignmentRole>();
-            RefTeachingCredentialBasis = new HashSet<RefTeachingCredentialBasi>();
+            RefTeachingCredentialBasis = new HashSet<RefTeachingCredentialBasis>();
             RefTeachingCredentialTypes = new HashSet<RefTeachingCredentialType>();
             RefTechnicalAssistanceDeliveryTypes = new HashSet<RefTechnicalAssistanceDeliveryType>();
             RefTechnicalAssistanceTypes = new HashSet<RefTechnicalAssistanceType>();
-            RefTechnologyLiteracyStatus = new HashSet<RefTechnologyLiteracyStatu>();
-            RefTelephoneNumberListedStatus = new HashSet<RefTelephoneNumberListedStatu>();
+            RefTechnologyLiteracyStatus = new HashSet<RefTechnologyLiteracyStatus>();
+            RefTelephoneNumberListedStatus = new HashSet<RefTelephoneNumberListedStatus>();
             RefTelephoneNumberTypes = new HashSet<RefTelephoneNumberType>();
             RefTenureSystems = new HashSet<RefTenureSystem>();
             RefTextComplexitySystems = new HashSet<RefTextComplexitySystem>();
             RefTimeForCompletionUnits = new HashSet<RefTimeForCompletionUnit>();
-            RefTitleISchoolStatus = new HashSet<RefTitleISchoolStatu>();
+            RefTitleISchoolStatus = new HashSet<RefTitleISchoolStatus>();
             RefTitleIIIAccountabilities = new HashSet<RefTitleIIIAccountability>();
             RefTitleIIIProfessionalDevelopmentTypes = new HashSet<RefTitleIIIProfessionalDevelopmentType>();
             RefTitleIIndicators = new HashSet<RefTitleIIndicator>();
@@ -685,10 +685,10 @@ namespace Autobahn.Entities
             RefTrimesterWhenPrenatalCareBegans = new HashSet<RefTrimesterWhenPrenatalCareBegan>();
             RefTuitionResidencyTypes = new HashSet<RefTuitionResidencyType>();
             RefTuitionUnits = new HashSet<RefTuitionUnit>();
-            RefUSCitizenshipStatus = new HashSet<RefUSCitizenshipStatu>();
-            RefVirtualSchoolStatus = new HashSet<RefVirtualSchoolStatu>();
+            RefUSCitizenshipStatus = new HashSet<RefUSCitizenshipStatus>();
+            RefVirtualSchoolStatus = new HashSet<RefVirtualSchoolStatus>();
             RefVisaTypes = new HashSet<RefVisaType>();
-            RefVisionScreeningStatus = new HashSet<RefVisionScreeningStatu>();
+            RefVisionScreeningStatus = new HashSet<RefVisionScreeningStatus>();
             RefWageCollectionMethods = new HashSet<RefWageCollectionMethod>();
             RefWageVerifications = new HashSet<RefWageVerification>();
             RefWeaponTypes = new HashSet<RefWeaponType>();
@@ -856,7 +856,7 @@ namespace Autobahn.Entities
         public virtual ICollection<OrganizationLocation> OrganizationLocations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationOperationalStatu> OrganizationOperationalStatus { get; set; }
+        public virtual ICollection<OrganizationOperationalStatus> OrganizationOperationalStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrganizationPersonRole> OrganizationPersonRoles { get; set; }
@@ -943,7 +943,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAdditionalCreditType> RefAdditionalCreditTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAdditionalTargetedSupportAndImprovementStatu> RefAdditionalTargetedSupportAndImprovementStatus { get; set; }
+        public virtual ICollection<RefAdditionalTargetedSupportAndImprovementStatus> RefAdditionalTargetedSupportAndImprovementStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAddressType> RefAddressTypes { get; set; }
@@ -988,7 +988,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAeStaffClassification> RefAeStaffClassifications { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAeStaffEmploymentStatu> RefAeStaffEmploymentStatus { get; set; }
+        public virtual ICollection<RefAeStaffEmploymentStatus> RefAeStaffEmploymentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAllergySeverity> RefAllergySeverities { get; set; }
@@ -1000,13 +1000,13 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAlternateFundUs> RefAlternateFundUses { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAlternativeSchoolFocu> RefAlternativeSchoolFocus { get; set; }
+        public virtual ICollection<RefAlternativeSchoolFocus> RefAlternativeSchoolFocus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAltRouteToCertificationOrLicensure> RefAltRouteToCertificationOrLicensures { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAmaoAttainmentStatu> RefAmaoAttainmentStatus { get; set; }
+        public virtual ICollection<RefAmaoAttainmentStatus> RefAmaoAttainmentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefApipInteractionType> RefApipInteractionTypes { get; set; }
@@ -1015,7 +1015,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAssessmentItemCharacteristicType> RefAssessmentItemCharacteristicTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAssessmentItemResponseStatu> RefAssessmentItemResponseStatus { get; set; }
+        public virtual ICollection<RefAssessmentItemResponseStatus> RefAssessmentItemResponseStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAssessmentAssetIdentifierType> RefAssessmentAssetIdentifierTypes { get; set; }
@@ -1030,7 +1030,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAssessmentFormSectionIdentificationSystem> RefAssessmentFormSectionIdentificationSystems { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAssessmentItemResponseScoreStatu> RefAssessmentItemResponseScoreStatus { get; set; }
+        public virtual ICollection<RefAssessmentItemResponseScoreStatus> RefAssessmentItemResponseScoreStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAssessmentItemType> RefAssessmentItemTypes { get; set; }
@@ -1096,7 +1096,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAssessmentReasonNotTested> RefAssessmentReasonNotTesteds { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAssessmentRegistrationCompletionStatu> RefAssessmentRegistrationCompletionStatus { get; set; }
+        public virtual ICollection<RefAssessmentRegistrationCompletionStatus> RefAssessmentRegistrationCompletionStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAssessmentReportingMethod> RefAssessmentReportingMethods { get; set; }
@@ -1135,13 +1135,13 @@ namespace Autobahn.Entities
         public virtual ICollection<RefAttendanceEventType> RefAttendanceEventTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAttendanceStatu> RefAttendanceStatus { get; set; }
+        public virtual ICollection<RefAttendanceStatus> RefAttendanceStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefAuthorizerType> RefAuthorizerTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefAypStatu> RefAypStatus { get; set; }
+        public virtual ICollection<RefAypStatus> RefAypStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefBarrierToEducatingHomeless> RefBarrierToEducatingHomelesses { get; set; }
@@ -1222,7 +1222,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefBuildingHeatingGenerationSystemType> RefBuildingHeatingGenerationSystemTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefBuildingHistoricStatu> RefBuildingHistoricStatus { get; set; }
+        public virtual ICollection<RefBuildingHistoricStatus> RefBuildingHistoricStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefBuildingHVACSystemType> RefBuildingHVACSystemTypes { get; set; }
@@ -1309,7 +1309,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefCampusResidencyType> RefCampusResidencyTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefCampusStatu> RefCampusStatus { get; set; }
+        public virtual ICollection<RefCampusStatus> RefCampusStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefCampusType> RefCampusTypes { get; set; }
@@ -1324,7 +1324,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefCarnegieBasicClassification> RefCarnegieBasicClassifications { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefCharterLeaStatu> RefCharterLeaStatus { get; set; }
+        public virtual ICollection<RefCharterLeaStatus> RefCharterLeaStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefCharterSchoolAuthorizerType> RefCharterSchoolAuthorizerTypes { get; set; }
@@ -1339,7 +1339,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefChildDevelopmentAssociateType> RefChildDevelopmentAssociateTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefChildDevelopmentalScreeningStatu> RefChildDevelopmentalScreeningStatus { get; set; }
+        public virtual ICollection<RefChildDevelopmentalScreeningStatus> RefChildDevelopmentalScreeningStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefChildOutcomesSummaryRating> RefChildOutcomesSummaryRatings { get; set; }
@@ -1375,7 +1375,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefCompetencyDefTestabilityType> RefCompetencyDefTestabilityTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefCompetencyFrameworkPublicationStatu> RefCompetencyFrameworkPublicationStatus { get; set; }
+        public virtual ICollection<RefCompetencyFrameworkPublicationStatus> RefCompetencyFrameworkPublicationStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefCompetencySetCompletionCriteria> RefCompetencySetCompletionCriterias { get; set; }
@@ -1387,7 +1387,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefComprehensiveSupport> RefComprehensiveSupports { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefComprehensiveSupportAndImprovementStatu> RefComprehensiveSupportAndImprovementStatus { get; set; }
+        public virtual ICollection<RefComprehensiveSupportAndImprovementStatus> RefComprehensiveSupportAndImprovementStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefContentStandardType> RefContentStandardTypes { get; set; }
@@ -1507,28 +1507,28 @@ namespace Autobahn.Entities
         public virtual ICollection<RefCteGraduationRateInclusion> RefCteGraduationRateInclusions { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefCteNonTraditionalGenderStatu> RefCteNonTraditionalGenderStatus { get; set; }
+        public virtual ICollection<RefCteNonTraditionalGenderStatus> RefCteNonTraditionalGenderStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefCurriculumFrameworkType> RefCurriculumFrameworkTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefDataCollectionStatu> RefDataCollectionStatus { get; set; }
+        public virtual ICollection<RefDataCollectionStatus> RefDataCollectionStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefDegreeOrCertificateType> RefDegreeOrCertificateTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefDentalScreeningStatu> RefDentalScreeningStatus { get; set; }
+        public virtual ICollection<RefDentalScreeningStatus> RefDentalScreeningStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefDentalInsuranceCoverageType> RefDentalInsuranceCoverageTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefDependencyStatu> RefDependencyStatus { get; set; }
+        public virtual ICollection<RefDependencyStatus> RefDependencyStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefDevelopmentalEducationReferralStatu> RefDevelopmentalEducationReferralStatus { get; set; }
+        public virtual ICollection<RefDevelopmentalEducationReferralStatus> RefDevelopmentalEducationReferralStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefDevelopmentalEducationType> RefDevelopmentalEducationTypes { get; set; }
@@ -1537,7 +1537,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefDevelopmentalEvaluationFinding> RefDevelopmentalEvaluationFindings { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefDirectoryInformationBlockStatu> RefDirectoryInformationBlockStatus { get; set; }
+        public virtual ICollection<RefDirectoryInformationBlockStatus> RefDirectoryInformationBlockStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefDisabilityType> RefDisabilityTypes { get; set; }
@@ -1591,7 +1591,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefEdFactsAcademicOrCareerAndTechnicalOutcomeType> RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefEDFactsTeacherInexperiencedStatu> RefEDFactsTeacherInexperiencedStatus { get; set; }
+        public virtual ICollection<RefEDFactsTeacherInexperiencedStatus> RefEDFactsTeacherInexperiencedStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefEducationLevel> RefEducationLevels { get; set; }
@@ -1615,7 +1615,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefELEmploymentSeparationReason> RefELEmploymentSeparationReasons { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefELFacilityLicensingStatu> RefELFacilityLicensingStatus { get; set; }
+        public virtual ICollection<RefELFacilityLicensingStatus> RefELFacilityLicensingStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefELFederalFundingType> RefELFederalFundingTypes { get; set; }
@@ -1642,10 +1642,10 @@ namespace Autobahn.Entities
         public virtual ICollection<RefELProgramEligibility> RefELProgramEligibilities { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefELProgramEligibilityStatu> RefELProgramEligibilityStatus { get; set; }
+        public virtual ICollection<RefELProgramEligibilityStatus> RefELProgramEligibilityStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefELProgramLicenseStatu> RefELProgramLicenseStatus { get; set; }
+        public virtual ICollection<RefELProgramLicenseStatus> RefELProgramLicenseStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefELServiceProfessionalStaffClassification> RefELServiceProfessionalStaffClassifications { get; set; }
@@ -1663,7 +1663,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefEmailType> RefEmailTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefEmergencyOrProvisionalCredentialStatu> RefEmergencyOrProvisionalCredentialStatus { get; set; }
+        public virtual ICollection<RefEmergencyOrProvisionalCredentialStatus> RefEmergencyOrProvisionalCredentialStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefEmployedAfterExit> RefEmployedAfterExits { get; set; }
@@ -1687,16 +1687,16 @@ namespace Autobahn.Entities
         public virtual ICollection<RefEmploymentSeparationType> RefEmploymentSeparationTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefEmploymentStatu> RefEmploymentStatus { get; set; }
+        public virtual ICollection<RefEmploymentStatus> RefEmploymentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefEmploymentStatusWhileEnrolled> RefEmploymentStatusWhileEnrolleds { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefEndOfTermStatu> RefEndOfTermStatus { get; set; }
+        public virtual ICollection<RefEndOfTermStatus> RefEndOfTermStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefEnrollmentStatu> RefEnrollmentStatus { get; set; }
+        public virtual ICollection<RefEnrollmentStatus> RefEnrollmentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefEntryType> RefEntryTypes { get; set; }
@@ -1711,7 +1711,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefERSRuralUrbanContinuumCode> RefERSRuralUrbanContinuumCodes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefExitOrWithdrawalStatu> RefExitOrWithdrawalStatus { get; set; }
+        public virtual ICollection<RefExitOrWithdrawalStatus> RefExitOrWithdrawalStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefExitOrWithdrawalType> RefExitOrWithdrawalTypes { get; set; }
@@ -1738,7 +1738,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefFacilityComplianceAgencyType> RefFacilityComplianceAgencyTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefFacilityComplianceStatu> RefFacilityComplianceStatus { get; set; }
+        public virtual ICollection<RefFacilityComplianceStatus> RefFacilityComplianceStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefFacilityConstructionDateType> RefFacilityConstructionDateTypes { get; set; }
@@ -1822,13 +1822,13 @@ namespace Autobahn.Entities
         public virtual ICollection<RefFinancialAidApplicationType> RefFinancialAidApplicationTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefFinancialAidAwardStatu> RefFinancialAidAwardStatus { get; set; }
+        public virtual ICollection<RefFinancialAidAwardStatus> RefFinancialAidAwardStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefFinancialAidAwardType> RefFinancialAidAwardTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefFinancialAidVeteransBenefitStatu> RefFinancialAidVeteransBenefitStatus { get; set; }
+        public virtual ICollection<RefFinancialAidVeteransBenefitStatus> RefFinancialAidVeteransBenefitStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefFinancialAidVeteransBenefitType> RefFinancialAidVeteransBenefitTypes { get; set; }
@@ -1864,7 +1864,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefFrequencyUnit> RefFrequencyUnits { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefFullTimeStatu> RefFullTimeStatus { get; set; }
+        public virtual ICollection<RefFullTimeStatus> RefFullTimeStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefGoalMeasurementType> RefGoalMeasurementTypes { get; set; }
@@ -1894,16 +1894,16 @@ namespace Autobahn.Entities
         public virtual ICollection<RefGraduateAssistantIpedsCategory> RefGraduateAssistantIpedsCategories { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefGraduateOrDoctoralExamResultsStatu> RefGraduateOrDoctoralExamResultsStatus { get; set; }
+        public virtual ICollection<RefGraduateOrDoctoralExamResultsStatus> RefGraduateOrDoctoralExamResultsStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefGunFreeSchoolsActReportingStatu> RefGunFreeSchoolsActReportingStatus { get; set; }
+        public virtual ICollection<RefGunFreeSchoolsActReportingStatus> RefGunFreeSchoolsActReportingStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefHearingScreeningStatu> RefHearingScreeningStatus { get; set; }
+        public virtual ICollection<RefHearingScreeningStatus> RefHearingScreeningStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefHigherEducationInstitutionAccreditationStatu> RefHigherEducationInstitutionAccreditationStatus { get; set; }
+        public virtual ICollection<RefHigherEducationInstitutionAccreditationStatus> RefHigherEducationInstitutionAccreditationStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefHighSchoolDiplomaType> RefHighSchoolDiplomaTypes { get; set; }
@@ -1936,7 +1936,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefIDEAEnvironmentEL> RefIDEAEnvironmentELs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefIDEAIEPStatu> RefIDEAIEPStatus { get; set; }
+        public virtual ICollection<RefIDEAIEPStatus> RefIDEAIEPStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefIDEAInterimRemoval> RefIDEAInterimRemovals { get; set; }
@@ -2005,7 +2005,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefIncreasedLearningTimeType> RefIncreasedLearningTimeTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefIndicatorStateDefinedStatu> RefIndicatorStateDefinedStatus { get; set; }
+        public virtual ICollection<RefIndicatorStateDefinedStatus> RefIndicatorStateDefinedStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefIndicatorStatusCustomType> RefIndicatorStatusCustomTypes { get; set; }
@@ -2053,7 +2053,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefHealthInsuranceCoverage> RefHealthInsuranceCoverages { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefIntegratedTechnologyStatu> RefIntegratedTechnologyStatus { get; set; }
+        public virtual ICollection<RefIntegratedTechnologyStatus> RefIntegratedTechnologyStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefInternetAccess> RefInternetAccesses { get; set; }
@@ -2095,7 +2095,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefIPEDSGASBScholarshipsandFellowshipsRevenue> RefIPEDSGASBScholarshipsandFellowshipsRevenues { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefIPEDSIntercollegiateAthleticsExpens> RefIPEDSIntercollegiateAthleticsExpenses { get; set; }
+        public virtual ICollection<RefIPEDSIntercollegiateAthleticsExpenses> RefIPEDSIntercollegiateAthleticsExpenses { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefIPEDSNaturalExpense> RefIPEDSNaturalExpenses { get; set; }
@@ -2146,7 +2146,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefLeaFundsTransferType> RefLeaFundsTransferTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefLeaImprovementStatu> RefLeaImprovementStatus { get; set; }
+        public virtual ICollection<RefLeaImprovementStatus> RefLeaImprovementStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefLearnerActionType> RefLearnerActionTypes { get; set; }
@@ -2275,7 +2275,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefNaepMathComplexityLevel> RefNaepMathComplexityLevels { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefNationalSchoolLunchProgramStatu> RefNationalSchoolLunchProgramStatus { get; set; }
+        public virtual ICollection<RefNationalSchoolLunchProgramStatus> RefNationalSchoolLunchProgramStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefNCESCollegeCourseMapCode> RefNCESCollegeCourseMapCodes { get; set; }
@@ -2290,10 +2290,10 @@ namespace Autobahn.Entities
         public virtual ICollection<RefNonPromotionReason> RefNonPromotionReasons { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefNonTraditionalGenderStatu> RefNonTraditionalGenderStatus { get; set; }
+        public virtual ICollection<RefNonTraditionalGenderStatus> RefNonTraditionalGenderStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefNSLPStatu> RefNSLPStatus { get; set; }
+        public virtual ICollection<RefNSLPStatus> RefNSLPStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefNumberOfDependentsType> RefNumberOfDependentsTypes { get; set; }
@@ -2302,7 +2302,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefONETSOCOccupationType> RefONETSOCOccupationTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefOperationalStatu> RefOperationalStatus { get; set; }
+        public virtual ICollection<RefOperationalStatus> RefOperationalStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefOperationalStatusType> RefOperationalStatusTypes { get; set; }
@@ -2335,7 +2335,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefOutcomeTimePoint> RefOutcomeTimePoints { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefOutOfFieldStatu> RefOutOfFieldStatus { get; set; }
+        public virtual ICollection<RefOutOfFieldStatus> RefOutOfFieldStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefParaprofessionalQualification> RefParaprofessionalQualifications { get; set; }
@@ -2374,7 +2374,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefPDInstructionalDeliveryMode> RefPDInstructionalDeliveryModes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefPDSessionStatu> RefPDSessionStatus { get; set; }
+        public virtual ICollection<RefPDSessionStatus> RefPDSessionStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefPersonalInformationType> RefPersonalInformationTypes { get; set; }
@@ -2434,13 +2434,13 @@ namespace Autobahn.Entities
         public virtual ICollection<RefProfessionalEducationJobClassification> RefProfessionalEducationJobClassifications { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefProficiencyStatu> RefProficiencyStatus { get; set; }
+        public virtual ICollection<RefProficiencyStatus> RefProficiencyStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefProficiencyTargetAyp> RefProficiencyTargetAyps { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefProfitStatu> RefProfitStatus { get; set; }
+        public virtual ICollection<RefProfitStatus> RefProfitStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefProfessionalTechnicalCredentialType> RefProfessionalTechnicalCredentialTypes { get; set; }
@@ -2482,7 +2482,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefPsEnrollmentAwardType> RefPsEnrollmentAwardTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefPsEnrollmentStatu> RefPsEnrollmentStatus { get; set; }
+        public virtual ICollection<RefPsEnrollmentStatus> RefPsEnrollmentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefPsEnrollmentType> RefPsEnrollmentTypes { get; set; }
@@ -2497,7 +2497,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefPsStudentLevel> RefPsStudentLevels { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefPublicSchoolChoiceStatu> RefPublicSchoolChoiceStatus { get; set; }
+        public virtual ICollection<RefPublicSchoolChoiceStatus> RefPublicSchoolChoiceStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefPublicSchoolResidence> RefPublicSchoolResidences { get; set; }
@@ -2512,13 +2512,13 @@ namespace Autobahn.Entities
         public virtual ICollection<RefRace> RefRaces { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefReapAlternativeFundingStatu> RefReapAlternativeFundingStatus { get; set; }
+        public virtual ICollection<RefReapAlternativeFundingStatus> RefReapAlternativeFundingStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefReasonDelayTransitionConf> RefReasonDelayTransitionConfs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefReconstitutedStatu> RefReconstitutedStatus { get; set; }
+        public virtual ICollection<RefReconstitutedStatus> RefReconstitutedStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefRecordStatusCreatorEntity> RefRecordStatusCreatorEntities { get; set; }
@@ -2560,7 +2560,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefScheduledWellChildScreening> RefScheduledWellChildScreenings { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefSchoolDangerousStatu> RefSchoolDangerousStatus { get; set; }
+        public virtual ICollection<RefSchoolDangerousStatus> RefSchoolDangerousStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefSchoolFoodServiceProgram> RefSchoolFoodServicePrograms { get; set; }
@@ -2572,7 +2572,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefSchoolImprovementFund> RefSchoolImprovementFunds1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefSchoolImprovementStatu> RefSchoolImprovementStatus { get; set; }
+        public virtual ICollection<RefSchoolImprovementStatus> RefSchoolImprovementStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefSchoolLevel> RefSchoolLevels { get; set; }
@@ -2602,7 +2602,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefSigInterventionType> RefSigInterventionTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefSingleSexClassStatu> RefSingleSexClassStatus { get; set; }
+        public virtual ICollection<RefSingleSexClassStatus> RefSingleSexClassStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefSpaceUseType> RefSpaceUseTypes { get; set; }
@@ -2638,7 +2638,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefStudentEnrollmentAccessType> RefStudentEnrollmentAccessTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefStudentSchoolAffiliationStateDefinedStatu> RefStudentSchoolAffiliationStateDefinedStatus { get; set; }
+        public virtual ICollection<RefStudentSchoolAffiliationStateDefinedStatus> RefStudentSchoolAffiliationStateDefinedStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefStudentSupportServiceType> RefStudentSupportServiceTypes { get; set; }
@@ -2650,7 +2650,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefTargetedSupport> RefTargetedSupports { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTargetedSupportAndImprovementStatu> RefTargetedSupportAndImprovementStatus { get; set; }
+        public virtual ICollection<RefTargetedSupportAndImprovementStatus> RefTargetedSupportAndImprovementStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefTeacherEducationCredentialExam> RefTeacherEducationCredentialExams { get; set; }
@@ -2662,16 +2662,16 @@ namespace Autobahn.Entities
         public virtual ICollection<RefTeacherEducationTestCompany> RefTeacherEducationTestCompanies { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTeacherPrepCompleterStatu> RefTeacherPrepCompleterStatus { get; set; }
+        public virtual ICollection<RefTeacherPrepCompleterStatus> RefTeacherPrepCompleterStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTeacherPrepEnrollmentStatu> RefTeacherPrepEnrollmentStatus { get; set; }
+        public virtual ICollection<RefTeacherPrepEnrollmentStatus> RefTeacherPrepEnrollmentStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefTeachingAssignmentRole> RefTeachingAssignmentRoles { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTeachingCredentialBasi> RefTeachingCredentialBasis { get; set; }
+        public virtual ICollection<RefTeachingCredentialBasis> RefTeachingCredentialBasis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefTeachingCredentialType> RefTeachingCredentialTypes { get; set; }
@@ -2683,10 +2683,10 @@ namespace Autobahn.Entities
         public virtual ICollection<RefTechnicalAssistanceType> RefTechnicalAssistanceTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTechnologyLiteracyStatu> RefTechnologyLiteracyStatus { get; set; }
+        public virtual ICollection<RefTechnologyLiteracyStatus> RefTechnologyLiteracyStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTelephoneNumberListedStatu> RefTelephoneNumberListedStatus { get; set; }
+        public virtual ICollection<RefTelephoneNumberListedStatus> RefTelephoneNumberListedStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefTelephoneNumberType> RefTelephoneNumberTypes { get; set; }
@@ -2701,7 +2701,7 @@ namespace Autobahn.Entities
         public virtual ICollection<RefTimeForCompletionUnit> RefTimeForCompletionUnits { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefTitleISchoolStatu> RefTitleISchoolStatus { get; set; }
+        public virtual ICollection<RefTitleISchoolStatus> RefTitleISchoolStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefTitleIIIAccountability> RefTitleIIIAccountabilities { get; set; }
@@ -2740,16 +2740,16 @@ namespace Autobahn.Entities
         public virtual ICollection<RefTuitionUnit> RefTuitionUnits { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefUSCitizenshipStatu> RefUSCitizenshipStatus { get; set; }
+        public virtual ICollection<RefUSCitizenshipStatus> RefUSCitizenshipStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefVirtualSchoolStatu> RefVirtualSchoolStatus { get; set; }
+        public virtual ICollection<RefVirtualSchoolStatus> RefVirtualSchoolStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefVisaType> RefVisaTypes { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RefVisionScreeningStatu> RefVisionScreeningStatus { get; set; }
+        public virtual ICollection<RefVisionScreeningStatus> RefVisionScreeningStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RefWageCollectionMethod> RefWageCollectionMethods { get; set; }

@@ -25,7 +25,7 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.
         /// </summary>
-        Guid? ChildOf_AssessmentSubtestId { get; set; }
+        Guid? ChildOfAssessmentSubtestId { get; set; }
 
         /// <summary>
         /// The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.

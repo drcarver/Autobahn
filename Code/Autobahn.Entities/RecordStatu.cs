@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("RecordStatus")]
     public partial class RecordStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -256,7 +258,7 @@ namespace Autobahn.Entities
             OrganizationImages = new HashSet<OrganizationImage>();
             OrganizationIndicators = new HashSet<OrganizationIndicator>();
             OrganizationLocations = new HashSet<OrganizationLocation>();
-            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatu>();
+            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatus>();
             OrganizationPersonRoles = new HashSet<OrganizationPersonRole>();
             OrganizationPersonRoleApplications = new HashSet<OrganizationPersonRoleApplication>();
             OrganizationPersonRoleFTEs = new HashSet<OrganizationPersonRoleFTE>();
@@ -318,7 +320,7 @@ namespace Autobahn.Entities
             ProgramParticipationTitleIs = new HashSet<ProgramParticipationTitleI>();
             ProgramParticipationTitleIIILeps = new HashSet<ProgramParticipationTitleIIILep>();
             ProgramParticipationWIOAs = new HashSet<ProgramParticipationWIOA>();
-            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarrier>();
+            ProgramParticipationWIOABarriers = new HashSet<ProgramParticipationWIOABarriers>();
             PsCourses = new HashSet<PsCourse>();
             PsInstitutions = new HashSet<PsInstitution>();
             PsPriceOfAttendances = new HashSet<PsPriceOfAttendance>();
@@ -1126,7 +1128,7 @@ namespace Autobahn.Entities
         public virtual ICollection<OrganizationLocation> OrganizationLocations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationOperationalStatu> OrganizationOperationalStatus { get; set; }
+        public virtual ICollection<OrganizationOperationalStatus> OrganizationOperationalStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrganizationPersonRole> OrganizationPersonRoles { get; set; }
@@ -1314,7 +1316,7 @@ namespace Autobahn.Entities
         public virtual ICollection<ProgramParticipationWIOA> ProgramParticipationWIOAs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProgramParticipationWIOABarrier> ProgramParticipationWIOABarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWIOABarriers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PsCourse> PsCourses { get; set; }

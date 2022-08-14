@@ -14,5 +14,10 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class RefFinancialAidAwardStatus : ReferenceModelBase, Interfaces.IRefFinancialAidAwardStatus
     {
+        /// <summary>
+        /// An indication of whether the financial aid type being reported is aid that has been awarded, accepted or dispersed.
+        /// </summary>
+        public Guid RefFinancialAidStatusId { get; set; }
+
     }
 }

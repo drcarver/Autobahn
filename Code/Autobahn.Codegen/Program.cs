@@ -48,7 +48,7 @@ namespace AutobahnCodeGen
                         var existing = cedsElementsMetadata.FirstOrDefault(t => t.TechnicalName == prop.Name);
                         var item = new AutobahnTable
                         {
-                            ModelName = classtype.Name.EndsWith("Statu") ? classtype.Name.Replace("Statu", "Status") : classtype.Name,
+                            ModelName = classtype.Name,
                             ColumnName = prop.Name,
                             GlobalId = existing?.GlobalID,
                             Version = "--dbtable--"
@@ -62,6 +62,10 @@ namespace AutobahnCodeGen
                     model.ModelName = classtype.Name;
                 }
             }
+
+            var addedcnt = autobahnTables.Count(t => t.Version == "--dbtable--");
+
+            var cnt = autobahnTables.Count(t => t.TableName != t.ModelName);
 
             foreach (var item in autobahnTables.Where(t => t.TableName != t.ModelName).ToList())
             {

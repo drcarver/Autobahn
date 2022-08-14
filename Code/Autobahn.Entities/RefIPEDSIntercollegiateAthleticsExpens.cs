@@ -6,10 +6,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Autobahn.Entities
 {
     [Table("RefIPEDSIntercollegiateAthleticsExpenses")]
-    public partial class RefIPEDSIntercollegiateAthleticsExpens
+    public partial class RefIPEDSIntercollegiateAthleticsExpenses
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefIPEDSIntercollegiateAthleticsExpens()
+        public RefIPEDSIntercollegiateAthleticsExpenses()
         {
             IPEDSFinances = new HashSet<IPEDSFinance>();
         }

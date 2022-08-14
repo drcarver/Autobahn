@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("PersonStatus")]
     public partial class PersonStatus
     {
         [Key]
