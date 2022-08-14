@@ -22,7 +22,6 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>

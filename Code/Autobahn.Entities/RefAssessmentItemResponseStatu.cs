@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefAssessmentItemResponseStatu
+    [Table("RefAssessmentItemResponseStatus")]
+    public partial class RefAssessmentItemResponseStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefAssessmentItemResponseStatu()
+        public RefAssessmentItemResponseStatus()
         {
             AssessmentItemResponses = new HashSet<AssessmentItemResponse>();
         }

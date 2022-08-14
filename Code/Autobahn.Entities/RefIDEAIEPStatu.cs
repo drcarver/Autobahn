@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefIDEAIEPStatu
+    [Table("RefIDEAIEPStatus")]
+    public partial class RefIDEAIEPStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefIDEAIEPStatu()
+        public RefIDEAIEPStatus()
         {
             ELChildIndividualizedPrograms = new HashSet<ELChildIndividualizedProgram>();
         }

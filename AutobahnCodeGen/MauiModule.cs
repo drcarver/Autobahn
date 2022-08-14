@@ -31,7 +31,7 @@ namespace AutobahnCodeGen
                 GenerateViewModelFiles($@"{filePath}\{moduleName}\ViewModels\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements);
                 GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
                 GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domain, models.Where(m => !m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
-                GenerateReferenceModels(filePath, domain, models.Where(m => m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
+                GenerateReferenceModels(filePath, domain, models.Where(m => m.ModelName.StartsWith("Ref") && m.AutobahnDomainId == domain.Id).OrderBy(o => o.ModelName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id)).OrderBy(e => e.TechnicalName).ToList());
             }
         }
 
@@ -44,6 +44,7 @@ namespace AutobahnCodeGen
                 stream.WriteLine($"//* FileName:   {domain.Module}.ServiceCollectionExtensions.cs");
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine("");
+                stream.WriteLine($"using Autobahn.{domain.Module}.Interfaces;");
                 stream.WriteLine($"using Autobahn.{domain.Module}.ViewModels;");
                 stream.WriteLine($"using Autobahn.{domain.Module}.Views;");
                 stream.WriteLine();
@@ -66,7 +67,14 @@ namespace AutobahnCodeGen
                         continue;
                     }
                     modelsGenerated.Add(model.ModelName);
-                    stream.WriteLine($"        serviceCollection.AddTransient<Interfaces.I{model.ModelName}, {model.ModelName}ViewModel>();");
+                    if (domain.Module == "Common")
+                    {
+                        stream.WriteLine($"        serviceCollection.AddTransient<Autobahn.Common.Interfaces.I{model.ModelName}, {model.ModelName}ViewModel>();");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"        serviceCollection.AddTransient<I{model.ModelName}, {model.ModelName}ViewModel>();");
+                    }
                 }
                 stream.WriteLine();
                 stream.WriteLine($"        // Now the known views");
@@ -87,71 +95,13 @@ namespace AutobahnCodeGen
             }
         }
         
-        private static void GenerateReferenceModels(string filePath, AutobahnDomain domin, List<AutobahnTable> models, List<AutobahnElement> elements)
+        private static void GenerateReferenceModels(string filePath, AutobahnDomain domain, List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            //foreach (var refmodel in RefModels.Keys)
-            //{
-            //    var model = models.FirstOrDefault(m => m.Name == refmodel);
-            //    if (model != null)
-            //    {
-            //        var currentdomain = RefModels[refmodel].Count > 1 ? "Autobahn.Common" : RefModels[refmodel][0];
-            //        GenerateReferenceFile($@"{filePath}{currentdomain}\Models\", currentdomain, model, tables, elements);
-            //        GenerateReferenceInterfaceFile($@"{filePath}{currentdomain}\Interfaces\", currentdomain, model, tables, elements);
-            //        GenerateReferenceList($@"{filePath}{currentdomain}\Models\", currentdomain, model);
-            //    }
-            //}
-        }
-
-        private static void GenerateReferenceList(string filePath, AutobahnDomain domain, AutobahnTable model)
-        {
-            var csv = new CSVServices();
-            var refernceModelList = csv.ReadReferenceFile($@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{model.ModelName}.csv");
-            using (var stream = File.CreateText($"{filePath}{model.ModelName}List.cs"))
+            foreach (var model in models)
             {
-                stream.WriteLine($"//**********************************************************");
-                stream.WriteLine($"//* DomainName: {domain.Name}");
-                stream.WriteLine($"//* FileName:   {model.ModelName}List.cs");
-                stream.WriteLine($"//**********************************************************");
-                stream.WriteLine("");
-                stream.WriteLine($"using Autobahn.Common.ViewModels;");
-                stream.WriteLine("");
-                stream.WriteLine($"namespace {domain.Module}.Models");
-                stream.WriteLine("{");
-                stream.WriteLine($"     /// <summary>");
-                stream.WriteLine($"     /// The list of {model.ModelName} Models");
-                stream.WriteLine($"     /// </summary>");
-                stream.WriteLine($@"    public static partial class ReferenceLists");
-                stream.WriteLine($@"    {{");
-                stream.WriteLine($@"        /// <summary>");
-                stream.WriteLine($@"        /// The complete <see cref=""{model.ModelName}Model""> List");
-                stream.WriteLine($"         /// </summary>");
-                stream.WriteLine($@"        public static List<{model.ModelName}Model> {model.ModelName}List = new List<{model.ModelName}Model>");
-                stream.WriteLine($@"        {{");
-                var quote = "\"";
-                foreach (var item in refernceModelList)
-                {
-                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-                    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
-                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-                    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
-                    stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-                }
-                stream.WriteLine($@"        }};");
-                stream.WriteLine();
-                stream.WriteLine($@"        /// <summary>");
-                stream.WriteLine($@"        /// The Reference {model.ModelName} Pick List");
-                stream.WriteLine($"         /// </summary>");
-                stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.ModelName}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
-                stream.WriteLine($@"        {{");
-                foreach (var item in refernceModelList)
-                {
-                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-                    stream.WriteLine($@"            new ReferencePickListItemViewModel {{ Id={fixedId}, Description={fixedDescription}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-                }
-                stream.WriteLine($@"       }};");
-                stream.WriteLine("   }");
-                stream.WriteLine("}");
+                GenerateReferenceFile($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model, elements);
+                GenerateReferenceInterfaceFile($@"{filePath}Autobahn.{domain.Module}\Interfaces\", domain, model, elements);
+                GenerateReferenceList($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model);
             }
         }
 
@@ -163,18 +113,22 @@ namespace AutobahnCodeGen
                 stream.WriteLine($"//* DomainName: {domain.Name}");
                 stream.WriteLine($"//* FileName:   {model.ModelName}Model.cs");
                 stream.WriteLine($"//**********************************************************");
+                if (domain.Module != "Common")
+                {
+                    stream.WriteLine("");
+                    stream.WriteLine($"using Autobahn.Common.Interfaces;");
+                }
                 stream.WriteLine("");
-                stream.WriteLine($"using Autobahn.Common.Models;");
-                stream.WriteLine($"using {model.ModelName}.Interfaces;");
+                stream.WriteLine($"using Autobahn.{domain.Module}.Interfaces;");
                 stream.WriteLine("");
-                stream.WriteLine($"namespace {model.ModelName}.Models");
+                stream.WriteLine($"namespace Autobahn.{domain.Module}.Models");
                 stream.WriteLine("{");
                 stream.WriteLine($"     /// <summary>");
                 stream.WriteLine($"     /// The {model.ModelName} Model");
                 stream.WriteLine($"     /// </summary>");
-                stream.WriteLine($@"    public partial class {model.ModelName}Model : ReferenceModelBase, I{model.ModelName}Model");
+                stream.WriteLine($@"    public partial class {model.ModelName} : ReferenceModelBase, Interfaces.I{model.ModelName}");
                 stream.WriteLine($@"    {{");
-                GenerateProperties(stream, model, elements, false);
+                GenerateProperties(stream, model, elements.Where(e => e.AutobahnDomainList.Contains(domain.Id) && e.AutobahnTableList.Contains(model.Id)).ToList(), false);
                 stream.WriteLine($@"    }}");
                 stream.WriteLine("}");
             }
@@ -182,26 +136,80 @@ namespace AutobahnCodeGen
 
         private static void GenerateReferenceInterfaceFile(string filePath, AutobahnDomain domain, AutobahnTable model, List<AutobahnElement> elements)
         {
-            using (var stream = File.CreateText($"{filePath}I{model.ModelName}Model.cs"))
+            using (var stream = File.CreateText($"{filePath}I{model.ModelName}.cs"))
             {
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine($"//* DomainName: {domain.Name}");
-                stream.WriteLine($"//* FileName:   I{model.ModelName}Model.cs");
+                stream.WriteLine($"//* FileName:   I{model.ModelName}.cs");
                 stream.WriteLine($"//**********************************************************");
                 stream.WriteLine("");
-                stream.WriteLine($"using Autobahn.Common.Interfaces;");
+                if (domain.Module != "Common")
+                {
+                    stream.WriteLine($"using Autobahn.Common.Interfaces;");
+                }
                 stream.WriteLine("");
                 stream.WriteLine($"namespace Autobahn.{domain.Module}.Interfaces");
                 stream.WriteLine("{");
                 stream.WriteLine($"     /// <summary>");
                 stream.WriteLine($"     /// The {model.ModelName} Interface Model");
                 stream.WriteLine($"     /// </summary>");
-                stream.WriteLine($@"    public partial interface I{model.ModelName}Model : IReferenceModel");
+                stream.WriteLine($@"    public partial interface I{model.ModelName} : IReferenceModel");
                 stream.WriteLine($@"    {{");
-                GenerateProperties(stream, model, elements, true);
+                GenerateProperties(stream, model, elements.Where(e => e.AutobahnDomainList.Contains(domain.Id) && e.AutobahnTableList.Contains(model.Id)).ToList(), true);
                 stream.WriteLine($@"    }}");
                 stream.WriteLine("}");
             }
+        }
+
+        private static void GenerateReferenceList(string filePath, AutobahnDomain domain, AutobahnTable model)
+        {
+            //using (var stream = File.CreateText($"{filePath}{model.ModelName}List.cs"))
+            //{
+            //    stream.WriteLine($"//**********************************************************");
+            //    stream.WriteLine($"//* DomainName: {domain.Name}");
+            //    stream.WriteLine($"//* FileName:   {model.ModelName}List.cs");
+            //    stream.WriteLine($"//**********************************************************");
+            //    stream.WriteLine("");
+            //    stream.WriteLine($"using Autobahn.Common.ViewModels;");
+            //    stream.WriteLine("");
+            //    stream.WriteLine($"namespace {domain.Module}.Models");
+            //    stream.WriteLine("{");
+            //    stream.WriteLine($"     /// <summary>");
+            //    stream.WriteLine($"     /// The list of {model.ModelName} Models");
+            //    stream.WriteLine($"     /// </summary>");
+            //    stream.WriteLine($@"    public static partial class ReferenceLists");
+            //    stream.WriteLine($@"    {{");
+            //    stream.WriteLine($@"        /// <summary>");
+            //    stream.WriteLine($@"        /// The complete <see cref=""{model.ModelName}Model""> List");
+            //    stream.WriteLine($"         /// </summary>");
+            //    stream.WriteLine($@"        public static List<{model.ModelName}Model> {model.ModelName}List = new List<{model.ModelName}Model>");
+            //    stream.WriteLine($@"        {{");
+            //    var quote = "\"";
+            //    foreach (var item in refernceModelList)
+            //    {
+            //        var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+            //        var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+            //        var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+            //        var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
+            //        stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+            //    }
+            //    stream.WriteLine($@"        }};");
+            //    stream.WriteLine();
+            //    stream.WriteLine($@"        /// <summary>");
+            //    stream.WriteLine($@"        /// The Reference {model.ModelName} Pick List");
+            //    stream.WriteLine($"         /// </summary>");
+            //    stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.ModelName}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
+            //    stream.WriteLine($@"        {{");
+            //    foreach (var item in refernceModelList)
+            //    {
+            //        var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+            //        var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+            //        stream.WriteLine($@"            new ReferencePickListItemViewModel {{ Id={fixedId}, Description={fixedDescription}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+            //    }
+            //    stream.WriteLine($@"       }};");
+            //    stream.WriteLine("   }");
+            //    stream.WriteLine("}");
+            //}
         }
 
         private static void GenerateXAMLFiles(string filePath, AutobahnDomain domain, List<AutobahnTable> tables, List<AutobahnElement> elements)
@@ -296,13 +304,12 @@ namespace AutobahnCodeGen
                     stream.WriteLine($"//* DomainName: {domain.Name}");
                     stream.WriteLine($"//* FileName:   {model.ModelName}ViewModel.cs");
                     stream.WriteLine($"//**********************************************************");
-                    stream.WriteLine("");
                     if (domain.Module != "Common")
                     {
+                        stream.WriteLine("");
                         stream.WriteLine($"using Autobahn.Common.Interfaces;");
                         stream.WriteLine($"using Autobahn.Common.ViewModels;");
                     }
-                    stream.WriteLine($"using CommunityToolkit.Maui;");
                     stream.WriteLine("");
                     stream.WriteLine($"namespace Autobahn.{domain.Module}.ViewModels");
                     stream.WriteLine("{");
@@ -523,7 +530,6 @@ namespace AutobahnCodeGen
             {
                 ZipFile.ExtractToDirectory($@"Reference\mauiproject.zip", filePath);
                 File.Move($@"{filePath}\mauiproject\module.csproj", $@"{filePath}\mauiproject\{moduleName}.csproj");
-                File.Move($@"{filePath}\mauiproject\mauimodule.cs", $@"{filePath}\mauiproject\{moduleName}Module.cs");
                 Directory.Move($@"{filePath}\mauiproject", $@"{filePath}\{moduleName}");
             }
         }

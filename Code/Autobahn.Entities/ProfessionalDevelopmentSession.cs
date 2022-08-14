@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -81,7 +83,7 @@ namespace Autobahn.Entities
 
         public virtual RefPDInstructionalDeliveryMode RefPDInstructionalDeliveryMode { get; set; }
 
-        public virtual RefPDSessionStatu RefPDSessionStatu { get; set; }
+        public virtual RefPDSessionStatus RefPDSessionStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProfessionalDevelopmentSessionInstructor> ProfessionalDevelopmentSessionInstructors { get; set; }

@@ -1,7 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12LeaSafeDrugFree")]
     public partial class K12LeaSafeDrugFree
     {
         public int K12LeaSafeDrugFreeId { get; set; }

@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -52,14 +53,14 @@ namespace Autobahn.Entities
 
         public virtual RefDentalInsuranceCoverageType RefDentalInsuranceCoverageType { get; set; }
 
-        public virtual RefDentalScreeningStatu RefDentalScreeningStatu { get; set; }
+        public virtual RefDentalScreeningStatus RefDentalScreeningStatus { get; set; }
 
         public virtual RefHealthInsuranceCoverage RefHealthInsuranceCoverage { get; set; }
 
-        public virtual RefHearingScreeningStatu RefHearingScreeningStatu { get; set; }
+        public virtual RefHearingScreeningStatus RefHearingScreeningStatus { get; set; }
 
         public virtual RefMedicalAlertIndicator RefMedicalAlertIndicator { get; set; }
 
-        public virtual RefVisionScreeningStatu RefVisionScreeningStatu { get; set; }
+        public virtual RefVisionScreeningStatus RefVisionScreeningStatus { get; set; }
     }
 }

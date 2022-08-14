@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -19,18 +21,18 @@ namespace Autobahn.Entities
             ApipInteractions = new HashSet<ApipInteraction>();
             Applications = new HashSet<Application>();
             Assessments = new HashSet<Assessment>();
-            Assessment_AssessmentAdministration = new HashSet<Assessment_AssessmentAdministration>();
+            AssessmentAssessmentAdministration = new HashSet<AssessmentAssessmentAdministration>();
             AssessmentAccommodations = new HashSet<AssessmentAccommodation>();
             AssessmentAdministrations = new HashSet<AssessmentAdministration>();
-            AssessmentAdministration_Organization = new HashSet<AssessmentAdministration_Organization>();
+            AssessmentAdministrationOrganization = new HashSet<AssessmentAdministrationOrganization>();
             AssessmentAssets = new HashSet<AssessmentAsset>();
             AssessmentELDevelopmentalDomains = new HashSet<AssessmentELDevelopmentalDomain>();
             AssessmentForms = new HashSet<AssessmentForm>();
-            AssessmentForm_AssessmentAsset = new HashSet<AssessmentForm_AssessmentAsset>();
-            AssessmentForm_AssessmentFormSection = new HashSet<AssessmentForm_AssessmentFormSection>();
+            AssessmentFormAssessmentAsset = new HashSet<AssessmentFormAssessmentAsset>();
+            AssessmentFormAssessmentFormSection = new HashSet<AssessmentFormAssessmentFormSection>();
             AssessmentFormSections = new HashSet<AssessmentFormSection>();
-            AssessmentFormSection_AssessmentAsset = new HashSet<AssessmentFormSection_AssessmentAsset>();
-            AssessmentFormSection_AssessmentItem = new HashSet<AssessmentFormSection_AssessmentItem>();
+            AssessmentFormSectionAssessmentAsset = new HashSet<AssessmentFormSectionAssessmentAsset>();
+            AssessmentFormSectionAssessmentItem = new HashSet<AssessmentFormSectionAssessmentItem>();
             AssessmentItems = new HashSet<AssessmentItem>();
             AssessmentItemApips = new HashSet<AssessmentItemApip>();
             AssessmentItemApipDescriptions = new HashSet<AssessmentItemApipDescription>();
@@ -47,7 +49,7 @@ namespace Autobahn.Entities
             AssessmentNeedBrailles = new HashSet<AssessmentNeedBraille>();
             AssessmentNeedScreenEnhancements = new HashSet<AssessmentNeedScreenEnhancement>();
             AssessmentParticipantSessions = new HashSet<AssessmentParticipantSession>();
-            AssessmentParticipantSession_Accommodation = new HashSet<AssessmentParticipantSession_Accommodation>();
+            AssessmentParticipantSessionAccommodation = new HashSet<AssessmentParticipantSessionAccommodation>();
             AssessmentPerformanceLevels = new HashSet<AssessmentPerformanceLevel>();
             AssessmentPersonalNeedLanguageLearners = new HashSet<AssessmentPersonalNeedLanguageLearner>();
             AssessmentPersonalNeedScreenReaders = new HashSet<AssessmentPersonalNeedScreenReader>();
@@ -57,15 +59,15 @@ namespace Autobahn.Entities
             AssessmentPersonalNeedsProfileDisplays = new HashSet<AssessmentPersonalNeedsProfileDisplay>();
             AssessmentPersonalNeedsProfileScreenEnhancements = new HashSet<AssessmentPersonalNeedsProfileScreenEnhancement>();
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
-            AssessmentRegistration_Accommodation = new HashSet<AssessmentRegistration_Accommodation>();
+            AssessmentRegistrationAccommodation = new HashSet<AssessmentRegistrationAccommodation>();
             AssessmentResults = new HashSet<AssessmentResult>();
-            AssessmentResult_PerformanceLevel = new HashSet<AssessmentResult_PerformanceLevel>();
+            AssessmentResultPerformanceLevel = new HashSet<AssessmentResultPerformanceLevel>();
             AssessmentResultRubricCriterionResults = new HashSet<AssessmentResultRubricCriterionResult>();
             AssessmentSessions = new HashSet<AssessmentSession>();
             AssessmentSessionStaffRoles = new HashSet<AssessmentSessionStaffRole>();
             AssessmentSubtests = new HashSet<AssessmentSubtest>();
-            AssessmentSubtest_AssessmentItem = new HashSet<AssessmentSubtest_AssessmentItem>();
-            AssessmentSubtest_CompetencyDefinition = new HashSet<AssessmentSubtest_CompetencyDefinition>();
+            AssessmentSubtestAssessmentItem = new HashSet<AssessmentSubtestAssessmentItem>();
+            AssessmentSubtestCompetencyDefinition = new HashSet<AssessmentSubtestCompetencyDefinition>();
             AssessmentSubtestELDevelopmentalDomains = new HashSet<AssessmentSubtestELDevelopmentalDomain>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
             Authentications = new HashSet<Authentication>();
@@ -80,11 +82,11 @@ namespace Autobahn.Entities
             CompetencyDefAssociations = new HashSet<CompetencyDefAssociation>();
             CompetencyDefEducationLevels = new HashSet<CompetencyDefEducationLevel>();
             CompetencyDefinitions = new HashSet<CompetencyDefinition>();
-            CompetencyDefinition_CompetencySet = new HashSet<CompetencyDefinition_CompetencySet>();
+            CompetencyDefinitionCompetencySet = new HashSet<CompetencyDefinitionCompetencySet>();
             CompetencyFrameworks = new HashSet<CompetencyFramework>();
             CompetencySets = new HashSet<CompetencySet>();
-            CompetencySet_Rubric = new HashSet<CompetencySet_Rubric>();
-            CompetencySet_RubricCriterion = new HashSet<CompetencySet_RubricCriterion>();
+            CompetencySetRubric = new HashSet<CompetencySetRubric>();
+            CompetencySetRubricCriterion = new HashSet<CompetencySetRubricCriterion>();
             CoreKnowledgeAreas = new HashSet<CoreKnowledgeArea>();
             Courses = new HashSet<Course>();
             CourseSections = new HashSet<CourseSection>();
@@ -231,7 +233,7 @@ namespace Autobahn.Entities
             K12TitleIIILanguageInstruction = new HashSet<K12TitleIIILanguageInstruction>();
             LearnerActions = new HashSet<LearnerAction>();
             LearnerActivities = new HashSet<LearnerActivity>();
-            LearnerActivity_LearningResource = new HashSet<LearnerActivity_LearningResource>();
+            LearnerActivityLearningResource = new HashSet<LearnerActivityLearningResource>();
             LearningResources = new HashSet<LearningResource>();
             LearningResourceAdaptations = new HashSet<LearningResourceAdaptation>();
             LearningResourceEducationLevels = new HashSet<LearningResourceEducationLevel>();
@@ -243,7 +245,7 @@ namespace Autobahn.Entities
             Organizations = new HashSet<Organization>();
             OrganizationAccreditations = new HashSet<OrganizationAccreditation>();
             OrganizationCalendars = new HashSet<OrganizationCalendar>();
-            OrganizationCalendarCrisis = new HashSet<OrganizationCalendarCrisi>();
+            OrganizationCalendarCrisis = new HashSet<OrganizationCalendarCrisis>();
             OrganizationCalendarDays = new HashSet<OrganizationCalendarDay>();
             OrganizationCalendarEvents = new HashSet<OrganizationCalendarEvent>();
             OrganizationCalendarSessions = new HashSet<OrganizationCalendarSession>();
@@ -256,7 +258,7 @@ namespace Autobahn.Entities
             OrganizationImages = new HashSet<OrganizationImage>();
             OrganizationIndicators = new HashSet<OrganizationIndicator>();
             OrganizationLocations = new HashSet<OrganizationLocation>();
-            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatu>();
+            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatus>();
             OrganizationPersonRoles = new HashSet<OrganizationPersonRole>();
             OrganizationPersonRoleApplications = new HashSet<OrganizationPersonRoleApplication>();
             OrganizationPersonRoleFTEs = new HashSet<OrganizationPersonRoleFTE>();
@@ -271,7 +273,7 @@ namespace Autobahn.Entities
             OrganizationWebsites = new HashSet<OrganizationWebsite>();
             PDActivityEducationLevels = new HashSet<PDActivityEducationLevel>();
             PeerRatingSystems = new HashSet<PeerRatingSystem>();
-            Person_AssessmentPersonalNeedsProfile = new HashSet<Person_AssessmentPersonalNeedsProfile>();
+            PersonAssessmentPersonalNeedsProfile = new HashSet<PersonAssessmentPersonalNeedsProfile>();
             People = new HashSet<Person>();
             PersonAddresses = new HashSet<PersonAddress>();
             PersonAddressNcesSides = new HashSet<PersonAddressNcesSide>();
@@ -301,7 +303,7 @@ namespace Autobahn.Entities
             PersonProgramParticipations = new HashSet<PersonProgramParticipation>();
             PersonReferrals = new HashSet<PersonReferral>();
             PersonRelationships = new HashSet<PersonRelationship>();
-            PersonStatus = new HashSet<PersonStatu>();
+            PersonStatus = new HashSet<PersonStatus>();
             PersonTelephones = new HashSet<PersonTelephone>();
             ProfessionalDevelopmentActivities = new HashSet<ProfessionalDevelopmentActivity>();
             ProfessionalDevelopmentRequirements = new HashSet<ProfessionalDevelopmentRequirement>();
@@ -425,7 +427,7 @@ namespace Autobahn.Entities
         public virtual ICollection<Assessment> Assessments { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Assessment_AssessmentAdministration> Assessment_AssessmentAdministration { get; set; }
+        public virtual ICollection<AssessmentAssessmentAdministration> AssessmentAssessmentAdministration { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentAccommodation> AssessmentAccommodations { get; set; }
@@ -434,7 +436,7 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentAdministration> AssessmentAdministrations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentAdministration_Organization> AssessmentAdministration_Organization { get; set; }
+        public virtual ICollection<AssessmentAdministrationOrganization> AssessmentAdministrationOrganization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentAsset> AssessmentAssets { get; set; }
@@ -446,19 +448,19 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentForm> AssessmentForms { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentForm_AssessmentAsset> AssessmentForm_AssessmentAsset { get; set; }
+        public virtual ICollection<AssessmentFormAssessmentAsset> AssessmentFormAssessmentAsset { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentForm_AssessmentFormSection> AssessmentForm_AssessmentFormSection { get; set; }
+        public virtual ICollection<AssessmentFormAssessmentFormSection> AssessmentFormAssessmentFormSection { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentFormSection> AssessmentFormSections { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentFormSection_AssessmentAsset> AssessmentFormSection_AssessmentAsset { get; set; }
+        public virtual ICollection<AssessmentFormSectionAssessmentAsset> AssessmentFormSectionAssessmentAsset { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentFormSection_AssessmentItem> AssessmentFormSection_AssessmentItem { get; set; }
+        public virtual ICollection<AssessmentFormSectionAssessmentItem> AssessmentFormSectionAssessmentItem { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentItem> AssessmentItems { get; set; }
@@ -509,7 +511,7 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentParticipantSession> AssessmentParticipantSessions { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentParticipantSession_Accommodation> AssessmentParticipantSession_Accommodation { get; set; }
+        public virtual ICollection<AssessmentParticipantSessionAccommodation> AssessmentParticipantSessionAccommodation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentPerformanceLevel> AssessmentPerformanceLevels { get; set; }
@@ -539,13 +541,13 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentRegistration> AssessmentRegistrations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentRegistration_Accommodation> AssessmentRegistration_Accommodation { get; set; }
+        public virtual ICollection<AssessmentRegistrationAccommodation> AssessmentRegistrationAccommodation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentResult> AssessmentResults { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentResult_PerformanceLevel> AssessmentResult_PerformanceLevel { get; set; }
+        public virtual ICollection<AssessmentResultPerformanceLevel> AssessmentResultPerformanceLevel { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentResultRubricCriterionResult> AssessmentResultRubricCriterionResults { get; set; }
@@ -560,10 +562,10 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentSubtest_AssessmentItem> AssessmentSubtest_AssessmentItem { get; set; }
+        public virtual ICollection<AssessmentSubtestAssessmentItem> AssessmentSubtestAssessmentItem { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentSubtest_CompetencyDefinition> AssessmentSubtest_CompetencyDefinition { get; set; }
+        public virtual ICollection<AssessmentSubtestCompetencyDefinition> AssessmentSubtestCompetencyDefinition { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentSubtestELDevelopmentalDomain> AssessmentSubtestELDevelopmentalDomains { get; set; }
@@ -608,7 +610,7 @@ namespace Autobahn.Entities
         public virtual ICollection<CompetencyDefinition> CompetencyDefinitions { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencyDefinition_CompetencySet> CompetencyDefinition_CompetencySet { get; set; }
+        public virtual ICollection<CompetencyDefinitionCompetencySet> CompetencyDefinitionCompetencySet { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompetencyFramework> CompetencyFrameworks { get; set; }
@@ -617,10 +619,10 @@ namespace Autobahn.Entities
         public virtual ICollection<CompetencySet> CompetencySets { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_Rubric> CompetencySet_Rubric { get; set; }
+        public virtual ICollection<CompetencySetRubric> CompetencySetRubric { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_RubricCriterion> CompetencySet_RubricCriterion { get; set; }
+        public virtual ICollection<CompetencySetRubricCriterion> CompetencySetRubricCriterion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CoreKnowledgeArea> CoreKnowledgeAreas { get; set; }
@@ -685,7 +687,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CteStudentAcademicRecord> CteStudentAcademicRecords { get; set; }
 
-        public virtual RefDataCollectionStatu RefDataCollectionStatu { get; set; }
+        public virtual RefDataCollectionStatus RefDataCollectionStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EarlyChildhoodCredential> EarlyChildhoodCredentials { get; set; }
@@ -1063,7 +1065,7 @@ namespace Autobahn.Entities
         public virtual ICollection<LearnerActivity> LearnerActivities { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LearnerActivity_LearningResource> LearnerActivity_LearningResource { get; set; }
+        public virtual ICollection<LearnerActivityLearningResource> LearnerActivityLearningResource { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LearningResource> LearningResources { get; set; }
@@ -1099,7 +1101,7 @@ namespace Autobahn.Entities
         public virtual ICollection<OrganizationCalendar> OrganizationCalendars { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationCalendarCrisi> OrganizationCalendarCrisis { get; set; }
+        public virtual ICollection<OrganizationCalendarCrisis> OrganizationCalendarCrisis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrganizationCalendarDay> OrganizationCalendarDays { get; set; }
@@ -1138,7 +1140,7 @@ namespace Autobahn.Entities
         public virtual ICollection<OrganizationLocation> OrganizationLocations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationOperationalStatu> OrganizationOperationalStatus { get; set; }
+        public virtual ICollection<OrganizationOperationalStatus> OrganizationOperationalStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrganizationPersonRole> OrganizationPersonRoles { get; set; }
@@ -1183,7 +1185,7 @@ namespace Autobahn.Entities
         public virtual ICollection<PeerRatingSystem> PeerRatingSystems { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_AssessmentPersonalNeedsProfile> Person_AssessmentPersonalNeedsProfile { get; set; }
+        public virtual ICollection<PersonAssessmentPersonalNeedsProfile> PersonAssessmentPersonalNeedsProfile { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Person> People { get; set; }
@@ -1273,7 +1275,7 @@ namespace Autobahn.Entities
         public virtual ICollection<PersonRelationship> PersonRelationships { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonStatu> PersonStatus { get; set; }
+        public virtual ICollection<PersonStatus> PersonStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PersonTelephone> PersonTelephones { get; set; }

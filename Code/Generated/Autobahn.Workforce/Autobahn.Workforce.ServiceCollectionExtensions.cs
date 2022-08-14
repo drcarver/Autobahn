@@ -3,6 +3,7 @@
 //* FileName:   Workforce.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.Workforce.Interfaces;
 using Autobahn.Workforce.ViewModels;
 using Autobahn.Workforce.Views;
 
@@ -17,9 +18,9 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddWorkforceServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.IWorkforceEmploymentQuarterlyData, WorkforceEmploymentQuarterlyDataViewModel>();
-        serviceCollection.AddTransient<Interfaces.IWorkforceProgramParticipantCohort, WorkforceProgramParticipantCohortViewModel>();
-        serviceCollection.AddTransient<Interfaces.IWorkforceProgramParticipation, WorkforceProgramParticipationViewModel>();
+        serviceCollection.AddTransient<IWorkforceEmploymentQuarterlyData, WorkforceEmploymentQuarterlyDataViewModel>();
+        serviceCollection.AddTransient<IWorkforceProgramParticipantCohort, WorkforceProgramParticipantCohortViewModel>();
+        serviceCollection.AddTransient<IWorkforceProgramParticipation, WorkforceProgramParticipationViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<WorkforceEmploymentQuarterlyDataView>();

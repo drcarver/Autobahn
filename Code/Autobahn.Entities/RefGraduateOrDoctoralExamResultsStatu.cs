@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefGraduateOrDoctoralExamResultsStatu
+    [Table("RefGraduateOrDoctoralExamResultsStatus")]
+    public partial class RefGraduateOrDoctoralExamResultsStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefGraduateOrDoctoralExamResultsStatu()
+        public RefGraduateOrDoctoralExamResultsStatus()
         {
             PsStudentEnrollments = new HashSet<PsStudentEnrollment>();
         }

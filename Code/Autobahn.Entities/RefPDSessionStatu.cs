@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefPDSessionStatu
+    [Table("RefPDSessionStatus")]
+    public partial class RefPDSessionStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefPDSessionStatu()
+        public RefPDSessionStatus()
         {
             ProfessionalDevelopmentSessions = new HashSet<ProfessionalDevelopmentSession>();
         }

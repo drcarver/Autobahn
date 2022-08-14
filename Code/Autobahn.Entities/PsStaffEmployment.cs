@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -53,7 +54,7 @@ namespace Autobahn.Entities
 
         public virtual RefEmploymentContractType RefEmploymentContractType { get; set; }
 
-        public virtual RefFullTimeStatu RefFullTimeStatu { get; set; }
+        public virtual RefFullTimeStatus RefFullTimeStatus { get; set; }
 
         public virtual RefGraduateAssistantIpedsCategory RefGraduateAssistantIpedsCategory { get; set; }
 

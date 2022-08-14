@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -78,7 +80,7 @@ namespace Autobahn.Entities
 
         public virtual RefTribalAffiliation RefTribalAffiliation { get; set; }
 
-        public virtual RefUSCitizenshipStatu RefUSCitizenshipStatu { get; set; }
+        public virtual RefUSCitizenshipStatus RefUSCitizenshipStatus { get; set; }
 
         public virtual RefVisaType RefVisaType { get; set; }
 

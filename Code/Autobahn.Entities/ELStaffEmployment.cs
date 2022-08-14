@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -47,7 +48,7 @@ namespace Autobahn.Entities
 
         public virtual RefELServiceProfessionalStaffClassification RefELServiceProfessionalStaffClassification { get; set; }
 
-        public virtual RefEmploymentStatu RefEmploymentStatu { get; set; }
+        public virtual RefEmploymentStatus RefEmploymentStatus { get; set; }
 
         public virtual RefWageCollectionMethod RefWageCollectionMethod { get; set; }
 

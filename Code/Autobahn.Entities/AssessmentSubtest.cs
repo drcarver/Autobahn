@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,8 +15,8 @@ namespace Autobahn.Entities
             AssessmentResults = new HashSet<AssessmentResult>();
             AssessmentSubtestELDevelopmentalDomains = new HashSet<AssessmentSubtestELDevelopmentalDomain>();
             AssessmentSubtest1 = new HashSet<AssessmentSubtest>();
-            AssessmentSubtest_CompetencyDefinition = new HashSet<AssessmentSubtest_CompetencyDefinition>();
-            AssessmentSubtest_AssessmentItem = new HashSet<AssessmentSubtest_AssessmentItem>();
+            AssessmentSubtestCompetencyDefinition = new HashSet<AssessmentSubtestCompetencyDefinition>();
+            AssessmentSubtestAssessmentItem = new HashSet<AssessmentSubtestAssessmentItem>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
         }
 
@@ -64,7 +66,7 @@ namespace Autobahn.Entities
 
         public int? RefAcademicSubjectId { get; set; }
 
-        public int? ChildOf_AssessmentSubtestId { get; set; }
+        public int? ChildOfAssessmentSubtestId { get; set; }
 
         public int? AssessmentFormId { get; set; }
 
@@ -93,7 +95,7 @@ namespace Autobahn.Entities
         public virtual AssessmentSubtest AssessmentSubtest2 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentSubtest_CompetencyDefinition> AssessmentSubtest_CompetencyDefinition { get; set; }
+        public virtual ICollection<AssessmentSubtestCompetencyDefinition> AssessmentSubtestCompetencyDefinition { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 
@@ -108,7 +110,7 @@ namespace Autobahn.Entities
         public virtual RefScoreMetricType RefScoreMetricType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentSubtest_AssessmentItem> AssessmentSubtest_AssessmentItem { get; set; }
+        public virtual ICollection<AssessmentSubtestAssessmentItem> AssessmentSubtestAssessmentItem { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }

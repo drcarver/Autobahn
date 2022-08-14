@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,7 +12,7 @@ namespace Autobahn.Entities
         public AssessmentRegistration()
         {
             AssessmentParticipantSessions = new HashSet<AssessmentParticipantSession>();
-            AssessmentRegistration_Accommodation = new HashSet<AssessmentRegistration_Accommodation>();
+            AssessmentRegistrationAccommodation = new HashSet<AssessmentRegistrationAccommodation>();
             AssessmentResults = new HashSet<AssessmentResult>();
             LearnerActivities = new HashSet<LearnerActivity>();
         }
@@ -105,7 +107,7 @@ namespace Autobahn.Entities
 
         public virtual RefAssessmentReasonNotTested RefAssessmentReasonNotTested { get; set; }
 
-        public virtual RefAssessmentRegistrationCompletionStatu RefAssessmentRegistrationCompletionStatu { get; set; }
+        public virtual RefAssessmentRegistrationCompletionStatus RefAssessmentRegistrationCompletionStatus { get; set; }
 
         public virtual RefGradeLevel RefGradeLevel { get; set; }
 
@@ -116,7 +118,7 @@ namespace Autobahn.Entities
         public virtual Organization Organization2 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentRegistration_Accommodation> AssessmentRegistration_Accommodation { get; set; }
+        public virtual ICollection<AssessmentRegistrationAccommodation> AssessmentRegistrationAccommodation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentResult> AssessmentResults { get; set; }

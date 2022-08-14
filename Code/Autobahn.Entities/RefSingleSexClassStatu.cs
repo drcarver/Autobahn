@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefSingleSexClassStatu
+    [Table("RefSingleSexClassStatus")]
+    public partial class RefSingleSexClassStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefSingleSexClassStatu()
+        public RefSingleSexClassStatus()
         {
             CourseSections = new HashSet<CourseSection>();
         }

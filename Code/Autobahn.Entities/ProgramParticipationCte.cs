@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -47,7 +48,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefNonTraditionalGenderStatu RefNonTraditionalGenderStatu { get; set; }
+        public virtual RefNonTraditionalGenderStatus RefNonTraditionalGenderStatus { get; set; }
 
         public virtual RefWorkbasedLearningOpportunityType RefWorkbasedLearningOpportunityType { get; set; }
     }

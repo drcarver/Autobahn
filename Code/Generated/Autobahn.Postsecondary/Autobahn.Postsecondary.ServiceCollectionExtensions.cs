@@ -3,6 +3,7 @@
 //* FileName:   Postsecondary.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.Postsecondary.Interfaces;
 using Autobahn.Postsecondary.ViewModels;
 using Autobahn.Postsecondary.Views;
 
@@ -17,28 +18,30 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddPostsecondaryServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.IPsCourse, PsCourseViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsInstitution, PsInstitutionViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsPriceOfAttendance, PsPriceOfAttendanceViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsProgram, PsProgramViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsSection, PsSectionViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsSectionLocation, PsSectionLocationViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStaffEmployment, PsStaffEmploymentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentAcademicAward, PsStudentAcademicAwardViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentAcademicRecord, PsStudentAcademicRecordViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentAdmissionTest, PsStudentAdmissionTestViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentApplication, PsStudentApplicationViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentCohort, PsStudentCohortViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentCourseSectionMark, PsStudentCourseSectionMarkViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentDemographic, PsStudentDemographicViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentEmployment, PsStudentEmploymentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentEnrollment, PsStudentEnrollmentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPSStudentEnrollment, PSStudentEnrollmentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentFinancialAid, PsStudentFinancialAidViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPSStudentProgram, PSStudentProgramViewModel>();
-        serviceCollection.AddTransient<Interfaces.IPsStudentSection, PsStudentSectionViewModel>();
+        serviceCollection.AddTransient<IIPEDSFinance, IPEDSFinanceViewModel>();
+        serviceCollection.AddTransient<IPsCourse, PsCourseViewModel>();
+        serviceCollection.AddTransient<IPsInstitution, PsInstitutionViewModel>();
+        serviceCollection.AddTransient<IPsPriceOfAttendance, PsPriceOfAttendanceViewModel>();
+        serviceCollection.AddTransient<IPsProgram, PsProgramViewModel>();
+        serviceCollection.AddTransient<IPsSection, PsSectionViewModel>();
+        serviceCollection.AddTransient<IPsSectionLocation, PsSectionLocationViewModel>();
+        serviceCollection.AddTransient<IPsStaffEmployment, PsStaffEmploymentViewModel>();
+        serviceCollection.AddTransient<IPsStudentAcademicAward, PsStudentAcademicAwardViewModel>();
+        serviceCollection.AddTransient<IPsStudentAcademicRecord, PsStudentAcademicRecordViewModel>();
+        serviceCollection.AddTransient<IPsStudentAdmissionTest, PsStudentAdmissionTestViewModel>();
+        serviceCollection.AddTransient<IPsStudentApplication, PsStudentApplicationViewModel>();
+        serviceCollection.AddTransient<IPsStudentCohort, PsStudentCohortViewModel>();
+        serviceCollection.AddTransient<IPsStudentCourseSectionMark, PsStudentCourseSectionMarkViewModel>();
+        serviceCollection.AddTransient<IPsStudentDemographic, PsStudentDemographicViewModel>();
+        serviceCollection.AddTransient<IPsStudentEmployment, PsStudentEmploymentViewModel>();
+        serviceCollection.AddTransient<IPsStudentEnrollment, PsStudentEnrollmentViewModel>();
+        serviceCollection.AddTransient<IPSStudentEnrollment, PSStudentEnrollmentViewModel>();
+        serviceCollection.AddTransient<IPsStudentFinancialAid, PsStudentFinancialAidViewModel>();
+        serviceCollection.AddTransient<IPSStudentProgram, PSStudentProgramViewModel>();
+        serviceCollection.AddTransient<IPsStudentSection, PsStudentSectionViewModel>();
 
         // Now the known views
+        serviceCollection.AddTransient<IPEDSFinanceView>();
         serviceCollection.AddTransient<PsCourseView>();
         serviceCollection.AddTransient<PsInstitutionView>();
         serviceCollection.AddTransient<PsPriceOfAttendanceView>();

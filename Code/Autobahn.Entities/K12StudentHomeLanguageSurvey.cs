@@ -1,5 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Autobahn.Entities
 {
+    [Table("K12StudentHomeLanguageSurvey")]
     public partial class K12StudentHomeLanguageSurvey
     {
         public int K12StudentHomeLanguageSurveyId { get; set; }

@@ -1,5 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Autobahn.Entities
 {
+    [Table("K12StaffAssignment")]
     public partial class K12StaffAssignment
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -70,15 +75,15 @@ namespace Autobahn.Entities
 
         public virtual RefClassroomPositionType RefClassroomPositionType { get; set; }
 
-        public virtual RefEDFactsTeacherInexperiencedStatu RefEDFactsTeacherInexperiencedStatu { get; set; }
+        public virtual RefEDFactsTeacherInexperiencedStatus RefEDFactsTeacherInexperiencedStatus { get; set; }
 
         public virtual RefK12StaffClassification RefK12StaffClassification { get; set; }
 
-        public virtual RefEmergencyOrProvisionalCredentialStatu RefEmergencyOrProvisionalCredentialStatu { get; set; }
+        public virtual RefEmergencyOrProvisionalCredentialStatus RefEmergencyOrProvisionalCredentialStatus { get; set; }
 
         public virtual RefMepStaffCategory RefMepStaffCategory { get; set; }
 
-        public virtual RefOutOfFieldStatu RefOutOfFieldStatu { get; set; }
+        public virtual RefOutOfFieldStatus RefOutOfFieldStatus { get; set; }
 
         public virtual RefProfessionalEducationJobClassification RefProfessionalEducationJobClassification { get; set; }
 

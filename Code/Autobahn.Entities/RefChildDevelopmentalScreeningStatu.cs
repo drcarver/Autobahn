@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefChildDevelopmentalScreeningStatu
+    [Table("RefChildDevelopmentalScreeningStatus")]
+    public partial class RefChildDevelopmentalScreeningStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefChildDevelopmentalScreeningStatu()
+        public RefChildDevelopmentalScreeningStatus()
         {
             ELChildDevelopmentalAssessments = new HashSet<ELChildDevelopmentalAssessment>();
         }

@@ -5,7 +5,6 @@
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
-using CommunityToolkit.Maui;
 
 namespace Autobahn.K12.ViewModels
 {

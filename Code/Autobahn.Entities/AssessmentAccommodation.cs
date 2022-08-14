@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,8 +11,8 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssessmentAccommodation()
         {
-            AssessmentParticipantSession_Accommodation = new HashSet<AssessmentParticipantSession_Accommodation>();
-            AssessmentRegistration_Accommodation = new HashSet<AssessmentRegistration_Accommodation>();
+            AssessmentParticipantSessionAccommodation = new HashSet<AssessmentParticipantSessionAccommodation>();
+            AssessmentRegistrationAccommodation = new HashSet<AssessmentRegistrationAccommodation>();
             IndividualizedProgramAssessmentAccommodations = new HashSet<IndividualizedProgramAssessmentAccommodation>();
         }
 
@@ -40,10 +42,10 @@ namespace Autobahn.Entities
         public virtual RefAssessmentAccommodationCategory RefAssessmentAccommodationCategory { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentParticipantSession_Accommodation> AssessmentParticipantSession_Accommodation { get; set; }
+        public virtual ICollection<AssessmentParticipantSessionAccommodation> AssessmentParticipantSessionAccommodation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentRegistration_Accommodation> AssessmentRegistration_Accommodation { get; set; }
+        public virtual ICollection<AssessmentRegistrationAccommodation> AssessmentRegistrationAccommodation { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<IndividualizedProgramAssessmentAccommodation> IndividualizedProgramAssessmentAccommodations { get; set; }

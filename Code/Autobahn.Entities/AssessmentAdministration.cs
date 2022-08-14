@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,8 +11,8 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssessmentAdministration()
         {
-            Assessment_AssessmentAdministration = new HashSet<Assessment_AssessmentAdministration>();
-            AssessmentAdministration_Organization = new HashSet<AssessmentAdministration_Organization>();
+            AssessmentAssessmentAdministration = new HashSet<AssessmentAssessmentAdministration>();
+            AssessmentAdministrationOrganization = new HashSet<AssessmentAdministrationOrganization>();
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
             AssessmentSessions = new HashSet<AssessmentSession>();
         }
@@ -51,12 +53,12 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Assessment_AssessmentAdministration> Assessment_AssessmentAdministration { get; set; }
+        public virtual ICollection<AssessmentAssessmentAdministration> AssessmentAssessmentAdministration { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentAdministration_Organization> AssessmentAdministration_Organization { get; set; }
+        public virtual ICollection<AssessmentAdministrationOrganization> AssessmentAdministrationOrganization { get; set; }
 
         public virtual RecordStatus RecordStatus { get; set; }
 

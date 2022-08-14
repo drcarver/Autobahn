@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefOutOfFieldStatu
+    [Table("RefOutOfFieldStatus")]
+    public partial class RefOutOfFieldStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefOutOfFieldStatu()
+        public RefOutOfFieldStatus()
         {
             K12StaffAssignment = new HashSet<K12StaffAssignment>();
         }

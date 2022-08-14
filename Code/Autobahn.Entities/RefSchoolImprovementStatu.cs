@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefSchoolImprovementStatu
+    [Table("RefSchoolImprovementStatus")]
+    public partial class RefSchoolImprovementStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefSchoolImprovementStatu()
+        public RefSchoolImprovementStatus()
         {
             K12SchoolImprovement = new HashSet<K12SchoolImprovement>();
             K12SchoolStatus = new HashSet<K12SchoolStatus>();

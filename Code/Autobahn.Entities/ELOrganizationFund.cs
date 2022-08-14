@@ -1,7 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("ELOrganizationFund")]
     public partial class ELOrganizationFund
     {
         [Key]

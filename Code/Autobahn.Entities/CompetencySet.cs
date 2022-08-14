@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -8,10 +10,10 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CompetencySet()
         {
-            CompetencyDefinition_CompetencySet = new HashSet<CompetencyDefinition_CompetencySet>();
+            CompetencyDefinitionCompetencySet = new HashSet<CompetencyDefinitionCompetencySet>();
             CompetencySet1 = new HashSet<CompetencySet>();
-            CompetencySet_Rubric = new HashSet<CompetencySet_Rubric>();
-            CompetencySet_RubricCriterion = new HashSet<CompetencySet_RubricCriterion>();
+            CompetencySetRubric = new HashSet<CompetencySetRubric>();
+            CompetencySetRubricCriterion = new HashSet<CompetencySetRubricCriterion>();
             CredentialDefCriterias = new HashSet<CredentialDefCriteria>();
             Goals = new HashSet<Goal>();
             ProfessionalDevelopmentRequirements = new HashSet<ProfessionalDevelopmentRequirement>();
@@ -19,7 +21,7 @@ namespace Autobahn.Entities
 
         public int CompetencySetId { get; set; }
 
-        public int? ChildOf_CompetencySet { get; set; }
+        public int? ChildOfCompetencySet { get; set; }
 
         public int? RefCompletionCriteriaId { get; set; }
 
@@ -34,7 +36,7 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencyDefinition_CompetencySet> CompetencyDefinition_CompetencySet { get; set; }
+        public virtual ICollection<CompetencyDefinitionCompetencySet> CompetencyDefinitionCompetencySet { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 
@@ -48,10 +50,10 @@ namespace Autobahn.Entities
         public virtual RefCompetencySetCompletionCriteria RefCompetencySetCompletionCriteria { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_Rubric> CompetencySet_Rubric { get; set; }
+        public virtual ICollection<CompetencySetRubric> CompetencySetRubric { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_RubricCriterion> CompetencySet_RubricCriterion { get; set; }
+        public virtual ICollection<CompetencySetRubricCriterion> CompetencySetRubricCriterion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CredentialDefCriteria> CredentialDefCriterias { get; set; }

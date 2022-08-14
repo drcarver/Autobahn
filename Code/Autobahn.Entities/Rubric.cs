@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,7 +12,7 @@ namespace Autobahn.Entities
         public Rubric()
         {
             AssessmentItems = new HashSet<AssessmentItem>();
-            CompetencySet_Rubric = new HashSet<CompetencySet_Rubric>();
+            CompetencySetRubric = new HashSet<CompetencySetRubric>();
             RubricCriterions = new HashSet<RubricCriterion>();
         }
 
@@ -39,7 +41,7 @@ namespace Autobahn.Entities
         public virtual ICollection<AssessmentItem> AssessmentItems { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_Rubric> CompetencySet_Rubric { get; set; }
+        public virtual ICollection<CompetencySetRubric> CompetencySetRubric { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

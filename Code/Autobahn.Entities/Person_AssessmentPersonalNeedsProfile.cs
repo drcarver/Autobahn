@@ -1,3 +1,5 @@
+using System;
+
 namespace Autobahn.Entities
 {
     public partial class Person_AssessmentPersonalNeedsProfile

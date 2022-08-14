@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -68,11 +69,11 @@ namespace Autobahn.Entities
 
         public virtual Organization Organization { get; set; }
 
-        public virtual RefAmaoAttainmentStatu RefAmaoAttainmentStatu { get; set; }
+        public virtual RefAmaoAttainmentStatus RefAmaoAttainmentStatus { get; set; }
 
-        public virtual RefAmaoAttainmentStatu RefAmaoAttainmentStatu1 { get; set; }
+        public virtual RefAmaoAttainmentStatus RefAmaoAttainmentStatu1 { get; set; }
 
-        public virtual RefAmaoAttainmentStatu RefAmaoAttainmentStatu2 { get; set; }
+        public virtual RefAmaoAttainmentStatus RefAmaoAttainmentStatu2 { get; set; }
 
         public virtual RefCteGraduationRateInclusion RefCteGraduationRateInclusion { get; set; }
 
@@ -80,15 +81,15 @@ namespace Autobahn.Entities
 
         public virtual RefHighSchoolGraduationRateIndicator RefHighSchoolGraduationRateIndicator { get; set; }
 
-        public virtual RefAypStatu RefAypStatu { get; set; }
+        public virtual RefAypStatus RefAypStatus { get; set; }
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefAdditionalTargetedSupportAndImprovementStatu RefAdditionalTargetedSupportAndImprovementStatu { get; set; }
+        public virtual RefAdditionalTargetedSupportAndImprovementStatus RefAdditionalTargetedSupportAndImprovementStatus { get; set; }
 
-        public virtual RefComprehensiveSupportAndImprovementStatu RefComprehensiveSupportAndImprovementStatu { get; set; }
+        public virtual RefComprehensiveSupportAndImprovementStatus RefComprehensiveSupportAndImprovementStatus { get; set; }
 
-        public virtual RefGunFreeSchoolsActReportingStatu RefGunFreeSchoolsActReportingStatu { get; set; }
+        public virtual RefGunFreeSchoolsActReportingStatus RefGunFreeSchoolsActReportingStatus { get; set; }
 
         public virtual RefParticipationStatusAyp RefParticipationStatusAyp { get; set; }
 
@@ -98,8 +99,8 @@ namespace Autobahn.Entities
 
         public virtual RefProficiencyTargetAyp RefProficiencyTargetAyp1 { get; set; }
 
-        public virtual RefReconstitutedStatu RefReconstitutedStatu { get; set; }
+        public virtual RefReconstitutedStatus RefReconstitutedStatus { get; set; }
 
-        public virtual RefTargetedSupportAndImprovementStatu RefTargetedSupportAndImprovementStatu { get; set; }
+        public virtual RefTargetedSupportAndImprovementStatus RefTargetedSupportAndImprovementStatus { get; set; }
     }
 }

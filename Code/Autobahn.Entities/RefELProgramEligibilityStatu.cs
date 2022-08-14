@@ -1,8 +1,11 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefELProgramEligibilityStatu
+    [Table("RefELProgramEligibilityStatus")]
+    public partial class RefELProgramEligibilityStatus
     {
         [Key]
         public int RefELProgramEligibilityStatusId { get; set; }

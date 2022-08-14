@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Entities", "Autobahn.Entities\Autobahn.Entities.csproj", "{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutobahnCodeGen", "AutobahnCodeGen\AutobahnCodeGen.csproj", "{95C5428E-86E2-4317-9560-F6182FB8F50E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Entities", "Code\AutobhnEntities\Autobahn.Entities.csproj", "{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95C5428E-86E2-4317-9560-F6182FB8F50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95C5428E-86E2-4317-9560-F6182FB8F50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C5428E-86E2-4317-9560-F6182FB8F50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C5428E-86E2-4317-9560-F6182FB8F50E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB926C8-4B9A-460C-A07A-BE6B371D68E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,6 +3,7 @@
 //* FileName:   Credentials.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.Credentials.Interfaces;
 using Autobahn.Credentials.ViewModels;
 using Autobahn.Credentials.Views;
 
@@ -17,18 +18,18 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddCredentialsServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.ICredentialAward, CredentialAwardViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialAwardCredit, CredentialAwardCreditViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialAwardEvidence, CredentialAwardEvidenceViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialCriteriaCourse, CredentialCriteriaCourseViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefAgent, CredentialDefAgentViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefAgentCredential, CredentialDefAgentCredentialViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefCategory, CredentialDefCategoryViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefCriteria, CredentialDefCriteriaViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefIdentifier, CredentialDefIdentifierViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialDefinition, CredentialDefinitionViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialIssuer, CredentialIssuerViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICredentialOffered, CredentialOfferedViewModel>();
+        serviceCollection.AddTransient<ICredentialAward, CredentialAwardViewModel>();
+        serviceCollection.AddTransient<ICredentialAwardCredit, CredentialAwardCreditViewModel>();
+        serviceCollection.AddTransient<ICredentialAwardEvidence, CredentialAwardEvidenceViewModel>();
+        serviceCollection.AddTransient<ICredentialCriteriaCourse, CredentialCriteriaCourseViewModel>();
+        serviceCollection.AddTransient<ICredentialDefAgent, CredentialDefAgentViewModel>();
+        serviceCollection.AddTransient<ICredentialDefAgentCredential, CredentialDefAgentCredentialViewModel>();
+        serviceCollection.AddTransient<ICredentialDefCategory, CredentialDefCategoryViewModel>();
+        serviceCollection.AddTransient<ICredentialDefCriteria, CredentialDefCriteriaViewModel>();
+        serviceCollection.AddTransient<ICredentialDefIdentifier, CredentialDefIdentifierViewModel>();
+        serviceCollection.AddTransient<ICredentialDefinition, CredentialDefinitionViewModel>();
+        serviceCollection.AddTransient<ICredentialIssuer, CredentialIssuerViewModel>();
+        serviceCollection.AddTransient<ICredentialOffered, CredentialOfferedViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<CredentialAwardView>();

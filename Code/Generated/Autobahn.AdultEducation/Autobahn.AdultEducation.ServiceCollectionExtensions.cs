@@ -3,6 +3,7 @@
 //* FileName:   AdultEducation.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.AdultEducation.Interfaces;
 using Autobahn.AdultEducation.ViewModels;
 using Autobahn.AdultEducation.Views;
 
@@ -17,12 +18,12 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddAdultEducationServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.IAeCourse, AeCourseViewModel>();
-        serviceCollection.AddTransient<Interfaces.IAeProvider, AeProviderViewModel>();
-        serviceCollection.AddTransient<Interfaces.IAeStaff, AeStaffViewModel>();
-        serviceCollection.AddTransient<Interfaces.IAeStudentAcademicRecord, AeStudentAcademicRecordViewModel>();
-        serviceCollection.AddTransient<Interfaces.IAeStudentEmployment, AeStudentEmploymentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IProgramParticipationAE, ProgramParticipationAEViewModel>();
+        serviceCollection.AddTransient<IAeCourse, AeCourseViewModel>();
+        serviceCollection.AddTransient<IAeProvider, AeProviderViewModel>();
+        serviceCollection.AddTransient<IAeStaff, AeStaffViewModel>();
+        serviceCollection.AddTransient<IAeStudentAcademicRecord, AeStudentAcademicRecordViewModel>();
+        serviceCollection.AddTransient<IAeStudentEmployment, AeStudentEmploymentViewModel>();
+        serviceCollection.AddTransient<IProgramParticipationAE, ProgramParticipationAEViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<AeCourseView>();

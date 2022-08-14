@@ -3,6 +3,7 @@
 //* FileName:   Implementation.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.Implementation.Interfaces;
 using Autobahn.Implementation.ViewModels;
 using Autobahn.Implementation.Views;
 

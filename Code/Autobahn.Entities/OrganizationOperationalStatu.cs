@@ -1,9 +1,11 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class OrganizationOperationalStatu
+    [Table("OrganizationOperationalStatus")]
+    public partial class OrganizationOperationalStatus
     {
         [Key]
         public int OrganizationOperationalStatusId { get; set; }
@@ -29,6 +31,6 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefOperationalStatu RefOperationalStatu { get; set; }
+        public virtual RefOperationalStatus RefOperationalStatus { get; set; }
     }
 }

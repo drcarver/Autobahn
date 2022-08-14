@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,8 +11,8 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssessmentForm()
         {
-            AssessmentForm_AssessmentAsset = new HashSet<AssessmentForm_AssessmentAsset>();
-            AssessmentForm_AssessmentFormSection = new HashSet<AssessmentForm_AssessmentFormSection>();
+            AssessmentFormAssessmentAsset = new HashSet<AssessmentFormAssessmentAsset>();
+            AssessmentFormAssessmentFormSection = new HashSet<AssessmentFormAssessmentFormSection>();
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
             AssessmentSubtests = new HashSet<AssessmentSubtest>();
         }
@@ -75,10 +77,10 @@ namespace Autobahn.Entities
         public virtual Assessment Assessment { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentForm_AssessmentAsset> AssessmentForm_AssessmentAsset { get; set; }
+        public virtual ICollection<AssessmentFormAssessmentAsset> AssessmentFormAssessmentAsset { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentForm_AssessmentFormSection> AssessmentForm_AssessmentFormSection { get; set; }
+        public virtual ICollection<AssessmentFormAssessmentFormSection> AssessmentFormAssessmentFormSection { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

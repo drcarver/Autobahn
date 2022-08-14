@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -43,6 +44,6 @@ namespace Autobahn.Entities
 
         public virtual RefEducationVerificationMethod RefEducationVerificationMethod { get; set; }
 
-        public virtual RefHigherEducationInstitutionAccreditationStatu RefHigherEducationInstitutionAccreditationStatu { get; set; }
+        public virtual RefHigherEducationInstitutionAccreditationStatus RefHigherEducationInstitutionAccreditationStatus { get; set; }
     }
 }

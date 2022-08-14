@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +13,7 @@ namespace Autobahn.Entities
         {
             AssessmentItemResponses = new HashSet<AssessmentItemResponse>();
             AssessmentSessionStaffRoles = new HashSet<AssessmentSessionStaffRole>();
-            AssessmentParticipantSession_Accommodation = new HashSet<AssessmentParticipantSession_Accommodation>();
+            AssessmentParticipantSessionAccommodation = new HashSet<AssessmentParticipantSessionAccommodation>();
         }
 
         public int AssessmentParticipantSessionId { get; set; }
@@ -88,6 +90,6 @@ namespace Autobahn.Entities
         public virtual RefAssessmentSessionSpecialCircumstanceType RefAssessmentSessionSpecialCircumstanceType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentParticipantSession_Accommodation> AssessmentParticipantSession_Accommodation { get; set; }
+        public virtual ICollection<AssessmentParticipantSessionAccommodation> AssessmentParticipantSessionAccommodation { get; set; }
     }
 }

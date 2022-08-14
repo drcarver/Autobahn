@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,7 +15,7 @@ namespace Autobahn.Entities
             AssessmentForms = new HashSet<AssessmentForm>();
             AssessmentFormSections = new HashSet<AssessmentFormSection>();
             AssessmentItems = new HashSet<AssessmentItem>();
-            LearnerActivity_LearningResource = new HashSet<LearnerActivity_LearningResource>();
+            LearnerActivityLearningResource = new HashSet<LearnerActivityLearningResource>();
             LearningResourceEducationLevels = new HashSet<LearningResourceEducationLevel>();
             LearningResourceAdaptations = new HashSet<LearningResourceAdaptation>();
             LearningResourceMediaFeatures = new HashSet<LearningResourceMediaFeature>();
@@ -158,7 +160,7 @@ namespace Autobahn.Entities
         public virtual DataCollection DataCollection { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LearnerActivity_LearningResource> LearnerActivity_LearningResource { get; set; }
+        public virtual ICollection<LearnerActivityLearningResource> LearnerActivityLearningResource { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LearningResourceEducationLevel> LearningResourceEducationLevels { get; set; }

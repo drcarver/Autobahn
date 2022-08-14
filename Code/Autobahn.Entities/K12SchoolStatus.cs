@@ -1,7 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12SchoolStatus")]
     public partial class K12SchoolStatus
     {
         public int K12SchoolStatusId { get; set; }
@@ -69,22 +72,22 @@ namespace Autobahn.Entities
 
         public virtual RefMagnetSpecialProgram RefMagnetSpecialProgram { get; set; }
 
-        public virtual RefNationalSchoolLunchProgramStatu RefNationalSchoolLunchProgramStatu { get; set; }
+        public virtual RefNationalSchoolLunchProgramStatus RefNationalSchoolLunchProgramStatus { get; set; }
 
-        public virtual RefNSLPStatu RefNSLPStatu { get; set; }
+        public virtual RefNSLPStatus RefNSLPStatus { get; set; }
 
-        public virtual RefProgressAchievingEnglishLanguageProficiencyIndicatorStatu RefProgressAchievingEnglishLanguageProficiencyIndicatorStatu { get; set; }
+        public virtual RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus { get; set; }
 
         public virtual RefRestructuringAction RefRestructuringAction { get; set; }
 
-        public virtual RefSchoolDangerousStatu RefSchoolDangerousStatu { get; set; }
+        public virtual RefSchoolDangerousStatus RefSchoolDangerousStatus { get; set; }
 
-        public virtual RefSchoolImprovementStatu RefSchoolImprovementStatu { get; set; }
+        public virtual RefSchoolImprovementStatus RefSchoolImprovementStatus { get; set; }
 
         public virtual RefTargetedSupport RefTargetedSupport { get; set; }
 
-        public virtual RefTitleISchoolStatu RefTitleISchoolStatu { get; set; }
+        public virtual RefTitleISchoolStatus RefTitleISchoolStatus { get; set; }
 
-        public virtual RefVirtualSchoolStatu RefVirtualSchoolStatu { get; set; }
+        public virtual RefVirtualSchoolStatus RefVirtualSchoolStatus { get; set; }
     }
 }

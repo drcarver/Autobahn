@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -10,7 +12,7 @@ namespace Autobahn.Entities
         {
             Activities = new HashSet<Activity>();
             AeProviders = new HashSet<AeProvider>();
-            AssessmentAdministration_Organization = new HashSet<AssessmentAdministration_Organization>();
+            AssessmentAdministrationOrganization = new HashSet<AssessmentAdministrationOrganization>();
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
             AssessmentRegistrations1 = new HashSet<AssessmentRegistration>();
             AssessmentRegistrations2 = new HashSet<AssessmentRegistration>();
@@ -47,7 +49,7 @@ namespace Autobahn.Entities
             OrganizationEmails = new HashSet<OrganizationEmail>();
             OrganizationAccreditations = new HashSet<OrganizationAccreditation>();
             OrganizationCalendars = new HashSet<OrganizationCalendar>();
-            OrganizationCalendarCrisis = new HashSet<OrganizationCalendarCrisi>();
+            OrganizationCalendarCrisis = new HashSet<OrganizationCalendarCrisis>();
             OrganizationDetails = new HashSet<OrganizationDetail>();
             OrganizationEmployeeBenefits = new HashSet<OrganizationEmployeeBenefit>();
             OrganizationFederalAccountabilities = new HashSet<OrganizationFederalAccountability>();
@@ -715,7 +717,7 @@ namespace Autobahn.Entities
         public virtual ICollection<AeProvider> AeProviders { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentAdministration_Organization> AssessmentAdministration_Organization { get; set; }
+        public virtual ICollection<AssessmentAdministrationOrganization> AssessmentAdministrationOrganization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentRegistration> AssessmentRegistrations { get; set; }
@@ -830,7 +832,7 @@ namespace Autobahn.Entities
         public virtual ICollection<OrganizationCalendar> OrganizationCalendars { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationCalendarCrisi> OrganizationCalendarCrisis { get; set; }
+        public virtual ICollection<OrganizationCalendarCrisis> OrganizationCalendarCrisis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrganizationDetail> OrganizationDetails { get; set; }

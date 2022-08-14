@@ -1,5 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Autobahn.Entities
 {
+    [Table("K12SeaAlternateFundUse")]
     public partial class K12SeaAlternateFundUse
     {
         public int K12SeaAlternateFundUseId { get; set; }

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +11,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RubricCriterion()
         {
-            CompetencySet_RubricCriterion = new HashSet<CompetencySet_RubricCriterion>();
+            CompetencySetRubricCriterion = new HashSet<CompetencySetRubricCriterion>();
             RubricCriterionLevels = new HashSet<RubricCriterionLevel>();
         }
 
@@ -38,8 +40,8 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencySet_RubricCriterion> CompetencySet_RubricCriterion { get; set; }
-
+        public virtual ICollection<CompetencySetRubricCriterion> CompetencySetRubricCriterion { get; set; }
+        
         public virtual DataCollection DataCollection { get; set; }
 
         public virtual RecordStatus RecordStatus { get; set; }

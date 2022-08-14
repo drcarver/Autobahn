@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -47,9 +49,9 @@ namespace Autobahn.Entities
 
         public virtual RefCriticalTeacherShortageCandidate RefCriticalTeacherShortageCandidate { get; set; }
 
-        public virtual RefTeacherPrepCompleterStatu RefTeacherPrepCompleterStatu { get; set; }
+        public virtual RefTeacherPrepCompleterStatus RefTeacherPrepCompleterStatus { get; set; }
 
-        public virtual RefTeacherPrepEnrollmentStatu RefTeacherPrepEnrollmentStatu { get; set; }
+        public virtual RefTeacherPrepEnrollmentStatus RefTeacherPrepEnrollmentStatus { get; set; }
 
         public virtual RefTeachingCredentialBasi RefTeachingCredentialBasi { get; set; }
 

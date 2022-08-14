@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefReconstitutedStatu
+    [Table("RefReconstitutedStatus")]
+    public partial class RefReconstitutedStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefReconstitutedStatu()
+        public RefReconstitutedStatus()
         {
             OrganizationFederalAccountabilities = new HashSet<OrganizationFederalAccountability>();
         }

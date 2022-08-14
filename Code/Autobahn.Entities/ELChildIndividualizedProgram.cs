@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -31,7 +32,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefIDEAIEPStatu RefIDEAIEPStatu { get; set; }
+        public virtual RefIDEAIEPStatus RefIDEAIEPStatus { get; set; }
 
         public virtual RefIDEAPartCEligibilityCategory RefIDEAPartCEligibilityCategory { get; set; }
     }

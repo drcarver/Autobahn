@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -74,7 +76,7 @@ namespace Autobahn.Entities
 
         public virtual RefCourseSectionDeliveryMode RefCourseSectionDeliveryMode { get; set; }
 
-        public virtual RefSingleSexClassStatu RefSingleSexClassStatu { get; set; }
+        public virtual RefSingleSexClassStatus RefSingleSexClassStatus { get; set; }
 
         public virtual RefCreditTypeEarned RefCreditTypeEarned { get; set; }
 

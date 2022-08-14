@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +11,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LearnerActivity()
         {
-            LearnerActivity_LearningResource = new HashSet<LearnerActivity_LearningResource>();
+            LearnerActivityLearningResource = new HashSet<LearnerActivityLearningResource>();
         }
 
         public int LearnerActivityId { get; set; }
@@ -98,6 +100,6 @@ namespace Autobahn.Entities
         public virtual RefLearnerActivityType RefLearnerActivityType { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LearnerActivity_LearningResource> LearnerActivity_LearningResource { get; set; }
+        public virtual ICollection<LearnerActivityLearningResource> LearnerActivityLearningResource { get; set; }
     }
 }

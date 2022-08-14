@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,9 +11,9 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssessmentFormSection()
         {
-            AssessmentForm_AssessmentFormSection = new HashSet<AssessmentForm_AssessmentFormSection>();
-            AssessmentFormSection_AssessmentAsset = new HashSet<AssessmentFormSection_AssessmentAsset>();
-            AssessmentFormSection_AssessmentItem = new HashSet<AssessmentFormSection_AssessmentItem>();
+            AssessmentFormAssessmentFormSection = new HashSet<AssessmentFormAssessmentFormSection>();
+            AssessmentFormSectionAssessmentAsset = new HashSet<AssessmentFormSectionAssessmentAsset>();
+            AssessmentFormSectionAssessmentItem = new HashSet<AssessmentFormSectionAssessmentItem>();
             AssessmentParticipantSessions = new HashSet<AssessmentParticipantSession>();
             AssessmentFormSection1 = new HashSet<AssessmentFormSection>();
         }
@@ -41,7 +43,7 @@ namespace Autobahn.Entities
         [StringLength(60)]
         public string AssessmentItemBankName { get; set; }
 
-        public int? ChildOf_FormSectionId { get; set; }
+        public int? ChildOfFormSectionId { get; set; }
 
         public int? LearningResourceId { get; set; }
 
@@ -57,13 +59,13 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentForm_AssessmentFormSection> AssessmentForm_AssessmentFormSection { get; set; }
+        public virtual ICollection<AssessmentFormAssessmentFormSection> AssessmentFormAssessmentFormSection { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentFormSection_AssessmentAsset> AssessmentFormSection_AssessmentAsset { get; set; }
+        public virtual ICollection<AssessmentFormSectionAssessmentAsset> AssessmentFormSectionAssessmentAsset { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentFormSection_AssessmentItem> AssessmentFormSection_AssessmentItem { get; set; }
+        public virtual ICollection<AssessmentFormSectionAssessmentItem> AssessmentFormSectionAssessmentItem { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefCompetencyFrameworkPublicationStatu
+    [Table("RefCompetencyFrameworkPublicationStatus")]
+    public partial class RefCompetencyFrameworkPublicationStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefCompetencyFrameworkPublicationStatu()
+        public RefCompetencyFrameworkPublicationStatus()
         {
             CompetencyFrameworks = new HashSet<CompetencyFramework>();
         }

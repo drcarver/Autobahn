@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefBuildingHistoricStatu
+    [Table("RefBuildingHistoricStatus")]
+    public partial class RefBuildingHistoricStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefBuildingHistoricStatu()
+        public RefBuildingHistoricStatus()
         {
             Facilities = new HashSet<Facility>();
         }

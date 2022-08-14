@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -90,7 +91,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefDevelopmentalEducationReferralStatu RefDevelopmentalEducationReferralStatu { get; set; }
+        public virtual RefDevelopmentalEducationReferralStatus RefDevelopmentalEducationReferralStatus { get; set; }
 
         public virtual RefDevelopmentalEducationType RefDevelopmentalEducationType { get; set; }
 
@@ -98,13 +99,13 @@ namespace Autobahn.Entities
 
         public virtual RefDoctoralExamsRequiredCode RefDoctoralExamsRequiredCode { get; set; }
 
-        public virtual RefGraduateOrDoctoralExamResultsStatu RefGraduateOrDoctoralExamResultsStatu { get; set; }
+        public virtual RefGraduateOrDoctoralExamResultsStatus RefGraduateOrDoctoralExamResultsStatus { get; set; }
 
         public virtual RefInstructionalActivityHour RefInstructionalActivityHour { get; set; }
 
         public virtual RefPsEnrollmentAwardType RefPsEnrollmentAwardType { get; set; }
 
-        public virtual RefPsEnrollmentStatu RefPsEnrollmentStatu { get; set; }
+        public virtual RefPsEnrollmentStatus RefPsEnrollmentStatus { get; set; }
 
         public virtual RefPsEnrollmentType RefPsEnrollmentType { get; set; }
 

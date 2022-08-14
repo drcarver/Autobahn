@@ -1,9 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class PersonStatu
+    public partial class PersonStatus
     {
         [Key]
         public int PersonStatusId { get; set; }

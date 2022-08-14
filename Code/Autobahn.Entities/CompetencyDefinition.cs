@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,11 +11,11 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CompetencyDefinition()
         {
-            AssessmentSubtest_CompetencyDefinition = new HashSet<AssessmentSubtest_CompetencyDefinition>();
+            AssessmentSubtestCompetencyDefinition = new HashSet<AssessmentSubtestCompetencyDefinition>();
             CompetencyDefAssociations = new HashSet<CompetencyDefAssociation>();
             CompetencyDefEducationLevels = new HashSet<CompetencyDefEducationLevel>();
             CompetencyDefinition1 = new HashSet<CompetencyDefinition>();
-            CompetencyDefinition_CompetencySet = new HashSet<CompetencyDefinition_CompetencySet>();
+            CompetencyDefinitionCompetencySet = new HashSet<CompetencyDefinitionCompetencySet>();
         }
 
         public int CompetencyDefinitionId { get; set; }
@@ -66,7 +68,7 @@ namespace Autobahn.Entities
         [StringLength(512)]
         public string CompetencyDefParentUrl { get; set; }
 
-        public int? ChildOf_CompetencyDefinitionId { get; set; }
+        public int? ChildOfCompetencyDefinitionId { get; set; }
 
         public bool? CurrentVersionIndicator { get; set; }
 
@@ -111,7 +113,7 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentSubtest_CompetencyDefinition> AssessmentSubtest_CompetencyDefinition { get; set; }
+        public virtual ICollection<AssessmentSubtestCompetencyDefinition> AssessmentSubtestCompetencyDefinition { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompetencyDefAssociation> CompetencyDefAssociations { get; set; }
@@ -127,7 +129,7 @@ namespace Autobahn.Entities
         public virtual CompetencyFramework CompetencyFramework { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompetencyDefinition_CompetencySet> CompetencyDefinition_CompetencySet { get; set; }
+        public virtual ICollection<CompetencyDefinitionCompetencySet> CompetencyDefinitionCompetencySet { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

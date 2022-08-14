@@ -1,7 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12SchoolIndicatorStatus")]
     public partial class K12SchoolIndicatorStatus
     {
         public int K12SchoolIndicatorStatusId { get; set; }
@@ -36,7 +39,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefIndicatorStateDefinedStatu RefIndicatorStateDefinedStatu { get; set; }
+        public virtual RefIndicatorStateDefinedStatus RefIndicatorStateDefinedStatus { get; set; }
 
         public virtual RefIndicatorStatusCustomType RefIndicatorStatusCustomType { get; set; }
 

@@ -1,7 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("RefISO6392Language")]
     public partial class RefISO6392Language
     {
         public int RefISO6392LanguageId { get; set; }

@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12StudentCourseSection")]
     public partial class K12StudentCourseSection
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -81,7 +84,7 @@ namespace Autobahn.Entities
 
         public virtual RefCreditTypeEarned RefCreditTypeEarned { get; set; }
 
-        public virtual RefExitOrWithdrawalStatu RefExitOrWithdrawalStatu { get; set; }
+        public virtual RefExitOrWithdrawalStatus RefExitOrWithdrawalStatus { get; set; }
 
         public virtual RefGradeLevel RefGradeLevel { get; set; }
 

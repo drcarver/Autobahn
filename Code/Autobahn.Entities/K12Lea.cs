@@ -1,7 +1,11 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12Lea")]
     public partial class K12Lea
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -48,13 +52,13 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefCharterLeaStatu RefCharterLeaStatu { get; set; }
+        public virtual RefCharterLeaStatus RefCharterLeaStatus { get; set; }
 
-        public virtual RefLeaImprovementStatu RefLeaImprovementStatu { get; set; }
+        public virtual RefLeaImprovementStatus RefLeaImprovementStatus { get; set; }
 
         public virtual RefLeaType RefLeaType { get; set; }
 
-        public virtual RefPublicSchoolChoiceStatu RefPublicSchoolChoiceStatu { get; set; }
+        public virtual RefPublicSchoolChoiceStatus RefPublicSchoolChoiceStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<K12LeaFederalReporting> K12LeaFederalReporting { get; set; }

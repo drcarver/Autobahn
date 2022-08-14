@@ -3,6 +3,7 @@
 //* FileName:   Facilities.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.Facilities.Interfaces;
 using Autobahn.Facilities.ViewModels;
 using Autobahn.Facilities.Views;
 
@@ -17,32 +18,32 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddFacilitiesServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.IBuildingSpace, BuildingSpaceViewModel>();
-        serviceCollection.AddTransient<Interfaces.IBuildingSpaceUtilization, BuildingSpaceUtilizationViewModel>();
-        serviceCollection.AddTransient<Interfaces.IBuildingSystemCategory, BuildingSystemCategoryViewModel>();
-        serviceCollection.AddTransient<Interfaces.IBuildingSystemComponent, BuildingSystemComponentViewModel>();
-        serviceCollection.AddTransient<Interfaces.IBuildingSystemComponentService, BuildingSystemComponentServiceViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacility, FacilityViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityAudit, FacilityAuditViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityCompliance, FacilityComplianceViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityDesign, FacilityDesignViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityDesignConstruction, FacilityDesignConstructionViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityEnergy, FacilityEnergyViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityFinance, FacilityFinanceViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityFinancial, FacilityFinancialViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityHazard, FacilityHazardViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityJointUse, FacilityJointUseViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityLease, FacilityLeaseViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityLocation, FacilityLocationViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityManagement, FacilityManagementViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityManagementPlan, FacilityManagementPlanViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityMandate, FacilityMandateViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityMortgage, FacilityMortgageViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityMortgageFee, FacilityMortgageFeeViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityRelationship, FacilityRelationshipViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilitySchoolDesign, FacilitySchoolDesignViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilitySite, FacilitySiteViewModel>();
-        serviceCollection.AddTransient<Interfaces.IFacilityUtilization, FacilityUtilizationViewModel>();
+        serviceCollection.AddTransient<IBuildingSpace, BuildingSpaceViewModel>();
+        serviceCollection.AddTransient<IBuildingSpaceUtilization, BuildingSpaceUtilizationViewModel>();
+        serviceCollection.AddTransient<IBuildingSystemCategory, BuildingSystemCategoryViewModel>();
+        serviceCollection.AddTransient<IBuildingSystemComponent, BuildingSystemComponentViewModel>();
+        serviceCollection.AddTransient<IBuildingSystemComponentService, BuildingSystemComponentServiceViewModel>();
+        serviceCollection.AddTransient<IFacility, FacilityViewModel>();
+        serviceCollection.AddTransient<IFacilityAudit, FacilityAuditViewModel>();
+        serviceCollection.AddTransient<IFacilityCompliance, FacilityComplianceViewModel>();
+        serviceCollection.AddTransient<IFacilityDesign, FacilityDesignViewModel>();
+        serviceCollection.AddTransient<IFacilityDesignConstruction, FacilityDesignConstructionViewModel>();
+        serviceCollection.AddTransient<IFacilityEnergy, FacilityEnergyViewModel>();
+        serviceCollection.AddTransient<IFacilityFinance, FacilityFinanceViewModel>();
+        serviceCollection.AddTransient<IFacilityFinancial, FacilityFinancialViewModel>();
+        serviceCollection.AddTransient<IFacilityHazard, FacilityHazardViewModel>();
+        serviceCollection.AddTransient<IFacilityJointUse, FacilityJointUseViewModel>();
+        serviceCollection.AddTransient<IFacilityLease, FacilityLeaseViewModel>();
+        serviceCollection.AddTransient<IFacilityLocation, FacilityLocationViewModel>();
+        serviceCollection.AddTransient<IFacilityManagement, FacilityManagementViewModel>();
+        serviceCollection.AddTransient<IFacilityManagementPlan, FacilityManagementPlanViewModel>();
+        serviceCollection.AddTransient<IFacilityMandate, FacilityMandateViewModel>();
+        serviceCollection.AddTransient<IFacilityMortgage, FacilityMortgageViewModel>();
+        serviceCollection.AddTransient<IFacilityMortgageFee, FacilityMortgageFeeViewModel>();
+        serviceCollection.AddTransient<IFacilityRelationship, FacilityRelationshipViewModel>();
+        serviceCollection.AddTransient<IFacilitySchoolDesign, FacilitySchoolDesignViewModel>();
+        serviceCollection.AddTransient<IFacilitySite, FacilitySiteViewModel>();
+        serviceCollection.AddTransient<IFacilityUtilization, FacilityUtilizationViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<BuildingSpaceView>();

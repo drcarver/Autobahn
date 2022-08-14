@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -46,7 +47,7 @@ namespace Autobahn.Entities
 
         public virtual RefAttendanceEventType RefAttendanceEventType { get; set; }
 
-        public virtual RefAttendanceStatu RefAttendanceStatu { get; set; }
+        public virtual RefAttendanceStatus RefAttendanceStatus { get; set; }
 
         public virtual RefLeaveEventType RefLeaveEventType { get; set; }
 

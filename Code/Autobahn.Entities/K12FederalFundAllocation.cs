@@ -1,8 +1,10 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12FederalFundAllocation")]
     public partial class K12FederalFundAllocation
     {
         public int K12FederalFundAllocationId { get; set; }
@@ -50,7 +52,7 @@ namespace Autobahn.Entities
 
         public virtual OrganizationCalendarSession OrganizationCalendarSession { get; set; }
 
-        public virtual RefReapAlternativeFundingStatu RefReapAlternativeFundingStatu { get; set; }
+        public virtual RefReapAlternativeFundingStatus RefReapAlternativeFundingStatus { get; set; }
 
         public virtual RecordStatus RecordStatus { get; set; }
 

@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefTeachingCredentialBasi
+    [Table("RefTeachingCredentialBasis")]
+    public partial class RefTeachingCredentialBasis
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefTeachingCredentialBasi()
+        public RefTeachingCredentialBasis()
         {
             ProgramParticipationTeacherPreps = new HashSet<ProgramParticipationTeacherPrep>();
             StaffCredentials = new HashSet<StaffCredential>();

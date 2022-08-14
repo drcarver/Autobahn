@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +11,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssessmentPerformanceLevel()
         {
-            AssessmentResult_PerformanceLevel = new HashSet<AssessmentResult_PerformanceLevel>();
+            AssessmentResultPerformanceLevel = new HashSet<AssessmentResultPerformanceLevel>();
         }
 
         public int AssessmentPerformanceLevelId { get; set; }
@@ -46,7 +48,7 @@ namespace Autobahn.Entities
         public virtual RecordStatus RecordStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AssessmentResult_PerformanceLevel> AssessmentResult_PerformanceLevel { get; set; }
+        public virtual ICollection<AssessmentResultPerformanceLevel> AssessmentResultPerformanceLevel { get; set; }
 
         public virtual AssessmentSubtest AssessmentSubtest { get; set; }
     }

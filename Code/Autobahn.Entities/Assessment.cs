@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +11,7 @@ namespace Autobahn.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Assessment()
         {
-            Assessment_AssessmentAdministration = new HashSet<Assessment_AssessmentAdministration>();
+            AssessmentAssessmentAdministration = new HashSet<AssessmentAssessmentAdministration>();
             AssessmentELDevelopmentalDomains = new HashSet<AssessmentELDevelopmentalDomain>();
             AssessmentLevelsForWhichDesigneds = new HashSet<AssessmentLevelsForWhichDesigned>();
             AssessmentForms = new HashSet<AssessmentForm>();
@@ -66,7 +68,7 @@ namespace Autobahn.Entities
         public int? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Assessment_AssessmentAdministration> Assessment_AssessmentAdministration { get; set; }
+        public virtual ICollection<AssessmentAssessmentAdministration> AssessmentAssessmentAdministration { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentELDevelopmentalDomain> AssessmentELDevelopmentalDomains { get; set; }

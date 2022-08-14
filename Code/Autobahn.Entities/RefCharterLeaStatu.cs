@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefCharterLeaStatu
+    [Table("RefCharterLeaStatus")]
+    public partial class RefCharterLeaStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefCharterLeaStatu()
+        public RefCharterLeaStatus()
         {
             K12Lea = new HashSet<K12Lea>();
         }

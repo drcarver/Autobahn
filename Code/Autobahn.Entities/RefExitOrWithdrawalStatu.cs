@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefExitOrWithdrawalStatu
+    [Table("RefExitOrWithdrawalStatus")]
+    public partial class RefExitOrWithdrawalStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefExitOrWithdrawalStatu()
+        public RefExitOrWithdrawalStatus()
         {
             K12StudentCourseSection = new HashSet<K12StudentCourseSection>();
             K12StudentEnrollment = new HashSet<K12StudentEnrollment>();

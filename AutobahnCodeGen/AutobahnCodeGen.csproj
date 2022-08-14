@@ -148,7 +148,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Autobahn.Entities\Autobahn.Entities.csproj">
+    <ProjectReference Include="..\Code\AutobhnEntities\Autobahn.Entities.csproj">
       <Project>{9cb926c8-4b9a-460c-a07a-be6b371d68e4}</Project>
       <Name>Autobahn.Entities</Name>
     </ProjectReference>

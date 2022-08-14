@@ -1,5 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Autobahn.Entities
 {
+    [Table("K12StaffEmployment")]
     public partial class K12StaffEmployment
     {
         public int K12StaffEmploymentId { get; set; }
@@ -32,7 +36,7 @@ namespace Autobahn.Entities
 
         public virtual RefK12StaffClassification RefK12StaffClassification { get; set; }
 
-        public virtual RefEmploymentStatu RefEmploymentStatu { get; set; }
+        public virtual RefEmploymentStatus RefEmploymentStatus { get; set; }
 
         public virtual StaffEmployment StaffEmployment { get; set; }
     }

@@ -3,6 +3,7 @@
 //* FileName:   CTE.ServiceCollectionExtensions.cs
 //**********************************************************
 
+using Autobahn.CTE.Interfaces;
 using Autobahn.CTE.ViewModels;
 using Autobahn.CTE.Views;
 
@@ -17,9 +18,9 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddCTEServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<Interfaces.ICteCourse, CteCourseViewModel>();
-        serviceCollection.AddTransient<Interfaces.ICteStudentAcademicRecord, CteStudentAcademicRecordViewModel>();
-        serviceCollection.AddTransient<Interfaces.IProgramParticipationCte, ProgramParticipationCteViewModel>();
+        serviceCollection.AddTransient<ICteCourse, CteCourseViewModel>();
+        serviceCollection.AddTransient<ICteStudentAcademicRecord, CteStudentAcademicRecordViewModel>();
+        serviceCollection.AddTransient<IProgramParticipationCte, ProgramParticipationCteViewModel>();
 
         // Now the known views
         serviceCollection.AddTransient<CteCourseView>();

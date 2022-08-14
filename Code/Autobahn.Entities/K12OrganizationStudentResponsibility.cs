@@ -1,5 +1,9 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Autobahn.Entities
 {
+    [Table("K12OrganizationStudentResponsibility")]
     public partial class K12OrganizationStudentResponsibility
     {
         public int K12OrganizationStudentResponsibilityId { get; set; }
@@ -22,7 +26,7 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefStudentSchoolAffiliationStateDefinedStatu RefStudentSchoolAffiliationStateDefinedStatu { get; set; }
+        public virtual RefStudentSchoolAffiliationStateDefinedStatus RefStudentSchoolAffiliationStateDefinedStatus { get; set; }
 
         public virtual OrganizationPersonRole OrganizationPersonRole { get; set; }
 

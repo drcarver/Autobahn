@@ -1,6 +1,9 @@
 ﻿using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -32,18 +35,15 @@ namespace AutobahnCodeGen
             var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
 
             //Add any missing classes and columns from the entities
-            foreach (var classtype in types.GetTypes().ToList())
+            foreach (var classtype in types.GetTypes())
             {
-                if (!classtype.IsClass
-                    || classtype.Name == "C_CEDSElements"
-                    || classtype.Name == "C_CEDStoNDSMapping"
-                    || classtype.Name.StartsWith("Autobahn"))
+                if (!classtype.IsClass)
                 {
                     continue;
                 }
 
-                var model = autobahnTables.FirstOrDefault(t => t.ModelName == classtype.Name.Replace("Statu", "Status")) ??
-                            autobahnTables.FirstOrDefault(t => t.ModelName == classtype.Name.Replace("Id", string.Empty));
+                var tableName = classtype.GetCustomAttributes<TableAttribute>().First();
+                AutobahnTable model = autobahnTables.FirstOrDefault(t => t.TableName == tableName?.Name);
                 if (model == null)
                 {
                     foreach (var prop in classtype.GetProperties())
@@ -54,35 +54,67 @@ namespace AutobahnCodeGen
                         }
 
                         var existing = cedsElementsMetadata.FirstOrDefault(t => t.TechnicalName == prop.Name);
-                        autobahnTables.Add(new AutobahnTable
+                        var item = new AutobahnTable
                         {
                             ModelName = classtype.Name.EndsWith("Statu") ? classtype.Name.Replace("Statu", "Status") : classtype.Name,
                             ColumnName = prop.Name,
                             GlobalId = existing?.GlobalID,
                             Version = "--dbtable--"
-                        });
+                        };
+                        item.TableName = item.ModelName;
+                        autobahnTables.Add(item);
                     }
+                }
+                else
+                {
+                    model.ModelName = classtype.Name;
                 }
             }
 
+            foreach (var item in autobahnTables.Where(t => t.TableName != t.ModelName).ToList())
+            {
+                if (string.IsNullOrEmpty(item.ModelName) && !string.IsNullOrEmpty(item.TableName))
+                {
+                    item.ModelName = item.TableName;
+                }
+                if (!string.IsNullOrEmpty(item.ModelName) && string.IsNullOrEmpty(item.TableName))
+                {
+                    item.TableName = item.ModelName;
+                }
+            }
+
+            foreach (var item in autobahnTables.Where(t => t.TableName != t.ModelName).ToList())
+            {
+                item.ModelName = item.TableName;
+            }
+
             // Set the domains in the tablesMetadata
-            var refdom = autobahnDomains.FirstOrDefault(d => d.Module == "Reference");
-            var comdom = autobahnDomains.FirstOrDefault(d => d.Module == "Common");
+            var comdom = autobahnDomains.First(d => d.Module == "Common");
+            var assesdom = autobahnDomains.First(d => d.Module == "Assessments");
+            var aedom = autobahnDomains.First(d => d.Module == "AdultEducation");
+            var eldom = autobahnDomains.First(d => d.Module == "EarlyLearning");
+            var lrdom = autobahnDomains.First(d => d.Module == "LearningResources");
+            var k12dom = autobahnDomains.First(d => d.Module == "K12");
+            var facdom = autobahnDomains.First(d => d.Module == "Facilities");
+            var psdom = autobahnDomains.First(d => d.Module == "Postsecondary");
+            var compdom = autobahnDomains.First(d => d.Module == "Competencies");
+            var creddom = autobahnDomains.First(d => d.Module == "Credentials");
+            var ctedom = autobahnDomains.First(d => d.Module == "CTE");
+            var authdom = autobahnDomains.First(d => d.Module == "Authorization");
+            var wfdom = autobahnDomains.First(d => d.Module == "Workforce");
+            var invaliddom = autobahnDomains.First(d => d.Module == "Invalid");
             foreach (var table in autobahnTables)
             {
-                var aedom = autobahnDomains.FirstOrDefault(d => d.Module == "AdultEducation");
                 if (table.ModelName.StartsWith("Ae")
                     || table.ModelName.EndsWith("AE"))
                 {
                     table.AutobahnDomainId = aedom?.Id;
                 }
-                var eldom = autobahnDomains.FirstOrDefault(d => d.Module == "EarlyLearning");
                 if (table.ModelName.StartsWith("EL")
                     || table.ModelName.StartsWith("EarlyChildhood"))
                 {
                     table.AutobahnDomainId = eldom?.Id;
                 }
-                var assesdom = autobahnDomains.FirstOrDefault(d => d.Module == "Assessment");
                 if (table.ModelName.StartsWith("Assessment")
                     || table.ModelName.StartsWith("Rubric")
                     || table.ModelName.StartsWith("Goal")
@@ -90,41 +122,37 @@ namespace AutobahnCodeGen
                 {
                     table.AutobahnDomainId = assesdom?.Id;
                 }
-                var lrdom = autobahnDomains.FirstOrDefault(d => d.Module == "LearningResource");
                 if (table.ModelName.StartsWith("Learning")
                     || table.ModelName.StartsWith("Peer"))
                 {
                     table.AutobahnDomainId = lrdom?.Id;
                 }
-                var k12dom = autobahnDomains.FirstOrDefault(d => d.Module == "K12");
                 if (table.ModelName.StartsWith("K12"))
                 {
                     table.AutobahnDomainId = k12dom?.Id;
                 }
-                var facdom = autobahnDomains.FirstOrDefault(d => d.Module == "Facilities");
                 if (table.ModelName.StartsWith("Build")
                     || table.ModelName.StartsWith("Facility"))
                 {
                     table.AutobahnDomainId = facdom?.Id;
                 }
-                var psdom = autobahnDomains.FirstOrDefault(d => d.Module == "Postsecondary");
                 if (table.ModelName.StartsWith("Ps")
-                    || table.ModelName.StartsWith("PS")
-                    || table.ModelName.IndexOf("IPEDS") > 0)
+                    || table.ModelName.StartsWith("PS"))
                 {
                     table.AutobahnDomainId = psdom?.Id;
                 }
-                var compdom = autobahnDomains.FirstOrDefault(d => d.Module == "Competency");
+                if (table.ModelName.IndexOf("IPEDS", StringComparison.InvariantCulture) > -1)
+                {
+                    table.AutobahnDomainId = psdom?.Id;
+                }
                 if (table.ModelName.StartsWith("Competency"))
                 {
                     table.AutobahnDomainId = compdom?.Id;
                 }
-                var creddom = autobahnDomains.FirstOrDefault(d => d.Module == "Credentials");
                 if (table.ModelName.StartsWith("Credential"))
                 {
                     table.AutobahnDomainId = creddom?.Id;
                 }
-                var ctedom = autobahnDomains.FirstOrDefault(d => d.Module == "CTE");
                 if (table.ModelName.StartsWith("Cte")
                     || table.ModelName.EndsWith("Cte"))
                 {
@@ -138,24 +166,18 @@ namespace AutobahnCodeGen
                 {
                     table.AutobahnDomainId = comdom?.Id;
                 }
-                var authdom = autobahnDomains.FirstOrDefault(d => d.Module == "Authorization");
                 if (table.ModelName.StartsWith("App")
                     || table.ModelName.StartsWith("Auth"))
                 {
                     table.AutobahnDomainId = authdom?.Id;
                 }
-                if (table.ModelName.StartsWith("Ref"))
-                {
-                    table.AutobahnDomainId = refdom?.Id;
-                }
-                var wfdom = autobahnDomains.FirstOrDefault(d => d.Module == "Workforce");
                 if (table.ModelName.StartsWith("Workforce"))
                 {
                     table.AutobahnDomainId = wfdom?.Id;
                 }
                 if (table.AutobahnDomainId == null)
                 {
-                    table.AutobahnDomainId = authdom?.Id;
+                    table.AutobahnDomainId = invaliddom?.Id;
                 }
             }
 
@@ -164,11 +186,7 @@ namespace AutobahnCodeGen
             {
                 foreach (var col in autobahnTables.Where(c => c.ColumnName.StartsWith(table.ModelName)))
                 {
-                    if (table.AutobahnDomainId != refdom?.Id)
-                    {
-                        table.AutobahnDomainId = col.AutobahnDomainId;
-                    }
-                    else if (table.AutobahnDomainId != col.AutobahnDomainId)
+                    if (table.AutobahnDomainId != col.AutobahnDomainId)
                     {
                         table.AutobahnDomainId = comdom.Id;
                     }

@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefELFacilityLicensingStatu
+    [Table("RefELFacilityLicensingStatus")]
+    public partial class RefELFacilityLicensingStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefELFacilityLicensingStatu()
+        public RefELFacilityLicensingStatus()
         {
             ELFacilityLicensings = new HashSet<ELFacilityLicensing>();
         }

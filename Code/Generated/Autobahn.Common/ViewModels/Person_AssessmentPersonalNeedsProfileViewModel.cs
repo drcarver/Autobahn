@@ -3,8 +3,6 @@
 //* FileName:   Person_AssessmentPersonalNeedsProfileViewModel.cs
 //**********************************************************
 
-using CommunityToolkit.Maui;
-
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>

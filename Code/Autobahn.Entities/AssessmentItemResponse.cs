@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -81,10 +83,10 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefAssessmentItemResponseStatu RefAssessmentItemResponseStatu { get; set; }
+        public virtual RefAssessmentItemResponseStatus RefAssessmentItemResponseStatus { get; set; }
 
-        public virtual RefAssessmentItemResponseScoreStatu RefAssessmentItemResponseScoreStatu { get; set; }
+        public virtual RefAssessmentItemResponseScoreStatus RefAssessmentItemResponseScoreStatus { get; set; }
 
-        public virtual RefProficiencyStatu RefProficiencyStatu { get; set; }
+        public virtual RefProficiencyStatus RefProficiencyStatus { get; set; }
     }
 }

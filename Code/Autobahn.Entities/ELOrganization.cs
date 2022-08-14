@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -25,6 +26,6 @@ namespace Autobahn.Entities
 
         public virtual RecordStatus RecordStatus { get; set; }
 
-        public virtual RefProfitStatu RefProfitStatu { get; set; }
+        public virtual RefProfitStatus RefProfitStatus { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
@@ -51,7 +52,7 @@ namespace Autobahn.Entities
 
         public virtual RefCohortExclusion RefCohortExclusion { get; set; }
 
-        public virtual RefDependencyStatu RefDependencyStatu { get; set; }
+        public virtual RefDependencyStatus RefDependencyStatus { get; set; }
 
         public virtual RefEducationLevel RefEducationLevel { get; set; }
 

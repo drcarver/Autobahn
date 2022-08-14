@@ -1,7 +1,9 @@
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    [Table("K12LeaFederalReporting")]
     public partial class K12LeaFederalReporting
     {
         public int K12LeaFederalReportingId { get; set; }
@@ -52,6 +54,6 @@ namespace Autobahn.Entities
 
         public virtual RefBarrierToEducatingHomeless RefBarrierToEducatingHomeless { get; set; }
 
-        public virtual RefIntegratedTechnologyStatu RefIntegratedTechnologyStatu { get; set; }
+        public virtual RefIntegratedTechnologyStatus RefIntegratedTechnologyStatus { get; set; }
     }
 }

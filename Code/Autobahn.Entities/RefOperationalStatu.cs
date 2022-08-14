@@ -1,13 +1,17 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    public partial class RefOperationalStatu
+    [Table("RefOperationalStatus")]
+    public partial class RefOperationalStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefOperationalStatu()
+        public RefOperationalStatus()
         {
-            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatu>();
+            OrganizationOperationalStatus = new HashSet<OrganizationOperationalStatus>();
         }
 
         [Key]
@@ -36,7 +40,7 @@ namespace Autobahn.Entities
         public virtual Organization Organization { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrganizationOperationalStatu> OrganizationOperationalStatus { get; set; }
+        public virtual ICollection<OrganizationOperationalStatus> OrganizationOperationalStatus { get; set; }
 
         public virtual RefOperationalStatusType RefOperationalStatusType { get; set; }
     }
