@@ -16,26 +16,6 @@ namespace Autobahn.Authorization.Models
         /// <summary>
         /// Type of person who authorized the decision or document.
         /// </summary>
-        public System.Boolean? AcceptanceIndicator { get; set; }
-
-        /// <summary>
-        /// Type of person who authorized the decision or document.
-        /// </summary>
-        public System.DateTime? AuthorizationDate { get; set; }
-
-        /// <summary>
-        /// Type of person who authorized the decision or document.
-        /// </summary>
-        public System.String DecisionExplanation { get; set; }
-
-        /// <summary>
-        /// Type of person who authorized the decision or document.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// Type of person who authorized the decision or document.
-        /// </summary>
         public Guid? RefAuthorizerTypeId { get; set; }
 
     }

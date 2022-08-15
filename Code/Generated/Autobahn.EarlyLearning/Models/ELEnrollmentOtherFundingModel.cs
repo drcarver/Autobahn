@@ -13,15 +13,5 @@ namespace Autobahn.EarlyLearning.Models
      /// </summary>
     public partial class ELEnrollmentOtherFundingModel : AutobahnBase, Interfaces.IELEnrollmentOtherFunding
     {
-        /// <summary>
-        /// The other contributing funding sources.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The other contributing funding sources.
-        /// </summary>
-        public Guid RefELOtherFederalFundingSourcesId { get; set; }
-
     }
 }

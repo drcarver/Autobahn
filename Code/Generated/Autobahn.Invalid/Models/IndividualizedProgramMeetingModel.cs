@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The date on which a child's service plan meeting is held.
         /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// The date on which a child's service plan meeting is held.
-        /// </summary>
         public System.DateTime? MeetingDate { get; set; }
 
     }

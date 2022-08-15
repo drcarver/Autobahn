@@ -15,16 +15,6 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// Defines whether or not the individual needs the kind of support defined by the entity.
         /// </summary>
-        System.Boolean? ActivateByDefault { get; set; }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
-        System.String AssessmentNeedType { get; set; }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
         System.Boolean? AssignedSupportFlag { get; set; }
 
     }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -16,15 +19,6 @@ namespace Autobahn.Assessments.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSessionStaffRole";
-
-        // member variable for the AssessmentParticipantSessionId property
-        private Guid? _AssessmentParticipantSessionId;
-
-        // member variable for the AssessmentSessionId property
-        private Guid? _AssessmentSessionId;
-
-        // member variable for the PersonId property
-        private Guid _PersonId;
 
         // member variable for the RefAssessmentSessionStaffRoleTypeId property
         private Guid? _RefAssessmentSessionStaffRoleTypeId;
@@ -38,23 +32,12 @@ namespace Autobahn.Assessments.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentParticipantSession"/> model
-        /// </summary>
-        public Guid? AssessmentParticipantSessionId { get => _AssessmentParticipantSessionId; set => SetProperty(ref _AssessmentParticipantSessionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSession"/> model
-        /// </summary>
-        public Guid? AssessmentSessionId { get => _AssessmentSessionId; set => SetProperty(ref _AssessmentSessionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefAssessmentSessionStaffRoleType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20179">Assessment Session Staff Role Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Assessment Session Staff Role Type")]
         public Guid? RefAssessmentSessionStaffRoleTypeId { get => _RefAssessmentSessionStaffRoleTypeId; set => SetProperty(ref _RefAssessmentSessionStaffRoleTypeId, value); }
 
         #endregion
@@ -66,10 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentParticipantSessionId = model.AssessmentParticipantSessionId;
-            AssessmentSessionId = model.AssessmentSessionId;
-            PersonId = model.PersonId;
-            RefAssessmentSessionStaffRoleTypeId = model.RefAssessmentSessionStaffRoleTypeId;
+            RefAssessmentSessionStaffRoleTypeId = model.RefAssessmentSessionStaffRoleTypeId; // Assessment Session Staff Role Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

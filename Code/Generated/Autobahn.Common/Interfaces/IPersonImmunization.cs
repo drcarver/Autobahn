@@ -16,15 +16,5 @@ namespace Autobahn.Common.Interfaces
         /// </summary>
         System.DateTime ImmunizationDate { get; set; }
 
-        /// <summary>
-        /// The year, month and day of an immunization.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The year, month and day of an immunization.
-        /// </summary>
-        Guid RefImmunizationTypeId { get; set; }
-
     }
 }

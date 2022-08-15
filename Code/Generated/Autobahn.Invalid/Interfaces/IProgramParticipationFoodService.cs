@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
         /// </summary>
-        Guid PersonProgramParticipationId { get; set; }
-
-        /// <summary>
-        /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
-        /// </summary>
         Guid RefSchoolFoodServiceProgramId { get; set; }
 
     }

@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// The nature of recognition given to the student for accomplishments in a co-curricular, or extra-curricular activity.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The nature of recognition given to the student for accomplishments in a co-curricular, or extra-curricular activity.
-        /// </summary>
         Guid RefActivityRecognitionTypeId { get; set; }
 
     }

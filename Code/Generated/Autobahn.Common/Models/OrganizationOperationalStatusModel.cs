@@ -14,16 +14,6 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
         /// </summary>
-        public System.DateTime? OperationalStatusEffectiveDate { get; set; }
-
-        /// <summary>
-        /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
-        /// </summary>
         public Guid RefOperationalStatusId { get; set; }
 
     }

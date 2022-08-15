@@ -17,10 +17,5 @@ namespace Autobahn.Invalid.Interfaces
         /// </summary>
         System.String ClassroomIdentifier { get; set; }
 
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// </summary>
-        Guid LocationId { get; set; }
-
     }
 }

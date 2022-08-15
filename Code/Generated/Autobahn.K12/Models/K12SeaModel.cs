@@ -16,11 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The American National Standards Institute (ANSI) two-digit code for the state.
         /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The American National Standards Institute (ANSI) two-digit code for the state.
-        /// </summary>
         public Guid? RefStateANSICodeId { get; set; }
 
     }

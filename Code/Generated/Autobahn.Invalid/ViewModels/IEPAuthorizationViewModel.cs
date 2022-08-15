@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IEPAuthorization";
-
-        // member variable for the AuthorizationDocumentId property
-        private Guid _AuthorizationDocumentId;
-
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
 
         // member variable for the RefIEPAuthorizationDocumentTypeId property
         private Guid? _RefIEPAuthorizationDocumentTypeId;
@@ -35,18 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="AuthorizationDocument"/> model
-        /// </summary>
-        public Guid AuthorizationDocumentId { get => _AuthorizationDocumentId; set => SetProperty(ref _AuthorizationDocumentId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefIEPAuthorizationDocumentType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20700">IEP Authorization Document Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("IEP Authorization Document Type")]
         public Guid? RefIEPAuthorizationDocumentTypeId { get => _RefIEPAuthorizationDocumentTypeId; set => SetProperty(ref _RefIEPAuthorizationDocumentTypeId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AuthorizationDocumentId = model.AuthorizationDocumentId;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            RefIEPAuthorizationDocumentTypeId = model.RefIEPAuthorizationDocumentTypeId;
+            RefIEPAuthorizationDocumentTypeId = model.RefIEPAuthorizationDocumentTypeId; // IEP Authorization Document Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

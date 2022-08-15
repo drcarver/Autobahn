@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.K12.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12LeaTitleISupportService";
-
-        // member variable for the K12LeaId property
-        private Guid _K12LeaId;
 
         // member variable for the RefK12LeaTitleISupportServiceId property
         private Guid _RefK12LeaTitleISupportServiceId;
@@ -32,13 +32,12 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="K12Lea"/> model
-        /// </summary>
-        public Guid K12LeaId { get => _K12LeaId; set => SetProperty(ref _K12LeaId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefK12LeaTitleISupportService"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19289">Title I Support Services</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Title I Support Services")]
         public Guid RefK12LeaTitleISupportServiceId { get => _RefK12LeaTitleISupportServiceId; set => SetProperty(ref _RefK12LeaTitleISupportServiceId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            K12LeaId = model.K12LeaId;
-            RefK12LeaTitleISupportServiceId = model.RefK12LeaTitleISupportServiceId;
+            RefK12LeaTitleISupportServiceId = model.RefK12LeaTitleISupportServiceId; // Title I Support Services
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

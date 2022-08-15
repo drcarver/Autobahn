@@ -18,40 +18,5 @@ namespace Autobahn.Invalid.Models
         /// </summary>
         public System.String AcademicDescription { get; set; }
 
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String FunctionalDescription { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String GeneralEducationDescription { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String ParentConcernDescription { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String PreschoolDescription { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String StudentConcernDescription { get; set; }
-
-        /// <summary>
-        /// How the child's disability affects the child's academic achievement.
-        /// </summary>
-        public System.String StudentStrengthsDescription { get; set; }
-
     }
 }

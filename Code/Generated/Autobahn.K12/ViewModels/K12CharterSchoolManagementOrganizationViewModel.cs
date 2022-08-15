@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12CharterSchoolManagementOrganization";
 
-        // member variable for the OrganizationId property
-        private Guid? _OrganizationId;
-
-        // member variable for the RefCharterSchoolManagementOrganizationTypeId property
-        private Guid? _RefCharterSchoolManagementOrganizationTypeId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.K12.ViewModels
         /// The title of the K12CharterSchoolManagementOrganizationViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid? OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCharterSchoolManagementOrganizationType"/> model
-        /// </summary>
-        public Guid? RefCharterSchoolManagementOrganizationTypeId { get => _RefCharterSchoolManagementOrganizationTypeId; set => SetProperty(ref _RefCharterSchoolManagementOrganizationTypeId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            RefCharterSchoolManagementOrganizationTypeId = model.RefCharterSchoolManagementOrganizationTypeId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

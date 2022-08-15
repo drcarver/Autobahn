@@ -17,25 +17,5 @@ namespace Autobahn.Assessments.Interfaces
         /// </summary>
         System.String CurrentPerformanceDescription { get; set; }
 
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        System.DateTime? Date { get; set; }
-
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        Guid GoalId { get; set; }
-
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        Guid? RefGoalStatusTypeId { get; set; }
-
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        System.String Status { get; set; }
-
     }
 }

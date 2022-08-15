@@ -12,20 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IIDSVersion : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        System.Boolean CurrentVersion { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        System.DateTime IDSVersionDate { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        System.String IDSVersionNumber { get; set; }
-
     }
 }

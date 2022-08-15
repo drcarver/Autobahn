@@ -14,16 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// An indication of the function and context in which a person uses a language to communicate.
         /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// An indication of the function and context in which a person uses a language to communicate.
-        /// </summary>
-        Guid RefLanguageId { get; set; }
-
-        /// <summary>
-        /// An indication of the function and context in which a person uses a language to communicate.
-        /// </summary>
         Guid RefLanguageUseTypeId { get; set; }
 
     }

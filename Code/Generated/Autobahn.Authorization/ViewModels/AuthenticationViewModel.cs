@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Authorization.ViewModels
 {
      /// <summary>
@@ -17,23 +20,8 @@ namespace Autobahn.Authorization.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from Authentication";
 
-        // member variable for the EndDate property
-        private System.DateTime? _EndDate;
-
         // member variable for the IdentityProviderName property
         private System.String _IdentityProviderName;
-
-        // member variable for the IdentityProviderUri property
-        private System.String _IdentityProviderUri;
-
-        // member variable for the LoginIdentifier property
-        private System.String _LoginIdentifier;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the StartDate property
-        private System.DateTime? _StartDate;
 
         #endregion
 
@@ -45,33 +33,12 @@ namespace Autobahn.Authorization.ViewModels
 
         /// <summary>
         /// The name of a provider that can authenticate the identity of an person.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20122">Authentication Identity Provider Name</a>
+        /// </para>
         /// </summary>
-        public System.DateTime? EndDate { get => _EndDate; set => SetProperty(ref _EndDate, value); }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
+        [DisplayName("Authentication Identity Provider Name")]
         public System.String IdentityProviderName { get => _IdentityProviderName; set => SetProperty(ref _IdentityProviderName, value); }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.String IdentityProviderUri { get => _IdentityProviderUri; set => SetProperty(ref _IdentityProviderUri, value); }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.String LoginIdentifier { get => _LoginIdentifier; set => SetProperty(ref _LoginIdentifier, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.DateTime? StartDate { get => _StartDate; set => SetProperty(ref _StartDate, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Authorization.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            EndDate = model.EndDate;
-            IdentityProviderName = model.IdentityProviderName;
-            IdentityProviderUri = model.IdentityProviderUri;
-            LoginIdentifier = model.LoginIdentifier;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            StartDate = model.StartDate;
+            IdentityProviderName = model.IdentityProviderName; // Authentication Identity Provider Name
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

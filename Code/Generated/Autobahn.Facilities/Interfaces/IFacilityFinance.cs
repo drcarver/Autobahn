@@ -15,27 +15,7 @@ namespace Autobahn.Facilities.Interfaces
         /// <summary>
         /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
         /// </summary>
-        Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
         System.Decimal? FacilityReplacementValue { get; set; }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        System.Decimal? IndebtednessAmountAllowed { get; set; }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        System.Decimal? InsuranceDeductible { get; set; }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        System.Decimal? PublicEducationMillRate { get; set; }
 
     }
 }

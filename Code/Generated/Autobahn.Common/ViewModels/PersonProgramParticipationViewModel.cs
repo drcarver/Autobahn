@@ -3,6 +3,9 @@
 //* FileName:   PersonProgramParticipationViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,20 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PersonProgramParticipation";
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the ParticipationStatus property
-        private System.String _ParticipationStatus;
-
         // member variable for the RefParticipationTypeId property
         private Guid? _RefParticipationTypeId;
-
-        // member variable for the RefProgramEntryReasonId property
-        private Guid? _RefProgramEntryReasonId;
-
-        // member variable for the RefProgramExitReasonId property
-        private Guid? _RefProgramExitReasonId;
 
         #endregion
 
@@ -38,29 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
-        /// </summary>
-        public System.String ParticipationStatus { get => _ParticipationStatus; set => SetProperty(ref _ParticipationStatus, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefParticipationType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19120">GED Preparation Program Participation Status</a>
+        /// </para>
         /// </summary>
+        [DisplayName("GED Preparation Program Participation Status")]
         public Guid? RefParticipationTypeId { get => _RefParticipationTypeId; set => SetProperty(ref _RefParticipationTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramEntryReason"/> model
-        /// </summary>
-        public Guid? RefProgramEntryReasonId { get => _RefProgramEntryReasonId; set => SetProperty(ref _RefProgramEntryReasonId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramExitReason"/> model
-        /// </summary>
-        public Guid? RefProgramExitReasonId { get => _RefProgramExitReasonId; set => SetProperty(ref _RefProgramExitReasonId, value); }
 
         #endregion
 
@@ -71,11 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            ParticipationStatus = model.ParticipationStatus;
-            RefParticipationTypeId = model.RefParticipationTypeId;
-            RefProgramEntryReasonId = model.RefProgramEntryReasonId;
-            RefProgramExitReasonId = model.RefProgramExitReasonId;
+            RefParticipationTypeId = model.RefParticipationTypeId; // GED Preparation Program Participation Status
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

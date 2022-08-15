@@ -16,21 +16,6 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.
         /// </summary>
-        public System.Boolean? InclusiveSettingIndicator { get; set; }
-
-        /// <summary>
-        /// The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.
-        /// </summary>
-        public Guid? RefCommunityBasedTypeId { get; set; }
-
-        /// <summary>
-        /// The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.
-        /// </summary>
         public Guid RefEarlyChildhoodProgramEnrollmentTypeId { get; set; }
 
     }

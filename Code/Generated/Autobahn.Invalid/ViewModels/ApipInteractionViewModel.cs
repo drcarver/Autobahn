@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,18 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ApipInteraction";
-
-        // member variable for the APIPInteractionSequenceNumber property
-        private System.Decimal? _APIPInteractionSequenceNumber;
-
-        // member variable for the AssessmentItemApipId property
-        private Guid _AssessmentItemApipId;
-
-        // member variable for the RefApipInteractionTypeId property
-        private Guid? _RefApipInteractionTypeId;
-
-        // member variable for the SequenceNumber property
-        private System.Int32? _SequenceNumber;
 
         // member variable for the Xml property
         private System.String _Xml;
@@ -42,27 +33,11 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented.  The XML from the IMS Global APIP Specification would be included.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20079">Assessment Item Body Custom Interaction XML</a>
+        /// </para>
         /// </summary>
-        public System.Decimal? APIPInteractionSequenceNumber { get => _APIPInteractionSequenceNumber; set => SetProperty(ref _APIPInteractionSequenceNumber, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentItemApip"/> model
-        /// </summary>
-        public Guid AssessmentItemApipId { get => _AssessmentItemApipId; set => SetProperty(ref _AssessmentItemApipId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefApipInteractionType"/> model
-        /// </summary>
-        public Guid? RefApipInteractionTypeId { get => _RefApipInteractionTypeId; set => SetProperty(ref _RefApipInteractionTypeId, value); }
-
-        /// <summary>
-        /// The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented.  The XML from the IMS Global APIP Specification would be included.
-        /// </summary>
-        public System.Int32? SequenceNumber { get => _SequenceNumber; set => SetProperty(ref _SequenceNumber, value); }
-
-        /// <summary>
-        /// The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented.  The XML from the IMS Global APIP Specification would be included.
-        /// </summary>
+        [DisplayName("Assessment Item Body Custom Interaction XML")]
         public System.String Xml { get => _Xml; set => SetProperty(ref _Xml, value); }
 
         #endregion
@@ -74,11 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            APIPInteractionSequenceNumber = model.APIPInteractionSequenceNumber;
-            AssessmentItemApipId = model.AssessmentItemApipId;
-            RefApipInteractionTypeId = model.RefApipInteractionTypeId;
-            SequenceNumber = model.SequenceNumber;
-            Xml = model.Xml;
+            Xml = model.Xml; // Assessment Item Body Custom Interaction XML
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

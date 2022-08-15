@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELEnrollmentOtherFunding";
 
-        // member variable for the PersonId property
-        private Guid _PersonId;
-
-        // member variable for the RefELOtherFederalFundingSourcesId property
-        private Guid _RefELOtherFederalFundingSourcesId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// The title of the ELEnrollmentOtherFundingViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefELOtherFederalFundingSources"/> model
-        /// </summary>
-        public Guid RefELOtherFederalFundingSourcesId { get => _RefELOtherFederalFundingSourcesId; set => SetProperty(ref _RefELOtherFederalFundingSourcesId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PersonId = model.PersonId;
-            RefELOtherFederalFundingSourcesId = model.RefELOtherFederalFundingSourcesId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

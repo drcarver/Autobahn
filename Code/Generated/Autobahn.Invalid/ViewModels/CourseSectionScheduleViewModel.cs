@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -20,21 +23,6 @@ namespace Autobahn.Invalid.ViewModels
         // member variable for the ClassBeginningTime property
         private System.TimeSpan? _ClassBeginningTime;
 
-        // member variable for the ClassEndingTime property
-        private System.TimeSpan? _ClassEndingTime;
-
-        // member variable for the ClassMeetingDays property
-        private System.String _ClassMeetingDays;
-
-        // member variable for the ClassPeriod property
-        private System.String _ClassPeriod;
-
-        // member variable for the CourseSectionId property
-        private Guid _CourseSectionId;
-
-        // member variable for the TimeDayIdentifier property
-        private System.String _TimeDayIdentifier;
-
         #endregion
 
         #region Properties
@@ -45,33 +33,12 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// An indication of the time of day the class begins.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19510">Class Beginning Time</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Class Beginning Time")]
         public System.TimeSpan? ClassBeginningTime { get => _ClassBeginningTime; set => SetProperty(ref _ClassBeginningTime, value); }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        public System.TimeSpan? ClassEndingTime { get => _ClassEndingTime; set => SetProperty(ref _ClassEndingTime, value); }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        public System.String ClassMeetingDays { get => _ClassMeetingDays; set => SetProperty(ref _ClassMeetingDays, value); }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        public System.String ClassPeriod { get => _ClassPeriod; set => SetProperty(ref _ClassPeriod, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CourseSection"/> model
-        /// </summary>
-        public Guid CourseSectionId { get => _CourseSectionId; set => SetProperty(ref _CourseSectionId, value); }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        public System.String TimeDayIdentifier { get => _TimeDayIdentifier; set => SetProperty(ref _TimeDayIdentifier, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ClassBeginningTime = model.ClassBeginningTime;
-            ClassEndingTime = model.ClassEndingTime;
-            ClassMeetingDays = model.ClassMeetingDays;
-            ClassPeriod = model.ClassPeriod;
-            CourseSectionId = model.CourseSectionId;
-            TimeDayIdentifier = model.TimeDayIdentifier;
+            ClassBeginningTime = model.ClassBeginningTime; // Class Beginning Time
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

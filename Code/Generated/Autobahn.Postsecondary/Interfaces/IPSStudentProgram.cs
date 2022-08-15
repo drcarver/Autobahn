@@ -15,32 +15,7 @@ namespace Autobahn.Postsecondary.Interfaces
         /// <summary>
         /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
-        /// </summary>
-        Guid? PsProgramId { get; set; }
-
-        /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
-        /// </summary>
-        Guid? RefCareerClusterId { get; set; }
-
-        /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
-        /// </summary>
         Guid? RefCipUseId { get; set; }
-
-        /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
-        /// </summary>
-        Guid? RefTransferOutIndicatorId { get; set; }
-
-        /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
-        /// </summary>
-        Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 
     }
 }

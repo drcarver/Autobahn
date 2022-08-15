@@ -13,15 +13,5 @@ namespace Autobahn.Assessments.Models
      /// </summary>
     public partial class AssessmentLevelsForWhichDesignedModel : AutobahnBase, Interfaces.IAssessmentLevelsForWhichDesigned
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid AssessmentId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid RefGradeLevelId { get; set; }
-
     }
 }

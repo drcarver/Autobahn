@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -16,18 +19,6 @@ namespace Autobahn.K12.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12StudentLiteracyAssessment";
-
-        // member variable for the LiteracyGoalMetStatus property
-        private System.Boolean? _LiteracyGoalMetStatus;
-
-        // member variable for the LiteracyPostTestStatus property
-        private System.Boolean? _LiteracyPostTestStatus;
-
-        // member variable for the LiteracyPreTestStatus property
-        private System.Boolean? _LiteracyPreTestStatus;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         // member variable for the RefLiteracyAssessmentId property
         private Guid? _RefLiteracyAssessmentId;
@@ -41,28 +32,12 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public System.Boolean? LiteracyGoalMetStatus { get => _LiteracyGoalMetStatus; set => SetProperty(ref _LiteracyGoalMetStatus, value); }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public System.Boolean? LiteracyPostTestStatus { get => _LiteracyPostTestStatus; set => SetProperty(ref _LiteracyPostTestStatus, value); }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public System.Boolean? LiteracyPreTestStatus { get => _LiteracyPreTestStatus; set => SetProperty(ref _LiteracyPreTestStatus, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefLiteracyAssessment"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19456">Literacy Assessment Administered Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Literacy Assessment Administered Type")]
         public Guid? RefLiteracyAssessmentId { get => _RefLiteracyAssessmentId; set => SetProperty(ref _RefLiteracyAssessmentId, value); }
 
         #endregion
@@ -74,11 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            LiteracyGoalMetStatus = model.LiteracyGoalMetStatus;
-            LiteracyPostTestStatus = model.LiteracyPostTestStatus;
-            LiteracyPreTestStatus = model.LiteracyPreTestStatus;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefLiteracyAssessmentId = model.RefLiteracyAssessmentId;
+            RefLiteracyAssessmentId = model.RefLiteracyAssessmentId; // Literacy Assessment Administered Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

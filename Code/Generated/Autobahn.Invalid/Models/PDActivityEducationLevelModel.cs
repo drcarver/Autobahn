@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// An age group or education level to which the professional development activity's content pertains.
         /// </summary>
-        public Guid ProfessionalDevelopmentActivityId { get; set; }
-
-        /// <summary>
-        /// An age group or education level to which the professional development activity's content pertains.
-        /// </summary>
         public Guid RefPDActivityEducationLevelsAddressedId { get; set; }
 
     }

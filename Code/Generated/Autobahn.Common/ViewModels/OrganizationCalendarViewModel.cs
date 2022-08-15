@@ -3,6 +3,9 @@
 //* FileName:   OrganizationCalendarViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,17 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationCalendar";
 
-        // member variable for the CalendarCode property
-        private System.String _CalendarCode;
-
-        // member variable for the CalendarDescription property
-        private System.String _CalendarDescription;
-
         // member variable for the CalendarYear property
         private System.String _CalendarYear;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
 
         #endregion
 
@@ -36,23 +30,12 @@ namespace Autobahn.Common.ViewModels
 
         /// <summary>
         /// The year for a reported school session.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19243">School Year</a>
+        /// </para>
         /// </summary>
-        public System.String CalendarCode { get => _CalendarCode; set => SetProperty(ref _CalendarCode, value); }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
-        public System.String CalendarDescription { get => _CalendarDescription; set => SetProperty(ref _CalendarDescription, value); }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
+        [DisplayName("School Year")]
         public System.String CalendarYear { get => _CalendarYear; set => SetProperty(ref _CalendarYear, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
 
         #endregion
 
@@ -63,10 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CalendarCode = model.CalendarCode;
-            CalendarDescription = model.CalendarDescription;
-            CalendarYear = model.CalendarYear;
-            OrganizationId = model.OrganizationId;
+            CalendarYear = model.CalendarYear; // School Year
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

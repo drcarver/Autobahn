@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,20 +20,8 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramProgressReport";
 
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
-
-        // member variable for the IndividualizedProgramProgressReportPlanId property
-        private Guid _IndividualizedProgramProgressReportPlanId;
-
-        // member variable for the ProgressDescription property
-        private System.String _ProgressDescription;
-
         // member variable for the ProgressReportDate property
         private System.DateTime? _ProgressReportDate;
-
-        // member variable for the RefIPSPProgressReportTypeId property
-        private Guid? _RefIPSPProgressReportTypeId;
 
         #endregion
 
@@ -41,29 +32,13 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgramProgressReportPlan"/> model
-        /// </summary>
-        public Guid IndividualizedProgramProgressReportPlanId { get => _IndividualizedProgramProgressReportPlanId; set => SetProperty(ref _IndividualizedProgramProgressReportPlanId, value); }
-
-        /// <summary>
         /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20680">Individualized Program Service Plan Progress Report Date</a>
+        /// </para>
         /// </summary>
-        public System.String ProgressDescription { get => _ProgressDescription; set => SetProperty(ref _ProgressDescription, value); }
-
-        /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// </summary>
+        [DisplayName("Individualized Program Service Plan Progress Report Date")]
         public System.DateTime? ProgressReportDate { get => _ProgressReportDate; set => SetProperty(ref _ProgressReportDate, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
-        /// </summary>
-        public Guid? RefIPSPProgressReportTypeId { get => _RefIPSPProgressReportTypeId; set => SetProperty(ref _RefIPSPProgressReportTypeId, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            IndividualizedProgramProgressReportPlanId = model.IndividualizedProgramProgressReportPlanId;
-            ProgressDescription = model.ProgressDescription;
-            ProgressReportDate = model.ProgressReportDate;
-            RefIPSPProgressReportTypeId = model.RefIPSPProgressReportTypeId;
+            ProgressReportDate = model.ProgressReportDate; // Individualized Program Service Plan Progress Report Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

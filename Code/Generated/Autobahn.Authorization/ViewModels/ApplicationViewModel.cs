@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Authorization.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Authorization.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from Application";
 
-        // member variable for the Name property
-        private System.String _Name;
-
-        // member variable for the Uri property
-        private System.String _Uri;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Authorization.ViewModels
         /// The title of the ApplicationViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
-        /// </summary>
-        public System.String Name { get => _Name; set => SetProperty(ref _Name, value); }
-
-        /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
-        /// </summary>
-        public System.String Uri { get => _Uri; set => SetProperty(ref _Uri, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Authorization.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Name = model.Name;
-            Uri = model.Uri;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -13,20 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ServiceProviderModel : AutobahnBase, Interfaces.IServiceProvider
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid ServiceProvidedId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid ServiceStaffId { get; set; }
-
     }
 }

@@ -16,36 +16,6 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// Nature of early childhood program, class or group in which a person is enrolled.
         /// </summary>
-        public System.Int32? AnnualOperatingWeeks { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Int32? DaysAvailablePerWeek { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Decimal? HoursAvailablePerDay { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Int32? NumberOfClassrooms { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public Guid? RefEnvironmentSettingId { get; set; }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
         public Guid? RefServiceOptionId { get; set; }
 
     }

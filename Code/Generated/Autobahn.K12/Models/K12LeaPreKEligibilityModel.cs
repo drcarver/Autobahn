@@ -16,16 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The groups of students for whom pre-kindergarten programs are available.
         /// </summary>
-        public Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The groups of students for whom pre-kindergarten programs are available.
-        /// </summary>
-        public Guid K12LEAPreKEligibilityId { get; set; }
-
-        /// <summary>
-        /// The groups of students for whom pre-kindergarten programs are available.
-        /// </summary>
         public Guid RefPrekindergartenEligibilityId { get; set; }
 
     }

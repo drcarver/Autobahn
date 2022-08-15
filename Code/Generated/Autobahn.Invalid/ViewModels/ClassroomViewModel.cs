@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -20,9 +23,6 @@ namespace Autobahn.Invalid.ViewModels
         // member variable for the ClassroomIdentifier property
         private System.String _ClassroomIdentifier;
 
-        // member variable for the LocationId property
-        private Guid _LocationId;
-
         #endregion
 
         #region Properties
@@ -33,13 +33,12 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Classroom Identifier")]
         public System.String ClassroomIdentifier { get => _ClassroomIdentifier; set => SetProperty(ref _ClassroomIdentifier, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Location"/> model
-        /// </summary>
-        public Guid LocationId { get => _LocationId; set => SetProperty(ref _LocationId, value); }
 
         #endregion
 
@@ -50,8 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ClassroomIdentifier = model.ClassroomIdentifier;
-            LocationId = model.LocationId;
+            ClassroomIdentifier = model.ClassroomIdentifier; // Classroom Identifier
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

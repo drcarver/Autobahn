@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Postsecondary.ViewModels
 {
      /// <summary>
@@ -17,23 +20,8 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PSStudentProgram";
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the PsProgramId property
-        private Guid? _PsProgramId;
-
-        // member variable for the RefCareerClusterId property
-        private Guid? _RefCareerClusterId;
-
         // member variable for the RefCipUseId property
         private Guid? _RefCipUseId;
-
-        // member variable for the RefTransferOutIndicatorId property
-        private Guid? _RefTransferOutIndicatorId;
-
-        // member variable for the RefWorkbasedLearningOpportunityTypeId property
-        private Guid? _RefWorkbasedLearningOpportunityTypeId;
 
         #endregion
 
@@ -44,34 +32,13 @@ namespace Autobahn.Postsecondary.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="PsProgram"/> model
-        /// </summary>
-        public Guid? PsProgramId { get => _PsProgramId; set => SetProperty(ref _PsProgramId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
-        /// </summary>
-        public Guid? RefCareerClusterId { get => _RefCareerClusterId; set => SetProperty(ref _RefCareerClusterId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefCipUse"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19044">Classification of Instructional Program Use</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Classification of Instructional Program Use")]
         public Guid? RefCipUseId { get => _RefCipUseId; set => SetProperty(ref _RefCipUseId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTransferOutIndicator"/> model
-        /// </summary>
-        public Guid? RefTransferOutIndicatorId { get => _RefTransferOutIndicatorId; set => SetProperty(ref _RefTransferOutIndicatorId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
-        /// </summary>
-        public Guid? RefWorkbasedLearningOpportunityTypeId { get => _RefWorkbasedLearningOpportunityTypeId; set => SetProperty(ref _RefWorkbasedLearningOpportunityTypeId, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            PsProgramId = model.PsProgramId;
-            RefCareerClusterId = model.RefCareerClusterId;
-            RefCipUseId = model.RefCipUseId;
-            RefTransferOutIndicatorId = model.RefTransferOutIndicatorId;
-            RefWorkbasedLearningOpportunityTypeId = model.RefWorkbasedLearningOpportunityTypeId;
+            RefCipUseId = model.RefCipUseId; // Classification of Instructional Program Use
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

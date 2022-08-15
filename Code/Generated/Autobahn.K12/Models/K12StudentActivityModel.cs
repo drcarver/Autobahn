@@ -18,15 +18,5 @@ namespace Autobahn.K12.Models
         /// </summary>
         public System.Decimal? ActivityTimeInvolved { get; set; }
 
-        /// <summary>
-        /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
-        /// </summary>
-        public Guid? RefActivityTimeMeasurementTypeId { get; set; }
-
     }
 }

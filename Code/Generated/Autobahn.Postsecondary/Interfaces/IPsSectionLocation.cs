@@ -17,15 +17,5 @@ namespace Autobahn.Postsecondary.Interfaces
         /// </summary>
         System.String CourseInstructionSiteName { get; set; }
 
-        /// <summary>
-        /// The name of the location at which the course is taught.
-        /// </summary>
-        Guid PsSectionId { get; set; }
-
-        /// <summary>
-        /// The name of the location at which the course is taught.
-        /// </summary>
-        Guid? RefCourseInstructionSiteTypeId { get; set; }
-
     }
 }

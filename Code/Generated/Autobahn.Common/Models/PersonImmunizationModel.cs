@@ -16,15 +16,5 @@ namespace Autobahn.Common.Models
         /// </summary>
         public System.DateTime ImmunizationDate { get; set; }
 
-        /// <summary>
-        /// The year, month and day of an immunization.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The year, month and day of an immunization.
-        /// </summary>
-        public Guid RefImmunizationTypeId { get; set; }
-
     }
 }

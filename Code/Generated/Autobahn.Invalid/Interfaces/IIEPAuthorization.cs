@@ -15,16 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Type of Individualized Education Plan document authorized.
         /// </summary>
-        Guid AuthorizationDocumentId { get; set; }
-
-        /// <summary>
-        /// Type of Individualized Education Plan document authorized.
-        /// </summary>
-        Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// Type of Individualized Education Plan document authorized.
-        /// </summary>
         Guid? RefIEPAuthorizationDocumentTypeId { get; set; }
 
     }

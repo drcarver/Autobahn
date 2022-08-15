@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -20,21 +23,6 @@ namespace Autobahn.Assessments.ViewModels
         // member variable for the AssessmentNeedTimeMultiplier property
         private System.String _AssessmentNeedTimeMultiplier;
 
-        // member variable for the AssessmentPersonalNeedsProfileControlId property
-        private Guid _AssessmentPersonalNeedsProfileControlId;
-
-        // member variable for the BackgroundColor property
-        private System.String _BackgroundColor;
-
-        // member variable for the LineReaderHighlightColor property
-        private System.String _LineReaderHighlightColor;
-
-        // member variable for the OverlayColor property
-        private System.String _OverlayColor;
-
-        // member variable for the RefAssessmentNeedIncreasedWhitespacingTypeId property
-        private Guid? _RefAssessmentNeedIncreasedWhitespacingTypeId;
-
         #endregion
 
         #region Properties
@@ -45,33 +33,12 @@ namespace Autobahn.Assessments.ViewModels
 
         /// <summary>
         /// Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20055">Assessment Need Time Multiplier</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Assessment Need Time Multiplier")]
         public System.String AssessmentNeedTimeMultiplier { get => _AssessmentNeedTimeMultiplier; set => SetProperty(ref _AssessmentNeedTimeMultiplier, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentPersonalNeedsProfileControl"/> model
-        /// </summary>
-        public Guid AssessmentPersonalNeedsProfileControlId { get => _AssessmentPersonalNeedsProfileControlId; set => SetProperty(ref _AssessmentPersonalNeedsProfileControlId, value); }
-
-        /// <summary>
-        /// Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.
-        /// </summary>
-        public System.String BackgroundColor { get => _BackgroundColor; set => SetProperty(ref _BackgroundColor, value); }
-
-        /// <summary>
-        /// Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.
-        /// </summary>
-        public System.String LineReaderHighlightColor { get => _LineReaderHighlightColor; set => SetProperty(ref _LineReaderHighlightColor, value); }
-
-        /// <summary>
-        /// Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.
-        /// </summary>
-        public System.String OverlayColor { get => _OverlayColor; set => SetProperty(ref _OverlayColor, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAssessmentNeedIncreasedWhitespacingType"/> model
-        /// </summary>
-        public Guid? RefAssessmentNeedIncreasedWhitespacingTypeId { get => _RefAssessmentNeedIncreasedWhitespacingTypeId; set => SetProperty(ref _RefAssessmentNeedIncreasedWhitespacingTypeId, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentNeedTimeMultiplier = model.AssessmentNeedTimeMultiplier;
-            AssessmentPersonalNeedsProfileControlId = model.AssessmentPersonalNeedsProfileControlId;
-            BackgroundColor = model.BackgroundColor;
-            LineReaderHighlightColor = model.LineReaderHighlightColor;
-            OverlayColor = model.OverlayColor;
-            RefAssessmentNeedIncreasedWhitespacingTypeId = model.RefAssessmentNeedIncreasedWhitespacingTypeId;
+            AssessmentNeedTimeMultiplier = model.AssessmentNeedTimeMultiplier; // Assessment Need Time Multiplier
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

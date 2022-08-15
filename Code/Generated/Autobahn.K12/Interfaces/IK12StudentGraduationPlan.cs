@@ -15,27 +15,7 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// Student's grade level at time of course.
         /// </summary>
-        System.Decimal? CreditsRequired { get; set; }
-
-        /// <summary>
-        /// Student's grade level at time of course.
-        /// </summary>
-        Guid K12CourseId { get; set; }
-
-        /// <summary>
-        /// Student's grade level at time of course.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// Student's grade level at time of course.
-        /// </summary>
         Guid? RefGradeLevelWhenCourseTakenId { get; set; }
-
-        /// <summary>
-        /// Student's grade level at time of course.
-        /// </summary>
-        Guid? RefSCEDCourseSubjectAreaId { get; set; }
 
     }
 }

@@ -17,25 +17,5 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// </summary>
         System.DateTime? MemorandumOfUnderstandingEndDate { get; set; }
 
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        System.DateTime? MemorandumOfUnderstandingStartDate { get; set; }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        System.String ServicePartnerDescription { get; set; }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        System.String ServicePartnerName { get; set; }
-
     }
 }

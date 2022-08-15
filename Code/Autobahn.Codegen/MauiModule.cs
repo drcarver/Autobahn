@@ -64,14 +64,9 @@ namespace AutobahnCodeGen
                         continue;
                     }
                     modelsGenerated.Add(model.ModelName);
-                    if (domain.Module == "Common")
-                    {
-                        stream.WriteLine($"        serviceCollection.AddTransient<Autobahn.Common.Interfaces.I{model.ModelName}, {model.ModelName}ViewModel>();");
-                    }
-                    else
-                    {
-                        stream.WriteLine($"        serviceCollection.AddTransient<I{model.ModelName}, {model.ModelName}ViewModel>();");
-                    }
+                    stream.WriteLine(domain.Module == "Common"
+                        ? $"        serviceCollection.AddTransient<Autobahn.Common.Interfaces.I{model.ModelName}, {model.ModelName}ViewModel>();"
+                        : $"        serviceCollection.AddTransient<I{model.ModelName}, {model.ModelName}ViewModel>();");
                 }
                 stream.WriteLine();
                 stream.WriteLine($"        // Now the known views");
@@ -96,6 +91,11 @@ namespace AutobahnCodeGen
         {
             foreach (var model in models)
             {
+                // is this a reference list to be embedded in a view model file?
+                if (elements.FirstOrDefault(e => e.TechnicalName == model.ModelName && e.AutobahnTableList.Count == 1) != null)
+                {
+                    continue;
+                }
                 GenerateReferenceFile($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model, elements);
                 GenerateReferenceInterfaceFile($@"{filePath}Autobahn.{domain.Module}\Interfaces\", domain, model, elements);
                 GenerateReferenceList($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model);
@@ -160,53 +160,53 @@ namespace AutobahnCodeGen
 
         private static void GenerateReferenceList(string filePath, AutobahnDomain domain, AutobahnTable model)
         {
-            //using (var stream = File.CreateText($"{filePath}{model.ModelName}List.cs"))
-            //{
-            //    stream.WriteLine($"//**********************************************************");
-            //    stream.WriteLine($"//* DomainName: {domain.Name}");
-            //    stream.WriteLine($"//* FileName:   {model.ModelName}List.cs");
-            //    stream.WriteLine($"//**********************************************************");
-            //    stream.WriteLine("");
-            //    stream.WriteLine($"using Autobahn.Common.ViewModels;");
-            //    stream.WriteLine("");
-            //    stream.WriteLine($"namespace {domain.Module}.Models");
-            //    stream.WriteLine("{");
-            //    stream.WriteLine($"     /// <summary>");
-            //    stream.WriteLine($"     /// The list of {model.ModelName} Models");
-            //    stream.WriteLine($"     /// </summary>");
-            //    stream.WriteLine($@"    public static partial class ReferenceLists");
-            //    stream.WriteLine($@"    {{");
-            //    stream.WriteLine($@"        /// <summary>");
-            //    stream.WriteLine($@"        /// The complete <see cref=""{model.ModelName}Model""> List");
-            //    stream.WriteLine($"         /// </summary>");
-            //    stream.WriteLine($@"        public static List<{model.ModelName}Model> {model.ModelName}List = new List<{model.ModelName}Model>");
-            //    stream.WriteLine($@"        {{");
-            //    var quote = "\"";
-            //    foreach (var item in refernceModelList)
-            //    {
-            //        var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-            //        var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
-            //        var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-            //        var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
-            //        stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-            //    }
-            //    stream.WriteLine($@"        }};");
-            //    stream.WriteLine();
-            //    stream.WriteLine($@"        /// <summary>");
-            //    stream.WriteLine($@"        /// The Reference {model.ModelName} Pick List");
-            //    stream.WriteLine($"         /// </summary>");
-            //    stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.ModelName}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
-            //    stream.WriteLine($@"        {{");
-            //    foreach (var item in refernceModelList)
-            //    {
-            //        var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-            //        var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-            //        stream.WriteLine($@"            new ReferencePickListItemViewModel {{ Id={fixedId}, Description={fixedDescription}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-            //    }
-            //    stream.WriteLine($@"       }};");
-            //    stream.WriteLine("   }");
-            //    stream.WriteLine("}");
-            //}
+            using (var stream = File.CreateText($"{filePath}{model.ModelName}List.cs"))
+            {
+                stream.WriteLine($"//**********************************************************");
+                stream.WriteLine($"//* DomainName: {domain.Name}");
+                stream.WriteLine($"//* FileName:   {model.ModelName}List.cs");
+                stream.WriteLine($"//**********************************************************");
+                stream.WriteLine("");
+                stream.WriteLine($"using Autobahn.Common.ViewModels;");
+                stream.WriteLine("");
+                stream.WriteLine($"namespace {domain.Module}.Models");
+                stream.WriteLine("{");
+                stream.WriteLine($"     /// <summary>");
+                stream.WriteLine($"     /// The list of {model.ModelName} Models");
+                stream.WriteLine($"     /// </summary>");
+                stream.WriteLine($@"    public static partial class ReferenceLists");
+                stream.WriteLine($@"    {{");
+                stream.WriteLine($@"        /// <summary>");
+                stream.WriteLine($@"        /// The complete <see cref=""{model.ModelName}Model""> List");
+                stream.WriteLine($"         /// </summary>");
+                stream.WriteLine($@"        public static List<{model.ModelName}Model> {model.ModelName}List = new List<{model.ModelName}Model>");
+                stream.WriteLine($@"        {{");
+                var quote = "\"";
+                //foreach (var item in refernceModelList)
+                //{
+                //    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                //    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+                //    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                //    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
+                //    stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+                //}
+                stream.WriteLine($@"        }};");
+                stream.WriteLine();
+                stream.WriteLine($@"        /// <summary>");
+                stream.WriteLine($@"        /// The Reference {model.ModelName} Pick List");
+                stream.WriteLine($"         /// </summary>");
+                stream.WriteLine($@"        public static List<ReferencePickListItemViewModel> {model.ModelName}ViewModelPickerList = new List<ReferencePickListItemViewModel>");
+                stream.WriteLine($@"        {{");
+                //foreach (var item in refernceModelList)
+                //{
+                //    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                //    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                //    stream.WriteLine($@"            new ReferencePickListItemViewModel {{ Id={fixedId}, Description={fixedDescription}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+                //}
+                stream.WriteLine($@"       }};");
+                stream.WriteLine("   }");
+                stream.WriteLine("}");
+            }
         }
 
         private static void GenerateXAMLFiles(string filePath, AutobahnDomain domain, List<AutobahnTable> tables, List<AutobahnElement> elements)
@@ -307,6 +307,9 @@ namespace AutobahnCodeGen
                         stream.WriteLine($"using Autobahn.Common.Interfaces;");
                         stream.WriteLine($"using Autobahn.Common.ViewModels;");
                     }
+                    stream.WriteLine("");
+                    stream.WriteLine("using System.ComponentModel;");
+                    stream.WriteLine("using System.Windows.Input;");
                     stream.WriteLine("");
                     stream.WriteLine($"namespace Autobahn.{domain.Module}.ViewModels");
                     stream.WriteLine("{");
@@ -452,11 +455,21 @@ namespace AutobahnCodeGen
                 {
                     stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.TechnicalName.Replace("Id", string.Empty)}\"/> model");
                 }
-                else
+                else if (!string.IsNullOrEmpty(prop.Definition))
                 {
                     stream.WriteLine($"        /// {prop.Definition}");
                 }
+                if (!string.IsNullOrEmpty(prop.URL))
+                {
+                    stream.WriteLine($"        /// <para>");
+                    stream.WriteLine($"        /// <a href=\"{prop.URL}\">{prop.ElementName}</a>");
+                    stream.WriteLine($"        /// </para>");
+                }
                 stream.WriteLine($"        /// </summary>");
+                if (!string.IsNullOrEmpty(prop.ElementName))
+                {
+                    stream.WriteLine($"        [DisplayName(\"{prop.ElementName}\")]");
+                }
                 stream.WriteLine($"        public {prop.PropertyType} {prop.TechnicalName} {{ get => _{prop.TechnicalName}; set => SetProperty(ref _{prop.TechnicalName}, value); }}");
                 stream.WriteLine();
             }
@@ -480,12 +493,68 @@ namespace AutobahnCodeGen
                     continue;
                 }
                 propertiesGenerated.Add(prop.TechnicalName);
-                stream.WriteLine($"            {prop.TechnicalName} = model.{prop.TechnicalName};");
+                stream.WriteLine($"            {prop.TechnicalName} = model.{prop.TechnicalName}; // {prop.ElementName}");
             }
             stream.WriteLine($"            _isChanged = false;");
             stream.WriteLine($"            IsNew = false;");
             stream.WriteLine($"            IsBusy = false;");
             stream.WriteLine($"        }}");
+            GenerateVirtualProperties(stream, elements.Where(p => !p.IsVirtual).ToList());
+//            GenerateEmbeddedReferenceList(stream, elements);
+        }
+
+        private static void GenerateEmbeddedReferenceList(StreamWriter stream, List<AutobahnElement> elements)
+        {
+            stream.WriteLine($"        #region Properties");
+            foreach (var prop in elements.Where(e => e.TechnicalName.StartsWith("Ref")))
+            {
+                stream.WriteLine($"        /// <summary>");
+                stream.WriteLine(prop.TechnicalName.EndsWith("Id")
+                    ? $"        /// Reference to an optional instance of the <see cref=\"{prop.TechnicalName.Replace("Id", string.Empty)}\"/> model"
+                    : $"        /// {prop.Definition}");
+                stream.WriteLine($"        /// <para>");
+                stream.WriteLine($"        /// <a href=\"{prop.URL}\">{prop.ElementName}</a>");
+                stream.WriteLine($"        /// </para>");
+                stream.WriteLine($"        /// </summary>");
+                stream.WriteLine($"        public {prop.PropertyType} {prop.TechnicalName} {{ get => _{prop.TechnicalName}; set => SetProperty(ref _{prop.TechnicalName}, value); }}");
+                stream.WriteLine();
+            }
+            stream.WriteLine($"        #endregion");
+        }
+
+        private static void GenerateVirtualProperties(StreamWriter stream, List<AutobahnElement> elements)
+        {
+            if (!elements.Any(e => e.TechnicalName.EndsWith("Id") && !e.TechnicalName.StartsWith("Ref")))
+            {
+                return;
+            }
+            stream.WriteLine();
+            stream.WriteLine($"        #region \"ICommands for Navigation Properties\"");
+            foreach (var prop in elements.Where(e => e.TechnicalName.EndsWith("Id") && !e.TechnicalName.StartsWith("Ref")))
+            {
+                stream.WriteLine($"        /// <summary>");
+                if (prop.TechnicalName.EndsWith("Id"))
+                {
+                    if (string.IsNullOrEmpty(prop.Definition))
+                    {
+                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.TechnicalName.Replace("Id", string.Empty)}\"/> model");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"        /// {prop.Definition}");
+                    }
+                }
+                if (prop.URL != null)
+                {
+                    stream.WriteLine($"        /// <para>");
+                    stream.WriteLine($"        /// <a href=\"{prop.URL}\">{prop.ElementName}</a>");
+                    stream.WriteLine($"        /// </para>");
+                }
+                stream.WriteLine($"        /// </summary>");
+                stream.WriteLine($"        public ICommand {prop.TechnicalName.Replace("Id", string.Empty)}Command {{ get; set; }}");
+                stream.WriteLine();
+            }
+            stream.WriteLine($"        #endregion");
         }
 
         private static void GenerateBackingFields(StreamWriter stream, AutobahnTable model, List<AutobahnElement> elements)
@@ -505,7 +574,14 @@ namespace AutobahnCodeGen
                 propertiesGenerated.Add(prop.TechnicalName);
                 if (!prop.IsVirtual)
                 {
-                    stream.WriteLine($"        // member variable for the {prop.TechnicalName} property");
+                    if (string.IsNullOrEmpty(prop.ElementName))
+                    {
+                        stream.WriteLine($"        // member variable for the {prop.TechnicalName} property");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"        // {prop.TechnicalName} -- (backing property for {prop.ElementName})");
+                    }
                     stream.WriteLine($"        private {prop.PropertyType} _{prop.TechnicalName};");
                     stream.WriteLine();
                 }

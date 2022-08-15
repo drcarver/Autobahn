@@ -15,11 +15,6 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// <summary>
         /// The credential related to early childhood education or development held by a person.
         /// </summary>
-        Guid PersonCredentialId { get; set; }
-
-        /// <summary>
-        /// The credential related to early childhood education or development held by a person.
-        /// </summary>
         Guid RefEarlyChildhoodCredentialId { get; set; }
 
     }

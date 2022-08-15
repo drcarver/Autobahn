@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -17,20 +20,8 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityFinance";
 
-        // member variable for the FacilityId property
-        private Guid _FacilityId;
-
         // member variable for the FacilityReplacementValue property
         private System.Decimal? _FacilityReplacementValue;
-
-        // member variable for the IndebtednessAmountAllowed property
-        private System.Decimal? _IndebtednessAmountAllowed;
-
-        // member variable for the InsuranceDeductible property
-        private System.Decimal? _InsuranceDeductible;
-
-        // member variable for the PublicEducationMillRate property
-        private System.Decimal? _PublicEducationMillRate;
 
         #endregion
 
@@ -41,29 +32,13 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Facility"/> model
-        /// </summary>
-        public Guid FacilityId { get => _FacilityId; set => SetProperty(ref _FacilityId, value); }
-
-        /// <summary>
         /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20765">Facility Replacement Value</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Facility Replacement Value")]
         public System.Decimal? FacilityReplacementValue { get => _FacilityReplacementValue; set => SetProperty(ref _FacilityReplacementValue, value); }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        public System.Decimal? IndebtednessAmountAllowed { get => _IndebtednessAmountAllowed; set => SetProperty(ref _IndebtednessAmountAllowed, value); }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        public System.Decimal? InsuranceDeductible { get => _InsuranceDeductible; set => SetProperty(ref _InsuranceDeductible, value); }
-
-        /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// </summary>
-        public System.Decimal? PublicEducationMillRate { get => _PublicEducationMillRate; set => SetProperty(ref _PublicEducationMillRate, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityId = model.FacilityId;
-            FacilityReplacementValue = model.FacilityReplacementValue;
-            IndebtednessAmountAllowed = model.IndebtednessAmountAllowed;
-            InsuranceDeductible = model.InsuranceDeductible;
-            PublicEducationMillRate = model.PublicEducationMillRate;
+            FacilityReplacementValue = model.FacilityReplacementValue; // Facility Replacement Value
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

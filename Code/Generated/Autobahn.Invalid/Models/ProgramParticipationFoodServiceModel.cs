@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
         /// </summary>
-        public Guid PersonProgramParticipationId { get; set; }
-
-        /// <summary>
-        /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
-        /// </summary>
         public Guid RefSchoolFoodServiceProgramId { get; set; }
 
     }

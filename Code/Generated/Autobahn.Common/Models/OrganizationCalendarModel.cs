@@ -14,22 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The year for a reported school session.
         /// </summary>
-        public System.String CalendarCode { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
-        public System.String CalendarDescription { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
         public System.String CalendarYear { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
 
     }
 }

@@ -3,6 +3,9 @@
 //* FileName:   RoleViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,12 +17,6 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from Role";
 
-        // member variable for the Name property
-        private System.String _Name;
-
-        // member variable for the RefRoleId property
-        private Guid? _RefRoleId;
-
         #endregion
 
         #region Properties
@@ -27,16 +24,6 @@ namespace Autobahn.Common.ViewModels
         /// The title of the RoleViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.String Name { get => _Name; set => SetProperty(ref _Name, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefRole"/> model
-        /// </summary>
-        public Guid? RefRoleId { get => _RefRoleId; set => SetProperty(ref _RefRoleId, value); }
 
         #endregion
 
@@ -47,8 +34,6 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Name = model.Name;
-            RefRoleId = model.RefRoleId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

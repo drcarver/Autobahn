@@ -15,27 +15,7 @@ namespace Autobahn.Authorization.Interfaces
         /// <summary>
         /// The user role for which the person is allowed.
         /// </summary>
-        Guid? ApplicationId { get; set; }
-
-        /// <summary>
-        /// The user role for which the person is allowed.
-        /// </summary>
         System.String ApplicationRoleName { get; set; }
-
-        /// <summary>
-        /// The user role for which the person is allowed.
-        /// </summary>
-        System.DateTime? EndDate { get; set; }
-
-        /// <summary>
-        /// The user role for which the person is allowed.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The user role for which the person is allowed.
-        /// </summary>
-        System.DateTime? StartDate { get; set; }
 
     }
 }

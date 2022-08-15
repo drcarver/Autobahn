@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,23 +20,8 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSubtestAssessmentItem";
 
-        // member variable for the AssessmentItemId property
-        private Guid _AssessmentItemId;
-
-        // member variable for the AssessmentSubtestId property
-        private Guid _AssessmentSubtestId;
-
-        // member variable for the AssessmentSubtestItemId property
-        private Guid _AssessmentSubtestItemId;
-
         // member variable for the ItemWeightCorrect property
         private System.Decimal? _ItemWeightCorrect;
-
-        // member variable for the ItemWeightIncorrect property
-        private System.Decimal? _ItemWeightIncorrect;
-
-        // member variable for the ItemWeightNotAttempted property
-        private System.Decimal? _ItemWeightNotAttempted;
 
         #endregion
 
@@ -44,34 +32,13 @@ namespace Autobahn.Assessments.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentItem"/> model
-        /// </summary>
-        public Guid AssessmentItemId { get => _AssessmentItemId; set => SetProperty(ref _AssessmentItemId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubtest"/> model
-        /// </summary>
-        public Guid AssessmentSubtestId { get => _AssessmentSubtestId; set => SetProperty(ref _AssessmentSubtestId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubtestItem"/> model
-        /// </summary>
-        public Guid AssessmentSubtestItemId { get => _AssessmentSubtestItemId; set => SetProperty(ref _AssessmentSubtestItemId, value); }
-
-        /// <summary>
         /// A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20013">Assessment Form Subtest Item Weight Correct</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Assessment Form Subtest Item Weight Correct")]
         public System.Decimal? ItemWeightCorrect { get => _ItemWeightCorrect; set => SetProperty(ref _ItemWeightCorrect, value); }
-
-        /// <summary>
-        /// A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.
-        /// </summary>
-        public System.Decimal? ItemWeightIncorrect { get => _ItemWeightIncorrect; set => SetProperty(ref _ItemWeightIncorrect, value); }
-
-        /// <summary>
-        /// A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.
-        /// </summary>
-        public System.Decimal? ItemWeightNotAttempted { get => _ItemWeightNotAttempted; set => SetProperty(ref _ItemWeightNotAttempted, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentItemId = model.AssessmentItemId;
-            AssessmentSubtestId = model.AssessmentSubtestId;
-            AssessmentSubtestItemId = model.AssessmentSubtestItemId;
-            ItemWeightCorrect = model.ItemWeightCorrect;
-            ItemWeightIncorrect = model.ItemWeightIncorrect;
-            ItemWeightNotAttempted = model.ItemWeightNotAttempted;
+            ItemWeightCorrect = model.ItemWeightCorrect; // Assessment Form Subtest Item Weight Correct
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

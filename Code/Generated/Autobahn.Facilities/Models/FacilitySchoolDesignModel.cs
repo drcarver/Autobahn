@@ -16,11 +16,6 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The physical layout and character of a school facility, as determined by age groups served and educational programs provided.
         /// </summary>
-        public Guid FacilityDesignId { get; set; }
-
-        /// <summary>
-        /// The physical layout and character of a school facility, as determined by age groups served and educational programs provided.
-        /// </summary>
         public Guid RefBuildingSchoolDesignTypeId { get; set; }
 
     }

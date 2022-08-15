@@ -3,6 +3,9 @@
 //* FileName:   OrganizationOperationalStatusViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -13,12 +16,6 @@ namespace Autobahn.Common.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationOperationalStatus";
-
-        // member variable for the OperationalStatusEffectiveDate property
-        private System.DateTime? _OperationalStatusEffectiveDate;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
 
         // member variable for the RefOperationalStatusId property
         private Guid _RefOperationalStatusId;
@@ -32,18 +29,12 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
-        /// </summary>
-        public System.DateTime? OperationalStatusEffectiveDate { get => _OperationalStatusEffectiveDate; set => SetProperty(ref _OperationalStatusEffectiveDate, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefOperationalStatus"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19174">Local Education Agency Operational Status</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Local Education Agency Operational Status")]
         public Guid RefOperationalStatusId { get => _RefOperationalStatusId; set => SetProperty(ref _RefOperationalStatusId, value); }
 
         #endregion
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OperationalStatusEffectiveDate = model.OperationalStatusEffectiveDate;
-            OrganizationId = model.OrganizationId;
-            RefOperationalStatusId = model.RefOperationalStatusId;
+            RefOperationalStatusId = model.RefOperationalStatusId; // Local Education Agency Operational Status
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

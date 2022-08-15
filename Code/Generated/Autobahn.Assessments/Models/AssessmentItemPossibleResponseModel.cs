@@ -16,32 +16,7 @@ namespace Autobahn.Assessments.Models
         /// <summary>
         /// A message provided to the person being assessed after giving a response that matches the possible response.
         /// </summary>
-        public Guid AssessmentItemId { get; set; }
-
-        /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
-        /// </summary>
-        public System.Boolean? CorrectIndicator { get; set; }
-
-        /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
-        /// </summary>
         public System.String FeedbackMessage { get; set; }
-
-        /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
-        /// </summary>
-        public System.String PossibleResponseOption { get; set; }
-
-        /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
-        /// </summary>
-        public System.Int32? SequenceNumber { get; set; }
-
-        /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
-        /// </summary>
-        public System.String Value { get; set; }
 
     }
 }

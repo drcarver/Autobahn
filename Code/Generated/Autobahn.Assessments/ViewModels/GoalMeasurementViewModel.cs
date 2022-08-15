@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -16,15 +19,6 @@ namespace Autobahn.Assessments.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from GoalMeasurement";
-
-        // member variable for the GoalId property
-        private Guid _GoalId;
-
-        // member variable for the RefGoalMeasurementTypeId property
-        private Guid? _RefGoalMeasurementTypeId;
-
-        // member variable for the Schedule property
-        private System.String _Schedule;
 
         // member variable for the SuccessCriteria property
         private System.String _SuccessCriteria;
@@ -38,23 +32,12 @@ namespace Autobahn.Assessments.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Goal"/> model
-        /// </summary>
-        public Guid GoalId { get => _GoalId; set => SetProperty(ref _GoalId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGoalMeasurementType"/> model
-        /// </summary>
-        public Guid? RefGoalMeasurementTypeId { get => _RefGoalMeasurementTypeId; set => SetProperty(ref _RefGoalMeasurementTypeId, value); }
-
-        /// <summary>
         /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19902">Goal Success Criteria</a>
+        /// </para>
         /// </summary>
-        public System.String Schedule { get => _Schedule; set => SetProperty(ref _Schedule, value); }
-
-        /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
-        /// </summary>
+        [DisplayName("Goal Success Criteria")]
         public System.String SuccessCriteria { get => _SuccessCriteria; set => SetProperty(ref _SuccessCriteria, value); }
 
         #endregion
@@ -66,10 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            GoalId = model.GoalId;
-            RefGoalMeasurementTypeId = model.RefGoalMeasurementTypeId;
-            Schedule = model.Schedule;
-            SuccessCriteria = model.SuccessCriteria;
+            SuccessCriteria = model.SuccessCriteria; // Goal Success Criteria
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

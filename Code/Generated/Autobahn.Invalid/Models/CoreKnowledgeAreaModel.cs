@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// A description of the core knowledge areas addressed by Early Learning professional development.
         /// </summary>
-        public Guid ProfessionalDevelopmentActivityId { get; set; }
-
-        /// <summary>
-        /// A description of the core knowledge areas addressed by Early Learning professional development.
-        /// </summary>
         public Guid RefCoreKnowledgeAreaId { get; set; }
 
     }

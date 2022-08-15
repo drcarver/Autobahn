@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Facilities.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from BuildingSystemComponentService";
-
-        // member variable for the BuildingSystemComponentId property
-        private Guid _BuildingSystemComponentId;
-
-        // member variable for the ComponentOrFixtureScheduledServicedDate property
-        private System.DateTime? _ComponentOrFixtureScheduledServicedDate;
 
         // member variable for the ComponentOrFixtureServicedDate property
         private System.DateTime? _ComponentOrFixtureServicedDate;
@@ -35,18 +32,12 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="BuildingSystemComponent"/> model
-        /// </summary>
-        public Guid BuildingSystemComponentId { get => _BuildingSystemComponentId; set => SetProperty(ref _BuildingSystemComponentId, value); }
-
-        /// <summary>
         /// The month, day, and year a system, component, equipment, or fixture was serviced for repair or routine maintenance.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20880">Component or Fixture Serviced Date</a>
+        /// </para>
         /// </summary>
-        public System.DateTime? ComponentOrFixtureScheduledServicedDate { get => _ComponentOrFixtureScheduledServicedDate; set => SetProperty(ref _ComponentOrFixtureScheduledServicedDate, value); }
-
-        /// <summary>
-        /// The month, day, and year a system, component, equipment, or fixture was serviced for repair or routine maintenance.
-        /// </summary>
+        [DisplayName("Component or Fixture Serviced Date")]
         public System.DateTime? ComponentOrFixtureServicedDate { get => _ComponentOrFixtureServicedDate; set => SetProperty(ref _ComponentOrFixtureServicedDate, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            BuildingSystemComponentId = model.BuildingSystemComponentId;
-            ComponentOrFixtureScheduledServicedDate = model.ComponentOrFixtureScheduledServicedDate;
-            ComponentOrFixtureServicedDate = model.ComponentOrFixtureServicedDate;
+            ComponentOrFixtureServicedDate = model.ComponentOrFixtureServicedDate; // Component or Fixture Serviced Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

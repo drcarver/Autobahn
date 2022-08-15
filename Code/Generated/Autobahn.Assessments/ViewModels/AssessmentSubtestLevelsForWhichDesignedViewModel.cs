@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSubtestLevelsForWhichDesigned";
 
-        // member variable for the AssessmentSubTestId property
-        private Guid _AssessmentSubTestId;
-
-        // member variable for the RefGradeId property
-        private Guid _RefGradeId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Assessments.ViewModels
         /// The title of the AssessmentSubtestLevelsForWhichDesignedViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubTest"/> model
-        /// </summary>
-        public Guid AssessmentSubTestId { get => _AssessmentSubTestId; set => SetProperty(ref _AssessmentSubTestId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGrade"/> model
-        /// </summary>
-        public Guid RefGradeId { get => _RefGradeId; set => SetProperty(ref _RefGradeId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentSubTestId = model.AssessmentSubTestId;
-            RefGradeId = model.RefGradeId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

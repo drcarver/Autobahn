@@ -14,22 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
         /// </summary>
-        public System.Boolean? DoNotPublishIndicator { get; set; }
-
-        /// <summary>
-        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
-        /// </summary>
         public System.String ElectronicMailAddress { get; set; }
-
-        /// <summary>
-        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
-        /// </summary>
-        public Guid? RefEmailTypeId { get; set; }
 
     }
 }

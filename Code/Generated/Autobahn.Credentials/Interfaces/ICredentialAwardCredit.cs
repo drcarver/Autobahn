@@ -12,20 +12,5 @@ namespace Autobahn.Credentials.Interfaces
      /// </summary>
     public partial interface ICredentialAwardCredit : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid CredentialAwardId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid? CredentialCriteriaCourseId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid? OrganizationPersonRoleId { get; set; }
-
     }
 }

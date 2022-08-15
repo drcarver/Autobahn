@@ -18,25 +18,5 @@ namespace Autobahn.Assessments.Models
         /// </summary>
         public System.Decimal? AccuracyPercent { get; set; }
 
-        /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
-        /// </summary>
-        public System.Int32? AttemptsCount { get; set; }
-
-        /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
-        /// </summary>
-        public Guid GoalMeasurementId { get; set; }
-
-        /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
-        /// </summary>
-        public System.String Metric { get; set; }
-
-        /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
-        /// </summary>
-        public System.Int32? SuccessCount { get; set; }
-
     }
 }

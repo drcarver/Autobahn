@@ -3,6 +3,9 @@
 //* FileName:   OrganizationPersonRoleFTEViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,12 +17,6 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationPersonRoleFTE";
 
-        // member variable for the FullTimeEquivalency property
-        private System.Decimal _FullTimeEquivalency;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         #endregion
 
         #region Properties
@@ -27,16 +24,6 @@ namespace Autobahn.Common.ViewModels
         /// The title of the OrganizationPersonRoleFTEViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.Decimal FullTimeEquivalency { get => _FullTimeEquivalency; set => SetProperty(ref _FullTimeEquivalency, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -47,8 +34,6 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FullTimeEquivalency = model.FullTimeEquivalency;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

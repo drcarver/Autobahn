@@ -3,6 +3,9 @@
 //* FileName:   RoleAttendanceViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,20 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from RoleAttendance";
 
-        // member variable for the AttendanceRate property
-        private System.Decimal? _AttendanceRate;
-
         // member variable for the NumberOfDaysAbsent property
         private System.Decimal? _NumberOfDaysAbsent;
-
-        // member variable for the NumberOfDaysInAttendance property
-        private System.Decimal? _NumberOfDaysInAttendance;
-
-        // member variable for the NumberOfDaysTardy property
-        private System.Decimal? _NumberOfDaysTardy;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         #endregion
 
@@ -39,28 +30,12 @@ namespace Autobahn.Common.ViewModels
 
         /// <summary>
         /// The number of days a person is absent when school is in session during a given reporting period.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19201">Number of Days Absent</a>
+        /// </para>
         /// </summary>
-        public System.Decimal? AttendanceRate { get => _AttendanceRate; set => SetProperty(ref _AttendanceRate, value); }
-
-        /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
-        /// </summary>
+        [DisplayName("Number of Days Absent")]
         public System.Decimal? NumberOfDaysAbsent { get => _NumberOfDaysAbsent; set => SetProperty(ref _NumberOfDaysAbsent, value); }
-
-        /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
-        /// </summary>
-        public System.Decimal? NumberOfDaysInAttendance { get => _NumberOfDaysInAttendance; set => SetProperty(ref _NumberOfDaysInAttendance, value); }
-
-        /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
-        /// </summary>
-        public System.Decimal? NumberOfDaysTardy { get => _NumberOfDaysTardy; set => SetProperty(ref _NumberOfDaysTardy, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -71,11 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AttendanceRate = model.AttendanceRate;
-            NumberOfDaysAbsent = model.NumberOfDaysAbsent;
-            NumberOfDaysInAttendance = model.NumberOfDaysInAttendance;
-            NumberOfDaysTardy = model.NumberOfDaysTardy;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
+            NumberOfDaysAbsent = model.NumberOfDaysAbsent; // Number of Days Absent
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

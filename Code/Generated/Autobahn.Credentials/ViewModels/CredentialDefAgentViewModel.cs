@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Credentials.ViewModels
 {
      /// <summary>
@@ -16,15 +19,6 @@ namespace Autobahn.Credentials.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CredentialDefAgent";
-
-        // member variable for the OrganizationId property
-        private Guid? _OrganizationId;
-
-        // member variable for the PersonId property
-        private Guid? _PersonId;
-
-        // member variable for the RefCredentialDefAgentRoleTypeId property
-        private Guid? _RefCredentialDefAgentRoleTypeId;
 
         // member variable for the RefCTDLOrganizationTypeId property
         private Guid? _RefCTDLOrganizationTypeId;
@@ -38,23 +32,12 @@ namespace Autobahn.Credentials.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid? OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid? PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCredentialDefAgentRoleType"/> model
-        /// </summary>
-        public Guid? RefCredentialDefAgentRoleTypeId { get => _RefCredentialDefAgentRoleTypeId; set => SetProperty(ref _RefCredentialDefAgentRoleTypeId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20736">CTDL Organization Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("CTDL Organization Type")]
         public Guid? RefCTDLOrganizationTypeId { get => _RefCTDLOrganizationTypeId; set => SetProperty(ref _RefCTDLOrganizationTypeId, value); }
 
         #endregion
@@ -66,10 +49,7 @@ namespace Autobahn.Credentials.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            PersonId = model.PersonId;
-            RefCredentialDefAgentRoleTypeId = model.RefCredentialDefAgentRoleTypeId;
-            RefCTDLOrganizationTypeId = model.RefCTDLOrganizationTypeId;
+            RefCTDLOrganizationTypeId = model.RefCTDLOrganizationTypeId; // CTDL Organization Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

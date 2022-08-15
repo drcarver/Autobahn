@@ -12,15 +12,5 @@ namespace Autobahn.Postsecondary.Interfaces
      /// </summary>
     public partial interface IPsStudentCohort : IAutobahnBase
     {
-        /// <summary>
-        /// The year the cohort is expected to graduate.
-        /// </summary>
-        System.String CohortGraduationYear { get; set; }
-
-        /// <summary>
-        /// The year the cohort is expected to graduate.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

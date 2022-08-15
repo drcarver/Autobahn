@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityRelationship";
 
-        // member variable for the FacilityId property
-        private Guid _FacilityId;
-
-        // member variable for the Parent_FacilityId property
-        private Guid _Parent_FacilityId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Facilities.ViewModels
         /// The title of the FacilityRelationshipViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Facility"/> model
-        /// </summary>
-        public Guid FacilityId { get => _FacilityId; set => SetProperty(ref _FacilityId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Parent_Facility"/> model
-        /// </summary>
-        public Guid Parent_FacilityId { get => _Parent_FacilityId; set => SetProperty(ref _Parent_FacilityId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityId = model.FacilityId;
-            Parent_FacilityId = model.Parent_FacilityId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

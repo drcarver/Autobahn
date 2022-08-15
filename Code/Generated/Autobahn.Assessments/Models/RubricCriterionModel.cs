@@ -13,30 +13,5 @@ namespace Autobahn.Assessments.Models
      /// </summary>
     public partial class RubricCriterionModel : AutobahnBase, Interfaces.IRubricCriterion
     {
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        public System.String Category { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        public System.Int32? Position { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        public Guid RubricId { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        public System.String Title { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        public System.Decimal? Weight { get; set; }
-
     }
 }

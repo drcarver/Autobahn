@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Competencies.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Competencies.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CompetencySetRubricCriterion";
 
-        // member variable for the CompetencySetId property
-        private Guid _CompetencySetId;
-
-        // member variable for the RubricCriterionId property
-        private Guid _RubricCriterionId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Competencies.ViewModels
         /// The title of the CompetencySetRubricCriterionViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CompetencySet"/> model
-        /// </summary>
-        public Guid CompetencySetId { get => _CompetencySetId; set => SetProperty(ref _CompetencySetId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RubricCriterion"/> model
-        /// </summary>
-        public Guid RubricCriterionId { get => _RubricCriterionId; set => SetProperty(ref _RubricCriterionId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CompetencySetId = model.CompetencySetId;
-            RubricCriterionId = model.RubricCriterionId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

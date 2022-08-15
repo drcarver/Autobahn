@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Credentials.ViewModels
 {
      /// <summary>
@@ -17,15 +20,6 @@ namespace Autobahn.Credentials.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CredentialDefCategory";
 
-        // member variable for the Category property
-        private System.String _Category;
-
-        // member variable for the CategorySystem property
-        private System.String _CategorySystem;
-
-        // member variable for the CredentialDefinitionId property
-        private Guid _CredentialDefinitionId;
-
         #endregion
 
         #region Properties
@@ -33,21 +27,6 @@ namespace Autobahn.Credentials.ViewModels
         /// The title of the CredentialDefCategoryViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// A category for defining the qualification, achievement, personal or organizational quality, or aspect of an identity.
-        /// </summary>
-        public System.String Category { get => _Category; set => SetProperty(ref _Category, value); }
-
-        /// <summary>
-        /// A category for defining the qualification, achievement, personal or organizational quality, or aspect of an identity.
-        /// </summary>
-        public System.String CategorySystem { get => _CategorySystem; set => SetProperty(ref _CategorySystem, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialDefinition"/> model
-        /// </summary>
-        public Guid CredentialDefinitionId { get => _CredentialDefinitionId; set => SetProperty(ref _CredentialDefinitionId, value); }
 
         #endregion
 
@@ -58,9 +37,6 @@ namespace Autobahn.Credentials.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Category = model.Category;
-            CategorySystem = model.CategorySystem;
-            CredentialDefinitionId = model.CredentialDefinitionId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -16,37 +16,7 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
         /// </summary>
-        public System.Boolean? ECEAPEligibility { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
-        public System.String EligibilityPriorityPoints { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
-        public Guid? RefEarlyChildhoodServicesOfferedId { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
         public Guid? RefEarlyChildhoodServicesReceivedId { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
-        public Guid? RefELServiceTypeId { get; set; }
-
-        /// <summary>
-        /// The types of service that adapts the curriculum, materials, or instruction for students identified as needing additional resources.
-        /// </summary>
-        public System.DateTime? ServiceDate { get; set; }
 
     }
 }

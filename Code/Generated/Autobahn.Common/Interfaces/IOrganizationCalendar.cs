@@ -14,22 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The year for a reported school session.
         /// </summary>
-        System.String CalendarCode { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
-        System.String CalendarDescription { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
         System.String CalendarYear { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session.
-        /// </summary>
-        Guid OrganizationId { get; set; }
 
     }
 }

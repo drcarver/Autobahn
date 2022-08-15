@@ -13,20 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class IDSVersionModel : AutobahnBase, Interfaces.IIDSVersion
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public System.Boolean CurrentVersion { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public System.DateTime IDSVersionDate { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public System.String IDSVersionNumber { get; set; }
-
     }
 }

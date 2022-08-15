@@ -18,15 +18,5 @@ namespace Autobahn.Invalid.Models
         /// </summary>
         public Guid ClassroomId { get; set; }
 
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// </summary>
-        public Guid CourseSectionId { get; set; }
-
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// </summary>
-        public Guid? RefInstructionLocationTypeId { get; set; }
-
     }
 }

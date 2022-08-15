@@ -12,15 +12,5 @@ namespace Autobahn.Competencies.Interfaces
      /// </summary>
     public partial interface ICompetencySetRubric : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid CompetencySetId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid RubricId { get; set; }
-
     }
 }

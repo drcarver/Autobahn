@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,17 +20,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELChildDemographic";
 
-        // member variable for the FosterCareEndDate property
-        private System.DateTime? _FosterCareEndDate;
-
-        // member variable for the FosterCareStartDate property
-        private System.DateTime? _FosterCareStartDate;
-
         // member variable for the OtherRaceIndicator property
         private System.Boolean? _OtherRaceIndicator;
-
-        // member variable for the PersonId property
-        private Guid _PersonId;
 
         #endregion
 
@@ -39,23 +33,12 @@ namespace Autobahn.EarlyLearning.ViewModels
 
         /// <summary>
         /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20390">Other Race Indicator</a>
+        /// </para>
         /// </summary>
-        public System.DateTime? FosterCareEndDate { get => _FosterCareEndDate; set => SetProperty(ref _FosterCareEndDate, value); }
-
-        /// <summary>
-        /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
-        /// </summary>
-        public System.DateTime? FosterCareStartDate { get => _FosterCareStartDate; set => SetProperty(ref _FosterCareStartDate, value); }
-
-        /// <summary>
-        /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
-        /// </summary>
+        [DisplayName("Other Race Indicator")]
         public System.Boolean? OtherRaceIndicator { get => _OtherRaceIndicator; set => SetProperty(ref _OtherRaceIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
 
         #endregion
 
@@ -66,10 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FosterCareEndDate = model.FosterCareEndDate;
-            FosterCareStartDate = model.FosterCareStartDate;
-            OtherRaceIndicator = model.OtherRaceIndicator;
-            PersonId = model.PersonId;
+            OtherRaceIndicator = model.OtherRaceIndicator; // Other Race Indicator
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

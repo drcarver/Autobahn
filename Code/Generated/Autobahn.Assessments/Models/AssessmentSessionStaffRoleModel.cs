@@ -16,21 +16,6 @@ namespace Autobahn.Assessments.Models
         /// <summary>
         /// The type of role served related to the administration of an assessment session.
         /// </summary>
-        public Guid? AssessmentParticipantSessionId { get; set; }
-
-        /// <summary>
-        /// The type of role served related to the administration of an assessment session.
-        /// </summary>
-        public Guid? AssessmentSessionId { get; set; }
-
-        /// <summary>
-        /// The type of role served related to the administration of an assessment session.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The type of role served related to the administration of an assessment session.
-        /// </summary>
         public Guid? RefAssessmentSessionStaffRoleTypeId { get; set; }
 
     }

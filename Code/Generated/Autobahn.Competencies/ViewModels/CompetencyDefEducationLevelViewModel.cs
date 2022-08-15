@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Competencies.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Competencies.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CompetencyDefEducationLevel";
 
-        // member variable for the CompetencyDefinitionId property
-        private Guid _CompetencyDefinitionId;
-
-        // member variable for the RefEducationLevelId property
-        private Guid _RefEducationLevelId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Competencies.ViewModels
         /// The title of the CompetencyDefEducationLevelViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CompetencyDefinition"/> model
-        /// </summary>
-        public Guid CompetencyDefinitionId { get => _CompetencyDefinitionId; set => SetProperty(ref _CompetencyDefinitionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEducationLevel"/> model
-        /// </summary>
-        public Guid RefEducationLevelId { get => _RefEducationLevelId; set => SetProperty(ref _RefEducationLevelId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CompetencyDefinitionId = model.CompetencyDefinitionId;
-            RefEducationLevelId = model.RefEducationLevelId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

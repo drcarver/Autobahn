@@ -13,15 +13,5 @@ namespace Autobahn.Authorization.Models
      /// </summary>
     public partial class ApplicationModel : AutobahnBase, Interfaces.IApplication
     {
-        /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
-        /// </summary>
-        public System.String Name { get; set; }
-
-        /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
-        /// </summary>
-        public System.String Uri { get; set; }
-
     }
 }

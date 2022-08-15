@@ -13,20 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class IndividualizedProgramAccommodationModel : AutobahnBase, Interfaces.IIndividualizedProgramAccommodation
     {
-        /// <summary>
-        /// The specific accommodation necessary for assessment or instruction.
-        /// </summary>
-        public System.String Applicability { get; set; }
-
-        /// <summary>
-        /// The specific accommodation necessary for assessment or instruction.
-        /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// The specific accommodation necessary for assessment or instruction.
-        /// </summary>
-        public Guid? RefAccommodationTypeId { get; set; }
-
     }
 }

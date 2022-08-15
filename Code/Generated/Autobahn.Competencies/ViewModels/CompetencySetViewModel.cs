@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Competencies.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Competencies.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CompetencySet";
-
-        // member variable for the ChildOfCompetencySet property
-        private System.Int32? _ChildOfCompetencySet;
-
-        // member variable for the CompletionCriteriaThreshold property
-        private System.Int32? _CompletionCriteriaThreshold;
 
         // member variable for the RefCompletionCriteriaId property
         private Guid? _RefCompletionCriteriaId;
@@ -35,18 +32,12 @@ namespace Autobahn.Competencies.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
-        /// </summary>
-        public System.Int32? ChildOfCompetencySet { get => _ChildOfCompetencySet; set => SetProperty(ref _ChildOfCompetencySet, value); }
-
-        /// <summary>
-        /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
-        /// </summary>
-        public System.Int32? CompletionCriteriaThreshold { get => _CompletionCriteriaThreshold; set => SetProperty(ref _CompletionCriteriaThreshold, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefCompletionCriteria"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19877">Competency Set Completion Criteria</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Competency Set Completion Criteria")]
         public Guid? RefCompletionCriteriaId { get => _RefCompletionCriteriaId; set => SetProperty(ref _RefCompletionCriteriaId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ChildOfCompetencySet = model.ChildOfCompetencySet;
-            CompletionCriteriaThreshold = model.CompletionCriteriaThreshold;
-            RefCompletionCriteriaId = model.RefCompletionCriteriaId;
+            RefCompletionCriteriaId = model.RefCompletionCriteriaId; // Competency Set Completion Criteria
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

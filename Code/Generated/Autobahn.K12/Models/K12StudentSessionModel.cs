@@ -18,15 +18,5 @@ namespace Autobahn.K12.Models
         /// </summary>
         public System.Decimal? GradePointAverageGivenSession { get; set; }
 
-        /// <summary>
-        /// A measure of average performance in all courses taken by a person during a given session. This is obtained by dividing the total grade points received by the number of credits attempted for the same session.
-        /// </summary>
-        public Guid? OrganizationCalendarSessionId { get; set; }
-
-        /// <summary>
-        /// A measure of average performance in all courses taken by a person during a given session. This is obtained by dividing the total grade points received by the number of credits attempted for the same session.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

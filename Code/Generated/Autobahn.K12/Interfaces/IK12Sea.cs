@@ -15,11 +15,6 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The American National Standards Institute (ANSI) two-digit code for the state.
         /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The American National Standards Institute (ANSI) two-digit code for the state.
-        /// </summary>
         Guid? RefStateANSICodeId { get; set; }
 
     }

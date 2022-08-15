@@ -12,20 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IServiceProvider : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid ServiceProvidedId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid ServiceStaffId { get; set; }
-
     }
 }

@@ -16,16 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.
         /// </summary>
-        public Guid EligibilityEvaluationId { get; set; }
-
-        /// <summary>
-        /// Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.
-        /// </summary>
-        public Guid IndividualizedProgramEligibilityId { get; set; }
-
-        /// <summary>
-        /// Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.
-        /// </summary>
         public Guid? RefIEPEligibilityEvaluationTypeId { get; set; }
 
     }

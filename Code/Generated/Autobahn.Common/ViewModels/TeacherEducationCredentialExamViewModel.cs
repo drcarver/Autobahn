@@ -3,6 +3,9 @@
 //* FileName:   TeacherEducationCredentialExamViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -13,15 +16,6 @@ namespace Autobahn.Common.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from TeacherEducationCredentialExam";
-
-        // member variable for the ProgramParticipationTeacherPrepId property
-        private Guid _ProgramParticipationTeacherPrepId;
-
-        // member variable for the RefTeacherEducationCredentialExamId property
-        private Guid? _RefTeacherEducationCredentialExamId;
-
-        // member variable for the RefTeacherEducationExamScoreTypeId property
-        private Guid? _RefTeacherEducationExamScoreTypeId;
 
         // member variable for the RefTeacherEducationTestCompanyId property
         private Guid? _RefTeacherEducationTestCompanyId;
@@ -35,23 +29,12 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="ProgramParticipationTeacherPrep"/> model
-        /// </summary>
-        public Guid ProgramParticipationTeacherPrepId { get => _ProgramParticipationTeacherPrepId; set => SetProperty(ref _ProgramParticipationTeacherPrepId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTeacherEducationCredentialExam"/> model
-        /// </summary>
-        public Guid? RefTeacherEducationCredentialExamId { get => _RefTeacherEducationCredentialExamId; set => SetProperty(ref _RefTeacherEducationCredentialExamId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTeacherEducationExamScoreType"/> model
-        /// </summary>
-        public Guid? RefTeacherEducationExamScoreTypeId { get => _RefTeacherEducationExamScoreTypeId; set => SetProperty(ref _RefTeacherEducationExamScoreTypeId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefTeacherEducationTestCompany"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19748">Teacher Education Test Company</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Teacher Education Test Company")]
         public Guid? RefTeacherEducationTestCompanyId { get => _RefTeacherEducationTestCompanyId; set => SetProperty(ref _RefTeacherEducationTestCompanyId, value); }
 
         #endregion
@@ -63,10 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ProgramParticipationTeacherPrepId = model.ProgramParticipationTeacherPrepId;
-            RefTeacherEducationCredentialExamId = model.RefTeacherEducationCredentialExamId;
-            RefTeacherEducationExamScoreTypeId = model.RefTeacherEducationExamScoreTypeId;
-            RefTeacherEducationTestCompanyId = model.RefTeacherEducationTestCompanyId;
+            RefTeacherEducationTestCompanyId = model.RefTeacherEducationTestCompanyId; // Teacher Education Test Company
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

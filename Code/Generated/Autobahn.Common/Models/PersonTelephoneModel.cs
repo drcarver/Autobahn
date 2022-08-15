@@ -14,32 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// An indication that the telephone number should be used as the principal number for a person or organization.
         /// </summary>
-        public System.Boolean? DoNotPublishIndicator { get; set; }
-
-        /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
-        /// </summary>
         public System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
-
-        /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
-        /// </summary>
-        public Guid? RefPersonTelephoneNumberTypeId { get; set; }
-
-        /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
-        /// </summary>
-        public Guid? RefTelephoneNumberListedStatusId { get; set; }
-
-        /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
-        /// </summary>
-        public System.String TelephoneNumber { get; set; }
 
     }
 }

@@ -16,22 +16,7 @@ namespace Autobahn.Postsecondary.Models
         /// <summary>
         /// Additional information regarding the context of the given grade.
         /// </summary>
-        public System.String CourseNarrativeExplanationGrade { get; set; }
-
-        /// <summary>
-        /// Additional information regarding the context of the given grade.
-        /// </summary>
-        public Guid PsStudentSectionId { get; set; }
-
-        /// <summary>
-        /// Additional information regarding the context of the given grade.
-        /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
-
-        /// <summary>
-        /// Additional information regarding the context of the given grade.
-        /// </summary>
-        public System.String StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

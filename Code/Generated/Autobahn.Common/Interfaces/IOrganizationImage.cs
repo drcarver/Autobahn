@@ -12,12 +12,7 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationImage : IAutobahnBase
     {
         /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of an image representing the Organization.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of an image representing the Organization.
+        /// 
         /// </summary>
         System.String URL { get; set; }
 

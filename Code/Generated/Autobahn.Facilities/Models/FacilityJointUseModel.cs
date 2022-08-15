@@ -16,22 +16,7 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The reasons for permitting and participating in joint-use.
         /// </summary>
-        public Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The reasons for permitting and participating in joint-use.
-        /// </summary>
         public Guid? RefBuildingJointUseRationaleTypeId { get; set; }
-
-        /// <summary>
-        /// The reasons for permitting and participating in joint-use.
-        /// </summary>
-        public Guid? RefBuildingJointUserTypeId { get; set; }
-
-        /// <summary>
-        /// The reasons for permitting and participating in joint-use.
-        /// </summary>
-        public Guid? RefBuildingJointUseSchedulingTypeId { get; set; }
 
     }
 }

@@ -16,32 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The date the service is planned to begin.
         /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The date the service is planned to begin.
-        /// </summary>
-        public System.Decimal? PlannedServiceDuration { get; set; }
-
-        /// <summary>
-        /// The date the service is planned to begin.
-        /// </summary>
         public System.DateTime? PlannedServiceStartDate { get; set; }
-
-        /// <summary>
-        /// The date the service is planned to begin.
-        /// </summary>
-        public Guid? RefIndividualizedProgramPlannedServiceTypeId { get; set; }
-
-        /// <summary>
-        /// The date the service is planned to begin.
-        /// </summary>
-        public Guid? RefMethodOfServiceDeliveryId { get; set; }
-
-        /// <summary>
-        /// The date the service is planned to begin.
-        /// </summary>
-        public Guid? RefServiceFrequencyId { get; set; }
 
     }
 }

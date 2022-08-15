@@ -14,32 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// Previous, alternate or other names or aliases associated with the person.
         /// </summary>
-        public System.String FirstName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        public System.String LastName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        public System.String MiddleName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
         public System.String OtherName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        public Guid? RefOtherNameTypeId { get; set; }
 
     }
 }

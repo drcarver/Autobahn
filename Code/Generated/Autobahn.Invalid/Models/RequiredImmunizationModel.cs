@@ -13,15 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class RequiredImmunizationModel : AutobahnBase, Interfaces.IRequiredImmunization
     {
-        /// <summary>
-        /// An indication that an immunization is specifically required by an organization or governing body.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// An indication that an immunization is specifically required by an organization or governing body.
-        /// </summary>
-        public Guid RefImmunizationTypeId { get; set; }
-
     }
 }

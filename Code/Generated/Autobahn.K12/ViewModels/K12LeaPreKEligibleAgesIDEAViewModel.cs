@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.K12.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12LeaPreKEligibleAgesIDEA";
-
-        // member variable for the K12LeaId property
-        private Guid _K12LeaId;
-
-        // member variable for the K12LEAPreKEligibleAgesIDEAId property
-        private Guid _K12LEAPreKEligibleAgesIDEAId;
 
         // member variable for the RefPreKEligibleAgesNonIDEAId property
         private Guid _RefPreKEligibleAgesNonIDEAId;
@@ -35,18 +32,12 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="K12Lea"/> model
-        /// </summary>
-        public Guid K12LeaId { get => _K12LeaId; set => SetProperty(ref _K12LeaId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="K12LEAPreKEligibleAgesIDEA"/> model
-        /// </summary>
-        public Guid K12LEAPreKEligibleAgesIDEAId { get => _K12LEAPreKEligibleAgesIDEAId; set => SetProperty(ref _K12LEAPreKEligibleAgesIDEAId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefPreKEligibleAgesNonIDEA"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19217">Prekindergarten Eligible Ages for Non-IDEA Students</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Prekindergarten Eligible Ages for Non-IDEA Students")]
         public Guid RefPreKEligibleAgesNonIDEAId { get => _RefPreKEligibleAgesNonIDEAId; set => SetProperty(ref _RefPreKEligibleAgesNonIDEAId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            K12LeaId = model.K12LeaId;
-            K12LEAPreKEligibleAgesIDEAId = model.K12LEAPreKEligibleAgesIDEAId;
-            RefPreKEligibleAgesNonIDEAId = model.RefPreKEligibleAgesNonIDEAId;
+            RefPreKEligibleAgesNonIDEAId = model.RefPreKEligibleAgesNonIDEAId; // Prekindergarten Eligible Ages for Non-IDEA Students
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

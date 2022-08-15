@@ -3,6 +3,9 @@
 //* FileName:   PersonAllergyViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,17 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PersonAllergy";
 
-        // member variable for the PersonId property
-        private Guid _PersonId;
-
         // member variable for the ReactionDescription property
         private System.String _ReactionDescription;
-
-        // member variable for the RefAllergySeverityId property
-        private Guid? _RefAllergySeverityId;
-
-        // member variable for the RefAllergyTypeId property
-        private Guid _RefAllergyTypeId;
 
         #endregion
 
@@ -35,24 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
         /// Describes symptoms know to be associated with a person's reaction to an allergen.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20247">Allergy Reaction Description</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Allergy Reaction Description")]
         public System.String ReactionDescription { get => _ReactionDescription; set => SetProperty(ref _ReactionDescription, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAllergySeverity"/> model
-        /// </summary>
-        public Guid? RefAllergySeverityId { get => _RefAllergySeverityId; set => SetProperty(ref _RefAllergySeverityId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAllergyType"/> model
-        /// </summary>
-        public Guid RefAllergyTypeId { get => _RefAllergyTypeId; set => SetProperty(ref _RefAllergyTypeId, value); }
 
         #endregion
 
@@ -63,10 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PersonId = model.PersonId;
-            ReactionDescription = model.ReactionDescription;
-            RefAllergySeverityId = model.RefAllergySeverityId;
-            RefAllergyTypeId = model.RefAllergyTypeId;
+            ReactionDescription = model.ReactionDescription; // Allergy Reaction Description
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,15 +12,5 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12CharterSchoolManagementOrganization : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid? OrganizationId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid? RefCharterSchoolManagementOrganizationTypeId { get; set; }
-
     }
 }

@@ -16,16 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The type of financial application completed by an individual.
         /// </summary>
-        public System.String FinancialAidYearDesignator { get; set; }
-
-        /// <summary>
-        /// The type of financial application completed by an individual.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The type of financial application completed by an individual.
-        /// </summary>
         public Guid RefFinancialAidApplicationTypeId { get; set; }
 
     }

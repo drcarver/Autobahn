@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Credentials.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Credentials.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CredentialDefAgentCredential";
 
-        // member variable for the CredentialDefAgentId property
-        private Guid _CredentialDefAgentId;
-
-        // member variable for the CredentialDefinitionId property
-        private Guid _CredentialDefinitionId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Credentials.ViewModels
         /// The title of the CredentialDefAgentCredentialViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialDefAgent"/> model
-        /// </summary>
-        public Guid CredentialDefAgentId { get => _CredentialDefAgentId; set => SetProperty(ref _CredentialDefAgentId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialDefinition"/> model
-        /// </summary>
-        public Guid CredentialDefinitionId { get => _CredentialDefinitionId; set => SetProperty(ref _CredentialDefinitionId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Credentials.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CredentialDefAgentId = model.CredentialDefAgentId;
-            CredentialDefinitionId = model.CredentialDefinitionId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

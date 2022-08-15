@@ -16,25 +16,5 @@ namespace Autobahn.Common.Interfaces
         /// </summary>
         System.DateTime? EntryDate { get; set; }
 
-        /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
-        /// </summary>
-        System.DateTime? ExitDate { get; set; }
-
-        /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
-        /// </summary>
-        Guid RoleId { get; set; }
-
     }
 }

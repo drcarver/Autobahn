@@ -14,31 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
         /// </summary>
-        Guid? PersonAddressId { get; set; }
-
-        /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
-        /// </summary>
-        Guid? PersonDetailId { get; set; }
-
-        /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
-        /// </summary>
-        Guid? PersonTelephoneId { get; set; }
-
-        /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
-        /// </summary>
-        Guid? RefPersonalInformationTypeId { get; set; }
-
-        /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
-        /// </summary>
         Guid? RefPersonalInformationVerificationId { get; set; }
 
     }

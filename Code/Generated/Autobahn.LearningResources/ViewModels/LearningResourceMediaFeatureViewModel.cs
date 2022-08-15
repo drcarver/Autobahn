@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.LearningResources.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.LearningResources.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from LearningResourceMediaFeature";
-
-        // member variable for the LearningResourceId property
-        private Guid _LearningResourceId;
 
         // member variable for the RefLearningResourceMediaFeatureTypeId property
         private Guid _RefLearningResourceMediaFeatureTypeId;
@@ -32,13 +32,12 @@ namespace Autobahn.LearningResources.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="LearningResource"/> model
-        /// </summary>
-        public Guid LearningResourceId { get => _LearningResourceId; set => SetProperty(ref _LearningResourceId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefLearningResourceMediaFeatureType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20368">Learning Resource Media Feature Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Learning Resource Media Feature Type")]
         public Guid RefLearningResourceMediaFeatureTypeId { get => _RefLearningResourceMediaFeatureTypeId; set => SetProperty(ref _RefLearningResourceMediaFeatureTypeId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.LearningResources.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            LearningResourceId = model.LearningResourceId;
-            RefLearningResourceMediaFeatureTypeId = model.RefLearningResourceMediaFeatureTypeId;
+            RefLearningResourceMediaFeatureTypeId = model.RefLearningResourceMediaFeatureTypeId; // Learning Resource Media Feature Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

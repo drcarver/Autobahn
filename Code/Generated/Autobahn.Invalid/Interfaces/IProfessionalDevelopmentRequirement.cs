@@ -15,16 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Number of clock hours of training required for providers to meet requirements of the state.
         /// </summary>
-        Guid? CompetencySetId { get; set; }
-
-        /// <summary>
-        /// Number of clock hours of training required for providers to meet requirements of the state.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// Number of clock hours of training required for providers to meet requirements of the state.
-        /// </summary>
         System.Decimal? RequiredTrainingClockHours { get; set; }
 
     }

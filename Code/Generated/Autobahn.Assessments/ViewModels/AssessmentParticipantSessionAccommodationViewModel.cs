@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentParticipantSessionAccommodation";
 
-        // member variable for the AssessmentAccommodationId property
-        private Guid _AssessmentAccommodationId;
-
-        // member variable for the AssessmentParticipantSessionId property
-        private Guid _AssessmentParticipantSessionId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Assessments.ViewModels
         /// The title of the AssessmentParticipantSessionAccommodationViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentAccommodation"/> model
-        /// </summary>
-        public Guid AssessmentAccommodationId { get => _AssessmentAccommodationId; set => SetProperty(ref _AssessmentAccommodationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentParticipantSession"/> model
-        /// </summary>
-        public Guid AssessmentParticipantSessionId { get => _AssessmentParticipantSessionId; set => SetProperty(ref _AssessmentParticipantSessionId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentAccommodationId = model.AssessmentAccommodationId;
-            AssessmentParticipantSessionId = model.AssessmentParticipantSessionId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

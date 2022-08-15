@@ -15,42 +15,7 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// The type of action taken by the learner.
         /// </summary>
-        Guid? AssessmentItemResponseId { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.String LearnerActionActorIdentifier { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.DateTime? LearnerActionDateTime { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.String LearnerActionObjectDescription { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.String LearnerActionObjectIdentifier { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.String LearnerActionObjectType { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
         Guid? RefLearnerActionTypeId { get; set; }
-
-        /// <summary>
-        /// The type of action taken by the learner.
-        /// </summary>
-        System.String Value { get; set; }
 
     }
 }

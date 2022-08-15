@@ -15,32 +15,7 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// The reason given for declining the recommended services.
         /// </summary>
-        System.DateTime? DeclinedServicesDate { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        System.Boolean? ExtendsOutsideSchoolYear { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        System.Boolean? InclusiveSettingIndicator { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
         System.String ReasonForDeclinedServices { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        System.String SettingDescription { get; set; }
 
     }
 }

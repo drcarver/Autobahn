@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,14 +20,8 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12OrganizationStudentResponsibility";
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         // member variable for the RefK12ResponsibilityTypeId property
         private Guid _RefK12ResponsibilityTypeId;
-
-        // member variable for the RefStudentSchoolAffiliationStateDefinedStatusId property
-        private Guid? _RefStudentSchoolAffiliationStateDefinedStatusId;
 
         #endregion
 
@@ -35,19 +32,13 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefK12ResponsibilityType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19587">Responsible District Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Responsible District Type")]
         public Guid RefK12ResponsibilityTypeId { get => _RefK12ResponsibilityTypeId; set => SetProperty(ref _RefK12ResponsibilityTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStudentSchoolAffiliationStateDefinedStatus"/> model
-        /// </summary>
-        public Guid? RefStudentSchoolAffiliationStateDefinedStatusId { get => _RefStudentSchoolAffiliationStateDefinedStatusId; set => SetProperty(ref _RefStudentSchoolAffiliationStateDefinedStatusId, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefK12ResponsibilityTypeId = model.RefK12ResponsibilityTypeId;
-            RefStudentSchoolAffiliationStateDefinedStatusId = model.RefStudentSchoolAffiliationStateDefinedStatusId;
+            RefK12ResponsibilityTypeId = model.RefK12ResponsibilityTypeId; // Responsible District Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

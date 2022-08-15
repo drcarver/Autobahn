@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramServicesReceived";
 
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
-
-        // member variable for the ServicesReceivedId property
-        private Guid _ServicesReceivedId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the IndividualizedProgramServicesReceivedViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ServicesReceived"/> model
-        /// </summary>
-        public Guid ServicesReceivedId { get => _ServicesReceivedId; set => SetProperty(ref _ServicesReceivedId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            ServicesReceivedId = model.ServicesReceivedId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

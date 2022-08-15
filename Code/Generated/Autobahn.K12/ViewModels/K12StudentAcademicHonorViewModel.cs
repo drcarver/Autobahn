@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.K12.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12StudentAcademicHonor";
-
-        // member variable for the HonorDescription property
-        private System.String _HonorDescription;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         // member variable for the RefAcademicHonorTypeId property
         private Guid? _RefAcademicHonorTypeId;
@@ -35,18 +32,12 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A designation of the type of academic distinctions earned by or awarded to the student.
-        /// </summary>
-        public System.String HonorDescription { get => _HonorDescription; set => SetProperty(ref _HonorDescription, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefAcademicHonorType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19004">Academic Honors Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Academic Honors Type")]
         public Guid? RefAcademicHonorTypeId { get => _RefAcademicHonorTypeId; set => SetProperty(ref _RefAcademicHonorTypeId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            HonorDescription = model.HonorDescription;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefAcademicHonorTypeId = model.RefAcademicHonorTypeId;
+            RefAcademicHonorTypeId = model.RefAcademicHonorTypeId; // Academic Honors Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

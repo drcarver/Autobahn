@@ -13,25 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ProgramParticipationTitleIIILepModel : AutobahnBase, Interfaces.IProgramParticipationTitleIIILep
     {
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid PersonProgramParticipationId { get; set; }
-
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid ProgramParticipationTitleIiiLepId { get; set; }
-
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid? RefTitleIIIAccountabilityId { get; set; }
-
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid? RefTitleIIILanguageInstructionProgramTypeId { get; set; }
-
     }
 }

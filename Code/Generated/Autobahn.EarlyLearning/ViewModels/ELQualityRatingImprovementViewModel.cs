@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -16,21 +19,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELQualityRatingImprovement";
-
-        // member variable for the NumberQrisLevels property
-        private System.Int32? _NumberQrisLevels;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the QrisAwardDate property
-        private System.DateTime? _QrisAwardDate;
-
-        // member variable for the QRISExpirationDate property
-        private System.DateTime? _QRISExpirationDate;
-
-        // member variable for the QrisScore property
-        private System.String _QrisScore;
 
         // member variable for the RefQrisParticipationId property
         private Guid? _RefQrisParticipationId;
@@ -44,33 +32,12 @@ namespace Autobahn.EarlyLearning.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        public System.Int32? NumberQrisLevels { get => _NumberQrisLevels; set => SetProperty(ref _NumberQrisLevels, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        public System.DateTime? QrisAwardDate { get => _QrisAwardDate; set => SetProperty(ref _QrisAwardDate, value); }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        public System.DateTime? QRISExpirationDate { get => _QRISExpirationDate; set => SetProperty(ref _QRISExpirationDate, value); }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        public System.String QrisScore { get => _QrisScore; set => SetProperty(ref _QrisScore, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefQrisParticipation"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19356">Quality Rating and Improvement System Participation</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Quality Rating and Improvement System Participation")]
         public Guid? RefQrisParticipationId { get => _RefQrisParticipationId; set => SetProperty(ref _RefQrisParticipationId, value); }
 
         #endregion
@@ -82,12 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            NumberQrisLevels = model.NumberQrisLevels;
-            OrganizationId = model.OrganizationId;
-            QrisAwardDate = model.QrisAwardDate;
-            QRISExpirationDate = model.QRISExpirationDate;
-            QrisScore = model.QrisScore;
-            RefQrisParticipationId = model.RefQrisParticipationId;
+            RefQrisParticipationId = model.RefQrisParticipationId; // Quality Rating and Improvement System Participation
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

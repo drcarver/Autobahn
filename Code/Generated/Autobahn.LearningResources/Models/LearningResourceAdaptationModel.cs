@@ -18,10 +18,5 @@ namespace Autobahn.LearningResources.Models
         /// </summary>
         public System.String AdaptationURL { get; set; }
 
-        /// <summary>
-        /// The Uniform Resource Locator of a learning resource that is an adaptation for this resource.
-        /// </summary>
-        public Guid LearningResourceId { get; set; }
-
     }
 }

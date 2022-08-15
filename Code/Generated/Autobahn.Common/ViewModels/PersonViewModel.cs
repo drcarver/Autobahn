@@ -3,6 +3,9 @@
 //* FileName:   PersonViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,9 +17,6 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from Person";
 
-        // member variable for the PersonMasterId property
-        private Guid? _PersonMasterId;
-
         #endregion
 
         #region Properties
@@ -24,11 +24,6 @@ namespace Autobahn.Common.ViewModels
         /// The title of the PersonViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="PersonMaster"/> model
-        /// </summary>
-        public Guid? PersonMasterId { get => _PersonMasterId; set => SetProperty(ref _PersonMasterId, value); }
 
         #endregion
 
@@ -39,7 +34,6 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PersonMasterId = model.PersonMasterId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

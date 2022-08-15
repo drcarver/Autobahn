@@ -12,15 +12,5 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12LeaGradeOffered : IAutobahnBase
     {
-        /// <summary>
-        /// The specific grade or combination of grades offered by an education institution.
-        /// </summary>
-        Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The specific grade or combination of grades offered by an education institution.
-        /// </summary>
-        Guid RefGradeLevelId { get; set; }
-
     }
 }

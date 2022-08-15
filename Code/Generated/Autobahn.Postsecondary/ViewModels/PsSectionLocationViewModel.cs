@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Postsecondary.ViewModels
 {
      /// <summary>
@@ -20,12 +23,6 @@ namespace Autobahn.Postsecondary.ViewModels
         // member variable for the CourseInstructionSiteName property
         private System.String _CourseInstructionSiteName;
 
-        // member variable for the PsSectionId property
-        private Guid _PsSectionId;
-
-        // member variable for the RefCourseInstructionSiteTypeId property
-        private Guid? _RefCourseInstructionSiteTypeId;
-
         #endregion
 
         #region Properties
@@ -36,18 +33,12 @@ namespace Autobahn.Postsecondary.ViewModels
 
         /// <summary>
         /// The name of the location at which the course is taught.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20275">Course Instruction Site Name</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Course Instruction Site Name")]
         public System.String CourseInstructionSiteName { get => _CourseInstructionSiteName; set => SetProperty(ref _CourseInstructionSiteName, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="PsSection"/> model
-        /// </summary>
-        public Guid PsSectionId { get => _PsSectionId; set => SetProperty(ref _PsSectionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseInstructionSiteType"/> model
-        /// </summary>
-        public Guid? RefCourseInstructionSiteTypeId { get => _RefCourseInstructionSiteTypeId; set => SetProperty(ref _RefCourseInstructionSiteTypeId, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CourseInstructionSiteName = model.CourseInstructionSiteName;
-            PsSectionId = model.PsSectionId;
-            RefCourseInstructionSiteTypeId = model.RefCourseInstructionSiteTypeId;
+            CourseInstructionSiteName = model.CourseInstructionSiteName; // Course Instruction Site Name
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

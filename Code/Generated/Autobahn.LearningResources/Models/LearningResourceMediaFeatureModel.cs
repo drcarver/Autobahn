@@ -16,11 +16,6 @@ namespace Autobahn.LearningResources.Models
         /// <summary>
         /// Accessible content features included with the learning resource.
         /// </summary>
-        public Guid LearningResourceId { get; set; }
-
-        /// <summary>
-        /// Accessible content features included with the learning resource.
-        /// </summary>
         public Guid RefLearningResourceMediaFeatureTypeId { get; set; }
 
     }

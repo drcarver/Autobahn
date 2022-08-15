@@ -14,16 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The nature of one organization's relationship to another.
         /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The nature of one organization's relationship to another.
-        /// </summary>
-        Guid Parent_OrganizationId { get; set; }
-
-        /// <summary>
-        /// The nature of one organization's relationship to another.
-        /// </summary>
         Guid? RefOrganizationRelationshipId { get; set; }
 
     }

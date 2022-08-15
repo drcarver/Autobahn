@@ -12,10 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IRefApipInteractionType : IReferenceModel
     {
-        /// <summary>
-        /// The assessment item body interaction type as defined by IMS Global specifications.
-        /// </summary>
-        Guid RefAPIPInteractionTypeId { get; set; }
-
     }
 }

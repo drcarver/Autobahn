@@ -15,16 +15,6 @@ namespace Autobahn.Postsecondary.Interfaces
         /// <summary>
         /// The quantitative score on a standardized admission test reported to a postsecondary institution.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
-        /// </summary>
-        Guid RefStandardizedAdmissionTestId { get; set; }
-
-        /// <summary>
-        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
-        /// </summary>
         System.Decimal? StandardizedAdmissionTestScore { get; set; }
 
     }

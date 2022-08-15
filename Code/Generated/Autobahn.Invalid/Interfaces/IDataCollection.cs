@@ -17,45 +17,5 @@ namespace Autobahn.Invalid.Interfaces
         /// </summary>
         System.String DataCollectionAcademicSchoolYear { get; set; }
 
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.DateTime? DataCollectionCloseDate { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.String DataCollectionDescription { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.String DataCollectionName { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.DateTime? DataCollectionOpenDate { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.String DataCollectionSchoolYear { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        Guid? RefDataCollectionStatusId { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.String SourceSystemDataCollectionIdentifier { get; set; }
-
-        /// <summary>
-        /// The year for a reported school session for which the data is applicable.
-        /// </summary>
-        System.String SourceSystemName { get; set; }
-
     }
 }

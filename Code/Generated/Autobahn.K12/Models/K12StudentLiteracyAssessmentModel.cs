@@ -16,26 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The type of literacy test administered.
         /// </summary>
-        public System.Boolean? LiteracyGoalMetStatus { get; set; }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public System.Boolean? LiteracyPostTestStatus { get; set; }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public System.Boolean? LiteracyPreTestStatus { get; set; }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The type of literacy test administered.
-        /// </summary>
         public Guid? RefLiteracyAssessmentId { get; set; }
 
     }

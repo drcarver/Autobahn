@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.LearningResources.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.LearningResources.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from LearningResourcePhysicalMedia";
-
-        // member variable for the LearningResourceId property
-        private Guid _LearningResourceId;
 
         // member variable for the RefLearningResourcePhysicalMediaTypeId property
         private Guid _RefLearningResourcePhysicalMediaTypeId;
@@ -32,13 +32,12 @@ namespace Autobahn.LearningResources.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="LearningResource"/> model
-        /// </summary>
-        public Guid LearningResourceId { get => _LearningResourceId; set => SetProperty(ref _LearningResourceId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefLearningResourcePhysicalMediaType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20370">Learning Resource Physical Media Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Learning Resource Physical Media Type")]
         public Guid RefLearningResourcePhysicalMediaTypeId { get => _RefLearningResourcePhysicalMediaTypeId; set => SetProperty(ref _RefLearningResourcePhysicalMediaTypeId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.LearningResources.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            LearningResourceId = model.LearningResourceId;
-            RefLearningResourcePhysicalMediaTypeId = model.RefLearningResourcePhysicalMediaTypeId;
+            RefLearningResourcePhysicalMediaTypeId = model.RefLearningResourcePhysicalMediaTypeId; // Learning Resource Physical Media Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

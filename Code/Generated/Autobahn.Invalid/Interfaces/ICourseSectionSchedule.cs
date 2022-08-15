@@ -17,30 +17,5 @@ namespace Autobahn.Invalid.Interfaces
         /// </summary>
         System.TimeSpan? ClassBeginningTime { get; set; }
 
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        System.TimeSpan? ClassEndingTime { get; set; }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        System.String ClassMeetingDays { get; set; }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        System.String ClassPeriod { get; set; }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        Guid CourseSectionId { get; set; }
-
-        /// <summary>
-        /// An indication of the time of day the class begins.
-        /// </summary>
-        System.String TimeDayIdentifier { get; set; }
-
     }
 }

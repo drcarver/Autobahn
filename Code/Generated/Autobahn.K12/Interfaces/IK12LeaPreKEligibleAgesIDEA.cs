@@ -15,16 +15,6 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The ages of children not served under IDEA to whom the LEA's pre-kindergarten services are available.  
         /// </summary>
-        Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The ages of children not served under IDEA to whom the LEA's pre-kindergarten services are available.  
-        /// </summary>
-        Guid K12LEAPreKEligibleAgesIDEAId { get; set; }
-
-        /// <summary>
-        /// The ages of children not served under IDEA to whom the LEA's pre-kindergarten services are available.  
-        /// </summary>
         Guid RefPreKEligibleAgesNonIDEAId { get; set; }
 
     }

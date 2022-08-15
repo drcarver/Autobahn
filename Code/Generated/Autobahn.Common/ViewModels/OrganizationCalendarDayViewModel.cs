@@ -3,6 +3,9 @@
 //* FileName:   OrganizationCalendarDayViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Common.ViewModels
         // member variable for the AlternateDayName property
         private System.String _AlternateDayName;
 
-        // member variable for the DayName property
-        private System.String _DayName;
-
-        // member variable for the OrganizationCalendarId property
-        private Guid _OrganizationCalendarId;
-
         #endregion
 
         #region Properties
@@ -33,18 +30,12 @@ namespace Autobahn.Common.ViewModels
 
         /// <summary>
         /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19591">Alternate Day Name</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Alternate Day Name")]
         public System.String AlternateDayName { get => _AlternateDayName; set => SetProperty(ref _AlternateDayName, value); }
-
-        /// <summary>
-        /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
-        /// </summary>
-        public System.String DayName { get => _DayName; set => SetProperty(ref _DayName, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationCalendar"/> model
-        /// </summary>
-        public Guid OrganizationCalendarId { get => _OrganizationCalendarId; set => SetProperty(ref _OrganizationCalendarId, value); }
 
         #endregion
 
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AlternateDayName = model.AlternateDayName;
-            DayName = model.DayName;
-            OrganizationCalendarId = model.OrganizationCalendarId;
+            AlternateDayName = model.AlternateDayName; // Alternate Day Name
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

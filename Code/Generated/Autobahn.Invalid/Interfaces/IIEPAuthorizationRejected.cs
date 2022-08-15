@@ -15,17 +15,7 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Portion the authorizer does not want executed.
         /// </summary>
-        Guid IEPAuthorizationId { get; set; }
-
-        /// <summary>
-        /// Portion the authorizer does not want executed.
-        /// </summary>
         System.String PortionDescription { get; set; }
-
-        /// <summary>
-        /// Portion the authorizer does not want executed.
-        /// </summary>
-        System.String PortionExplanation { get; set; }
 
     }
 }

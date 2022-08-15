@@ -12,10 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IEligibilityEvaluation : IAutobahnBase
     {
-        /// <summary>
-        /// Description of evaluation procedure and result used for determining eligibility.
-        /// </summary>
-        System.DateTime? EvaluationDate { get; set; }
-
     }
 }

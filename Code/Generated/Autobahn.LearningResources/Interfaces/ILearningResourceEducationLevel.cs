@@ -12,15 +12,5 @@ namespace Autobahn.LearningResources.Interfaces
      /// </summary>
     public partial interface ILearningResourceEducationLevel : IAutobahnBase
     {
-        /// <summary>
-        /// The education level, grade level or primary instructional level at which a Learning Resource is intended.
-        /// </summary>
-        Guid LearningResourceId { get; set; }
-
-        /// <summary>
-        /// The education level, grade level or primary instructional level at which a Learning Resource is intended.
-        /// </summary>
-        Guid RefEducationLevelId { get; set; }
-
     }
 }

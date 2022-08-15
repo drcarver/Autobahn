@@ -15,17 +15,7 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// A statement of why-
         /// </summary>
-        Guid AssessmentId { get; set; }
-
-        /// <summary>
-        /// A statement of why-
-        /// </summary>
         System.String IEPAlternativeAssessmentRationale { get; set; }
-
-        /// <summary>
-        /// A statement of why-
-        /// </summary>
-        Guid IndividualizedProgramId { get; set; }
 
     }
 }

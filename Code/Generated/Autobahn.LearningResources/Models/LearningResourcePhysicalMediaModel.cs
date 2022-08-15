@@ -16,11 +16,6 @@ namespace Autobahn.LearningResources.Models
         /// <summary>
         /// A type of physical media on which the Learning Resource is delivered or available.
         /// </summary>
-        public Guid LearningResourceId { get; set; }
-
-        /// <summary>
-        /// A type of physical media on which the Learning Resource is delivered or available.
-        /// </summary>
         public Guid RefLearningResourcePhysicalMediaTypeId { get; set; }
 
     }

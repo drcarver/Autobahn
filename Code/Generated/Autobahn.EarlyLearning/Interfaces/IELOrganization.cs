@@ -15,11 +15,6 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// <summary>
         /// An indication of the for-profit status of a facility.
         /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// An indication of the for-profit status of a facility.
-        /// </summary>
         Guid? RefProfitStatusId { get; set; }
 
     }

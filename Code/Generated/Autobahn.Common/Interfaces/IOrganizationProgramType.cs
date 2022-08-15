@@ -14,11 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The system outlining instructional or non-instructional activities and procedures designed to accomplish a predetermined educational objective or set of objectives or to provide support services to a person and/or the community.
         /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The system outlining instructional or non-instructional activities and procedures designed to accomplish a predetermined educational objective or set of objectives or to provide support services to a person and/or the community.
-        /// </summary>
         Guid RefProgramTypeId { get; set; }
 
     }

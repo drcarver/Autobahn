@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -20,18 +23,6 @@ namespace Autobahn.Invalid.ViewModels
         // member variable for the FinancialAidAwardAmount property
         private System.Decimal? _FinancialAidAwardAmount;
 
-        // member variable for the FinancialAidYearDesignator property
-        private System.String _FinancialAidYearDesignator;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the RefFinancialAidAwardTypeId property
-        private Guid? _RefFinancialAidAwardTypeId;
-
-        // member variable for the RefFinancialAidStatusId property
-        private Guid? _RefFinancialAidStatusId;
-
         #endregion
 
         #region Properties
@@ -42,28 +33,12 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// The amount of financial aid awarded to a person for the term/year.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19112">Financial Aid Award Amount</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Financial Aid Award Amount")]
         public System.Decimal? FinancialAidAwardAmount { get => _FinancialAidAwardAmount; set => SetProperty(ref _FinancialAidAwardAmount, value); }
-
-        /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
-        /// </summary>
-        public System.String FinancialAidYearDesignator { get => _FinancialAidYearDesignator; set => SetProperty(ref _FinancialAidYearDesignator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFinancialAidAwardType"/> model
-        /// </summary>
-        public Guid? RefFinancialAidAwardTypeId { get => _RefFinancialAidAwardTypeId; set => SetProperty(ref _RefFinancialAidAwardTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFinancialAidStatus"/> model
-        /// </summary>
-        public Guid? RefFinancialAidStatusId { get => _RefFinancialAidStatusId; set => SetProperty(ref _RefFinancialAidStatusId, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FinancialAidAwardAmount = model.FinancialAidAwardAmount;
-            FinancialAidYearDesignator = model.FinancialAidYearDesignator;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefFinancialAidAwardTypeId = model.RefFinancialAidAwardTypeId;
-            RefFinancialAidStatusId = model.RefFinancialAidStatusId;
+            FinancialAidAwardAmount = model.FinancialAidAwardAmount; // Financial Aid Award Amount
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

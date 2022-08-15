@@ -12,20 +12,5 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12StudentHomeLanguageSurvey : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        System.DateTime? HomeLanguageSurveyAdministrationDate { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        System.Boolean? HomeLanguageSurveyAdministrationIndicator { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

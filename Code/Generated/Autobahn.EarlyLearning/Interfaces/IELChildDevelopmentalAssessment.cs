@@ -15,17 +15,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// <summary>
         /// The result of a brief standardized screening tool aiding in the identification of children at risk of a developmental delay/disorder.
         /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The result of a brief standardized screening tool aiding in the identification of children at risk of a developmental delay/disorder.
-        /// </summary>
         Guid? RefChildDevelopmentalScreeningStatusId { get; set; }
-
-        /// <summary>
-        /// The result of a brief standardized screening tool aiding in the identification of children at risk of a developmental delay/disorder.
-        /// </summary>
-        Guid? RefDevelopmentalEvaluationFindingId { get; set; }
 
     }
 }

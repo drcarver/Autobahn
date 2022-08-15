@@ -15,47 +15,7 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The time of year that a Migrant Education Program operates.
         /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        System.Boolean? ProgramInMultiplePurposeFacility { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefKindergartenDailyLengthId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefMepProjectTypeId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
         Guid? RefMepSessionTypeId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefPrekindergartenDailyLengthId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefProgramGiftedEligibilityId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefTitleIInstructionalServicesId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        Guid? RefTitleIProgramTypeId { get; set; }
 
     }
 }

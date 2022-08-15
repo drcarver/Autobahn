@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -20,12 +23,6 @@ namespace Autobahn.K12.ViewModels
         // member variable for the ActivityTimeInvolved property
         private System.Decimal? _ActivityTimeInvolved;
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the RefActivityTimeMeasurementTypeId property
-        private Guid? _RefActivityTimeMeasurementTypeId;
-
         #endregion
 
         #region Properties
@@ -36,18 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20502">Activity Time Involved</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Activity Time Involved")]
         public System.Decimal? ActivityTimeInvolved { get => _ActivityTimeInvolved; set => SetProperty(ref _ActivityTimeInvolved, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefActivityTimeMeasurementType"/> model
-        /// </summary>
-        public Guid? RefActivityTimeMeasurementTypeId { get => _RefActivityTimeMeasurementTypeId; set => SetProperty(ref _RefActivityTimeMeasurementTypeId, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivityTimeInvolved = model.ActivityTimeInvolved;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefActivityTimeMeasurementTypeId = model.RefActivityTimeMeasurementTypeId;
+            ActivityTimeInvolved = model.ActivityTimeInvolved; // Activity Time Involved
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

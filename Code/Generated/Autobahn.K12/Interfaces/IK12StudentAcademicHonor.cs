@@ -15,16 +15,6 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// A designation of the type of academic distinctions earned by or awarded to the student.
         /// </summary>
-        System.String HonorDescription { get; set; }
-
-        /// <summary>
-        /// A designation of the type of academic distinctions earned by or awarded to the student.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// A designation of the type of academic distinctions earned by or awarded to the student.
-        /// </summary>
         Guid? RefAcademicHonorTypeId { get; set; }
 
     }

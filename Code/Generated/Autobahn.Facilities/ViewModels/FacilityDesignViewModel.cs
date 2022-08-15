@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -17,23 +20,8 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityDesign";
 
-        // member variable for the BuildingArchitectName property
-        private System.String _BuildingArchitectName;
-
-        // member variable for the BuildingArchitecturalFirmName property
-        private System.String _BuildingArchitecturalFirmName;
-
-        // member variable for the BuildingDateOfCertificateOfOccupancy property
-        private System.DateTime? _BuildingDateOfCertificateOfOccupancy;
-
-        // member variable for the FacilityId property
-        private Guid _FacilityId;
-
         // member variable for the RefBuildingDesignTypeId property
         private Guid? _RefBuildingDesignTypeId;
-
-        // member variable for the RefBuildingEnvOrEnergyPerformanceRatingCatId property
-        private Guid? _RefBuildingEnvOrEnergyPerformanceRatingCatId;
 
         #endregion
 
@@ -44,34 +32,13 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
-        /// </summary>
-        public System.String BuildingArchitectName { get => _BuildingArchitectName; set => SetProperty(ref _BuildingArchitectName, value); }
-
-        /// <summary>
-        /// The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
-        /// </summary>
-        public System.String BuildingArchitecturalFirmName { get => _BuildingArchitecturalFirmName; set => SetProperty(ref _BuildingArchitecturalFirmName, value); }
-
-        /// <summary>
-        /// The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
-        /// </summary>
-        public System.DateTime? BuildingDateOfCertificateOfOccupancy { get => _BuildingDateOfCertificateOfOccupancy; set => SetProperty(ref _BuildingDateOfCertificateOfOccupancy, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Facility"/> model
-        /// </summary>
-        public Guid FacilityId { get => _FacilityId; set => SetProperty(ref _FacilityId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefBuildingDesignType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20797">Building Design Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Building Design Type")]
         public Guid? RefBuildingDesignTypeId { get => _RefBuildingDesignTypeId; set => SetProperty(ref _RefBuildingDesignTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingEnvOrEnergyPerformanceRatingCat"/> model
-        /// </summary>
-        public Guid? RefBuildingEnvOrEnergyPerformanceRatingCatId { get => _RefBuildingEnvOrEnergyPerformanceRatingCatId; set => SetProperty(ref _RefBuildingEnvOrEnergyPerformanceRatingCatId, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            BuildingArchitectName = model.BuildingArchitectName;
-            BuildingArchitecturalFirmName = model.BuildingArchitecturalFirmName;
-            BuildingDateOfCertificateOfOccupancy = model.BuildingDateOfCertificateOfOccupancy;
-            FacilityId = model.FacilityId;
-            RefBuildingDesignTypeId = model.RefBuildingDesignTypeId;
-            RefBuildingEnvOrEnergyPerformanceRatingCatId = model.RefBuildingEnvOrEnergyPerformanceRatingCatId;
+            RefBuildingDesignTypeId = model.RefBuildingDesignTypeId; // Building Design Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,20 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentFormAssessmentFormSection : IAutobahnBase
     {
-        /// <summary>
-        /// The position of the assessment section presented in the sequence of sections within an assessment form.
-        /// </summary>
-        Guid AssessmentFormId { get; set; }
-
-        /// <summary>
-        /// The position of the assessment section presented in the sequence of sections within an assessment form.
-        /// </summary>
-        Guid AssessmentFormSectionId { get; set; }
-
-        /// <summary>
-        /// The position of the assessment section presented in the sequence of sections within an assessment form.
-        /// </summary>
-        System.Int32? SequenceNumber { get; set; }
-
     }
 }

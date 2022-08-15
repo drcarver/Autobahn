@@ -16,27 +16,7 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
         /// </summary>
-        public Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
-        /// </summary>
         public System.Decimal? FacilityMortgageInterestAmount { get; set; }
-
-        /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
-        /// </summary>
-        public System.Decimal? FacilityTotalAssessedValue { get; set; }
-
-        /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
-        /// </summary>
-        public Guid? RefFacilityMortgageInterestTypeId { get; set; }
-
-        /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
-        /// </summary>
-        public Guid? RefFacilityMortgageTypeId { get; set; }
 
     }
 }

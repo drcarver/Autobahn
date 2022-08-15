@@ -12,30 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IRubricCriterion : IAutobahnBase
     {
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        System.String Category { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        System.Int32? Position { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        Guid RubricId { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        System.String Title { get; set; }
-
-        /// <summary>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </summary>
-        System.Decimal? Weight { get; set; }
-
     }
 }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,17 +20,8 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentPersonalNeedLanguageLearner";
 
-        // member variable for the ActivateByDefault property
-        private System.Boolean? _ActivateByDefault;
-
-        // member variable for the AssessmentNeedsProfileContentId property
-        private Guid _AssessmentNeedsProfileContentId;
-
         // member variable for the AssignedSupport property
         private System.Boolean? _AssignedSupport;
-
-        // member variable for the RefAssessmentNeedsProfileContentLanguageLearnerTypeId property
-        private Guid _RefAssessmentNeedsProfileContentLanguageLearnerTypeId;
 
         #endregion
 
@@ -39,23 +33,12 @@ namespace Autobahn.Assessments.ViewModels
 
         /// <summary>
         /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
+        /// </para>
         /// </summary>
-        public System.Boolean? ActivateByDefault { get => _ActivateByDefault; set => SetProperty(ref _ActivateByDefault, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentNeedsProfileContent"/> model
-        /// </summary>
-        public Guid AssessmentNeedsProfileContentId { get => _AssessmentNeedsProfileContentId; set => SetProperty(ref _AssessmentNeedsProfileContentId, value); }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
+        [DisplayName("Assessment Personal Needs Profile Assigned Support")]
         public System.Boolean? AssignedSupport { get => _AssignedSupport; set => SetProperty(ref _AssignedSupport, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAssessmentNeedsProfileContentLanguageLearnerType"/> model
-        /// </summary>
-        public Guid RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get => _RefAssessmentNeedsProfileContentLanguageLearnerTypeId; set => SetProperty(ref _RefAssessmentNeedsProfileContentLanguageLearnerTypeId, value); }
 
         #endregion
 
@@ -66,10 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivateByDefault = model.ActivateByDefault;
-            AssessmentNeedsProfileContentId = model.AssessmentNeedsProfileContentId;
-            AssignedSupport = model.AssignedSupport;
-            RefAssessmentNeedsProfileContentLanguageLearnerTypeId = model.RefAssessmentNeedsProfileContentLanguageLearnerTypeId;
+            AssignedSupport = model.AssignedSupport; // Assessment Personal Needs Profile Assigned Support
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

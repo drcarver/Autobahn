@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,26 +20,8 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12StudentCourseSectionMark";
 
-        // member variable for the FinalIndicator property
-        private System.Boolean? _FinalIndicator;
-
         // member variable for the GradeEarned property
         private System.String _GradeEarned;
-
-        // member variable for the GradeValueQualifier property
-        private System.String _GradeValueQualifier;
-
-        // member variable for the K12StudentCourseSectionId property
-        private Guid _K12StudentCourseSectionId;
-
-        // member variable for the MarkingPeriodName property
-        private System.String _MarkingPeriodName;
-
-        // member variable for the MidTermMark property
-        private System.String _MidTermMark;
-
-        // member variable for the StudentCourseSectionGradeNarrative property
-        private System.String _StudentCourseSectionGradeNarrative;
 
         #endregion
 
@@ -48,38 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// A final indicator of student performance in a course section as submitted by the instructor.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19124">Student Course Section Grade Earned</a>
+        /// </para>
         /// </summary>
-        public System.Boolean? FinalIndicator { get => _FinalIndicator; set => SetProperty(ref _FinalIndicator, value); }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
+        [DisplayName("Student Course Section Grade Earned")]
         public System.String GradeEarned { get => _GradeEarned; set => SetProperty(ref _GradeEarned, value); }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String GradeValueQualifier { get => _GradeValueQualifier; set => SetProperty(ref _GradeValueQualifier, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="K12StudentCourseSection"/> model
-        /// </summary>
-        public Guid K12StudentCourseSectionId { get => _K12StudentCourseSectionId; set => SetProperty(ref _K12StudentCourseSectionId, value); }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String MarkingPeriodName { get => _MarkingPeriodName; set => SetProperty(ref _MarkingPeriodName, value); }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String MidTermMark { get => _MidTermMark; set => SetProperty(ref _MidTermMark, value); }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String StudentCourseSectionGradeNarrative { get => _StudentCourseSectionGradeNarrative; set => SetProperty(ref _StudentCourseSectionGradeNarrative, value); }
 
         #endregion
 
@@ -90,13 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FinalIndicator = model.FinalIndicator;
-            GradeEarned = model.GradeEarned;
-            GradeValueQualifier = model.GradeValueQualifier;
-            K12StudentCourseSectionId = model.K12StudentCourseSectionId;
-            MarkingPeriodName = model.MarkingPeriodName;
-            MidTermMark = model.MidTermMark;
-            StudentCourseSectionGradeNarrative = model.StudentCourseSectionGradeNarrative;
+            GradeEarned = model.GradeEarned; // Student Course Section Grade Earned
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

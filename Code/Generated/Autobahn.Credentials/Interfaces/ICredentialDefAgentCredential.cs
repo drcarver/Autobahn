@@ -12,15 +12,5 @@ namespace Autobahn.Credentials.Interfaces
      /// </summary>
     public partial interface ICredentialDefAgentCredential : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid CredentialDefAgentId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid CredentialDefinitionId { get; set; }
-
     }
 }

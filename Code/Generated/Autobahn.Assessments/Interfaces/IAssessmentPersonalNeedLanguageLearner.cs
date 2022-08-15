@@ -15,22 +15,7 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// Defines whether or not the individual needs the kind of support defined by the entity.
         /// </summary>
-        System.Boolean? ActivateByDefault { get; set; }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
-        Guid AssessmentNeedsProfileContentId { get; set; }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
         System.Boolean? AssignedSupport { get; set; }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
-        Guid RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get; set; }
 
     }
 }

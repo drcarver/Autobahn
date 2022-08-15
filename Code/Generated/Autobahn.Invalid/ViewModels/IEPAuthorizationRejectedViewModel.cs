@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,14 +20,8 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IEPAuthorizationRejected";
 
-        // member variable for the IEPAuthorizationId property
-        private Guid _IEPAuthorizationId;
-
         // member variable for the PortionDescription property
         private System.String _PortionDescription;
-
-        // member variable for the PortionExplanation property
-        private System.String _PortionExplanation;
 
         #endregion
 
@@ -35,19 +32,13 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IEPAuthorization"/> model
-        /// </summary>
-        public Guid IEPAuthorizationId { get => _IEPAuthorizationId; set => SetProperty(ref _IEPAuthorizationId, value); }
-
-        /// <summary>
         /// Portion the authorizer does not want executed.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20704">IEP Authorization Rejected Portion Description</a>
+        /// </para>
         /// </summary>
+        [DisplayName("IEP Authorization Rejected Portion Description")]
         public System.String PortionDescription { get => _PortionDescription; set => SetProperty(ref _PortionDescription, value); }
-
-        /// <summary>
-        /// Portion the authorizer does not want executed.
-        /// </summary>
-        public System.String PortionExplanation { get => _PortionExplanation; set => SetProperty(ref _PortionExplanation, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IEPAuthorizationId = model.IEPAuthorizationId;
-            PortionDescription = model.PortionDescription;
-            PortionExplanation = model.PortionExplanation;
+            PortionDescription = model.PortionDescription; // IEP Authorization Rejected Portion Description
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

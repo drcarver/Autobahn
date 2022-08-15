@@ -15,11 +15,6 @@ namespace Autobahn.Facilities.Interfaces
         /// <summary>
         /// The type of fee that one must pay when getting a mortgage.
         /// </summary>
-        Guid FacilityMortgageId { get; set; }
-
-        /// <summary>
-        /// The type of fee that one must pay when getting a mortgage.
-        /// </summary>
         Guid RefFacilityFinancingFeeTypeId { get; set; }
 
     }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,23 +20,8 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12StudentCohort";
 
-        // member variable for the CohortDescription property
-        private System.String _CohortDescription;
-
-        // member variable for the CohortGraduationYear property
-        private System.String _CohortGraduationYear;
-
         // member variable for the CohortYear property
         private System.String _CohortYear;
-
-        // member variable for the GraduationRateSurveyCohortYear property
-        private System.String _GraduationRateSurveyCohortYear;
-
-        // member variable for the GraduationRateSurveyIndicator property
-        private System.Boolean? _GraduationRateSurveyIndicator;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         #endregion
 
@@ -45,33 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19046">Cohort Year</a>
+        /// </para>
         /// </summary>
-        public System.String CohortDescription { get => _CohortDescription; set => SetProperty(ref _CohortDescription, value); }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        public System.String CohortGraduationYear { get => _CohortGraduationYear; set => SetProperty(ref _CohortGraduationYear, value); }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
+        [DisplayName("Cohort Year")]
         public System.String CohortYear { get => _CohortYear; set => SetProperty(ref _CohortYear, value); }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        public System.String GraduationRateSurveyCohortYear { get => _GraduationRateSurveyCohortYear; set => SetProperty(ref _GraduationRateSurveyCohortYear, value); }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        public System.Boolean? GraduationRateSurveyIndicator { get => _GraduationRateSurveyIndicator; set => SetProperty(ref _GraduationRateSurveyIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -82,12 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CohortDescription = model.CohortDescription;
-            CohortGraduationYear = model.CohortGraduationYear;
-            CohortYear = model.CohortYear;
-            GraduationRateSurveyCohortYear = model.GraduationRateSurveyCohortYear;
-            GraduationRateSurveyIndicator = model.GraduationRateSurveyIndicator;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
+            CohortYear = model.CohortYear; // Cohort Year
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

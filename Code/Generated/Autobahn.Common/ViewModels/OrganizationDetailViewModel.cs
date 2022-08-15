@@ -3,6 +3,9 @@
 //* FileName:   OrganizationDetailViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -17,18 +20,6 @@ namespace Autobahn.Common.ViewModels
         // member variable for the Name property
         private System.String _Name;
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the RefOrganizationTypeId property
-        private Guid? _RefOrganizationTypeId;
-
-        // member variable for the RegionGeoJSON property
-        private System.String _RegionGeoJSON;
-
-        // member variable for the ShortName property
-        private System.String _ShortName;
-
         #endregion
 
         #region Properties
@@ -38,29 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
+        /// The name of a data system or application which an authenticated person may access.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20127">Authorization Application Name</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Authorization Application Name")]
         public System.String Name { get => _Name; set => SetProperty(ref _Name, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefOrganizationType"/> model
-        /// </summary>
-        public Guid? RefOrganizationTypeId { get => _RefOrganizationTypeId; set => SetProperty(ref _RefOrganizationTypeId, value); }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        public System.String RegionGeoJSON { get => _RegionGeoJSON; set => SetProperty(ref _RegionGeoJSON, value); }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        public System.String ShortName { get => _ShortName; set => SetProperty(ref _ShortName, value); }
 
         #endregion
 
@@ -71,11 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Name = model.Name;
-            OrganizationId = model.OrganizationId;
-            RefOrganizationTypeId = model.RefOrganizationTypeId;
-            RegionGeoJSON = model.RegionGeoJSON;
-            ShortName = model.ShortName;
+            Name = model.Name; // Authorization Application Name
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

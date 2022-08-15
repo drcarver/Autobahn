@@ -18,10 +18,5 @@ namespace Autobahn.EarlyLearning.Models
         /// </summary>
         public System.Boolean ItinerantProvider { get; set; }
 
-        /// <summary>
-        /// An indication of whether a person provides services at more than one site.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

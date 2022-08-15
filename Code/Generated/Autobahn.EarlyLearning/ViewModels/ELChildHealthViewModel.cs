@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,14 +20,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELChildHealth";
 
-        // member variable for the PersonId property
-        private Guid _PersonId;
-
         // member variable for the RefScheduledWellChildScreeningId property
         private Guid? _RefScheduledWellChildScreeningId;
-
-        // member variable for the WellChildScreeningReceivedDate property
-        private System.DateTime? _WellChildScreeningReceivedDate;
 
         #endregion
 
@@ -35,19 +32,13 @@ namespace Autobahn.EarlyLearning.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefScheduledWellChildScreening"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20602">Scheduled Well Child Screening</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Scheduled Well Child Screening")]
         public Guid? RefScheduledWellChildScreeningId { get => _RefScheduledWellChildScreeningId; set => SetProperty(ref _RefScheduledWellChildScreeningId, value); }
-
-        /// <summary>
-        /// The individual well child visit scheduled according to the AAP recommended periodicity schedule.
-        /// </summary>
-        public System.DateTime? WellChildScreeningReceivedDate { get => _WellChildScreeningReceivedDate; set => SetProperty(ref _WellChildScreeningReceivedDate, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PersonId = model.PersonId;
-            RefScheduledWellChildScreeningId = model.RefScheduledWellChildScreeningId;
-            WellChildScreeningReceivedDate = model.WellChildScreeningReceivedDate;
+            RefScheduledWellChildScreeningId = model.RefScheduledWellChildScreeningId; // Scheduled Well Child Screening
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

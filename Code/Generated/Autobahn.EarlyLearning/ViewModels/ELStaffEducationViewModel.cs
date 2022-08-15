@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,26 +20,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELStaffEducation";
 
-        // member variable for the ECDegreeOrCertificateHolder property
-        private System.Boolean? _ECDegreeOrCertificateHolder;
-
-        // member variable for the ELStaffId property
-        private Guid _ELStaffId;
-
         // member variable for the RefELLevelOfSpecializationId property
         private Guid? _RefELLevelOfSpecializationId;
-
-        // member variable for the RefELProfessionalDevelopmentTopicAreaId property
-        private Guid? _RefELProfessionalDevelopmentTopicAreaId;
-
-        // member variable for the SchoolAgeEducationPSCredits property
-        private System.Decimal? _SchoolAgeEducationPSCredits;
-
-        // member variable for the TotalApprovedECCreditsEarned property
-        private System.Decimal? _TotalApprovedECCreditsEarned;
-
-        // member variable for the TotalCollegeCreditsEarned property
-        private System.Decimal? _TotalCollegeCreditsEarned;
 
         #endregion
 
@@ -47,39 +32,13 @@ namespace Autobahn.EarlyLearning.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The extent to which a person concentrates upon a particular subject matter area during his or her period of study at an educational institution.
-        /// </summary>
-        public System.Boolean? ECDegreeOrCertificateHolder { get => _ECDegreeOrCertificateHolder; set => SetProperty(ref _ECDegreeOrCertificateHolder, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ELStaff"/> model
-        /// </summary>
-        public Guid ELStaffId { get => _ELStaffId; set => SetProperty(ref _ELStaffId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefELLevelOfSpecialization"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19340">Level of Specialization in Early Learning</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Level of Specialization in Early Learning")]
         public Guid? RefELLevelOfSpecializationId { get => _RefELLevelOfSpecializationId; set => SetProperty(ref _RefELLevelOfSpecializationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefELProfessionalDevelopmentTopicArea"/> model
-        /// </summary>
-        public Guid? RefELProfessionalDevelopmentTopicAreaId { get => _RefELProfessionalDevelopmentTopicAreaId; set => SetProperty(ref _RefELProfessionalDevelopmentTopicAreaId, value); }
-
-        /// <summary>
-        /// The extent to which a person concentrates upon a particular subject matter area during his or her period of study at an educational institution.
-        /// </summary>
-        public System.Decimal? SchoolAgeEducationPSCredits { get => _SchoolAgeEducationPSCredits; set => SetProperty(ref _SchoolAgeEducationPSCredits, value); }
-
-        /// <summary>
-        /// The extent to which a person concentrates upon a particular subject matter area during his or her period of study at an educational institution.
-        /// </summary>
-        public System.Decimal? TotalApprovedECCreditsEarned { get => _TotalApprovedECCreditsEarned; set => SetProperty(ref _TotalApprovedECCreditsEarned, value); }
-
-        /// <summary>
-        /// The extent to which a person concentrates upon a particular subject matter area during his or her period of study at an educational institution.
-        /// </summary>
-        public System.Decimal? TotalCollegeCreditsEarned { get => _TotalCollegeCreditsEarned; set => SetProperty(ref _TotalCollegeCreditsEarned, value); }
 
         #endregion
 
@@ -90,13 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ECDegreeOrCertificateHolder = model.ECDegreeOrCertificateHolder;
-            ELStaffId = model.ELStaffId;
-            RefELLevelOfSpecializationId = model.RefELLevelOfSpecializationId;
-            RefELProfessionalDevelopmentTopicAreaId = model.RefELProfessionalDevelopmentTopicAreaId;
-            SchoolAgeEducationPSCredits = model.SchoolAgeEducationPSCredits;
-            TotalApprovedECCreditsEarned = model.TotalApprovedECCreditsEarned;
-            TotalCollegeCreditsEarned = model.TotalCollegeCreditsEarned;
+            RefELLevelOfSpecializationId = model.RefELLevelOfSpecializationId; // Level of Specialization in Early Learning
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

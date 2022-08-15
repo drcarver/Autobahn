@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -20,18 +23,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         // member variable for the MemorandumOfUnderstandingEndDate property
         private System.DateTime? _MemorandumOfUnderstandingEndDate;
 
-        // member variable for the MemorandumOfUnderstandingStartDate property
-        private System.DateTime? _MemorandumOfUnderstandingStartDate;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the ServicePartnerDescription property
-        private System.String _ServicePartnerDescription;
-
-        // member variable for the ServicePartnerName property
-        private System.String _ServicePartnerName;
-
         #endregion
 
         #region Properties
@@ -42,28 +33,12 @@ namespace Autobahn.EarlyLearning.ViewModels
 
         /// <summary>
         /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20593">Memorandum of Understanding End Date</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Memorandum of Understanding End Date")]
         public System.DateTime? MemorandumOfUnderstandingEndDate { get => _MemorandumOfUnderstandingEndDate; set => SetProperty(ref _MemorandumOfUnderstandingEndDate, value); }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        public System.DateTime? MemorandumOfUnderstandingStartDate { get => _MemorandumOfUnderstandingStartDate; set => SetProperty(ref _MemorandumOfUnderstandingStartDate, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        public System.String ServicePartnerDescription { get => _ServicePartnerDescription; set => SetProperty(ref _ServicePartnerDescription, value); }
-
-        /// <summary>
-        /// The date that a Memorandum of Understanding between the Early Learning Organization and the Service Partner is determined to expire.
-        /// </summary>
-        public System.String ServicePartnerName { get => _ServicePartnerName; set => SetProperty(ref _ServicePartnerName, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            MemorandumOfUnderstandingEndDate = model.MemorandumOfUnderstandingEndDate;
-            MemorandumOfUnderstandingStartDate = model.MemorandumOfUnderstandingStartDate;
-            OrganizationId = model.OrganizationId;
-            ServicePartnerDescription = model.ServicePartnerDescription;
-            ServicePartnerName = model.ServicePartnerName;
+            MemorandumOfUnderstandingEndDate = model.MemorandumOfUnderstandingEndDate; // Memorandum of Understanding End Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

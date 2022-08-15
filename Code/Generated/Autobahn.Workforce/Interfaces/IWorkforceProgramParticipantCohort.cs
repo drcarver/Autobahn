@@ -12,20 +12,5 @@ namespace Autobahn.Workforce.Interfaces
      /// </summary>
     public partial interface IWorkforceProgramParticipantCohort : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        System.String CohortDescription { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        System.Decimal? CohortMedianEarnings { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

@@ -14,21 +14,6 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The name of the company that provides the examination used in the teacher education program.
         /// </summary>
-        public Guid ProgramParticipationTeacherPrepId { get; set; }
-
-        /// <summary>
-        /// The name of the company that provides the examination used in the teacher education program.
-        /// </summary>
-        public Guid? RefTeacherEducationCredentialExamId { get; set; }
-
-        /// <summary>
-        /// The name of the company that provides the examination used in the teacher education program.
-        /// </summary>
-        public Guid? RefTeacherEducationExamScoreTypeId { get; set; }
-
-        /// <summary>
-        /// The name of the company that provides the examination used in the teacher education program.
-        /// </summary>
         public Guid? RefTeacherEducationTestCompanyId { get; set; }
 
     }

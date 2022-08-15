@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// Category of evaluation used for IDEA eligibility.
         /// </summary>
-        public Guid EligibilityEvaluationId { get; set; }
-
-        /// <summary>
-        /// Category of evaluation used for IDEA eligibility.
-        /// </summary>
         public Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
 
     }

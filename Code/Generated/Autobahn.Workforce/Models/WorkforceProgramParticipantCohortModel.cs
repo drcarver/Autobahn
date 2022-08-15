@@ -13,20 +13,5 @@ namespace Autobahn.Workforce.Models
      /// </summary>
     public partial class WorkforceProgramParticipantCohortModel : AutobahnBase, Interfaces.IWorkforceProgramParticipantCohort
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.String CohortDescription { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.Decimal? CohortMedianEarnings { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

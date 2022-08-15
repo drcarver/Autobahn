@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Credentials.ViewModels
 {
      /// <summary>
@@ -16,15 +19,6 @@ namespace Autobahn.Credentials.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CredentialOffered";
-
-        // member variable for the CredentialDefinitionId property
-        private Guid _CredentialDefinitionId;
-
-        // member variable for the CredentialIssuerId property
-        private Guid _CredentialIssuerId;
-
-        // member variable for the CredentialOfferedEndDate property
-        private System.DateTime? _CredentialOfferedEndDate;
 
         // member variable for the CredentialOfferedStartDate property
         private System.DateTime? _CredentialOfferedStartDate;
@@ -38,23 +32,12 @@ namespace Autobahn.Credentials.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialDefinition"/> model
-        /// </summary>
-        public Guid CredentialDefinitionId { get => _CredentialDefinitionId; set => SetProperty(ref _CredentialDefinitionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialIssuer"/> model
-        /// </summary>
-        public Guid CredentialIssuerId { get => _CredentialIssuerId; set => SetProperty(ref _CredentialIssuerId, value); }
-
-        /// <summary>
         /// The first date a credential was offered.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20892">Credential Offered Start Date</a>
+        /// </para>
         /// </summary>
-        public System.DateTime? CredentialOfferedEndDate { get => _CredentialOfferedEndDate; set => SetProperty(ref _CredentialOfferedEndDate, value); }
-
-        /// <summary>
-        /// The first date a credential was offered.
-        /// </summary>
+        [DisplayName("Credential Offered Start Date")]
         public System.DateTime? CredentialOfferedStartDate { get => _CredentialOfferedStartDate; set => SetProperty(ref _CredentialOfferedStartDate, value); }
 
         #endregion
@@ -66,10 +49,7 @@ namespace Autobahn.Credentials.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CredentialDefinitionId = model.CredentialDefinitionId;
-            CredentialIssuerId = model.CredentialIssuerId;
-            CredentialOfferedEndDate = model.CredentialOfferedEndDate;
-            CredentialOfferedStartDate = model.CredentialOfferedStartDate;
+            CredentialOfferedStartDate = model.CredentialOfferedStartDate; // Credential Offered Start Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

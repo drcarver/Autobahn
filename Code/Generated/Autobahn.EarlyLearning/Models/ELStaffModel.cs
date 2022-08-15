@@ -16,11 +16,6 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// Type of Child Development Associate credential as defined by options.
         /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// Type of Child Development Associate credential as defined by options.
-        /// </summary>
         public Guid? RefChildDevelopmentAssociateTypeId { get; set; }
 
     }

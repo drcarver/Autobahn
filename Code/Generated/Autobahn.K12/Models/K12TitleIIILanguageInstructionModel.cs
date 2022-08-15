@@ -13,15 +13,5 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12TitleIIILanguageInstructionModel : AutobahnBase, Interfaces.IK12TitleIIILanguageInstruction
     {
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        public Guid RefTitleIIILanguageInstructionProgramTypeId { get; set; }
-
     }
 }

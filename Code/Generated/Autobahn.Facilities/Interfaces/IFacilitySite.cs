@@ -15,27 +15,7 @@ namespace Autobahn.Facilities.Interfaces
         /// <summary>
         /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
         /// </summary>
-        Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
-        /// </summary>
         System.Decimal? FacilitySiteArea { get; set; }
-
-        /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
-        /// </summary>
-        System.String FacilitySiteIdentifier { get; set; }
-
-        /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
-        /// </summary>
-        Guid? RefBuildingSiteUseRestrictionsTypeId { get; set; }
-
-        /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
-        /// </summary>
-        Guid? RefFacilitySiteOutdoorAreaTypeId { get; set; }
 
     }
 }

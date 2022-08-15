@@ -12,29 +12,9 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationDetail : IAutobahnBase
     {
         /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
+        /// The name of a data system or application which an authenticated person may access.
         /// </summary>
         System.String Name { get; set; }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        Guid? RefOrganizationTypeId { get; set; }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        System.String RegionGeoJSON { get; set; }
-
-        /// <summary>
-        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
-        /// </summary>
-        System.String ShortName { get; set; }
 
     }
 }

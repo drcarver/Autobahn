@@ -15,17 +15,7 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The type of responsibility the district has for the student.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The type of responsibility the district has for the student.
-        /// </summary>
         Guid RefK12ResponsibilityTypeId { get; set; }
-
-        /// <summary>
-        /// The type of responsibility the district has for the student.
-        /// </summary>
-        Guid? RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
 
     }
 }

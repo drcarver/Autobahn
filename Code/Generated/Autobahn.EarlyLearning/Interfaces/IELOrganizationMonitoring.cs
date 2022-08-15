@@ -12,35 +12,5 @@ namespace Autobahn.EarlyLearning.Interfaces
      /// </summary>
     public partial interface IELOrganizationMonitoring : IAutobahnBase
     {
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        Guid? RefOrganizationMonitoringNotificationsId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        Guid? RefPurposeOfMonitoringVisitId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        System.String TypeOfMonitoring { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        System.DateTime? VisitEndDate { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        System.DateTime? VisitStartDate { get; set; }
-
     }
 }

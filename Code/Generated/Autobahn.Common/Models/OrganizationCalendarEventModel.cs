@@ -14,32 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// A type of scheduled or unscheduled calendar event.
         /// </summary>
-        public System.TimeSpan? EndTime { get; set; }
-
-        /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
-        /// </summary>
-        public System.DateTime EventDate { get; set; }
-
-        /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
-        /// </summary>
-        public System.String Name { get; set; }
-
-        /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
-        /// </summary>
-        public Guid OrganizationCalendarId { get; set; }
-
-        /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
-        /// </summary>
         public System.Int32? RefCalendarEventType { get; set; }
-
-        /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
-        /// </summary>
-        public System.TimeSpan? StartTime { get; set; }
 
     }
 }

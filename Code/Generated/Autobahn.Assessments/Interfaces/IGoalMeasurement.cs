@@ -15,21 +15,6 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
         /// </summary>
-        Guid GoalId { get; set; }
-
-        /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
-        /// </summary>
-        Guid? RefGoalMeasurementTypeId { get; set; }
-
-        /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
-        /// </summary>
-        System.String Schedule { get; set; }
-
-        /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
-        /// </summary>
         System.String SuccessCriteria { get; set; }
 
     }

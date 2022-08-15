@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FinancialAidApplication";
-
-        // member variable for the FinancialAidYearDesignator property
-        private System.String _FinancialAidYearDesignator;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         // member variable for the RefFinancialAidApplicationTypeId property
         private Guid _RefFinancialAidApplicationTypeId;
@@ -35,18 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The type of financial application completed by an individual.
-        /// </summary>
-        public System.String FinancialAidYearDesignator { get => _FinancialAidYearDesignator; set => SetProperty(ref _FinancialAidYearDesignator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefFinancialAidApplicationType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20186">Financial Aid Application Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Financial Aid Application Type")]
         public Guid RefFinancialAidApplicationTypeId { get => _RefFinancialAidApplicationTypeId; set => SetProperty(ref _RefFinancialAidApplicationTypeId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FinancialAidYearDesignator = model.FinancialAidYearDesignator;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefFinancialAidApplicationTypeId = model.RefFinancialAidApplicationTypeId;
+            RefFinancialAidApplicationTypeId = model.RefFinancialAidApplicationTypeId; // Financial Aid Application Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

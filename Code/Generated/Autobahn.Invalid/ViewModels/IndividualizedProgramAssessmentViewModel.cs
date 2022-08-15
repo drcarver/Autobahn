@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,14 +20,8 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramAssessment";
 
-        // member variable for the AssessmentId property
-        private Guid _AssessmentId;
-
         // member variable for the IEPAlternativeAssessmentRationale property
         private System.String _IEPAlternativeAssessmentRationale;
-
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
 
         #endregion
 
@@ -35,19 +32,10 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Assessment"/> model
-        /// </summary>
-        public Guid AssessmentId { get => _AssessmentId; set => SetProperty(ref _AssessmentId, value); }
-
-        /// <summary>
         /// A statement of why-
         /// </summary>
+        [DisplayName("IEP Alternative Assessment Rationale")]
         public System.String IEPAlternativeAssessmentRationale { get => _IEPAlternativeAssessmentRationale; set => SetProperty(ref _IEPAlternativeAssessmentRationale, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
 
         #endregion
 
@@ -58,9 +46,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentId = model.AssessmentId;
-            IEPAlternativeAssessmentRationale = model.IEPAlternativeAssessmentRationale;
-            IndividualizedProgramId = model.IndividualizedProgramId;
+            IEPAlternativeAssessmentRationale = model.IEPAlternativeAssessmentRationale; // IEP Alternative Assessment Rationale
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -20,24 +23,6 @@ namespace Autobahn.K12.ViewModels
         // member variable for the CharterSchoolIndicator property
         private System.Boolean? _CharterSchoolIndicator;
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the RefCharterLeaStatusId property
-        private Guid? _RefCharterLeaStatusId;
-
-        // member variable for the RefLeaImprovementStatusId property
-        private Guid? _RefLeaImprovementStatusId;
-
-        // member variable for the RefLeaTypeId property
-        private Guid? _RefLeaTypeId;
-
-        // member variable for the RefPublicSchoolChoiceStatusId property
-        private Guid? _RefPublicSchoolChoiceStatusId;
-
-        // member variable for the SupervisoryUnionIdentificationNumber property
-        private System.String _SupervisoryUnionIdentificationNumber;
-
         #endregion
 
         #region Properties
@@ -48,38 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19039">Charter School Indicator</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Charter School Indicator")]
         public System.Boolean? CharterSchoolIndicator { get => _CharterSchoolIndicator; set => SetProperty(ref _CharterSchoolIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCharterLeaStatus"/> model
-        /// </summary>
-        public Guid? RefCharterLeaStatusId { get => _RefCharterLeaStatusId; set => SetProperty(ref _RefCharterLeaStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLeaImprovementStatus"/> model
-        /// </summary>
-        public Guid? RefLeaImprovementStatusId { get => _RefLeaImprovementStatusId; set => SetProperty(ref _RefLeaImprovementStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLeaType"/> model
-        /// </summary>
-        public Guid? RefLeaTypeId { get => _RefLeaTypeId; set => SetProperty(ref _RefLeaTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPublicSchoolChoiceStatus"/> model
-        /// </summary>
-        public Guid? RefPublicSchoolChoiceStatusId { get => _RefPublicSchoolChoiceStatusId; set => SetProperty(ref _RefPublicSchoolChoiceStatusId, value); }
-
-        /// <summary>
-        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
-        /// </summary>
-        public System.String SupervisoryUnionIdentificationNumber { get => _SupervisoryUnionIdentificationNumber; set => SetProperty(ref _SupervisoryUnionIdentificationNumber, value); }
 
         #endregion
 
@@ -90,13 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CharterSchoolIndicator = model.CharterSchoolIndicator;
-            OrganizationId = model.OrganizationId;
-            RefCharterLeaStatusId = model.RefCharterLeaStatusId;
-            RefLeaImprovementStatusId = model.RefLeaImprovementStatusId;
-            RefLeaTypeId = model.RefLeaTypeId;
-            RefPublicSchoolChoiceStatusId = model.RefPublicSchoolChoiceStatusId;
-            SupervisoryUnionIdentificationNumber = model.SupervisoryUnionIdentificationNumber;
+            CharterSchoolIndicator = model.CharterSchoolIndicator; // Charter School Indicator
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

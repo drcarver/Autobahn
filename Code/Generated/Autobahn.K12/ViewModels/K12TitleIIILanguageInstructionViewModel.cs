@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12TitleIIILanguageInstruction";
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the RefTitleIIILanguageInstructionProgramTypeId property
-        private Guid _RefTitleIIILanguageInstructionProgramTypeId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.K12.ViewModels
         /// The title of the K12TitleIIILanguageInstructionViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIIILanguageInstructionProgramType"/> model
-        /// </summary>
-        public Guid RefTitleIIILanguageInstructionProgramTypeId { get => _RefTitleIIILanguageInstructionProgramTypeId; set => SetProperty(ref _RefTitleIIILanguageInstructionProgramTypeId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            RefTitleIIILanguageInstructionProgramTypeId = model.RefTitleIIILanguageInstructionProgramTypeId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

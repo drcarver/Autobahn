@@ -16,37 +16,7 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// A final indicator of student performance in a course section as submitted by the instructor.
         /// </summary>
-        public System.Boolean? FinalIndicator { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
         public System.String GradeEarned { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String GradeValueQualifier { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public Guid K12StudentCourseSectionId { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String MarkingPeriodName { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String MidTermMark { get; set; }
-
-        /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
-        /// </summary>
-        public System.String StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

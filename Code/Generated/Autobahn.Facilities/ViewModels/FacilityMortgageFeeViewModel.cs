@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.Facilities.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityMortgageFee";
-
-        // member variable for the FacilityMortgageId property
-        private Guid _FacilityMortgageId;
 
         // member variable for the RefFacilityFinancingFeeTypeId property
         private Guid _RefFacilityFinancingFeeTypeId;
@@ -32,13 +32,12 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="FacilityMortgage"/> model
-        /// </summary>
-        public Guid FacilityMortgageId { get => _FacilityMortgageId; set => SetProperty(ref _FacilityMortgageId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefFacilityFinancingFeeType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20867">Facility Financing Fee Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Facility Financing Fee Type")]
         public Guid RefFacilityFinancingFeeTypeId { get => _RefFacilityFinancingFeeTypeId; set => SetProperty(ref _RefFacilityFinancingFeeTypeId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityMortgageId = model.FacilityMortgageId;
-            RefFacilityFinancingFeeTypeId = model.RefFacilityFinancingFeeTypeId;
+            RefFacilityFinancingFeeTypeId = model.RefFacilityFinancingFeeTypeId; // Facility Financing Fee Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

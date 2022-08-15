@@ -16,27 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The type of entity that created or indicated the Record Status Type
         /// </summary>
-        public Guid? RecordStatusCreatorOrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
-        /// </summary>
-        public Guid? RecordStatusCreatorPersonId { get; set; }
-
-        /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
-        /// </summary>
-        public System.DateTime? RecordStatusDate { get; set; }
-
-        /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
-        /// </summary>
         public Guid? RefRecordStatusCreatorEntityId { get; set; }
-
-        /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
-        /// </summary>
-        public Guid RefRecordStatusTypeId { get; set; }
 
     }
 }

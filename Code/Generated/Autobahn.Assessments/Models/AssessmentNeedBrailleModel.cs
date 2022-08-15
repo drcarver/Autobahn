@@ -16,41 +16,6 @@ namespace Autobahn.Assessments.Models
         /// <summary>
         /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
         /// </summary>
-        public Guid? AssessmentPersonalNeedsProfileDisplayId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public System.Decimal? BrailleDotPressure { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public System.Int32? NumberOfBrailleCells { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public Guid? RefAssessmentNeedBrailleGradeTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public Guid? RefAssessmentNeedBrailleMarkTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public Guid? RefAssessmentNeedBrailleStatusCellTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        public Guid? RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
         public Guid? RefAssessmentNeedUsageTypeId { get; set; }
 
     }

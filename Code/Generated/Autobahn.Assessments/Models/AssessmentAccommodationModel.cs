@@ -16,16 +16,6 @@ namespace Autobahn.Assessments.Models
         /// <summary>
         /// A category of accommodations needed for a given assessment.
         /// </summary>
-        public System.String OtherDescription { get; set; }
-
-        /// <summary>
-        /// A category of accommodations needed for a given assessment.
-        /// </summary>
-        public Guid? RefAccommodationTypeId { get; set; }
-
-        /// <summary>
-        /// A category of accommodations needed for a given assessment.
-        /// </summary>
         public Guid? RefAssessmentAccommodationCategoryId { get; set; }
 
     }

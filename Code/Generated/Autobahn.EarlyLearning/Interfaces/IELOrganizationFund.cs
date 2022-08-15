@@ -17,40 +17,5 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// </summary>
         Guid ELOrganizationFundsId { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefBillableBasisTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefELFederalFundingTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefELLocalRevenueSourceId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefELOtherFederalFundingSourcesId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefELStateRevenueSourceId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefReimbursementTypeId { get; set; }
-
     }
 }

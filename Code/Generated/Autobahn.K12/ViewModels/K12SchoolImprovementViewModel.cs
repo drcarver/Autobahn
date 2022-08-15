@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,21 +20,6 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12SchoolImprovement";
 
-        // member variable for the K12SchoolId property
-        private Guid _K12SchoolId;
-
-        // member variable for the RefSchoolImprovementFundsId property
-        private Guid? _RefSchoolImprovementFundsId;
-
-        // member variable for the RefSchoolImprovementStatusId property
-        private Guid? _RefSchoolImprovementStatusId;
-
-        // member variable for the RefSigInterventionTypeId property
-        private Guid? _RefSigInterventionTypeId;
-
-        // member variable for the SchoolImprovementExitDate property
-        private System.DateTime? _SchoolImprovementExitDate;
-
         #endregion
 
         #region Properties
@@ -39,31 +27,6 @@ namespace Autobahn.K12.ViewModels
         /// The title of the K12SchoolImprovementViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="K12School"/> model
-        /// </summary>
-        public Guid K12SchoolId { get => _K12SchoolId; set => SetProperty(ref _K12SchoolId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSchoolImprovementFunds"/> model
-        /// </summary>
-        public Guid? RefSchoolImprovementFundsId { get => _RefSchoolImprovementFundsId; set => SetProperty(ref _RefSchoolImprovementFundsId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSchoolImprovementStatus"/> model
-        /// </summary>
-        public Guid? RefSchoolImprovementStatusId { get => _RefSchoolImprovementStatusId; set => SetProperty(ref _RefSchoolImprovementStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSigInterventionType"/> model
-        /// </summary>
-        public Guid? RefSigInterventionTypeId { get => _RefSigInterventionTypeId; set => SetProperty(ref _RefSigInterventionTypeId, value); }
-
-        /// <summary>
-        /// An indication of whether the school received funds under Section 1003 of ESEA, as amended.
-        /// </summary>
-        public System.DateTime? SchoolImprovementExitDate { get => _SchoolImprovementExitDate; set => SetProperty(ref _SchoolImprovementExitDate, value); }
 
         #endregion
 
@@ -74,11 +37,6 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            K12SchoolId = model.K12SchoolId;
-            RefSchoolImprovementFundsId = model.RefSchoolImprovementFundsId;
-            RefSchoolImprovementStatusId = model.RefSchoolImprovementStatusId;
-            RefSigInterventionTypeId = model.RefSigInterventionTypeId;
-            SchoolImprovementExitDate = model.SchoolImprovementExitDate;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

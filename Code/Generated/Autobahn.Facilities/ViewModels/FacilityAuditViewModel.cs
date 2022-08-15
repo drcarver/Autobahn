@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Facilities.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityAudit";
-
-        // member variable for the FacilityAuditDate property
-        private System.DateTime? _FacilityAuditDate;
-
-        // member variable for the FacilityId property
-        private Guid _FacilityId;
 
         // member variable for the RefFacilityAuditTypeId property
         private Guid? _RefFacilityAuditTypeId;
@@ -35,18 +32,12 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
-        /// </summary>
-        public System.DateTime? FacilityAuditDate { get => _FacilityAuditDate; set => SetProperty(ref _FacilityAuditDate, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Facility"/> model
-        /// </summary>
-        public Guid FacilityId { get => _FacilityId; set => SetProperty(ref _FacilityId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefFacilityAuditType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20845">Facility Audit Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Facility Audit Type")]
         public Guid? RefFacilityAuditTypeId { get => _RefFacilityAuditTypeId; set => SetProperty(ref _RefFacilityAuditTypeId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityAuditDate = model.FacilityAuditDate;
-            FacilityId = model.FacilityId;
-            RefFacilityAuditTypeId = model.RefFacilityAuditTypeId;
+            RefFacilityAuditTypeId = model.RefFacilityAuditTypeId; // Facility Audit Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

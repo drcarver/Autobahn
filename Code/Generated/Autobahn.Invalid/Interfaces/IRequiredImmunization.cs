@@ -12,15 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IRequiredImmunization : IAutobahnBase
     {
-        /// <summary>
-        /// An indication that an immunization is specifically required by an organization or governing body.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// An indication that an immunization is specifically required by an organization or governing body.
-        /// </summary>
-        Guid RefImmunizationTypeId { get; set; }
-
     }
 }

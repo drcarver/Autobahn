@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
         /// </summary>
-        Guid PersonProgramParticipationId { get; set; }
-
-        /// <summary>
-        /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
-        /// </summary>
         Guid? RefTitleIIndicatorId { get; set; }
 
     }

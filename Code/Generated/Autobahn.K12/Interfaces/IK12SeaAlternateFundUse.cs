@@ -12,15 +12,5 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12SeaAlternateFundUse : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid K12SeaFederalFundsId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid RefAlternateFundUsesId { get; set; }
-
     }
 }

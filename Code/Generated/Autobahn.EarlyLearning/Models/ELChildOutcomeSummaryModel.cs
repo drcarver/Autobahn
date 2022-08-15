@@ -18,35 +18,5 @@ namespace Autobahn.EarlyLearning.Models
         /// </summary>
         public System.Boolean? COSProgressAIndicator { get; set; }
 
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public System.Boolean? COSProgressBIndicator { get; set; }
-
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public System.Boolean? COSProgressCIndicator { get; set; }
-
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public Guid? COSRatingAId { get; set; }
-
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public Guid? COSRatingBId { get; set; }
-
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public Guid? COSRatingCId { get; set; }
-
-        /// <summary>
-        /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
     }
 }

@@ -16,15 +16,5 @@ namespace Autobahn.Common.Models
         /// </summary>
         public System.String AlternateDayName { get; set; }
 
-        /// <summary>
-        /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
-        /// </summary>
-        public System.String DayName { get; set; }
-
-        /// <summary>
-        /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
-        /// </summary>
-        public Guid OrganizationCalendarId { get; set; }
-
     }
 }

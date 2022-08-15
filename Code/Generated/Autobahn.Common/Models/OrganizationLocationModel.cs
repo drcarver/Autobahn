@@ -14,16 +14,6 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The type of address listed for an organization.
         /// </summary>
-        public Guid LocationId { get; set; }
-
-        /// <summary>
-        /// The type of address listed for an organization.
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of address listed for an organization.
-        /// </summary>
         public Guid? RefOrganizationLocationTypeId { get; set; }
 
     }

@@ -16,17 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// A statement of why-
         /// </summary>
-        public Guid AssessmentId { get; set; }
-
-        /// <summary>
-        /// A statement of why-
-        /// </summary>
         public System.String IEPAlternativeAssessmentRationale { get; set; }
-
-        /// <summary>
-        /// A statement of why-
-        /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
 
     }
 }

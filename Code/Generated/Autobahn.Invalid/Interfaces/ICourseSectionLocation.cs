@@ -17,15 +17,5 @@ namespace Autobahn.Invalid.Interfaces
         /// </summary>
         Guid ClassroomId { get; set; }
 
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// </summary>
-        Guid CourseSectionId { get; set; }
-
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// </summary>
-        Guid? RefInstructionLocationTypeId { get; set; }
-
     }
 }

@@ -14,11 +14,6 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The Uniform Resource Locator (URL) for the unique address of a Web page.
         /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
-        /// </summary>
         public System.String Website { get; set; }
 
     }

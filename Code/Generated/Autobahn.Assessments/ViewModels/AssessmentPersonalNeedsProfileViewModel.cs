@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Assessments.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentPersonalNeedsProfile";
-
-        // member variable for the ActivateByDefault property
-        private System.Boolean? _ActivateByDefault;
-
-        // member variable for the AssessmentNeedType property
-        private System.String _AssessmentNeedType;
 
         // member variable for the AssignedSupportFlag property
         private System.Boolean? _AssignedSupportFlag;
@@ -36,17 +33,11 @@ namespace Autobahn.Assessments.ViewModels
 
         /// <summary>
         /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
+        /// </para>
         /// </summary>
-        public System.Boolean? ActivateByDefault { get => _ActivateByDefault; set => SetProperty(ref _ActivateByDefault, value); }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
-        public System.String AssessmentNeedType { get => _AssessmentNeedType; set => SetProperty(ref _AssessmentNeedType, value); }
-
-        /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// </summary>
+        [DisplayName("Assessment Personal Needs Profile Assigned Support")]
         public System.Boolean? AssignedSupportFlag { get => _AssignedSupportFlag; set => SetProperty(ref _AssignedSupportFlag, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivateByDefault = model.ActivateByDefault;
-            AssessmentNeedType = model.AssessmentNeedType;
-            AssignedSupportFlag = model.AssignedSupportFlag;
+            AssignedSupportFlag = model.AssignedSupportFlag; // Assessment Personal Needs Profile Assigned Support
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

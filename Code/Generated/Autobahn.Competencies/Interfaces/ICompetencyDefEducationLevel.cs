@@ -12,15 +12,5 @@ namespace Autobahn.Competencies.Interfaces
      /// </summary>
     public partial interface ICompetencyDefEducationLevel : IAutobahnBase
     {
-        /// <summary>
-        /// The education level, grade level or primary instructional level at which a Competency Definition is intended.
-        /// </summary>
-        Guid CompetencyDefinitionId { get; set; }
-
-        /// <summary>
-        /// The education level, grade level or primary instructional level at which a Competency Definition is intended.
-        /// </summary>
-        Guid RefEducationLevelId { get; set; }
-
     }
 }

@@ -15,17 +15,7 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Frequency by which parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan year.
         /// </summary>
-        Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// Frequency by which parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan year.
-        /// </summary>
         Guid? RefIPSPProgressReportScheduleId { get; set; }
-
-        /// <summary>
-        /// Frequency by which parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan year.
-        /// </summary>
-        Guid? RefIPSPProgressReportTypeId { get; set; }
 
     }
 }

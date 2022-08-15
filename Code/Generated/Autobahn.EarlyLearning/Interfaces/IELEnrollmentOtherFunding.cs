@@ -12,15 +12,5 @@ namespace Autobahn.EarlyLearning.Interfaces
      /// </summary>
     public partial interface IELEnrollmentOtherFunding : IAutobahnBase
     {
-        /// <summary>
-        /// The other contributing funding sources.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The other contributing funding sources.
-        /// </summary>
-        Guid RefELOtherFederalFundingSourcesId { get; set; }
-
     }
 }

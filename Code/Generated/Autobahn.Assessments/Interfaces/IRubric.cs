@@ -12,20 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IRubric : IAutobahnBase
     {
-        /// <summary>
-        /// The title of the rubric.
-        /// </summary>
-        System.String Identifier { get; set; }
-
-        /// <summary>
-        /// The title of the rubric.
-        /// </summary>
-        System.String Title { get; set; }
-
-        /// <summary>
-        /// The title of the rubric.
-        /// </summary>
-        System.String UrlReference { get; set; }
-
     }
 }

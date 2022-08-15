@@ -12,15 +12,5 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12TitleIIILanguageInstruction : IAutobahnBase
     {
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of Title III language instructional education programs.
-        /// </summary>
-        Guid RefTitleIIILanguageInstructionProgramTypeId { get; set; }
-
     }
 }

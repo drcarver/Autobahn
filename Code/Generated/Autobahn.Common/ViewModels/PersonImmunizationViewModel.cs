@@ -3,6 +3,9 @@
 //* FileName:   PersonImmunizationViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Common.ViewModels
         // member variable for the ImmunizationDate property
         private System.DateTime _ImmunizationDate;
 
-        // member variable for the PersonId property
-        private Guid _PersonId;
-
-        // member variable for the RefImmunizationTypeId property
-        private Guid _RefImmunizationTypeId;
-
         #endregion
 
         #region Properties
@@ -33,18 +30,12 @@ namespace Autobahn.Common.ViewModels
 
         /// <summary>
         /// The year, month and day of an immunization.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19306">Immunization Date</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Immunization Date")]
         public System.DateTime ImmunizationDate { get => _ImmunizationDate; set => SetProperty(ref _ImmunizationDate, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefImmunizationType"/> model
-        /// </summary>
-        public Guid RefImmunizationTypeId { get => _RefImmunizationTypeId; set => SetProperty(ref _RefImmunizationTypeId, value); }
 
         #endregion
 
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ImmunizationDate = model.ImmunizationDate;
-            PersonId = model.PersonId;
-            RefImmunizationTypeId = model.RefImmunizationTypeId;
+            ImmunizationDate = model.ImmunizationDate; // Immunization Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

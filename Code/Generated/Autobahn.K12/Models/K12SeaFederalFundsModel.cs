@@ -16,26 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
         /// </summary>
-        public System.DateTime? DateStateReceivedTitleIIIAllocation { get; set; }
-
-        /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
-        /// </summary>
-        public System.DateTime? DateTitleIIIFundsAvailableToSubgrantees { get; set; }
-
-        /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
-        /// </summary>
-        public Guid K12SeaId { get; set; }
-
-        /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
-        /// </summary>
-        public System.Decimal? NumberOfDaysForTitleIIISubgrants { get; set; }
-
-        /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
-        /// </summary>
         public System.Boolean? StateTransferabilityOfFunds { get; set; }
 
     }

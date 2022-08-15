@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramAccommodationSubject";
 
-        // member variable for the IndividualizedProgramAccommodationId property
-        private Guid _IndividualizedProgramAccommodationId;
-
-        // member variable for the RefSCEDCourseSubjectAreaId property
-        private Guid _RefSCEDCourseSubjectAreaId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the IndividualizedProgramAccommodationSubjectViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgramAccommodation"/> model
-        /// </summary>
-        public Guid IndividualizedProgramAccommodationId { get => _IndividualizedProgramAccommodationId; set => SetProperty(ref _IndividualizedProgramAccommodationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
-        /// </summary>
-        public Guid RefSCEDCourseSubjectAreaId { get => _RefSCEDCourseSubjectAreaId; set => SetProperty(ref _RefSCEDCourseSubjectAreaId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndividualizedProgramAccommodationId = model.IndividualizedProgramAccommodationId;
-            RefSCEDCourseSubjectAreaId = model.RefSCEDCourseSubjectAreaId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -20,24 +23,6 @@ namespace Autobahn.K12.ViewModels
         // member variable for the ContractDaysOfServicePerYear property
         private System.Decimal? _ContractDaysOfServicePerYear;
 
-        // member variable for the MepPersonnelIndicator property
-        private System.Boolean? _MepPersonnelIndicator;
-
-        // member variable for the RefEmploymentStatusId property
-        private Guid? _RefEmploymentStatusId;
-
-        // member variable for the RefK12StaffClassificationId property
-        private Guid? _RefK12StaffClassificationId;
-
-        // member variable for the SalaryForTeachingAssignmentOnlyIndicator property
-        private System.Boolean? _SalaryForTeachingAssignmentOnlyIndicator;
-
-        // member variable for the StaffEmploymentId property
-        private Guid _StaffEmploymentId;
-
-        // member variable for the TitleITargetedAssistanceStaffFunded property
-        private System.Boolean? _TitleITargetedAssistanceStaffFunded;
-
         #endregion
 
         #region Properties
@@ -48,38 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19047">Contract Days of Service Per Year</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Contract Days of Service Per Year")]
         public System.Decimal? ContractDaysOfServicePerYear { get => _ContractDaysOfServicePerYear; set => SetProperty(ref _ContractDaysOfServicePerYear, value); }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? MepPersonnelIndicator { get => _MepPersonnelIndicator; set => SetProperty(ref _MepPersonnelIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
-        /// </summary>
-        public Guid? RefEmploymentStatusId { get => _RefEmploymentStatusId; set => SetProperty(ref _RefEmploymentStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
-        /// </summary>
-        public Guid? RefK12StaffClassificationId { get => _RefK12StaffClassificationId; set => SetProperty(ref _RefK12StaffClassificationId, value); }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? SalaryForTeachingAssignmentOnlyIndicator { get => _SalaryForTeachingAssignmentOnlyIndicator; set => SetProperty(ref _SalaryForTeachingAssignmentOnlyIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="StaffEmployment"/> model
-        /// </summary>
-        public Guid StaffEmploymentId { get => _StaffEmploymentId; set => SetProperty(ref _StaffEmploymentId, value); }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? TitleITargetedAssistanceStaffFunded { get => _TitleITargetedAssistanceStaffFunded; set => SetProperty(ref _TitleITargetedAssistanceStaffFunded, value); }
 
         #endregion
 
@@ -90,13 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ContractDaysOfServicePerYear = model.ContractDaysOfServicePerYear;
-            MepPersonnelIndicator = model.MepPersonnelIndicator;
-            RefEmploymentStatusId = model.RefEmploymentStatusId;
-            RefK12StaffClassificationId = model.RefK12StaffClassificationId;
-            SalaryForTeachingAssignmentOnlyIndicator = model.SalaryForTeachingAssignmentOnlyIndicator;
-            StaffEmploymentId = model.StaffEmploymentId;
-            TitleITargetedAssistanceStaffFunded = model.TitleITargetedAssistanceStaffFunded;
+            ContractDaysOfServicePerYear = model.ContractDaysOfServicePerYear; // Contract Days of Service Per Year
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

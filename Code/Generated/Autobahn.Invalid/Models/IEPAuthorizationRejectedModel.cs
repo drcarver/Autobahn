@@ -16,17 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// Portion the authorizer does not want executed.
         /// </summary>
-        public Guid IEPAuthorizationId { get; set; }
-
-        /// <summary>
-        /// Portion the authorizer does not want executed.
-        /// </summary>
         public System.String PortionDescription { get; set; }
-
-        /// <summary>
-        /// Portion the authorizer does not want executed.
-        /// </summary>
-        public System.String PortionExplanation { get; set; }
 
     }
 }

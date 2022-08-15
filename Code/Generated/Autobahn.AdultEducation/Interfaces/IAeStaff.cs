@@ -15,22 +15,7 @@ namespace Autobahn.AdultEducation.Interfaces
         /// <summary>
         /// The titles of employment, official status, or rank of adult education staff.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
-        /// </summary>
         Guid? RefAeStaffClassificationId { get; set; }
-
-        /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
-        /// </summary>
-        Guid? RefAeStaffEmploymentStatusId { get; set; }
-
-        /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
-        /// </summary>
-        System.Decimal? YearsOfPriorAeTeachingExperience { get; set; }
 
     }
 }

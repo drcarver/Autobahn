@@ -16,22 +16,7 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
         /// </summary>
-        public System.String FacilitiesPlanDescription { get; set; }
-
-        /// <summary>
-        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
-        /// </summary>
-        public Guid FacilityManagementId { get; set; }
-
-        /// <summary>
-        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
-        /// </summary>
         public Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
-
-        /// <summary>
-        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
-        /// </summary>
-        public Guid? RefFacilitiesPlanTypeId { get; set; }
 
     }
 }

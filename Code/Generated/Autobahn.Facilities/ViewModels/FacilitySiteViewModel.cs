@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -17,20 +20,8 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilitySite";
 
-        // member variable for the FacilityId property
-        private Guid _FacilityId;
-
         // member variable for the FacilitySiteArea property
         private System.Decimal? _FacilitySiteArea;
-
-        // member variable for the FacilitySiteIdentifier property
-        private System.String _FacilitySiteIdentifier;
-
-        // member variable for the RefBuildingSiteUseRestrictionsTypeId property
-        private Guid? _RefBuildingSiteUseRestrictionsTypeId;
-
-        // member variable for the RefFacilitySiteOutdoorAreaTypeId property
-        private Guid? _RefFacilitySiteOutdoorAreaTypeId;
 
         #endregion
 
@@ -41,29 +32,13 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Facility"/> model
-        /// </summary>
-        public Guid FacilityId { get => _FacilityId; set => SetProperty(ref _FacilityId, value); }
-
-        /// <summary>
         /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20754">Facility Site Area</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Facility Site Area")]
         public System.Decimal? FacilitySiteArea { get => _FacilitySiteArea; set => SetProperty(ref _FacilitySiteArea, value); }
-
-        /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
-        /// </summary>
-        public System.String FacilitySiteIdentifier { get => _FacilitySiteIdentifier; set => SetProperty(ref _FacilitySiteIdentifier, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingSiteUseRestrictionsType"/> model
-        /// </summary>
-        public Guid? RefBuildingSiteUseRestrictionsTypeId { get => _RefBuildingSiteUseRestrictionsTypeId; set => SetProperty(ref _RefBuildingSiteUseRestrictionsTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilitySiteOutdoorAreaType"/> model
-        /// </summary>
-        public Guid? RefFacilitySiteOutdoorAreaTypeId { get => _RefFacilitySiteOutdoorAreaTypeId; set => SetProperty(ref _RefFacilitySiteOutdoorAreaTypeId, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityId = model.FacilityId;
-            FacilitySiteArea = model.FacilitySiteArea;
-            FacilitySiteIdentifier = model.FacilitySiteIdentifier;
-            RefBuildingSiteUseRestrictionsTypeId = model.RefBuildingSiteUseRestrictionsTypeId;
-            RefFacilitySiteOutdoorAreaTypeId = model.RefFacilitySiteOutdoorAreaTypeId;
+            FacilitySiteArea = model.FacilitySiteArea; // Facility Site Area
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

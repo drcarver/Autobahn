@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -17,32 +20,8 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12ProgramOrService";
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the ProgramInMultiplePurposeFacility property
-        private System.Boolean? _ProgramInMultiplePurposeFacility;
-
-        // member variable for the RefKindergartenDailyLengthId property
-        private Guid? _RefKindergartenDailyLengthId;
-
-        // member variable for the RefMepProjectTypeId property
-        private Guid? _RefMepProjectTypeId;
-
         // member variable for the RefMepSessionTypeId property
         private Guid? _RefMepSessionTypeId;
-
-        // member variable for the RefPrekindergartenDailyLengthId property
-        private Guid? _RefPrekindergartenDailyLengthId;
-
-        // member variable for the RefProgramGiftedEligibilityId property
-        private Guid? _RefProgramGiftedEligibilityId;
-
-        // member variable for the RefTitleIInstructionalServicesId property
-        private Guid? _RefTitleIInstructionalServicesId;
-
-        // member variable for the RefTitleIProgramTypeId property
-        private Guid? _RefTitleIProgramTypeId;
 
         #endregion
 
@@ -53,49 +32,13 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public System.Boolean? ProgramInMultiplePurposeFacility { get => _ProgramInMultiplePurposeFacility; set => SetProperty(ref _ProgramInMultiplePurposeFacility, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefKindergartenDailyLength"/> model
-        /// </summary>
-        public Guid? RefKindergartenDailyLengthId { get => _RefKindergartenDailyLengthId; set => SetProperty(ref _RefKindergartenDailyLengthId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMepProjectType"/> model
-        /// </summary>
-        public Guid? RefMepProjectTypeId { get => _RefMepProjectTypeId; set => SetProperty(ref _RefMepProjectTypeId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefMepSessionType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19187">Migrant Education Program Session Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Migrant Education Program Session Type")]
         public Guid? RefMepSessionTypeId { get => _RefMepSessionTypeId; set => SetProperty(ref _RefMepSessionTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPrekindergartenDailyLength"/> model
-        /// </summary>
-        public Guid? RefPrekindergartenDailyLengthId { get => _RefPrekindergartenDailyLengthId; set => SetProperty(ref _RefPrekindergartenDailyLengthId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramGiftedEligibility"/> model
-        /// </summary>
-        public Guid? RefProgramGiftedEligibilityId { get => _RefProgramGiftedEligibilityId; set => SetProperty(ref _RefProgramGiftedEligibilityId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIInstructionalServices"/> model
-        /// </summary>
-        public Guid? RefTitleIInstructionalServicesId { get => _RefTitleIInstructionalServicesId; set => SetProperty(ref _RefTitleIInstructionalServicesId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIProgramType"/> model
-        /// </summary>
-        public Guid? RefTitleIProgramTypeId { get => _RefTitleIProgramTypeId; set => SetProperty(ref _RefTitleIProgramTypeId, value); }
 
         #endregion
 
@@ -106,15 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            ProgramInMultiplePurposeFacility = model.ProgramInMultiplePurposeFacility;
-            RefKindergartenDailyLengthId = model.RefKindergartenDailyLengthId;
-            RefMepProjectTypeId = model.RefMepProjectTypeId;
-            RefMepSessionTypeId = model.RefMepSessionTypeId;
-            RefPrekindergartenDailyLengthId = model.RefPrekindergartenDailyLengthId;
-            RefProgramGiftedEligibilityId = model.RefProgramGiftedEligibilityId;
-            RefTitleIInstructionalServicesId = model.RefTitleIInstructionalServicesId;
-            RefTitleIProgramTypeId = model.RefTitleIProgramTypeId;
+            RefMepSessionTypeId = model.RefMepSessionTypeId; // Migrant Education Program Session Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

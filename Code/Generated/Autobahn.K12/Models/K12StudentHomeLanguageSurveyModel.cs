@@ -13,20 +13,5 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12StudentHomeLanguageSurveyModel : AutobahnBase, Interfaces.IK12StudentHomeLanguageSurvey
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.DateTime? HomeLanguageSurveyAdministrationDate { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.Boolean? HomeLanguageSurveyAdministrationIndicator { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
     }
 }

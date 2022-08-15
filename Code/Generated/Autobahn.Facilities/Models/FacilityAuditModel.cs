@@ -16,16 +16,6 @@ namespace Autobahn.Facilities.Models
         /// <summary>
         /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
         /// </summary>
-        public System.DateTime? FacilityAuditDate { get; set; }
-
-        /// <summary>
-        /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
-        /// </summary>
-        public Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
-        /// </summary>
         public Guid? RefFacilityAuditTypeId { get; set; }
 
     }

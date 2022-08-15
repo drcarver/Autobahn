@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// Description of the reason changes were made to the individualized program service plan.
         /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// Description of the reason changes were made to the individualized program service plan.
-        /// </summary>
         public System.String ReasonDescription { get; set; }
 
     }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Postsecondary.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Postsecondary.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PsStudentAdmissionTest";
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
-        // member variable for the RefStandardizedAdmissionTestId property
-        private Guid _RefStandardizedAdmissionTestId;
 
         // member variable for the StandardizedAdmissionTestScore property
         private System.Decimal? _StandardizedAdmissionTestScore;
@@ -35,18 +32,12 @@ namespace Autobahn.Postsecondary.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStandardizedAdmissionTest"/> model
-        /// </summary>
-        public Guid RefStandardizedAdmissionTestId { get => _RefStandardizedAdmissionTestId; set => SetProperty(ref _RefStandardizedAdmissionTestId, value); }
-
-        /// <summary>
         /// The quantitative score on a standardized admission test reported to a postsecondary institution.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19265">Standardized Admission Test Score</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Standardized Admission Test Score")]
         public System.Decimal? StandardizedAdmissionTestScore { get => _StandardizedAdmissionTestScore; set => SetProperty(ref _StandardizedAdmissionTestScore, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefStandardizedAdmissionTestId = model.RefStandardizedAdmissionTestId;
-            StandardizedAdmissionTestScore = model.StandardizedAdmissionTestScore;
+            StandardizedAdmissionTestScore = model.StandardizedAdmissionTestScore; // Standardized Admission Test Score
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

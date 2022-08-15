@@ -16,32 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The reason given for declining the recommended services.
         /// </summary>
-        public System.DateTime? DeclinedServicesDate { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        public System.Boolean? ExtendsOutsideSchoolYear { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        public System.Boolean? InclusiveSettingIndicator { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
         public System.String ReasonForDeclinedServices { get; set; }
-
-        /// <summary>
-        /// The reason given for declining the recommended services.
-        /// </summary>
-        public System.String SettingDescription { get; set; }
 
     }
 }

@@ -15,11 +15,6 @@ namespace Autobahn.LearningResources.Interfaces
         /// <summary>
         /// Accessible content features included with the learning resource.
         /// </summary>
-        Guid LearningResourceId { get; set; }
-
-        /// <summary>
-        /// Accessible content features included with the learning resource.
-        /// </summary>
         Guid RefLearningResourceMediaFeatureTypeId { get; set; }
 
     }

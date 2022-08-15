@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Facilities.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.Facilities.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilitySchoolDesign";
-
-        // member variable for the FacilityDesignId property
-        private Guid _FacilityDesignId;
 
         // member variable for the RefBuildingSchoolDesignTypeId property
         private Guid _RefBuildingSchoolDesignTypeId;
@@ -32,13 +32,12 @@ namespace Autobahn.Facilities.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="FacilityDesign"/> model
-        /// </summary>
-        public Guid FacilityDesignId { get => _FacilityDesignId; set => SetProperty(ref _FacilityDesignId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefBuildingSchoolDesignType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20809">Building School Design Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Building School Design Type")]
         public Guid RefBuildingSchoolDesignTypeId { get => _RefBuildingSchoolDesignTypeId; set => SetProperty(ref _RefBuildingSchoolDesignTypeId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityDesignId = model.FacilityDesignId;
-            RefBuildingSchoolDesignTypeId = model.RefBuildingSchoolDesignTypeId;
+            RefBuildingSchoolDesignTypeId = model.RefBuildingSchoolDesignTypeId; // Building School Design Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

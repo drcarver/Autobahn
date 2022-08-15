@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSubtestELDevelopmentalDomain";
 
-        // member variable for the AssessmentSubtestId property
-        private Guid _AssessmentSubtestId;
-
-        // member variable for the RefAssessmentELDevelopmentalDomainId property
-        private Guid _RefAssessmentELDevelopmentalDomainId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Assessments.ViewModels
         /// The title of the AssessmentSubtestELDevelopmentalDomainViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubtest"/> model
-        /// </summary>
-        public Guid AssessmentSubtestId { get => _AssessmentSubtestId; set => SetProperty(ref _AssessmentSubtestId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAssessmentELDevelopmentalDomain"/> model
-        /// </summary>
-        public Guid RefAssessmentELDevelopmentalDomainId { get => _RefAssessmentELDevelopmentalDomainId; set => SetProperty(ref _RefAssessmentELDevelopmentalDomainId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentSubtestId = model.AssessmentSubtestId;
-            RefAssessmentELDevelopmentalDomainId = model.RefAssessmentELDevelopmentalDomainId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

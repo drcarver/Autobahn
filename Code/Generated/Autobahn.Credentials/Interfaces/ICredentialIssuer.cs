@@ -17,20 +17,5 @@ namespace Autobahn.Credentials.Interfaces
         /// </summary>
         System.String AwardIssuerOriginURL { get; set; }
 
-        /// <summary>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
-        /// </summary>
-        Guid? RefCTDLOrganizationTypeId { get; set; }
-
-        /// <summary>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
-        /// </summary>
-        System.String RevocationListURL { get; set; }
-
     }
 }

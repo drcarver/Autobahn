@@ -18,35 +18,5 @@ namespace Autobahn.K12.Models
         /// </summary>
         public System.Decimal? ContractDaysOfServicePerYear { get; set; }
 
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? MepPersonnelIndicator { get; set; }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public Guid? RefEmploymentStatusId { get; set; }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public Guid? RefK12StaffClassificationId { get; set; }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? SalaryForTeachingAssignmentOnlyIndicator { get; set; }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public Guid StaffEmploymentId { get; set; }
-
-        /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
-        /// </summary>
-        public System.Boolean? TitleITargetedAssistanceStaffFunded { get; set; }
-
     }
 }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Postsecondary.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PsStudentCohort";
 
-        // member variable for the CohortGraduationYear property
-        private System.String _CohortGraduationYear;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Postsecondary.ViewModels
         /// The title of the PsStudentCohortViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// The year the cohort is expected to graduate.
-        /// </summary>
-        public System.String CohortGraduationYear { get => _CohortGraduationYear; set => SetProperty(ref _CohortGraduationYear, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CohortGraduationYear = model.CohortGraduationYear;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

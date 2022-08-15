@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.AdultEducation.ViewModels
 {
      /// <summary>
@@ -17,17 +20,8 @@ namespace Autobahn.AdultEducation.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AeStaff";
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         // member variable for the RefAeStaffClassificationId property
         private Guid? _RefAeStaffClassificationId;
-
-        // member variable for the RefAeStaffEmploymentStatusId property
-        private Guid? _RefAeStaffEmploymentStatusId;
-
-        // member variable for the YearsOfPriorAeTeachingExperience property
-        private System.Decimal? _YearsOfPriorAeTeachingExperience;
 
         #endregion
 
@@ -38,24 +32,13 @@ namespace Autobahn.AdultEducation.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefAeStaffClassification"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19770">Adult Education Staff Classification</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Adult Education Staff Classification")]
         public Guid? RefAeStaffClassificationId { get => _RefAeStaffClassificationId; set => SetProperty(ref _RefAeStaffClassificationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAeStaffEmploymentStatus"/> model
-        /// </summary>
-        public Guid? RefAeStaffEmploymentStatusId { get => _RefAeStaffEmploymentStatusId; set => SetProperty(ref _RefAeStaffEmploymentStatusId, value); }
-
-        /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
-        /// </summary>
-        public System.Decimal? YearsOfPriorAeTeachingExperience { get => _YearsOfPriorAeTeachingExperience; set => SetProperty(ref _YearsOfPriorAeTeachingExperience, value); }
 
         #endregion
 
@@ -66,10 +49,7 @@ namespace Autobahn.AdultEducation.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefAeStaffClassificationId = model.RefAeStaffClassificationId;
-            RefAeStaffEmploymentStatusId = model.RefAeStaffEmploymentStatusId;
-            YearsOfPriorAeTeachingExperience = model.YearsOfPriorAeTeachingExperience;
+            RefAeStaffClassificationId = model.RefAeStaffClassificationId; // Adult Education Staff Classification
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

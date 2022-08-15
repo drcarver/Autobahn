@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.K12.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12Sea";
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
 
         // member variable for the RefStateANSICodeId property
         private Guid? _RefStateANSICodeId;
@@ -32,13 +32,12 @@ namespace Autobahn.K12.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefStateANSICode"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19414">State ANSI Code</a>
+        /// </para>
         /// </summary>
+        [DisplayName("State ANSI Code")]
         public Guid? RefStateANSICodeId { get => _RefStateANSICodeId; set => SetProperty(ref _RefStateANSICodeId, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            RefStateANSICodeId = model.RefStateANSICodeId;
+            RefStateANSICodeId = model.RefStateANSICodeId; // State ANSI Code
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

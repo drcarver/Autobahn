@@ -14,32 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// Previous, alternate or other names or aliases associated with the person.
         /// </summary>
-        System.String FirstName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        System.String LastName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        System.String MiddleName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
         System.String OtherName { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
-        /// </summary>
-        Guid? RefOtherNameTypeId { get; set; }
 
     }
 }

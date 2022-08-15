@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -16,27 +19,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELClassSection";
-
-        // member variable for the DaysAvailablePerWeek property
-        private System.Int32? _DaysAvailablePerWeek;
-
-        // member variable for the ELProgramAnnualOperatingWeeks property
-        private System.Int32? _ELProgramAnnualOperatingWeeks;
-
-        // member variable for the GroupSize property
-        private System.Int32? _GroupSize;
-
-        // member variable for the HoursAvailablePerDay property
-        private System.Decimal? _HoursAvailablePerDay;
-
-        // member variable for the LanguageTranslationPolicy property
-        private System.Boolean? _LanguageTranslationPolicy;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the RefEnvironmentSettingId property
-        private Guid? _RefEnvironmentSettingId;
 
         // member variable for the RefServiceOptionId property
         private Guid? _RefServiceOptionId;
@@ -50,43 +32,12 @@ namespace Autobahn.EarlyLearning.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Int32? DaysAvailablePerWeek { get => _DaysAvailablePerWeek; set => SetProperty(ref _DaysAvailablePerWeek, value); }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Int32? ELProgramAnnualOperatingWeeks { get => _ELProgramAnnualOperatingWeeks; set => SetProperty(ref _ELProgramAnnualOperatingWeeks, value); }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Int32? GroupSize { get => _GroupSize; set => SetProperty(ref _GroupSize, value); }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Decimal? HoursAvailablePerDay { get => _HoursAvailablePerDay; set => SetProperty(ref _HoursAvailablePerDay, value); }
-
-        /// <summary>
-        /// Nature of early childhood program, class or group in which a person is enrolled.
-        /// </summary>
-        public System.Boolean? LanguageTranslationPolicy { get => _LanguageTranslationPolicy; set => SetProperty(ref _LanguageTranslationPolicy, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEnvironmentSetting"/> model
-        /// </summary>
-        public Guid? RefEnvironmentSettingId { get => _RefEnvironmentSettingId; set => SetProperty(ref _RefEnvironmentSettingId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefServiceOption"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19352">Service Option Variation</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Service Option Variation")]
         public Guid? RefServiceOptionId { get => _RefServiceOptionId; set => SetProperty(ref _RefServiceOptionId, value); }
 
         #endregion
@@ -98,14 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            DaysAvailablePerWeek = model.DaysAvailablePerWeek;
-            ELProgramAnnualOperatingWeeks = model.ELProgramAnnualOperatingWeeks;
-            GroupSize = model.GroupSize;
-            HoursAvailablePerDay = model.HoursAvailablePerDay;
-            LanguageTranslationPolicy = model.LanguageTranslationPolicy;
-            OrganizationId = model.OrganizationId;
-            RefEnvironmentSettingId = model.RefEnvironmentSettingId;
-            RefServiceOptionId = model.RefServiceOptionId;
+            RefServiceOptionId = model.RefServiceOptionId; // Service Option Variation
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

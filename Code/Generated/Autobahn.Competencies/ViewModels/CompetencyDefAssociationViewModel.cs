@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Competencies.ViewModels
 {
      /// <summary>
@@ -20,39 +23,6 @@ namespace Autobahn.Competencies.ViewModels
         // member variable for the AssociatedEntityId property
         private Guid _AssociatedEntityId;
 
-        // member variable for the CompetencyDefAssociationIdentifierURI property
-        private System.String _CompetencyDefAssociationIdentifierURI;
-
-        // member variable for the CompetencyDefinitionId property
-        private Guid _CompetencyDefinitionId;
-
-        // member variable for the ConnectionCitation property
-        private System.String _ConnectionCitation;
-
-        // member variable for the DestinationNodeName property
-        private System.String _DestinationNodeName;
-
-        // member variable for the DestinationNodeURI property
-        private System.String _DestinationNodeURI;
-
-        // member variable for the OriginNodeName property
-        private System.String _OriginNodeName;
-
-        // member variable for the OriginNodeURI property
-        private System.String _OriginNodeURI;
-
-        // member variable for the RefCompetencyDefAssociationTypeId property
-        private Guid? _RefCompetencyDefAssociationTypeId;
-
-        // member variable for the RefEntityTypeId property
-        private Guid _RefEntityTypeId;
-
-        // member variable for the RefLearningResourceCompetencyAlignmentTypeId property
-        private Guid? _RefLearningResourceCompetencyAlignmentTypeId;
-
-        // member variable for the Weight property
-        private System.Decimal? _Weight;
-
         #endregion
 
         #region Properties
@@ -64,62 +34,8 @@ namespace Autobahn.Competencies.ViewModels
         /// <summary>
         /// Reference to an optional instance of the <see cref="AssociatedEntity"/> model
         /// </summary>
+        [DisplayName("Competency Definition Prerequisite Identifier")]
         public Guid AssociatedEntityId { get => _AssociatedEntityId; set => SetProperty(ref _AssociatedEntityId, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String CompetencyDefAssociationIdentifierURI { get => _CompetencyDefAssociationIdentifierURI; set => SetProperty(ref _CompetencyDefAssociationIdentifierURI, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CompetencyDefinition"/> model
-        /// </summary>
-        public Guid CompetencyDefinitionId { get => _CompetencyDefinitionId; set => SetProperty(ref _CompetencyDefinitionId, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String ConnectionCitation { get => _ConnectionCitation; set => SetProperty(ref _ConnectionCitation, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String DestinationNodeName { get => _DestinationNodeName; set => SetProperty(ref _DestinationNodeName, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String DestinationNodeURI { get => _DestinationNodeURI; set => SetProperty(ref _DestinationNodeURI, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String OriginNodeName { get => _OriginNodeName; set => SetProperty(ref _OriginNodeName, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.String OriginNodeURI { get => _OriginNodeURI; set => SetProperty(ref _OriginNodeURI, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCompetencyDefAssociationType"/> model
-        /// </summary>
-        public Guid? RefCompetencyDefAssociationTypeId { get => _RefCompetencyDefAssociationTypeId; set => SetProperty(ref _RefCompetencyDefAssociationTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEntityType"/> model
-        /// </summary>
-        public Guid RefEntityTypeId { get => _RefEntityTypeId; set => SetProperty(ref _RefEntityTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceCompetencyAlignmentType"/> model
-        /// </summary>
-        public Guid? RefLearningResourceCompetencyAlignmentTypeId { get => _RefLearningResourceCompetencyAlignmentTypeId; set => SetProperty(ref _RefLearningResourceCompetencyAlignmentTypeId, value); }
-
-        /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
-        /// </summary>
-        public System.Decimal? Weight { get => _Weight; set => SetProperty(ref _Weight, value); }
 
         #endregion
 
@@ -130,21 +46,21 @@ namespace Autobahn.Competencies.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssociatedEntityId = model.AssociatedEntityId;
-            CompetencyDefAssociationIdentifierURI = model.CompetencyDefAssociationIdentifierURI;
-            CompetencyDefinitionId = model.CompetencyDefinitionId;
-            ConnectionCitation = model.ConnectionCitation;
-            DestinationNodeName = model.DestinationNodeName;
-            DestinationNodeURI = model.DestinationNodeURI;
-            OriginNodeName = model.OriginNodeName;
-            OriginNodeURI = model.OriginNodeURI;
-            RefCompetencyDefAssociationTypeId = model.RefCompetencyDefAssociationTypeId;
-            RefEntityTypeId = model.RefEntityTypeId;
-            RefLearningResourceCompetencyAlignmentTypeId = model.RefLearningResourceCompetencyAlignmentTypeId;
-            Weight = model.Weight;
+            AssociatedEntityId = model.AssociatedEntityId; // Competency Definition Prerequisite Identifier
             _isChanged = false;
             IsNew = false;
             IsBusy = false;
         }
+
+        #region "ICommands for Navigation Properties"
+        /// <summary>
+        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
+        /// <para>
+        /// <a href="">Competency Definition Prerequisite Identifier</a>
+        /// </para>
+        /// </summary>
+        public ICommand AssociatedEntityCommand { get; set; }
+
+        #endregion
     }
 }

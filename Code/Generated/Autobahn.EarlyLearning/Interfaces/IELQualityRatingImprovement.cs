@@ -15,31 +15,6 @@ namespace Autobahn.EarlyLearning.Interfaces
         /// <summary>
         /// Program site participates in a Quality Rating and Improvement System (QRIS).
         /// </summary>
-        System.Int32? NumberQrisLevels { get; set; }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        System.DateTime? QrisAwardDate { get; set; }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        System.DateTime? QRISExpirationDate { get; set; }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
-        System.String QrisScore { get; set; }
-
-        /// <summary>
-        /// Program site participates in a Quality Rating and Improvement System (QRIS).
-        /// </summary>
         Guid? RefQrisParticipationId { get; set; }
 
     }

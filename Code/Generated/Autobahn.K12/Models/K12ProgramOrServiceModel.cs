@@ -16,47 +16,7 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The time of year that a Migrant Education Program operates.
         /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public System.Boolean? ProgramInMultiplePurposeFacility { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefKindergartenDailyLengthId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefMepProjectTypeId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
         public Guid? RefMepSessionTypeId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefPrekindergartenDailyLengthId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefProgramGiftedEligibilityId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefTitleIInstructionalServicesId { get; set; }
-
-        /// <summary>
-        /// The time of year that a Migrant Education Program operates.
-        /// </summary>
-        public Guid? RefTitleIProgramTypeId { get; set; }
 
     }
 }

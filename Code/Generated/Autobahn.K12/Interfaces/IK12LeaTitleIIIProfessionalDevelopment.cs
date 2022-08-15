@@ -15,16 +15,6 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The type of Title III professional development utilized.
         /// </summary>
-        Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The type of Title III professional development utilized.
-        /// </summary>
-        Guid K12LEATitleIIIProfessionalDevelopmentId { get; set; }
-
-        /// <summary>
-        /// The type of Title III professional development utilized.
-        /// </summary>
         Guid RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
 
     }

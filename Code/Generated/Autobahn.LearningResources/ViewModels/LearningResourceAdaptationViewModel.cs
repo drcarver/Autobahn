@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.LearningResources.ViewModels
 {
      /// <summary>
@@ -20,9 +23,6 @@ namespace Autobahn.LearningResources.ViewModels
         // member variable for the AdaptationURL property
         private System.String _AdaptationURL;
 
-        // member variable for the LearningResourceId property
-        private Guid _LearningResourceId;
-
         #endregion
 
         #region Properties
@@ -33,13 +33,12 @@ namespace Autobahn.LearningResources.ViewModels
 
         /// <summary>
         /// The Uniform Resource Locator of a learning resource that is an adaptation for this resource.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20361">Learning Resource Adaptation URL</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Learning Resource Adaptation URL")]
         public System.String AdaptationURL { get => _AdaptationURL; set => SetProperty(ref _AdaptationURL, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="LearningResource"/> model
-        /// </summary>
-        public Guid LearningResourceId { get => _LearningResourceId; set => SetProperty(ref _LearningResourceId, value); }
 
         #endregion
 
@@ -50,8 +49,7 @@ namespace Autobahn.LearningResources.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AdaptationURL = model.AdaptationURL;
-            LearningResourceId = model.LearningResourceId;
+            AdaptationURL = model.AdaptationURL; // Learning Resource Adaptation URL
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

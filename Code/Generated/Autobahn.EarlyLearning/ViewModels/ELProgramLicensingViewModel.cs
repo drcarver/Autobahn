@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,32 +20,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELProgramLicensing";
 
-        // member variable for the ContinuingLicenseDate property
-        private System.DateTime? _ContinuingLicenseDate;
-
         // member variable for the InitialLicenseDate property
         private System.DateTime? _InitialLicenseDate;
-
-        // member variable for the LicenseRevocationStatus property
-        private System.Boolean? _LicenseRevocationStatus;
-
-        // member variable for the LicenseSuspensionStatus property
-        private System.Boolean? _LicenseSuspensionStatus;
-
-        // member variable for the NumberOfFatalities property
-        private System.Int32? _NumberOfFatalities;
-
-        // member variable for the NumberOfInjuries property
-        private System.Int32? _NumberOfInjuries;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the RefELProgramLicenseStatusId property
-        private Guid? _RefELProgramLicenseStatusId;
-
-        // member variable for the RefLicenseExemptId property
-        private Guid? _RefLicenseExemptId;
 
         #endregion
 
@@ -54,48 +33,12 @@ namespace Autobahn.EarlyLearning.ViewModels
 
         /// <summary>
         /// The year, month and day on which a program or center received its initial license.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19347">Initial License Date</a>
+        /// </para>
         /// </summary>
-        public System.DateTime? ContinuingLicenseDate { get => _ContinuingLicenseDate; set => SetProperty(ref _ContinuingLicenseDate, value); }
-
-        /// <summary>
-        /// The year, month and day on which a program or center received its initial license.
-        /// </summary>
+        [DisplayName("Initial License Date")]
         public System.DateTime? InitialLicenseDate { get => _InitialLicenseDate; set => SetProperty(ref _InitialLicenseDate, value); }
-
-        /// <summary>
-        /// The year, month and day on which a program or center received its initial license.
-        /// </summary>
-        public System.Boolean? LicenseRevocationStatus { get => _LicenseRevocationStatus; set => SetProperty(ref _LicenseRevocationStatus, value); }
-
-        /// <summary>
-        /// The year, month and day on which a program or center received its initial license.
-        /// </summary>
-        public System.Boolean? LicenseSuspensionStatus { get => _LicenseSuspensionStatus; set => SetProperty(ref _LicenseSuspensionStatus, value); }
-
-        /// <summary>
-        /// The year, month and day on which a program or center received its initial license.
-        /// </summary>
-        public System.Int32? NumberOfFatalities { get => _NumberOfFatalities; set => SetProperty(ref _NumberOfFatalities, value); }
-
-        /// <summary>
-        /// The year, month and day on which a program or center received its initial license.
-        /// </summary>
-        public System.Int32? NumberOfInjuries { get => _NumberOfInjuries; set => SetProperty(ref _NumberOfInjuries, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefELProgramLicenseStatus"/> model
-        /// </summary>
-        public Guid? RefELProgramLicenseStatusId { get => _RefELProgramLicenseStatusId; set => SetProperty(ref _RefELProgramLicenseStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLicenseExempt"/> model
-        /// </summary>
-        public Guid? RefLicenseExemptId { get => _RefLicenseExemptId; set => SetProperty(ref _RefLicenseExemptId, value); }
 
         #endregion
 
@@ -106,15 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ContinuingLicenseDate = model.ContinuingLicenseDate;
-            InitialLicenseDate = model.InitialLicenseDate;
-            LicenseRevocationStatus = model.LicenseRevocationStatus;
-            LicenseSuspensionStatus = model.LicenseSuspensionStatus;
-            NumberOfFatalities = model.NumberOfFatalities;
-            NumberOfInjuries = model.NumberOfInjuries;
-            OrganizationId = model.OrganizationId;
-            RefELProgramLicenseStatusId = model.RefELProgramLicenseStatusId;
-            RefLicenseExemptId = model.RefLicenseExemptId;
+            InitialLicenseDate = model.InitialLicenseDate; // Initial License Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

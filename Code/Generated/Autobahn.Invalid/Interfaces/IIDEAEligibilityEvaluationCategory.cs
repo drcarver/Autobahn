@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Category of evaluation used for IDEA eligibility.
         /// </summary>
-        Guid EligibilityEvaluationId { get; set; }
-
-        /// <summary>
-        /// Category of evaluation used for IDEA eligibility.
-        /// </summary>
         Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
 
     }

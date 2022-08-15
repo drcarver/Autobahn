@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,15 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ServiceProvided";
 
-        // member variable for the RefServicesId property
-        private Guid? _RefServicesId;
-
-        // member variable for the RefStudentSupportServiceTypeId property
-        private Guid? _RefStudentSupportServiceTypeId;
-
-        // member variable for the ServicesReceivedId property
-        private Guid _ServicesReceivedId;
-
         #endregion
 
         #region Properties
@@ -33,21 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the ServiceProvidedViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefServices"/> model
-        /// </summary>
-        public Guid? RefServicesId { get => _RefServicesId; set => SetProperty(ref _RefServicesId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
-        /// </summary>
-        public Guid? RefStudentSupportServiceTypeId { get => _RefStudentSupportServiceTypeId; set => SetProperty(ref _RefStudentSupportServiceTypeId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ServicesReceived"/> model
-        /// </summary>
-        public Guid ServicesReceivedId { get => _ServicesReceivedId; set => SetProperty(ref _ServicesReceivedId, value); }
 
         #endregion
 
@@ -58,9 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefServicesId = model.RefServicesId;
-            RefStudentSupportServiceTypeId = model.RefStudentSupportServiceTypeId;
-            ServicesReceivedId = model.ServicesReceivedId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

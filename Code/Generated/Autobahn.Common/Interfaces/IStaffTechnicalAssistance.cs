@@ -14,21 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// Indicates whether or not the technical assistance was approved.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// Indicates whether or not the technical assistance was approved.
-        /// </summary>
-        Guid? RefTechnicalAssistanceDeliveryTypeId { get; set; }
-
-        /// <summary>
-        /// Indicates whether or not the technical assistance was approved.
-        /// </summary>
-        Guid? RefTechnicalAssistanceTypeId { get; set; }
-
-        /// <summary>
-        /// Indicates whether or not the technical assistance was approved.
-        /// </summary>
         System.Boolean? TechnicalAssistanceApprovedInd { get; set; }
 
     }

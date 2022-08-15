@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,20 +20,8 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ServiceFrequency";
 
-        // member variable for the DurationInMinutes property
-        private System.Int32? _DurationInMinutes;
-
-        // member variable for the FrequencyLength property
-        private System.Int32? _FrequencyLength;
-
-        // member variable for the InstancesPerCycle property
-        private System.Int32? _InstancesPerCycle;
-
         // member variable for the RefFrequencyUnitId property
         private Guid? _RefFrequencyUnitId;
-
-        // member variable for the ServicePlanId property
-        private Guid _ServicePlanId;
 
         #endregion
 
@@ -41,29 +32,13 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        public System.Int32? DurationInMinutes { get => _DurationInMinutes; set => SetProperty(ref _DurationInMinutes, value); }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        public System.Int32? FrequencyLength { get => _FrequencyLength; set => SetProperty(ref _FrequencyLength, value); }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        public System.Int32? InstancesPerCycle { get => _InstancesPerCycle; set => SetProperty(ref _InstancesPerCycle, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefFrequencyUnit"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20694">Frequency Unit</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Frequency Unit")]
         public Guid? RefFrequencyUnitId { get => _RefFrequencyUnitId; set => SetProperty(ref _RefFrequencyUnitId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ServicePlan"/> model
-        /// </summary>
-        public Guid ServicePlanId { get => _ServicePlanId; set => SetProperty(ref _ServicePlanId, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            DurationInMinutes = model.DurationInMinutes;
-            FrequencyLength = model.FrequencyLength;
-            InstancesPerCycle = model.InstancesPerCycle;
-            RefFrequencyUnitId = model.RefFrequencyUnitId;
-            ServicePlanId = model.ServicePlanId;
+            RefFrequencyUnitId = model.RefFrequencyUnitId; // Frequency Unit
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

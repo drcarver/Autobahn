@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSubtestCompetencyDefinition";
 
-        // member variable for the AssessmentSubtestId property
-        private Guid _AssessmentSubtestId;
-
-        // member variable for the CompetencyDefinitionId property
-        private Guid _CompetencyDefinitionId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Assessments.ViewModels
         /// The title of the AssessmentSubtestCompetencyDefinitionViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubtest"/> model
-        /// </summary>
-        public Guid AssessmentSubtestId { get => _AssessmentSubtestId; set => SetProperty(ref _AssessmentSubtestId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CompetencyDefinition"/> model
-        /// </summary>
-        public Guid CompetencyDefinitionId { get => _CompetencyDefinitionId; set => SetProperty(ref _CompetencyDefinitionId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentSubtestId = model.AssessmentSubtestId;
-            CompetencyDefinitionId = model.CompetencyDefinitionId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

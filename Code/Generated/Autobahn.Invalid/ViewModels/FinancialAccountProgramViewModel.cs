@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FinancialAccountProgram";
 
-        // member variable for the Name property
-        private System.String _Name;
-
-        // member variable for the ProgramNumber property
-        private System.String _ProgramNumber;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the FinancialAccountProgramViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// The name given to the program area in an educational institution's accounting system.
-        /// </summary>
-        public System.String Name { get => _Name; set => SetProperty(ref _Name, value); }
-
-        /// <summary>
-        /// The name given to the program area in an educational institution's accounting system.
-        /// </summary>
-        public System.String ProgramNumber { get => _ProgramNumber; set => SetProperty(ref _ProgramNumber, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Name = model.Name;
-            ProgramNumber = model.ProgramNumber;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

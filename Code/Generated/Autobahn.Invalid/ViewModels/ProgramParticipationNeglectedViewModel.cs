@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,18 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProgramParticipationNeglected";
-
-        // member variable for the AchievementIndicator property
-        private System.Boolean? _AchievementIndicator;
-
-        // member variable for the ObtainedEmployment property
-        private System.Boolean? _ObtainedEmployment;
-
-        // member variable for the OutcomeIndicator property
-        private System.Boolean? _OutcomeIndicator;
-
-        // member variable for the PersonProgramParticipationId property
-        private Guid _PersonProgramParticipationId;
 
         // member variable for the RefNeglectedProgramTypeId property
         private Guid? _RefNeglectedProgramTypeId;
@@ -41,28 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).
-        /// </summary>
-        public System.Boolean? AchievementIndicator { get => _AchievementIndicator; set => SetProperty(ref _AchievementIndicator, value); }
-
-        /// <summary>
-        /// The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).
-        /// </summary>
-        public System.Boolean? ObtainedEmployment { get => _ObtainedEmployment; set => SetProperty(ref _ObtainedEmployment, value); }
-
-        /// <summary>
-        /// The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).
-        /// </summary>
-        public System.Boolean? OutcomeIndicator { get => _OutcomeIndicator; set => SetProperty(ref _OutcomeIndicator, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="PersonProgramParticipation"/> model
-        /// </summary>
-        public Guid PersonProgramParticipationId { get => _PersonProgramParticipationId; set => SetProperty(ref _PersonProgramParticipationId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefNeglectedProgramType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19194">Neglected or Delinquent Program Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Neglected or Delinquent Program Type")]
         public Guid? RefNeglectedProgramTypeId { get => _RefNeglectedProgramTypeId; set => SetProperty(ref _RefNeglectedProgramTypeId, value); }
 
         #endregion
@@ -74,11 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AchievementIndicator = model.AchievementIndicator;
-            ObtainedEmployment = model.ObtainedEmployment;
-            OutcomeIndicator = model.OutcomeIndicator;
-            PersonProgramParticipationId = model.PersonProgramParticipationId;
-            RefNeglectedProgramTypeId = model.RefNeglectedProgramTypeId;
+            RefNeglectedProgramTypeId = model.RefNeglectedProgramTypeId; // Neglected or Delinquent Program Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

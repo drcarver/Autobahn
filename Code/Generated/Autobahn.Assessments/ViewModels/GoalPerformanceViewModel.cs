@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -20,18 +23,6 @@ namespace Autobahn.Assessments.ViewModels
         // member variable for the CurrentPerformanceDescription property
         private System.String _CurrentPerformanceDescription;
 
-        // member variable for the Date property
-        private System.DateTime? _Date;
-
-        // member variable for the GoalId property
-        private Guid _GoalId;
-
-        // member variable for the RefGoalStatusTypeId property
-        private Guid? _RefGoalStatusTypeId;
-
-        // member variable for the Status property
-        private System.String _Status;
-
         #endregion
 
         #region Properties
@@ -42,28 +33,12 @@ namespace Autobahn.Assessments.ViewModels
 
         /// <summary>
         /// Current performance explanation related to the annual goal or short-term objectives.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20671">Goal Current Performance Description</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Goal Current Performance Description")]
         public System.String CurrentPerformanceDescription { get => _CurrentPerformanceDescription; set => SetProperty(ref _CurrentPerformanceDescription, value); }
-
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        public System.DateTime? Date { get => _Date; set => SetProperty(ref _Date, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Goal"/> model
-        /// </summary>
-        public Guid GoalId { get => _GoalId; set => SetProperty(ref _GoalId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGoalStatusType"/> model
-        /// </summary>
-        public Guid? RefGoalStatusTypeId { get => _RefGoalStatusTypeId; set => SetProperty(ref _RefGoalStatusTypeId, value); }
-
-        /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
-        /// </summary>
-        public System.String Status { get => _Status; set => SetProperty(ref _Status, value); }
 
         #endregion
 
@@ -74,11 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CurrentPerformanceDescription = model.CurrentPerformanceDescription;
-            Date = model.Date;
-            GoalId = model.GoalId;
-            RefGoalStatusTypeId = model.RefGoalStatusTypeId;
-            Status = model.Status;
+            CurrentPerformanceDescription = model.CurrentPerformanceDescription; // Goal Current Performance Description
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

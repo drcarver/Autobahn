@@ -16,11 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The type of support services provided to students in Title I programs.
         /// </summary>
-        public Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The type of support services provided to students in Title I programs.
-        /// </summary>
         public Guid RefK12LeaTitleISupportServiceId { get; set; }
 
     }

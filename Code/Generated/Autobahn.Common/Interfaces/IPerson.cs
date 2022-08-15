@@ -11,10 +11,5 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IPerson : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid? PersonMasterId { get; set; }
-
     }
 }

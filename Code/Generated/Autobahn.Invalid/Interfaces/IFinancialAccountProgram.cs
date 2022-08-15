@@ -12,15 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IFinancialAccountProgram : IAutobahnBase
     {
-        /// <summary>
-        /// The name given to the program area in an educational institution's accounting system.
-        /// </summary>
-        System.String Name { get; set; }
-
-        /// <summary>
-        /// The name given to the program area in an educational institution's accounting system.
-        /// </summary>
-        System.String ProgramNumber { get; set; }
-
     }
 }

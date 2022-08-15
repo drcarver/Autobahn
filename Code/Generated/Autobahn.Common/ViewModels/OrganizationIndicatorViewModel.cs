@@ -3,6 +3,9 @@
 //* FileName:   OrganizationIndicatorViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -13,12 +16,6 @@ namespace Autobahn.Common.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationIndicator";
-
-        // member variable for the IndicatorValue property
-        private System.String _IndicatorValue;
-
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
 
         // member variable for the RefOrganizationIndicatorId property
         private Guid _RefOrganizationIndicatorId;
@@ -32,18 +29,12 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// An indication of whether the school has students who are ability grouped for classroom instruction in mathematics or English/reading/language arts.
-        /// </summary>
-        public System.String IndicatorValue { get => _IndicatorValue; set => SetProperty(ref _IndicatorValue, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefOrganizationIndicator"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19000">Ability Grouping Status</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Ability Grouping Status")]
         public Guid RefOrganizationIndicatorId { get => _RefOrganizationIndicatorId; set => SetProperty(ref _RefOrganizationIndicatorId, value); }
 
         #endregion
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndicatorValue = model.IndicatorValue;
-            OrganizationId = model.OrganizationId;
-            RefOrganizationIndicatorId = model.RefOrganizationIndicatorId;
+            RefOrganizationIndicatorId = model.RefOrganizationIndicatorId; // Ability Grouping Status
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

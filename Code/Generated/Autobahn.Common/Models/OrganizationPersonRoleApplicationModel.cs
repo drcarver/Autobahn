@@ -14,12 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// The year, month and day on which an individual  application is received by the organization.
         /// </summary>
-        public System.DateTime ApplicationDate { get; set; }
-
-        /// <summary>
-        /// The year, month and day on which an individual  application is received by the organization.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
+        public System.DateTime? ApplicationDate { get; set; }
 
     }
 }

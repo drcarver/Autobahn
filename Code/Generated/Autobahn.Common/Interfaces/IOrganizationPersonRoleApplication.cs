@@ -14,12 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The year, month and day on which an individual  application is received by the organization.
         /// </summary>
-        System.DateTime ApplicationDate { get; set; }
-
-        /// <summary>
-        /// The year, month and day on which an individual  application is received by the organization.
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
+        System.DateTime? ApplicationDate { get; set; }
 
     }
 }

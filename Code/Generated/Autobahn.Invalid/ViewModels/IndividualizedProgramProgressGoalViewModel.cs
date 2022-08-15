@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramProgressGoal";
 
-        // member variable for the GoalPerformanceId property
-        private Guid _GoalPerformanceId;
-
-        // member variable for the IndividualizedProgramProgressReportId property
-        private Guid _IndividualizedProgramProgressReportId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the IndividualizedProgramProgressGoalViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="GoalPerformance"/> model
-        /// </summary>
-        public Guid GoalPerformanceId { get => _GoalPerformanceId; set => SetProperty(ref _GoalPerformanceId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgramProgressReport"/> model
-        /// </summary>
-        public Guid IndividualizedProgramProgressReportId { get => _IndividualizedProgramProgressReportId; set => SetProperty(ref _IndividualizedProgramProgressReportId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            GoalPerformanceId = model.GoalPerformanceId;
-            IndividualizedProgramProgressReportId = model.IndividualizedProgramProgressReportId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

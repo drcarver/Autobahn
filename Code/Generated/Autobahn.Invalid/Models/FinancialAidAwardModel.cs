@@ -18,25 +18,5 @@ namespace Autobahn.Invalid.Models
         /// </summary>
         public System.Decimal? FinancialAidAwardAmount { get; set; }
 
-        /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
-        /// </summary>
-        public System.String FinancialAidYearDesignator { get; set; }
-
-        /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
-        /// </summary>
-        public Guid? RefFinancialAidAwardTypeId { get; set; }
-
-        /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
-        /// </summary>
-        public Guid? RefFinancialAidStatusId { get; set; }
-
     }
 }

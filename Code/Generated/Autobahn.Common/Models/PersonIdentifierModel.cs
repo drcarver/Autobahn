@@ -12,24 +12,9 @@ namespace Autobahn.Common.Models
     public partial class PersonIdentifierModel : AutobahnBase, Interfaces.IPersonIdentifier
     {
         /// <summary>
-        /// A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.
+        /// A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity.  This may be the publisher identifier.
         /// </summary>
         public System.String Identifier { get; set; }
-
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.
-        /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.
-        /// </summary>
-        public Guid? RefPersonalInformationVerificationId { get; set; }
-
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.
-        /// </summary>
-        public Guid RefPersonIdentificationSystemId { get; set; }
 
     }
 }

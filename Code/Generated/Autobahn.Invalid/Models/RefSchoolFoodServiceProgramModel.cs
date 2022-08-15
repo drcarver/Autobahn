@@ -14,10 +14,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class RefSchoolFoodServiceProgram : ReferenceModelBase, Interfaces.IRefSchoolFoodServiceProgram
     {
-        /// <summary>
-        /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
-        /// </summary>
-        public System.Int32? RefJurisdiction { get; set; }
-
     }
 }

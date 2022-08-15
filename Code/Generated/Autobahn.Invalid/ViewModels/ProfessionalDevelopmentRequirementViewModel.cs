@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProfessionalDevelopmentRequirement";
-
-        // member variable for the CompetencySetId property
-        private Guid? _CompetencySetId;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
 
         // member variable for the RequiredTrainingClockHours property
         private System.Decimal? _RequiredTrainingClockHours;
@@ -35,18 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="CompetencySet"/> model
-        /// </summary>
-        public Guid? CompetencySetId { get => _CompetencySetId; set => SetProperty(ref _CompetencySetId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Number of clock hours of training required for providers to meet requirements of the state.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19803">Required Training Clock Hours</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Required Training Clock Hours")]
         public System.Decimal? RequiredTrainingClockHours { get => _RequiredTrainingClockHours; set => SetProperty(ref _RequiredTrainingClockHours, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CompetencySetId = model.CompetencySetId;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RequiredTrainingClockHours = model.RequiredTrainingClockHours;
+            RequiredTrainingClockHours = model.RequiredTrainingClockHours; // Required Training Clock Hours
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

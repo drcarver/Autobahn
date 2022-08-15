@@ -15,21 +15,6 @@ namespace Autobahn.Credentials.Interfaces
         /// <summary>
         /// The first date a credential was offered.
         /// </summary>
-        Guid CredentialDefinitionId { get; set; }
-
-        /// <summary>
-        /// The first date a credential was offered.
-        /// </summary>
-        Guid CredentialIssuerId { get; set; }
-
-        /// <summary>
-        /// The first date a credential was offered.
-        /// </summary>
-        System.DateTime? CredentialOfferedEndDate { get; set; }
-
-        /// <summary>
-        /// The first date a credential was offered.
-        /// </summary>
         System.DateTime? CredentialOfferedStartDate { get; set; }
 
     }

@@ -15,32 +15,7 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
         /// </summary>
-        System.String CohortDescription { get; set; }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        System.String CohortGraduationYear { get; set; }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
         System.String CohortYear { get; set; }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        System.String GraduationRateSurveyCohortYear { get; set; }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        System.Boolean? GraduationRateSurveyIndicator { get; set; }
-
-        /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
-        /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
 
     }
 }

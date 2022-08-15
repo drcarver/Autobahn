@@ -16,16 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// Legal category for an IEP annual goal or short-term objectives.
         /// </summary>
-        public Guid GoalId { get; set; }
-
-        /// <summary>
-        /// Legal category for an IEP annual goal or short-term objectives.
-        /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// Legal category for an IEP annual goal or short-term objectives.
-        /// </summary>
         public Guid? RefIEPGoalTypeId { get; set; }
 
     }

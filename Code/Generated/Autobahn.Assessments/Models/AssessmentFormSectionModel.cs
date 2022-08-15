@@ -14,64 +14,9 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentFormSectionModel : AutobahnBase, Interfaces.IAssessmentFormSection
     {
         /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.String AssessmentItemBankIdentifier { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.String AssessmentItemBankName { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public Guid? ChildOfFormSectionId { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
+        /// The globally unique identifier of an Assessment using a RFC 4122 compliant hexadecimal string.
         /// </summary>
         public System.String GUID { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.String Identifier { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public Guid? LearningResourceId { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.DateTime? PublishedDate { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public Guid? RefAssessmentFormSectionIdentificationSystemId { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.Boolean? SectionReentry { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.Boolean? SectionSealed { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.TimeSpan? SectionTimeLimit { get; set; }
-
-        /// <summary>
-        /// The globally unique identifier of an Assessment Form Section using a RFC 4122 compliant hexadecimal string.
-        /// </summary>
-        public System.String Version { get; set; }
 
     }
 }

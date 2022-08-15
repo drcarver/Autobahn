@@ -14,27 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
         /// </summary>
-        Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
-        /// </summary>
-        System.String ParticipationStatus { get; set; }
-
-        /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
-        /// </summary>
         Guid? RefParticipationTypeId { get; set; }
-
-        /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
-        /// </summary>
-        Guid? RefProgramEntryReasonId { get; set; }
-
-        /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
-        /// </summary>
-        Guid? RefProgramExitReasonId { get; set; }
 
     }
 }

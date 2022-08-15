@@ -16,32 +16,7 @@ namespace Autobahn.Authorization.Models
         /// <summary>
         /// The name of a provider that can authenticate the identity of an person.
         /// </summary>
-        public System.DateTime? EndDate { get; set; }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
         public System.String IdentityProviderName { get; set; }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.String IdentityProviderUri { get; set; }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.String LoginIdentifier { get; set; }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
-        /// </summary>
-        public System.DateTime? StartDate { get; set; }
 
     }
 }

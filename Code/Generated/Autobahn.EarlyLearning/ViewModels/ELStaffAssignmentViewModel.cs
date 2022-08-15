@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -20,9 +23,6 @@ namespace Autobahn.EarlyLearning.ViewModels
         // member variable for the ItinerantProvider property
         private System.Boolean _ItinerantProvider;
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         #endregion
 
         #region Properties
@@ -33,13 +33,12 @@ namespace Autobahn.EarlyLearning.ViewModels
 
         /// <summary>
         /// An indication of whether a person provides services at more than one site.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20353">Itinerant Provider</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Itinerant Provider")]
         public System.Boolean ItinerantProvider { get => _ItinerantProvider; set => SetProperty(ref _ItinerantProvider, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -50,8 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ItinerantProvider = model.ItinerantProvider;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
+            ItinerantProvider = model.ItinerantProvider; // Itinerant Provider
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

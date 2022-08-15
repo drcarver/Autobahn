@@ -14,16 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The primary nighttime residence of the person at the time the person was identified as homeless.
         /// </summary>
-        System.Boolean HomelessnessStatus { get; set; }
-
-        /// <summary>
-        /// The primary nighttime residence of the person at the time the person was identified as homeless.
-        /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The primary nighttime residence of the person at the time the person was identified as homeless.
-        /// </summary>
         Guid RefHomelessNighttimeResidenceId { get; set; }
 
     }

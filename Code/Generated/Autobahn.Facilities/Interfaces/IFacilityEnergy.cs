@@ -17,25 +17,5 @@ namespace Autobahn.Facilities.Interfaces
         /// </summary>
         System.String BuildingEnergyServiceCompanyName { get; set; }
 
-        /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
-        /// </summary>
-        Guid FacilityId { get; set; }
-
-        /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
-        /// </summary>
-        Guid? RefBuildingEnergySourceTypeId { get; set; }
-
-        /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
-        /// </summary>
-        Guid? RefFacilityUtilityProviderTypeId { get; set; }
-
-        /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
-        /// </summary>
-        Guid? RefFacilityUtilityTypeId { get; set; }
-
     }
 }

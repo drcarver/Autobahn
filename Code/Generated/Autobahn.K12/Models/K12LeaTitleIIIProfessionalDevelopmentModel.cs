@@ -16,16 +16,6 @@ namespace Autobahn.K12.Models
         /// <summary>
         /// The type of Title III professional development utilized.
         /// </summary>
-        public Guid K12LeaId { get; set; }
-
-        /// <summary>
-        /// The type of Title III professional development utilized.
-        /// </summary>
-        public Guid K12LEATitleIIIProfessionalDevelopmentId { get; set; }
-
-        /// <summary>
-        /// The type of Title III professional development utilized.
-        /// </summary>
         public Guid RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
 
     }

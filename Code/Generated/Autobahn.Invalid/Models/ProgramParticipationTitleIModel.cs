@@ -16,11 +16,6 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
         /// </summary>
-        public Guid PersonProgramParticipationId { get; set; }
-
-        /// <summary>
-        /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
-        /// </summary>
         public Guid? RefTitleIIndicatorId { get; set; }
 
     }

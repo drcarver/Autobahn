@@ -13,15 +13,5 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12SeaAlternateFundUseModel : AutobahnBase, Interfaces.IK12SeaAlternateFundUse
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid K12SeaFederalFundsId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public Guid RefAlternateFundUsesId { get; set; }
-
     }
 }

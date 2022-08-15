@@ -16,22 +16,7 @@ namespace Autobahn.Assessments.Models
         /// <summary>
         /// The type of psychometric measure provided for assessment item.
         /// </summary>
-        public Guid AssessmentItemId { get; set; }
-
-        /// <summary>
-        /// The type of psychometric measure provided for assessment item.
-        /// </summary>
         public Guid? RefAssessmentItemCharacteristicTypeId { get; set; }
-
-        /// <summary>
-        /// The type of psychometric measure provided for assessment item.
-        /// </summary>
-        public System.String ResponseChoicePattern { get; set; }
-
-        /// <summary>
-        /// The type of psychometric measure provided for assessment item.
-        /// </summary>
-        public System.String Value { get; set; }
 
     }
 }

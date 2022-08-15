@@ -16,17 +16,7 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// The individual well child visit scheduled according to the AAP recommended periodicity schedule.
         /// </summary>
-        public Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The individual well child visit scheduled according to the AAP recommended periodicity schedule.
-        /// </summary>
         public Guid? RefScheduledWellChildScreeningId { get; set; }
-
-        /// <summary>
-        /// The individual well child visit scheduled according to the AAP recommended periodicity schedule.
-        /// </summary>
-        public System.DateTime? WellChildScreeningReceivedDate { get; set; }
 
     }
 }

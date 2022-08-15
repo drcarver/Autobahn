@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// The date on which a child's service plan meeting is held.
         /// </summary>
-        Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// The date on which a child's service plan meeting is held.
-        /// </summary>
         System.DateTime? MeetingDate { get; set; }
 
     }

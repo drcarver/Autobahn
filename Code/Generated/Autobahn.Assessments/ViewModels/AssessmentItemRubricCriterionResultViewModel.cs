@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentItemRubricCriterionResult";
 
-        // member variable for the AssessmentItemResponseId property
-        private Guid _AssessmentItemResponseId;
-
-        // member variable for the RubricCriterionLevelId property
-        private Guid _RubricCriterionLevelId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Assessments.ViewModels
         /// The title of the AssessmentItemRubricCriterionResultViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentItemResponse"/> model
-        /// </summary>
-        public Guid AssessmentItemResponseId { get => _AssessmentItemResponseId; set => SetProperty(ref _AssessmentItemResponseId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RubricCriterionLevel"/> model
-        /// </summary>
-        public Guid RubricCriterionLevelId { get => _RubricCriterionLevelId; set => SetProperty(ref _RubricCriterionLevelId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentItemResponseId = model.AssessmentItemResponseId;
-            RubricCriterionLevelId = model.RubricCriterionLevelId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

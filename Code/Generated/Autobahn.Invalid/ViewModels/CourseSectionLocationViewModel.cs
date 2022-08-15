@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -20,12 +23,6 @@ namespace Autobahn.Invalid.ViewModels
         // member variable for the ClassroomId property
         private Guid _ClassroomId;
 
-        // member variable for the CourseSectionId property
-        private Guid _CourseSectionId;
-
-        // member variable for the RefInstructionLocationTypeId property
-        private Guid? _RefInstructionLocationTypeId;
-
         #endregion
 
         #region Properties
@@ -36,18 +33,12 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="Classroom"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Classroom Identifier")]
         public Guid ClassroomId { get => _ClassroomId; set => SetProperty(ref _ClassroomId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CourseSection"/> model
-        /// </summary>
-        public Guid CourseSectionId { get => _CourseSectionId; set => SetProperty(ref _CourseSectionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInstructionLocationType"/> model
-        /// </summary>
-        public Guid? RefInstructionLocationTypeId { get => _RefInstructionLocationTypeId; set => SetProperty(ref _RefInstructionLocationTypeId, value); }
 
         #endregion
 
@@ -58,12 +49,21 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ClassroomId = model.ClassroomId;
-            CourseSectionId = model.CourseSectionId;
-            RefInstructionLocationTypeId = model.RefInstructionLocationTypeId;
+            ClassroomId = model.ClassroomId; // Classroom Identifier
             _isChanged = false;
             IsNew = false;
             IsBusy = false;
         }
+
+        #region "ICommands for Navigation Properties"
+        /// <summary>
+        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
+        /// </para>
+        /// </summary>
+        public ICommand ClassroomCommand { get; set; }
+
+        #endregion
     }
 }

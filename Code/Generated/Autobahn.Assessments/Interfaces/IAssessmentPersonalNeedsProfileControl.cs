@@ -12,10 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentPersonalNeedsProfileControl : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid AssessmentPersonalNeedsProfileId { get; set; }
-
     }
 }

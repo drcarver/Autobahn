@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,9 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramMeeting";
-
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
 
         // member variable for the MeetingDate property
         private System.DateTime? _MeetingDate;
@@ -32,13 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
         /// The date on which a child's service plan meeting is held.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20665">Individualized Program Service Plan Meeting Date</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Individualized Program Service Plan Meeting Date")]
         public System.DateTime? MeetingDate { get => _MeetingDate; set => SetProperty(ref _MeetingDate, value); }
 
         #endregion
@@ -50,8 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            MeetingDate = model.MeetingDate;
+            MeetingDate = model.MeetingDate; // Individualized Program Service Plan Meeting Date
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

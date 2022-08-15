@@ -14,37 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The date of referral.
         /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
-        System.String Reason { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
         System.DateTime? ReferralDate { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
-        System.String ReferralTypeReceived { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
-        System.String ReferredTo { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
-        Guid? RefReferralOutcomeId { get; set; }
-
-        /// <summary>
-        /// The date of referral.
-        /// </summary>
-        System.String Source { get; set; }
 
     }
 }

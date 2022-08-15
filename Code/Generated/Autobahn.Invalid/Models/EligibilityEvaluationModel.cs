@@ -13,10 +13,5 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class EligibilityEvaluationModel : AutobahnBase, Interfaces.IEligibilityEvaluation
     {
-        /// <summary>
-        /// Description of evaluation procedure and result used for determining eligibility.
-        /// </summary>
-        public System.DateTime? EvaluationDate { get; set; }
-
     }
 }

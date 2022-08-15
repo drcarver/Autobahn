@@ -14,22 +14,7 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// Describes symptoms know to be associated with a person's reaction to an allergen.
         /// </summary>
-        Guid PersonId { get; set; }
-
-        /// <summary>
-        /// Describes symptoms know to be associated with a person's reaction to an allergen.
-        /// </summary>
         System.String ReactionDescription { get; set; }
-
-        /// <summary>
-        /// Describes symptoms know to be associated with a person's reaction to an allergen.
-        /// </summary>
-        Guid? RefAllergySeverityId { get; set; }
-
-        /// <summary>
-        /// Describes symptoms know to be associated with a person's reaction to an allergen.
-        /// </summary>
-        Guid RefAllergyTypeId { get; set; }
 
     }
 }

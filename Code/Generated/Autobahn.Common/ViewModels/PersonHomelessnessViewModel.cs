@@ -3,6 +3,9 @@
 //* FileName:   PersonHomelessnessViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -13,12 +16,6 @@ namespace Autobahn.Common.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PersonHomelessness";
-
-        // member variable for the HomelessnessStatus property
-        private System.Boolean _HomelessnessStatus;
-
-        // member variable for the PersonId property
-        private Guid _PersonId;
 
         // member variable for the RefHomelessNighttimeResidenceId property
         private Guid _RefHomelessNighttimeResidenceId;
@@ -32,18 +29,12 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The primary nighttime residence of the person at the time the person was identified as homeless.
-        /// </summary>
-        public System.Boolean HomelessnessStatus { get => _HomelessnessStatus; set => SetProperty(ref _HomelessnessStatus, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefHomelessNighttimeResidence"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19146">Homeless Primary Nighttime Residence</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Homeless Primary Nighttime Residence")]
         public Guid RefHomelessNighttimeResidenceId { get => _RefHomelessNighttimeResidenceId; set => SetProperty(ref _RefHomelessNighttimeResidenceId, value); }
 
         #endregion
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            HomelessnessStatus = model.HomelessnessStatus;
-            PersonId = model.PersonId;
-            RefHomelessNighttimeResidenceId = model.RefHomelessNighttimeResidenceId;
+            RefHomelessNighttimeResidenceId = model.RefHomelessNighttimeResidenceId; // Homeless Primary Nighttime Residence
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

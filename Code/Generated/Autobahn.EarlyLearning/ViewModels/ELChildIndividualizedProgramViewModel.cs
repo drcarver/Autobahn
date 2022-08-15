@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.EarlyLearning.ViewModels
 {
      /// <summary>
@@ -17,17 +20,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ELChildIndividualizedProgram";
 
-        // member variable for the IndividualizedProgramId property
-        private Guid? _IndividualizedProgramId;
-
-        // member variable for the PersonId property
-        private Guid _PersonId;
-
         // member variable for the RefIDEAIEPStatusId property
         private Guid? _RefIDEAIEPStatusId;
-
-        // member variable for the RefIDEAPartCEligibilityCategoryId property
-        private Guid? _RefIDEAPartCEligibilityCategoryId;
 
         #endregion
 
@@ -38,24 +32,13 @@ namespace Autobahn.EarlyLearning.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid? IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Person"/> model
-        /// </summary>
-        public Guid PersonId { get => _PersonId; set => SetProperty(ref _PersonId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefIDEAIEPStatus"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20473">IDEA IEP Status</a>
+        /// </para>
         /// </summary>
+        [DisplayName("IDEA IEP Status")]
         public Guid? RefIDEAIEPStatusId { get => _RefIDEAIEPStatusId; set => SetProperty(ref _RefIDEAIEPStatusId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIDEAPartCEligibilityCategory"/> model
-        /// </summary>
-        public Guid? RefIDEAPartCEligibilityCategoryId { get => _RefIDEAPartCEligibilityCategoryId; set => SetProperty(ref _RefIDEAPartCEligibilityCategoryId, value); }
 
         #endregion
 
@@ -66,10 +49,7 @@ namespace Autobahn.EarlyLearning.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            PersonId = model.PersonId;
-            RefIDEAIEPStatusId = model.RefIDEAIEPStatusId;
-            RefIDEAPartCEligibilityCategoryId = model.RefIDEAPartCEligibilityCategoryId;
+            RefIDEAIEPStatusId = model.RefIDEAIEPStatusId; // IDEA IEP Status
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

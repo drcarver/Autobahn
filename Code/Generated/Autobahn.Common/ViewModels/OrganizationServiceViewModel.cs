@@ -3,6 +3,9 @@
 //* FileName:   OrganizationServiceViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,11 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationService";
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
         // member variable for the RefStudentSupportServiceTypeId property
-        private Guid _RefStudentSupportServiceTypeId;
+        private Guid? _RefStudentSupportServiceTypeId;
 
         #endregion
 
@@ -29,14 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19273">Student Support Service Type</a>
+        /// </para>
         /// </summary>
-        public Guid RefStudentSupportServiceTypeId { get => _RefStudentSupportServiceTypeId; set => SetProperty(ref _RefStudentSupportServiceTypeId, value); }
+        [DisplayName("Student Support Service Type")]
+        public Guid? RefStudentSupportServiceTypeId { get => _RefStudentSupportServiceTypeId; set => SetProperty(ref _RefStudentSupportServiceTypeId, value); }
 
         #endregion
 
@@ -47,8 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            RefStudentSupportServiceTypeId = model.RefStudentSupportServiceTypeId;
+            RefStudentSupportServiceTypeId = model.RefStudentSupportServiceTypeId; // Student Support Service Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

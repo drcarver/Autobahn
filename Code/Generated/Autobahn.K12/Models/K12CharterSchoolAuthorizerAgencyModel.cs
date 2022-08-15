@@ -13,15 +13,5 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12CharterSchoolAuthorizerAgencyModel : AutobahnBase, Interfaces.IK12CharterSchoolAuthorizerAgency
     {
-        /// <summary>
-        /// The type of agency that authorized the establishment or continuation of a charter school.
-        /// </summary>
-        public Guid? OrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of agency that authorized the establishment or continuation of a charter school.
-        /// </summary>
-        public Guid RefCharterSchoolAuthorizerTypeId { get; set; }
-
     }
 }

@@ -13,35 +13,5 @@ namespace Autobahn.EarlyLearning.Models
      /// </summary>
     public partial class ELOrganizationMonitoringModel : AutobahnBase, Interfaces.IELOrganizationMonitoring
     {
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public Guid? RefOrganizationMonitoringNotificationsId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public Guid? RefPurposeOfMonitoringVisitId { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public System.String TypeOfMonitoring { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public System.DateTime? VisitEndDate { get; set; }
-
-        /// <summary>
-        /// Whether the organization received notification about monitoring
-        /// </summary>
-        public System.DateTime? VisitStartDate { get; set; }
-
     }
 }

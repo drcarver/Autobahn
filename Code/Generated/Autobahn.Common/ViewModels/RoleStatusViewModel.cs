@@ -3,6 +3,9 @@
 //* FileName:   RoleStatusViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,17 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from RoleStatus";
 
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         // member variable for the RefRoleStatusId property
         private Guid? _RefRoleStatusId;
-
-        // member variable for the StatusEndDate property
-        private System.DateTime? _StatusEndDate;
-
-        // member variable for the StatusStartDate property
-        private System.DateTime _StatusStartDate;
 
         #endregion
 
@@ -35,24 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefRoleStatus"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19094">Enrollment Status</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Enrollment Status")]
         public Guid? RefRoleStatusId { get => _RefRoleStatusId; set => SetProperty(ref _RefRoleStatusId, value); }
-
-        /// <summary>
-        /// An indication as to whether a student's name was, is, or will be officially registered on the roll of a school or schools.
-        /// </summary>
-        public System.DateTime? StatusEndDate { get => _StatusEndDate; set => SetProperty(ref _StatusEndDate, value); }
-
-        /// <summary>
-        /// An indication as to whether a student's name was, is, or will be officially registered on the roll of a school or schools.
-        /// </summary>
-        public System.DateTime StatusStartDate { get => _StatusStartDate; set => SetProperty(ref _StatusStartDate, value); }
 
         #endregion
 
@@ -63,10 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
-            RefRoleStatusId = model.RefRoleStatusId;
-            StatusEndDate = model.StatusEndDate;
-            StatusStartDate = model.StatusStartDate;
+            RefRoleStatusId = model.RefRoleStatusId; // Enrollment Status
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

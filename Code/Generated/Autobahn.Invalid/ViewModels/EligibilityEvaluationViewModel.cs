@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,9 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from EligibilityEvaluation";
 
-        // member variable for the EvaluationDate property
-        private System.DateTime? _EvaluationDate;
-
         #endregion
 
         #region Properties
@@ -27,11 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the EligibilityEvaluationViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Description of evaluation procedure and result used for determining eligibility.
-        /// </summary>
-        public System.DateTime? EvaluationDate { get => _EvaluationDate; set => SetProperty(ref _EvaluationDate, value); }
 
         #endregion
 
@@ -42,7 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            EvaluationDate = model.EvaluationDate;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,15 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProgramParticipationWIOA";
 
-        // member variable for the PersonProgramParticipationId property
-        private Guid _PersonProgramParticipationId;
-
-        // member variable for the WIOACareerServices property
-        private System.Boolean? _WIOACareerServices;
-
-        // member variable for the WIOATrainingServices property
-        private System.Boolean? _WIOATrainingServices;
-
         #endregion
 
         #region Properties
@@ -33,21 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the ProgramParticipationWIOAViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="PersonProgramParticipation"/> model
-        /// </summary>
-        public Guid PersonProgramParticipationId { get => _PersonProgramParticipationId; set => SetProperty(ref _PersonProgramParticipationId, value); }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.Boolean? WIOACareerServices { get => _WIOACareerServices; set => SetProperty(ref _WIOACareerServices, value); }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        public System.Boolean? WIOATrainingServices { get => _WIOATrainingServices; set => SetProperty(ref _WIOATrainingServices, value); }
 
         #endregion
 
@@ -58,9 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PersonProgramParticipationId = model.PersonProgramParticipationId;
-            WIOACareerServices = model.WIOACareerServices;
-            WIOATrainingServices = model.WIOATrainingServices;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

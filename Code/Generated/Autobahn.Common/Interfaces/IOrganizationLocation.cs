@@ -14,16 +14,6 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// The type of address listed for an organization.
         /// </summary>
-        Guid LocationId { get; set; }
-
-        /// <summary>
-        /// The type of address listed for an organization.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The type of address listed for an organization.
-        /// </summary>
         Guid? RefOrganizationLocationTypeId { get; set; }
 
     }

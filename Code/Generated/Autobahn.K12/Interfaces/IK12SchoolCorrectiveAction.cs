@@ -15,11 +15,6 @@ namespace Autobahn.K12.Interfaces
         /// <summary>
         /// The types of corrective actions under ESEA as amended.
         /// </summary>
-        Guid K12SchoolId { get; set; }
-
-        /// <summary>
-        /// The types of corrective actions under ESEA as amended.
-        /// </summary>
         Guid RefCorrectiveActionTypeId { get; set; }
 
     }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -16,12 +19,6 @@ namespace Autobahn.Invalid.ViewModels
         #region "Backing Fields"
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramGoal";
-
-        // member variable for the GoalId property
-        private Guid _GoalId;
-
-        // member variable for the IndividualizedProgramId property
-        private Guid _IndividualizedProgramId;
 
         // member variable for the RefIEPGoalTypeId property
         private Guid? _RefIEPGoalTypeId;
@@ -35,18 +32,12 @@ namespace Autobahn.Invalid.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Goal"/> model
-        /// </summary>
-        public Guid GoalId { get => _GoalId; set => SetProperty(ref _GoalId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IndividualizedProgram"/> model
-        /// </summary>
-        public Guid IndividualizedProgramId { get => _IndividualizedProgramId; set => SetProperty(ref _IndividualizedProgramId, value); }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="RefIEPGoalType"/> model
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20679">IEP Goal Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("IEP Goal Type")]
         public Guid? RefIEPGoalTypeId { get => _RefIEPGoalTypeId; set => SetProperty(ref _RefIEPGoalTypeId, value); }
 
         #endregion
@@ -58,9 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            GoalId = model.GoalId;
-            IndividualizedProgramId = model.IndividualizedProgramId;
-            RefIEPGoalTypeId = model.RefIEPGoalTypeId;
+            RefIEPGoalTypeId = model.RefIEPGoalTypeId; // IEP Goal Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,15 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentSubtestELDevelopmentalDomain : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid AssessmentSubtestId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid RefAssessmentELDevelopmentalDomainId { get; set; }
-
     }
 }

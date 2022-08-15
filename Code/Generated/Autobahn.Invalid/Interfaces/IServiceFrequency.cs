@@ -15,27 +15,7 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// The unit of time by which a cycle is defined.
         /// </summary>
-        System.Int32? DurationInMinutes { get; set; }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        System.Int32? FrequencyLength { get; set; }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        System.Int32? InstancesPerCycle { get; set; }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
         Guid? RefFrequencyUnitId { get; set; }
-
-        /// <summary>
-        /// The unit of time by which a cycle is defined.
-        /// </summary>
-        Guid ServicePlanId { get; set; }
 
     }
 }

@@ -15,41 +15,6 @@ namespace Autobahn.Assessments.Interfaces
         /// <summary>
         /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
         /// </summary>
-        Guid? AssessmentPersonalNeedsProfileDisplayId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        System.Decimal? BrailleDotPressure { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        System.Int32? NumberOfBrailleCells { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        Guid? RefAssessmentNeedBrailleGradeTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        Guid? RefAssessmentNeedBrailleMarkTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        Guid? RefAssessmentNeedBrailleStatusCellTypeId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
-        Guid? RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
-
-        /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
-        /// </summary>
         Guid? RefAssessmentNeedUsageTypeId { get; set; }
 
     }

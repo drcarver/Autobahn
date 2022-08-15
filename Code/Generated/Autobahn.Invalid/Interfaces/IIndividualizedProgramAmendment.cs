@@ -15,11 +15,6 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// Description of the reason changes were made to the individualized program service plan.
         /// </summary>
-        Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// Description of the reason changes were made to the individualized program service plan.
-        /// </summary>
         System.String ReasonDescription { get; set; }
 
     }

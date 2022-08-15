@@ -12,25 +12,5 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IGoal : IAutobahnBase
     {
-        /// <summary>
-        /// A statement that describes the desired outcomes.
-        /// </summary>
-        Guid? CompetencySetId { get; set; }
-
-        /// <summary>
-        /// A statement that describes the desired outcomes.
-        /// </summary>
-        System.DateTime? EndDate { get; set; }
-
-        /// <summary>
-        /// A statement that describes the desired outcomes.
-        /// </summary>
-        Guid? OrganizationPersonRoleId { get; set; }
-
-        /// <summary>
-        /// A statement that describes the desired outcomes.
-        /// </summary>
-        System.DateTime? StartDate { get; set; }
-
     }
 }

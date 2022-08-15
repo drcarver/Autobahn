@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Credentials.ViewModels
 {
      /// <summary>
@@ -17,12 +20,6 @@ namespace Autobahn.Credentials.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CredentialCriteriaCourse";
 
-        // member variable for the CourseId property
-        private Guid _CourseId;
-
-        // member variable for the CredentialDefCriteriaId property
-        private Guid _CredentialDefCriteriaId;
-
         #endregion
 
         #region Properties
@@ -30,16 +27,6 @@ namespace Autobahn.Credentials.ViewModels
         /// The title of the CredentialCriteriaCourseViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Course"/> model
-        /// </summary>
-        public Guid CourseId { get => _CourseId; set => SetProperty(ref _CourseId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="CredentialDefCriteria"/> model
-        /// </summary>
-        public Guid CredentialDefCriteriaId { get => _CredentialDefCriteriaId; set => SetProperty(ref _CredentialDefCriteriaId, value); }
 
         #endregion
 
@@ -50,8 +37,6 @@ namespace Autobahn.Credentials.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            CourseId = model.CourseId;
-            CredentialDefCriteriaId = model.CredentialDefCriteriaId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

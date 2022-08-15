@@ -16,20 +16,5 @@ namespace Autobahn.Common.Interfaces
         /// </summary>
         System.Boolean? FullTimeBenefitIndicator { get; set; }
 
-        /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
-        /// </summary>
-        Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
-        /// </summary>
-        System.Boolean? PartTimeBenefitIndicator { get; set; }
-
-        /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
-        /// </summary>
-        Guid? RefEmployeeBenefitId { get; set; }
-
     }
 }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.K12.ViewModels
 {
      /// <summary>
@@ -20,12 +23,6 @@ namespace Autobahn.K12.ViewModels
         // member variable for the GradePointAverageGivenSession property
         private System.Decimal? _GradePointAverageGivenSession;
 
-        // member variable for the OrganizationCalendarSessionId property
-        private Guid? _OrganizationCalendarSessionId;
-
-        // member variable for the OrganizationPersonRoleId property
-        private Guid _OrganizationPersonRoleId;
-
         #endregion
 
         #region Properties
@@ -36,18 +33,12 @@ namespace Autobahn.K12.ViewModels
 
         /// <summary>
         /// A measure of average performance in all courses taken by a person during a given session. This is obtained by dividing the total grade points received by the number of credits attempted for the same session.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19129">Grade Point Average Given Session</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Grade Point Average Given Session")]
         public System.Decimal? GradePointAverageGivenSession { get => _GradePointAverageGivenSession; set => SetProperty(ref _GradePointAverageGivenSession, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationCalendarSession"/> model
-        /// </summary>
-        public Guid? OrganizationCalendarSessionId { get => _OrganizationCalendarSessionId; set => SetProperty(ref _OrganizationCalendarSessionId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="OrganizationPersonRole"/> model
-        /// </summary>
-        public Guid OrganizationPersonRoleId { get => _OrganizationPersonRoleId; set => SetProperty(ref _OrganizationPersonRoleId, value); }
 
         #endregion
 
@@ -58,9 +49,7 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            GradePointAverageGivenSession = model.GradePointAverageGivenSession;
-            OrganizationCalendarSessionId = model.OrganizationCalendarSessionId;
-            OrganizationPersonRoleId = model.OrganizationPersonRoleId;
+            GradePointAverageGivenSession = model.GradePointAverageGivenSession; // Grade Point Average Given Session
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

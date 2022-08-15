@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -20,9 +23,6 @@ namespace Autobahn.Invalid.ViewModels
         // member variable for the ActivityDescription property
         private System.String _ActivityDescription;
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
         #endregion
 
         #region Properties
@@ -33,13 +33,12 @@ namespace Autobahn.Invalid.ViewModels
 
         /// <summary>
         /// A description of the events and procedures that take place under the purview of an organized activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20505">Activity Description</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Activity Description")]
         public System.String ActivityDescription { get => _ActivityDescription; set => SetProperty(ref _ActivityDescription, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
 
         #endregion
 
@@ -50,8 +49,7 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivityDescription = model.ActivityDescription;
-            OrganizationId = model.OrganizationId;
+            ActivityDescription = model.ActivityDescription; // Activity Description
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

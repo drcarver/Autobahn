@@ -12,15 +12,5 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IIndividualizedProgramServicesReceived : IAutobahnBase
     {
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// The start date and, optionally, time that a record is active as used to support version control.
-        /// </summary>
-        Guid ServicesReceivedId { get; set; }
-
     }
 }

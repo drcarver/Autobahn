@@ -16,22 +16,7 @@ namespace Autobahn.EarlyLearning.Models
         /// <summary>
         /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
         /// </summary>
-        public System.DateTime? FosterCareEndDate { get; set; }
-
-        /// <summary>
-        /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
-        /// </summary>
-        public System.DateTime? FosterCareStartDate { get; set; }
-
-        /// <summary>
-        /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
-        /// </summary>
         public System.Boolean? OtherRaceIndicator { get; set; }
-
-        /// <summary>
-        /// Race other than American Indian, Black, Asian, White, Native Pacific Islander
-        /// </summary>
-        public Guid PersonId { get; set; }
 
     }
 }

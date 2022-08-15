@@ -67,18 +67,7 @@ namespace AutobahnCodeGen
 
             var cnt = autobahnTables.Count(t => t.TableName != t.ModelName);
 
-            foreach (var item in autobahnTables.Where(t => t.TableName != t.ModelName).ToList())
-            {
-                if (string.IsNullOrEmpty(item.ModelName) && !string.IsNullOrEmpty(item.TableName))
-                {
-                    item.ModelName = item.TableName;
-                }
-                if (!string.IsNullOrEmpty(item.ModelName) && string.IsNullOrEmpty(item.TableName))
-                {
-                    item.TableName = item.ModelName;
-                }
-            }
-
+            // reset the model name to the table name when they are not
             foreach (var item in autobahnTables.Where(t => t.TableName != t.ModelName).ToList())
             {
                 item.ModelName = item.TableName;
@@ -107,7 +96,8 @@ namespace AutobahnCodeGen
                     table.AutobahnDomainId = aedom?.Id;
                 }
                 if (table.ModelName.StartsWith("EL")
-                    || table.ModelName.StartsWith("EarlyChildhood"))
+                    || table.ModelName.StartsWith("EarlyChildhood")
+                    || table.ModelName.EndsWith("EL"))
                 {
                     table.AutobahnDomainId = eldom?.Id;
                 }
@@ -171,22 +161,7 @@ namespace AutobahnCodeGen
                 {
                     table.AutobahnDomainId = wfdom?.Id;
                 }
-                if (table.AutobahnDomainId == null)
-                {
-                    table.AutobahnDomainId = invaliddom?.Id;
-                }
-            }
-
-            // Set the reference to the correct domain
-            foreach (var table in autobahnTables.Where(t => t.ModelName.StartsWith("Ref")))
-            {
-                foreach (var col in autobahnTables.Where(c => c.ColumnName.StartsWith(table.ModelName)))
-                {
-                    if (table.AutobahnDomainId != col.AutobahnDomainId)
-                    {
-                        table.AutobahnDomainId = comdom.Id;
-                    }
-                }
+                table.AutobahnDomainId ??= invaliddom?.Id;
             }
 
             // Write the updated table file
@@ -195,7 +170,7 @@ namespace AutobahnCodeGen
             return autobahnTables;
         }
 
-        private static List<AutobahnElement> GetAutobahnElements(List<AutobahnTable> tables, Assembly types)
+        private static List<AutobahnElement> GetAutobahnElements(List<AutobahnDomain> domains,  List<AutobahnTable> tables, Assembly types)
         {
             var csv = new CSVServices();
             var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
@@ -204,41 +179,39 @@ namespace AutobahnCodeGen
             // create a lookup table of models to properties
             foreach (var model in types.GetTypes().ToList())
             {
-                var modelName = model.Name;
-                if (model.Name.EndsWith("Statu"))
+                if (!model.IsClass)
                 {
-                    modelName = modelName.Replace("Statu", "Status");
+                    continue;
                 }
-                var tableMeta = tables.FirstOrDefault(t => t.ModelName == modelName);
-                List<string> propertiesToIgnore = new List<string>
-                {
-                    "RecordStartDateTime",
-                    "RecordEndDateTime",
-                    "RecordStatusId",
-                    "Description",
-                    "Code",
-                    "Definition",
-                    "RefJurisdictionId",
-                    "SortOrder",
-                    "DataCollectionId",
-                    $"{modelName}Id"
-                };
 
                 // Copy over the element data
                 foreach (var prop in model.GetProperties())
                 {
                     CEDSElement? elementMeta;
-        
+
+                    var tableMeta = tables.FirstOrDefault(t => t.ModelName == model.Name && t.ColumnName == prop.Name);
+                    List<string> propertiesToIgnore = new List<string>
+                    {
+                        "RecordStartDateTime",
+                        "RecordEndDateTime",
+                        "RecordStatusId",
+                        "Description",
+                        "Code",
+                        "Definition",
+                        "RefJurisdictionId",
+                        "SortOrder",
+                        "DataCollectionId",
+                        $"{model.Name}Id"
+                    };
+
                     // no virtual properties.  We will handle those later as service calls
-                    if (propertiesToIgnore.Contains(prop.Name))
+                    if (propertiesToIgnore.Contains(prop.Name)
+                        || prop.GetAccessors()[0].IsVirtual)
                     {
                         continue;
                     }
+
                     var propName = prop.Name;
-                    if (prop.Name.EndsWith("Statu"))
-                    {
-                        propName = propName.Replace("Statu", "Status");
-                    }
                     if (tableMeta == null)
                     {
                         string propAsTable = propName;
@@ -246,10 +219,9 @@ namespace AutobahnCodeGen
                         {
                             propAsTable = propName.Replace("Id", String.Empty);
                         }
-                        tableMeta = tables.FirstOrDefault(t => t.ModelName == modelName
-                                                               && t.ColumnName == propAsTable);
+                        tableMeta = tables.FirstOrDefault(t => t.ModelName == propAsTable
+                                                               && t.ColumnName == null);
                     }
-
                     string propertype = string.Empty;
                     if (propName.EndsWith("Id"))
                     {
@@ -261,24 +233,30 @@ namespace AutobahnCodeGen
                             ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?" 
                             : $"{prop.PropertyType}";
                     }
-                    elementMeta = CEDSElements.FirstOrDefault(e => e.GlobalID == tableMeta?.GlobalId);
-                    var autobahnElement = new AutobahnElement
+                    elementMeta = CEDSElements.FirstOrDefault(e => e.GlobalID == tableMeta?.GlobalId) 
+                                  ?? CEDSElements.FirstOrDefault(e => e.TechnicalName == prop.Name);
+                    var autobahnElement = autobahnElements.FirstOrDefault(e => e.TechnicalName == propName);
+                    if (autobahnElement == null)
                     {
-                        PropertyType = propertype,
-                        TechnicalName = propName,
-                        AltName = elementMeta?.AlternateName,
-                        ChangeNotes = elementMeta?.ChangeNotes,
-                        Definition = elementMeta?.Definition,
-                        ElementName = elementMeta?.ElementName,
-                        Format = elementMeta?.Format,
-                        GlobalId = elementMeta?.GlobalID,
-                        HasOptionSet = elementMeta?.OptionSet,
-                        TermID = elementMeta?.TermId,
-                        URL = elementMeta?.URL,
-                        UsageNotes = elementMeta?.UsageNotes,
-                        Version = elementMeta?.Version,
-                        IsVirtual = prop.GetAccessors()[0].IsVirtual
-                    };
+                        autobahnElement = new AutobahnElement
+                        {
+                            PropertyType = propertype,
+                            TechnicalName = propName,
+                            AltName = elementMeta?.AlternateName,
+                            ChangeNotes = elementMeta?.ChangeNotes,
+                            Definition = elementMeta?.Definition,
+                            ElementName = elementMeta?.ElementName,
+                            Format = elementMeta?.Format,
+                            GlobalId = elementMeta?.TechnicalName == null ? null : elementMeta?.GlobalID,
+                            HasOptionSet = elementMeta?.OptionSet,
+                            TermID = elementMeta?.TermId,
+                            URL = elementMeta?.URL,
+                            UsageNotes = elementMeta?.UsageNotes,
+                            Version = elementMeta?.Version,
+                            IsVirtual = prop.GetAccessors()[0].IsVirtual
+                        };
+                        autobahnElements.Add(autobahnElement);
+                    }
                     if (!autobahnElement.AutobahnDomainList.Contains(tableMeta?.AutobahnDomainId))
                     {
                         autobahnElement.AutobahnDomainList.Add(tableMeta?.AutobahnDomainId);
@@ -287,7 +265,16 @@ namespace AutobahnCodeGen
                     {
                         autobahnElement.AutobahnTableList.Add(tableMeta?.Id);
                     }
-                    autobahnElements.Add(autobahnElement);
+                }
+            }
+
+            var comdom = domains.First(d => d.Module == "Common");
+            foreach (var element in autobahnElements)
+            {
+                if (element.AutobahnDomainList.Count > 1)
+                {
+                    element.AutobahnDomainList.Clear();
+                    element.AutobahnDomainList.Add(comdom.Id);
                 }
             }
 
@@ -304,7 +291,16 @@ namespace AutobahnCodeGen
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
             var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
             var autobahnTables = GetAutobahnTables(types, autobahnDomains);
-            var autobahnElements = GetAutobahnElements(autobahnTables, types);
+            var autobahnElements = GetAutobahnElements(autobahnDomains, autobahnTables, types);
+            
+            var sdcnt = autobahnElements.Count(e => e.AutobahnDomainList.Count == 1);
+
+            var secnt = autobahnElements.Count(e => e.AutobahnTableList.Count == 1);
+            var mecnt = autobahnElements.Count(e => e.AutobahnTableList.Count > 1);
+
+            var refcnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref"));
+            var refscnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref") && e.AutobahnTableList.Count == 1);
+            var refmcnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref") && e.AutobahnTableList.Count > 1);
 
             MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements);
         }

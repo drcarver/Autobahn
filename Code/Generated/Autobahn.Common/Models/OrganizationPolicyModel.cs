@@ -14,17 +14,7 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// Policies related to personnel in the organization.
         /// </summary>
-        public Guid OrganizationId { get; set; }
-
-        /// <summary>
-        /// Policies related to personnel in the organization.
-        /// </summary>
         public System.String PolicyType { get; set; }
-
-        /// <summary>
-        /// Policies related to personnel in the organization.
-        /// </summary>
-        public System.String Value { get; set; }
 
     }
 }

@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Assessments.ViewModels
 {
      /// <summary>
@@ -17,26 +20,8 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentPerformanceLevel";
 
-        // member variable for the AssessmentSubtestId property
-        private Guid? _AssessmentSubtestId;
-
-        // member variable for the DescriptiveFeedback property
-        private System.String _DescriptiveFeedback;
-
-        // member variable for the Identifier property
-        private System.String _Identifier;
-
-        // member variable for the Label property
-        private System.String _Label;
-
-        // member variable for the LowerCutScore property
-        private System.String _LowerCutScore;
-
         // member variable for the ScoreMetric property
         private System.String _ScoreMetric;
-
-        // member variable for the UpperCutScore property
-        private System.String _UpperCutScore;
 
         #endregion
 
@@ -47,39 +32,13 @@ namespace Autobahn.Assessments.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="AssessmentSubtest"/> model
-        /// </summary>
-        public Guid? AssessmentSubtestId { get => _AssessmentSubtestId; set => SetProperty(ref _AssessmentSubtestId, value); }
-
-        /// <summary>
         /// The metric or scale used for score reporting.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19407">Assessment Performance Level Score Metric</a>
+        /// </para>
         /// </summary>
-        public System.String DescriptiveFeedback { get => _DescriptiveFeedback; set => SetProperty(ref _DescriptiveFeedback, value); }
-
-        /// <summary>
-        /// The metric or scale used for score reporting.
-        /// </summary>
-        public System.String Identifier { get => _Identifier; set => SetProperty(ref _Identifier, value); }
-
-        /// <summary>
-        /// The metric or scale used for score reporting.
-        /// </summary>
-        public System.String Label { get => _Label; set => SetProperty(ref _Label, value); }
-
-        /// <summary>
-        /// The metric or scale used for score reporting.
-        /// </summary>
-        public System.String LowerCutScore { get => _LowerCutScore; set => SetProperty(ref _LowerCutScore, value); }
-
-        /// <summary>
-        /// The metric or scale used for score reporting.
-        /// </summary>
+        [DisplayName("Assessment Performance Level Score Metric")]
         public System.String ScoreMetric { get => _ScoreMetric; set => SetProperty(ref _ScoreMetric, value); }
-
-        /// <summary>
-        /// The metric or scale used for score reporting.
-        /// </summary>
-        public System.String UpperCutScore { get => _UpperCutScore; set => SetProperty(ref _UpperCutScore, value); }
 
         #endregion
 
@@ -90,13 +49,7 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssessmentSubtestId = model.AssessmentSubtestId;
-            DescriptiveFeedback = model.DescriptiveFeedback;
-            Identifier = model.Identifier;
-            Label = model.Label;
-            LowerCutScore = model.LowerCutScore;
-            ScoreMetric = model.ScoreMetric;
-            UpperCutScore = model.UpperCutScore;
+            ScoreMetric = model.ScoreMetric; // Assessment Performance Level Score Metric
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

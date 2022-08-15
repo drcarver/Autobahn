@@ -16,27 +16,7 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
         /// </summary>
-        public Guid IndividualizedProgramId { get; set; }
-
-        /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// </summary>
-        public Guid IndividualizedProgramProgressReportPlanId { get; set; }
-
-        /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// </summary>
-        public System.String ProgressDescription { get; set; }
-
-        /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// </summary>
         public System.DateTime? ProgressReportDate { get; set; }
-
-        /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// </summary>
-        public Guid? RefIPSPProgressReportTypeId { get; set; }
 
     }
 }

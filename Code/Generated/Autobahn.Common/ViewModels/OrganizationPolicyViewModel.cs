@@ -3,6 +3,9 @@
 //* FileName:   OrganizationPolicyViewModel.cs
 //**********************************************************
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Common.ViewModels
 {
      /// <summary>
@@ -14,14 +17,8 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationPolicy";
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
         // member variable for the PolicyType property
         private System.String _PolicyType;
-
-        // member variable for the Value property
-        private System.String _Value;
 
         #endregion
 
@@ -32,19 +29,13 @@ namespace Autobahn.Common.ViewModels
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
         /// Policies related to personnel in the organization.
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19842">Personnel Policy Type</a>
+        /// </para>
         /// </summary>
+        [DisplayName("Personnel Policy Type")]
         public System.String PolicyType { get => _PolicyType; set => SetProperty(ref _PolicyType, value); }
-
-        /// <summary>
-        /// Policies related to personnel in the organization.
-        /// </summary>
-        public System.String Value { get => _Value; set => SetProperty(ref _Value, value); }
 
         #endregion
 
@@ -55,9 +46,7 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            PolicyType = model.PolicyType;
-            Value = model.Value;
+            PolicyType = model.PolicyType; // Personnel Policy Type
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

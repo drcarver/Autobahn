@@ -6,6 +6,9 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.ViewModels;
 
+using System.ComponentModel;
+using System.Windows.Input;
+
 namespace Autobahn.Invalid.ViewModels
 {
      /// <summary>
@@ -17,15 +20,6 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ServiceProvider";
 
-        // member variable for the OrganizationId property
-        private Guid _OrganizationId;
-
-        // member variable for the ServiceProvidedId property
-        private Guid _ServiceProvidedId;
-
-        // member variable for the ServiceStaffId property
-        private Guid _ServiceStaffId;
-
         #endregion
 
         #region Properties
@@ -33,21 +27,6 @@ namespace Autobahn.Invalid.ViewModels
         /// The title of the ServiceProviderViewModel
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="Organization"/> model
-        /// </summary>
-        public Guid OrganizationId { get => _OrganizationId; set => SetProperty(ref _OrganizationId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ServiceProvided"/> model
-        /// </summary>
-        public Guid ServiceProvidedId { get => _ServiceProvidedId; set => SetProperty(ref _ServiceProvidedId, value); }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="ServiceStaff"/> model
-        /// </summary>
-        public Guid ServiceStaffId { get => _ServiceStaffId; set => SetProperty(ref _ServiceStaffId, value); }
 
         #endregion
 
@@ -58,9 +37,6 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            OrganizationId = model.OrganizationId;
-            ServiceProvidedId = model.ServiceProvidedId;
-            ServiceStaffId = model.ServiceStaffId;
             _isChanged = false;
             IsNew = false;
             IsBusy = false;
