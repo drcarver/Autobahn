@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonHomelessness : IAutobahnBase
     {
         /// <summary>
-        /// The primary nighttime residence of the person at the time the person was identified as homeless.
+        /// 
         /// </summary>
-        Guid RefHomelessNighttimeResidenceId { get; set; }
+         HomelessnessStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefHomelessNighttimeResidenceId { get; set; }
 
     }
 }

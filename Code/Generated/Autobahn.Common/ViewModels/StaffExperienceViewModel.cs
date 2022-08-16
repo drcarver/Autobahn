@@ -17,25 +17,41 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from StaffExperience";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the YearsOfPriorAETeachingExperience property
+        private  _YearsOfPriorAETeachingExperience;
+
         // member variable for the YearsOfPriorTeachingExperience property
-        private System.Decimal? _YearsOfPriorTeachingExperience;
+        private Guid? _YearsOfPriorTeachingExperience;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the StaffExperienceViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The total number of years prior to this job that a person has previously held a teaching position in one or more education institutions.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19302">Years of Prior Teaching Experience</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Years of Prior Teaching Experience")]
-        public System.Decimal? YearsOfPriorTeachingExperience { get => _YearsOfPriorTeachingExperience; set => SetProperty(ref _YearsOfPriorTeachingExperience, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  YearsOfPriorAETeachingExperience { get => _YearsOfPriorAETeachingExperience; set => SetProperty(ref _YearsOfPriorAETeachingExperience, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? YearsOfPriorTeachingExperience { get => _YearsOfPriorTeachingExperience; set => SetProperty(ref _YearsOfPriorTeachingExperience, value); }
 
         #endregion
 
@@ -46,7 +62,10 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            YearsOfPriorTeachingExperience = model.YearsOfPriorTeachingExperience; // Years of Prior Teaching Experience
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            YearsOfPriorAETeachingExperience = model.YearsOfPriorAETeachingExperience; // 
+            YearsOfPriorTeachingExperience = model.YearsOfPriorTeachingExperience; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

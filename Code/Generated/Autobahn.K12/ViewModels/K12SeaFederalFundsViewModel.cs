@@ -20,25 +20,55 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12SeaFederalFunds";
 
+        // member variable for the DateStateReceivedTitleIIIAllocation property
+        private  _DateStateReceivedTitleIIIAllocation;
+
+        // member variable for the DateTitleIIIFundsAvailableToSubgrantees property
+        private  _DateTitleIIIFundsAvailableToSubgrantees;
+
+        // member variable for the NumberOfDaysForTitleIIISubgrants property
+        private  _NumberOfDaysForTitleIIISubgrants;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the StateTransferabilityOfFunds property
-        private System.Boolean? _StateTransferabilityOfFunds;
+        private Guid? _StateTransferabilityOfFunds;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the K12SeaFederalFundsViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19435">State Transferability of Funds</a>
-        /// </para>
         /// </summary>
-        [DisplayName("State Transferability of Funds")]
-        public System.Boolean? StateTransferabilityOfFunds { get => _StateTransferabilityOfFunds; set => SetProperty(ref _StateTransferabilityOfFunds, value); }
+        public  DateStateReceivedTitleIIIAllocation { get => _DateStateReceivedTitleIIIAllocation; set => SetProperty(ref _DateStateReceivedTitleIIIAllocation, value); }
+
+        /// <summary>
+        /// </summary>
+        public  DateTitleIIIFundsAvailableToSubgrantees { get => _DateTitleIIIFundsAvailableToSubgrantees; set => SetProperty(ref _DateTitleIIIFundsAvailableToSubgrantees, value); }
+
+        /// <summary>
+        /// </summary>
+        public  NumberOfDaysForTitleIIISubgrants { get => _NumberOfDaysForTitleIIISubgrants; set => SetProperty(ref _NumberOfDaysForTitleIIISubgrants, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? StateTransferabilityOfFunds { get => _StateTransferabilityOfFunds; set => SetProperty(ref _StateTransferabilityOfFunds, value); }
 
         #endregion
 
@@ -49,7 +79,12 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            StateTransferabilityOfFunds = model.StateTransferabilityOfFunds; // State Transferability of Funds
+            DateStateReceivedTitleIIIAllocation = model.DateStateReceivedTitleIIIAllocation; // 
+            DateTitleIIIFundsAvailableToSubgrantees = model.DateTitleIIIFundsAvailableToSubgrantees; // 
+            NumberOfDaysForTitleIIISubgrants = model.NumberOfDaysForTitleIIISubgrants; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            StateTransferabilityOfFunds = model.StateTransferabilityOfFunds; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

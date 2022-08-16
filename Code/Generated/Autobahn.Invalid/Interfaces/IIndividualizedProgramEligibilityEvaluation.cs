@@ -13,7 +13,17 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramEligibilityEvaluation : IAutobahnBase
     {
         /// <summary>
-        /// Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefIEPEligibilityEvaluationTypeId { get; set; }
 

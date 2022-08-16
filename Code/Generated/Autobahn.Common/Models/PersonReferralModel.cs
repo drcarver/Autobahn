@@ -12,9 +12,44 @@ namespace Autobahn.Common.Models
     public partial class PersonReferralModel : AutobahnBase, Interfaces.IPersonReferral
     {
         /// <summary>
-        /// The date of referral.
+        /// 
         /// </summary>
-        public System.DateTime? ReferralDate { get; set; }
+        public  Reason { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ReferralDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ReferralTypeReceived { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ReferredTo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefReferralOutcomeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Source { get; set; }
 
     }
 }

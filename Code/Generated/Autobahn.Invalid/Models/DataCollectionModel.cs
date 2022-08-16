@@ -14,9 +14,49 @@ namespace Autobahn.Invalid.Models
     public partial class DataCollectionModel : AutobahnBase, Interfaces.IDataCollection
     {
         /// <summary>
-        /// The year for a reported school session for which the data is applicable.
+        /// 
         /// </summary>
-        public System.String DataCollectionAcademicSchoolYear { get; set; }
+        public Guid? DataCollectionAcademicSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DataCollectionCloseDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DataCollectionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DataCollectionName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DataCollectionOpenDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DataCollectionSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefDataCollectionStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SourceSystemDataCollectionIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SourceSystemName { get; set; }
 
     }
 }

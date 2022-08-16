@@ -16,7 +16,17 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// 
         /// </summary>
+        public Guid? Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public System.String Module { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String Name { get; set; }
 
     }
 }

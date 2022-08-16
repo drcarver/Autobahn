@@ -14,9 +14,34 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityEnergyModel : AutobahnBase, Interfaces.IFacilityEnergy
     {
         /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
+        /// 
         /// </summary>
-        public System.String BuildingEnergyServiceCompanyName { get; set; }
+        public Guid? BuildingEnergyServiceCompanyName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingEnergySourceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityUtilityProviderTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityUtilityTypeId { get; set; }
 
     }
 }

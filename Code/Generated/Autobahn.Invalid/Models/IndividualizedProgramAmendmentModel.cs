@@ -14,9 +14,24 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramAmendmentModel : AutobahnBase, Interfaces.IIndividualizedProgramAmendment
     {
         /// <summary>
-        /// Description of the reason changes were made to the individualized program service plan.
+        /// 
         /// </summary>
-        public System.String ReasonDescription { get; set; }
+        public  Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ReasonDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -14,9 +14,34 @@ namespace Autobahn.K12.Models
     public partial class K12SeaFederalFundsModel : AutobahnBase, Interfaces.IK12SeaFederalFunds
     {
         /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
+        /// 
         /// </summary>
-        public System.Boolean? StateTransferabilityOfFunds { get; set; }
+        public  DateStateReceivedTitleIIIAllocation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DateTitleIIIFundsAvailableToSubgrantees { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfDaysForTitleIIISubgrants { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? StateTransferabilityOfFunds { get; set; }
 
     }
 }

@@ -20,25 +20,65 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramService";
 
+        // member variable for the PlannedServiceDuration property
+        private  _PlannedServiceDuration;
+
         // member variable for the PlannedServiceStartDate property
-        private System.DateTime? _PlannedServiceStartDate;
+        private Guid? _PlannedServiceStartDate;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefIndividualizedProgramPlannedServiceTypeId property
+        private  _RefIndividualizedProgramPlannedServiceTypeId;
+
+        // member variable for the RefMethodOfServiceDeliveryId property
+        private  _RefMethodOfServiceDeliveryId;
+
+        // member variable for the RefServiceFrequencyId property
+        private  _RefServiceFrequencyId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the IndividualizedProgramServiceViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The date the service is planned to begin.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20350">Individualized Program Planned Service Start Date</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Individualized Program Planned Service Start Date")]
-        public System.DateTime? PlannedServiceStartDate { get => _PlannedServiceStartDate; set => SetProperty(ref _PlannedServiceStartDate, value); }
+        public  PlannedServiceDuration { get => _PlannedServiceDuration; set => SetProperty(ref _PlannedServiceDuration, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? PlannedServiceStartDate { get => _PlannedServiceStartDate; set => SetProperty(ref _PlannedServiceStartDate, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramPlannedServiceType"/> model
+        /// </summary>
+        public  RefIndividualizedProgramPlannedServiceTypeId { get => _RefIndividualizedProgramPlannedServiceTypeId; set => SetProperty(ref _RefIndividualizedProgramPlannedServiceTypeId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefMethodOfServiceDelivery"/> model
+        /// </summary>
+        public  RefMethodOfServiceDeliveryId { get => _RefMethodOfServiceDeliveryId; set => SetProperty(ref _RefMethodOfServiceDeliveryId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefServiceFrequency"/> model
+        /// </summary>
+        public  RefServiceFrequencyId { get => _RefServiceFrequencyId; set => SetProperty(ref _RefServiceFrequencyId, value); }
 
         #endregion
 
@@ -49,7 +89,13 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PlannedServiceStartDate = model.PlannedServiceStartDate; // Individualized Program Planned Service Start Date
+            PlannedServiceDuration = model.PlannedServiceDuration; // 
+            PlannedServiceStartDate = model.PlannedServiceStartDate; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefIndividualizedProgramPlannedServiceTypeId = model.RefIndividualizedProgramPlannedServiceTypeId; // 
+            RefMethodOfServiceDeliveryId = model.RefMethodOfServiceDeliveryId; // 
+            RefServiceFrequencyId = model.RefServiceFrequencyId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -14,7 +14,17 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramEligibilityEvaluationModel : AutobahnBase, Interfaces.IIndividualizedProgramEligibilityEvaluation
     {
         /// <summary>
-        /// Purpose within the IEP lifecycle for which the eligibility evaluation is conducted.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefIEPEligibilityEvaluationTypeId { get; set; }
 

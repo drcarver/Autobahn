@@ -14,9 +14,19 @@ namespace Autobahn.LearningResources.Models
     public partial class LearningResourceAdaptationModel : AutobahnBase, Interfaces.ILearningResourceAdaptation
     {
         /// <summary>
-        /// The Uniform Resource Locator of a learning resource that is an adaptation for this resource.
+        /// 
         /// </summary>
-        public System.String AdaptationURL { get; set; }
+        public Guid? AdaptationURL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

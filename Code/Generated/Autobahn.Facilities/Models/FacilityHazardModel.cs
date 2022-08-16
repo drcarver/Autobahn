@@ -14,9 +14,49 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityHazardModel : AutobahnBase, Interfaces.IFacilityHazard
     {
         /// <summary>
-        /// The location at which the identified hazardous material is found.
+        /// 
         /// </summary>
-        public System.String FacilityLocationOfHazardousMaterials { get; set; }
+        public  FacilityHazardousCondExpectedRemediationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? FacilityLocationOfHazardousMaterials { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityNearbyEnvHazardDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  HazardousMaterialOrConditionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  HazardousMaterialOrConditionTestingDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 
     }
 }

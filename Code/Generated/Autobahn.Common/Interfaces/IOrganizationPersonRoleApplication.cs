@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPersonRoleApplication : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day on which an individual  application is received by the organization.
+        /// 
         /// </summary>
-        System.DateTime? ApplicationDate { get; set; }
+        Guid? ApplicationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

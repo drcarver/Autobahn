@@ -16,7 +16,22 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// 
         /// </summary>
+        public System.String ColumnName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public System.String GlobalID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String TableName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String Version { get; set; }
 
     }
 }

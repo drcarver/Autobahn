@@ -12,9 +12,44 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonDegreeOrCertificate : IAutobahnBase
     {
         /// <summary>
-        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// 
         /// </summary>
-        System.DateTime? AwardDate { get; set; }
+        Guid? AwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DegreeOrCertificateTitleOrSubject { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NameOfInstitution { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDegreeOrCertificateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEducationVerificationMethodId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
     }
 }

@@ -13,9 +13,34 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IGoalMeasurement : IAutobahnBase
     {
         /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
+        /// 
         /// </summary>
-        System.String SuccessCriteria { get; set; }
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefGoalMeasurementTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Schedule { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? SuccessCriteria { get; set; }
 
     }
 }

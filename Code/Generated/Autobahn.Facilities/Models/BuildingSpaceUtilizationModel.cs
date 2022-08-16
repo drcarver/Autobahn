@@ -14,7 +14,42 @@ namespace Autobahn.Facilities.Models
     public partial class BuildingSpaceUtilizationModel : AutobahnBase, Interfaces.IBuildingSpaceUtilization
     {
         /// <summary>
-        /// A designation as to whether the space is considered an instructional space under state or local guidelines.
+        /// 
+        /// </summary>
+        public  AvailableUtilizedInstructionalSpace { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingCapacityFactorIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingSpaceUtilizationArea { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingUnassignedSpaceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingCommunityUseSpaceTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 

@@ -13,7 +13,47 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IBuildingSystemComponent : IAutobahnBase
     {
         /// <summary>
-        /// The rating of the system or component functions under the demands of its regular operation.
+        /// 
+        /// </summary>
+         BuildingInstitutionalEquipmentDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ComponentOrFixtureUsefulLife { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InstallationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LifecycleCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityFurnishingsTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFacilitySystemOrComponentConditionId { get; set; }
 

@@ -13,9 +13,39 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramService : IAutobahnBase
     {
         /// <summary>
-        /// The date the service is planned to begin.
+        /// 
         /// </summary>
-        System.DateTime? PlannedServiceStartDate { get; set; }
+         PlannedServiceDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? PlannedServiceStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIndividualizedProgramPlannedServiceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMethodOfServiceDeliveryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefServiceFrequencyId { get; set; }
 
     }
 }

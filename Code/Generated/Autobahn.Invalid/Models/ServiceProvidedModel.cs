@@ -13,5 +13,25 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ServiceProvidedModel : AutobahnBase, Interfaces.IServiceProvided
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefServicesId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefStudentSupportServiceTypeId { get; set; }
+
     }
 }

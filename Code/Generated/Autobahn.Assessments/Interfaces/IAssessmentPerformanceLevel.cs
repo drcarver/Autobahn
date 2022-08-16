@@ -13,9 +13,44 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentPerformanceLevel : IAutobahnBase
     {
         /// <summary>
-        /// The metric or scale used for score reporting.
+        /// 
         /// </summary>
-        System.String ScoreMetric { get; set; }
+         DescriptiveFeedback { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Label { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LowerCutScore { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ScoreMetric { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         UpperCutScore { get; set; }
 
     }
 }

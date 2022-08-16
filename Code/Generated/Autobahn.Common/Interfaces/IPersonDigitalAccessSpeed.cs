@@ -11,5 +11,30 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IPersonDigitalAccessSpeed : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         InternetDownloadSpeed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InternetSpeedTestDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InternetUploadSpeed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

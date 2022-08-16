@@ -14,9 +14,39 @@ namespace Autobahn.Invalid.Models
     public partial class ServicePlanModel : AutobahnBase, Interfaces.IServicePlan
     {
         /// <summary>
-        /// The reason given for declining the recommended services.
+        /// 
         /// </summary>
-        public System.String ReasonForDeclinedServices { get; set; }
+        public  DeclinedServicesDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ExtendsOutsideSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InclusiveSettingIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ReasonForDeclinedServices { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SettingDescription { get; set; }
 
     }
 }

@@ -14,9 +14,44 @@ namespace Autobahn.K12.Models
     public partial class K12StaffEmploymentModel : AutobahnBase, Interfaces.IK12StaffEmployment
     {
         /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
+        /// 
         /// </summary>
-        public System.Decimal? ContractDaysOfServicePerYear { get; set; }
+        public Guid? ContractDaysOfServicePerYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MepPersonnelIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmploymentStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefK12StaffClassificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SalaryForTeachingAssignmentOnlyIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TitleITargetedAssistanceStaffFunded { get; set; }
 
     }
 }

@@ -13,7 +13,47 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentNeedBraille : IAutobahnBase
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
+        /// 
+        /// </summary>
+         BrailleDotPressure { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfBrailleCells { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedBrailleGradeTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedBrailleMarkTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedBrailleStatusCellTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentNeedUsageTypeId { get; set; }
 

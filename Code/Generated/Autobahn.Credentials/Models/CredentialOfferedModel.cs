@@ -14,9 +14,24 @@ namespace Autobahn.Credentials.Models
     public partial class CredentialOfferedModel : AutobahnBase, Interfaces.ICredentialOffered
     {
         /// <summary>
-        /// The first date a credential was offered.
+        /// 
         /// </summary>
-        public System.DateTime? CredentialOfferedStartDate { get; set; }
+        public  CredentialOfferedEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? CredentialOfferedStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

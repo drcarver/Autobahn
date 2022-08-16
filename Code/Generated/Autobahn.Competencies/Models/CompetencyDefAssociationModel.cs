@@ -14,9 +14,64 @@ namespace Autobahn.Competencies.Models
     public partial class CompetencyDefAssociationModel : AutobahnBase, Interfaces.ICompetencyDefAssociation
     {
         /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
+        /// 
         /// </summary>
-        public Guid AssociatedEntityId { get; set; }
+        public Guid? AssociatedEntityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CompetencyDefAssociationIdentifierURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ConnectionCitation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DestinationNodeName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DestinationNodeURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OriginNodeName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OriginNodeURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCompetencyDefAssociationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefLearningResourceCompetencyAlignmentTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Weight { get; set; }
 
     }
 }

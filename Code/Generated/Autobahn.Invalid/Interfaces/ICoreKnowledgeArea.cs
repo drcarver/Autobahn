@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface ICoreKnowledgeArea : IAutobahnBase
     {
         /// <summary>
-        /// A description of the core knowledge areas addressed by Early Learning professional development.
+        /// 
         /// </summary>
-        Guid RefCoreKnowledgeAreaId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefCoreKnowledgeAreaId { get; set; }
 
     }
 }

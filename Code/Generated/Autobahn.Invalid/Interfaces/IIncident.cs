@@ -13,9 +13,109 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIncident : IAutobahnBase
     {
         /// <summary>
-        /// A locally assigned unique identifier (within the school or school district) to identify each specific incident or occurrence. The same identifier should be used to document the entire incident even if it included multiple offenses and multiple offenders.
+        /// 
         /// </summary>
-        System.String IncidentIdentifier { get; set; }
+         IncidentCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IncidentDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IncidentDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? IncidentIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IncidentReporterId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IncidentTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFirearmTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentBehaviorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentBehaviorSecondaryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentInjuryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentLocationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentMultipleOffenseTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentPerpetratorInjuryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentReporterTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncidentTimeDescriptionCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefWeaponTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RegulationViolatedDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RelatedToDisabilityManifestationInd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReportedToLawEnforcementInd { get; set; }
 
     }
 }

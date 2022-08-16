@@ -12,9 +12,19 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPolicyModel : AutobahnBase, Interfaces.IOrganizationPolicy
     {
         /// <summary>
-        /// Policies related to personnel in the organization.
+        /// 
         /// </summary>
-        public System.String PolicyType { get; set; }
+        public Guid? PolicyType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

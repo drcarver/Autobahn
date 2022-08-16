@@ -13,9 +13,49 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IQuarterlyEmploymentRecord : IAutobahnBase
     {
         /// <summary>
-        /// The quarterly amount paid to individuals found employed during the reference period.
+        /// 
         /// </summary>
-        System.Decimal? Earnings { get; set; }
+        Guid? Earnings { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EmploymentNAICSCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmployedPriorToEnrollmentId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmploymentLocationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefERAdministrativeDataSourceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReferencePeriodEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReferencePeriodStartDate { get; set; }
 
     }
 }

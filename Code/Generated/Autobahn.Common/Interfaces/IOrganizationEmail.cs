@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationEmail : IAutobahnBase
     {
         /// <summary>
-        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
+        /// 
         /// </summary>
-        System.String ElectronicMailAddress { get; set; }
+         DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ElectronicMailAddress { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmailTypeId { get; set; }
 
     }
 }

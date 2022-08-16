@@ -12,5 +12,35 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12SchoolImprovement : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefSchoolImprovementFundsId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefSchoolImprovementStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefSigInterventionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SchoolImprovementExitDate { get; set; }
+
     }
 }

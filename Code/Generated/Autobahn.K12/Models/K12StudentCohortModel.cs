@@ -14,9 +14,39 @@ namespace Autobahn.K12.Models
     public partial class K12StudentCohortModel : AutobahnBase, Interfaces.IK12StudentCohort
     {
         /// <summary>
-        /// The school year in which the student entered the baseline group used for computing completion rates (e.g., high school, program).
+        /// 
         /// </summary>
-        public System.String CohortYear { get; set; }
+        public  CohortDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CohortGraduationYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? CohortYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GraduationRateSurveyCohortYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GraduationRateSurveyIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

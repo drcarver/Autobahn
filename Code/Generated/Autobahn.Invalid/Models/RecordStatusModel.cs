@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class RecordStatusModel : AutobahnBase, Interfaces.IRecordStatus
     {
         /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
+        /// 
+        /// </summary>
+        public  RecordStatusDate { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefRecordStatusCreatorEntityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefRecordStatusTypeId { get; set; }
 
     }
 }

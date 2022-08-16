@@ -12,7 +12,17 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationLocation : IAutobahnBase
     {
         /// <summary>
-        /// The type of address listed for an organization.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefOrganizationLocationTypeId { get; set; }
 

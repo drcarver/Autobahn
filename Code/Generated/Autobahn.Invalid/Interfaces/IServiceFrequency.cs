@@ -13,7 +13,32 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IServiceFrequency : IAutobahnBase
     {
         /// <summary>
-        /// The unit of time by which a cycle is defined.
+        /// 
+        /// </summary>
+         DurationInMinutes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FrequencyLength { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InstancesPerCycle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFrequencyUnitId { get; set; }
 

@@ -13,5 +13,25 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class EligibilityEvaluationModel : AutobahnBase, Interfaces.IEligibilityEvaluation
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EvaluationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
     }
 }

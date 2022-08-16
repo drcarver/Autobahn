@@ -14,9 +14,19 @@ namespace Autobahn.K12.Models
     public partial class K12LeaTitleIIIProfessionalDevelopmentModel : AutobahnBase, Interfaces.IK12LeaTitleIIIProfessionalDevelopment
     {
         /// <summary>
-        /// The type of Title III professional development utilized.
+        /// 
         /// </summary>
-        public Guid RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
 
     }
 }

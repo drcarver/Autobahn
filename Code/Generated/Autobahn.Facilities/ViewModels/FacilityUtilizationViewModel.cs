@@ -21,24 +21,61 @@ namespace Autobahn.Facilities.ViewModels
         private string _viewTitle = "Hello from FacilityUtilization";
 
         // member variable for the BuildingHoursOfPublicUsePerWeek property
-        private System.Int32? _BuildingHoursOfPublicUsePerWeek;
+        private Guid? _BuildingHoursOfPublicUsePerWeek;
+
+        // member variable for the BuildingNetAreaOfInstructionalSpace property
+        private  _BuildingNetAreaOfInstructionalSpace;
+
+        // member variable for the BuildingNumberOfTeachingStations property
+        private  _BuildingNumberOfTeachingStations;
+
+        // member variable for the BuildingPublicUsePolicyDescription property
+        private  _BuildingPublicUsePolicyDescription;
+
+        // member variable for the FacilityEnrollmentCapacity property
+        private  _FacilityEnrollmentCapacity;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FacilityUtilizationViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The number of hours that all or part of a building is used for purposes other than general education by the community or other organizations.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20837">Building Hours of Public Use Per Week</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Building Hours of Public Use Per Week")]
-        public System.Int32? BuildingHoursOfPublicUsePerWeek { get => _BuildingHoursOfPublicUsePerWeek; set => SetProperty(ref _BuildingHoursOfPublicUsePerWeek, value); }
+        public Guid? BuildingHoursOfPublicUsePerWeek { get => _BuildingHoursOfPublicUsePerWeek; set => SetProperty(ref _BuildingHoursOfPublicUsePerWeek, value); }
+
+        /// <summary>
+        /// </summary>
+        public  BuildingNetAreaOfInstructionalSpace { get => _BuildingNetAreaOfInstructionalSpace; set => SetProperty(ref _BuildingNetAreaOfInstructionalSpace, value); }
+
+        /// <summary>
+        /// </summary>
+        public  BuildingNumberOfTeachingStations { get => _BuildingNumberOfTeachingStations; set => SetProperty(ref _BuildingNumberOfTeachingStations, value); }
+
+        /// <summary>
+        /// </summary>
+        public  BuildingPublicUsePolicyDescription { get => _BuildingPublicUsePolicyDescription; set => SetProperty(ref _BuildingPublicUsePolicyDescription, value); }
+
+        /// <summary>
+        /// </summary>
+        public  FacilityEnrollmentCapacity { get => _FacilityEnrollmentCapacity; set => SetProperty(ref _FacilityEnrollmentCapacity, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +86,13 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            BuildingHoursOfPublicUsePerWeek = model.BuildingHoursOfPublicUsePerWeek; // Building Hours of Public Use Per Week
+            BuildingHoursOfPublicUsePerWeek = model.BuildingHoursOfPublicUsePerWeek; // 
+            BuildingNetAreaOfInstructionalSpace = model.BuildingNetAreaOfInstructionalSpace; // 
+            BuildingNumberOfTeachingStations = model.BuildingNumberOfTeachingStations; // 
+            BuildingPublicUsePolicyDescription = model.BuildingPublicUsePolicyDescription; // 
+            FacilityEnrollmentCapacity = model.FacilityEnrollmentCapacity; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

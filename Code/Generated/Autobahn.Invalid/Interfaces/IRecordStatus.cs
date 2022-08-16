@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IRecordStatus : IAutobahnBase
     {
         /// <summary>
-        /// The type of entity that created or indicated the Record Status Type
+        /// 
+        /// </summary>
+         RecordStatusDate { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefRecordStatusCreatorEntityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefRecordStatusTypeId { get; set; }
 
     }
 }

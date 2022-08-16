@@ -14,9 +14,39 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityUtilizationModel : AutobahnBase, Interfaces.IFacilityUtilization
     {
         /// <summary>
-        /// The number of hours that all or part of a building is used for purposes other than general education by the community or other organizations.
+        /// 
         /// </summary>
-        public System.Int32? BuildingHoursOfPublicUsePerWeek { get; set; }
+        public Guid? BuildingHoursOfPublicUsePerWeek { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingNetAreaOfInstructionalSpace { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingNumberOfTeachingStations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingPublicUsePolicyDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityEnrollmentCapacity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -12,5 +12,20 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IServicesReceived : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

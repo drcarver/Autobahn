@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class OrganizationEmployeeBenefitModel : AutobahnBase, Interfaces.IOrganizationEmployeeBenefit
     {
         /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
+        /// 
         /// </summary>
-        public System.Boolean? FullTimeBenefitIndicator { get; set; }
+        public Guid? FullTimeBenefitIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PartTimeBenefitIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmployeeBenefitId { get; set; }
 
     }
 }

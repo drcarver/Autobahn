@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class PersonAllergyModel : AutobahnBase, Interfaces.IPersonAllergy
     {
         /// <summary>
-        /// Describes symptoms know to be associated with a person's reaction to an allergen.
+        /// 
         /// </summary>
-        public System.String ReactionDescription { get; set; }
+        public Guid? ReactionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAllergySeverityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAllergyTypeId { get; set; }
 
     }
 }

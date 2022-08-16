@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class ProgramParticipationFoodServiceModel : AutobahnBase, Interfaces.IProgramParticipationFoodService
     {
         /// <summary>
-        /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
+        /// 
         /// </summary>
-        public Guid RefSchoolFoodServiceProgramId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefSchoolFoodServiceProgramId { get; set; }
 
     }
 }

@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class PersonStatusModel : AutobahnBase, Interfaces.IPersonStatus
     {
         /// <summary>
-        /// An indication that the student met the State criteria for classification as having an economic disadvantage.
+        /// 
         /// </summary>
-        public Guid RefPersonStatusTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefPersonStatusTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StatusEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StatusStartDate { get; set; }
 
     }
 }

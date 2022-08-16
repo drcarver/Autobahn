@@ -17,25 +17,35 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationProgramType";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefProgramTypeId property
-        private Guid _RefProgramTypeId;
+        private Guid? _RefProgramTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationProgramTypeViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19225">Program Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Program Type")]
-        public Guid RefProgramTypeId { get => _RefProgramTypeId; set => SetProperty(ref _RefProgramTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefProgramType"/> model
+        /// </summary>
+        public Guid? RefProgramTypeId { get => _RefProgramTypeId; set => SetProperty(ref _RefProgramTypeId, value); }
 
         #endregion
 
@@ -46,7 +56,9 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefProgramTypeId = model.RefProgramTypeId; // Program Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefProgramTypeId = model.RefProgramTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

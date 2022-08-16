@@ -14,9 +14,54 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentAdministrationModel : AutobahnBase, Interfaces.IAssessmentAdministration
     {
         /// <summary>
-        /// Indicates whether or not the assessment is a secure assessment.
+        /// 
         /// </summary>
-        public System.Boolean? AssessmentSecureIndicator { get; set; }
+        public  AssessmentAdministrationPeriodDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? AssessmentSecureIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Code { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FinishDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FinishTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartTime { get; set; }
 
     }
 }

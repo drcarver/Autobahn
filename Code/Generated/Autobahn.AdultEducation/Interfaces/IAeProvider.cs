@@ -12,5 +12,20 @@ namespace Autobahn.AdultEducation.Interfaces
      /// </summary>
     public partial interface IAeProvider : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefLevelOfInstitutionId { get; set; }
+
     }
 }

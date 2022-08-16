@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentItemCharacteristic : IAutobahnBase
     {
         /// <summary>
-        /// The type of psychometric measure provided for assessment item.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentItemCharacteristicTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ResponseChoicePattern { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Value { get; set; }
 
     }
 }

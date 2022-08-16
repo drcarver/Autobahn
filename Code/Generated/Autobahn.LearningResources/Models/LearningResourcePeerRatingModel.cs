@@ -13,5 +13,25 @@ namespace Autobahn.LearningResources.Models
      /// </summary>
     public partial class LearningResourcePeerRatingModel : AutobahnBase, Interfaces.ILearningResourcePeerRating
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Value { get; set; }
+
     }
 }

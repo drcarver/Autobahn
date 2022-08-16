@@ -13,5 +13,15 @@ namespace Autobahn.Facilities.Models
      /// </summary>
     public partial class FacilityLocationModel : AutobahnBase, Interfaces.IFacilityLocation
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

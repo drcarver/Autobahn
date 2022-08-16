@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffExperience : IAutobahnBase
     {
         /// <summary>
-        /// The total number of years prior to this job that a person has previously held a teaching position in one or more education institutions.
+        /// 
         /// </summary>
-        System.Decimal? YearsOfPriorTeachingExperience { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         YearsOfPriorAETeachingExperience { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? YearsOfPriorTeachingExperience { get; set; }
 
     }
 }

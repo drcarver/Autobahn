@@ -21,24 +21,33 @@ namespace Autobahn.Invalid.ViewModels
         private string _viewTitle = "Hello from Classroom";
 
         // member variable for the ClassroomIdentifier property
-        private System.String _ClassroomIdentifier;
+        private Guid? _ClassroomIdentifier;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ClassroomViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Classroom Identifier")]
-        public System.String ClassroomIdentifier { get => _ClassroomIdentifier; set => SetProperty(ref _ClassroomIdentifier, value); }
+        public Guid? ClassroomIdentifier { get => _ClassroomIdentifier; set => SetProperty(ref _ClassroomIdentifier, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +58,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ClassroomIdentifier = model.ClassroomIdentifier; // Classroom Identifier
+            ClassroomIdentifier = model.ClassroomIdentifier; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

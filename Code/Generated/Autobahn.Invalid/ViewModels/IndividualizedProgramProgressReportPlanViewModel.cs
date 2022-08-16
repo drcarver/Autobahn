@@ -20,25 +20,43 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramProgressReportPlan";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefIPSPProgressReportScheduleId property
         private Guid? _RefIPSPProgressReportScheduleId;
+
+        // member variable for the RefIPSPProgressReportTypeId property
+        private  _RefIPSPProgressReportTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the IndividualizedProgramProgressReportPlanViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportSchedule"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20662">Individualized Program Service Plan Progress Report Schedule</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Individualized Program Service Plan Progress Report Schedule")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportSchedule"/> model
+        /// </summary>
         public Guid? RefIPSPProgressReportScheduleId { get => _RefIPSPProgressReportScheduleId; set => SetProperty(ref _RefIPSPProgressReportScheduleId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
+        /// </summary>
+        public  RefIPSPProgressReportTypeId { get => _RefIPSPProgressReportTypeId; set => SetProperty(ref _RefIPSPProgressReportTypeId, value); }
 
         #endregion
 
@@ -49,7 +67,10 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefIPSPProgressReportScheduleId = model.RefIPSPProgressReportScheduleId; // Individualized Program Service Plan Progress Report Schedule
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefIPSPProgressReportScheduleId = model.RefIPSPProgressReportScheduleId; // 
+            RefIPSPProgressReportTypeId = model.RefIPSPProgressReportTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

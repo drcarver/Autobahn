@@ -18,24 +18,49 @@ namespace Autobahn.Common.ViewModels
         private string _viewTitle = "Hello from PersonIdentifier";
 
         // member variable for the Identifier property
-        private System.String _Identifier;
+        private Guid? _Identifier;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefPersonalInformationVerificationId property
+        private  _RefPersonalInformationVerificationId;
+
+        // member variable for the RefPersonIdentificationSystemId property
+        private  _RefPersonIdentificationSystemId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PersonIdentifierViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity.  This may be the publisher identifier.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19152">Assessment Identifier</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Identifier")]
-        public System.String Identifier { get => _Identifier; set => SetProperty(ref _Identifier, value); }
+        public Guid? Identifier { get => _Identifier; set => SetProperty(ref _Identifier, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
+        /// </summary>
+        public  RefPersonalInformationVerificationId { get => _RefPersonalInformationVerificationId; set => SetProperty(ref _RefPersonalInformationVerificationId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefPersonentificationSystem"/> model
+        /// </summary>
+        public  RefPersonIdentificationSystemId { get => _RefPersonIdentificationSystemId; set => SetProperty(ref _RefPersonIdentificationSystemId, value); }
 
         #endregion
 
@@ -46,7 +71,11 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Identifier = model.Identifier; // Assessment Identifier
+            Identifier = model.Identifier; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefPersonalInformationVerificationId = model.RefPersonalInformationVerificationId; // 
+            RefPersonIdentificationSystemId = model.RefPersonIdentificationSystemId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

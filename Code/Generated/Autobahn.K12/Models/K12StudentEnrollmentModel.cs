@@ -14,9 +14,94 @@ namespace Autobahn.K12.Models
     public partial class K12StudentEnrollmentModel : AutobahnBase, Interfaces.IK12StudentEnrollment
     {
         /// <summary>
-        /// An indication of a student's level of eligibility to participate in the National School Lunch Program for breakfast, lunch, snack, supper, and milk programs.
+        /// 
+        /// </summary>
+        public  DisplacedStudentStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FirstEntryDateIntoUSSchool { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NSLPDirectCertificationIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefDirectoryInformationBlockStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEndOfTermStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEnrollmentStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEntryGradeLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEntryType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefExitGradeLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefExitOrWithdrawalStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefExitOrWithdrawalTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFoodServiceEligibilityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefNonPromotionReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPromotionReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPublicSchoolResidence { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefStudentEnrollmentAccessTypeId { get; set; }
 
     }
 }

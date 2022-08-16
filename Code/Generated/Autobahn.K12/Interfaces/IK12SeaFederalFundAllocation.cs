@@ -12,5 +12,20 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12SeaFederalFundAllocation : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         FederalProgramCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FederalProgramsFundingAllocation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFederalProgramFundingAllocationTypeId { get; set; }
+
     }
 }

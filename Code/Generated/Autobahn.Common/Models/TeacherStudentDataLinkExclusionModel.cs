@@ -11,5 +11,20 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class TeacherStudentDataLinkExclusionModel : AutobahnBase, Interfaces.ITeacherStudentDataLinkExclusion
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid?  { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
     }
 }

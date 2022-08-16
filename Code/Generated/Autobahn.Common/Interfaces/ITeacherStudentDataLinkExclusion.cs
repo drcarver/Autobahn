@@ -11,5 +11,20 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface ITeacherStudentDataLinkExclusion : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid?  { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

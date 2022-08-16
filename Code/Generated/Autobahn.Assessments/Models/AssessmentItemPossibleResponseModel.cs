@@ -14,9 +14,39 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentItemPossibleResponseModel : AutobahnBase, Interfaces.IAssessmentItemPossibleResponse
     {
         /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
+        /// 
         /// </summary>
-        public System.String FeedbackMessage { get; set; }
+        public  CorrectIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? FeedbackMessage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PossibleResponseOption { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SequenceNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Value { get; set; }
 
     }
 }

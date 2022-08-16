@@ -13,9 +13,34 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12SeaFederalFunds : IAutobahnBase
     {
         /// <summary>
-        /// Did the State transfer funds under the State Transferability authority of Section 6123(a)
+        /// 
         /// </summary>
-        System.Boolean? StateTransferabilityOfFunds { get; set; }
+         DateStateReceivedTitleIIIAllocation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DateTitleIIIFundsAvailableToSubgrantees { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfDaysForTitleIIISubgrants { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? StateTransferabilityOfFunds { get; set; }
 
     }
 }

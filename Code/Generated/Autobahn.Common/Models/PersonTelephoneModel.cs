@@ -12,9 +12,39 @@ namespace Autobahn.Common.Models
     public partial class PersonTelephoneModel : AutobahnBase, Interfaces.IPersonTelephone
     {
         /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
+        /// 
         /// </summary>
-        public System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
+        public  DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? PrimaryTelephoneNumberIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPersonTelephoneNumberTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTelephoneNumberListedStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TelephoneNumber { get; set; }
 
     }
 }

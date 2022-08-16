@@ -13,9 +13,19 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityMortgageFee : IAutobahnBase
     {
         /// <summary>
-        /// The type of fee that one must pay when getting a mortgage.
+        /// 
         /// </summary>
-        Guid RefFacilityFinancingFeeTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefFacilityFinancingFeeTypeId { get; set; }
 
     }
 }

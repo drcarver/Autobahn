@@ -12,9 +12,74 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonAddress : IAutobahnBase
     {
         /// <summary>
-        /// The apartment, room, or suite number of an address.
+        /// 
         /// </summary>
-        System.String ApartmentRoomOrSuiteNumber { get; set; }
+         AddressCountyName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ApartmentRoomOrSuiteNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         City { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Latitude { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Longitude { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PostalCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCountryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonalInformationVerificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonLocationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStateId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StreetNumberAndName { get; set; }
 
     }
 }

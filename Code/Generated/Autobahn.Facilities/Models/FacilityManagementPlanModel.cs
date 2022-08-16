@@ -14,9 +14,29 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityManagementPlanModel : AutobahnBase, Interfaces.IFacilityManagementPlan
     {
         /// <summary>
-        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
+        /// 
+        /// </summary>
+        public  FacilitiesPlanDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilitiesPlanTypeId { get; set; }
 
     }
 }

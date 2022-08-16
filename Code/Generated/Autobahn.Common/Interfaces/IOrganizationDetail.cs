@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationDetail : IAutobahnBase
     {
         /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
+        /// 
         /// </summary>
-        System.String Name { get; set; }
+        Guid? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RegionGeoJSON { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ShortName { get; set; }
 
     }
 }

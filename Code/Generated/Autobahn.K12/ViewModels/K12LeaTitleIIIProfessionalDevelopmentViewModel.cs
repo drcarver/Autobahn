@@ -20,25 +20,35 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12LeaTitleIIIProfessionalDevelopment";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefTitleIIIProfessionalDevelopmentTypeId property
-        private Guid _RefTitleIIIProfessionalDevelopmentTypeId;
+        private Guid? _RefTitleIIIProfessionalDevelopmentTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the K12LeaTitleIIIProfessionalDevelopmentViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIIIProfessionalDevelopmentType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19478">Title III Professional Development Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Title III Professional Development Type")]
-        public Guid RefTitleIIIProfessionalDevelopmentTypeId { get => _RefTitleIIIProfessionalDevelopmentTypeId; set => SetProperty(ref _RefTitleIIIProfessionalDevelopmentTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefTitleIIIProfessionalDevelopmentType"/> model
+        /// </summary>
+        public Guid? RefTitleIIIProfessionalDevelopmentTypeId { get => _RefTitleIIIProfessionalDevelopmentTypeId; set => SetProperty(ref _RefTitleIIIProfessionalDevelopmentTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefTitleIIIProfessionalDevelopmentTypeId = model.RefTitleIIIProfessionalDevelopmentTypeId; // Title III Professional Development Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefTitleIIIProfessionalDevelopmentTypeId = model.RefTitleIIIProfessionalDevelopmentTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

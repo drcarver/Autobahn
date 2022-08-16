@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentPersonalNeedsProfileContentModel : AutobahnBase, Interfaces.IAssessmentPersonalNeedsProfileContent
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile a characteristic of a digital resource that may be specified as being dangerous to a user.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentNeedHazardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedSupportToolId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefKeywordTranslationsLanguageId { get; set; }
 
     }
 }

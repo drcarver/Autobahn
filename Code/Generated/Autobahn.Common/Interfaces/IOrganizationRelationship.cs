@@ -12,7 +12,17 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationRelationship : IAutobahnBase
     {
         /// <summary>
-        /// The nature of one organization's relationship to another.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefOrganizationRelationshipId { get; set; }
 

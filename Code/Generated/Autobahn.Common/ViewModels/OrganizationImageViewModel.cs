@@ -17,20 +17,34 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationImage";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the URL property
-        private System.String _URL;
+        private Guid? _URL;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationImageViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
         /// </summary>
-        public System.String URL { get => _URL; set => SetProperty(ref _URL, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? URL { get => _URL; set => SetProperty(ref _URL, value); }
 
         #endregion
 
@@ -41,6 +55,8 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             URL = model.URL; // 
             _isChanged = false;
             IsNew = false;

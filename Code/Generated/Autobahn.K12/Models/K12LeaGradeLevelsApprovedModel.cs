@@ -13,5 +13,20 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12LeaGradeLevelsApprovedModel : AutobahnBase, Interfaces.IK12LeaGradeLevelsApproved
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefGradeLevelId { get; set; }
+
     }
 }

@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class StaffTechnicalAssistanceModel : AutobahnBase, Interfaces.IStaffTechnicalAssistance
     {
         /// <summary>
-        /// Indicates whether or not the technical assistance was approved.
+        /// 
         /// </summary>
-        public System.Boolean? TechnicalAssistanceApprovedInd { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTechnicalAssistanceDeliveryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTechnicalAssistanceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? TechnicalAssistanceApprovedInd { get; set; }
 
     }
 }

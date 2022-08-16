@@ -13,9 +13,84 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentAcademicRecord : IAutobahnBase
     {
         /// <summary>
-        /// The number of credits awarded a student by the postsecondary institution based on successful completion of advanced placement courses and/or advanced placement tests. 
+        /// 
         /// </summary>
-        System.Int32? AdvancedPlacementCreditsAwarded { get; set; }
+         AcademicYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? AdvancedPlacementCreditsAwarded { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CourseTotal { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CreditsAttemptedCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CreditsEarnedCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DualCreditDualEnrollmentCredits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EnteringTerm { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         GradePointAverage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         GradePointAverageCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfCreditsAttempted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAcademicTermDesignatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCreditHoursAppliedOtherProgramId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProfessionalTechCredentialTypeId { get; set; }
 
     }
 }

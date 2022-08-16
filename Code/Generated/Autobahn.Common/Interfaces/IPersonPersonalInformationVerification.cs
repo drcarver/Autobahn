@@ -12,7 +12,22 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonPersonalInformationVerification : IAutobahnBase
     {
         /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonalInformationTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefPersonalInformationVerificationId { get; set; }
 

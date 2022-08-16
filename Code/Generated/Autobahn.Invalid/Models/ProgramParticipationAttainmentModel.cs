@@ -13,5 +13,40 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ProgramParticipationAttainmentModel : AutobahnBase, Interfaces.IProgramParticipationAttainment
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AECredentialAttainmentEmployedIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AECredentialAttainmentPSCredentialIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AECredentialAttainmentPSEnrollmentIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEdFactsAcademicOrCareerAndTechnicalOutcomeExitTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypeId { get; set; }
+
     }
 }

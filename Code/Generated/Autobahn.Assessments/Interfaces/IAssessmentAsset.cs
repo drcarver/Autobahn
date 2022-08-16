@@ -13,9 +13,69 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentAsset : IAutobahnBase
     {
         /// <summary>
-        /// The language in which the assessment form is designed to be delivered.
+        /// 
+        /// </summary>
+         ContentMimeType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ContentUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ContentXML { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Owner { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PublishedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentAssestIdentifierType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentAssetTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentLanguageId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Version { get; set; }
 
     }
 }

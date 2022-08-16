@@ -14,9 +14,39 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityDesignModel : AutobahnBase, Interfaces.IFacilityDesign
     {
         /// <summary>
-        /// The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
+        /// 
+        /// </summary>
+        public  BuildingArchitectName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingArchitecturalFirmName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BuildingDateOfCertificateOfOccupancy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefBuildingDesignTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingEnvOrEnergyPerformanceRatingCatId { get; set; }
 
     }
 }

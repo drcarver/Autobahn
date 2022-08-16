@@ -14,7 +14,22 @@ namespace Autobahn.Credentials.Models
     public partial class CredentialDefAgentModel : AutobahnBase, Interfaces.ICredentialDefAgent
     {
         /// <summary>
-        /// The type of credentialing organization or entity as defined by the Credential Transparency Description Language.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCredentialDefAgentRoleTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefCTDLOrganizationTypeId { get; set; }
 

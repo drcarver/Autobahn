@@ -13,5 +13,30 @@ namespace Autobahn.Workforce.Models
      /// </summary>
     public partial class WorkforceProgramParticipationModel : AutobahnBase, Interfaces.IWorkforceProgramParticipation
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProfessionalTechnicalCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefWfProgramParticipationId { get; set; }
+
     }
 }

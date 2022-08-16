@@ -13,9 +13,19 @@ namespace Autobahn.LearningResources.Interfaces
     public partial interface ILearningResourcePhysicalMedia : IAutobahnBase
     {
         /// <summary>
-        /// A type of physical media on which the Learning Resource is delivered or available.
+        /// 
         /// </summary>
-        Guid RefLearningResourcePhysicalMediaTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefLearningResourcePhysicalMediaTypeId { get; set; }
 
     }
 }

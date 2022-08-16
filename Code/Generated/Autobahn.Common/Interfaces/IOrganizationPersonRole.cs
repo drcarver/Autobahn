@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPersonRole : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
+        /// 
         /// </summary>
-        System.DateTime? EntryDate { get; set; }
+        Guid? EntryDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ExitDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

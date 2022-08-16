@@ -12,5 +12,20 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface ICourseSectionLevel : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefCourseLevelTypeId { get; set; }
+
     }
 }

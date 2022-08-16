@@ -13,7 +13,17 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIEPAuthorization : IAutobahnBase
     {
         /// <summary>
-        /// Type of Individualized Education Plan document authorized.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefIEPAuthorizationDocumentTypeId { get; set; }
 

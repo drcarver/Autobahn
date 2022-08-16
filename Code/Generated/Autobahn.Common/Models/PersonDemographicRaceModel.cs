@@ -11,5 +11,20 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class PersonDemographicRaceModel : AutobahnBase, Interfaces.IPersonDemographicRace
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FederalRaceAndEthnicityDeclined { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

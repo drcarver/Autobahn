@@ -13,9 +13,39 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface ICourseSectionSchedule : IAutobahnBase
     {
         /// <summary>
-        /// An indication of the time of day the class begins.
+        /// 
         /// </summary>
-        System.TimeSpan? ClassBeginningTime { get; set; }
+        Guid? ClassBeginningTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ClassEndingTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ClassMeetingDays { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ClassPeriod { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TimeDayIdentifier { get; set; }
 
     }
 }

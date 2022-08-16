@@ -20,13 +20,20 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PSStudentEnrollment";
 
+        // member variable for the DisplacedStudentStatus property
+        private  _DisplacedStudentStatus;
+
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PSStudentEnrollmentViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
+
+        /// <summary>
+        /// </summary>
+        public  DisplacedStudentStatus { get => _DisplacedStudentStatus; set => SetProperty(ref _DisplacedStudentStatus, value); }
 
         #endregion
 
@@ -37,6 +44,7 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
+            DisplacedStudentStatus = model.DisplacedStudentStatus; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

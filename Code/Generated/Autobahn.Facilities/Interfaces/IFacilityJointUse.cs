@@ -13,9 +13,29 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityJointUse : IAutobahnBase
     {
         /// <summary>
-        /// The reasons for permitting and participating in joint-use.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefBuildingJointUseRationaleTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingJointUserTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingJointUseSchedulingTypeId { get; set; }
 
     }
 }

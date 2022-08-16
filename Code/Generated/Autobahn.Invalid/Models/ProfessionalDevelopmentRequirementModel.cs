@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class ProfessionalDevelopmentRequirementModel : AutobahnBase, Interfaces.IProfessionalDevelopmentRequirement
     {
         /// <summary>
-        /// Number of clock hours of training required for providers to meet requirements of the state.
+        /// 
         /// </summary>
-        public System.Decimal? RequiredTrainingClockHours { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RequiredTrainingClockHours { get; set; }
 
     }
 }

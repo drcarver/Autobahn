@@ -12,5 +12,20 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12SchoolGradeLevelsApproved : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefGradeLevelId { get; set; }
+
     }
 }

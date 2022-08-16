@@ -14,9 +14,34 @@ namespace Autobahn.Postsecondary.Models
     public partial class PSStudentProgramModel : AutobahnBase, Interfaces.IPSStudentProgram
     {
         /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCareerClusterId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefCipUseId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTransferOutIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefWorkbasedLearningOpportunityTypeId { get; set; }
 
     }
 }

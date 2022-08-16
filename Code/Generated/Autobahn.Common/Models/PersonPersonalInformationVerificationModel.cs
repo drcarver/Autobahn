@@ -12,7 +12,22 @@ namespace Autobahn.Common.Models
     public partial class PersonPersonalInformationVerificationModel : AutobahnBase, Interfaces.IPersonPersonalInformationVerification
     {
         /// <summary>
-        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPersonalInformationTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 

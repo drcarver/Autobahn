@@ -14,9 +14,39 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentPersonalNeedScreenReaderModel : AutobahnBase, Interfaces.IAssessmentPersonalNeedScreenReader
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
+        /// 
+        /// </summary>
+        public  Pitch { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedLinkIndicationTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentNeedUsageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SpeechRate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Volume { get; set; }
 
     }
 }

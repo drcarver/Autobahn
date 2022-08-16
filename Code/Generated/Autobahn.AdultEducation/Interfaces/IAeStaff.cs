@@ -13,9 +13,29 @@ namespace Autobahn.AdultEducation.Interfaces
     public partial interface IAeStaff : IAutobahnBase
     {
         /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAeStaffClassificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAeStaffEmploymentStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         YearsOfPriorAeTeachingExperience { get; set; }
 
     }
 }

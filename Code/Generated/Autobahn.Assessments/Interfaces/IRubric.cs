@@ -12,5 +12,35 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IRubric : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Title { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         UrlReference { get; set; }
+
     }
 }

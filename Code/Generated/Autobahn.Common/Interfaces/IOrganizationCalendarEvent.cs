@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationCalendarEvent : IAutobahnBase
     {
         /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
+        /// 
         /// </summary>
-        System.Int32? RefCalendarEventType { get; set; }
+         EndTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EventDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefCalendarEventType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartTime { get; set; }
 
     }
 }

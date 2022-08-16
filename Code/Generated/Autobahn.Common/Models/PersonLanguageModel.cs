@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class PersonLanguageModel : AutobahnBase, Interfaces.IPersonLanguage
     {
         /// <summary>
-        /// An indication of the function and context in which a person uses a language to communicate.
+        /// 
         /// </summary>
-        public Guid RefLanguageUseTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefLanguageId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefLanguageUseTypeId { get; set; }
 
     }
 }

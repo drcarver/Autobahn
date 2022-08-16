@@ -14,7 +14,27 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentAccommodationModel : AutobahnBase, Interfaces.IAssessmentAccommodation
     {
         /// <summary>
-        /// A category of accommodations needed for a given assessment.
+        /// 
+        /// </summary>
+        public  OtherDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAccommodationTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentAccommodationCategoryId { get; set; }
 

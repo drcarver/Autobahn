@@ -14,7 +14,27 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// 
         /// </summary>
+        public  City { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Guid? RefCountryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefStateId { get; set; }
 
     }
 }

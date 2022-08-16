@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationCalendarDay : IAutobahnBase
     {
         /// <summary>
-        /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
+        /// 
         /// </summary>
-        System.String AlternateDayName { get; set; }
+        Guid? AlternateDayName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

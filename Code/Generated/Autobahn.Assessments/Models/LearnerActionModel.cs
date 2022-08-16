@@ -14,9 +14,49 @@ namespace Autobahn.Assessments.Models
     public partial class LearnerActionModel : AutobahnBase, Interfaces.ILearnerAction
     {
         /// <summary>
-        /// The type of action taken by the learner.
+        /// 
+        /// </summary>
+        public  LearnerActionActorIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LearnerActionDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LearnerActionObjectDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LearnerActionObjectIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LearnerActionObjectType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefLearnerActionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Value { get; set; }
 
     }
 }

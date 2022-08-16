@@ -25,10 +25,10 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\ApplicationView.xaml">
+    <MauiXaml Update="Views\AuthenticationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AuthenticationView.xaml">
+    <MauiXaml Update="Views\ApplicationView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AuthorizationView.xaml">

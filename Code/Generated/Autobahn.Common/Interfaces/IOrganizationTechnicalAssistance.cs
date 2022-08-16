@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationTechnicalAssistance : IAutobahnBase
     {
         /// <summary>
-        /// Indicates whether or not the technical assistance was approved.
+        /// 
         /// </summary>
-        System.Boolean? TechnicalAssistanceApprovedInd { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTechnicalAssistanceDeliveryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTechnicalAssistanceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? TechnicalAssistanceApprovedInd { get; set; }
 
     }
 }

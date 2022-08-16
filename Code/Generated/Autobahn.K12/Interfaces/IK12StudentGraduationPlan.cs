@@ -13,9 +13,29 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentGraduationPlan : IAutobahnBase
     {
         /// <summary>
-        /// Student's grade level at time of course.
+        /// 
+        /// </summary>
+         CreditsRequired { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefGradeLevelWhenCourseTakenId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefSCEDCourseSubjectAreaId { get; set; }
 
     }
 }

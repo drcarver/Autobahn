@@ -14,7 +14,32 @@ namespace Autobahn.Invalid.Models
     public partial class ProgramParticipationNeglectedModel : AutobahnBase, Interfaces.IProgramParticipationNeglected
     {
         /// <summary>
-        /// The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).
+        /// 
+        /// </summary>
+        public  AchievementIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ObtainedEmployment { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OutcomeIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefNeglectedProgramTypeId { get; set; }
 

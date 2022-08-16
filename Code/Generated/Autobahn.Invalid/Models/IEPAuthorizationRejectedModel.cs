@@ -14,9 +14,24 @@ namespace Autobahn.Invalid.Models
     public partial class IEPAuthorizationRejectedModel : AutobahnBase, Interfaces.IIEPAuthorizationRejected
     {
         /// <summary>
-        /// Portion the authorizer does not want executed.
+        /// 
         /// </summary>
-        public System.String PortionDescription { get; set; }
+        public Guid? PortionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PortionExplanation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

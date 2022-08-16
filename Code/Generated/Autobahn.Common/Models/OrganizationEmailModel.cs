@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class OrganizationEmailModel : AutobahnBase, Interfaces.IOrganizationEmail
     {
         /// <summary>
-        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
+        /// 
         /// </summary>
-        public System.String ElectronicMailAddress { get; set; }
+        public  DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ElectronicMailAddress { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmailTypeId { get; set; }
 
     }
 }

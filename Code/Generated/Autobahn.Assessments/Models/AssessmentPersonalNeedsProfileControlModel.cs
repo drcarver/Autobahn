@@ -13,5 +13,15 @@ namespace Autobahn.Assessments.Models
      /// </summary>
     public partial class AssessmentPersonalNeedsProfileControlModel : AutobahnBase, Interfaces.IAssessmentPersonalNeedsProfileControl
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

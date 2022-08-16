@@ -13,5 +13,25 @@ namespace Autobahn.AdultEducation.Models
      /// </summary>
     public partial class AeCourseModel : AutobahnBase, Interfaces.IAeCourse
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefCareerClusterId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCourseLevelTypeId { get; set; }
+
     }
 }

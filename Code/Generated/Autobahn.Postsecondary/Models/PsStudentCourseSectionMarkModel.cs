@@ -14,9 +14,29 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentCourseSectionMarkModel : AutobahnBase, Interfaces.IPsStudentCourseSectionMark
     {
         /// <summary>
-        /// Additional information regarding the context of the given grade.
+        /// 
+        /// </summary>
+        public  CourseNarrativeExplanationGrade { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

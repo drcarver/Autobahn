@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPopulationServed : IAutobahnBase
     {
         /// <summary>
-        /// The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)
+        /// 
         /// </summary>
-        System.Int32? YoungestAgeServed { get; set; }
+         OldestAgeServed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPopulationServedId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? YoungestAgeServed { get; set; }
 
     }
 }

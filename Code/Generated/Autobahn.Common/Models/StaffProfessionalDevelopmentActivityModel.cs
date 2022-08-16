@@ -12,9 +12,54 @@ namespace Autobahn.Common.Models
     public partial class StaffProfessionalDevelopmentActivityModel : AutobahnBase, Interfaces.IStaffProfessionalDevelopmentActivity
     {
         /// <summary>
-        /// The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course. 
+        /// 
+        /// </summary>
+        public  ActivityCompletionDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ActivityIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ActivityStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ActivityTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfCreditsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefCourseCreditUnitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProfessionalDevelopmentFinancialSupportId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ScholarshipStatus { get; set; }
 
     }
 }

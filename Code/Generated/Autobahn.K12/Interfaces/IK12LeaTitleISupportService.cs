@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaTitleISupportService : IAutobahnBase
     {
         /// <summary>
-        /// The type of support services provided to students in Title I programs.
+        /// 
         /// </summary>
-        Guid RefK12LeaTitleISupportServiceId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefK12LeaTitleISupportServiceId { get; set; }
 
     }
 }

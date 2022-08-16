@@ -20,25 +20,35 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CoreKnowledgeArea";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefCoreKnowledgeAreaId property
-        private Guid _RefCoreKnowledgeAreaId;
+        private Guid? _RefCoreKnowledgeAreaId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the CoreKnowledgeAreaViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCoreKnowledgeArea"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19812">Early Learning Core Knowledge Area</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Early Learning Core Knowledge Area")]
-        public Guid RefCoreKnowledgeAreaId { get => _RefCoreKnowledgeAreaId; set => SetProperty(ref _RefCoreKnowledgeAreaId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefCoreKnowledgeArea"/> model
+        /// </summary>
+        public Guid? RefCoreKnowledgeAreaId { get => _RefCoreKnowledgeAreaId; set => SetProperty(ref _RefCoreKnowledgeAreaId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefCoreKnowledgeAreaId = model.RefCoreKnowledgeAreaId; // Early Learning Core Knowledge Area
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefCoreKnowledgeAreaId = model.RefCoreKnowledgeAreaId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

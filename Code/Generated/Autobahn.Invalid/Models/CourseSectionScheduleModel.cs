@@ -14,9 +14,39 @@ namespace Autobahn.Invalid.Models
     public partial class CourseSectionScheduleModel : AutobahnBase, Interfaces.ICourseSectionSchedule
     {
         /// <summary>
-        /// An indication of the time of day the class begins.
+        /// 
         /// </summary>
-        public System.TimeSpan? ClassBeginningTime { get; set; }
+        public Guid? ClassBeginningTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ClassEndingTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ClassMeetingDays { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ClassPeriod { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TimeDayIdentifier { get; set; }
 
     }
 }

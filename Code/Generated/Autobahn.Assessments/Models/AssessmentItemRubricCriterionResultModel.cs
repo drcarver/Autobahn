@@ -13,5 +13,15 @@ namespace Autobahn.Assessments.Models
      /// </summary>
     public partial class AssessmentItemRubricCriterionResultModel : AutobahnBase, Interfaces.IAssessmentItemRubricCriterionResult
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

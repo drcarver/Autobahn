@@ -20,6 +20,21 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProgramParticipationNeglected";
 
+        // member variable for the AchievementIndicator property
+        private  _AchievementIndicator;
+
+        // member variable for the ObtainedEmployment property
+        private  _ObtainedEmployment;
+
+        // member variable for the OutcomeIndicator property
+        private  _OutcomeIndicator;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefNeglectedProgramTypeId property
         private Guid? _RefNeglectedProgramTypeId;
 
@@ -27,17 +42,33 @@ namespace Autobahn.Invalid.ViewModels
 
         #region Properties
         /// <summary>
-        /// The title of the ProgramParticipationNeglectedViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefNeglectedProgramType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19194">Neglected or Delinquent Program Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Neglected or Delinquent Program Type")]
+        public  AchievementIndicator { get => _AchievementIndicator; set => SetProperty(ref _AchievementIndicator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  ObtainedEmployment { get => _ObtainedEmployment; set => SetProperty(ref _ObtainedEmployment, value); }
+
+        /// <summary>
+        /// </summary>
+        public  OutcomeIndicator { get => _OutcomeIndicator; set => SetProperty(ref _OutcomeIndicator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefNeglectedProgramType"/> model
+        /// </summary>
         public Guid? RefNeglectedProgramTypeId { get => _RefNeglectedProgramTypeId; set => SetProperty(ref _RefNeglectedProgramTypeId, value); }
 
         #endregion
@@ -49,7 +80,12 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefNeglectedProgramTypeId = model.RefNeglectedProgramTypeId; // Neglected or Delinquent Program Type
+            AchievementIndicator = model.AchievementIndicator; // 
+            ObtainedEmployment = model.ObtainedEmployment; // 
+            OutcomeIndicator = model.OutcomeIndicator; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefNeglectedProgramTypeId = model.RefNeglectedProgramTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

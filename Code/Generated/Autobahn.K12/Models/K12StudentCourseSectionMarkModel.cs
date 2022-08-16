@@ -14,9 +14,44 @@ namespace Autobahn.K12.Models
     public partial class K12StudentCourseSectionMarkModel : AutobahnBase, Interfaces.IK12StudentCourseSectionMark
     {
         /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
+        /// 
         /// </summary>
-        public System.String GradeEarned { get; set; }
+        public  FinalIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? GradeEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GradeValueQualifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MarkingPeriodName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MidTermMark { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

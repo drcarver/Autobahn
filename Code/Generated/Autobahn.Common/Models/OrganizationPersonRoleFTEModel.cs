@@ -11,5 +11,20 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class OrganizationPersonRoleFTEModel : AutobahnBase, Interfaces.IOrganizationPersonRoleFTE
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

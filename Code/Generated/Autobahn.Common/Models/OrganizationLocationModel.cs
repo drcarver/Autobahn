@@ -12,7 +12,17 @@ namespace Autobahn.Common.Models
     public partial class OrganizationLocationModel : AutobahnBase, Interfaces.IOrganizationLocation
     {
         /// <summary>
-        /// The type of address listed for an organization.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefOrganizationLocationTypeId { get; set; }
 

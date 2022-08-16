@@ -13,5 +13,20 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ProgramModel : AutobahnBase, Interfaces.IProgram
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? CreditsRequired { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
     }
 }

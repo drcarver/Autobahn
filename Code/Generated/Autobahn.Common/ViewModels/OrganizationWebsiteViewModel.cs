@@ -17,25 +17,34 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationWebsite";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the Website property
-        private System.String _Website;
+        private Guid? _Website;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationWebsiteViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19300">Web Site Address</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Web Site Address")]
-        public System.String Website { get => _Website; set => SetProperty(ref _Website, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? Website { get => _Website; set => SetProperty(ref _Website, value); }
 
         #endregion
 
@@ -46,7 +55,9 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Website = model.Website; // Web Site Address
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            Website = model.Website; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationTelephone : IAutobahnBase
     {
         /// <summary>
-        /// The type of communication number listed for an organization.
+        /// 
+        /// </summary>
+         DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PrimaryTelephoneNumberIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefInstitutionTelephoneTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTelephoneNumberListedStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TelephoneNumber { get; set; }
 
     }
 }

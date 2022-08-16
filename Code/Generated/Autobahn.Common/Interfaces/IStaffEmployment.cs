@@ -12,9 +12,54 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffEmployment : IAutobahnBase
     {
         /// <summary>
-        /// The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting.
+        /// 
         /// </summary>
-        System.Decimal? FullTimeEquivalency { get; set; }
+        Guid? FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HireDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PositionTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmploymentSeparationReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmploymentSeparationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StandardOccupationalClassification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         UnionMembershipName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         WeeksEmployedPerYear { get; set; }
 
     }
 }

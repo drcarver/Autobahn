@@ -11,5 +11,30 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class PersonDigitalAccessSpeedModel : AutobahnBase, Interfaces.IPersonDigitalAccessSpeed
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InternetDownloadSpeed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InternetSpeedTestDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InternetUploadSpeed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

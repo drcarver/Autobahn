@@ -14,9 +14,29 @@ namespace Autobahn.K12.Models
     public partial class K12StudentGraduationPlanModel : AutobahnBase, Interfaces.IK12StudentGraduationPlan
     {
         /// <summary>
-        /// Student's grade level at time of course.
+        /// 
+        /// </summary>
+        public  CreditsRequired { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefGradeLevelWhenCourseTakenId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefSCEDCourseSubjectAreaId { get; set; }
 
     }
 }

@@ -13,7 +13,27 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentAccommodation : IAutobahnBase
     {
         /// <summary>
-        /// A category of accommodations needed for a given assessment.
+        /// 
+        /// </summary>
+         OtherDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAccommodationTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentAccommodationCategoryId { get; set; }
 

@@ -13,9 +13,39 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IServicePlan : IAutobahnBase
     {
         /// <summary>
-        /// The reason given for declining the recommended services.
+        /// 
         /// </summary>
-        System.String ReasonForDeclinedServices { get; set; }
+         DeclinedServicesDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ExtendsOutsideSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InclusiveSettingIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ReasonForDeclinedServices { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SettingDescription { get; set; }
 
     }
 }

@@ -12,9 +12,74 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonFamily : IAutobahnBase
     {
         /// <summary>
-        /// The extent of formal instruction a person has received (e.g., the highest grade in school completed or its equivalent or the highest degree received).
+        /// 
+        /// </summary>
+         FamilyIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FamilyIncome { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IncludedInCountedFamilySize { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfHouseholdCollegeStudents { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfPeopleInFamily { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfPeopleInHousehold { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCommunicationMethodId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefELProgramEligibilityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFamilyIncomeSourceId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefHighestEducationLevelCompletedId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIncomeCalculationMethodId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProofOfResidencyTypeId { get; set; }
 
     }
 }

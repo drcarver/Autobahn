@@ -13,5 +13,20 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ServicesReceivedModel : AutobahnBase, Interfaces.IServicesReceived
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
     }
 }

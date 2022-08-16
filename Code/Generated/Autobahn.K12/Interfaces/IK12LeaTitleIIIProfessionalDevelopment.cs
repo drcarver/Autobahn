@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaTitleIIIProfessionalDevelopment : IAutobahnBase
     {
         /// <summary>
-        /// The type of Title III professional development utilized.
+        /// 
         /// </summary>
-        Guid RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
 
     }
 }

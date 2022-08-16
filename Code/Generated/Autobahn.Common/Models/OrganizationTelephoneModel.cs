@@ -12,9 +12,39 @@ namespace Autobahn.Common.Models
     public partial class OrganizationTelephoneModel : AutobahnBase, Interfaces.IOrganizationTelephone
     {
         /// <summary>
-        /// The type of communication number listed for an organization.
+        /// 
+        /// </summary>
+        public  DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PrimaryTelephoneNumberIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefInstitutionTelephoneTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTelephoneNumberListedStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TelephoneNumber { get; set; }
 
     }
 }

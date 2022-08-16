@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentSubtestAssessmentItemModel : AutobahnBase, Interfaces.IAssessmentSubtestAssessmentItem
     {
         /// <summary>
-        /// A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.
+        /// 
         /// </summary>
-        public System.Decimal? ItemWeightCorrect { get; set; }
+        public Guid? ItemWeightCorrect { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ItemWeightIncorrect { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ItemWeightNotAttempted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

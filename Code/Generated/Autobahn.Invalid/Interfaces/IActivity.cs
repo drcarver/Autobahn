@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IActivity : IAutobahnBase
     {
         /// <summary>
-        /// A description of the events and procedures that take place under the purview of an organized activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
         /// </summary>
-        System.String ActivityDescription { get; set; }
+        Guid? ActivityDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

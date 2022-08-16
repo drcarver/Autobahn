@@ -21,24 +21,42 @@ namespace Autobahn.Invalid.ViewModels
         private string _viewTitle = "Hello from CourseSectionLocation";
 
         // member variable for the ClassroomId property
-        private Guid _ClassroomId;
+        private Guid? _ClassroomId;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefInstructionLocationTypeId property
+        private  _RefInstructionLocationTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the CourseSectionLocationViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="Classroom"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Classroom Identifier")]
-        public Guid ClassroomId { get => _ClassroomId; set => SetProperty(ref _ClassroomId, value); }
+        public Guid? ClassroomId { get => _ClassroomId; set => SetProperty(ref _ClassroomId, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefInstructionLocationType"/> model
+        /// </summary>
+        public  RefInstructionLocationTypeId { get => _RefInstructionLocationTypeId; set => SetProperty(ref _RefInstructionLocationTypeId, value); }
 
         #endregion
 
@@ -49,21 +67,13 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ClassroomId = model.ClassroomId; // Classroom Identifier
+            ClassroomId = model.ClassroomId; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefInstructionLocationTypeId = model.RefInstructionLocationTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;
         }
-
-        #region "ICommands for Navigation Properties"
-        /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19507">Classroom Identifier</a>
-        /// </para>
-        /// </summary>
-        public ICommand ClassroomCommand { get; set; }
-
-        #endregion
     }
 }

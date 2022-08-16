@@ -14,7 +14,17 @@ namespace Autobahn.K12.Models
     public partial class K12SeaModel : AutobahnBase, Interfaces.IK12Sea
     {
         /// <summary>
-        /// The American National Standards Institute (ANSI) two-digit code for the state.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefStateANSICodeId { get; set; }
 

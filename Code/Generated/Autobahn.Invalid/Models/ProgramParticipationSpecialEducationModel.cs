@@ -14,9 +14,49 @@ namespace Autobahn.Invalid.Models
     public partial class ProgramParticipationSpecialEducationModel : AutobahnBase, Interfaces.IProgramParticipationSpecialEducation
     {
         /// <summary>
-        /// Awaiting initial evaluation for special education programs and related services under the Individuals with Disabilities Education Act (IDEA). 
+        /// 
         /// </summary>
-        public System.Boolean? AwaitingInitialIDEAEvaluationStatus { get; set; }
+        public Guid? AwaitingInitialIDEAEvaluationStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IDEAPlacementRationale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIDEAEducationalEnvironmentECId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefSpecialEducationExitReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SpecialEducationFTE { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SpecialEducationServicesExitDate { get; set; }
 
     }
 }

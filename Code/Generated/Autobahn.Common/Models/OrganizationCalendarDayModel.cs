@@ -12,9 +12,19 @@ namespace Autobahn.Common.Models
     public partial class OrganizationCalendarDayModel : AutobahnBase, Interfaces.IOrganizationCalendarDay
     {
         /// <summary>
-        /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
+        /// 
         /// </summary>
-        public System.String AlternateDayName { get; set; }
+        public Guid? AlternateDayName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

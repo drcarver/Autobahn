@@ -14,9 +14,59 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentItemApipModel : AutobahnBase, Interfaces.IAssessmentItemApip
     {
         /// <summary>
-        /// These templates are described using the processing language defined in IMS Global APIP specification and are distributed (in XML form) along with it. Delivery engines that support generalized response processing do not need to implement special mechanisms to support them as a template file can be parsed directly while processing the assessment item that refers to it. This element provides the URL for the template.
+        /// 
         /// </summary>
-        public System.String ResponseProcessingTemplateUrl { get; set; }
+        public  AdaptiveIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ItemBodyXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ModalFeedbackXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OutcomeDeclarationXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ResponseDeclarationXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ResponseProcessingTemplateUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ResponseProcessingXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TemplateDeclarationXml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TemplateProcessingXml { get; set; }
 
     }
 }

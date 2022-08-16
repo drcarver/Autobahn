@@ -13,9 +13,79 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaFederalReporting : IAutobahnBase
     {
         /// <summary>
-        /// An indication whether the LEA is covered by a desegregation plan either ordered by a court or entered into with the Office for Civil Rights under Title VI of the Civil Rights Act of 1964.
+        /// 
         /// </summary>
-        System.Boolean? DesegregationOrderOrPlan { get; set; }
+        Guid? DesegregationOrderOrPlan { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HarassmentOrBullyingPolicy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticSportParticipantsFemale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticSportParticipantsMale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticSportsFemaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticSportsMaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticTeamsFemaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InterscholasticTeamsMaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBarrierToEducatingHomelessId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIntegratedTechnologyStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StateAssessmentAdminFunding { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StateAssessStandardsFunding { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TerminatedTitleIIIProgramFailure { get; set; }
 
     }
 }

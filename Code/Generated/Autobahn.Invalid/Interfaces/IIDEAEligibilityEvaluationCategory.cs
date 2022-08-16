@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIDEAEligibilityEvaluationCategory : IAutobahnBase
     {
         /// <summary>
-        /// Category of evaluation used for IDEA eligibility.
+        /// 
         /// </summary>
-        Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefIDEAEligibilityEvaluationCategoryId { get; set; }
 
     }
 }

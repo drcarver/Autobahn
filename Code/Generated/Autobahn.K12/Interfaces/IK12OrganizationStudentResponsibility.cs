@@ -13,9 +13,24 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12OrganizationStudentResponsibility : IAutobahnBase
     {
         /// <summary>
-        /// The type of responsibility the district has for the student.
+        /// 
         /// </summary>
-        Guid RefK12ResponsibilityTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefK12ResponsibilityTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
 
     }
 }

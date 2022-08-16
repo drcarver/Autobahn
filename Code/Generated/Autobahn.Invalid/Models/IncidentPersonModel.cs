@@ -13,5 +13,30 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class IncidentPersonModel : AutobahnBase, Interfaces.IIncidentPerson
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentPersonRoleTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentPersonTypeId { get; set; }
+
     }
 }

@@ -14,9 +14,24 @@ namespace Autobahn.K12.Models
     public partial class K12StudentActivityModel : AutobahnBase, Interfaces.IK12StudentActivity
     {
         /// <summary>
-        /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
         /// </summary>
-        public System.Decimal? ActivityTimeInvolved { get; set; }
+        public Guid? ActivityTimeInvolved { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefActivityTimeMeasurementTypeId { get; set; }
 
     }
 }

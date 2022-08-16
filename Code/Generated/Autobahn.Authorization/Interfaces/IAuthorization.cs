@@ -13,9 +13,29 @@ namespace Autobahn.Authorization.Interfaces
     public partial interface IAuthorization : IAutobahnBase
     {
         /// <summary>
-        /// The user role for which the person is allowed.
+        /// 
         /// </summary>
-        System.String ApplicationRoleName { get; set; }
+        Guid? ApplicationRoleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartDate { get; set; }
 
     }
 }

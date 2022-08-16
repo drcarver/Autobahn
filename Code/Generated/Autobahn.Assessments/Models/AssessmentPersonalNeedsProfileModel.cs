@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentPersonalNeedsProfileModel : AutobahnBase, Interfaces.IAssessmentPersonalNeedsProfile
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        public System.Boolean? AssignedSupportFlag { get; set; }
+        public  ActivateByDefault { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AssessmentNeedType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? AssignedSupportFlag { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

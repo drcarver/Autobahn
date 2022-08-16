@@ -12,5 +12,15 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentParticipantSessionAccommodation : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

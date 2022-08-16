@@ -12,9 +12,54 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonDisability : IAutobahnBase
     {
         /// <summary>
-        /// The major or overriding disability condition that best describes a person's impairment.
+        /// 
+        /// </summary>
+         DisabilityStatus { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? PrimaryDisabilityTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAccommodationsNeededTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisabilityConditionStatusCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisabilityConditionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisabilityDeterminationSourceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIDEADisabilityTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SignificantCognitiveDisabilityIndicator { get; set; }
 
     }
 }

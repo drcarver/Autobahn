@@ -12,9 +12,39 @@ namespace Autobahn.Common.Models
     public partial class OrganizationCalendarEventModel : AutobahnBase, Interfaces.IOrganizationCalendarEvent
     {
         /// <summary>
-        /// A type of scheduled or unscheduled calendar event.
+        /// 
         /// </summary>
-        public System.Int32? RefCalendarEventType { get; set; }
+        public  EndTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EventDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefCalendarEventType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartTime { get; set; }
 
     }
 }

@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProgramParticipationFoodService : IAutobahnBase
     {
         /// <summary>
-        /// An indication of a student's participation in free, reduced price, full price breakfast, lunch, snack, supper, and milk programs.
+        /// 
         /// </summary>
-        Guid RefSchoolFoodServiceProgramId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefSchoolFoodServiceProgramId { get; set; }
 
     }
 }

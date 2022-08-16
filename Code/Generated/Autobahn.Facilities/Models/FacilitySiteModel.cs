@@ -14,9 +14,34 @@ namespace Autobahn.Facilities.Models
     public partial class FacilitySiteModel : AutobahnBase, Interfaces.IFacilitySite
     {
         /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
+        /// 
         /// </summary>
-        public System.Decimal? FacilitySiteArea { get; set; }
+        public Guid? FacilitySiteArea { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilitySiteIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingSiteUseRestrictionsTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilitySiteOutdoorAreaTypeId { get; set; }
 
     }
 }

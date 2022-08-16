@@ -13,7 +13,17 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentSessionStaffRole : IAutobahnBase
     {
         /// <summary>
-        /// The type of role served related to the administration of an assessment session.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentSessionStaffRoleTypeId { get; set; }
 

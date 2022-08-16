@@ -13,9 +13,64 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentFormSection : IAutobahnBase
     {
         /// <summary>
-        /// The globally unique identifier of an Assessment using a RFC 4122 compliant hexadecimal string.
+        /// 
         /// </summary>
-        System.String GUID { get; set; }
+         AssessmentItemBankIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AssessmentItemBankName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? GUID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PublishedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentFormSectionIdentificationSystemId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SectionReentry { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SectionSealed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SectionTimeLimit { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Version { get; set; }
 
     }
 }

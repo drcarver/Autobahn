@@ -13,9 +13,29 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentCourseSectionMark : IAutobahnBase
     {
         /// <summary>
-        /// Additional information regarding the context of the given grade.
+        /// 
+        /// </summary>
+         CourseNarrativeExplanationGrade { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

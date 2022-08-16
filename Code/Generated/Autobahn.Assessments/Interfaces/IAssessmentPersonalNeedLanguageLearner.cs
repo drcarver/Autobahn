@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentPersonalNeedLanguageLearner : IAutobahnBase
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        System.Boolean? AssignedSupport { get; set; }
+         ActivateByDefault { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? AssignedSupport { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get; set; }
 
     }
 }

@@ -12,9 +12,34 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonHealthBirth : IAutobahnBase
     {
         /// <summary>
-        /// The weight of a child at birth in pounds and ounces.
+        /// 
         /// </summary>
-        System.String WeightAtBirth { get; set; }
+         MultipleBirthIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTrimesterWhenPrenatalCareBeganId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         WeeksOfGestation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? WeightAtBirth { get; set; }
 
     }
 }

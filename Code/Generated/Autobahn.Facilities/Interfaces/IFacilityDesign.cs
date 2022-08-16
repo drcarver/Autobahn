@@ -13,9 +13,39 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityDesign : IAutobahnBase
     {
         /// <summary>
-        /// The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
+        /// 
+        /// </summary>
+         BuildingArchitectName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BuildingArchitecturalFirmName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BuildingDateOfCertificateOfOccupancy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefBuildingDesignTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingEnvOrEnergyPerformanceRatingCatId { get; set; }
 
     }
 }

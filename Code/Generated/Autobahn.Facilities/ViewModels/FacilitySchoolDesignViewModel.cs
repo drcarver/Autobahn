@@ -20,25 +20,35 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilitySchoolDesign";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefBuildingSchoolDesignTypeId property
-        private Guid _RefBuildingSchoolDesignTypeId;
+        private Guid? _RefBuildingSchoolDesignTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FacilitySchoolDesignViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingSchoolDesignType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20809">Building School Design Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Building School Design Type")]
-        public Guid RefBuildingSchoolDesignTypeId { get => _RefBuildingSchoolDesignTypeId; set => SetProperty(ref _RefBuildingSchoolDesignTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefBuildingSchoolDesignType"/> model
+        /// </summary>
+        public Guid? RefBuildingSchoolDesignTypeId { get => _RefBuildingSchoolDesignTypeId; set => SetProperty(ref _RefBuildingSchoolDesignTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefBuildingSchoolDesignTypeId = model.RefBuildingSchoolDesignTypeId; // Building School Design Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefBuildingSchoolDesignTypeId = model.RefBuildingSchoolDesignTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

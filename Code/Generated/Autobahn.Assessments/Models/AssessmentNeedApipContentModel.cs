@@ -14,9 +14,54 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentNeedApipContentModel : AutobahnBase, Interfaces.IAssessmentNeedApipContent
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the default language for the displayed translation.
+        /// 
+        /// </summary>
+        public  AssessmentNeedDirectionsOnlyIndicator { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? ItemTranslationDisplayLanguageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  KeywordTranslationLanguageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ReadAtStartPreferenceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedAlternativeRepresentationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedSigningTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedSpokenSourcePreferenceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedUserSpokenPreferenceTypeId { get; set; }
 
     }
 }

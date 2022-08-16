@@ -13,7 +13,22 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialDefAgent : IAutobahnBase
     {
         /// <summary>
-        /// The type of credentialing organization or entity as defined by the Credential Transparency Description Language.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCredentialDefAgentRoleTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefCTDLOrganizationTypeId { get; set; }
 

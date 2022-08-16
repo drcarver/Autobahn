@@ -14,9 +14,34 @@ namespace Autobahn.Invalid.Models
     public partial class ApipInteractionModel : AutobahnBase, Interfaces.IApipInteraction
     {
         /// <summary>
-        /// The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented.  The XML from the IMS Global APIP Specification would be included.
+        /// 
         /// </summary>
-        public System.String Xml { get; set; }
+        public  APIPInteractionSequenceNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefApipInteractionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Xml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  XML { get; set; }
 
     }
 }

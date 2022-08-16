@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IClassroom : IAutobahnBase
     {
         /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
+        /// 
         /// </summary>
-        System.String ClassroomIdentifier { get; set; }
+        Guid? ClassroomIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

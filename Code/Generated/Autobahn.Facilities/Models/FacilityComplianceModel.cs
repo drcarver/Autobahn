@@ -14,9 +14,59 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityComplianceModel : AutobahnBase, Interfaces.IFacilityCompliance
     {
         /// <summary>
-        /// An indication of whether the school, building, site, system, component, equipment, vehicle, or fixture conforms to the requirements or standards specified in federal, state, or local standards or codes or other officially required guidelines or regulations.
+        /// 
+        /// </summary>
+        public  ComponentOrFixtureCheckDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityComplianceDeterminationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityComplianceName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityComponentDeficiencyDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityInspectionScoreResultDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityInspectionViolationDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFacilityComplianceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityMaintStandardTypeId { get; set; }
 
     }
 }

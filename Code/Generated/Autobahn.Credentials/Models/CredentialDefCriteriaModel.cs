@@ -14,9 +14,49 @@ namespace Autobahn.Credentials.Models
     public partial class CredentialDefCriteriaModel : AutobahnBase, Interfaces.ICredentialDefCriteria
     {
         /// <summary>
-        /// The criteria for competency-based completion of the qualification, achievement, personal or organizational quality, or aspect of an identity.
+        /// 
         /// </summary>
-        public System.String Criteria { get; set; }
+        public Guid? Criteria { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CriteriaUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EstimatedDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MaximumDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MinimumAge { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MinimumDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCredentialDefAssessMethodTypeId { get; set; }
 
     }
 }

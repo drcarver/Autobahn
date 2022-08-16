@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonAllergy : IAutobahnBase
     {
         /// <summary>
-        /// Describes symptoms know to be associated with a person's reaction to an allergen.
+        /// 
         /// </summary>
-        System.String ReactionDescription { get; set; }
+        Guid? ReactionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAllergySeverityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAllergyTypeId { get; set; }
 
     }
 }

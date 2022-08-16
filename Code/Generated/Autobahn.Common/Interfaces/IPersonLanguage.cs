@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonLanguage : IAutobahnBase
     {
         /// <summary>
-        /// An indication of the function and context in which a person uses a language to communicate.
+        /// 
         /// </summary>
-        Guid RefLanguageUseTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefLanguageId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefLanguageUseTypeId { get; set; }
 
     }
 }

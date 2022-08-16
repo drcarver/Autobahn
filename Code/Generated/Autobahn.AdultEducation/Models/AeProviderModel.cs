@@ -13,5 +13,20 @@ namespace Autobahn.AdultEducation.Models
      /// </summary>
     public partial class AeProviderModel : AutobahnBase, Interfaces.IAeProvider
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefLevelOfInstitutionId { get; set; }
+
     }
 }

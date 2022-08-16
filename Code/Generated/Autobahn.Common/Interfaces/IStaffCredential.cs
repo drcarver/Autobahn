@@ -12,9 +12,69 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffCredential : IAutobahnBase
     {
         /// <summary>
-        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// 
         /// </summary>
-        System.String DiplomaOrCredentialAwardDate { get; set; }
+         CardiopulmonaryResuscitationCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CTEInstructorIndustryCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FirstAidCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAeCertificationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefChildDevAssociateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefParaprofessionalQualificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProgramSponsorTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTeachingCredentialBasisId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTeachingCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TechnologySkillsStandardsMet { get; set; }
 
     }
 }

@@ -14,9 +14,69 @@ namespace Autobahn.K12.Models
     public partial class K12SchoolStatusModel : AutobahnBase, Interfaces.IK12SchoolStatus
     {
         /// <summary>
-        /// An indication of the specific group of students whose needs the alternative school is designed to meet.
+        /// 
+        /// </summary>
+        public  ConsolidatedMepFundsStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ProgressAcheivingEnglishLearnerProficiencyStateDefinedStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAlternativeSchoolFocusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBlendedLearningModelTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefInternetAccessId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefMagnetSpecialProgramId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefNationalSchoolLunchProgramStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProgressAchievingEnglishLanguageProficiencyIndicatorStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefRestructuringActionId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTitleISchoolStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefVirtualSchoolStatusId { get; set; }
 
     }
 }

@@ -20,25 +20,49 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramProgressReport";
 
+        // member variable for the ProgressDescription property
+        private  _ProgressDescription;
+
         // member variable for the ProgressReportDate property
-        private System.DateTime? _ProgressReportDate;
+        private Guid? _ProgressReportDate;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefIPSPProgressReportTypeId property
+        private  _RefIPSPProgressReportTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the IndividualizedProgramProgressReportViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20680">Individualized Program Service Plan Progress Report Date</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Individualized Program Service Plan Progress Report Date")]
-        public System.DateTime? ProgressReportDate { get => _ProgressReportDate; set => SetProperty(ref _ProgressReportDate, value); }
+        public  ProgressDescription { get => _ProgressDescription; set => SetProperty(ref _ProgressDescription, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? ProgressReportDate { get => _ProgressReportDate; set => SetProperty(ref _ProgressReportDate, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
+        /// </summary>
+        public  RefIPSPProgressReportTypeId { get => _RefIPSPProgressReportTypeId; set => SetProperty(ref _RefIPSPProgressReportTypeId, value); }
 
         #endregion
 
@@ -49,7 +73,11 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ProgressReportDate = model.ProgressReportDate; // Individualized Program Service Plan Progress Report Date
+            ProgressDescription = model.ProgressDescription; // 
+            ProgressReportDate = model.ProgressReportDate; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefIPSPProgressReportTypeId = model.RefIPSPProgressReportTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

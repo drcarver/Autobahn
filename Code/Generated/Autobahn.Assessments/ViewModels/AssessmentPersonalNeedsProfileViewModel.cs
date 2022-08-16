@@ -20,25 +20,48 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentPersonalNeedsProfile";
 
+        // member variable for the ActivateByDefault property
+        private  _ActivateByDefault;
+
+        // member variable for the AssessmentNeedType property
+        private  _AssessmentNeedType;
+
         // member variable for the AssignedSupportFlag property
-        private System.Boolean? _AssignedSupportFlag;
+        private Guid? _AssignedSupportFlag;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the AssessmentPersonalNeedsProfileViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Personal Needs Profile Assigned Support")]
-        public System.Boolean? AssignedSupportFlag { get => _AssignedSupportFlag; set => SetProperty(ref _AssignedSupportFlag, value); }
+        public  ActivateByDefault { get => _ActivateByDefault; set => SetProperty(ref _ActivateByDefault, value); }
+
+        /// <summary>
+        /// </summary>
+        public  AssessmentNeedType { get => _AssessmentNeedType; set => SetProperty(ref _AssessmentNeedType, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? AssignedSupportFlag { get => _AssignedSupportFlag; set => SetProperty(ref _AssignedSupportFlag, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +72,11 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AssignedSupportFlag = model.AssignedSupportFlag; // Assessment Personal Needs Profile Assigned Support
+            ActivateByDefault = model.ActivateByDefault; // 
+            AssessmentNeedType = model.AssessmentNeedType; // 
+            AssignedSupportFlag = model.AssignedSupportFlag; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

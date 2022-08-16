@@ -14,9 +14,19 @@ namespace Autobahn.LearningResources.Models
     public partial class LearningResourcePhysicalMediaModel : AutobahnBase, Interfaces.ILearningResourcePhysicalMedia
     {
         /// <summary>
-        /// A type of physical media on which the Learning Resource is delivered or available.
+        /// 
         /// </summary>
-        public Guid RefLearningResourcePhysicalMediaTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefLearningResourcePhysicalMediaTypeId { get; set; }
 
     }
 }

@@ -13,5 +13,20 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ProgramParticipationWIOABarriersModel : AutobahnBase, Interfaces.IProgramParticipationWIOABarriers
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefWIOABarrierstoEmploymentId { get; set; }
+
     }
 }

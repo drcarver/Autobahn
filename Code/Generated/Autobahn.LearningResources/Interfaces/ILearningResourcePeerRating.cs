@@ -12,5 +12,25 @@ namespace Autobahn.LearningResources.Interfaces
      /// </summary>
     public partial interface ILearningResourcePeerRating : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Value { get; set; }
+
     }
 }

@@ -12,5 +12,20 @@ namespace Autobahn.Workforce.Interfaces
      /// </summary>
     public partial interface IWorkforceProgramParticipantCohort : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         CohortMedianEarnings { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

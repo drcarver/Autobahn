@@ -12,9 +12,49 @@ namespace Autobahn.Common.Models
     public partial class PersonRelationshipModel : AutobahnBase, Interfaces.IPersonRelationship
     {
         /// <summary>
-        /// An indication that a person has legal custody of a child.
+        /// 
         /// </summary>
-        public System.Boolean? CustodialRelationshipIndicator { get; set; }
+        public  ContactPriorityNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ContactRestrictions { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? CustodialRelationshipIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EmergencyContactInd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LivesWithIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PrimaryContactIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPersonRelationshipTypeId { get; set; }
 
     }
 }

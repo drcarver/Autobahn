@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramAssessmentModel : AutobahnBase, Interfaces.IIndividualizedProgramAssessment
     {
         /// <summary>
-        /// A statement of why-
+        /// 
         /// </summary>
-        public System.String IEPAlternativeAssessmentRationale { get; set; }
+        public Guid? IEPAlternativeAssessmentRationale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

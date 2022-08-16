@@ -13,9 +13,49 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface ILearnerAction : IAutobahnBase
     {
         /// <summary>
-        /// The type of action taken by the learner.
+        /// 
+        /// </summary>
+         LearnerActionActorIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LearnerActionDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LearnerActionObjectDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LearnerActionObjectIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LearnerActionObjectType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefLearnerActionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Value { get; set; }
 
     }
 }

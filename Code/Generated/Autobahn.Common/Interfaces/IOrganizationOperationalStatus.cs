@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationOperationalStatus : IAutobahnBase
     {
         /// <summary>
-        /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
+        /// 
         /// </summary>
-        Guid RefOperationalStatusId { get; set; }
+         OperationalStatusEffectiveDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefOperationalStatusId { get; set; }
 
     }
 }

@@ -13,9 +13,39 @@ namespace Autobahn.Authorization.Interfaces
     public partial interface IAuthentication : IAutobahnBase
     {
         /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
+        /// 
         /// </summary>
-        System.String IdentityProviderName { get; set; }
+         EndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? IdentityProviderName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IdentityProviderUri { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LoginIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartDate { get; set; }
 
     }
 }

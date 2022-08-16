@@ -21,24 +21,57 @@ namespace Autobahn.Facilities.ViewModels
         private string _viewTitle = "Hello from FacilityEnergy";
 
         // member variable for the BuildingEnergyServiceCompanyName property
-        private System.String _BuildingEnergyServiceCompanyName;
+        private Guid? _BuildingEnergyServiceCompanyName;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefBuildingEnergySourceTypeId property
+        private  _RefBuildingEnergySourceTypeId;
+
+        // member variable for the RefFacilityUtilityProviderTypeId property
+        private  _RefFacilityUtilityProviderTypeId;
+
+        // member variable for the RefFacilityUtilityTypeId property
+        private  _RefFacilityUtilityTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FacilityEnergyViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20850">Building Energy Service Company Name</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Building Energy Service Company Name")]
-        public System.String BuildingEnergyServiceCompanyName { get => _BuildingEnergyServiceCompanyName; set => SetProperty(ref _BuildingEnergyServiceCompanyName, value); }
+        public Guid? BuildingEnergyServiceCompanyName { get => _BuildingEnergyServiceCompanyName; set => SetProperty(ref _BuildingEnergyServiceCompanyName, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefBuildingEnergySourceType"/> model
+        /// </summary>
+        public  RefBuildingEnergySourceTypeId { get => _RefBuildingEnergySourceTypeId; set => SetProperty(ref _RefBuildingEnergySourceTypeId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityProviderType"/> model
+        /// </summary>
+        public  RefFacilityUtilityProviderTypeId { get => _RefFacilityUtilityProviderTypeId; set => SetProperty(ref _RefFacilityUtilityProviderTypeId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityType"/> model
+        /// </summary>
+        public  RefFacilityUtilityTypeId { get => _RefFacilityUtilityTypeId; set => SetProperty(ref _RefFacilityUtilityTypeId, value); }
 
         #endregion
 
@@ -49,7 +82,12 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            BuildingEnergyServiceCompanyName = model.BuildingEnergyServiceCompanyName; // Building Energy Service Company Name
+            BuildingEnergyServiceCompanyName = model.BuildingEnergyServiceCompanyName; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefBuildingEnergySourceTypeId = model.RefBuildingEnergySourceTypeId; // 
+            RefFacilityUtilityProviderTypeId = model.RefFacilityUtilityProviderTypeId; // 
+            RefFacilityUtilityTypeId = model.RefFacilityUtilityTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

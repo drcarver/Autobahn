@@ -13,9 +13,19 @@ namespace Autobahn.LearningResources.Interfaces
     public partial interface ILearningResourceMediaFeature : IAutobahnBase
     {
         /// <summary>
-        /// Accessible content features included with the learning resource.
+        /// 
         /// </summary>
-        Guid RefLearningResourceMediaFeatureTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefLearningResourceMediaFeatureTypeId { get; set; }
 
     }
 }

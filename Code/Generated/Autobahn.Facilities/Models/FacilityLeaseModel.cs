@@ -14,9 +14,29 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityLeaseModel : AutobahnBase, Interfaces.IFacilityLease
     {
         /// <summary>
-        /// The amount of money the school must pay to rent the facility that it is in.
+        /// 
         /// </summary>
-        public System.Decimal? FacilityLeaseAmount { get; set; }
+        public Guid? FacilityLeaseAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityLeaseAmountCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityLeaseTypeId { get; set; }
 
     }
 }

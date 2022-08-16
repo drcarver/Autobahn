@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentPersonalNeedsProfile : IAutobahnBase
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        System.Boolean? AssignedSupportFlag { get; set; }
+         ActivateByDefault { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AssessmentNeedType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? AssignedSupportFlag { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

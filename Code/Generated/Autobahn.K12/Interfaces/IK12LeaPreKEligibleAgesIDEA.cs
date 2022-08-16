@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaPreKEligibleAgesIDEA : IAutobahnBase
     {
         /// <summary>
-        /// The ages of children not served under IDEA to whom the LEA's pre-kindergarten services are available.  
+        /// 
         /// </summary>
-        Guid RefPreKEligibleAgesNonIDEAId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefPreKEligibleAgesNonIDEAId { get; set; }
 
     }
 }

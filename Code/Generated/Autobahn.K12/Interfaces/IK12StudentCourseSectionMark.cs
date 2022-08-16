@@ -13,9 +13,44 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentCourseSectionMark : IAutobahnBase
     {
         /// <summary>
-        /// A final indicator of student performance in a course section as submitted by the instructor.
+        /// 
         /// </summary>
-        System.String GradeEarned { get; set; }
+         FinalIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? GradeEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         GradeValueQualifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MarkingPeriodName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MidTermMark { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StudentCourseSectionGradeNarrative { get; set; }
 
     }
 }

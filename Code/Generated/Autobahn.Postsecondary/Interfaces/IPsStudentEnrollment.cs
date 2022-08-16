@@ -12,5 +12,10 @@ namespace Autobahn.Postsecondary.Interfaces
      /// </summary>
     public partial interface IPSStudentEnrollment : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         DisplacedStudentStatus { get; set; }
+
     }
 }

@@ -21,24 +21,47 @@ namespace Autobahn.Assessments.ViewModels
         private string _viewTitle = "Hello from AssessmentSubtestAssessmentItem";
 
         // member variable for the ItemWeightCorrect property
-        private System.Decimal? _ItemWeightCorrect;
+        private Guid? _ItemWeightCorrect;
+
+        // member variable for the ItemWeightIncorrect property
+        private  _ItemWeightIncorrect;
+
+        // member variable for the ItemWeightNotAttempted property
+        private  _ItemWeightNotAttempted;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the AssessmentSubtestAssessmentItemViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A weighting factor for how the item score is used to compute a sub-test score when the item is correct or partially correct. Item weight of 1 indicates the full item score is used. A weight of .5 would indicate the item only contributes one half of the item score to the subtest. A weight of 0 indicates the item does not affect the sub test score.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20013">Assessment Form Subtest Item Weight Correct</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Form Subtest Item Weight Correct")]
-        public System.Decimal? ItemWeightCorrect { get => _ItemWeightCorrect; set => SetProperty(ref _ItemWeightCorrect, value); }
+        public Guid? ItemWeightCorrect { get => _ItemWeightCorrect; set => SetProperty(ref _ItemWeightCorrect, value); }
+
+        /// <summary>
+        /// </summary>
+        public  ItemWeightIncorrect { get => _ItemWeightIncorrect; set => SetProperty(ref _ItemWeightIncorrect, value); }
+
+        /// <summary>
+        /// </summary>
+        public  ItemWeightNotAttempted { get => _ItemWeightNotAttempted; set => SetProperty(ref _ItemWeightNotAttempted, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +72,11 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ItemWeightCorrect = model.ItemWeightCorrect; // Assessment Form Subtest Item Weight Correct
+            ItemWeightCorrect = model.ItemWeightCorrect; // 
+            ItemWeightIncorrect = model.ItemWeightIncorrect; // 
+            ItemWeightNotAttempted = model.ItemWeightNotAttempted; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

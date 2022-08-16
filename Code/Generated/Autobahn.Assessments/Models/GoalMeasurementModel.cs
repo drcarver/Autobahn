@@ -14,9 +14,34 @@ namespace Autobahn.Assessments.Models
     public partial class GoalMeasurementModel : AutobahnBase, Interfaces.IGoalMeasurement
     {
         /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
+        /// 
         /// </summary>
-        public System.String SuccessCriteria { get; set; }
+        public  Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefGoalMeasurementTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Schedule { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? SuccessCriteria { get; set; }
 
     }
 }

@@ -14,9 +14,34 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityFinanceModel : AutobahnBase, Interfaces.IFacilityFinance
     {
         /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
+        /// 
         /// </summary>
-        public System.Decimal? FacilityReplacementValue { get; set; }
+        public Guid? FacilityReplacementValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IndebtednessAmountAllowed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InsuranceDeductible { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PublicEducationMillRate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

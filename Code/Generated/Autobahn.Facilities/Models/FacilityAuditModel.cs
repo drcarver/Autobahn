@@ -14,7 +14,22 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityAuditModel : AutobahnBase, Interfaces.IFacilityAudit
     {
         /// <summary>
-        /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
+        /// 
+        /// </summary>
+        public  FacilityAuditDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFacilityAuditTypeId { get; set; }
 

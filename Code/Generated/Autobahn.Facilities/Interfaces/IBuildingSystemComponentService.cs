@@ -13,9 +13,24 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IBuildingSystemComponentService : IAutobahnBase
     {
         /// <summary>
-        /// The month, day, and year a system, component, equipment, or fixture was serviced for repair or routine maintenance.
+        /// 
         /// </summary>
-        System.DateTime? ComponentOrFixtureServicedDate { get; set; }
+         ComponentOrFixtureScheduledServicedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ComponentOrFixtureServicedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

@@ -14,9 +14,39 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityMandateModel : AutobahnBase, Interfaces.IFacilityMandate
     {
         /// <summary>
-        /// The particular federal law, regulation, or standard that pertains to a school facility.
+        /// 
+        /// </summary>
+        public  FacilityStateOrLocalMandateName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilitiesMandateAuthorityTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFacilityApplicableFederalMandateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityFederalMandateInterestTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityStateOrLocalMandateInterestTypeId { get; set; }
 
     }
 }

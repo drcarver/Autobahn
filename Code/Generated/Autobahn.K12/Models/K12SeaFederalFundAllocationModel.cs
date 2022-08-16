@@ -13,5 +13,20 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12SeaFederalFundAllocationModel : AutobahnBase, Interfaces.IK12SeaFederalFundAllocation
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FederalProgramCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FederalProgramsFundingAllocation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFederalProgramFundingAllocationTypeId { get; set; }
+
     }
 }

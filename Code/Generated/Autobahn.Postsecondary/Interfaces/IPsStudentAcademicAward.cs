@@ -13,9 +13,44 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentAcademicAward : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day or year and month on which the academic award was conferred.
+        /// 
         /// </summary>
-        System.String AcademicAwardDate { get; set; }
+        Guid? AcademicAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AcademicAwardTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAcademicAwardLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAcademicAwardPrerequisiteTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPESCAwardLevelTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RequirementsURL { get; set; }
 
     }
 }

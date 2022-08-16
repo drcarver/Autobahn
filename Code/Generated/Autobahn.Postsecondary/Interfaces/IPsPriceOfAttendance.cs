@@ -13,9 +13,69 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsPriceOfAttendance : IAutobahnBase
     {
         /// <summary>
-        /// The academic session for which the data are recorded and applicable.
+        /// 
         /// </summary>
-        System.String SessionDesignator { get; set; }
+         BoardCharges { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BooksAndSuppliesCosts { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ComprehensiveFee { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IPEDSCollectionYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OtherStudentExpenses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PriceOfAttendance { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTuitionUnitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RequiredStudentFees { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RoomCharges { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? SessionDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TuitionPublished { get; set; }
 
     }
 }

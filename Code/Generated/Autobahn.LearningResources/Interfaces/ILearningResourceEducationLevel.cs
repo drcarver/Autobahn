@@ -12,5 +12,20 @@ namespace Autobahn.LearningResources.Interfaces
      /// </summary>
     public partial interface ILearningResourceEducationLevel : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefEducationLevelId { get; set; }
+
     }
 }

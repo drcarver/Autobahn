@@ -14,9 +14,49 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentFinancialAidModel : AutobahnBase, Interfaces.IPsStudentFinancialAid
     {
         /// <summary>
-        /// A person who receives Title IV aid.  Title IV aid includes grant aid, work study aid, and loan aid such as: Federal Pell Grant, Federal Supplemental Educational Opportunity Grant (FSEOG), Teacher Education Assistance for College and Higher Education (TEACH) Grant, Federal Work-Study, Federal Perkins Loan, Subsidized Direct or FFEL Stafford Loan, and Unsubsidized Direct or FFEL Stafford Loan.  Title IV aid specifications are defined by the instructions for the IPEDS Student Financial Aid survey.
+        /// 
         /// </summary>
-        public System.Boolean? TitleIVParticipantAndRecipient { get; set; }
+        public  FinancialAidApplicant { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FinancialAidIncomeLevel { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FinancialNeed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFinancialAidVeteransBenefitStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFinancialAidVeteransBenefitTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefNeedDeterminationMethodId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? TitleIVParticipantAndRecipient { get; set; }
 
     }
 }

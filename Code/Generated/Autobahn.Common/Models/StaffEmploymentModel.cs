@@ -12,9 +12,54 @@ namespace Autobahn.Common.Models
     public partial class StaffEmploymentModel : AutobahnBase, Interfaces.IStaffEmployment
     {
         /// <summary>
-        /// The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting.
+        /// 
         /// </summary>
-        public System.Decimal? FullTimeEquivalency { get; set; }
+        public Guid? FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  HireDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PositionTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmploymentSeparationReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmploymentSeparationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StandardOccupationalClassification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  UnionMembershipName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  WeeksEmployedPerYear { get; set; }
 
     }
 }

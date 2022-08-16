@@ -13,9 +13,49 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IDataCollection : IAutobahnBase
     {
         /// <summary>
-        /// The year for a reported school session for which the data is applicable.
+        /// 
         /// </summary>
-        System.String DataCollectionAcademicSchoolYear { get; set; }
+        Guid? DataCollectionAcademicSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DataCollectionCloseDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DataCollectionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DataCollectionName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DataCollectionOpenDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DataCollectionSchoolYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDataCollectionStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SourceSystemDataCollectionIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SourceSystemName { get; set; }
 
     }
 }

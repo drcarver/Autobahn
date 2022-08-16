@@ -12,9 +12,89 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonDetail : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day on which a person was born.
+        /// 
         /// </summary>
-        System.DateTime? Birthdate { get; set; }
+        Guid? Birthdate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BirthdateVerification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FirstName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         GenerationCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HispanicLatinoEthnicity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LastName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MiddleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Prefix { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefHighestEducationLevelCompletedId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProofOfResidencyTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefSexId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStateOfResidenceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTribalAffiliationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefUSCitizenshipStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefVisaTypeId { get; set; }
 
     }
 }

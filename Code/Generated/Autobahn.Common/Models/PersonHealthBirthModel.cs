@@ -12,9 +12,34 @@ namespace Autobahn.Common.Models
     public partial class PersonHealthBirthModel : AutobahnBase, Interfaces.IPersonHealthBirth
     {
         /// <summary>
-        /// The weight of a child at birth in pounds and ounces.
+        /// 
         /// </summary>
-        public System.String WeightAtBirth { get; set; }
+        public  MultipleBirthIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTrimesterWhenPrenatalCareBeganId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  WeeksOfGestation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? WeightAtBirth { get; set; }
 
     }
 }

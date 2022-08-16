@@ -20,6 +20,12 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12Sea";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefStateANSICodeId property
         private Guid? _RefStateANSICodeId;
 
@@ -27,17 +33,21 @@ namespace Autobahn.K12.ViewModels
 
         #region Properties
         /// <summary>
-        /// The title of the K12SeaViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStateANSICode"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19414">State ANSI Code</a>
-        /// </para>
         /// </summary>
-        [DisplayName("State ANSI Code")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefStateANSICode"/> model
+        /// </summary>
         public Guid? RefStateANSICodeId { get => _RefStateANSICodeId; set => SetProperty(ref _RefStateANSICodeId, value); }
 
         #endregion
@@ -49,7 +59,9 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefStateANSICodeId = model.RefStateANSICodeId; // State ANSI Code
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefStateANSICodeId = model.RefStateANSICodeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

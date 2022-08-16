@@ -13,5 +13,20 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ServiceStaffModel : AutobahnBase, Interfaces.IServiceStaff
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefSpecialEducationStaffCategoryId { get; set; }
+
     }
 }

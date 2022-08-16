@@ -13,9 +13,24 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IFinancialAidApplication : IAutobahnBase
     {
         /// <summary>
-        /// The type of financial application completed by an individual.
+        /// 
         /// </summary>
-        Guid RefFinancialAidApplicationTypeId { get; set; }
+         FinancialAidYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefFinancialAidApplicationTypeId { get; set; }
 
     }
 }

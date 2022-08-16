@@ -13,7 +13,17 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12Sea : IAutobahnBase
     {
         /// <summary>
-        /// The American National Standards Institute (ANSI) two-digit code for the state.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefStateANSICodeId { get; set; }
 

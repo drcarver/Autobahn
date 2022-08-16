@@ -14,9 +14,29 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramProgressReportModel : AutobahnBase, Interfaces.IIndividualizedProgramProgressReport
     {
         /// <summary>
-        /// The date parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan.
+        /// 
         /// </summary>
-        public System.DateTime? ProgressReportDate { get; set; }
+        public  ProgressDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ProgressReportDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIPSPProgressReportTypeId { get; set; }
 
     }
 }

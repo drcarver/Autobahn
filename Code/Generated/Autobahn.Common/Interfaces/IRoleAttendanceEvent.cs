@@ -12,9 +12,54 @@ namespace Autobahn.Common.Interfaces
     public partial interface IRoleAttendanceEvent : IAutobahnBase
     {
         /// <summary>
-        /// The status of a person's attendance associated with an Attendance Event Type and Attendance Event Date in an organization-person-role context.
+        /// 
+        /// </summary>
+         Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EndTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAbsentAttendanceCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAttendanceEventTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAttendanceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefLeaveEventTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPresentAttendanceCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartTime { get; set; }
 
     }
 }

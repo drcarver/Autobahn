@@ -13,9 +13,34 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPSStudentProgram : IAutobahnBase
     {
         /// <summary>
-        /// An indicator of whether the CIP Code is referencing an enrollment program or an award program.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCareerClusterId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefCipUseId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTransferOutIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefWorkbasedLearningOpportunityTypeId { get; set; }
 
     }
 }

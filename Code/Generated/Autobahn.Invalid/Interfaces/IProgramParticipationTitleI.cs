@@ -13,7 +13,17 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProgramParticipationTitleI : IAutobahnBase
     {
         /// <summary>
-        /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefTitleIIndicatorId { get; set; }
 

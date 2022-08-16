@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramMeetingModel : AutobahnBase, Interfaces.IIndividualizedProgramMeeting
     {
         /// <summary>
-        /// The date on which a child's service plan meeting is held.
+        /// 
         /// </summary>
-        public System.DateTime? MeetingDate { get; set; }
+        public Guid? MeetingDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -13,5 +13,15 @@ namespace Autobahn.Competencies.Models
      /// </summary>
     public partial class CompetencySetRubricModel : AutobahnBase, Interfaces.ICompetencySetRubric
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

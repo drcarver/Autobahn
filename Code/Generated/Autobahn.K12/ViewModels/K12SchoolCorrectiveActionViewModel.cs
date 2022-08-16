@@ -20,25 +20,35 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12SchoolCorrectiveAction";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefCorrectiveActionTypeId property
-        private Guid _RefCorrectiveActionTypeId;
+        private Guid? _RefCorrectiveActionTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the K12SchoolCorrectiveActionViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCorrectiveActionType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19049">Corrective Action Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Corrective Action Type")]
-        public Guid RefCorrectiveActionTypeId { get => _RefCorrectiveActionTypeId; set => SetProperty(ref _RefCorrectiveActionTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefCorrectiveActionType"/> model
+        /// </summary>
+        public Guid? RefCorrectiveActionTypeId { get => _RefCorrectiveActionTypeId; set => SetProperty(ref _RefCorrectiveActionTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefCorrectiveActionTypeId = model.RefCorrectiveActionTypeId; // Corrective Action Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefCorrectiveActionTypeId = model.RefCorrectiveActionTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

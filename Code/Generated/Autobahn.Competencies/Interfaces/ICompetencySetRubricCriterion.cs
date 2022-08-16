@@ -12,5 +12,15 @@ namespace Autobahn.Competencies.Interfaces
      /// </summary>
     public partial interface ICompetencySetRubricCriterion : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

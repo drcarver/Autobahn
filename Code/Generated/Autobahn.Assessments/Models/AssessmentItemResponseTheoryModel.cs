@@ -14,9 +14,84 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentItemResponseTheoryModel : AutobahnBase, Interfaces.IAssessmentItemResponseTheory
     {
         /// <summary>
-        /// The Item Response Theory value representing the discrimination of the item. The a parameter is found by taking the slope of the line tangent to the item characteristic curve at the inflection point, B. The parameter is the steepness of the curve at its steepest point.
+        /// 
         /// </summary>
-        public System.Int32? ParameterA { get; set; }
+        public  DIFValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  KappaValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ParameterA { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterB { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterC { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD1 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD2 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD3 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD4 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD5 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParameterD6 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PointBiserialCorrelationValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefItemResponseTheoryDifficultyCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefItemResponseTheoryKappaAlgorithmId { get; set; }
 
     }
 }

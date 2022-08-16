@@ -20,25 +20,35 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ActivityRecognition";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefActivityRecognitionTypeId property
-        private Guid _RefActivityRecognitionTypeId;
+        private Guid? _RefActivityRecognitionTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ActivityRecognitionViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefActivityRecognitionType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19229">Recognition for Participation or Performance in an Activity</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Recognition for Participation or Performance in an Activity")]
-        public Guid RefActivityRecognitionTypeId { get => _RefActivityRecognitionTypeId; set => SetProperty(ref _RefActivityRecognitionTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefActivityRecognitionType"/> model
+        /// </summary>
+        public Guid? RefActivityRecognitionTypeId { get => _RefActivityRecognitionTypeId; set => SetProperty(ref _RefActivityRecognitionTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefActivityRecognitionTypeId = model.RefActivityRecognitionTypeId; // Recognition for Participation or Performance in an Activity
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefActivityRecognitionTypeId = model.RefActivityRecognitionTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

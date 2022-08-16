@@ -13,7 +13,17 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramGoal : IAutobahnBase
     {
         /// <summary>
-        /// Legal category for an IEP annual goal or short-term objectives.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefIEPGoalTypeId { get; set; }
 

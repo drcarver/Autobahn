@@ -14,9 +14,64 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentSessionModel : AutobahnBase, Interfaces.IAssessmentSession
     {
         /// <summary>
-        /// An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.
+        /// 
+        /// </summary>
+        public  ActualEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ActualStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AllottedTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Location { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentSessionSpecialCircumstanceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentSessionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ScheduledEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ScheduledStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SecurityIssue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SpecialEventDescription { get; set; }
 
     }
 }

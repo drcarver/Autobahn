@@ -14,9 +14,34 @@ namespace Autobahn.Assessments.Models
     public partial class GoalMeasurementCriterionModel : AutobahnBase, Interfaces.IGoalMeasurementCriterion
     {
         /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
+        /// 
         /// </summary>
-        public System.Decimal? AccuracyPercent { get; set; }
+        public Guid? AccuracyPercent { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AttemptsCount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Metric { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SuccessCount { get; set; }
 
     }
 }

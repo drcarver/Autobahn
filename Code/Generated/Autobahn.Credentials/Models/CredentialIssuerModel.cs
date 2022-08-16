@@ -14,9 +14,29 @@ namespace Autobahn.Credentials.Models
     public partial class CredentialIssuerModel : AutobahnBase, Interfaces.ICredentialIssuer
     {
         /// <summary>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
+        /// 
         /// </summary>
-        public System.String AwardIssuerOriginURL { get; set; }
+        public Guid? AwardIssuerOriginURL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCTDLOrganizationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RevocationListURL { get; set; }
 
     }
 }

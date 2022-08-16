@@ -13,5 +13,20 @@ namespace Autobahn.Assessments.Models
      /// </summary>
     public partial class AssessmentFormAssessmentFormSectionModel : AutobahnBase, Interfaces.IAssessmentFormAssessmentFormSection
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? SequenceNumber { get; set; }
+
     }
 }

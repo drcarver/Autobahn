@@ -13,9 +13,34 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IFinancialAidAward : IAutobahnBase
     {
         /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
+        /// 
         /// </summary>
-        System.Decimal? FinancialAidAwardAmount { get; set; }
+        Guid? FinancialAidAwardAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FinancialAidYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAidAwardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAidStatusId { get; set; }
 
     }
 }

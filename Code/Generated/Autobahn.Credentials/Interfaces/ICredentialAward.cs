@@ -13,9 +13,64 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialAward : IAutobahnBase
     {
         /// <summary>
-        /// The date on which the qualification, achievement, personal or organizational quality, or aspect of an identity was conferred.
+        /// 
         /// </summary>
-        System.DateTime? CredentialAwardStartDate { get; set; }
+         AdvancedStandingDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AdvancedStandingURL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ApproverName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CompletionDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CredentialAwardEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CredentialAwardStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EvidenceURL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RevokedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RevokedIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RevokedReason { get; set; }
 
     }
 }

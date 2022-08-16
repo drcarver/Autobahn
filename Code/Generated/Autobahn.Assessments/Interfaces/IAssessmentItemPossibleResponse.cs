@@ -13,9 +13,39 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentItemPossibleResponse : IAutobahnBase
     {
         /// <summary>
-        /// A message provided to the person being assessed after giving a response that matches the possible response.
+        /// 
         /// </summary>
-        System.String FeedbackMessage { get; set; }
+         CorrectIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? FeedbackMessage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PossibleResponseOption { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SequenceNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Value { get; set; }
 
     }
 }

@@ -6,14 +6,11 @@
 //   Copyright ©2020 GoDungeon.com
 // *******************************************************************************************************
 
+using Autobahn.Codegen.Maps;
 using Autobahn.Entities;
 using CsvHelper;
 using CsvHelper.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 
 namespace AutobahnCodeGen
 {
@@ -116,11 +113,11 @@ namespace AutobahnCodeGen
             }
         }
 
-        public void WriteTablesFile(string location, List<AutobahnTable> tables)
+        public void WriteTablesFile(string location, List<AutobahnTable> tables, bool hasHeaderRecord, string delimeter = "|")
         {
             using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
             {
-                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|" };
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = hasHeaderRecord, Delimiter = delimeter };
                 using (var csv = new CsvWriter(writer, config))
                 {
                     csv.WriteRecords(tables);
@@ -128,12 +125,15 @@ namespace AutobahnCodeGen
             }
         }
 
-        public void WriteAutobahnElementFile(string location, List<AutobahnElement> elements)
+        public void WriteAutobahnElementFile(string location, List<AutobahnElement> elements, string delimeter = "|")
         {
             using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
             {
-                var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
-                csv.WriteRecords(elements);
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { Delimiter = delimeter };
+                using (var csv = new CsvWriter(writer, config))
+                {
+                    csv.WriteRecords(elements);
+                }
             }
         }
     }

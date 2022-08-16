@@ -11,5 +11,15 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class PersonMasterModel : AutobahnBase, Interfaces.IPersonMaster
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

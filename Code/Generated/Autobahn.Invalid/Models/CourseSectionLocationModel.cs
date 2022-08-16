@@ -14,9 +14,24 @@ namespace Autobahn.Invalid.Models
     public partial class CourseSectionLocationModel : AutobahnBase, Interfaces.ICourseSectionLocation
     {
         /// <summary>
-        /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
+        /// 
         /// </summary>
-        public Guid ClassroomId { get; set; }
+        public Guid? ClassroomId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefInstructionLocationTypeId { get; set; }
 
     }
 }

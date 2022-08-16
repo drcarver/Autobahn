@@ -13,5 +13,15 @@ namespace Autobahn.Credentials.Models
      /// </summary>
     public partial class CredentialDefAgentCredentialModel : AutobahnBase, Interfaces.ICredentialDefAgentCredential
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationProgramType : IAutobahnBase
     {
         /// <summary>
-        /// The system outlining instructional or non-instructional activities and procedures designed to accomplish a predetermined educational objective or set of objectives or to provide support services to a person and/or the community.
+        /// 
         /// </summary>
-        Guid RefProgramTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefProgramTypeId { get; set; }
 
     }
 }

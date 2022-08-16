@@ -13,9 +13,84 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentItemResponseTheory : IAutobahnBase
     {
         /// <summary>
-        /// The Item Response Theory value representing the discrimination of the item. The a parameter is found by taking the slope of the line tangent to the item characteristic curve at the inflection point, B. The parameter is the steepness of the curve at its steepest point.
+        /// 
         /// </summary>
-        System.Int32? ParameterA { get; set; }
+         DIFValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         KappaValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ParameterA { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterB { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterC { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD1 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD2 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD3 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD4 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD5 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParameterD6 { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PointBiserialCorrelationValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefItemResponseTheoryDifficultyCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefItemResponseTheoryKappaAlgorithmId { get; set; }
 
     }
 }

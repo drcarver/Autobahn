@@ -14,9 +14,79 @@ namespace Autobahn.K12.Models
     public partial class K12LeaFederalReportingModel : AutobahnBase, Interfaces.IK12LeaFederalReporting
     {
         /// <summary>
-        /// An indication whether the LEA is covered by a desegregation plan either ordered by a court or entered into with the Office for Civil Rights under Title VI of the Civil Rights Act of 1964.
+        /// 
         /// </summary>
-        public System.Boolean? DesegregationOrderOrPlan { get; set; }
+        public Guid? DesegregationOrderOrPlan { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  HarassmentOrBullyingPolicy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticSportParticipantsFemale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticSportParticipantsMale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticSportsFemaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticSportsMaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticTeamsFemaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InterscholasticTeamsMaleOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBarrierToEducatingHomelessId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIntegratedTechnologyStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StateAssessmentAdminFunding { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StateAssessStandardsFunding { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TerminatedTitleIIIProgramFailure { get; set; }
 
     }
 }

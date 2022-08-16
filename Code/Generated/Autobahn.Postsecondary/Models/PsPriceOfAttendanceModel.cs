@@ -14,9 +14,69 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsPriceOfAttendanceModel : AutobahnBase, Interfaces.IPsPriceOfAttendance
     {
         /// <summary>
-        /// The academic session for which the data are recorded and applicable.
+        /// 
         /// </summary>
-        public System.String SessionDesignator { get; set; }
+        public  BoardCharges { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BooksAndSuppliesCosts { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ComprehensiveFee { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IPEDSCollectionYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OtherStudentExpenses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PriceOfAttendance { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTuitionUnitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RequiredStudentFees { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RoomCharges { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? SessionDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TuitionPublished { get; set; }
 
     }
 }

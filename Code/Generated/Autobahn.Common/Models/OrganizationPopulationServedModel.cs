@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPopulationServedModel : AutobahnBase, Interfaces.IOrganizationPopulationServed
     {
         /// <summary>
-        /// The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)
+        /// 
         /// </summary>
-        public System.Int32? YoungestAgeServed { get; set; }
+        public  OldestAgeServed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPopulationServedId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? YoungestAgeServed { get; set; }
 
     }
 }

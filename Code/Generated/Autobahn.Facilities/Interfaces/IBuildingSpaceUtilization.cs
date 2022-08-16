@@ -13,7 +13,42 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IBuildingSpaceUtilization : IAutobahnBase
     {
         /// <summary>
-        /// A designation as to whether the space is considered an instructional space under state or local guidelines.
+        /// 
+        /// </summary>
+         AvailableUtilizedInstructionalSpace { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BuildingCapacityFactorIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BuildingSpaceUtilizationArea { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BuildingUnassignedSpaceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingCommunityUseSpaceTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 

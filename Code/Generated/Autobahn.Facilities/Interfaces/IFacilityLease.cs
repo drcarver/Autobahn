@@ -13,9 +13,29 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityLease : IAutobahnBase
     {
         /// <summary>
-        /// The amount of money the school must pay to rent the facility that it is in.
+        /// 
         /// </summary>
-        System.Decimal? FacilityLeaseAmount { get; set; }
+        Guid? FacilityLeaseAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityLeaseAmountCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityLeaseTypeId { get; set; }
 
     }
 }

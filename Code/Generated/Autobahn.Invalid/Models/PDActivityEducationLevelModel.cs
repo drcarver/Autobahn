@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class PDActivityEducationLevelModel : AutobahnBase, Interfaces.IPDActivityEducationLevel
     {
         /// <summary>
-        /// An age group or education level to which the professional development activity's content pertains.
+        /// 
         /// </summary>
-        public Guid RefPDActivityEducationLevelsAddressedId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefPDActivityEducationLevelsAddressedId { get; set; }
 
     }
 }

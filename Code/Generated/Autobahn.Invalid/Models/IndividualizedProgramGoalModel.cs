@@ -14,7 +14,17 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramGoalModel : AutobahnBase, Interfaces.IIndividualizedProgramGoal
     {
         /// <summary>
-        /// Legal category for an IEP annual goal or short-term objectives.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefIEPGoalTypeId { get; set; }
 

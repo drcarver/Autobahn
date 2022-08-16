@@ -13,9 +13,34 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilitySite : IAutobahnBase
     {
         /// <summary>
-        /// The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.
+        /// 
         /// </summary>
-        System.Decimal? FacilitySiteArea { get; set; }
+        Guid? FacilitySiteArea { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilitySiteIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingSiteUseRestrictionsTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilitySiteOutdoorAreaTypeId { get; set; }
 
     }
 }

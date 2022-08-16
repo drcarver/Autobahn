@@ -12,5 +12,25 @@ namespace Autobahn.Credentials.Interfaces
      /// </summary>
     public partial interface ICredentialDefCategory : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Category { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CategorySystem { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class GoalPerformanceModel : AutobahnBase, Interfaces.IGoalPerformance
     {
         /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
+        /// 
         /// </summary>
-        public System.String CurrentPerformanceDescription { get; set; }
+        public Guid? CurrentPerformanceDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefGoalStatusTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Status { get; set; }
 
     }
 }

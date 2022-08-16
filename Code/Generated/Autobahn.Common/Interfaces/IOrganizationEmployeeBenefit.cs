@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationEmployeeBenefit : IAutobahnBase
     {
         /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
+        /// 
         /// </summary>
-        System.Boolean? FullTimeBenefitIndicator { get; set; }
+        Guid? FullTimeBenefitIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PartTimeBenefitIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmployeeBenefitId { get; set; }
 
     }
 }

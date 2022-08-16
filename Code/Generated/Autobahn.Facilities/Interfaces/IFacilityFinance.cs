@@ -13,9 +13,34 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityFinance : IAutobahnBase
     {
         /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
+        /// 
         /// </summary>
-        System.Decimal? FacilityReplacementValue { get; set; }
+        Guid? FacilityReplacementValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IndebtednessAmountAllowed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InsuranceDeductible { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PublicEducationMillRate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

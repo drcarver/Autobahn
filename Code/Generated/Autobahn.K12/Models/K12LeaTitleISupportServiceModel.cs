@@ -14,9 +14,19 @@ namespace Autobahn.K12.Models
     public partial class K12LeaTitleISupportServiceModel : AutobahnBase, Interfaces.IK12LeaTitleISupportService
     {
         /// <summary>
-        /// The type of support services provided to students in Title I programs.
+        /// 
         /// </summary>
-        public Guid RefK12LeaTitleISupportServiceId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefK12LeaTitleISupportServiceId { get; set; }
 
     }
 }

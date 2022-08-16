@@ -14,7 +14,17 @@ namespace Autobahn.Invalid.Models
     public partial class ProgramParticipationTitleIModel : AutobahnBase, Interfaces.IProgramParticipationTitleI
     {
         /// <summary>
-        /// An indication that the student is participating in and served by programs under Title I, Part A of ESEA as amended.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefTitleIIndicatorId { get; set; }
 

@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProfessionalDevelopmentRequirement : IAutobahnBase
     {
         /// <summary>
-        /// Number of clock hours of training required for providers to meet requirements of the state.
+        /// 
         /// </summary>
-        System.Decimal? RequiredTrainingClockHours { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RequiredTrainingClockHours { get; set; }
 
     }
 }

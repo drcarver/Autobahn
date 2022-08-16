@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonOtherName : IAutobahnBase
     {
         /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
+        /// 
         /// </summary>
-        System.String OtherName { get; set; }
+         FirstName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LastName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MiddleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? OtherName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefOtherNameTypeId { get; set; }
 
     }
 }

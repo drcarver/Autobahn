@@ -12,7 +12,27 @@ namespace Autobahn.Common.Interfaces
     public partial interface ITeacherEducationCredentialExam : IAutobahnBase
     {
         /// <summary>
-        /// The name of the company that provides the examination used in the teacher education program.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTeacherEducationCredentialExamId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTeacherEducationExamScoreTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefTeacherEducationTestCompanyId { get; set; }
 

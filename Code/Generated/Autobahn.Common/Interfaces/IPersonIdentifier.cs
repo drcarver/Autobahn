@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonIdentifier : IAutobahnBase
     {
         /// <summary>
-        /// A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity.  This may be the publisher identifier.
+        /// 
         /// </summary>
-        System.String Identifier { get; set; }
+        Guid? Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonalInformationVerificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonIdentificationSystemId { get; set; }
 
     }
 }

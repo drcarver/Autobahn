@@ -12,7 +12,27 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationIdentifier : IAutobahnBase
     {
         /// <summary>
-        /// A unique number or alphanumeric code used in the local system to identify an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefOrganizationIdentificationSystemId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefOrganizationIdentifierTypeId { get; set; }
 

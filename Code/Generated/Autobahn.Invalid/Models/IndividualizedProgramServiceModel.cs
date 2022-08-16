@@ -14,9 +14,39 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramServiceModel : AutobahnBase, Interfaces.IIndividualizedProgramService
     {
         /// <summary>
-        /// The date the service is planned to begin.
+        /// 
         /// </summary>
-        public System.DateTime? PlannedServiceStartDate { get; set; }
+        public  PlannedServiceDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? PlannedServiceStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIndividualizedProgramPlannedServiceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefMethodOfServiceDeliveryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefServiceFrequencyId { get; set; }
 
     }
 }

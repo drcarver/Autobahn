@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12SchoolCorrectiveAction : IAutobahnBase
     {
         /// <summary>
-        /// The types of corrective actions under ESEA as amended.
+        /// 
         /// </summary>
-        Guid RefCorrectiveActionTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefCorrectiveActionTypeId { get; set; }
 
     }
 }

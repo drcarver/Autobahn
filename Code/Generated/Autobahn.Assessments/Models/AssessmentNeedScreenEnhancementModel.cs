@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentNeedScreenEnhancementModel : AutobahnBase, Interfaces.IAssessmentNeedScreenEnhancement
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the Access for All (AfA) preference to invert the foreground and background Colors.
+        /// 
         /// </summary>
-        public System.Boolean? InvertColorChoice { get; set; }
+        public  ForegroundColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? InvertColorChoice { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Magnification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentNeedScreenEnhancement : IAutobahnBase
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the Access for All (AfA) preference to invert the foreground and background Colors.
+        /// 
         /// </summary>
-        System.Boolean? InvertColorChoice { get; set; }
+         ForegroundColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? InvertColorChoice { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Magnification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

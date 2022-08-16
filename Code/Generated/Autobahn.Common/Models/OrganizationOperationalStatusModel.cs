@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class OrganizationOperationalStatusModel : AutobahnBase, Interfaces.IOrganizationOperationalStatus
     {
         /// <summary>
-        /// The classification of the operational condition of a local education agency (LEA) at the start of the school year.
+        /// 
         /// </summary>
-        public Guid RefOperationalStatusId { get; set; }
+        public  OperationalStatusEffectiveDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefOperationalStatusId { get; set; }
 
     }
 }

@@ -14,9 +14,84 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentAcademicRecordModel : AutobahnBase, Interfaces.IPsStudentAcademicRecord
     {
         /// <summary>
-        /// The number of credits awarded a student by the postsecondary institution based on successful completion of advanced placement courses and/or advanced placement tests. 
+        /// 
         /// </summary>
-        public System.Int32? AdvancedPlacementCreditsAwarded { get; set; }
+        public  AcademicYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? AdvancedPlacementCreditsAwarded { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CourseTotal { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CreditsAttemptedCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CreditsEarnedCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DualCreditDualEnrollmentCredits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EnteringTerm { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GradePointAverage { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GradePointAverageCumulative { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfCreditsAttempted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAcademicTermDesignatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCreditHoursAppliedOtherProgramId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProfessionalTechCredentialTypeId { get; set; }
 
     }
 }

@@ -12,5 +12,30 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12StudentEmployment : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         EmploymentNaicsCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmployedAfterExitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefEmployedWhileEnrolledId { get; set; }
+
     }
 }

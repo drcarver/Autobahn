@@ -23,8 +23,6 @@ namespace Autobahn.Entities
         public string TechnicalName { get; set; }
         public List<Guid?> AutobahnTableList { get; set; } = new List<Guid?>();
         public List<Guid?> AutobahnDomainList { get; set; } = new List<Guid?>();
-        public string PropertyType  { get; set; }
-        public bool IsVirtual { get; set; }
 
         public AutobahnElement Clone()
         {
@@ -45,8 +43,6 @@ namespace Autobahn.Entities
                 TechnicalName = TechnicalName,
                 AutobahnDomainList = AutobahnDomainList,
                 AutobahnTableList = AutobahnTableList,
-                PropertyType = string.Empty,
-                IsVirtual = false
             };
             return model;
         }

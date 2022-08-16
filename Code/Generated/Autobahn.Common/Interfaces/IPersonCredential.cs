@@ -12,9 +12,49 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonCredential : IAutobahnBase
     {
         /// <summary>
-        /// The year, month, and day on which the child is no longer eligible for the  Program.
+        /// 
         /// </summary>
-        System.DateTime? ExpirationDate { get; set; }
+         CredentialName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CredentialOrLicenseAwardEntity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ExpirationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IssuanceDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ProfessionalCertificateOrLicenseNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIssuingStateId { get; set; }
 
     }
 }

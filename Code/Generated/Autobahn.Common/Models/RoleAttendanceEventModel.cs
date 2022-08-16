@@ -12,9 +12,54 @@ namespace Autobahn.Common.Models
     public partial class RoleAttendanceEventModel : AutobahnBase, Interfaces.IRoleAttendanceEvent
     {
         /// <summary>
-        /// The status of a person's attendance associated with an Attendance Event Type and Attendance Event Date in an organization-person-role context.
+        /// 
+        /// </summary>
+        public  Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EndTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAbsentAttendanceCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAttendanceEventTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAttendanceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefLeaveEventTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPresentAttendanceCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartTime { get; set; }
 
     }
 }

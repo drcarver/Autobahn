@@ -12,5 +12,20 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentFormSectionAssessmentItem : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? SequenceNumber { get; set; }
+
     }
 }

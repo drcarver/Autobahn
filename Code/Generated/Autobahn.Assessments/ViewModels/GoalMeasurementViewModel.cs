@@ -20,25 +20,56 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from GoalMeasurement";
 
+        // member variable for the Description property
+        private  _Description;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefGoalMeasurementTypeId property
+        private  _RefGoalMeasurementTypeId;
+
+        // member variable for the Schedule property
+        private  _Schedule;
+
         // member variable for the SuccessCriteria property
-        private System.String _SuccessCriteria;
+        private Guid? _SuccessCriteria;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the GoalMeasurementViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19902">Goal Success Criteria</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Goal Success Criteria")]
-        public System.String SuccessCriteria { get => _SuccessCriteria; set => SetProperty(ref _SuccessCriteria, value); }
+        public  Description { get => _Description; set => SetProperty(ref _Description, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefGoalMeasurementType"/> model
+        /// </summary>
+        public  RefGoalMeasurementTypeId { get => _RefGoalMeasurementTypeId; set => SetProperty(ref _RefGoalMeasurementTypeId, value); }
+
+        /// <summary>
+        /// </summary>
+        public  Schedule { get => _Schedule; set => SetProperty(ref _Schedule, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? SuccessCriteria { get => _SuccessCriteria; set => SetProperty(ref _SuccessCriteria, value); }
 
         #endregion
 
@@ -49,7 +80,12 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            SuccessCriteria = model.SuccessCriteria; // Goal Success Criteria
+            Description = model.Description; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefGoalMeasurementTypeId = model.RefGoalMeasurementTypeId; // 
+            Schedule = model.Schedule; // 
+            SuccessCriteria = model.SuccessCriteria; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

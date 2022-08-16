@@ -12,9 +12,69 @@ namespace Autobahn.Common.Models
     public partial class StaffCredentialModel : AutobahnBase, Interfaces.IStaffCredential
     {
         /// <summary>
-        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// 
         /// </summary>
-        public System.String DiplomaOrCredentialAwardDate { get; set; }
+        public  CardiopulmonaryResuscitationCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CTEInstructorIndustryCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FirstAidCertification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAeCertificationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefChildDevAssociateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefParaprofessionalQualificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProgramSponsorTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTeachingCredentialBasisId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTeachingCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TechnologySkillsStandardsMet { get; set; }
 
     }
 }

@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramAssessment : IAutobahnBase
     {
         /// <summary>
-        /// A statement of why-
+        /// 
         /// </summary>
-        System.String IEPAlternativeAssessmentRationale { get; set; }
+        Guid? IEPAlternativeAssessmentRationale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class RoleStatusModel : AutobahnBase, Interfaces.IRoleStatus
     {
         /// <summary>
-        /// An indication as to whether a student's name was, is, or will be officially registered on the roll of a school or schools.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefRoleStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StatusEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StatusStartDate { get; set; }
 
     }
 }

@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IRoleStatus : IAutobahnBase
     {
         /// <summary>
-        /// An indication as to whether a student's name was, is, or will be officially registered on the roll of a school or schools.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefRoleStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StatusEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StatusStartDate { get; set; }
 
     }
 }

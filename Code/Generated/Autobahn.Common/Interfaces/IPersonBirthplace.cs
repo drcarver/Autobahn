@@ -14,7 +14,27 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// 
         /// </summary>
+         City { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         Guid? RefCountryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStateId { get; set; }
 
     }
 }

@@ -12,7 +12,27 @@ namespace Autobahn.Common.Models
     public partial class TeacherEducationCredentialExamModel : AutobahnBase, Interfaces.ITeacherEducationCredentialExam
     {
         /// <summary>
-        /// The name of the company that provides the examination used in the teacher education program.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTeacherEducationCredentialExamId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTeacherEducationExamScoreTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefTeacherEducationTestCompanyId { get; set; }
 

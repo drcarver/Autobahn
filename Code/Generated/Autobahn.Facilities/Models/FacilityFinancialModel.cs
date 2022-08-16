@@ -13,5 +13,15 @@ namespace Autobahn.Facilities.Models
      /// </summary>
     public partial class FacilityFinancialModel : AutobahnBase, Interfaces.IFacilityFinancial
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

@@ -13,9 +13,49 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialDefCriteria : IAutobahnBase
     {
         /// <summary>
-        /// The criteria for competency-based completion of the qualification, achievement, personal or organizational quality, or aspect of an identity.
+        /// 
         /// </summary>
-        System.String Criteria { get; set; }
+        Guid? Criteria { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CriteriaUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EstimatedDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MaximumDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MinimumAge { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MinimumDuration { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCredentialDefAssessMethodTypeId { get; set; }
 
     }
 }

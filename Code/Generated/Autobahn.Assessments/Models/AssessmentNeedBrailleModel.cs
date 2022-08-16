@@ -14,7 +14,47 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentNeedBrailleModel : AutobahnBase, Interfaces.IAssessmentNeedBraille
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.
+        /// 
+        /// </summary>
+        public  BrailleDotPressure { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfBrailleCells { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedBrailleGradeTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedBrailleMarkTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedBrailleStatusCellTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentNeedUsageTypeId { get; set; }
 

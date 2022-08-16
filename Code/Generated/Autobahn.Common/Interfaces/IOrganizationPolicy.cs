@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPolicy : IAutobahnBase
     {
         /// <summary>
-        /// Policies related to personnel in the organization.
+        /// 
         /// </summary>
-        System.String PolicyType { get; set; }
+        Guid? PolicyType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

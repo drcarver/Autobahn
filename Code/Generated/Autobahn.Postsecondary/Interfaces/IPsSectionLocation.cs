@@ -13,9 +13,24 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsSectionLocation : IAutobahnBase
     {
         /// <summary>
-        /// The name of the location at which the course is taught.
+        /// 
         /// </summary>
-        System.String CourseInstructionSiteName { get; set; }
+        Guid? CourseInstructionSiteName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCourseInstructionSiteTypeId { get; set; }
 
     }
 }

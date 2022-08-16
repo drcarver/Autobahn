@@ -14,9 +14,24 @@ namespace Autobahn.K12.Models
     public partial class K12OrganizationStudentResponsibilityModel : AutobahnBase, Interfaces.IK12OrganizationStudentResponsibility
     {
         /// <summary>
-        /// The type of responsibility the district has for the student.
+        /// 
         /// </summary>
-        public Guid RefK12ResponsibilityTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefK12ResponsibilityTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
 
     }
 }

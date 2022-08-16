@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonStatus : IAutobahnBase
     {
         /// <summary>
-        /// An indication that the student met the State criteria for classification as having an economic disadvantage.
+        /// 
         /// </summary>
-        Guid RefPersonStatusTypeId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefPersonStatusTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StatusEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StatusStartDate { get; set; }
 
     }
 }

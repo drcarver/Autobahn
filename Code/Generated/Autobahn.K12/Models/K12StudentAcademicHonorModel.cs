@@ -14,7 +14,22 @@ namespace Autobahn.K12.Models
     public partial class K12StudentAcademicHonorModel : AutobahnBase, Interfaces.IK12StudentAcademicHonor
     {
         /// <summary>
-        /// A designation of the type of academic distinctions earned by or awarded to the student.
+        /// 
+        /// </summary>
+        public  HonorDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAcademicHonorTypeId { get; set; }
 

@@ -20,6 +20,15 @@ namespace Autobahn.K12.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from K12StudentAcademicHonor";
 
+        // member variable for the HonorDescription property
+        private  _HonorDescription;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefAcademicHonorTypeId property
         private Guid? _RefAcademicHonorTypeId;
 
@@ -27,17 +36,25 @@ namespace Autobahn.K12.ViewModels
 
         #region Properties
         /// <summary>
-        /// The title of the K12StudentAcademicHonorViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAcademicHonorType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19004">Academic Honors Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Academic Honors Type")]
+        public  HonorDescription { get => _HonorDescription; set => SetProperty(ref _HonorDescription, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefAcademicHonorType"/> model
+        /// </summary>
         public Guid? RefAcademicHonorTypeId { get => _RefAcademicHonorTypeId; set => SetProperty(ref _RefAcademicHonorTypeId, value); }
 
         #endregion
@@ -49,7 +66,10 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefAcademicHonorTypeId = model.RefAcademicHonorTypeId; // Academic Honors Type
+            HonorDescription = model.HonorDescription; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefAcademicHonorTypeId = model.RefAcademicHonorTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

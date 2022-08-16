@@ -13,9 +13,49 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentNeedApipDisplay : IAutobahnBase
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        System.Boolean? EncouragementAssignedSupportIndicator { get; set; }
+         EncouragementActivateByDefaultIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? EncouragementAssignedSupportIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EncouragementSoundFileUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EncouragementTextMessagingString { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MaskingActivateByDefaultIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MaskingAssignedSupportIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedMaskingTypeId { get; set; }
 
     }
 }

@@ -12,5 +12,25 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IFinancialAccountProgram : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ProgramNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

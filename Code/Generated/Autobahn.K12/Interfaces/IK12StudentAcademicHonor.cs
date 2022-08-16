@@ -13,7 +13,22 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentAcademicHonor : IAutobahnBase
     {
         /// <summary>
-        /// A designation of the type of academic distinctions earned by or awarded to the student.
+        /// 
+        /// </summary>
+         HonorDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAcademicHonorTypeId { get; set; }
 

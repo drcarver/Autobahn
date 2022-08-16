@@ -13,7 +13,22 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityAudit : IAutobahnBase
     {
         /// <summary>
-        /// The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.
+        /// 
+        /// </summary>
+         FacilityAuditDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFacilityAuditTypeId { get; set; }
 

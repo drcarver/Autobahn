@@ -13,9 +13,39 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityMandate : IAutobahnBase
     {
         /// <summary>
-        /// The particular federal law, regulation, or standard that pertains to a school facility.
+        /// 
+        /// </summary>
+         FacilityStateOrLocalMandateName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilitiesMandateAuthorityTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFacilityApplicableFederalMandateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityFederalMandateInterestTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityStateOrLocalMandateInterestTypeId { get; set; }
 
     }
 }

@@ -14,7 +14,17 @@ namespace Autobahn.Common.Models
         /// <summary>
         /// 
         /// </summary>
-        public System.String URL { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? URL { get; set; }
 
     }
 }

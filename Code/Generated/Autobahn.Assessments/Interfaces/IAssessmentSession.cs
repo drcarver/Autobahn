@@ -13,9 +13,64 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentSession : IAutobahnBase
     {
         /// <summary>
-        /// An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.
+        /// 
+        /// </summary>
+         ActualEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ActualStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AllottedTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Location { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentSessionSpecialCircumstanceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentSessionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ScheduledEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ScheduledStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SecurityIssue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SpecialEventDescription { get; set; }
 
     }
 }

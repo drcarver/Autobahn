@@ -14,7 +14,17 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentSessionStaffRoleModel : AutobahnBase, Interfaces.IAssessmentSessionStaffRole
     {
         /// <summary>
-        /// The type of role served related to the administration of an assessment session.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentSessionStaffRoleTypeId { get; set; }
 

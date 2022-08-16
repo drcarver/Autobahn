@@ -12,9 +12,19 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPersonRoleApplicationModel : AutobahnBase, Interfaces.IOrganizationPersonRoleApplication
     {
         /// <summary>
-        /// The year, month and day on which an individual  application is received by the organization.
+        /// 
         /// </summary>
-        public System.DateTime? ApplicationDate { get; set; }
+        public Guid? ApplicationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

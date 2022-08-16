@@ -20,25 +20,48 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentNeedScreenEnhancement";
 
+        // member variable for the ForegroundColor property
+        private  _ForegroundColor;
+
         // member variable for the InvertColorChoice property
-        private System.Boolean? _InvertColorChoice;
+        private Guid? _InvertColorChoice;
+
+        // member variable for the Magnification property
+        private  _Magnification;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the AssessmentNeedScreenEnhancementViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the Access for All (AfA) preference to invert the foreground and background Colors.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20033">Assessment Need Invert Color Choice</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Need Invert Color Choice")]
-        public System.Boolean? InvertColorChoice { get => _InvertColorChoice; set => SetProperty(ref _InvertColorChoice, value); }
+        public  ForegroundColor { get => _ForegroundColor; set => SetProperty(ref _ForegroundColor, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? InvertColorChoice { get => _InvertColorChoice; set => SetProperty(ref _InvertColorChoice, value); }
+
+        /// <summary>
+        /// </summary>
+        public  Magnification { get => _Magnification; set => SetProperty(ref _Magnification, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +72,11 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            InvertColorChoice = model.InvertColorChoice; // Assessment Need Invert Color Choice
+            ForegroundColor = model.ForegroundColor; // 
+            InvertColorChoice = model.InvertColorChoice; // 
+            Magnification = model.Magnification; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

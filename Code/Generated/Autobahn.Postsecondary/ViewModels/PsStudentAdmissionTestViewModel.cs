@@ -20,25 +20,42 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PsStudentAdmissionTest";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefStandardizedAdmissionTestId property
+        private  _RefStandardizedAdmissionTestId;
+
         // member variable for the StandardizedAdmissionTestScore property
-        private System.Decimal? _StandardizedAdmissionTestScore;
+        private Guid? _StandardizedAdmissionTestScore;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PsStudentAdmissionTestViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19265">Standardized Admission Test Score</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Standardized Admission Test Score")]
-        public System.Decimal? StandardizedAdmissionTestScore { get => _StandardizedAdmissionTestScore; set => SetProperty(ref _StandardizedAdmissionTestScore, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefStandardizedAdmissionTest"/> model
+        /// </summary>
+        public  RefStandardizedAdmissionTestId { get => _RefStandardizedAdmissionTestId; set => SetProperty(ref _RefStandardizedAdmissionTestId, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? StandardizedAdmissionTestScore { get => _StandardizedAdmissionTestScore; set => SetProperty(ref _StandardizedAdmissionTestScore, value); }
 
         #endregion
 
@@ -49,7 +66,10 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            StandardizedAdmissionTestScore = model.StandardizedAdmissionTestScore; // Standardized Admission Test Score
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefStandardizedAdmissionTestId = model.RefStandardizedAdmissionTestId; // 
+            StandardizedAdmissionTestScore = model.StandardizedAdmissionTestScore; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

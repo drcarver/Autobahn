@@ -13,9 +13,69 @@ namespace Autobahn.CTE.Interfaces
     public partial interface IProgramParticipationCte : IAutobahnBase
     {
         /// <summary>
-        /// An indication of a student who reached a state-defined threshold of a career and technical education program/pathway.
+        /// 
         /// </summary>
-        System.Boolean? CteCompleter { get; set; }
+         CareerPathwaysProgramParticipationExitDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CareerPathwaysProgramParticipationStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CteCompleter { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CteConcentrator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CteNonTraditionalCompletion { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CteParticipant { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DisplacedHomemakerIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OutOfWorkforceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefNonTraditionalGenderStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefWorkbasedLearningOpportunityTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SingleParentOrSinglePregnantWoman { get; set; }
 
     }
 }

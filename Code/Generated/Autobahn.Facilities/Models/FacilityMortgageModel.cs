@@ -14,9 +14,34 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityMortgageModel : AutobahnBase, Interfaces.IFacilityMortgage
     {
         /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
+        /// 
         /// </summary>
-        public System.Decimal? FacilityMortgageInterestAmount { get; set; }
+        public Guid? FacilityMortgageInterestAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacilityTotalAssessedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityMortgageInterestTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityMortgageTypeId { get; set; }
 
     }
 }

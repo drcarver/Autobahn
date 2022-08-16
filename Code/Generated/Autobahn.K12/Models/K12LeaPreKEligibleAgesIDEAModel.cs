@@ -14,9 +14,19 @@ namespace Autobahn.K12.Models
     public partial class K12LeaPreKEligibleAgesIDEAModel : AutobahnBase, Interfaces.IK12LeaPreKEligibleAgesIDEA
     {
         /// <summary>
-        /// The ages of children not served under IDEA to whom the LEA's pre-kindergarten services are available.  
+        /// 
         /// </summary>
-        public Guid RefPreKEligibleAgesNonIDEAId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefPreKEligibleAgesNonIDEAId { get; set; }
 
     }
 }

@@ -14,9 +14,19 @@ namespace Autobahn.K12.Models
     public partial class K12LeaPreKEligibilityModel : AutobahnBase, Interfaces.IK12LeaPreKEligibility
     {
         /// <summary>
-        /// The groups of students for whom pre-kindergarten programs are available.
+        /// 
         /// </summary>
-        public Guid RefPrekindergartenEligibilityId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefPrekindergartenEligibilityId { get; set; }
 
     }
 }

@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class PersonHomelessnessModel : AutobahnBase, Interfaces.IPersonHomelessness
     {
         /// <summary>
-        /// The primary nighttime residence of the person at the time the person was identified as homeless.
+        /// 
         /// </summary>
-        public Guid RefHomelessNighttimeResidenceId { get; set; }
+        public  HomelessnessStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefHomelessNighttimeResidenceId { get; set; }
 
     }
 }

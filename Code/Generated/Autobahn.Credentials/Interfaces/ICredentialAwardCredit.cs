@@ -12,5 +12,15 @@ namespace Autobahn.Credentials.Interfaces
      /// </summary>
     public partial interface ICredentialAwardCredit : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

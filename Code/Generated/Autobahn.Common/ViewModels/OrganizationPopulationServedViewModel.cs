@@ -17,25 +17,49 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationPopulationServed";
 
+        // member variable for the OldestAgeServed property
+        private  _OldestAgeServed;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefPopulationServedId property
+        private  _RefPopulationServedId;
+
         // member variable for the YoungestAgeServed property
-        private System.Int32? _YoungestAgeServed;
+        private Guid? _YoungestAgeServed;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationPopulationServedViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19626">Early Learning Youngest Age Authorized to Serve</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Early Learning Youngest Age Authorized to Serve")]
-        public System.Int32? YoungestAgeServed { get => _YoungestAgeServed; set => SetProperty(ref _YoungestAgeServed, value); }
+        public  OldestAgeServed { get => _OldestAgeServed; set => SetProperty(ref _OldestAgeServed, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefPopulationServed"/> model
+        /// </summary>
+        public  RefPopulationServedId { get => _RefPopulationServedId; set => SetProperty(ref _RefPopulationServedId, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? YoungestAgeServed { get => _YoungestAgeServed; set => SetProperty(ref _YoungestAgeServed, value); }
 
         #endregion
 
@@ -46,7 +70,11 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            YoungestAgeServed = model.YoungestAgeServed; // Early Learning Youngest Age Authorized to Serve
+            OldestAgeServed = model.OldestAgeServed; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefPopulationServedId = model.RefPopulationServedId; // 
+            YoungestAgeServed = model.YoungestAgeServed; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

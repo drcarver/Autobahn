@@ -14,9 +14,34 @@ namespace Autobahn.Invalid.Models
     public partial class FinancialAidAwardModel : AutobahnBase, Interfaces.IFinancialAidAward
     {
         /// <summary>
-        /// The amount of financial aid awarded to a person for the term/year.
+        /// 
         /// </summary>
-        public System.Decimal? FinancialAidAwardAmount { get; set; }
+        public Guid? FinancialAidAwardAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FinancialAidYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFinancialAidAwardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFinancialAidStatusId { get; set; }
 
     }
 }

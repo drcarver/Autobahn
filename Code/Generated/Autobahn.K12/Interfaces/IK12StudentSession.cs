@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentSession : IAutobahnBase
     {
         /// <summary>
-        /// A measure of average performance in all courses taken by a person during a given session. This is obtained by dividing the total grade points received by the number of credits attempted for the same session.
+        /// 
         /// </summary>
-        System.Decimal? GradePointAverageGivenSession { get; set; }
+        Guid? GradePointAverageGivenSession { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

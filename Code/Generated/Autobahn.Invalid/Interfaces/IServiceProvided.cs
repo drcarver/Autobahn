@@ -12,5 +12,25 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IServiceProvided : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefServicesId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefStudentSupportServiceTypeId { get; set; }
+
     }
 }

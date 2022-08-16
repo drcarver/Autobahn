@@ -12,5 +12,15 @@ namespace Autobahn.K12.Interfaces
      /// </summary>
     public partial interface IK12CharterSchoolApprovalAgency : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

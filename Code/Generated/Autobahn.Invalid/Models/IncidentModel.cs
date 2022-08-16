@@ -14,9 +14,109 @@ namespace Autobahn.Invalid.Models
     public partial class IncidentModel : AutobahnBase, Interfaces.IIncident
     {
         /// <summary>
-        /// A locally assigned unique identifier (within the school or school district) to identify each specific incident or occurrence. The same identifier should be used to document the entire incident even if it included multiple offenses and multiple offenders.
+        /// 
         /// </summary>
-        public System.String IncidentIdentifier { get; set; }
+        public  IncidentCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IncidentDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IncidentDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? IncidentIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IncidentReporterId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IncidentTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFirearmTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentBehaviorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentBehaviorSecondaryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentInjuryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentLocationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentMultipleOffenseTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentPerpetratorInjuryTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentReporterTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIncidentTimeDescriptionCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefWeaponTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RegulationViolatedDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RelatedToDisabilityManifestationInd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ReportedToLawEnforcementInd { get; set; }
 
     }
 }

@@ -11,5 +11,15 @@ namespace Autobahn.Common.Models
      /// </summary>
     public partial class OrganizationModel : AutobahnBase, Interfaces.IOrganization
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

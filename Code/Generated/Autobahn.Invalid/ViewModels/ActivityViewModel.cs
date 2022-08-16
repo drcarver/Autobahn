@@ -21,24 +21,33 @@ namespace Autobahn.Invalid.ViewModels
         private string _viewTitle = "Hello from Activity";
 
         // member variable for the ActivityDescription property
-        private System.String _ActivityDescription;
+        private Guid? _ActivityDescription;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ActivityViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A description of the events and procedures that take place under the purview of an organized activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20505">Activity Description</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Activity Description")]
-        public System.String ActivityDescription { get => _ActivityDescription; set => SetProperty(ref _ActivityDescription, value); }
+        public Guid? ActivityDescription { get => _ActivityDescription; set => SetProperty(ref _ActivityDescription, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +58,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivityDescription = model.ActivityDescription; // Activity Description
+            ActivityDescription = model.ActivityDescription; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

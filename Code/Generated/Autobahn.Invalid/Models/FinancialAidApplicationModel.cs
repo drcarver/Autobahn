@@ -14,9 +14,24 @@ namespace Autobahn.Invalid.Models
     public partial class FinancialAidApplicationModel : AutobahnBase, Interfaces.IFinancialAidApplication
     {
         /// <summary>
-        /// The type of financial application completed by an individual.
+        /// 
         /// </summary>
-        public Guid RefFinancialAidApplicationTypeId { get; set; }
+        public  FinancialAidYearDesignator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefFinancialAidApplicationTypeId { get; set; }
 
     }
 }

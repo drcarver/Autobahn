@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffEvaluation : IAutobahnBase
     {
         /// <summary>
-        /// The result of an assessment of a person's performance.
+        /// 
         /// </summary>
-        System.String Outcome { get; set; }
+        Guid? Outcome { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStaffPerformanceLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Scale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ScoreOrRating { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         System { get; set; }
 
     }
 }

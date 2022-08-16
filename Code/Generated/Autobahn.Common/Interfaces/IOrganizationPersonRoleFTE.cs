@@ -11,5 +11,20 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IOrganizationPersonRoleFTE : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         FullTimeEquivalency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

@@ -21,21 +21,33 @@ namespace Autobahn.Invalid.ViewModels
         private string _viewTitle = "Hello from IndividualizedProgramAssessment";
 
         // member variable for the IEPAlternativeAssessmentRationale property
-        private System.String _IEPAlternativeAssessmentRationale;
+        private Guid? _IEPAlternativeAssessmentRationale;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the IndividualizedProgramAssessmentViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A statement of why-
         /// </summary>
-        [DisplayName("IEP Alternative Assessment Rationale")]
-        public System.String IEPAlternativeAssessmentRationale { get => _IEPAlternativeAssessmentRationale; set => SetProperty(ref _IEPAlternativeAssessmentRationale, value); }
+        public Guid? IEPAlternativeAssessmentRationale { get => _IEPAlternativeAssessmentRationale; set => SetProperty(ref _IEPAlternativeAssessmentRationale, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -46,7 +58,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            IEPAlternativeAssessmentRationale = model.IEPAlternativeAssessmentRationale; // IEP Alternative Assessment Rationale
+            IEPAlternativeAssessmentRationale = model.IEPAlternativeAssessmentRationale; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

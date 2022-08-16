@@ -16,7 +16,57 @@ namespace Autobahn.Invalid.Models
         /// <summary>
         /// 
         /// </summary>
+        public System.String AltName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String ChangedInThisVersionInd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String ChangeNotes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String ElementName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String Format { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public System.String GlobalID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.Boolean HasOptionSet { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.Int32 TermID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String URL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String UsageNotes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public System.String Version { get; set; }
 
     }
 }

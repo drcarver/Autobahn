@@ -13,9 +13,39 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityManagement : IAutobahnBase
     {
         /// <summary>
-        /// The type of real estate vehicle through which a public charter school has access and control of its building space.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefBuildingCharterSchoolRealtyAccessTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingCleaningStandardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityCapitalProgramMgmtTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityComplianceAgencyTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityOperationsMgmtTypeId { get; set; }
 
     }
 }

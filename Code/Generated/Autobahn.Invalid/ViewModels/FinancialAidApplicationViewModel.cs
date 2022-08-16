@@ -20,25 +20,42 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FinancialAidApplication";
 
+        // member variable for the FinancialAidYearDesignator property
+        private  _FinancialAidYearDesignator;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefFinancialAidApplicationTypeId property
-        private Guid _RefFinancialAidApplicationTypeId;
+        private Guid? _RefFinancialAidApplicationTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FinancialAidApplicationViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFinancialAidApplicationType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20186">Financial Aid Application Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Financial Aid Application Type")]
-        public Guid RefFinancialAidApplicationTypeId { get => _RefFinancialAidApplicationTypeId; set => SetProperty(ref _RefFinancialAidApplicationTypeId, value); }
+        public  FinancialAidYearDesignator { get => _FinancialAidYearDesignator; set => SetProperty(ref _FinancialAidYearDesignator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFinancialAidApplicationType"/> model
+        /// </summary>
+        public Guid? RefFinancialAidApplicationTypeId { get => _RefFinancialAidApplicationTypeId; set => SetProperty(ref _RefFinancialAidApplicationTypeId, value); }
 
         #endregion
 
@@ -49,7 +66,10 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefFinancialAidApplicationTypeId = model.RefFinancialAidApplicationTypeId; // Financial Aid Application Type
+            FinancialAidYearDesignator = model.FinancialAidYearDesignator; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefFinancialAidApplicationTypeId = model.RefFinancialAidApplicationTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

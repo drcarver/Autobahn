@@ -13,5 +13,15 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class IndividualizedProgramServicesReceivedModel : AutobahnBase, Interfaces.IIndividualizedProgramServicesReceived
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

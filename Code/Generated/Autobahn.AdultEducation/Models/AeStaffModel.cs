@@ -14,9 +14,29 @@ namespace Autobahn.AdultEducation.Models
     public partial class AeStaffModel : AutobahnBase, Interfaces.IAeStaff
     {
         /// <summary>
-        /// The titles of employment, official status, or rank of adult education staff.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAeStaffClassificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAeStaffEmploymentStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  YearsOfPriorAeTeachingExperience { get; set; }
 
     }
 }

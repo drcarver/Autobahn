@@ -13,9 +13,59 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityCompliance : IAutobahnBase
     {
         /// <summary>
-        /// An indication of whether the school, building, site, system, component, equipment, vehicle, or fixture conforms to the requirements or standards specified in federal, state, or local standards or codes or other officially required guidelines or regulations.
+        /// 
+        /// </summary>
+         ComponentOrFixtureCheckDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityComplianceDeterminationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityComplianceName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityComponentDeficiencyDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityInspectionScoreResultDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityInspectionViolationDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFacilityComplianceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityMaintStandardTypeId { get; set; }
 
     }
 }

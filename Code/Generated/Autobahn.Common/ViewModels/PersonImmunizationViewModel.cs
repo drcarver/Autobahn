@@ -18,24 +18,41 @@ namespace Autobahn.Common.ViewModels
         private string _viewTitle = "Hello from PersonImmunization";
 
         // member variable for the ImmunizationDate property
-        private System.DateTime _ImmunizationDate;
+        private Guid? _ImmunizationDate;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefImmunizationTypeId property
+        private  _RefImmunizationTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PersonImmunizationViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The year, month and day of an immunization.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19306">Immunization Date</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Immunization Date")]
-        public System.DateTime ImmunizationDate { get => _ImmunizationDate; set => SetProperty(ref _ImmunizationDate, value); }
+        public Guid? ImmunizationDate { get => _ImmunizationDate; set => SetProperty(ref _ImmunizationDate, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefImmunizationType"/> model
+        /// </summary>
+        public  RefImmunizationTypeId { get => _RefImmunizationTypeId; set => SetProperty(ref _RefImmunizationTypeId, value); }
 
         #endregion
 
@@ -46,7 +63,10 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ImmunizationDate = model.ImmunizationDate; // Immunization Date
+            ImmunizationDate = model.ImmunizationDate; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefImmunizationTypeId = model.RefImmunizationTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

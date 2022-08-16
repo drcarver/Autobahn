@@ -13,9 +13,34 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityEnergy : IAutobahnBase
     {
         /// <summary>
-        /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
+        /// 
         /// </summary>
-        System.String BuildingEnergyServiceCompanyName { get; set; }
+        Guid? BuildingEnergyServiceCompanyName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBuildingEnergySourceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityUtilityProviderTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityUtilityTypeId { get; set; }
 
     }
 }

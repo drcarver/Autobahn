@@ -13,9 +13,24 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIEPAuthorizationRejected : IAutobahnBase
     {
         /// <summary>
-        /// Portion the authorizer does not want executed.
+        /// 
         /// </summary>
-        System.String PortionDescription { get; set; }
+        Guid? PortionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PortionExplanation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

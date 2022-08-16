@@ -12,9 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationCalendar : IAutobahnBase
     {
         /// <summary>
-        /// The year for a reported school session.
+        /// 
         /// </summary>
-        System.String CalendarYear { get; set; }
+         CalendarCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CalendarDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CalendarYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

@@ -13,9 +13,54 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentNeedApipContent : IAutobahnBase
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile the default language for the displayed translation.
+        /// 
+        /// </summary>
+         AssessmentNeedDirectionsOnlyIndicator { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? ItemTranslationDisplayLanguageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         KeywordTranslationLanguageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReadAtStartPreferenceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedAlternativeRepresentationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedSigningTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedSpokenSourcePreferenceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedUserSpokenPreferenceTypeId { get; set; }
 
     }
 }

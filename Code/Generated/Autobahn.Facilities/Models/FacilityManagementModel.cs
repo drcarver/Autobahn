@@ -14,9 +14,39 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityManagementModel : AutobahnBase, Interfaces.IFacilityManagement
     {
         /// <summary>
-        /// The type of real estate vehicle through which a public charter school has access and control of its building space.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefBuildingCharterSchoolRealtyAccessTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingCleaningStandardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityCapitalProgramMgmtTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityComplianceAgencyTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityOperationsMgmtTypeId { get; set; }
 
     }
 }

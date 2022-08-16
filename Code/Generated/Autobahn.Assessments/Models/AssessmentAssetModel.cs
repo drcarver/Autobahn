@@ -14,9 +14,69 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentAssetModel : AutobahnBase, Interfaces.IAssessmentAsset
     {
         /// <summary>
-        /// The language in which the assessment form is designed to be delivered.
+        /// 
+        /// </summary>
+        public  ContentMimeType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ContentUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ContentXML { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Owner { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PublishedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentAssestIdentifierType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentAssetTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefAssessmentLanguageId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Version { get; set; }
 
     }
 }

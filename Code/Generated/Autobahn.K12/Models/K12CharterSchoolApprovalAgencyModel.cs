@@ -13,5 +13,15 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12CharterSchoolApprovalAgencyModel : AutobahnBase, Interfaces.IK12CharterSchoolApprovalAgency
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
     }
 }

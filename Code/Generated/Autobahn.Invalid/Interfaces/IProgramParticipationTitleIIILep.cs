@@ -12,5 +12,25 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IProgramParticipationTitleIIILep : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTitleIIIAccountabilityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefTitleIIILanguageInstructionProgramTypeId { get; set; }
+
     }
 }

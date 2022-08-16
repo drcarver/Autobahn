@@ -14,7 +14,22 @@ namespace Autobahn.Competencies.Models
     public partial class CompetencySetModel : AutobahnBase, Interfaces.ICompetencySet
     {
         /// <summary>
-        /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
+        /// 
+        /// </summary>
+        public  CompletionCriteriaThreshold { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefCompletionCriteriaId { get; set; }
 

@@ -14,9 +14,24 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsSectionLocationModel : AutobahnBase, Interfaces.IPsSectionLocation
     {
         /// <summary>
-        /// The name of the location at which the course is taught.
+        /// 
         /// </summary>
-        public System.String CourseInstructionSiteName { get; set; }
+        public Guid? CourseInstructionSiteName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCourseInstructionSiteTypeId { get; set; }
 
     }
 }

@@ -13,9 +13,104 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentResult : IAutobahnBase
     {
         /// <summary>
-        /// The score given to a person's response to an assessment item.
+        /// 
         /// </summary>
-        System.String ScoreValue { get; set; }
+         AssessmentResultDescriptiveFeedbackDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AssessmentResultScoreStandardError { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DateCreated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DateUpdated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DescriptiveFeedback { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DescriptiveFeedbackSource { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DiagnosticStatement { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DiagnosticStatementSource { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         InstructionalRecommendation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfResponses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PreliminaryIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentPretestOutcomeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentResultDataTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentResultScoreTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefELOutcomeMeasurementLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefOutcomeTimePointId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefScoreMetricTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ScoreValue { get; set; }
 
     }
 }

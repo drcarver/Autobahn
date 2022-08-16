@@ -13,9 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaPreKEligibility : IAutobahnBase
     {
         /// <summary>
-        /// The groups of students for whom pre-kindergarten programs are available.
+        /// 
         /// </summary>
-        Guid RefPrekindergartenEligibilityId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefPrekindergartenEligibilityId { get; set; }
 
     }
 }

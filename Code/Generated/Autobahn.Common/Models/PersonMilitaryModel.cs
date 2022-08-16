@@ -12,9 +12,34 @@ namespace Autobahn.Common.Models
     public partial class PersonMilitaryModel : AutobahnBase, Interfaces.IPersonMilitary
     {
         /// <summary>
-        /// An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefMilitaryActiveStudentIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefMilitaryBranchId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefMilitaryVeteranStudentIndicatorId { get; set; }
 
     }
 }

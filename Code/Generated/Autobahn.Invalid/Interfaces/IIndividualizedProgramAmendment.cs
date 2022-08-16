@@ -13,9 +13,24 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramAmendment : IAutobahnBase
     {
         /// <summary>
-        /// Description of the reason changes were made to the individualized program service plan.
+        /// 
         /// </summary>
-        System.String ReasonDescription { get; set; }
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ReasonDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

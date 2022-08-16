@@ -12,9 +12,19 @@ namespace Autobahn.Common.Models
     public partial class OrganizationIndicatorModel : AutobahnBase, Interfaces.IOrganizationIndicator
     {
         /// <summary>
-        /// An indication of whether the school has students who are ability grouped for classroom instruction in mathematics or English/reading/language arts.
+        /// 
         /// </summary>
-        public Guid RefOrganizationIndicatorId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefOrganizationIndicatorId { get; set; }
 
     }
 }

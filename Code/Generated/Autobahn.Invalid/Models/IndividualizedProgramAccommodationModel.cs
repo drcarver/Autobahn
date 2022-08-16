@@ -13,5 +13,30 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class IndividualizedProgramAccommodationModel : AutobahnBase, Interfaces.IIndividualizedProgramAccommodation
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Applicability { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefAccommodationTypeId { get; set; }
+
     }
 }

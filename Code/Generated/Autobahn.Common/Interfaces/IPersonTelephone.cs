@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonTelephone : IAutobahnBase
     {
         /// <summary>
-        /// An indication that the telephone number should be used as the principal number for a person or organization.
+        /// 
         /// </summary>
-        System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
+         DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? PrimaryTelephoneNumberIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPersonTelephoneNumberTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefTelephoneNumberListedStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TelephoneNumber { get; set; }
 
     }
 }

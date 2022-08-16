@@ -13,9 +13,19 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IPDActivityEducationLevel : IAutobahnBase
     {
         /// <summary>
-        /// An age group or education level to which the professional development activity's content pertains.
+        /// 
         /// </summary>
-        Guid RefPDActivityEducationLevelsAddressedId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefPDActivityEducationLevelsAddressedId { get; set; }
 
     }
 }

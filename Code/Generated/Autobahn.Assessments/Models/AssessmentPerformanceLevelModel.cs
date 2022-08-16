@@ -14,9 +14,44 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentPerformanceLevelModel : AutobahnBase, Interfaces.IAssessmentPerformanceLevel
     {
         /// <summary>
-        /// The metric or scale used for score reporting.
+        /// 
         /// </summary>
-        public System.String ScoreMetric { get; set; }
+        public  DescriptiveFeedback { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Label { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LowerCutScore { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ScoreMetric { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  UpperCutScore { get; set; }
 
     }
 }

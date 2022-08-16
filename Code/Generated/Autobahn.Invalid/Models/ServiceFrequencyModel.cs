@@ -14,7 +14,32 @@ namespace Autobahn.Invalid.Models
     public partial class ServiceFrequencyModel : AutobahnBase, Interfaces.IServiceFrequency
     {
         /// <summary>
-        /// The unit of time by which a cycle is defined.
+        /// 
+        /// </summary>
+        public  DurationInMinutes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FrequencyLength { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InstancesPerCycle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFrequencyUnitId { get; set; }
 

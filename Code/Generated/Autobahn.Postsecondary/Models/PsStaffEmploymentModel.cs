@@ -14,7 +14,77 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStaffEmploymentModel : AutobahnBase, Interfaces.IPsStaffEmployment
     {
         /// <summary>
-        /// The Integrated Postsecondary Education Data System (IPEDS) occupational categories used to report employees.
+        /// 
+        /// </summary>
+        public  AnnualBaseContractualSalary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FacultyStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GraduateAssistantStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InstructionalStaffStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MedicalSchoolStaffStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAcademicRankId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmploymentContractTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFullTimeStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefGraduateAssistantIpedsCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefInstructionalStaffContractLengthId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefInstructionalStaffFacultyTenureId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefInstructionCreditTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefIpedsOccupationalCategoryId { get; set; }
 

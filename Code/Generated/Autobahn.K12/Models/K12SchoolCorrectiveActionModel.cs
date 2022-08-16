@@ -14,9 +14,19 @@ namespace Autobahn.K12.Models
     public partial class K12SchoolCorrectiveActionModel : AutobahnBase, Interfaces.IK12SchoolCorrectiveAction
     {
         /// <summary>
-        /// The types of corrective actions under ESEA as amended.
+        /// 
         /// </summary>
-        public Guid RefCorrectiveActionTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefCorrectiveActionTypeId { get; set; }
 
     }
 }

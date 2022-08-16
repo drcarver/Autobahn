@@ -13,5 +13,15 @@ namespace Autobahn.Facilities.Models
      /// </summary>
     public partial class FacilityRelationshipModel : AutobahnBase, Interfaces.IFacilityRelationship
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RecordStartDateTime { get; set; }
+
     }
 }

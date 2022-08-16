@@ -12,9 +12,39 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonCareerEducationPlan : IAutobahnBase
     {
         /// <summary>
-        /// The date on which an individual's professional development career plan was last updated.
+        /// 
         /// </summary>
-        System.DateTime? LastUpdated { get; set; }
+        Guid? LastUpdated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ProfessionalDevelopmentPlanApprovedBySupervisor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ProfessionalDevelopmentPlanCompletion { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCareerEducationPlanTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TuitionFunded { get; set; }
 
     }
 }

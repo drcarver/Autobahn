@@ -12,5 +12,20 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IProgram : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CreditsRequired { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

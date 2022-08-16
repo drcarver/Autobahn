@@ -12,9 +12,39 @@ namespace Autobahn.Common.Models
     public partial class PersonCareerEducationPlanModel : AutobahnBase, Interfaces.IPersonCareerEducationPlan
     {
         /// <summary>
-        /// The date on which an individual's professional development career plan was last updated.
+        /// 
         /// </summary>
-        public System.DateTime? LastUpdated { get; set; }
+        public Guid? LastUpdated { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ProfessionalDevelopmentPlanApprovedBySupervisor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ProfessionalDevelopmentPlanCompletion { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCareerEducationPlanTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  TuitionFunded { get; set; }
 
     }
 }

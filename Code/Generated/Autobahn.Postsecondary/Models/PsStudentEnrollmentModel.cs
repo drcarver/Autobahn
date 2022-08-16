@@ -13,5 +13,10 @@ namespace Autobahn.Postsecondary.Models
      /// </summary>
     public partial class PSStudentEnrollmentModel : AutobahnBase, Interfaces.IPSStudentEnrollment
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DisplacedStudentStatus { get; set; }
+
     }
 }

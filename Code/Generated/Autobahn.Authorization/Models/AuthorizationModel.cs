@@ -14,9 +14,29 @@ namespace Autobahn.Authorization.Models
     public partial class AuthorizationModel : AutobahnBase, Interfaces.IAuthorization
     {
         /// <summary>
-        /// The user role for which the person is allowed.
+        /// 
         /// </summary>
-        public System.String ApplicationRoleName { get; set; }
+        public Guid? ApplicationRoleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartDate { get; set; }
 
     }
 }

@@ -13,9 +13,54 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentSection : IAutobahnBase
     {
         /// <summary>
-        /// The final grade awarded for participation in the course. 
+        /// 
         /// </summary>
-        System.String AcademicGrade { get; set; }
+        Guid? AcademicGrade { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CourseOverrideSchool { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DegreeApplicability { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfCreditsAttempted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfCreditsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         QualityPointsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCourseAcademicGradeStatusCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCourseRepeatCodeId { get; set; }
 
     }
 }

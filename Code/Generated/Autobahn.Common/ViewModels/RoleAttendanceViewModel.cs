@@ -17,25 +17,55 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from RoleAttendance";
 
+        // member variable for the AttendanceRate property
+        private  _AttendanceRate;
+
         // member variable for the NumberOfDaysAbsent property
-        private System.Decimal? _NumberOfDaysAbsent;
+        private Guid? _NumberOfDaysAbsent;
+
+        // member variable for the NumberOfDaysInAttendance property
+        private  _NumberOfDaysInAttendance;
+
+        // member variable for the NumberOfDaysTardy property
+        private  _NumberOfDaysTardy;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the RoleAttendanceViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19201">Number of Days Absent</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Number of Days Absent")]
-        public System.Decimal? NumberOfDaysAbsent { get => _NumberOfDaysAbsent; set => SetProperty(ref _NumberOfDaysAbsent, value); }
+        public  AttendanceRate { get => _AttendanceRate; set => SetProperty(ref _AttendanceRate, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? NumberOfDaysAbsent { get => _NumberOfDaysAbsent; set => SetProperty(ref _NumberOfDaysAbsent, value); }
+
+        /// <summary>
+        /// </summary>
+        public  NumberOfDaysInAttendance { get => _NumberOfDaysInAttendance; set => SetProperty(ref _NumberOfDaysInAttendance, value); }
+
+        /// <summary>
+        /// </summary>
+        public  NumberOfDaysTardy { get => _NumberOfDaysTardy; set => SetProperty(ref _NumberOfDaysTardy, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -46,7 +76,12 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            NumberOfDaysAbsent = model.NumberOfDaysAbsent; // Number of Days Absent
+            AttendanceRate = model.AttendanceRate; // 
+            NumberOfDaysAbsent = model.NumberOfDaysAbsent; // 
+            NumberOfDaysInAttendance = model.NumberOfDaysInAttendance; // 
+            NumberOfDaysTardy = model.NumberOfDaysTardy; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

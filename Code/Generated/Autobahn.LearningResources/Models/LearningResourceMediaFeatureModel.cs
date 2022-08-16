@@ -14,9 +14,19 @@ namespace Autobahn.LearningResources.Models
     public partial class LearningResourceMediaFeatureModel : AutobahnBase, Interfaces.ILearningResourceMediaFeature
     {
         /// <summary>
-        /// Accessible content features included with the learning resource.
+        /// 
         /// </summary>
-        public Guid RefLearningResourceMediaFeatureTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefLearningResourceMediaFeatureTypeId { get; set; }
 
     }
 }

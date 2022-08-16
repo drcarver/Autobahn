@@ -13,9 +13,49 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProgramParticipationSpecialEducation : IAutobahnBase
     {
         /// <summary>
-        /// Awaiting initial evaluation for special education programs and related services under the Individuals with Disabilities Education Act (IDEA). 
+        /// 
         /// </summary>
-        System.Boolean? AwaitingInitialIDEAEvaluationStatus { get; set; }
+        Guid? AwaitingInitialIDEAEvaluationStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IDEAPlacementRationale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIDEAEducationalEnvironmentECId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefSpecialEducationExitReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SpecialEducationFTE { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SpecialEducationServicesExitDate { get; set; }
 
     }
 }

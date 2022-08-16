@@ -12,5 +12,25 @@ namespace Autobahn.Authorization.Interfaces
      /// </summary>
     public partial interface IApplication : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Uri { get; set; }
+
     }
 }

@@ -13,5 +13,25 @@ namespace Autobahn.Authorization.Models
      /// </summary>
     public partial class ApplicationModel : AutobahnBase, Interfaces.IApplication
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Uri { get; set; }
+
     }
 }

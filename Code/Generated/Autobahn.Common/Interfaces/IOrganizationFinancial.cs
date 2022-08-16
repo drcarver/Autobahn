@@ -12,9 +12,54 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationFinancial : IAutobahnBase
     {
         /// <summary>
-        /// The actual value of a financial account for the specified accounting period or fiscal year.
+        /// 
         /// </summary>
-        System.Decimal? ActualValue { get; set; }
+        Guid? ActualValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         BudgetedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EncumberedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FiscalPeriodBeginDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FiscalPeriodEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FiscalYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Value { get; set; }
 
     }
 }

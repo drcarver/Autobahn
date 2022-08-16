@@ -13,5 +13,20 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class RequiredImmunizationModel : AutobahnBase, Interfaces.IRequiredImmunization
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefImmunizationTypeId { get; set; }
+
     }
 }

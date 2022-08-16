@@ -13,9 +13,99 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentSubtest : IAutobahnBase
     {
         /// <summary>
-        /// The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.
+        /// 
         /// </summary>
-        Guid RefAcademicSubjectId { get; set; }
+         Abbreviation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ContainerOnly { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MaximumValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MinimumValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OptimalValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PublishedDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefAcademicSubjectId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentPurposeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentSubtestIdentifierTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefContentStandardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefScoreMetricTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Rules { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Tier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Title { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Version { get; set; }
 
     }
 }

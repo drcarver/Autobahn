@@ -12,9 +12,54 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffProfessionalDevelopmentActivity : IAutobahnBase
     {
         /// <summary>
-        /// The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course. 
+        /// 
+        /// </summary>
+         ActivityCompletionDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ActivityIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ActivityStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ActivityTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfCreditsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefCourseCreditUnitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProfessionalDevelopmentFinancialSupportId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ScholarshipStatus { get; set; }
 
     }
 }

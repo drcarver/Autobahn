@@ -14,9 +14,24 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentAdmissionTestModel : AutobahnBase, Interfaces.IPsStudentAdmissionTest
     {
         /// <summary>
-        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
+        /// 
         /// </summary>
-        public System.Decimal? StandardizedAdmissionTestScore { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefStandardizedAdmissionTestId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? StandardizedAdmissionTestScore { get; set; }
 
     }
 }

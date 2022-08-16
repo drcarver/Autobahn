@@ -13,9 +13,39 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12Lea : IAutobahnBase
     {
         /// <summary>
-        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
+        /// 
         /// </summary>
-        System.Boolean? CharterSchoolIndicator { get; set; }
+        Guid? CharterSchoolIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefLEAImprovementStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefLeaTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefPublicSchoolChoiceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SupervisoryUnionIdentificationNumber { get; set; }
 
     }
 }

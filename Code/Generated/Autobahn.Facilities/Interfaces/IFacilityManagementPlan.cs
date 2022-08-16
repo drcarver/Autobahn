@@ -13,9 +13,29 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityManagementPlan : IAutobahnBase
     {
         /// <summary>
-        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
+        /// 
+        /// </summary>
+         FacilitiesPlanDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilitiesPlanTypeId { get; set; }
 
     }
 }

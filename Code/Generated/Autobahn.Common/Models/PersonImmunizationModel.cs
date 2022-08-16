@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class PersonImmunizationModel : AutobahnBase, Interfaces.IPersonImmunization
     {
         /// <summary>
-        /// The year, month and day of an immunization.
+        /// 
         /// </summary>
-        public System.DateTime ImmunizationDate { get; set; }
+        public Guid? ImmunizationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefImmunizationTypeId { get; set; }
 
     }
 }

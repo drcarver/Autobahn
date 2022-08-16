@@ -13,9 +13,24 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialOffered : IAutobahnBase
     {
         /// <summary>
-        /// The first date a credential was offered.
+        /// 
         /// </summary>
-        System.DateTime? CredentialOfferedStartDate { get; set; }
+         CredentialOfferedEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CredentialOfferedStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

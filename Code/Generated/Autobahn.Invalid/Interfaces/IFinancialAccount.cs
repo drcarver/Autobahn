@@ -13,9 +13,79 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IFinancialAccount : IAutobahnBase
     {
         /// <summary>
-        /// A label for a grouping of financial accounts, based on type and purpose.
+        /// 
+        /// </summary>
+         AccountNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FinancialAccountNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FinancialExpenditureProjectReportingCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAccountBalanceSheetCodeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefFinancialAccountCategoryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAccountFundClassificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAccountProgramCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialAccountRevenueCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialExpenditureFunctionCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialExpenditureLevelOfInstructionCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFinancialExpenditureObjectCodeId { get; set; }
 
     }
 }

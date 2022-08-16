@@ -20,25 +20,35 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProgramParticipationFoodService";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefSchoolFoodServiceProgramId property
-        private Guid _RefSchoolFoodServiceProgramId;
+        private Guid? _RefSchoolFoodServiceProgramId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ProgramParticipationFoodServiceViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSchoolFoodServiceProgram"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19325">Participation in School Food Service Programs</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Participation in School Food Service Programs")]
-        public Guid RefSchoolFoodServiceProgramId { get => _RefSchoolFoodServiceProgramId; set => SetProperty(ref _RefSchoolFoodServiceProgramId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefSchoolFoodServiceProgram"/> model
+        /// </summary>
+        public Guid? RefSchoolFoodServiceProgramId { get => _RefSchoolFoodServiceProgramId; set => SetProperty(ref _RefSchoolFoodServiceProgramId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefSchoolFoodServiceProgramId = model.RefSchoolFoodServiceProgramId; // Participation in School Food Service Programs
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefSchoolFoodServiceProgramId = model.RefSchoolFoodServiceProgramId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

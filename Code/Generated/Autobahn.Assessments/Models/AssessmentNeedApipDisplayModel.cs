@@ -14,9 +14,49 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentNeedApipDisplayModel : AutobahnBase, Interfaces.IAssessmentNeedApipDisplay
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        public System.Boolean? EncouragementAssignedSupportIndicator { get; set; }
+        public  EncouragementActivateByDefaultIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? EncouragementAssignedSupportIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EncouragementSoundFileUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EncouragementTextMessagingString { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MaskingActivateByDefaultIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MaskingAssignedSupportIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedMaskingTypeId { get; set; }
 
     }
 }

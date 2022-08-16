@@ -20,25 +20,79 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PsStudentFinancialAid";
 
+        // member variable for the FinancialAidApplicant property
+        private  _FinancialAidApplicant;
+
+        // member variable for the FinancialAidIncomeLevel property
+        private  _FinancialAidIncomeLevel;
+
+        // member variable for the FinancialNeed property
+        private  _FinancialNeed;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefFinancialAidVeteransBenefitStatusId property
+        private  _RefFinancialAidVeteransBenefitStatusId;
+
+        // member variable for the RefFinancialAidVeteransBenefitTypeId property
+        private  _RefFinancialAidVeteransBenefitTypeId;
+
+        // member variable for the RefNeedDeterminationMethodId property
+        private  _RefNeedDeterminationMethodId;
+
         // member variable for the TitleIVParticipantAndRecipient property
-        private System.Boolean? _TitleIVParticipantAndRecipient;
+        private Guid? _TitleIVParticipantAndRecipient;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PsStudentFinancialAidViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// A person who receives Title IV aid.  Title IV aid includes grant aid, work study aid, and loan aid such as: Federal Pell Grant, Federal Supplemental Educational Opportunity Grant (FSEOG), Teacher Education Assistance for College and Higher Education (TEACH) Grant, Federal Work-Study, Federal Perkins Loan, Subsidized Direct or FFEL Stafford Loan, and Unsubsidized Direct or FFEL Stafford Loan.  Title IV aid specifications are defined by the instructions for the IPEDS Student Financial Aid survey.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19292">Title IV Participant and Recipient</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Title IV Participant and Recipient")]
-        public System.Boolean? TitleIVParticipantAndRecipient { get => _TitleIVParticipantAndRecipient; set => SetProperty(ref _TitleIVParticipantAndRecipient, value); }
+        public  FinancialAidApplicant { get => _FinancialAidApplicant; set => SetProperty(ref _FinancialAidApplicant, value); }
+
+        /// <summary>
+        /// </summary>
+        public  FinancialAidIncomeLevel { get => _FinancialAidIncomeLevel; set => SetProperty(ref _FinancialAidIncomeLevel, value); }
+
+        /// <summary>
+        /// </summary>
+        public  FinancialNeed { get => _FinancialNeed; set => SetProperty(ref _FinancialNeed, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitStatus"/> model
+        /// </summary>
+        public  RefFinancialAidVeteransBenefitStatusId { get => _RefFinancialAidVeteransBenefitStatusId; set => SetProperty(ref _RefFinancialAidVeteransBenefitStatusId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitType"/> model
+        /// </summary>
+        public  RefFinancialAidVeteransBenefitTypeId { get => _RefFinancialAidVeteransBenefitTypeId; set => SetProperty(ref _RefFinancialAidVeteransBenefitTypeId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefNeedDeterminationMethod"/> model
+        /// </summary>
+        public  RefNeedDeterminationMethodId { get => _RefNeedDeterminationMethodId; set => SetProperty(ref _RefNeedDeterminationMethodId, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? TitleIVParticipantAndRecipient { get => _TitleIVParticipantAndRecipient; set => SetProperty(ref _TitleIVParticipantAndRecipient, value); }
 
         #endregion
 
@@ -49,7 +103,15 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            TitleIVParticipantAndRecipient = model.TitleIVParticipantAndRecipient; // Title IV Participant and Recipient
+            FinancialAidApplicant = model.FinancialAidApplicant; // 
+            FinancialAidIncomeLevel = model.FinancialAidIncomeLevel; // 
+            FinancialNeed = model.FinancialNeed; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefFinancialAidVeteransBenefitStatusId = model.RefFinancialAidVeteransBenefitStatusId; // 
+            RefFinancialAidVeteransBenefitTypeId = model.RefFinancialAidVeteransBenefitTypeId; // 
+            RefNeedDeterminationMethodId = model.RefNeedDeterminationMethodId; // 
+            TitleIVParticipantAndRecipient = model.TitleIVParticipantAndRecipient; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

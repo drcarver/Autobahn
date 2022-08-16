@@ -13,5 +13,30 @@ namespace Autobahn.AdultEducation.Models
      /// </summary>
     public partial class AeStudentAcademicRecordModel : AutobahnBase, Interfaces.IAeStudentAcademicRecord
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefHighSchoolDiplomaTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefProfessionalTechnicalCredentialTypeId { get; set; }
+
     }
 }

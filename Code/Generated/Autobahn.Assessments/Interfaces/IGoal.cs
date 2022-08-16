@@ -12,5 +12,30 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IGoal : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartDate { get; set; }
+
     }
 }

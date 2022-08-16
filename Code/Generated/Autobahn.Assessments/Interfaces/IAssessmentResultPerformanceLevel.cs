@@ -12,5 +12,15 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IAssessmentResultPerformanceLevel : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

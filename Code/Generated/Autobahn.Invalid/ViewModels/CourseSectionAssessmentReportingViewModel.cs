@@ -20,6 +20,12 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from CourseSectionAssessmentReporting";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefCourseSectionAssessmentReportingMethodId property
         private Guid? _RefCourseSectionAssessmentReportingMethodId;
 
@@ -27,17 +33,21 @@ namespace Autobahn.Invalid.ViewModels
 
         #region Properties
         /// <summary>
-        /// The title of the CourseSectionAssessmentReportingViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseSectionAssessmentReportingMethod"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19027">Course Section Assessment Reporting Method</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Course Section Assessment Reporting Method")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefCourseSectionAssessmentReportingMethod"/> model
+        /// </summary>
         public Guid? RefCourseSectionAssessmentReportingMethodId { get => _RefCourseSectionAssessmentReportingMethodId; set => SetProperty(ref _RefCourseSectionAssessmentReportingMethodId, value); }
 
         #endregion
@@ -49,7 +59,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefCourseSectionAssessmentReportingMethodId = model.RefCourseSectionAssessmentReportingMethodId; // Course Section Assessment Reporting Method
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefCourseSectionAssessmentReportingMethodId = model.RefCourseSectionAssessmentReportingMethodId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

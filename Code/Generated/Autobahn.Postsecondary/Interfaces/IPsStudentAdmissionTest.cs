@@ -13,9 +13,24 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentAdmissionTest : IAutobahnBase
     {
         /// <summary>
-        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
+        /// 
         /// </summary>
-        System.Decimal? StandardizedAdmissionTestScore { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefStandardizedAdmissionTestId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? StandardizedAdmissionTestScore { get; set; }
 
     }
 }

@@ -11,5 +11,20 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IRole : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefRoleId { get; set; }
+
     }
 }

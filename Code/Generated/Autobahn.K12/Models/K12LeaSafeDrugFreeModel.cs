@@ -14,9 +14,54 @@ namespace Autobahn.K12.Models
     public partial class K12LeaSafeDrugFreeModel : AutobahnBase, Interfaces.IK12LeaSafeDrugFree
     {
         /// <summary>
-        /// The name of the performance indicator for student behaviors under the Safe and Drug-Free Schools and Communities Act.
+        /// 
         /// </summary>
-        public System.String IndicatorName { get; set; }
+        public  Baseline { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BaselineYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CollectionFrequency { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? IndicatorName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Instrument { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MostRecentCollection { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Performance { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Target { get; set; }
 
     }
 }

@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationWebsite : IAutobahnBase
     {
         /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
+        /// 
         /// </summary>
-        System.String Website { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Website { get; set; }
 
     }
 }

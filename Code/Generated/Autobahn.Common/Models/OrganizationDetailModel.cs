@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class OrganizationDetailModel : AutobahnBase, Interfaces.IOrganizationDetail
     {
         /// <summary>
-        /// The name of a data system or application which an authenticated person may access.
+        /// 
         /// </summary>
-        public System.String Name { get; set; }
+        public Guid? Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RegionGeoJSON { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ShortName { get; set; }
 
     }
 }

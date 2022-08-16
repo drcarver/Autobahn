@@ -20,25 +20,50 @@ namespace Autobahn.AdultEducation.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AeStaff";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefAeStaffClassificationId property
         private Guid? _RefAeStaffClassificationId;
+
+        // member variable for the RefAeStaffEmploymentStatusId property
+        private  _RefAeStaffEmploymentStatusId;
+
+        // member variable for the YearsOfPriorAeTeachingExperience property
+        private  _YearsOfPriorAeTeachingExperience;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the AeStaffViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAeStaffClassification"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19770">Adult Education Staff Classification</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Adult Education Staff Classification")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefAeStaffClassification"/> model
+        /// </summary>
         public Guid? RefAeStaffClassificationId { get => _RefAeStaffClassificationId; set => SetProperty(ref _RefAeStaffClassificationId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefAeStaffEmploymentStatus"/> model
+        /// </summary>
+        public  RefAeStaffEmploymentStatusId { get => _RefAeStaffEmploymentStatusId; set => SetProperty(ref _RefAeStaffEmploymentStatusId, value); }
+
+        /// <summary>
+        /// </summary>
+        public  YearsOfPriorAeTeachingExperience { get => _YearsOfPriorAeTeachingExperience; set => SetProperty(ref _YearsOfPriorAeTeachingExperience, value); }
 
         #endregion
 
@@ -49,7 +74,11 @@ namespace Autobahn.AdultEducation.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefAeStaffClassificationId = model.RefAeStaffClassificationId; // Adult Education Staff Classification
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefAeStaffClassificationId = model.RefAeStaffClassificationId; // 
+            RefAeStaffEmploymentStatusId = model.RefAeStaffEmploymentStatusId; // 
+            YearsOfPriorAeTeachingExperience = model.YearsOfPriorAeTeachingExperience; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

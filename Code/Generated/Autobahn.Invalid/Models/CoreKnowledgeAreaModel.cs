@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class CoreKnowledgeAreaModel : AutobahnBase, Interfaces.ICoreKnowledgeArea
     {
         /// <summary>
-        /// A description of the core knowledge areas addressed by Early Learning professional development.
+        /// 
         /// </summary>
-        public Guid RefCoreKnowledgeAreaId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefCoreKnowledgeAreaId { get; set; }
 
     }
 }

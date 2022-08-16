@@ -12,9 +12,34 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonMilitary : IAutobahnBase
     {
         /// <summary>
-        /// An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMilitaryActiveStudentIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMilitaryBranchId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMilitaryVeteranStudentIndicatorId { get; set; }
 
     }
 }

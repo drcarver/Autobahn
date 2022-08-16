@@ -17,25 +17,35 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from OrganizationIndicator";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefOrganizationIndicatorId property
-        private Guid _RefOrganizationIndicatorId;
+        private Guid? _RefOrganizationIndicatorId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationIndicatorViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefOrganizationIndicator"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19000">Ability Grouping Status</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Ability Grouping Status")]
-        public Guid RefOrganizationIndicatorId { get => _RefOrganizationIndicatorId; set => SetProperty(ref _RefOrganizationIndicatorId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefOrganizationIndicator"/> model
+        /// </summary>
+        public Guid? RefOrganizationIndicatorId { get => _RefOrganizationIndicatorId; set => SetProperty(ref _RefOrganizationIndicatorId, value); }
 
         #endregion
 
@@ -46,7 +56,9 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefOrganizationIndicatorId = model.RefOrganizationIndicatorId; // Ability Grouping Status
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefOrganizationIndicatorId = model.RefOrganizationIndicatorId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,5 +12,20 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IRequiredImmunization : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefImmunizationTypeId { get; set; }
+
     }
 }

@@ -12,9 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationIndicator : IAutobahnBase
     {
         /// <summary>
-        /// An indication of whether the school has students who are ability grouped for classroom instruction in mathematics or English/reading/language arts.
+        /// 
         /// </summary>
-        Guid RefOrganizationIndicatorId { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefOrganizationIndicatorId { get; set; }
 
     }
 }

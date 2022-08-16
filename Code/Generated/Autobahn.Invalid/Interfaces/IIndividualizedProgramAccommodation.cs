@@ -12,5 +12,30 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IIndividualizedProgramAccommodation : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         Applicability { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RefAccommodationTypeId { get; set; }
+
     }
 }

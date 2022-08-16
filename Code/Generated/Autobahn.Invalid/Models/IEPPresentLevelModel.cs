@@ -14,9 +14,49 @@ namespace Autobahn.Invalid.Models
     public partial class IEPPresentLevelModel : AutobahnBase, Interfaces.IIEPPresentLevel
     {
         /// <summary>
-        /// How the child's disability affects the child's academic achievement.
+        /// 
         /// </summary>
-        public System.String AcademicDescription { get; set; }
+        public Guid? AcademicDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FunctionalDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  GeneralEducationDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParentConcernDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  PreschoolDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StudentConcernDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StudentStrengthsDescription { get; set; }
 
     }
 }

@@ -13,9 +13,44 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StaffEmployment : IAutobahnBase
     {
         /// <summary>
-        /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
+        /// 
         /// </summary>
-        System.Decimal? ContractDaysOfServicePerYear { get; set; }
+        Guid? ContractDaysOfServicePerYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MepPersonnelIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefEmploymentStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefK12StaffClassificationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SalaryForTeachingAssignmentOnlyIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         TitleITargetedAssistanceStaffFunded { get; set; }
 
     }
 }

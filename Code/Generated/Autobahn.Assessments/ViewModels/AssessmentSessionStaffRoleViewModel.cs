@@ -20,6 +20,12 @@ namespace Autobahn.Assessments.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from AssessmentSessionStaffRole";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefAssessmentSessionStaffRoleTypeId property
         private Guid? _RefAssessmentSessionStaffRoleTypeId;
 
@@ -27,17 +33,21 @@ namespace Autobahn.Assessments.ViewModels
 
         #region Properties
         /// <summary>
-        /// The title of the AssessmentSessionStaffRoleViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAssessmentSessionStaffRoleType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20179">Assessment Session Staff Role Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Session Staff Role Type")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefAssessmentSessionStaffRoleType"/> model
+        /// </summary>
         public Guid? RefAssessmentSessionStaffRoleTypeId { get => _RefAssessmentSessionStaffRoleTypeId; set => SetProperty(ref _RefAssessmentSessionStaffRoleTypeId, value); }
 
         #endregion
@@ -49,7 +59,9 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefAssessmentSessionStaffRoleTypeId = model.RefAssessmentSessionStaffRoleTypeId; // Assessment Session Staff Role Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefAssessmentSessionStaffRoleTypeId = model.RefAssessmentSessionStaffRoleTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

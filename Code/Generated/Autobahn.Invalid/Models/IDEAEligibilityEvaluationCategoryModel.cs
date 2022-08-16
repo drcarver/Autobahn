@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class IDEAEligibilityEvaluationCategoryModel : AutobahnBase, Interfaces.IIDEAEligibilityEvaluationCategory
     {
         /// <summary>
-        /// Category of evaluation used for IDEA eligibility.
+        /// 
         /// </summary>
-        public Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefIDEAEligibilityEvaluationCategoryId { get; set; }
 
     }
 }

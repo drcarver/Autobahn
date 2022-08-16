@@ -14,7 +14,17 @@ namespace Autobahn.Invalid.Models
     public partial class IEPAuthorizationModel : AutobahnBase, Interfaces.IIEPAuthorization
     {
         /// <summary>
-        /// Type of Individualized Education Plan document authorized.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefIEPAuthorizationDocumentTypeId { get; set; }
 

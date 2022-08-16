@@ -12,9 +12,49 @@ namespace Autobahn.Common.Models
     public partial class PersonCredentialModel : AutobahnBase, Interfaces.IPersonCredential
     {
         /// <summary>
-        /// The year, month, and day on which the child is no longer eligible for the  Program.
+        /// 
         /// </summary>
-        public System.DateTime? ExpirationDate { get; set; }
+        public  CredentialName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CredentialOrLicenseAwardEntity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ExpirationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IssuanceDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ProfessionalCertificateOrLicenseNumber { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefIssuingStateId { get; set; }
 
     }
 }

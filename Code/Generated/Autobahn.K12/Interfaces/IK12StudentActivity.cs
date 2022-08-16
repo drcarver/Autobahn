@@ -13,9 +13,24 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentActivity : IAutobahnBase
     {
         /// <summary>
-        /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
         /// </summary>
-        System.Decimal? ActivityTimeInvolved { get; set; }
+        Guid? ActivityTimeInvolved { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefActivityTimeMeasurementTypeId { get; set; }
 
     }
 }

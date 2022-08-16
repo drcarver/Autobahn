@@ -12,5 +12,40 @@ namespace Autobahn.Assessments.Interfaces
      /// </summary>
     public partial interface IRubricCriterionLevel : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Feedback { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Position { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Quality { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Score { get; set; }
+
     }
 }

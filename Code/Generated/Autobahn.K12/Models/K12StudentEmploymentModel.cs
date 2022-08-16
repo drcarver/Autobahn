@@ -13,5 +13,30 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12StudentEmploymentModel : AutobahnBase, Interfaces.IK12StudentEmployment
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EmploymentNaicsCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEmployedAfterExitId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefEmployedWhileEnrolledId { get; set; }
+
     }
 }

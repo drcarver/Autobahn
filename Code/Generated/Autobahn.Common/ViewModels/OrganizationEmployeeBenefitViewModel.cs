@@ -18,24 +18,48 @@ namespace Autobahn.Common.ViewModels
         private string _viewTitle = "Hello from OrganizationEmployeeBenefit";
 
         // member variable for the FullTimeBenefitIndicator property
-        private System.Boolean? _FullTimeBenefitIndicator;
+        private Guid? _FullTimeBenefitIndicator;
+
+        // member variable for the PartTimeBenefitIndicator property
+        private  _PartTimeBenefitIndicator;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefEmployeeBenefitId property
+        private  _RefEmployeeBenefitId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationEmployeeBenefitViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The benefits offered by a program/facility/employer for full-time staff.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19866">Full-Time Employee Benefits</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Full-Time Employee Benefits")]
-        public System.Boolean? FullTimeBenefitIndicator { get => _FullTimeBenefitIndicator; set => SetProperty(ref _FullTimeBenefitIndicator, value); }
+        public Guid? FullTimeBenefitIndicator { get => _FullTimeBenefitIndicator; set => SetProperty(ref _FullTimeBenefitIndicator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  PartTimeBenefitIndicator { get => _PartTimeBenefitIndicator; set => SetProperty(ref _PartTimeBenefitIndicator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefEmployeeBenefit"/> model
+        /// </summary>
+        public  RefEmployeeBenefitId { get => _RefEmployeeBenefitId; set => SetProperty(ref _RefEmployeeBenefitId, value); }
 
         #endregion
 
@@ -46,7 +70,11 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FullTimeBenefitIndicator = model.FullTimeBenefitIndicator; // Full-Time Employee Benefits
+            FullTimeBenefitIndicator = model.FullTimeBenefitIndicator; // 
+            PartTimeBenefitIndicator = model.PartTimeBenefitIndicator; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefEmployeeBenefitId = model.RefEmployeeBenefitId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

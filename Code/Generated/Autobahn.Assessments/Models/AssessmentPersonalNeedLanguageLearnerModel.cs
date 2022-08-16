@@ -14,9 +14,29 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentPersonalNeedLanguageLearnerModel : AutobahnBase, Interfaces.IAssessmentPersonalNeedLanguageLearner
     {
         /// <summary>
-        /// Defines whether or not the individual needs the kind of support defined by the entity.
+        /// 
         /// </summary>
-        public System.Boolean? AssignedSupport { get; set; }
+        public  ActivateByDefault { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? AssignedSupport { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get; set; }
 
     }
 }

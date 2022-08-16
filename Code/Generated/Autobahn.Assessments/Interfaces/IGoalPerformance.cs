@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IGoalPerformance : IAutobahnBase
     {
         /// <summary>
-        /// Current performance explanation related to the annual goal or short-term objectives.
+        /// 
         /// </summary>
-        System.String CurrentPerformanceDescription { get; set; }
+        Guid? CurrentPerformanceDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefGoalStatusTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Status { get; set; }
 
     }
 }

@@ -12,9 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonImmunization : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day of an immunization.
+        /// 
         /// </summary>
-        System.DateTime ImmunizationDate { get; set; }
+        Guid? ImmunizationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefImmunizationTypeId { get; set; }
 
     }
 }

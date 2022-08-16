@@ -13,9 +13,34 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityMortgage : IAutobahnBase
     {
         /// <summary>
-        /// The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.
+        /// 
         /// </summary>
-        System.Decimal? FacilityMortgageInterestAmount { get; set; }
+        Guid? FacilityMortgageInterestAmount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityTotalAssessedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityMortgageInterestTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityMortgageTypeId { get; set; }
 
     }
 }

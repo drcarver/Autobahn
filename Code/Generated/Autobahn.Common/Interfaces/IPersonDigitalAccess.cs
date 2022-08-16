@@ -11,5 +11,35 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IPersonDigitalAccess : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         InternetAccessInResidence { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefBarrierToInternetAccessInResidenceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefInternetAccessTypeInResidenceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefInternetPerformanceInResidenceId { get; set; }
+
     }
 }

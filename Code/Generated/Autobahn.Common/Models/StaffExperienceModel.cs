@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class StaffExperienceModel : AutobahnBase, Interfaces.IStaffExperience
     {
         /// <summary>
-        /// The total number of years prior to this job that a person has previously held a teaching position in one or more education institutions.
+        /// 
         /// </summary>
-        public System.Decimal? YearsOfPriorTeachingExperience { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  YearsOfPriorAETeachingExperience { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? YearsOfPriorTeachingExperience { get; set; }
 
     }
 }

@@ -13,7 +13,32 @@ namespace Autobahn.Authorization.Interfaces
     public partial interface IAuthorizationDocument : IAutobahnBase
     {
         /// <summary>
-        /// Type of person who authorized the decision or document.
+        /// 
+        /// </summary>
+         AcceptanceIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AuthorizationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DecisionExplanation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAuthorizerTypeId { get; set; }
 

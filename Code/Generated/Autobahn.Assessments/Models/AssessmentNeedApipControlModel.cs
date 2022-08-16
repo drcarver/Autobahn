@@ -14,9 +14,39 @@ namespace Autobahn.Assessments.Models
     public partial class AssessmentNeedApipControlModel : AutobahnBase, Interfaces.IAssessmentNeedApipControl
     {
         /// <summary>
-        /// Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.
+        /// 
         /// </summary>
-        public System.String AssessmentNeedTimeMultiplier { get; set; }
+        public Guid? AssessmentNeedTimeMultiplier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BackgroundColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LineReaderHighlightColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  OverlayColor { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAssessmentNeedIncreasedWhitespacingTypeId { get; set; }
 
     }
 }

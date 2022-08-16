@@ -21,24 +21,54 @@ namespace Autobahn.Assessments.ViewModels
         private string _viewTitle = "Hello from GoalMeasurementCriterion";
 
         // member variable for the AccuracyPercent property
-        private System.Decimal? _AccuracyPercent;
+        private Guid? _AccuracyPercent;
+
+        // member variable for the AttemptsCount property
+        private  _AttemptsCount;
+
+        // member variable for the Metric property
+        private  _Metric;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the SuccessCount property
+        private  _SuccessCount;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the GoalMeasurementCriterionViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20672">Goal Measurement Criterion Accuracy Percent</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Goal Measurement Criterion Accuracy Percent")]
-        public System.Decimal? AccuracyPercent { get => _AccuracyPercent; set => SetProperty(ref _AccuracyPercent, value); }
+        public Guid? AccuracyPercent { get => _AccuracyPercent; set => SetProperty(ref _AccuracyPercent, value); }
+
+        /// <summary>
+        /// </summary>
+        public  AttemptsCount { get => _AttemptsCount; set => SetProperty(ref _AttemptsCount, value); }
+
+        /// <summary>
+        /// </summary>
+        public  Metric { get => _Metric; set => SetProperty(ref _Metric, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  SuccessCount { get => _SuccessCount; set => SetProperty(ref _SuccessCount, value); }
 
         #endregion
 
@@ -49,7 +79,12 @@ namespace Autobahn.Assessments.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            AccuracyPercent = model.AccuracyPercent; // Goal Measurement Criterion Accuracy Percent
+            AccuracyPercent = model.AccuracyPercent; // 
+            AttemptsCount = model.AttemptsCount; // 
+            Metric = model.Metric; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            SuccessCount = model.SuccessCount; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

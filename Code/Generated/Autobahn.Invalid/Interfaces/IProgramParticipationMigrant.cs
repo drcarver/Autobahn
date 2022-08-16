@@ -13,9 +13,89 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProgramParticipationMigrant : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day of the last qualifying move of a migrant student.
+        /// 
         /// </summary>
-        System.DateTime? LastQualifyingMoveDate { get; set; }
+         BirthdateVerification { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ContinuationOfServicesStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DesignatedGraduationSchoolId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ImmunizationRecordFlag { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? LastQualifyingMoveDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MepEligibilityExpirationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         MigrantStudentQualifyingArrivalDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PrioritizedForServices { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         QualifyingMoveFromCity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefContinuationOfServicesReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMepEnrollmentTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMepProjectBasedId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMepServiceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefQualifyingMoveFromCountryId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefQualifyingMoveFromStateId { get; set; }
 
     }
 }

@@ -20,25 +20,56 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ApipInteraction";
 
+        // member variable for the APIPInteractionSequenceNumber property
+        private  _APIPInteractionSequenceNumber;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefApipInteractionTypeId property
+        private  _RefApipInteractionTypeId;
+
         // member variable for the Xml property
-        private System.String _Xml;
+        private Guid? _Xml;
+
+        // member variable for the XML property
+        private  _XML;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ApipInteractionViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The custom interaction provides an opportunity for extensibility of this specification to include support for interactions not currently documented.  The XML from the IMS Global APIP Specification would be included.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20079">Assessment Item Body Custom Interaction XML</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Assessment Item Body Custom Interaction XML")]
-        public System.String Xml { get => _Xml; set => SetProperty(ref _Xml, value); }
+        public  APIPInteractionSequenceNumber { get => _APIPInteractionSequenceNumber; set => SetProperty(ref _APIPInteractionSequenceNumber, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefApipInteractionType"/> model
+        /// </summary>
+        public  RefApipInteractionTypeId { get => _RefApipInteractionTypeId; set => SetProperty(ref _RefApipInteractionTypeId, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? Xml { get => _Xml; set => SetProperty(ref _Xml, value); }
+
+        /// <summary>
+        /// </summary>
+        public  XML { get => _XML; set => SetProperty(ref _XML, value); }
 
         #endregion
 
@@ -49,7 +80,12 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            Xml = model.Xml; // Assessment Item Body Custom Interaction XML
+            APIPInteractionSequenceNumber = model.APIPInteractionSequenceNumber; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefApipInteractionTypeId = model.RefApipInteractionTypeId; // 
+            Xml = model.Xml; // 
+            XML = model.XML; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,9 +12,19 @@ namespace Autobahn.Common.Models
     public partial class OrganizationWebsiteModel : AutobahnBase, Interfaces.IOrganizationWebsite
     {
         /// <summary>
-        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
+        /// 
         /// </summary>
-        public System.String Website { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? Website { get; set; }
 
     }
 }

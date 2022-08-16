@@ -13,5 +13,25 @@ namespace Autobahn.Invalid.Models
      /// </summary>
     public partial class ProgramParticipationTitleIIILepModel : AutobahnBase, Interfaces.IProgramParticipationTitleIIILep
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefTitleIIIAccountabilityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefTitleIIILanguageInstructionProgramTypeId { get; set; }
+
     }
 }

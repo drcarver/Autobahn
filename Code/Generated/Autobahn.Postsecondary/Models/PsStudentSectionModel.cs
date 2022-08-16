@@ -14,9 +14,54 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentSectionModel : AutobahnBase, Interfaces.IPsStudentSection
     {
         /// <summary>
-        /// The final grade awarded for participation in the course. 
+        /// 
         /// </summary>
-        public System.String AcademicGrade { get; set; }
+        public Guid? AcademicGrade { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CourseOverrideSchool { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DegreeApplicability { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfCreditsAttempted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfCreditsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  QualityPointsEarned { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCourseAcademicGradeStatusCodeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefCourseRepeatCodeId { get; set; }
 
     }
 }

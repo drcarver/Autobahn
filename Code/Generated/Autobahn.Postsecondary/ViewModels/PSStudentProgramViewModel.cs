@@ -20,25 +20,59 @@ namespace Autobahn.Postsecondary.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PSStudentProgram";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefCareerClusterId property
+        private  _RefCareerClusterId;
+
         // member variable for the RefCipUseId property
         private Guid? _RefCipUseId;
+
+        // member variable for the RefTransferOutIndicatorId property
+        private  _RefTransferOutIndicatorId;
+
+        // member variable for the RefWorkbasedLearningOpportunityTypeId property
+        private  _RefWorkbasedLearningOpportunityTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PSStudentProgramViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipUse"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19044">Classification of Instructional Program Use</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Classification of Instructional Program Use")]
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
+        /// </summary>
+        public  RefCareerClusterId { get => _RefCareerClusterId; set => SetProperty(ref _RefCareerClusterId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefCipUse"/> model
+        /// </summary>
         public Guid? RefCipUseId { get => _RefCipUseId; set => SetProperty(ref _RefCipUseId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefTransferOutIndicator"/> model
+        /// </summary>
+        public  RefTransferOutIndicatorId { get => _RefTransferOutIndicatorId; set => SetProperty(ref _RefTransferOutIndicatorId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
+        /// </summary>
+        public  RefWorkbasedLearningOpportunityTypeId { get => _RefWorkbasedLearningOpportunityTypeId; set => SetProperty(ref _RefWorkbasedLearningOpportunityTypeId, value); }
 
         #endregion
 
@@ -49,7 +83,12 @@ namespace Autobahn.Postsecondary.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefCipUseId = model.RefCipUseId; // Classification of Instructional Program Use
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefCareerClusterId = model.RefCareerClusterId; // 
+            RefCipUseId = model.RefCipUseId; // 
+            RefTransferOutIndicatorId = model.RefTransferOutIndicatorId; // 
+            RefWorkbasedLearningOpportunityTypeId = model.RefWorkbasedLearningOpportunityTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -14,9 +14,39 @@ namespace Autobahn.Authorization.Models
     public partial class AuthenticationModel : AutobahnBase, Interfaces.IAuthentication
     {
         /// <summary>
-        /// The name of a provider that can authenticate the identity of an person.
+        /// 
         /// </summary>
-        public System.String IdentityProviderName { get; set; }
+        public  EndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? IdentityProviderName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  IdentityProviderUri { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LoginIdentifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StartDate { get; set; }
 
     }
 }

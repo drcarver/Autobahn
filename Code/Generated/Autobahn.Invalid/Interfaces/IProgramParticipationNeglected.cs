@@ -13,7 +13,32 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IProgramParticipationNeglected : IAutobahnBase
     {
         /// <summary>
-        /// The type of program under ESEA Title I, Part D, Subpart 1 (state programs) or Subpart 2 (LEA).
+        /// 
+        /// </summary>
+         AchievementIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ObtainedEmployment { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OutcomeIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefNeglectedProgramTypeId { get; set; }
 

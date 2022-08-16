@@ -20,25 +20,35 @@ namespace Autobahn.Facilities.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from FacilityMortgageFee";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefFacilityFinancingFeeTypeId property
-        private Guid _RefFacilityFinancingFeeTypeId;
+        private Guid? _RefFacilityFinancingFeeTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FacilityMortgageFeeViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityFinancingFeeType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20867">Facility Financing Fee Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Facility Financing Fee Type")]
-        public Guid RefFacilityFinancingFeeTypeId { get => _RefFacilityFinancingFeeTypeId; set => SetProperty(ref _RefFacilityFinancingFeeTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefFacilityFinancingFeeType"/> model
+        /// </summary>
+        public Guid? RefFacilityFinancingFeeTypeId { get => _RefFacilityFinancingFeeTypeId; set => SetProperty(ref _RefFacilityFinancingFeeTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefFacilityFinancingFeeTypeId = model.RefFacilityFinancingFeeTypeId; // Facility Financing Fee Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefFacilityFinancingFeeTypeId = model.RefFacilityFinancingFeeTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

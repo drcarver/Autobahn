@@ -13,9 +13,74 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IIPEDSFinance : IAutobahnBase
     {
         /// <summary>
-        /// A functional expense classification is a method of grouping expenses according to the purpose for which the costs are incurred. The classifications tell�why�an expense was incurred rather than�what�was purchased.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSFASBFinancialPositionId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefIPEDSFASBFunctionalExpenseId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSFASBPellGrantTransactionsId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSFASBRevenueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSFASBRevenueRestrictionId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSGASBFinancialPositionId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSGASBFunctionalExpenseId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSGASBRevenueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPEDSNaturalExpenseId { get; set; }
 
     }
 }

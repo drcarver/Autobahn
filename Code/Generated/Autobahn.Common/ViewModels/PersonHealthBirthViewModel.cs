@@ -17,25 +17,56 @@ namespace Autobahn.Common.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from PersonHealthBirth";
 
+        // member variable for the MultipleBirthIndicator property
+        private  _MultipleBirthIndicator;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefTrimesterWhenPrenatalCareBeganId property
+        private  _RefTrimesterWhenPrenatalCareBeganId;
+
+        // member variable for the WeeksOfGestation property
+        private  _WeeksOfGestation;
+
         // member variable for the WeightAtBirth property
-        private System.String _WeightAtBirth;
+        private Guid? _WeightAtBirth;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the PersonHealthBirthViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The weight of a child at birth in pounds and ounces.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19312">Weight at Birth</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Weight at Birth")]
-        public System.String WeightAtBirth { get => _WeightAtBirth; set => SetProperty(ref _WeightAtBirth, value); }
+        public  MultipleBirthIndicator { get => _MultipleBirthIndicator; set => SetProperty(ref _MultipleBirthIndicator, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefTrimesterWhenPrenatalCareBegan"/> model
+        /// </summary>
+        public  RefTrimesterWhenPrenatalCareBeganId { get => _RefTrimesterWhenPrenatalCareBeganId; set => SetProperty(ref _RefTrimesterWhenPrenatalCareBeganId, value); }
+
+        /// <summary>
+        /// </summary>
+        public  WeeksOfGestation { get => _WeeksOfGestation; set => SetProperty(ref _WeeksOfGestation, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? WeightAtBirth { get => _WeightAtBirth; set => SetProperty(ref _WeightAtBirth, value); }
 
         #endregion
 
@@ -46,7 +77,12 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            WeightAtBirth = model.WeightAtBirth; // Weight at Birth
+            MultipleBirthIndicator = model.MultipleBirthIndicator; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefTrimesterWhenPrenatalCareBeganId = model.RefTrimesterWhenPrenatalCareBeganId; // 
+            WeeksOfGestation = model.WeeksOfGestation; // 
+            WeightAtBirth = model.WeightAtBirth; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -12,9 +12,34 @@ namespace Autobahn.Common.Models
     public partial class RoleAttendanceModel : AutobahnBase, Interfaces.IRoleAttendance
     {
         /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
+        /// 
         /// </summary>
-        public System.Decimal? NumberOfDaysAbsent { get; set; }
+        public  AttendanceRate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? NumberOfDaysAbsent { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfDaysInAttendance { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NumberOfDaysTardy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

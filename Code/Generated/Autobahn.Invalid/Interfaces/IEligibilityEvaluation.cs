@@ -12,5 +12,25 @@ namespace Autobahn.Invalid.Interfaces
      /// </summary>
     public partial interface IEligibilityEvaluation : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EvaluationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

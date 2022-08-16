@@ -11,5 +11,20 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IPersonDemographicRace : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         FederalRaceAndEthnicityDeclined { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
     }
 }

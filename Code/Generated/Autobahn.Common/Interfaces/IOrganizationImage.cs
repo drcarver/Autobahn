@@ -14,7 +14,17 @@ namespace Autobahn.Common.Interfaces
         /// <summary>
         /// 
         /// </summary>
-        System.String URL { get; set; }
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? URL { get; set; }
 
     }
 }

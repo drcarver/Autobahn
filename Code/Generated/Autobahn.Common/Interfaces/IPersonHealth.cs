@@ -12,9 +12,69 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonHealth : IAutobahnBase
     {
         /// <summary>
-        /// Status of an examination used to measure a person's ability to see.
+        /// 
+        /// </summary>
+         DentalScreeningDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HealthScreeningEquipmentUsed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HealthScreeningFollowUpRecommendation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HearingScreeningDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDentalInsuranceCoverageTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDentalScreeningStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefHealthInsuranceCoverageId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefHearingScreeningStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefMedicalAlertIndicatorId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefVisionScreeningStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         VisionScreeningDate { get; set; }
 
     }
 }

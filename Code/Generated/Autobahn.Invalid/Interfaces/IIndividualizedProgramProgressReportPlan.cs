@@ -13,9 +13,24 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramProgressReportPlan : IAutobahnBase
     {
         /// <summary>
-        /// Frequency by which parents are notified of the student's progress on annual goals and if the progress is sufficient to achieve the goals by the end of the individualized program service plan year.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefIPSPProgressReportScheduleId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIPSPProgressReportTypeId { get; set; }
 
     }
 }

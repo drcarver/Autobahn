@@ -14,9 +14,19 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityMortgageFeeModel : AutobahnBase, Interfaces.IFacilityMortgageFee
     {
         /// <summary>
-        /// The type of fee that one must pay when getting a mortgage.
+        /// 
         /// </summary>
-        public Guid RefFacilityFinancingFeeTypeId { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefFacilityFinancingFeeTypeId { get; set; }
 
     }
 }

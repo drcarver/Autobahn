@@ -12,9 +12,59 @@ namespace Autobahn.Common.Models
     public partial class StaffCompensationModel : AutobahnBase, Interfaces.IStaffCompensation
     {
         /// <summary>
-        /// The salary or wage a person is paid before deductions (excluding differentials) but including annuities.
+        /// 
         /// </summary>
-        public System.Decimal? StaffCompensationBaseSalary { get; set; }
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefStaffCompensationSourceTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationAnnualSupplement { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? StaffCompensationBaseSalary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationHealthBenefits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationLongevity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationOtherBenefits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationRetirementBenefits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationTotalBenefits { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  StaffCompensationTotalSalary { get; set; }
 
     }
 }

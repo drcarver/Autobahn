@@ -21,24 +21,54 @@ namespace Autobahn.Facilities.ViewModels
         private string _viewTitle = "Hello from FacilityFinance";
 
         // member variable for the FacilityReplacementValue property
-        private System.Decimal? _FacilityReplacementValue;
+        private Guid? _FacilityReplacementValue;
+
+        // member variable for the IndebtednessAmountAllowed property
+        private  _IndebtednessAmountAllowed;
+
+        // member variable for the InsuranceDeductible property
+        private  _InsuranceDeductible;
+
+        // member variable for the PublicEducationMillRate property
+        private  _PublicEducationMillRate;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the FacilityFinanceViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The estimated cost of replacing a facility using current per square foot estimates of total project costs.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20765">Facility Replacement Value</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Facility Replacement Value")]
-        public System.Decimal? FacilityReplacementValue { get => _FacilityReplacementValue; set => SetProperty(ref _FacilityReplacementValue, value); }
+        public Guid? FacilityReplacementValue { get => _FacilityReplacementValue; set => SetProperty(ref _FacilityReplacementValue, value); }
+
+        /// <summary>
+        /// </summary>
+        public  IndebtednessAmountAllowed { get => _IndebtednessAmountAllowed; set => SetProperty(ref _IndebtednessAmountAllowed, value); }
+
+        /// <summary>
+        /// </summary>
+        public  InsuranceDeductible { get => _InsuranceDeductible; set => SetProperty(ref _InsuranceDeductible, value); }
+
+        /// <summary>
+        /// </summary>
+        public  PublicEducationMillRate { get => _PublicEducationMillRate; set => SetProperty(ref _PublicEducationMillRate, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +79,12 @@ namespace Autobahn.Facilities.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            FacilityReplacementValue = model.FacilityReplacementValue; // Facility Replacement Value
+            FacilityReplacementValue = model.FacilityReplacementValue; // 
+            IndebtednessAmountAllowed = model.IndebtednessAmountAllowed; // 
+            InsuranceDeductible = model.InsuranceDeductible; // 
+            PublicEducationMillRate = model.PublicEducationMillRate; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

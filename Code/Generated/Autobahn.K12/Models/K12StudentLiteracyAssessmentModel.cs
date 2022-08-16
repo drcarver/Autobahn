@@ -14,7 +14,32 @@ namespace Autobahn.K12.Models
     public partial class K12StudentLiteracyAssessmentModel : AutobahnBase, Interfaces.IK12StudentLiteracyAssessment
     {
         /// <summary>
-        /// The type of literacy test administered.
+        /// 
+        /// </summary>
+        public  LiteracyGoalMetStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LiteracyPostTestStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LiteracyPreTestStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefLiteracyAssessmentId { get; set; }
 

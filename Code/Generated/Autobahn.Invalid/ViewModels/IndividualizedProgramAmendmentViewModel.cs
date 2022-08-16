@@ -20,25 +20,41 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from IndividualizedProgramAmendment";
 
+        // member variable for the Description property
+        private  _Description;
+
         // member variable for the ReasonDescription property
-        private System.String _ReasonDescription;
+        private Guid? _ReasonDescription;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the IndividualizedProgramAmendmentViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Description of the reason changes were made to the individualized program service plan.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20669">Individualized Program Service Plan Amendment Reason Description</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Individualized Program Service Plan Amendment Reason Description")]
-        public System.String ReasonDescription { get => _ReasonDescription; set => SetProperty(ref _ReasonDescription, value); }
+        public  Description { get => _Description; set => SetProperty(ref _Description, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? ReasonDescription { get => _ReasonDescription; set => SetProperty(ref _ReasonDescription, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -49,7 +65,10 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ReasonDescription = model.ReasonDescription; // Individualized Program Service Plan Amendment Reason Description
+            Description = model.Description; // 
+            ReasonDescription = model.ReasonDescription; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

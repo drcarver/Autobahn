@@ -11,5 +11,15 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IOrganizationPersonRoleRelationship : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid OrganizationPersonRoleId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        System.Int32 OrganizationPersonRoleId_Parent { get; set; }
+
     }
 }

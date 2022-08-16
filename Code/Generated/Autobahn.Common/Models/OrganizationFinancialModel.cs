@@ -12,9 +12,54 @@ namespace Autobahn.Common.Models
     public partial class OrganizationFinancialModel : AutobahnBase, Interfaces.IOrganizationFinancial
     {
         /// <summary>
-        /// The actual value of a financial account for the specified accounting period or fiscal year.
+        /// 
         /// </summary>
-        public System.Decimal? ActualValue { get; set; }
+        public Guid? ActualValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  BudgetedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Date { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  EncumberedValue { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FiscalPeriodBeginDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FiscalPeriodEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  FiscalYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Value { get; set; }
 
     }
 }

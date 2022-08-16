@@ -14,9 +14,39 @@ namespace Autobahn.K12.Models
     public partial class K12LeaModel : AutobahnBase, Interfaces.IK12Lea
     {
         /// <summary>
-        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
+        /// 
         /// </summary>
-        public System.Boolean? CharterSchoolIndicator { get; set; }
+        public Guid? CharterSchoolIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefLEAImprovementStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefLeaTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPublicSchoolChoiceStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SupervisoryUnionIdentificationNumber { get; set; }
 
     }
 }

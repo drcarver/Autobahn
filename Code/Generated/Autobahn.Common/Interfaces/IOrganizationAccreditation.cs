@@ -12,9 +12,44 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationAccreditation : IAutobahnBase
     {
         /// <summary>
-        /// An indication of the accreditation status of a higher education institution.
+        /// 
+        /// </summary>
+         AccreditationAgencyName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AccreditationAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AccreditationExpirationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAccreditationAgencyId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SeekingAccreditationDate { get; set; }
 
     }
 }

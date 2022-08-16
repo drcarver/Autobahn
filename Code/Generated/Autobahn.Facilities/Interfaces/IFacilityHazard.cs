@@ -13,9 +13,49 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityHazard : IAutobahnBase
     {
         /// <summary>
-        /// The location at which the identified hazardous material is found.
+        /// 
         /// </summary>
-        System.String FacilityLocationOfHazardousMaterials { get; set; }
+         FacilityHazardousCondExpectedRemediationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? FacilityLocationOfHazardousMaterials { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FacilityNearbyEnvHazardDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HazardousMaterialOrConditionDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         HazardousMaterialOrConditionTestingDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 
     }
 }

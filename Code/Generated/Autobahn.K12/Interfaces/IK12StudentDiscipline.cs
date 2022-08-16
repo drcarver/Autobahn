@@ -13,9 +13,94 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentDiscipline : IAutobahnBase
     {
         /// <summary>
-        /// The year, month and day on which a discipline action ends.
+        /// 
         /// </summary>
-        System.DateTime? DisciplinaryActionEndDate { get; set; }
+        Guid? DisciplinaryActionEndDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DisciplinaryActionStartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DurationOfDisciplinaryAction { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         EducationalServicesAfterRemoval { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FullYearExpulsion { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         IEPPlacementMeetingIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisciplinaryActionTakenId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisciplineLengthDifferenceReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisciplineMethodFirearmsId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisciplineMethodOfCwdId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefDisciplineReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIDEADisciplineMethodFirearmId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIdeaInterimRemovalId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefIdeaInterimRemovalReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RelatedToZeroTolerancePolicy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ShortenedExpulsion { get; set; }
 
     }
 }

@@ -13,7 +13,22 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencySet : IAutobahnBase
     {
         /// <summary>
-        /// The criteria for the set of competencies that represent completion or partial completion of a unit, course, program, degree, certification, or other achievement/award. Specifies whether completion requires achievement of all items in the set or some number of items.
+        /// 
+        /// </summary>
+         CompletionCriteriaThreshold { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefCompletionCriteriaId { get; set; }
 

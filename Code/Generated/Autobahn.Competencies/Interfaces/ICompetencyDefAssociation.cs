@@ -13,9 +13,64 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencyDefAssociation : IAutobahnBase
     {
         /// <summary>
-        /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
+        /// 
         /// </summary>
-        Guid AssociatedEntityId { get; set; }
+        Guid? AssociatedEntityId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         CompetencyDefAssociationIdentifierURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ConnectionCitation { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DestinationNodeName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         DestinationNodeURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OriginNodeName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         OriginNodeURI { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCompetencyDefAssociationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefLearningResourceCompetencyAlignmentTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Weight { get; set; }
 
     }
 }

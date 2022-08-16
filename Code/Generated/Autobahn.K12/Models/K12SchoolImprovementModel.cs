@@ -13,5 +13,35 @@ namespace Autobahn.K12.Models
      /// </summary>
     public partial class K12SchoolImprovementModel : AutobahnBase, Interfaces.IK12SchoolImprovement
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? RefSchoolImprovementFundsId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefSchoolImprovementStatusId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefSigInterventionTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  SchoolImprovementExitDate { get; set; }
+
     }
 }

@@ -14,9 +14,29 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityJointUseModel : AutobahnBase, Interfaces.IFacilityJointUse
     {
         /// <summary>
-        /// The reasons for permitting and participating in joint-use.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefBuildingJointUseRationaleTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingJointUserTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefBuildingJointUseSchedulingTypeId { get; set; }
 
     }
 }

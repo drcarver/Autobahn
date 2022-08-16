@@ -14,9 +14,19 @@ namespace Autobahn.Invalid.Models
     public partial class ActivityModel : AutobahnBase, Interfaces.IActivity
     {
         /// <summary>
-        /// A description of the events and procedures that take place under the purview of an organized activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
         /// </summary>
-        public System.String ActivityDescription { get; set; }
+        public Guid? ActivityDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -14,9 +14,29 @@ namespace Autobahn.Invalid.Models
     public partial class IndividualizedProgramEligibilityModel : AutobahnBase, Interfaces.IIndividualizedProgramEligibility
     {
         /// <summary>
-        /// Indication parent agreed to evaluate student.
+        /// 
         /// </summary>
-        public System.Boolean? ConsentToEvaluateIndicator { get; set; }
+        public  ConsentToEvaluateDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? ConsentToEvaluateIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ParentObservations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -12,9 +12,34 @@ namespace Autobahn.Common.Interfaces
     public partial interface IRoleAttendance : IAutobahnBase
     {
         /// <summary>
-        /// The number of days a person is absent when school is in session during a given reporting period.
+        /// 
         /// </summary>
-        System.Decimal? NumberOfDaysAbsent { get; set; }
+         AttendanceRate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? NumberOfDaysAbsent { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfDaysInAttendance { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         NumberOfDaysTardy { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

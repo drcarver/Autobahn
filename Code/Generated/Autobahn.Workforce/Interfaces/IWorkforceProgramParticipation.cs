@@ -12,5 +12,30 @@ namespace Autobahn.Workforce.Interfaces
      /// </summary>
     public partial interface IWorkforceProgramParticipation : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? DiplomaOrCredentialAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProfessionalTechnicalCredentialTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefWfProgramParticipationId { get; set; }
+
     }
 }

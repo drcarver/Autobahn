@@ -12,7 +12,17 @@ namespace Autobahn.Common.Models
     public partial class OrganizationRelationshipModel : AutobahnBase, Interfaces.IOrganizationRelationship
     {
         /// <summary>
-        /// The nature of one organization's relationship to another.
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefOrganizationRelationshipId { get; set; }
 

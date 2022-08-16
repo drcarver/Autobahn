@@ -12,9 +12,34 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonProgramParticipation : IAutobahnBase
     {
         /// <summary>
-        /// An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.
+        /// 
+        /// </summary>
+         ParticipationStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefParticipationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProgramEntryReasonId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefProgramExitReasonId { get; set; }
 
     }
 }

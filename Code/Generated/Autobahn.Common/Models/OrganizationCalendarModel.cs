@@ -12,9 +12,29 @@ namespace Autobahn.Common.Models
     public partial class OrganizationCalendarModel : AutobahnBase, Interfaces.IOrganizationCalendar
     {
         /// <summary>
-        /// The year for a reported school session.
+        /// 
         /// </summary>
-        public System.String CalendarYear { get; set; }
+        public  CalendarCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  CalendarDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? CalendarYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

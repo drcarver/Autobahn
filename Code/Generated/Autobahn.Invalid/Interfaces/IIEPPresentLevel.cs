@@ -13,9 +13,49 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIEPPresentLevel : IAutobahnBase
     {
         /// <summary>
-        /// How the child's disability affects the child's academic achievement.
+        /// 
         /// </summary>
-        System.String AcademicDescription { get; set; }
+        Guid? AcademicDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FunctionalDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         GeneralEducationDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParentConcernDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         PreschoolDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StudentConcernDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StudentStrengthsDescription { get; set; }
 
     }
 }

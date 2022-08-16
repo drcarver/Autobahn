@@ -15,7 +15,22 @@ namespace Autobahn.Invalid.Interfaces
         /// <summary>
         /// 
         /// </summary>
+        System.String ColumnName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         System.String GlobalID { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        System.String TableName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        System.String Version { get; set; }
 
     }
 }

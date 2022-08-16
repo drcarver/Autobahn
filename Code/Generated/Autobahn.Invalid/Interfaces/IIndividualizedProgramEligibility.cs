@@ -13,9 +13,29 @@ namespace Autobahn.Invalid.Interfaces
     public partial interface IIndividualizedProgramEligibility : IAutobahnBase
     {
         /// <summary>
-        /// Indication parent agreed to evaluate student.
+        /// 
         /// </summary>
-        System.Boolean? ConsentToEvaluateIndicator { get; set; }
+         ConsentToEvaluateDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ConsentToEvaluateIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ParentObservations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
 
     }
 }

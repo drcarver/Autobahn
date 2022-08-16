@@ -13,9 +13,34 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IGoalMeasurementCriterion : IAutobahnBase
     {
         /// <summary>
-        /// The percent of correct results that will be considered to represent successful achievement of a goal.
+        /// 
         /// </summary>
-        System.Decimal? AccuracyPercent { get; set; }
+        Guid? AccuracyPercent { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         AttemptsCount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Metric { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         SuccessCount { get; set; }
 
     }
 }

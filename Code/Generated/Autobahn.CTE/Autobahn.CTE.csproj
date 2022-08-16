@@ -28,10 +28,10 @@
     <MauiXaml Update="Views\CteCourseView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\CteStudentAcademicRecordView.xaml">
+    <MauiXaml Update="Views\ProgramParticipationCteView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\ProgramParticipationCteView.xaml">
+    <MauiXaml Update="Views\CteStudentAcademicRecordView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

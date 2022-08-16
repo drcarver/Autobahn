@@ -12,9 +12,24 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPersonRoleModel : AutobahnBase, Interfaces.IOrganizationPersonRole
     {
         /// <summary>
-        /// The year, month and day on which the person began to participate in the activity.
+        /// 
         /// </summary>
-        public System.DateTime? EntryDate { get; set; }
+        public Guid? EntryDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ExitDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
 
     }
 }

@@ -13,7 +13,32 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentLiteracyAssessment : IAutobahnBase
     {
         /// <summary>
-        /// The type of literacy test administered.
+        /// 
+        /// </summary>
+         LiteracyGoalMetStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LiteracyPostTestStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         LiteracyPreTestStatus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefLiteracyAssessmentId { get; set; }
 

@@ -20,25 +20,36 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from RecordStatus";
 
+        // member variable for the RecordStatusDate property
+        private  _RecordStatusDate;
+
         // member variable for the RefRecordStatusCreatorEntityId property
         private Guid? _RefRecordStatusCreatorEntityId;
+
+        // member variable for the RefRecordStatusTypeId property
+        private  _RefRecordStatusTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the RecordStatusViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefRecordStatusCreatorEntity"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20956">Record Status Creator Entity</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Record Status Creator Entity")]
+        public  RecordStatusDate { get => _RecordStatusDate; set => SetProperty(ref _RecordStatusDate, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefRecordStatusCreatorEntity"/> model
+        /// </summary>
         public Guid? RefRecordStatusCreatorEntityId { get => _RefRecordStatusCreatorEntityId; set => SetProperty(ref _RefRecordStatusCreatorEntityId, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefRecordStatusType"/> model
+        /// </summary>
+        public  RefRecordStatusTypeId { get => _RefRecordStatusTypeId; set => SetProperty(ref _RefRecordStatusTypeId, value); }
 
         #endregion
 
@@ -49,7 +60,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefRecordStatusCreatorEntityId = model.RefRecordStatusCreatorEntityId; // Record Status Creator Entity
+            RecordStatusDate = model.RecordStatusDate; // 
+            RefRecordStatusCreatorEntityId = model.RefRecordStatusCreatorEntityId; // 
+            RefRecordStatusTypeId = model.RefRecordStatusTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

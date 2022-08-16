@@ -13,9 +13,54 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentAdministration : IAutobahnBase
     {
         /// <summary>
-        /// Indicates whether or not the assessment is a secure assessment.
+        /// 
         /// </summary>
-        System.Boolean? AssessmentSecureIndicator { get; set; }
+         AssessmentAdministrationPeriodDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? AssessmentSecureIndicator { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Code { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FinishDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         FinishTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         StartTime { get; set; }
 
     }
 }

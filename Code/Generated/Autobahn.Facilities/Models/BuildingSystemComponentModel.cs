@@ -14,7 +14,47 @@ namespace Autobahn.Facilities.Models
     public partial class BuildingSystemComponentModel : AutobahnBase, Interfaces.IBuildingSystemComponent
     {
         /// <summary>
-        /// The rating of the system or component functions under the demands of its regular operation.
+        /// 
+        /// </summary>
+        public  BuildingInstitutionalEquipmentDescription { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  ComponentOrFixtureUsefulLife { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  InstallationDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LifecycleCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefFacilityFurnishingsTypeId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefFacilitySystemOrComponentConditionId { get; set; }
 

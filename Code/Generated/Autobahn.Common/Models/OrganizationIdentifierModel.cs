@@ -12,7 +12,27 @@ namespace Autobahn.Common.Models
     public partial class OrganizationIdentifierModel : AutobahnBase, Interfaces.IOrganizationIdentifier
     {
         /// <summary>
-        /// A unique number or alphanumeric code used in the local system to identify an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// 
+        /// </summary>
+        public  Identifier { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefOrganizationIdentificationSystemId { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         public Guid? RefOrganizationIdentifierTypeId { get; set; }
 

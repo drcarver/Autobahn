@@ -18,24 +18,33 @@ namespace Autobahn.Common.ViewModels
         private string _viewTitle = "Hello from OrganizationPolicy";
 
         // member variable for the PolicyType property
-        private System.String _PolicyType;
+        private Guid? _PolicyType;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the OrganizationPolicyViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Policies related to personnel in the organization.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19842">Personnel Policy Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Personnel Policy Type")]
-        public System.String PolicyType { get => _PolicyType; set => SetProperty(ref _PolicyType, value); }
+        public Guid? PolicyType { get => _PolicyType; set => SetProperty(ref _PolicyType, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
 
         #endregion
 
@@ -46,7 +55,9 @@ namespace Autobahn.Common.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            PolicyType = model.PolicyType; // Personnel Policy Type
+            PolicyType = model.PolicyType; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

@@ -13,9 +13,29 @@ namespace Autobahn.Assessments.Interfaces
     public partial interface IAssessmentPersonalNeedsProfileContent : IAutobahnBase
     {
         /// <summary>
-        /// Defines as part of an Assessment Personal Needs Profile a characteristic of a digital resource that may be specified as being dangerous to a user.
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         Guid? RefAssessmentNeedHazardTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefAssessmentNeedSupportToolId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefKeywordTranslationsLanguageId { get; set; }
 
     }
 }

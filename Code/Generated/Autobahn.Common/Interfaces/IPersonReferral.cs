@@ -12,9 +12,44 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonReferral : IAutobahnBase
     {
         /// <summary>
-        /// The date of referral.
+        /// 
         /// </summary>
-        System.DateTime? ReferralDate { get; set; }
+         Reason { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? ReferralDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReferralTypeReceived { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ReferredTo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefReferralOutcomeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Source { get; set; }
 
     }
 }

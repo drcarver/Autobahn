@@ -12,9 +12,39 @@ namespace Autobahn.Common.Models
     public partial class PersonOtherNameModel : AutobahnBase, Interfaces.IPersonOtherName
     {
         /// <summary>
-        /// Previous, alternate or other names or aliases associated with the person.
+        /// 
         /// </summary>
-        public System.String OtherName { get; set; }
+        public  FirstName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  LastName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  MiddleName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Guid? OtherName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefOtherNameTypeId { get; set; }
 
     }
 }

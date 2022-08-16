@@ -20,25 +20,34 @@ namespace Autobahn.Invalid.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from ProfessionalDevelopmentRequirement";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RequiredTrainingClockHours property
-        private System.Decimal? _RequiredTrainingClockHours;
+        private Guid? _RequiredTrainingClockHours;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the ProfessionalDevelopmentRequirementViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Number of clock hours of training required for providers to meet requirements of the state.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19803">Required Training Clock Hours</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Required Training Clock Hours")]
-        public System.Decimal? RequiredTrainingClockHours { get => _RequiredTrainingClockHours; set => SetProperty(ref _RequiredTrainingClockHours, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public Guid? RequiredTrainingClockHours { get => _RequiredTrainingClockHours; set => SetProperty(ref _RequiredTrainingClockHours, value); }
 
         #endregion
 
@@ -49,7 +58,9 @@ namespace Autobahn.Invalid.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RequiredTrainingClockHours = model.RequiredTrainingClockHours; // Required Training Clock Hours
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RequiredTrainingClockHours = model.RequiredTrainingClockHours; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

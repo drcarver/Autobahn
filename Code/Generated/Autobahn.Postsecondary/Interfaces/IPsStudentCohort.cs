@@ -12,5 +12,20 @@ namespace Autobahn.Postsecondary.Interfaces
      /// </summary>
     public partial interface IPsStudentCohort : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? CohortGraduationYear { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
     }
 }

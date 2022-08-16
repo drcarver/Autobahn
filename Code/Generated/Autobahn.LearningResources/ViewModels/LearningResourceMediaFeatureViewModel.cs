@@ -20,25 +20,35 @@ namespace Autobahn.LearningResources.ViewModels
         // Every viewmodel has a Title property
         private string _viewTitle = "Hello from LearningResourceMediaFeature";
 
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
         // member variable for the RefLearningResourceMediaFeatureTypeId property
-        private Guid _RefLearningResourceMediaFeatureTypeId;
+        private Guid? _RefLearningResourceMediaFeatureTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the LearningResourceMediaFeatureViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceMediaFeatureType"/> model
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20368">Learning Resource Media Feature Type</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Learning Resource Media Feature Type")]
-        public Guid RefLearningResourceMediaFeatureTypeId { get => _RefLearningResourceMediaFeatureTypeId; set => SetProperty(ref _RefLearningResourceMediaFeatureTypeId, value); }
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefLearningResourceMediaFeatureType"/> model
+        /// </summary>
+        public Guid? RefLearningResourceMediaFeatureTypeId { get => _RefLearningResourceMediaFeatureTypeId; set => SetProperty(ref _RefLearningResourceMediaFeatureTypeId, value); }
 
         #endregion
 
@@ -49,7 +59,9 @@ namespace Autobahn.LearningResources.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            RefLearningResourceMediaFeatureTypeId = model.RefLearningResourceMediaFeatureTypeId; // Learning Resource Media Feature Type
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefLearningResourceMediaFeatureTypeId = model.RefLearningResourceMediaFeatureTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

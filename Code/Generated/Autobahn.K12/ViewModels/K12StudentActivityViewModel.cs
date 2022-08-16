@@ -21,24 +21,41 @@ namespace Autobahn.K12.ViewModels
         private string _viewTitle = "Hello from K12StudentActivity";
 
         // member variable for the ActivityTimeInvolved property
-        private System.Decimal? _ActivityTimeInvolved;
+        private Guid? _ActivityTimeInvolved;
+
+        // member variable for the RecordEndDateTime property
+        private  _RecordEndDateTime;
+
+        // member variable for the RecordStartDateTime property
+        private  _RecordStartDateTime;
+
+        // member variable for the RefActivityTimeMeasurementTypeId property
+        private  _RefActivityTimeMeasurementTypeId;
 
         #endregion
 
         #region Properties
         /// <summary>
-        /// The title of the K12StudentActivityViewModel
+        /// The title of the View Model
         /// </summary>
         public string ViewTitle { get => _viewTitle; set => SetProperty(ref _viewTitle, value); }
 
         /// <summary>
-        /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20502">Activity Time Involved</a>
-        /// </para>
         /// </summary>
-        [DisplayName("Activity Time Involved")]
-        public System.Decimal? ActivityTimeInvolved { get => _ActivityTimeInvolved; set => SetProperty(ref _ActivityTimeInvolved, value); }
+        public Guid? ActivityTimeInvolved { get => _ActivityTimeInvolved; set => SetProperty(ref _ActivityTimeInvolved, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordEndDateTime { get => _RecordEndDateTime; set => SetProperty(ref _RecordEndDateTime, value); }
+
+        /// <summary>
+        /// </summary>
+        public  RecordStartDateTime { get => _RecordStartDateTime; set => SetProperty(ref _RecordStartDateTime, value); }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="RefActivityTimeMeasurementType"/> model
+        /// </summary>
+        public  RefActivityTimeMeasurementTypeId { get => _RefActivityTimeMeasurementTypeId; set => SetProperty(ref _RefActivityTimeMeasurementTypeId, value); }
 
         #endregion
 
@@ -49,7 +66,10 @@ namespace Autobahn.K12.ViewModels
         {
             IsBusy = true;
             Id = model.Id;
-            ActivityTimeInvolved = model.ActivityTimeInvolved; // Activity Time Involved
+            ActivityTimeInvolved = model.ActivityTimeInvolved; // 
+            RecordEndDateTime = model.RecordEndDateTime; // 
+            RecordStartDateTime = model.RecordStartDateTime; // 
+            RefActivityTimeMeasurementTypeId = model.RefActivityTimeMeasurementTypeId; // 
             _isChanged = false;
             IsNew = false;
             IsBusy = false;

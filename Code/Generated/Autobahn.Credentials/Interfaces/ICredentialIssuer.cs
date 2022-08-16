@@ -13,9 +13,29 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialIssuer : IAutobahnBase
     {
         /// <summary>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
+        /// 
         /// </summary>
-        System.String AwardIssuerOriginURL { get; set; }
+        Guid? AwardIssuerOriginURL { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RefCTDLOrganizationTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RevocationListURL { get; set; }
 
     }
 }

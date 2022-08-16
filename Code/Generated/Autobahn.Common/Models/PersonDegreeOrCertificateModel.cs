@@ -12,9 +12,44 @@ namespace Autobahn.Common.Models
     public partial class PersonDegreeOrCertificateModel : AutobahnBase, Interfaces.IPersonDegreeOrCertificate
     {
         /// <summary>
-        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// 
         /// </summary>
-        public System.DateTime? AwardDate { get; set; }
+        public Guid? AwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  DegreeOrCertificateTitleOrSubject { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  NameOfInstitution { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefDegreeOrCertificateTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefEducationVerificationMethodId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
     }
 }

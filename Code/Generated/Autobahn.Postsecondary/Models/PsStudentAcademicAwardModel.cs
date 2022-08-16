@@ -14,9 +14,44 @@ namespace Autobahn.Postsecondary.Models
     public partial class PsStudentAcademicAwardModel : AutobahnBase, Interfaces.IPsStudentAcademicAward
     {
         /// <summary>
-        /// The year, month and day or year and month on which the academic award was conferred.
+        /// 
         /// </summary>
-        public System.String AcademicAwardDate { get; set; }
+        public Guid? AcademicAwardDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  AcademicAwardTitle { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAcademicAwardLevelId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefAcademicAwardPrerequisiteTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RefPESCAwardLevelTypeId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public  RequirementsURL { get; set; }
 
     }
 }

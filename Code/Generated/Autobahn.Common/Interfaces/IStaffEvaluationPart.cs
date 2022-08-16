@@ -11,5 +11,30 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IStaffEvaluationPart : IAutobahnBase
     {
+        /// <summary>
+        /// 
+        /// </summary>
+         PartName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         RecordEndDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        Guid? RecordStartDateTime { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         Scale { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+         ScoreOrRating { get; set; }
+
     }
 }
