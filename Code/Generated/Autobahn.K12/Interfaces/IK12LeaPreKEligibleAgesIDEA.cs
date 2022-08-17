@@ -1,6 +1,6 @@
 //***************************************************************************
 //* DomainName: Elementary and Secondary (K12) Interfaces (used by both models and View Models
-//* FileName:   IK12LeaPreKEligibleAgesIDEA.cs
+//* FileName:   IK12LEAPreKEligibleAgesIDEA.cs
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,24 +8,9 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The IK12LeaPreKEligibleAgesIDEA Interface
+     /// The IK12LEAPreKEligibleAgesIDEA Interface
      /// </summary>
-    public partial interface IK12LeaPreKEligibleAgesIDEA : IAutobahnBase
+    public partial interface IK12LEAPreKEligibleAgesIDEA : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefPreKEligibleAgesNonIDEAId { get; set; }
-
     }
 }

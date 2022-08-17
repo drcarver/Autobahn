@@ -12,29 +12,30 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffTechnicalAssistance : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceDeliveryType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefTechnicalAssistanceDeliveryTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceType"/> model
         /// </summary>
-         RefTechnicalAssistanceDeliveryTypeId { get; set; }
+        Guid? RefTechnicalAssistanceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Technical Assistance Approved Indicator
+        /// <para>
+        /// Indicates whether or not the technical assistance was approved.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20465">Technical Assistance Approved Indicator</a>
+        /// </para>
         /// </summary>
-         RefTechnicalAssistanceTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? TechnicalAssistanceApprovedInd { get; set; }
+        System.Boolean? TechnicalAssistanceApprovedInd { get; set; }
 
     }
 }

@@ -13,32 +13,45 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentLiteracyAssessment : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Literacy Goal Met Status
+        /// <para>
+        /// The participant showed "significant learning gains" on measures of reading, the definition of which is determined at the State level.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19457">Literacy Goal Met Status</a>
+        /// </para>
         /// </summary>
-         LiteracyGoalMetStatus { get; set; }
+        System.Boolean? LiteracyGoalMetStatus { get; set; }
 
         /// <summary>
-        /// 
+        /// Literacy Post Test Status
+        /// <para>
+        /// The participant completed a literacy post-test.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19458">Literacy Post Test Status</a>
+        /// </para>
         /// </summary>
-         LiteracyPostTestStatus { get; set; }
+        System.Boolean? LiteracyPostTestStatus { get; set; }
 
         /// <summary>
-        /// 
+        /// Literacy Pre Test Status
+        /// <para>
+        /// The participant completed a literacy pre-test.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19459">Literacy Pre Test Status</a>
+        /// </para>
         /// </summary>
-         LiteracyPreTestStatus { get; set; }
+        System.Boolean? LiteracyPreTestStatus { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLiteracyAssessment"/> model
         /// </summary>
         Guid? RefLiteracyAssessmentId { get; set; }
 

@@ -13,19 +13,14 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityMortgageFee : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IFacilityMortgage"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid FacilityMortgageId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilityFinancingFeeType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefFacilityFinancingFeeTypeId { get; set; }
+        Guid RefFacilityFinancingFeeTypeId { get; set; }
 
     }
 }

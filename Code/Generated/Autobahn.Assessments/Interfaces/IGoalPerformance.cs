@@ -1,6 +1,8 @@
 //***************************************************************************
 //* DomainName: Assessments Interfaces (used by both models and View Models
 //* FileName:   IGoalPerformance.cs
+//* Name:       Goal Current Performance Description
+//* Definition: 
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,34 +10,43 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.Assessments.Interfaces
 {
      /// <summary>
-     /// The IGoalPerformance Interface
+     /// 
      /// </summary>
     public partial interface IGoalPerformance : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Goal Current Performance Description
+        /// <para>
+        /// Current performance explanation related to the annual goal or short-term objectives.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20671">Goal Current Performance Description</a>
+        /// </para>
         /// </summary>
-        Guid? CurrentPerformanceDescription { get; set; }
+        System.String CurrentPerformanceDescription { get; set; }
+
+        System.DateTime? Date { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IGoal"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid GoalId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefGoalStatusType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefGoalStatusTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Goal Status
+        /// <para>
+        /// Description of status toward achievement of the annual goal or short-term objectives.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20684">Goal Status</a>
+        /// </para>
         /// </summary>
-         RefGoalStatusTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         Status { get; set; }
+        System.String Status { get; set; }
 
     }
 }

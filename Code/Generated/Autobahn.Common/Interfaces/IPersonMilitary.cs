@@ -12,34 +12,29 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonMilitary : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryActiveStudentIndicator"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefMilitaryActiveStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryBranch"/> model
         /// </summary>
-         RefMilitaryActiveStudentIndicatorId { get; set; }
+        Guid? RefMilitaryBranchId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RefMilitaryBranchId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryConnectedStudentIndicator"/> model
         /// </summary>
         Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryVeteranStudentIndicator"/> model
         /// </summary>
-         RefMilitaryVeteranStudentIndicatorId { get; set; }
+        Guid? RefMilitaryVeteranStudentIndicatorId { get; set; }
 
     }
 }

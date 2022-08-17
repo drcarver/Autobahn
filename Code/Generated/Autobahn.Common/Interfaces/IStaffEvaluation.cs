@@ -12,39 +12,58 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffEvaluation : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        Guid? Outcome { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Staff Evaluation Outcome
+        /// <para>
+        /// The result of an assessment of a person's performance.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19102">Staff Evaluation Outcome</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String Outcome { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefStaffPerformanceLevel"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefStaffPerformanceLevelId { get; set; }
 
         /// <summary>
-        /// 
+        /// Staff Evaluation Scale
+        /// <para>
+        /// The quantitative or qualitative range of possible scores/rating for a person's overall performance (e.g., 0 - 10; Poor, Fair, Average, Good, Excellent).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19103">Staff Evaluation Scale</a>
+        /// </para>
         /// </summary>
-         RefStaffPerformanceLevelId { get; set; }
+        System.String Scale { get; set; }
 
         /// <summary>
-        /// 
+        /// Staff Evaluation Score or Rating
+        /// <para>
+        /// The actual quantitative or qualitative assessment of a person's overall performance.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19104">Staff Evaluation Score or Rating</a>
+        /// </para>
         /// </summary>
-         Scale { get; set; }
+        System.String ScoreOrRating { get; set; }
 
         /// <summary>
-        /// 
+        /// Staff Evaluation System
+        /// <para>
+        /// The instrument and/or set of procedures with which a person's performance is assessed.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19105">Staff Evaluation System</a>
+        /// </para>
         /// </summary>
-         ScoreOrRating { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         System { get; set; }
+        System.String System { get; set; }
 
     }
 }

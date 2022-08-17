@@ -13,19 +13,14 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencyDefEducationLevel : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencyDefinition"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid CompetencyDefinitionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEducationLevel"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefEducationLevelId { get; set; }
+        Guid RefEducationLevelId { get; set; }
 
     }
 }

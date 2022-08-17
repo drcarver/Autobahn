@@ -18,7 +18,11 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddK12Services(this IServiceCollection serviceCollection)
     {
         // First the known view models
-        serviceCollection.AddTransient<IK12CharterSchoolApprovalAgency, K12CharterSchoolApprovalAgencyViewModel>();
+        serviceCollection.AddTransient<IIDEAEligibilityEvaluationCategory, IDEAEligibilityEvaluationCategoryViewModel>();
+        serviceCollection.AddTransient<IIDSVersion, IDSVersionViewModel>();
+        serviceCollection.AddTransient<IIEPAuthorization, IEPAuthorizationViewModel>();
+        serviceCollection.AddTransient<IIEPAuthorizationRejected, IEPAuthorizationRejectedViewModel>();
+        serviceCollection.AddTransient<IIEPPresentLevel, IEPPresentLevelViewModel>();
         serviceCollection.AddTransient<IK12CharterSchoolAuthorizerAgency, K12CharterSchoolAuthorizerAgencyViewModel>();
         serviceCollection.AddTransient<IK12CharterSchoolManagementOrganization, K12CharterSchoolManagementOrganizationViewModel>();
         serviceCollection.AddTransient<IK12Course, K12CourseViewModel>();
@@ -29,9 +33,12 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IK12LeaGradeLevelsApproved, K12LeaGradeLevelsApprovedViewModel>();
         serviceCollection.AddTransient<IK12LeaGradeOffered, K12LeaGradeOfferedViewModel>();
         serviceCollection.AddTransient<IK12LeaPreKEligibility, K12LeaPreKEligibilityViewModel>();
+        serviceCollection.AddTransient<IK12LEAPreKEligibility, K12LEAPreKEligibilityViewModel>();
         serviceCollection.AddTransient<IK12LeaPreKEligibleAgesIDEA, K12LeaPreKEligibleAgesIDEAViewModel>();
+        serviceCollection.AddTransient<IK12LEAPreKEligibleAgesIDEA, K12LEAPreKEligibleAgesIDEAViewModel>();
         serviceCollection.AddTransient<IK12LeaSafeDrugFree, K12LeaSafeDrugFreeViewModel>();
         serviceCollection.AddTransient<IK12LeaTitleIIIProfessionalDevelopment, K12LeaTitleIIIProfessionalDevelopmentViewModel>();
+        serviceCollection.AddTransient<IK12LEATitleIIIProfessionalDevelopment, K12LEATitleIIIProfessionalDevelopmentViewModel>();
         serviceCollection.AddTransient<IK12LeaTitleISupportService, K12LeaTitleISupportServiceViewModel>();
         serviceCollection.AddTransient<IK12OrganizationStudentResponsibility, K12OrganizationStudentResponsibilityViewModel>();
         serviceCollection.AddTransient<IK12ProgramOrService, K12ProgramOrServiceViewModel>();
@@ -44,7 +51,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IK12SchoolStatus, K12SchoolStatusViewModel>();
         serviceCollection.AddTransient<IK12Sea, K12SeaViewModel>();
         serviceCollection.AddTransient<IK12SeaAlternateFundUse, K12SeaAlternateFundUseViewModel>();
-        serviceCollection.AddTransient<IK12SeaFederalFundAllocation, K12SeaFederalFundAllocationViewModel>();
         serviceCollection.AddTransient<IK12SeaFederalFunds, K12SeaFederalFundsViewModel>();
         serviceCollection.AddTransient<IK12StaffAssignment, K12StaffAssignmentViewModel>();
         serviceCollection.AddTransient<IK12StaffEmployment, K12StaffEmploymentViewModel>();
@@ -64,7 +70,11 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IK12TitleIIILanguageInstruction, K12TitleIIILanguageInstructionViewModel>();
 
         // Now the known views
-        serviceCollection.AddTransient<K12CharterSchoolApprovalAgencyView>();
+        serviceCollection.AddTransient<IDEAEligibilityEvaluationCategoryView>();
+        serviceCollection.AddTransient<IDSVersionView>();
+        serviceCollection.AddTransient<IEPAuthorizationView>();
+        serviceCollection.AddTransient<IEPAuthorizationRejectedView>();
+        serviceCollection.AddTransient<IEPPresentLevelView>();
         serviceCollection.AddTransient<K12CharterSchoolAuthorizerAgencyView>();
         serviceCollection.AddTransient<K12CharterSchoolManagementOrganizationView>();
         serviceCollection.AddTransient<K12CourseView>();
@@ -75,9 +85,12 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<K12LeaGradeLevelsApprovedView>();
         serviceCollection.AddTransient<K12LeaGradeOfferedView>();
         serviceCollection.AddTransient<K12LeaPreKEligibilityView>();
+        serviceCollection.AddTransient<K12LEAPreKEligibilityView>();
         serviceCollection.AddTransient<K12LeaPreKEligibleAgesIDEAView>();
+        serviceCollection.AddTransient<K12LEAPreKEligibleAgesIDEAView>();
         serviceCollection.AddTransient<K12LeaSafeDrugFreeView>();
         serviceCollection.AddTransient<K12LeaTitleIIIProfessionalDevelopmentView>();
+        serviceCollection.AddTransient<K12LEATitleIIIProfessionalDevelopmentView>();
         serviceCollection.AddTransient<K12LeaTitleISupportServiceView>();
         serviceCollection.AddTransient<K12OrganizationStudentResponsibilityView>();
         serviceCollection.AddTransient<K12ProgramOrServiceView>();
@@ -90,7 +103,6 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<K12SchoolStatusView>();
         serviceCollection.AddTransient<K12SeaView>();
         serviceCollection.AddTransient<K12SeaAlternateFundUseView>();
-        serviceCollection.AddTransient<K12SeaFederalFundAllocationView>();
         serviceCollection.AddTransient<K12SeaFederalFundsView>();
         serviceCollection.AddTransient<K12StaffAssignmentView>();
         serviceCollection.AddTransient<K12StaffEmploymentView>();

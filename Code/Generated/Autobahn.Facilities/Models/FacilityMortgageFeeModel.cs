@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   FacilityMortgageFeeModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Models
+namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The FacilityMortgageFee Model
@@ -14,19 +14,14 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityMortgageFeeModel : AutobahnBase, Interfaces.IFacilityMortgageFee
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IFacilityMortgage"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid FacilityMortgageId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilityFinancingFeeType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? RefFacilityFinancingFeeTypeId { get; set; }
+        public Guid RefFacilityFinancingFeeTypeId { get; set; }
 
     }
 }

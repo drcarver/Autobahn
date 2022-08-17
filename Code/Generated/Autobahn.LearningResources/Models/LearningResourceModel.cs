@@ -1,247 +1,402 @@
 //**********************************************************
 //* DomainName: Learning Resources
 //* FileName:   LearningResourceModel.cs
-//**********************************************************
+//* Name:       Learning Resource Adapted From URL
+//* Definition: URL identifier of a learning resource for which this resource is an adaptation.
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Models
+namespace Autobahn.LearningResources.Interfaces
 {
      /// <summary>
-     /// The LearningResource Model
+     /// URL identifier of a learning resource for which this resource is an adaptation.
      /// </summary>
     public partial class LearningResourceModel : AutobahnBase, Interfaces.ILearningResource
     {
         /// <summary>
-        /// 
+        /// Learning Resource Adapted From URL
+        /// <para>
+        /// URL identifier of a learning resource for which this resource is an adaptation.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20367">Learning Resource Adapted From URL</a>
+        /// </para>
         /// </summary>
-        public  AdaptedFromURL { get; set; }
+        public System.String AdaptedFromURL { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Assistive Technologies Compatible Indicator
+        /// <para>
+        /// Indicates that the learning resource is compatible with assistive technologies.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20362">Learning Resource Assistive Technologies Compatible Indicator</a>
+        /// </para>
         /// </summary>
-        public  AssistiveTechnologiesCompatibleInd { get; set; }
+        public System.Boolean? AssistiveTechnologiesCompatibleInd { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Based on URL
+        /// <para>
+        /// A resource that was used in the creation of this resource. This term can be repeated for multiple sources.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19923">Learning Resource Based on URL</a>
+        /// </para>
         /// </summary>
-        public  BasedOnUrl { get; set; }
+        public System.String BasedOnUrl { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Concept Keyword
+        /// <para>
+        /// The significant topicality of the Learning Resource using free-text keywords and phrases.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20159">Learning Resource Concept Keyword</a>
+        /// </para>
         /// </summary>
-        public  ConceptKeyword { get; set; }
+        public System.String ConceptKeyword { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Copyright Holder Name
+        /// <para>
+        /// The name(s) of the person(s) or organization(s) holding the copyright for the Learning Resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20157">Learning Resource Copyright Holder Name</a>
+        /// </para>
         /// </summary>
-        public  CopyrightHolderName { get; set; }
+        public System.String CopyrightHolderName { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Copyright Year
+        /// <para>
+        /// The copyright year for the Learning Resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20158">Learning Resource Copyright Year</a>
+        /// </para>
         /// </summary>
-        public  CopyrightYear { get; set; }
+        public System.String CopyrightYear { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Creator
+        /// <para>
+        /// The name of a person or organization credited with the creation of the resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19918">Learning Resource Creator</a>
+        /// </para>
         /// </summary>
-        public  Creator { get; set; }
+        public System.String Creator { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Date Created
+        /// <para>
+        /// The date on which the resource was created.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19916">Learning Resource Date Created</a>
+        /// </para>
         /// </summary>
-        public  DateCreated { get; set; }
+        public System.DateTime? DateCreated { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Author Email
+        /// <para>
+        /// An email address for the author of the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20544">Learning Resource Author Email</a>
+        /// </para>
         /// </summary>
-        public  Description { get; set; }
+        public System.String LearningResourceAuthorEmail { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Author URL
+        /// <para>
+        /// A Uniform Resource Locator (URL) attributed to the author of a learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20541">Learning Resource Author URL</a>
+        /// </para>
         /// </summary>
-        public  LearningResourceAuthorEmail { get; set; }
+        public System.String LearningResourceAuthorURL { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Date Modified
+        /// <para>
+        /// The most recent date that the learning resource was updated.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20542">Learning Resource Date Modified</a>
+        /// </para>
         /// </summary>
-        public  LearningResourceAuthorURL { get; set; }
+        public System.DateTime? LearningResourceDateModified { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource License URL
+        /// <para>
+        /// The URL where the owner specifies permissions for using the resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19922">Learning Resource License URL</a>
+        /// </para>
         /// </summary>
-        public  LearningResourceDateModified { get; set; }
+        public System.String LearningResourceLicenseURL { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Publisher Email
+        /// <para>
+        /// An email address for the publisher of the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20545">Learning Resource Publisher Email</a>
+        /// </para>
         /// </summary>
-        public  LearningResourceLicenseURL { get; set; }
+        public System.String LearningResourcePublisherEmail { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Publisher URL
+        /// <para>
+        /// A Uniform Resource Locator (URL) attributed to the publisher of a learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20547">Learning Resource Publisher URL</a>
+        /// </para>
         /// </summary>
-        public  LearningResourcePublisherEmail { get; set; }
+        public System.String LearningResourcePublisherURL { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Peer Rating Sample Size
+        /// <para>
+        /// The sample size of a peer rating value. Only used when the Peer Rating Value is collected in aggregate as an average of multiple atomic/individual ratings.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20369">Learning Resource Peer Rating Sample Size</a>
+        /// </para>
         /// </summary>
-        public  LearningResourcePublisherURL { get; set; }
+        public System.Int32? PeerRatingSampleSize { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Published Date
+        /// <para>
+        /// The published date of an educational resource, such as instructional media, an assessment form, or section of an assessment form.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20135">Learning Resource Published Date</a>
+        /// </para>
         /// </summary>
-        public  PeerRatingSampleSize { get; set; }
+        public System.DateTime? PublishedDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Publisher Name
+        /// <para>
+        /// The name of the organization credited with publishing the resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19919">Learning Resource Publisher Name</a>
+        /// </para>
         /// </summary>
-        public  PublishedDate { get; set; }
+        public System.String PublisherName { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
         /// </summary>
-        public  PublisherName { get; set; }
+        public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessAPIType"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid? RefLearningResourceAccessAPITypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessHazardType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefLearningResourceAccessHazardTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessModeType"/> model
         /// </summary>
-        public  RefLanguageId { get; set; }
+        public Guid? RefLearningResourceAccessModeTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessRightsUrl"/> model
         /// </summary>
-        public  RefLearningResourceAccessAPITypeId { get; set; }
+        public Guid? RefLearningResourceAccessRightsUrlId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceAuthorType"/> model
         /// </summary>
-        public  RefLearningResourceAccessHazardTypeId { get; set; }
+        public Guid? RefLearningResourceAuthorTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceBookFormatType"/> model
         /// </summary>
-        public  RefLearningResourceAccessModeTypeId { get; set; }
+        public Guid? RefLearningResourceBookFormatTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceControlFlexibilityType"/> model
         /// </summary>
-        public  RefLearningResourceAccessRightsUrlId { get; set; }
+        public Guid? RefLearningResourceControlFlexibilityTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceDigitalMediaSubType"/> model
         /// </summary>
-        public  RefLearningResourceAuthorTypeId { get; set; }
+        public Guid? RefLearningResourceDigitalMediaSubTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceDigitalMediaType"/> model
         /// </summary>
-        public  RefLearningResourceBookFormatTypeId { get; set; }
+        public Guid? RefLearningResourceDigitalMediaTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceEducationalUse"/> model
         /// </summary>
-        public  RefLearningResourceControlFlexibilityTypeId { get; set; }
+        public Guid? RefLearningResourceEducationalUseId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceIntendedEndUserRole"/> model
         /// </summary>
-        public  RefLearningResourceDigitalMediaSubTypeId { get; set; }
+        public Guid? RefLearningResourceIntendedEndUserRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceInteractionMode"/> model
         /// </summary>
-        public  RefLearningResourceDigitalMediaTypeId { get; set; }
+        public Guid? RefLearningResourceInteractionModeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceInteractivityType"/> model
         /// </summary>
-        public  RefLearningResourceEducationalUseId { get; set; }
+        public Guid? RefLearningResourceInteractivityTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLearningResourceType"/> model
         /// </summary>
-        public  RefLearningResourceIntendedEndUserRoleId { get; set; }
+        public Guid? RefLearningResourceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Subject Code
+        /// <para>
+        /// The code used to identify the organization of subject matter and related learning experiences addressed by the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19914">Learning Resource Subject Code</a>
+        /// </para>
         /// </summary>
-        public  RefLearningResourceInteractionModeId { get; set; }
+        public System.String SubjectCode { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Subject Code System
+        /// <para>
+        /// The system that is used to identify the organization of subject matter and related learning experiences addressed by the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19915">Learning Resource Subject Code System</a>
+        /// </para>
         /// </summary>
-        public  RefLearningResourceInteractivityTypeId { get; set; }
+        public System.String SubjectCodeSystem { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Subject Name
+        /// <para>
+        /// The descriptive name for the subject of the content for the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19913">Learning Resource Subject Name</a>
+        /// </para>
         /// </summary>
-        public  RefLearningResourceTypeId { get; set; }
+        public System.String SubjectName { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Text Complexity System
+        /// <para>
+        /// The scaling system used to specify the text complexity of an Learning Resource
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19931">Learning Resource Text Complexity System</a>
+        /// </para>
         /// </summary>
-        public  SubjectCode { get; set; }
+        public System.String TextComplexitySystem { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Text Complexity Value
+        /// <para>
+        /// The complexity of the text using the scaling system defined by Text Complexity System, e.g. Lexile(tm).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19930">Learning Resource Text Complexity Value</a>
+        /// </para>
         /// </summary>
-        public  SubjectCodeSystem { get; set; }
+        public System.String TextComplexityValue { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Time Required
+        /// <para>
+        /// The approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19925">Learning Resource Time Required</a>
+        /// </para>
         /// </summary>
-        public  SubjectName { get; set; }
+        public System.Decimal? TimeRequired { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Title
+        /// <para>
+        /// The title of the resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19912">Learning Resource Title</a>
+        /// </para>
         /// </summary>
-        public  TextComplexitySystem { get; set; }
+        public System.String Title { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Typical Age Range Maximum
+        /// <para>
+        /// The maximum for the typical range of ages of the content's intended end user.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19927">Learning Resource Typical Age Range Maximum</a>
+        /// </para>
         /// </summary>
-        public  TextComplexityValue { get; set; }
+        public System.Byte? TypicalAgeRangeMaximum { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Typical Age Range Minimum
+        /// <para>
+        /// The minimum for the typical range of ages of the content's intended end user.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19926">Learning Resource Typical Age Range Minimum</a>
+        /// </para>
         /// </summary>
-        public  TimeRequired { get; set; }
+        public System.Byte? TypicalAgeRangeMinimum { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource URL
+        /// <para>
+        /// The Uniform Resource Locator where the resource may be accessed, or a proxy for the resource, such as an information page for a commercially available resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19911">Learning Resource URL</a>
+        /// </para>
         /// </summary>
-        public  Title { get; set; }
+        public System.String Url { get; set; }
 
         /// <summary>
-        /// 
+        /// Learning Resource Version
+        /// <para>
+        /// Defines the version of the learning resource as defined by the publisher.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20182">Learning Resource Version</a>
+        /// </para>
         /// </summary>
-        public  TypicalAgeRangeMaximum { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  TypicalAgeRangeMinimum { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? Url { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  Version { get; set; }
+        public System.String Version { get; set; }
 
     }
 }

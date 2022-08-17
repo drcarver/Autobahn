@@ -22,6 +22,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IPsCourse, PsCourseViewModel>();
         serviceCollection.AddTransient<IPsInstitution, PsInstitutionViewModel>();
         serviceCollection.AddTransient<IPsPriceOfAttendance, PsPriceOfAttendanceViewModel>();
+        serviceCollection.AddTransient<IPSPriceOfAttendance, PSPriceOfAttendanceViewModel>();
         serviceCollection.AddTransient<IPsProgram, PsProgramViewModel>();
         serviceCollection.AddTransient<IPsSection, PsSectionViewModel>();
         serviceCollection.AddTransient<IPsSectionLocation, PsSectionLocationViewModel>();
@@ -45,6 +46,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<PsCourseView>();
         serviceCollection.AddTransient<PsInstitutionView>();
         serviceCollection.AddTransient<PsPriceOfAttendanceView>();
+        serviceCollection.AddTransient<PSPriceOfAttendanceView>();
         serviceCollection.AddTransient<PsProgramView>();
         serviceCollection.AddTransient<PsSectionView>();
         serviceCollection.AddTransient<PsSectionLocationView>();

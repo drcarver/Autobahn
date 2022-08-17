@@ -1,6 +1,8 @@
 //***************************************************************************
 //* DomainName: Postsecondary (PS) Interfaces (used by both models and View Models
 //* FileName:   IPsSectionLocation.cs
+//* Name:       Course Instruction Site Name
+//* Definition: 
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,29 +10,30 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
-     /// The IPsSectionLocation Interface
+     /// 
      /// </summary>
     public partial interface IPsSectionLocation : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Course Instruction Site Name
+        /// <para>
+        /// The name of the location at which the course is taught.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20275">Course Instruction Site Name</a>
+        /// </para>
         /// </summary>
-        Guid? CourseInstructionSiteName { get; set; }
+        System.String CourseInstructionSiteName { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPsSection"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PsSectionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCourseInstructionSiteType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefCourseInstructionSiteTypeId { get; set; }
+        Guid? RefCourseInstructionSiteTypeId { get; set; }
 
     }
 }

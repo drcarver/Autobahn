@@ -13,19 +13,20 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12SchoolCorrectiveAction : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Accreditation Agency Name
+        /// <para>
+        /// The full name of an agency that accredited a school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCorrectiveActionType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefCorrectiveActionTypeId { get; set; }
+        Guid RefCorrectiveActionTypeId { get; set; }
 
     }
 }

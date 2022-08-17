@@ -13,24 +13,28 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialDefIdentifier : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Credential Definition Alternate Name
+        /// <para>
+        /// An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20717">Credential Definition Alternate Name</a>
+        /// </para>
         /// </summary>
-        Guid? Identifier { get; set; }
+        Guid CredentialDefinitionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Credential Definition Identifier
+        /// <para>
+        /// A globally unique identifier by which the creator/owner/provider of a credential recognizes the qualification, achievement, personal or organizational quality, or aspect of an identity in transactions with the external environment.
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String Identifier { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCredentialentifierSystem"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefCredentialIdentifierSystemId { get; set; }
+        Guid? RefCredentialIdentifierSystemId { get; set; }
 
     }
 }

@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Adult Education (AE)
 //* FileName:   AeProviderModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.AdultEducation.Models
+namespace Autobahn.AdultEducation.Interfaces
 {
      /// <summary>
      /// The AeProvider Model
@@ -14,19 +14,14 @@ namespace Autobahn.AdultEducation.Models
     public partial class AeProviderModel : AutobahnBase, Interfaces.IAeProvider
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLevelOfInstitution"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? RefLevelOfInstitutionId { get; set; }
+        public Guid RefLevelOfInstitutionId { get; set; }
 
     }
 }

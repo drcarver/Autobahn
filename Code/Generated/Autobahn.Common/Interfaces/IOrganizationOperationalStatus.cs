@@ -12,24 +12,25 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationOperationalStatus : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Operation Date
+        /// <para>
+        /// The year, month and day on which a program or center began operation.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19350">Operation Date</a>
+        /// </para>
         /// </summary>
-         OperationalStatusEffectiveDate { get; set; }
+        System.DateTime? OperationalStatusEffectiveDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOperationalStatus"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefOperationalStatusId { get; set; }
+        Guid RefOperationalStatusId { get; set; }
 
     }
 }

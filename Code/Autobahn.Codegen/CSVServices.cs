@@ -17,17 +17,17 @@ namespace AutobahnCodeGen
 
     public class CSVServices
     {
-        public List<CEDSElement> ReadCEDSElementsFile(string location)
+        public List<_CEDSElement> ReadCEDSElementsFile(string location, string delimiter = "|")
         {
             try
             {
                 using (var reader = new StreamReader(location))
                 {
-                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound=null };
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = delimiter, BadDataFound = null, MissingFieldFound=null };
                     using (var csv = new CsvReader(reader, config))
                     {
-                        csv.Context.RegisterClassMap<CEDSMap>();
-                        var records = csv.GetRecords<CEDSElement>().ToList();
+                        csv.Context.RegisterClassMap<_CEDSElementMap>();
+                        var records = csv.GetRecords<_CEDSElement>().ToList();
                         return records;
                     }
                 }
@@ -38,16 +38,16 @@ namespace AutobahnCodeGen
             }
         }
 
-        public List<AutobahnElement> ReadAutobahnElementsFile(string location)
+        public List<AutobahnElement> ReadAutobahnElementsFile(string location, string delimiter = "|")
         {
             try
             {
                 using (var reader = new StreamReader(location))
                 {
-                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = delimiter, BadDataFound = null, MissingFieldFound = null };
                     using (var csv = new CsvReader(reader, config))
                     {
-                        csv.Context.RegisterClassMap<CEDSMap>();
+                        csv.Context.RegisterClassMap<AutobahnElementMap>();
                         var records = csv.GetRecords<AutobahnElement>().ToList();
                         return records;
                     }
@@ -59,13 +59,13 @@ namespace AutobahnCodeGen
             }
         }
 
-        public List<AutobahnTable> ReadTablesFile(string location)
+        public List<AutobahnTable> ReadTablesFile(string location, bool hasHeaderRecord, string delimiter = ",")
         {
             try
             {
                 using (var reader = new StreamReader(location))
                 {
-                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = hasHeaderRecord, Delimiter = delimiter };//, BadDataFound = null, MissingFieldFound = null };
                     using (var csv = new CsvReader(reader, config))
                     {
                         csv.Context.RegisterClassMap<AutobahnTableMap>();
@@ -125,11 +125,11 @@ namespace AutobahnCodeGen
             }
         }
 
-        public void WriteAutobahnElementFile(string location, List<AutobahnElement> elements, string delimeter = "|")
+        public void WriteCEDSlementFile(string location, List<_CEDSElement> elements, string delimeter = "|")
         {
             using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
             {
-                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { Delimiter = delimeter };
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = true, Delimiter = delimeter };
                 using (var csv = new CsvWriter(writer, config))
                 {
                     csv.WriteRecords(elements);

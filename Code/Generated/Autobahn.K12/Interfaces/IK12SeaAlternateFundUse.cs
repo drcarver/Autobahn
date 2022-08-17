@@ -13,14 +13,14 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12SeaAlternateFundUse : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IK12SeaFederalFunds"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid K12SeaFederalFundsId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAlternateFundUses"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid RefAlternateFundUsesId { get; set; }
 
     }
 }

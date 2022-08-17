@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Workforce
 //* FileName:   WorkforceProgramParticipationModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Workforce.Models
+namespace Autobahn.Workforce.Interfaces
 {
      /// <summary>
      /// The WorkforceProgramParticipation Model
@@ -14,29 +14,30 @@ namespace Autobahn.Workforce.Models
     public partial class WorkforceProgramParticipationModel : AutobahnBase, Interfaces.IWorkforceProgramParticipation
     {
         /// <summary>
-        /// 
+        /// Diploma or Credential Award Date
+        /// <para>
+        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
+        /// </para>
         /// </summary>
-        public Guid? DiplomaOrCredentialAwardDate { get; set; }
+        public System.String DiplomaOrCredentialAwardDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonProgramParticipation"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefWfProgramParticipation"/> model
         /// </summary>
-        public  RefProfessionalTechnicalCredentialTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RefWfProgramParticipationId { get; set; }
+        public Guid? RefWfProgramParticipationId { get; set; }
 
     }
 }

@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationTechnicalAssistanceModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationTechnicalAssistance Model
@@ -12,29 +12,30 @@ namespace Autobahn.Common.Models
     public partial class OrganizationTechnicalAssistanceModel : AutobahnBase, Interfaces.IOrganizationTechnicalAssistance
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceDeliveryType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefTechnicalAssistanceDeliveryTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceType"/> model
         /// </summary>
-        public  RefTechnicalAssistanceDeliveryTypeId { get; set; }
+        public Guid? RefTechnicalAssistanceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Technical Assistance Approved Indicator
+        /// <para>
+        /// Indicates whether or not the technical assistance was approved.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20465">Technical Assistance Approved Indicator</a>
+        /// </para>
         /// </summary>
-        public  RefTechnicalAssistanceTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? TechnicalAssistanceApprovedInd { get; set; }
+        public System.Boolean? TechnicalAssistanceApprovedInd { get; set; }
 
     }
 }

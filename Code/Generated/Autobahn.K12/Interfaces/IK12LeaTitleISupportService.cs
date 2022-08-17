@@ -13,19 +13,20 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12LeaTitleISupportService : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Charter School Indicator
+        /// <para>
+        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19039">Charter School Indicator</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefK12LeaTitleISupportService"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefK12LeaTitleISupportServiceId { get; set; }
+        Guid RefK12LeaTitleISupportServiceId { get; set; }
 
     }
 }

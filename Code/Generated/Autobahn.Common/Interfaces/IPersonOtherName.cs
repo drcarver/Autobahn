@@ -12,39 +12,58 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonOtherName : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Other First Name
+        /// <para>
+        /// A first name given to a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20486">Other First Name</a>
+        /// </para>
         /// </summary>
-         FirstName { get; set; }
+        System.String FirstName { get; set; }
 
         /// <summary>
-        /// 
+        /// Other Last Name
+        /// <para>
+        /// A last name given to a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20485">Other Last Name</a>
+        /// </para>
         /// </summary>
-         LastName { get; set; }
+        System.String LastName { get; set; }
 
         /// <summary>
-        /// 
+        /// Other Middle Name
+        /// <para>
+        /// A middle name given to a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20487">Other Middle Name</a>
+        /// </para>
         /// </summary>
-         MiddleName { get; set; }
+        System.String MiddleName { get; set; }
 
         /// <summary>
-        /// 
+        /// Other Name
+        /// <para>
+        /// Previous, alternate or other names or aliases associated with the person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19206">Other Name</a>
+        /// </para>
         /// </summary>
-        Guid? OtherName { get; set; }
+        System.String OtherName { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOtherNameType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefOtherNameTypeId { get; set; }
+        Guid? RefOtherNameTypeId { get; set; }
 
     }
 }

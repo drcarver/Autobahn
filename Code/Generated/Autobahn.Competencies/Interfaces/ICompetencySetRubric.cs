@@ -13,14 +13,14 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencySetRubric : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencySet"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid CompetencySetId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRubric"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid RubricId { get; set; }
 
     }
 }

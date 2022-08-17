@@ -13,24 +13,37 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IBuildingSystemComponentService : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Building Institutional Equipment Description
+        /// <para>
+        /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20782">Building Institutional Equipment Description</a>
+        /// </para>
         /// </summary>
-         ComponentOrFixtureScheduledServicedDate { get; set; }
+        Guid BuildingSystemComponentId { get; set; }
 
         /// <summary>
-        /// 
+        /// Component or Fixture Scheduled Serviced Date
+        /// <para>
+        /// The month, day, and year a major component, system, equipment, or fixture is scheduled to be serviced for preventive or routine maintenance.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20881">Component or Fixture Scheduled Serviced Date</a>
+        /// </para>
         /// </summary>
-        Guid? ComponentOrFixtureServicedDate { get; set; }
+        System.DateTime? ComponentOrFixtureScheduledServicedDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Component or Fixture Serviced Date
+        /// <para>
+        /// The month, day, and year a system, component, equipment, or fixture was serviced for repair or routine maintenance.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20880">Component or Fixture Serviced Date</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
+        System.DateTime? ComponentOrFixtureServicedDate { get; set; }
 
     }
 }

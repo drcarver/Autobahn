@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationRelationshipModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationRelationship Model
@@ -12,17 +12,17 @@ namespace Autobahn.Common.Models
     public partial class OrganizationRelationshipModel : AutobahnBase, Interfaces.IOrganizationRelationship
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IParent_Organization"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid Parent_OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationRelationship"/> model
         /// </summary>
         public Guid? RefOrganizationRelationshipId { get; set; }
 

@@ -13,22 +13,22 @@ namespace Autobahn.Credentials.Interfaces
     public partial interface ICredentialDefAgent : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCredentialDefAgentRoleType"/> model
         /// </summary>
-         RefCredentialDefAgentRoleTypeId { get; set; }
+        Guid? RefCredentialDefAgentRoleTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCTDLOrganizationType"/> model
         /// </summary>
         Guid? RefCTDLOrganizationTypeId { get; set; }
 

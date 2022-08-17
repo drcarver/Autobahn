@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationDetailModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationDetail Model
@@ -12,29 +12,47 @@ namespace Autobahn.Common.Models
     public partial class OrganizationDetailModel : AutobahnBase, Interfaces.IOrganizationDetail
     {
         /// <summary>
-        /// 
+        /// Activity Title
+        /// <para>
+        /// The title for a particular activity, such as a co-curricular or extra-curricular activity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19009">Activity Title</a>
+        /// </para>
         /// </summary>
-        public Guid? Name { get; set; }
+        public System.String Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefOrganizationTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Organization Region GeoJSON
+        /// <para>
+        /// The geo-political area of the organization's facility, building, or site.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20731">Organization Region GeoJSON</a>
+        /// </para>
         /// </summary>
-        public  RegionGeoJSON { get; set; }
+        public System.String RegionGeoJSON { get; set; }
 
         /// <summary>
-        /// 
+        /// Short Name of Institution
+        /// <para>
+        /// The name of the institution, which may be the abbreviated form of the full legally accepted name.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20459">Short Name of Institution</a>
+        /// </para>
         /// </summary>
-        public  ShortName { get; set; }
+        public System.String ShortName { get; set; }
 
     }
 }

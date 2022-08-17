@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   RoleStatusModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The RoleStatus Model
@@ -12,29 +12,36 @@ namespace Autobahn.Common.Models
     public partial class RoleStatusModel : AutobahnBase, Interfaces.IRoleStatus
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefRoleStatus"/> model
         /// </summary>
         public Guid? RefRoleStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Employment End Date
+        /// <para>
+        /// The year, month and day on which a person ended self-employment or employment with an organization or institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19794">Employment End Date</a>
+        /// </para>
         /// </summary>
-        public  StatusEndDate { get; set; }
+        public System.DateTime? StatusEndDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Employment Start Date
+        /// <para>
+        /// The year, month and day on which a person began self-employment or employment with an organization or institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19345">Employment Start Date</a>
+        /// </para>
         /// </summary>
-        public  StatusStartDate { get; set; }
+        public System.DateTime StatusStartDate { get; set; }
 
     }
 }

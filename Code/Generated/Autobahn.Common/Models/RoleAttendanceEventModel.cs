@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   RoleAttendanceEventModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The RoleAttendanceEvent Model
@@ -12,54 +12,67 @@ namespace Autobahn.Common.Models
     public partial class RoleAttendanceEventModel : AutobahnBase, Interfaces.IRoleAttendanceEvent
     {
         /// <summary>
-        /// 
+        /// Attendance Event Date
+        /// <para>
+        /// The date on which an attendance event takes place.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20630">Attendance Event Date</a>
+        /// </para>
         /// </summary>
-        public  Date { get; set; }
+        public System.DateTime Date { get; set; }
 
         /// <summary>
-        /// 
+        /// End Time
+        /// <para>
+        /// The ending hour, minute and second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20901">End Time</a>
+        /// </para>
         /// </summary>
-        public  EndTime { get; set; }
+        public System.TimeSpan? EndTime { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAbsentAttendanceCategory"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefAbsentAttendanceCategoryId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAttendanceEventType"/> model
         /// </summary>
-        public  RefAbsentAttendanceCategoryId { get; set; }
+        public Guid? RefAttendanceEventTypeId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RefAttendanceEventTypeId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAttendanceStatus"/> model
         /// </summary>
         public Guid? RefAttendanceStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLeaveEventType"/> model
         /// </summary>
-        public  RefLeaveEventTypeId { get; set; }
+        public Guid? RefLeaveEventTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPresentAttendanceCategory"/> model
         /// </summary>
-        public  RefPresentAttendanceCategoryId { get; set; }
+        public Guid? RefPresentAttendanceCategoryId { get; set; }
 
         /// <summary>
-        /// 
+        /// Start Time
+        /// <para>
+        /// The starting hour, minute and second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20900">Start Time</a>
+        /// </para>
         /// </summary>
-        public  StartTime { get; set; }
+        public System.TimeSpan? StartTime { get; set; }
 
     }
 }

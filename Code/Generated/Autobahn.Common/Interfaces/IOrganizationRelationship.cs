@@ -12,17 +12,17 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationRelationship : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IParent_Organization"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid Parent_OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationRelationship"/> model
         /// </summary>
         Guid? RefOrganizationRelationshipId { get; set; }
 

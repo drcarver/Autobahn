@@ -11,30 +11,39 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IOrganizationPopulationServed : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-         OldestAgeServed { get; set; }
+        System.String AgeUnit { get; set; }
 
         /// <summary>
-        /// 
+        /// Early Learning Oldest Age Authorized to Serve
+        /// <para>
+        /// The oldest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20189">Early Learning Oldest Age Authorized to Serve</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.Int32? OldestAgeServed { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPopulationServed"/> model
         /// </summary>
-         RefPopulationServedId { get; set; }
+        Guid? RefPopulationServedId { get; set; }
 
         /// <summary>
-        /// 
+        /// Early Learning Youngest Age Authorized to Serve
+        /// <para>
+        /// The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19626">Early Learning Youngest Age Authorized to Serve</a>
+        /// </para>
         /// </summary>
-        Guid? YoungestAgeServed { get; set; }
+        System.Int32? YoungestAgeServed { get; set; }
 
     }
 }

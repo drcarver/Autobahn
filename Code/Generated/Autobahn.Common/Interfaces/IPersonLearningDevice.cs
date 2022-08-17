@@ -12,29 +12,24 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonLearningDevice : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAccess"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid? RefPrimaryLearningDeviceAccessId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAwayFromSchool"/> model
         /// </summary>
-         RefPrimaryLearningDeviceAccessId { get; set; }
+        Guid? RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceProvider"/> model
         /// </summary>
-         RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefPrimaryLearningDeviceProviderId { get; set; }
+        Guid? RefPrimaryLearningDeviceProviderId { get; set; }
 
     }
 }

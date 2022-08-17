@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
 //* FileName:   K12StudentEmploymentModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Models
+namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The K12StudentEmployment Model
@@ -14,27 +14,28 @@ namespace Autobahn.K12.Models
     public partial class K12StudentEmploymentModel : AutobahnBase, Interfaces.IK12StudentEmployment
     {
         /// <summary>
-        /// 
+        /// Employment NAICS Code
+        /// <para>
+        /// The North American Industry Classification System (NAICS) code associated with an individual's employment.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20070">Employment NAICS Code</a>
+        /// </para>
         /// </summary>
-        public  EmploymentNaicsCode { get; set; }
+        public System.String EmploymentNaicsCode { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEmployedAfterExit"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefEmployedAfterExitId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RefEmployedAfterExitId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEmployedWhileEnrolled"/> model
         /// </summary>
         public Guid? RefEmployedWhileEnrolledId { get; set; }
 

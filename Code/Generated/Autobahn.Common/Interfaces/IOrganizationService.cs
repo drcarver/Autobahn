@@ -12,19 +12,14 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationService : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefStudentSupportServiceType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefStudentSupportServiceTypeId { get; set; }
+        Guid RefStudentSupportServiceTypeId { get; set; }
 
     }
 }

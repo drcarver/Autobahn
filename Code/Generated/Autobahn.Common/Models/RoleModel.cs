@@ -1,30 +1,22 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   RoleModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The Role Model
      /// </summary>
     public partial class RoleModel : AutobahnBase, Interfaces.IRole
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public System.String Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefRole"/> model
         /// </summary>
-        public Guid? RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RefRoleId { get; set; }
+        public Guid? RefRoleId { get; set; }
 
     }
 }

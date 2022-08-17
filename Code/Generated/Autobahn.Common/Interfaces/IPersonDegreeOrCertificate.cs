@@ -1,55 +1,70 @@
 //***************************************************************************
 //* DomainName: Common Models Interfaces (used by both models and View Models
 //* FileName:   IPersonDegreeOrCertificate.cs
+//* Name:       Diploma or Credential Award Date
+//* Definition: 
 //***************************************************************************
 
 
 namespace Autobahn.Common.Interfaces
 {
      /// <summary>
-     /// The IPersonDegreeOrCertificate Interface
+     /// 
      /// </summary>
     public partial interface IPersonDegreeOrCertificate : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Diploma or Credential Award Date
+        /// <para>
+        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
+        /// </para>
         /// </summary>
-        Guid? AwardDate { get; set; }
+        System.DateTime? AwardDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Degree or Certificate Title or Subject
+        /// <para>
+        /// The name of the degree or certificate earned by a person. This includes honorary degrees conferred upon an individual.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19341">Degree or Certificate Title or Subject</a>
+        /// </para>
         /// </summary>
-         DegreeOrCertificateTitleOrSubject { get; set; }
+        System.String DegreeOrCertificateTitleOrSubject { get; set; }
 
         /// <summary>
-        /// 
+        /// Name of Institution
+        /// <para>
+        /// The full legally accepted name of the institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19191">Name of Institution</a>
+        /// </para>
         /// </summary>
-         NameOfInstitution { get; set; }
+        System.String NameOfInstitution { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefDegreeOrCertificateType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefDegreeOrCertificateTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEducationVerificationMethod"/> model
         /// </summary>
-         RefDegreeOrCertificateTypeId { get; set; }
+        Guid? RefEducationVerificationMethodId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefHigherEducationInstitutionAccreditationStatus"/> model
         /// </summary>
-         RefEducationVerificationMethodId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefHigherEducationInstitutionAccreditationStatusId { get; set; }
+        Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
     }
 }

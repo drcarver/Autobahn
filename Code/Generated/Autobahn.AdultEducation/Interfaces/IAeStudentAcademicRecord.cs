@@ -13,29 +13,30 @@ namespace Autobahn.AdultEducation.Interfaces
     public partial interface IAeStudentAcademicRecord : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Diploma or Credential Award Date
+        /// <para>
+        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
+        /// </para>
         /// </summary>
-        Guid? DiplomaOrCredentialAwardDate { get; set; }
+        System.String DiplomaOrCredentialAwardDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefHighSchoolDiplomaType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefHighSchoolDiplomaTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
         /// </summary>
-         RefHighSchoolDiplomaTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefProfessionalTechnicalCredentialTypeId { get; set; }
+        Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
     }
 }

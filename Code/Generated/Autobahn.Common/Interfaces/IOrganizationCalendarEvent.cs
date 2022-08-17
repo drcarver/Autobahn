@@ -12,39 +12,70 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationCalendarEvent : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// End Time
+        /// <para>
+        /// The ending hour, minute and second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20901">End Time</a>
+        /// </para>
         /// </summary>
-         EndTime { get; set; }
+        System.TimeSpan? EndTime { get; set; }
 
         /// <summary>
-        /// 
+        /// Calendar Event Date
+        /// <para>
+        /// The date of the scheduled or unscheduled calendar event.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20241">Calendar Event Date</a>
+        /// </para>
         /// </summary>
-         EventDate { get; set; }
+        System.DateTime EventDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Calendar Event Day Name
+        /// <para>
+        /// A name used for the day of the calendar event.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20242">Calendar Event Day Name</a>
+        /// </para>
         /// </summary>
-         Name { get; set; }
+        System.String Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Calendar Code
+        /// <para>
+        /// A unique number assigned by a school district to a school calendar.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19485">Calendar Code</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationCalendarId { get; set; }
 
         /// <summary>
-        /// 
+        /// Calendar Event Type
+        /// <para>
+        /// A type of scheduled or unscheduled calendar event.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19596">Calendar Event Type</a>
+        /// </para>
         /// </summary>
-         RecordStartDateTime { get; set; }
+        System.Int32? RefCalendarEventType { get; set; }
 
         /// <summary>
-        /// 
+        /// Start Time
+        /// <para>
+        /// The starting hour, minute and second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20900">Start Time</a>
+        /// </para>
         /// </summary>
-        Guid? RefCalendarEventType { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         StartTime { get; set; }
+        System.TimeSpan? StartTime { get; set; }
 
     }
 }

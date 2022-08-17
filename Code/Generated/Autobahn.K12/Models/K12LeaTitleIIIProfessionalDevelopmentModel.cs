@@ -1,32 +1,17 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12LeaTitleIIIProfessionalDevelopmentModel.cs
-//**********************************************************
+//* FileName:   K12LEATitleIIIProfessionalDevelopmentModel.cs
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Models
+namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The K12LeaTitleIIIProfessionalDevelopment Model
+     /// The K12LEATitleIIIProfessionalDevelopment Model
      /// </summary>
-    public partial class K12LeaTitleIIIProfessionalDevelopmentModel : AutobahnBase, Interfaces.IK12LeaTitleIIIProfessionalDevelopment
+    public partial class K12LEATitleIIIProfessionalDevelopmentModel : AutobahnBase, Interfaces.IK12LEATitleIIIProfessionalDevelopment
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
-
     }
 }

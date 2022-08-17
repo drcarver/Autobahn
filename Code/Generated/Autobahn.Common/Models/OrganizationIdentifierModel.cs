@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationIdentifierModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationIdentifier Model
@@ -12,27 +12,28 @@ namespace Autobahn.Common.Models
     public partial class OrganizationIdentifierModel : AutobahnBase, Interfaces.IOrganizationIdentifier
     {
         /// <summary>
-        /// 
+        /// Course Identifier
+        /// <para>
+        /// The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19055">Course Identifier</a>
+        /// </para>
         /// </summary>
-        public  Identifier { get; set; }
+        public System.String Identifier { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationentificationSystem"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefOrganizationIdentificationSystemId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RefOrganizationIdentificationSystemId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationentifierType"/> model
         /// </summary>
         public Guid? RefOrganizationIdentifierTypeId { get; set; }
 

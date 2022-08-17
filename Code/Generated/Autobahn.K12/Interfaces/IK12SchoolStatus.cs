@@ -1,6 +1,8 @@
 //***************************************************************************
 //* DomainName: Elementary and Secondary (K12) Interfaces (used by both models and View Models
 //* FileName:   IK12SchoolStatus.cs
+//* Name:       Consolidated Migrant Education Program Funds Status
+//* Definition: Consolidated MEP Funds Status
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,74 +10,117 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The IK12SchoolStatus Interface
+     /// Consolidated MEP Funds Status
      /// </summary>
     public partial interface IK12SchoolStatus : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Consolidated Migrant Education Program Funds Status
+        /// <para>
+        /// An indication of whether the school has a school-wide program, as defined by current law, in which federal Migrant Education Program (MEP) funds are consolidated.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19533">Consolidated Migrant Education Program Funds Status</a>
+        /// </para>
         /// </summary>
-         ConsolidatedMepFundsStatus { get; set; }
+        System.Boolean? ConsolidatedMepFundsStatus { get; set; }
 
         /// <summary>
-        /// 
+        /// Accreditation Agency Name
+        /// <para>
+        /// The full name of an agency that accredited a school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
+        /// </para>
         /// </summary>
-         ProgressAcheivingEnglishLearnerProficiencyStateDefinedStatus { get; set; }
+        Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// 
+        /// Progress Achieving English Language Proficiency State Defined Status
+        /// <para>
+        /// The state defined status assigned to the school's performance on the progress of achieving the English language proficiency indicator.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20897">Progress Achieving English Language Proficiency State Defined Status</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String ProgressAcheivingEnglishLearnerProficiencyStateDefinedStatus { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAlternativeSchoolFocus"/> model
         /// </summary>
         Guid? RefAlternativeSchoolFocusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBlendedLearningModelType"/> model
         /// </summary>
-         RefBlendedLearningModelTypeId { get; set; }
+        Guid? RefBlendedLearningModelTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefComprehensiveAndTargetedSupport"/> model
         /// </summary>
-         RefInternetAccessId { get; set; }
+        Guid? RefComprehensiveAndTargetedSupportId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefComprehensiveSupport"/> model
         /// </summary>
-         RefMagnetSpecialProgramId { get; set; }
+        Guid? RefComprehensiveSupportId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefInternetAccess"/> model
         /// </summary>
-         RefNationalSchoolLunchProgramStatusId { get; set; }
+        Guid? RefInternetAccessId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMagnetSpecialProgram"/> model
         /// </summary>
-         RefProgressAchievingEnglishLanguageProficiencyIndicatorStatusId { get; set; }
+        Guid? RefMagnetSpecialProgramId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefNationalSchoolLunchProgramStatus"/> model
         /// </summary>
-         RefRestructuringActionId { get; set; }
+        Guid? RefNationalSchoolLunchProgramStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefNSLPStatus"/> model
         /// </summary>
-         RefTitleISchoolStatusId { get; set; }
+        Guid? RefNSLPStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProgressAchievingEnglishLanguageProficiencyIndicatorStatus"/> model
         /// </summary>
-         RefVirtualSchoolStatusId { get; set; }
+        Guid? RefProgressAchievingEnglishLanguageProficiencyIndicatorStatusId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefRestructuringAction"/> model
+        /// </summary>
+        Guid? RefRestructuringActionId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefSchoolDangerousStatus"/> model
+        /// </summary>
+        Guid? RefSchoolDangerousStatusId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefSchoolImprovementStatus"/> model
+        /// </summary>
+        Guid? RefSchoolImprovementStatusId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefTargetedSupport"/> model
+        /// </summary>
+        Guid? RefTargetedSupportId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefTitleISchoolStatus"/> model
+        /// </summary>
+        Guid? RefTitleISchoolStatusId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefVirtualSchoolStatus"/> model
+        /// </summary>
+        Guid? RefVirtualSchoolStatusId { get; set; }
 
     }
 }

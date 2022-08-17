@@ -1,6 +1,8 @@
 //***************************************************************************
 //* DomainName: Postsecondary (PS) Interfaces (used by both models and View Models
 //* FileName:   IPsStudentAcademicAward.cs
+//* Name:       Academic Award Date
+//* Definition: 
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,49 +10,62 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
-     /// The IPsStudentAcademicAward Interface
+     /// 
      /// </summary>
     public partial interface IPsStudentAcademicAward : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Academic Award Date
+        /// <para>
+        /// The year, month and day or year and month on which the academic award was conferred.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19001">Academic Award Date</a>
+        /// </para>
         /// </summary>
-        Guid? AcademicAwardDate { get; set; }
+        System.String AcademicAwardDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Academic Award Title
+        /// <para>
+        /// The descriptive title for the academic award.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19003">Academic Award Title</a>
+        /// </para>
         /// </summary>
-         AcademicAwardTitle { get; set; }
+        System.String AcademicAwardTitle { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAcademicAwardLevel"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefAcademicAwardLevelId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAcademicAwardPrerequisiteType"/> model
         /// </summary>
-         RefAcademicAwardLevelId { get; set; }
+        Guid? RefAcademicAwardPrerequisiteTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPESCAwardLevelType"/> model
         /// </summary>
-         RefAcademicAwardPrerequisiteTypeId { get; set; }
+        Guid? RefPESCAwardLevelTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Academic Award Requirements URL
+        /// <para>
+        /// A URL to a page that describes the requirements for the credential.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20646">Academic Award Requirements URL</a>
+        /// </para>
         /// </summary>
-         RefPESCAwardLevelTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RequirementsURL { get; set; }
+        System.String RequirementsURL { get; set; }
 
     }
 }

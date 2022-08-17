@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationPersonRoleRelationshipModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationPersonRoleRelationship Model
@@ -12,13 +12,10 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPersonRoleRelationshipModel : AutobahnBase, Interfaces.IOrganizationPersonRoleRelationship
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
         public Guid OrganizationPersonRoleId { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public System.Int32 OrganizationPersonRoleId_Parent { get; set; }
 
     }

@@ -13,34 +13,47 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12SchoolImprovement : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Accreditation Agency Name
+        /// <para>
+        /// The full name of an agency that accredited a school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// School Improvement Funds Status
+        /// <para>
+        /// An indication of whether the school received funds under Section 1003 of ESEA, as amended.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19238">School Improvement Funds Status</a>
+        /// </para>
         /// </summary>
         Guid? RefSchoolImprovementFundsId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefSchoolImprovementStatus"/> model
         /// </summary>
-         RefSchoolImprovementStatusId { get; set; }
+        Guid? RefSchoolImprovementStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefSigInterventionType"/> model
         /// </summary>
-         RefSigInterventionTypeId { get; set; }
+        Guid? RefSigInterventionTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// School Improvement Exit Date
+        /// <para>
+        /// Date the school exited school improvement status.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19472">School Improvement Exit Date</a>
+        /// </para>
         /// </summary>
-         SchoolImprovementExitDate { get; set; }
+        System.DateTime? SchoolImprovementExitDate { get; set; }
 
     }
 }

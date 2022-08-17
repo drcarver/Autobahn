@@ -12,34 +12,35 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonProgramParticipation : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         ParticipationStatus { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Gifted and Talented Indicator
+        /// <para>
+        /// An indication that the student is participating in and served by a Gifted/Talented program.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19122">Gifted and Talented Indicator</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String ParticipationStatus { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefParticipationType"/> model
         /// </summary>
         Guid? RefParticipationTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProgramEntryReason"/> model
         /// </summary>
-         RefProgramEntryReasonId { get; set; }
+        Guid? RefProgramEntryReasonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProgramExitReason"/> model
         /// </summary>
-         RefProgramExitReasonId { get; set; }
+        Guid? RefProgramExitReasonId { get; set; }
 
     }
 }

@@ -13,34 +13,34 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPSStudentProgram : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPsProgram"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? PsProgramId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
         /// </summary>
-         RefCareerClusterId { get; set; }
+        Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCipUse"/> model
         /// </summary>
         Guid? RefCipUseId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTransferOutIndicator"/> model
         /// </summary>
-         RefTransferOutIndicatorId { get; set; }
+        Guid? RefTransferOutIndicatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
         /// </summary>
-         RefWorkbasedLearningOpportunityTypeId { get; set; }
+        Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 
     }
 }

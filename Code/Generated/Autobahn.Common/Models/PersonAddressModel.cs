@@ -1,85 +1,135 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonAddressModel.cs
-//**********************************************************
+//* Name:       Address County Name
+//* Definition: The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
-     /// The PersonAddress Model
+     /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
      /// </summary>
     public partial class PersonAddressModel : AutobahnBase, Interfaces.IPersonAddress
     {
         /// <summary>
-        /// 
+        /// Address County Name
+        /// <para>
+        /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19190">Address County Name</a>
+        /// </para>
         /// </summary>
-        public  AddressCountyName { get; set; }
+        public System.String AddressCountyName { get; set; }
 
         /// <summary>
-        /// 
+        /// Address Apartment Room or Suite Number
+        /// <para>
+        /// The apartment, room, or suite number of an address.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19019">Address Apartment Room or Suite Number</a>
+        /// </para>
         /// </summary>
-        public Guid? ApartmentRoomOrSuiteNumber { get; set; }
+        public System.String ApartmentRoomOrSuiteNumber { get; set; }
 
         /// <summary>
-        /// 
+        /// Address City
+        /// <para>
+        /// The name of the city in which an address is located.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19040">Address City</a>
+        /// </para>
         /// </summary>
-        public  City { get; set; }
+        public System.String City { get; set; }
 
         /// <summary>
-        /// 
+        /// Do Not Publish Indicator
+        /// <para>
+        /// An indication that the record should not be published.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
+        /// </para>
         /// </summary>
-        public  DoNotPublishIndicator { get; set; }
+        public System.Boolean? DoNotPublishIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Latitude
+        /// <para>
+        /// The north or south angular distance from the equator that, when combined with longitude, reflects an estimation of where the address is physically situated.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19599">Latitude</a>
+        /// </para>
         /// </summary>
-        public  Latitude { get; set; }
+        public System.String Latitude { get; set; }
 
         /// <summary>
-        /// 
+        /// Longitude
+        /// <para>
+        /// The east or west angular distance from the prime meridian that, when combined with latitude, reflects an estimation of where the address is physically situated.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19600">Longitude</a>
+        /// </para>
         /// </summary>
-        public  Longitude { get; set; }
+        public System.String Longitude { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-        public  PostalCode { get; set; }
+        public Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Address Postal Code
+        /// <para>
+        /// A number that identifies each postal delivery area in the United States used as a portion of an address.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19214">Address Postal Code</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public System.String PostalCode { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCounty"/> model
         /// </summary>
-        public  RefCountryId { get; set; }
+        public Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
         /// </summary>
-        public  RefPersonalInformationVerificationId { get; set; }
+        public Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPersonLocationType"/> model
         /// </summary>
-        public  RefPersonLocationTypeId { get; set; }
+        public Guid RefPersonLocationTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefState"/> model
         /// </summary>
-        public  RefStateId { get; set; }
+        public Guid? RefStateId { get; set; }
 
         /// <summary>
-        /// 
+        /// Address Street Number and Name
+        /// <para>
+        /// The street number and street name or post office box number of an address.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19269">Address Street Number and Name</a>
+        /// </para>
         /// </summary>
-        public  StreetNumberAndName { get; set; }
+        public System.String StreetNumberAndName { get; set; }
 
     }
 }

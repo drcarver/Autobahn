@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   BuildingSpaceModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Models
+namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The BuildingSpace Model
@@ -14,114 +14,121 @@ namespace Autobahn.Facilities.Models
     public partial class BuildingSpaceModel : AutobahnBase, Interfaces.IBuildingSpace
     {
         /// <summary>
-        /// 
+        /// Building Area
+        /// <para>
+        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20745">Building Area</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingAdministrativeSpaceType"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefBuildingAdministrativeSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingArtSpecialtySpaceType"/> model
         /// </summary>
-        public  RefBuildingAdministrativeSpaceTypeId { get; set; }
+        public Guid? RefBuildingArtSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingAssemblySpaceType"/> model
         /// </summary>
-        public  RefBuildingArtSpecialtySpaceTypeId { get; set; }
+        public Guid? RefBuildingAssemblySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingBasicClassroomDesignType"/> model
         /// </summary>
-        public  RefBuildingAssemblySpaceTypeId { get; set; }
+        public Guid? RefBuildingBasicClassroomDesignTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingCareerTechEducationSpaceType"/> model
         /// </summary>
-        public  RefBuildingBasicClassroomDesignTypeId { get; set; }
+        public Guid? RefBuildingCareerTechEducationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingCirculationSpaceType"/> model
         /// </summary>
-        public  RefBuildingCareerTechEducationSpaceTypeId { get; set; }
+        public Guid? RefBuildingCirculationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingFoodServiceSpaceType"/> model
         /// </summary>
-        public  RefBuildingCirculationSpaceTypeId { get; set; }
+        public Guid? RefBuildingFoodServiceSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingFullServiceKitchenType"/> model
         /// </summary>
-        public  RefBuildingFoodServiceSpaceTypeId { get; set; }
+        public Guid? RefBuildingFullServiceKitchenTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingIndoorAthleticOrPhysEdSpaceType"/> model
         /// </summary>
-        public  RefBuildingFullServiceKitchenTypeId { get; set; }
+        public Guid? RefBuildingIndoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingLibMediaCenterSpecialtySpaceType"/> model
         /// </summary>
-        public  RefBuildingIndoorAthleticOrPhysEdSpaceTypeId { get; set; }
+        public Guid? RefBuildingLibMediaCenterSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingOperationsOrMaintSpaceType"/> model
         /// </summary>
-        public  RefBuildingLibMediaCenterSpecialtySpaceTypeId { get; set; }
+        public Guid? RefBuildingOperationsOrMaintSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingOutdoorAthleticOrPhysEdSpaceType"/> model
         /// </summary>
-        public  RefBuildingOperationsOrMaintSpaceTypeId { get; set; }
+        public Guid? RefBuildingOutdoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingOutdoorOrNonathleticSpaceType"/> model
         /// </summary>
-        public  RefBuildingOutdoorAthleticOrPhysEdSpaceTypeId { get; set; }
+        public Guid? RefBuildingOutdoorOrNonathleticSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingPerformingArtsSpecialtySpaceType"/> model
         /// </summary>
-        public  RefBuildingOutdoorOrNonathleticSpaceTypeId { get; set; }
+        public Guid? RefBuildingPerformingArtsSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingScienceSpecialtySpaceType"/> model
         /// </summary>
-        public  RefBuildingPerformingArtsSpecialtySpaceTypeId { get; set; }
+        public Guid? RefBuildingScienceSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingSpaceDesignType"/> model
         /// </summary>
-        public  RefBuildingScienceSpecialtySpaceTypeId { get; set; }
+        public Guid? RefBuildingSpaceDesignTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingSpecEdSpecialtySpaceType"/> model
         /// </summary>
-        public  RefBuildingSpaceDesignTypeId { get; set; }
+        public Guid? RefBuildingSpecEdSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingStudentSupportSpaceType"/> model
         /// </summary>
-        public  RefBuildingSpecEdSpecialtySpaceTypeId { get; set; }
+        public Guid? RefBuildingStudentSupportSpaceTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefSpaceUseType"/> model
         /// </summary>
-        public  RefBuildingStudentSupportSpaceTypeId { get; set; }
+        public Guid? RefSpaceUseTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Space Description
+        /// <para>
+        /// A description of the space, as determined by its physical layout and built-in systems and equipment.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20174">Facility Space Description</a>
+        /// </para>
         /// </summary>
-        public  RefSpaceUseTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? SpaceDescription { get; set; }
+        public System.String SpaceDescription { get; set; }
 
     }
 }

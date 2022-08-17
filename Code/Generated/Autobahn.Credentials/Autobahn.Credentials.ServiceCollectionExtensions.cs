@@ -26,6 +26,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<ICredentialDefAgentCredential, CredentialDefAgentCredentialViewModel>();
         serviceCollection.AddTransient<ICredentialDefCategory, CredentialDefCategoryViewModel>();
         serviceCollection.AddTransient<ICredentialDefCriteria, CredentialDefCriteriaViewModel>();
+        serviceCollection.AddTransient<ICredentialDefentifier, CredentialDefentifierViewModel>();
         serviceCollection.AddTransient<ICredentialDefIdentifier, CredentialDefIdentifierViewModel>();
         serviceCollection.AddTransient<ICredentialDefinition, CredentialDefinitionViewModel>();
         serviceCollection.AddTransient<ICredentialIssuer, CredentialIssuerViewModel>();
@@ -40,6 +41,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<CredentialDefAgentCredentialView>();
         serviceCollection.AddTransient<CredentialDefCategoryView>();
         serviceCollection.AddTransient<CredentialDefCriteriaView>();
+        serviceCollection.AddTransient<CredentialDefentifierView>();
         serviceCollection.AddTransient<CredentialDefIdentifierView>();
         serviceCollection.AddTransient<CredentialDefinitionView>();
         serviceCollection.AddTransient<CredentialIssuerView>();

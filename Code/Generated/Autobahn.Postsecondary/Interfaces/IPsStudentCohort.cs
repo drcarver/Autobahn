@@ -1,6 +1,8 @@
 //***************************************************************************
 //* DomainName: Postsecondary (PS) Interfaces (used by both models and View Models
 //* FileName:   IPsStudentCohort.cs
+//* Name:       Cohort Graduation Year
+//* Definition: 
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,24 +10,25 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
-     /// The IPsStudentCohort Interface
+     /// 
      /// </summary>
     public partial interface IPsStudentCohort : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Cohort Graduation Year
+        /// <para>
+        /// The year the cohort is expected to graduate.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19577">Cohort Graduation Year</a>
+        /// </para>
         /// </summary>
-        Guid? CohortGraduationYear { get; set; }
+        System.String CohortGraduationYear { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
     }
 }

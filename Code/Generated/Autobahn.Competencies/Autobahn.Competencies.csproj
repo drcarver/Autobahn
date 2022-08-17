@@ -25,10 +25,7 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\CompetencyDefinitionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\CompetencyFrameworkView.xaml">
+    <MauiXaml Update="Views\ChildOfCompetencyDefinitionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\CompetencyDefAssociationView.xaml">
@@ -37,16 +34,28 @@
     <MauiXaml Update="Views\CompetencyDefEducationLevelView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\CompetencySetView.xaml">
+    <MauiXaml Update="Views\CompetencyDefinitionView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\CompetencyDefinitionCompetencySetView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\CompetencyDefParentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\CompetencyFrameworkView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\CompetencySetView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\CompetencySetRubricView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\CompetencySetRubricCriterionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Views\CoreKnowledgeAreaView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

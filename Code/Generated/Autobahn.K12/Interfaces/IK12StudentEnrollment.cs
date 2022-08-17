@@ -13,94 +13,119 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentEnrollment : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Displaced Student Status
+        /// <para>
+        /// A student who was enrolled, or eligible for enrollment, but has enrolled in another place because of a crisis.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19603">Displaced Student Status</a>
+        /// </para>
         /// </summary>
-         DisplacedStudentStatus { get; set; }
+        System.Boolean? DisplacedStudentStatus { get; set; }
 
         /// <summary>
-        /// 
+        /// First Entry Date into a US School
+        /// <para>
+        /// The year, month and day of a person's initial enrollment into a United States school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19520">First Entry Date into a US School</a>
+        /// </para>
         /// </summary>
-         FirstEntryDateIntoUSSchool { get; set; }
+        System.DateTime? FirstEntryDateIntoUSSchool { get; set; }
 
         /// <summary>
-        /// 
+        /// National School Lunch Program Direct Certification Indicator
+        /// <para>
+        /// Indicates that the student's National School Lunch Program (NSLP) eligibility has been determined through direct certification.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20635">National School Lunch Program Direct Certification Indicator</a>
+        /// </para>
         /// </summary>
-         NSLPDirectCertificationIndicator { get; set; }
+        System.Boolean? NSLPDirectCertificationIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefDirectoryInformationBlockStatus"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefDirectoryInformationBlockStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEndOfTermStatus"/> model
         /// </summary>
-         RefDirectoryInformationBlockStatusId { get; set; }
+        Guid? RefEndOfTermStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEnrollmentStatus"/> model
         /// </summary>
-         RefEndOfTermStatusId { get; set; }
+        Guid? RefEnrollmentStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEntryGradeLevel"/> model
         /// </summary>
-         RefEnrollmentStatusId { get; set; }
+        Guid? RefEntryGradeLevelId { get; set; }
 
         /// <summary>
-        /// 
+        /// Entry Type
+        /// <para>
+        /// The process by which a student enters a school during a given academic session.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19099">Entry Type</a>
+        /// </para>
         /// </summary>
-         RefEntryGradeLevelId { get; set; }
+        System.Int32? RefEntryType { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefExitGradeLevel"/> model
         /// </summary>
-         RefEntryType { get; set; }
+        Guid? RefExitGradeLevelId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefExitOrWithdrawalStatus"/> model
         /// </summary>
-         RefExitGradeLevelId { get; set; }
+        Guid? RefExitOrWithdrawalStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefExitOrWithdrawalType"/> model
         /// </summary>
-         RefExitOrWithdrawalStatusId { get; set; }
+        Guid? RefExitOrWithdrawalTypeId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RefExitOrWithdrawalTypeId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFoodServiceEligibility"/> model
         /// </summary>
         Guid? RefFoodServiceEligibilityId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefNonPromotionReason"/> model
         /// </summary>
-         RefNonPromotionReasonId { get; set; }
+        Guid? RefNonPromotionReasonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPromotionReason"/> model
         /// </summary>
-         RefPromotionReasonId { get; set; }
+        Guid? RefPromotionReasonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Public School Residence Status
+        /// <para>
+        /// An indication of the location of a persons legal residence relative to (within or outside) the boundaries of the public school attended and its administrative unit.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19523">Public School Residence Status</a>
+        /// </para>
         /// </summary>
-         RefPublicSchoolResidence { get; set; }
+        System.Int32? RefPublicSchoolResidence { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefStudentEnrollmentAccessType"/> model
         /// </summary>
-         RefStudentEnrollmentAccessTypeId { get; set; }
+        Guid? RefStudentEnrollmentAccessTypeId { get; set; }
 
     }
 }

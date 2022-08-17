@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
 //* FileName:   K12StudentAcademicHonorModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Models
+namespace Autobahn.K12.Interfaces
 {
      /// <summary>
      /// The K12StudentAcademicHonor Model
@@ -14,22 +14,23 @@ namespace Autobahn.K12.Models
     public partial class K12StudentAcademicHonorModel : AutobahnBase, Interfaces.IK12StudentAcademicHonor
     {
         /// <summary>
-        /// 
+        /// Honors Description
+        /// <para>
+        /// A description of the type of academic distinctions earned by or awarded to the person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19150">Honors Description</a>
+        /// </para>
         /// </summary>
-        public  HonorDescription { get; set; }
+        public System.String HonorDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAcademicHonorType"/> model
         /// </summary>
         public Guid? RefAcademicHonorTypeId { get; set; }
 

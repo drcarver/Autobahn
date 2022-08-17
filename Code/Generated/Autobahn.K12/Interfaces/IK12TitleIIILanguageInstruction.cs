@@ -13,19 +13,14 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12TitleIIILanguageInstruction : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefTitleIIILanguageInstructionProgramType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefTitleIIILanguageInstructionProgramTypeId { get; set; }
+        Guid RefTitleIIILanguageInstructionProgramTypeId { get; set; }
 
     }
 }

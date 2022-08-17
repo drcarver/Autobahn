@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonDemographicRaceModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The PersonDemographicRace Model
@@ -12,19 +12,25 @@ namespace Autobahn.Common.Models
     public partial class PersonDemographicRaceModel : AutobahnBase, Interfaces.IPersonDemographicRace
     {
         /// <summary>
-        /// 
+        /// Federal Race and Ethnicity Declined
+        /// <para>
+        /// A parent, guardian, or student declined to report sufficient information for identifying a student's federal race and/or ethnicity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20932">Federal Race and Ethnicity Declined</a>
+        /// </para>
         /// </summary>
-        public  FederalRaceAndEthnicityDeclined { get; set; }
+        public System.Boolean? FederalRaceAndEthnicityDeclined { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefRace"/> model
         /// </summary>
-        public Guid? RecordStartDateTime { get; set; }
+        public Guid RefRaceId { get; set; }
 
     }
 }

@@ -12,29 +12,47 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonDigitalAccessSpeed : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Internet Download Speed
+        /// <para>
+        /// The speed that data or information can be downloaded from a server on the internet to one's device in megabits per second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20938">Internet Download Speed</a>
+        /// </para>
         /// </summary>
-         InternetDownloadSpeed { get; set; }
+        System.Decimal? InternetDownloadSpeed { get; set; }
 
         /// <summary>
-        /// 
+        /// Internet Speed Test Date Time
+        /// <para>
+        /// The date and, optionally, time that the information was gathered.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20940">Internet Speed Test Date Time</a>
+        /// </para>
         /// </summary>
-         InternetSpeedTestDateTime { get; set; }
+        System.DateTime? InternetSpeedTestDateTime { get; set; }
 
         /// <summary>
-        /// 
+        /// Internet Upload Speed
+        /// <para>
+        /// The speed that data or information can be sent from one's device to another device or server on the internet in megabits per second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20941">Internet Upload Speed</a>
+        /// </para>
         /// </summary>
-         InternetUploadSpeed { get; set; }
+        System.Decimal? InternetUploadSpeed { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonDigitalAccess"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid? PersonDigitalAccessId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonLearningDevice"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid? PersonLearningDeviceId { get; set; }
 
     }
 }

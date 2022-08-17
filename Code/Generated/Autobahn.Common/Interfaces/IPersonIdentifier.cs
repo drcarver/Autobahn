@@ -12,29 +12,30 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonIdentifier : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Staff Member Identifier
+        /// <para>
+        /// A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19156">Staff Member Identifier</a>
+        /// </para>
         /// </summary>
-        Guid? Identifier { get; set; }
+        System.String Identifier { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPersonentificationSystem"/> model
         /// </summary>
-         RefPersonalInformationVerificationId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefPersonIdentificationSystemId { get; set; }
+        Guid RefPersonIdentificationSystemId { get; set; }
 
     }
 }

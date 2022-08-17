@@ -11,20 +11,17 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IOrganizationIndicator : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String IndicatorValue { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationIndicator"/> model
         /// </summary>
-        Guid? RefOrganizationIndicatorId { get; set; }
+        Guid RefOrganizationIndicatorId { get; set; }
 
     }
 }

@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   FacilityJointUseModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Models
+namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The FacilityJointUse Model
@@ -14,29 +14,30 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityJointUseModel : AutobahnBase, Interfaces.IFacilityJointUse
     {
         /// <summary>
-        /// 
+        /// Building Area
+        /// <para>
+        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20745">Building Area</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingJointUseRationaleType"/> model
         /// </summary>
         public Guid? RefBuildingJointUseRationaleTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingJointUserType"/> model
         /// </summary>
-        public  RefBuildingJointUserTypeId { get; set; }
+        public Guid? RefBuildingJointUserTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingJointUseSchedulingType"/> model
         /// </summary>
-        public  RefBuildingJointUseSchedulingTypeId { get; set; }
+        public Guid? RefBuildingJointUseSchedulingTypeId { get; set; }
 
     }
 }

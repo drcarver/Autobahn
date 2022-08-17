@@ -12,24 +12,41 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPersonRole : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Activity Involvement Begin Date
+        /// <para>
+        /// The year, month and day on which the person began to participate in the activity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19007">Activity Involvement Begin Date</a>
+        /// </para>
         /// </summary>
-        Guid? EntryDate { get; set; }
+        System.DateTime? EntryDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Activity Involvement End Date
+        /// <para>
+        /// The year, month and day on which the person ceased to participate in the activity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19008">Activity Involvement End Date</a>
+        /// </para>
         /// </summary>
-         ExitDate { get; set; }
+        System.DateTime? ExitDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid PersonId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRole"/> model
+        /// </summary>
+        Guid RoleId { get; set; }
 
     }
 }

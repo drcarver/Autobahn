@@ -11,15 +11,5 @@ namespace Autobahn.Common.Interfaces
      /// </summary>
     public partial interface IPersonMaster : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RecordStartDateTime { get; set; }
-
     }
 }

@@ -12,13 +12,10 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPersonRoleRelationship : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
         Guid OrganizationPersonRoleId { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
         System.Int32 OrganizationPersonRoleId_Parent { get; set; }
 
     }

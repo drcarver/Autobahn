@@ -13,24 +13,25 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IPsStudentAdmissionTest : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefStandardizedAdmissionTest"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid RefStandardizedAdmissionTestId { get; set; }
 
         /// <summary>
-        /// 
+        /// Standardized Admission Test Score
+        /// <para>
+        /// The quantitative score on a standardized admission test reported to a postsecondary institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19265">Standardized Admission Test Score</a>
+        /// </para>
         /// </summary>
-         RefStandardizedAdmissionTestId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? StandardizedAdmissionTestScore { get; set; }
+        System.Decimal? StandardizedAdmissionTestScore { get; set; }
 
     }
 }

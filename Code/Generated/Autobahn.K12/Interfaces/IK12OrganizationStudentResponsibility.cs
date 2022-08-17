@@ -13,24 +13,19 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12OrganizationStudentResponsibility : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefK12ResponsibilityType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid RefK12ResponsibilityTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefStudentSchoolAffiliationStateDefinedStatus"/> model
         /// </summary>
-        Guid? RefK12ResponsibilityTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
+        Guid? RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
 
     }
 }

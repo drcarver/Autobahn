@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Adult Education (AE)
 //* FileName:   AeCourseModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.AdultEducation.Models
+namespace Autobahn.AdultEducation.Interfaces
 {
      /// <summary>
      /// The AeCourse Model
@@ -14,24 +14,19 @@ namespace Autobahn.AdultEducation.Models
     public partial class AeCourseModel : AutobahnBase, Interfaces.IAeCourse
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
         /// </summary>
         public Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCourseLevelType"/> model
         /// </summary>
-        public  RefCourseLevelTypeId { get; set; }
+        public Guid? RefCourseLevelTypeId { get; set; }
 
     }
 }

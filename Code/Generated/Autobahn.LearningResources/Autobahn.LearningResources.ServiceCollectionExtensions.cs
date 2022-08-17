@@ -18,6 +18,9 @@ public static partial  class ServiceCollectionExtensions
     public static IServiceCollection AddLearningResourcesServices(this IServiceCollection serviceCollection)
     {
         // First the known view models
+        serviceCollection.AddTransient<ILearnerAction, LearnerActionViewModel>();
+        serviceCollection.AddTransient<ILearnerActivity, LearnerActivityViewModel>();
+        serviceCollection.AddTransient<ILearnerActivityLearningResource, LearnerActivityLearningResourceViewModel>();
         serviceCollection.AddTransient<ILearningResource, LearningResourceViewModel>();
         serviceCollection.AddTransient<ILearningResourceAdaptation, LearningResourceAdaptationViewModel>();
         serviceCollection.AddTransient<ILearningResourceEducationLevel, LearningResourceEducationLevelViewModel>();
@@ -27,6 +30,9 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IPeerRatingSystem, PeerRatingSystemViewModel>();
 
         // Now the known views
+        serviceCollection.AddTransient<LearnerActionView>();
+        serviceCollection.AddTransient<LearnerActivityView>();
+        serviceCollection.AddTransient<LearnerActivityLearningResourceView>();
         serviceCollection.AddTransient<LearningResourceView>();
         serviceCollection.AddTransient<LearningResourceAdaptationView>();
         serviceCollection.AddTransient<LearningResourceEducationLevelView>();

@@ -12,29 +12,36 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationEmployeeBenefit : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Full-Time Employee Benefits
+        /// <para>
+        /// The benefits offered by a program/facility/employer for full-time staff.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19866">Full-Time Employee Benefits</a>
+        /// </para>
         /// </summary>
-        Guid? FullTimeBenefitIndicator { get; set; }
+        System.Boolean? FullTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         PartTimeBenefitIndicator { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Part-Time Employee Benefits
+        /// <para>
+        /// The benefits offered by a program/facility/employer for part-time staff.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19867">Part-Time Employee Benefits</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.Boolean? PartTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEmployeeBenefit"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefEmployeeBenefitId { get; set; }
+        Guid? RefEmployeeBenefitId { get; set; }
 
     }
 }

@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Competencies
 //* FileName:   CompetencyDefEducationLevelModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Models
+namespace Autobahn.Competencies.Interfaces
 {
      /// <summary>
      /// The CompetencyDefEducationLevel Model
@@ -14,19 +14,14 @@ namespace Autobahn.Competencies.Models
     public partial class CompetencyDefEducationLevelModel : AutobahnBase, Interfaces.ICompetencyDefEducationLevel
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencyDefinition"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid CompetencyDefinitionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEducationLevel"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? RefEducationLevelId { get; set; }
+        public Guid RefEducationLevelId { get; set; }
 
     }
 }

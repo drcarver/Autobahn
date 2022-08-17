@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationWebsiteModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationWebsite Model
@@ -12,19 +12,20 @@ namespace Autobahn.Common.Models
     public partial class OrganizationWebsiteModel : AutobahnBase, Interfaces.IOrganizationWebsite
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Web Site Address
+        /// <para>
+        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19300">Web Site Address</a>
+        /// </para>
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? Website { get; set; }
+        public System.String Website { get; set; }
 
     }
 }

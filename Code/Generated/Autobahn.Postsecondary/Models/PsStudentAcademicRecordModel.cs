@@ -1,97 +1,160 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStudentAcademicRecordModel.cs
-//**********************************************************
+//* Name:       Academic Year Designator
+//* Definition: The academic year for which the data apply.
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Models
+namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
-     /// The PsStudentAcademicRecord Model
+     /// The academic year for which the data apply.
      /// </summary>
     public partial class PsStudentAcademicRecordModel : AutobahnBase, Interfaces.IPsStudentAcademicRecord
     {
         /// <summary>
-        /// 
+        /// Academic Year Designator
+        /// <para>
+        /// The academic year for which the data apply.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19702">Academic Year Designator</a>
+        /// </para>
         /// </summary>
-        public  AcademicYearDesignator { get; set; }
+        public System.String AcademicYearDesignator { get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced Placement Credits Awarded
+        /// <para>
+        /// The number of credits awarded a student by the postsecondary institution based on successful completion of advanced placement courses and/or advanced placement tests. 
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19018">Advanced Placement Credits Awarded</a>
+        /// </para>
         /// </summary>
-        public Guid? AdvancedPlacementCreditsAwarded { get; set; }
+        public System.Int32? AdvancedPlacementCreditsAwarded { get; set; }
 
         /// <summary>
-        /// 
+        /// Course Total
+        /// <para>
+        /// The total number of courses listed on a transcript. Used as a check digit for integrity purposes.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20282">Course Total</a>
+        /// </para>
         /// </summary>
-        public  CourseTotal { get; set; }
+        public System.Int32? CourseTotal { get; set; }
 
         /// <summary>
-        /// 
+        /// Credits Attempted Cumulative
+        /// <para>
+        /// The cumulative number of credits a person attempts to earn by taking courses during their enrollment in their current education institution as well as those credits transferred from an education institution in which the person had been previously enrolled.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19073">Credits Attempted Cumulative</a>
+        /// </para>
         /// </summary>
-        public  CreditsAttemptedCumulative { get; set; }
+        public System.Decimal? CreditsAttemptedCumulative { get; set; }
 
         /// <summary>
-        /// 
+        /// Credits Earned Cumulative
+        /// <para>
+        /// The cumulative number of credits a person earns by completing courses or examinations during their enrollment in the current education institution as well as those credits transferred from an education institution in which the person had been previously enrolled.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19074">Credits Earned Cumulative</a>
+        /// </para>
         /// </summary>
-        public  CreditsEarnedCumulative { get; set; }
+        public System.Decimal? CreditsEarnedCumulative { get; set; }
 
         /// <summary>
-        /// 
+        /// Diploma or Credential Award Date
+        /// <para>
+        /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
+        /// </para>
         /// </summary>
-        public  DiplomaOrCredentialAwardDate { get; set; }
+        public System.String DiplomaOrCredentialAwardDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Dual Credit Dual Enrollment Credits Awarded
+        /// <para>
+        /// The number of credits awarded a student by the postsecondary institution based on successful completion of dual credit/dual enrollment courses. 
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19085">Dual Credit Dual Enrollment Credits Awarded</a>
+        /// </para>
         /// </summary>
-        public  DualCreditDualEnrollmentCredits { get; set; }
+        public System.Decimal? DualCreditDualEnrollmentCredits { get; set; }
 
         /// <summary>
-        /// 
+        /// Postsecondary Student Entering Term
+        /// <para>
+        /// The term and year of the initial enrollment of an individual in credit bearing courses or developmental/remedial courses at an institution after completing high school or a high school equivalency program (e.g., GED, Adult High School Diploma).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20396">Postsecondary Student Entering Term</a>
+        /// </para>
         /// </summary>
-        public  EnteringTerm { get; set; }
+        public System.String EnteringTerm { get; set; }
 
         /// <summary>
-        /// 
+        /// Grade Point Average
+        /// <para>
+        /// The value of the total quality points divided by the Credit Hours for Grade Point Average. 
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19127">Grade Point Average</a>
+        /// </para>
         /// </summary>
-        public  GradePointAverage { get; set; }
+        public System.Decimal? GradePointAverage { get; set; }
 
         /// <summary>
-        /// 
+        /// Grade Point Average Cumulative
+        /// <para>
+        /// A measure of average performance in all courses taken by a person during his or her school career as determined for record-keeping purposes. This is obtained by dividing the total grade points received by the total number of credits attempted. This usually includes grade points received and credits attempted in his or her current school as well as those transferred from schools in which the person was previously enrolled.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19128">Grade Point Average Cumulative</a>
+        /// </para>
         /// </summary>
-        public  GradePointAverageCumulative { get; set; }
+        public System.Decimal? GradePointAverageCumulative { get; set; }
 
         /// <summary>
-        /// 
+        /// Number of Credits Attempted
+        /// <para>
+        /// The number of credits that a student can earn for enrolling in and completing a given course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19199">Number of Credits Attempted</a>
+        /// </para>
         /// </summary>
-        public  NumberOfCreditsAttempted { get; set; }
+        public System.Decimal? NumberOfCreditsAttempted { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAcademicTermDesignator"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCreditHoursAppliedOtherProgram"/> model
         /// </summary>
-        public  RefAcademicTermDesignatorId { get; set; }
+        public Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefProfessionalTechCredentialType"/> model
         /// </summary>
-        public  RefCreditHoursAppliedOtherProgramId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RefProfessionalTechCredentialTypeId { get; set; }
+        public Guid? RefProfessionalTechCredentialTypeId { get; set; }
 
     }
 }

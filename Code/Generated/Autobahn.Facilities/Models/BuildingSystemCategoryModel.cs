@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   BuildingSystemCategoryModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Models
+namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The BuildingSystemCategory Model
@@ -14,84 +14,85 @@ namespace Autobahn.Facilities.Models
     public partial class BuildingSystemCategoryModel : AutobahnBase, Interfaces.IBuildingSystemCategory
     {
         /// <summary>
-        /// 
+        /// Building Institutional Equipment Description
+        /// <para>
+        /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20782">Building Institutional Equipment Description</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid BuildingSystemComponentId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingAirDistributionSystemType"/> model
         /// </summary>
         public Guid? RefBuildingAirDistributionSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingCommMgmtComponentSystemType"/> model
         /// </summary>
-        public  RefBuildingCommMgmtComponentSystemTypeId { get; set; }
+        public Guid? RefBuildingCommMgmtComponentSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingCoolingGenerationSystemType"/> model
         /// </summary>
-        public  RefBuildingCoolingGenerationSystemTypeId { get; set; }
+        public Guid? RefBuildingCoolingGenerationSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingElectricalSystemType"/> model
         /// </summary>
-        public  RefBuildingElectricalSystemTypeId { get; set; }
+        public Guid? RefBuildingElectricalSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingFireProtectionSystemType"/> model
         /// </summary>
-        public  RefBuildingFireProtectionSystemTypeId { get; set; }
+        public Guid? RefBuildingFireProtectionSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingHeatingGenerationSystemType"/> model
         /// </summary>
-        public  RefBuildingHeatingGenerationSystemTypeId { get; set; }
+        public Guid? RefBuildingHeatingGenerationSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingHVACSystemType"/> model
         /// </summary>
-        public  RefBuildingHVACSystemTypeId { get; set; }
+        public Guid? RefBuildingHVACSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingMechanicalConveyingSystemType"/> model
         /// </summary>
-        public  RefBuildingMechanicalConveyingSystemTypeId { get; set; }
+        public Guid? RefBuildingMechanicalConveyingSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingMechanicalSystemType"/> model
         /// </summary>
-        public  RefBuildingMechanicalSystemTypeId { get; set; }
+        public Guid? RefBuildingMechanicalSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingPlumbingSystemType"/> model
         /// </summary>
-        public  RefBuildingPlumbingSystemTypeId { get; set; }
+        public Guid? RefBuildingPlumbingSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingSecuritySystemType"/> model
         /// </summary>
-        public  RefBuildingSecuritySystemTypeId { get; set; }
+        public Guid? RefBuildingSecuritySystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingSystemType"/> model
         /// </summary>
-        public  RefBuildingSystemTypeId { get; set; }
+        public Guid? RefBuildingSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingTechnologyWiringSystemType"/> model
         /// </summary>
-        public  RefBuildingTechnologyWiringSystemTypeId { get; set; }
+        public Guid? RefBuildingTechnologyWiringSystemTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefBuildingVerticalTransportationSystemType"/> model
         /// </summary>
-        public  RefBuildingVerticalTransportationSystemTypeId { get; set; }
+        public Guid? RefBuildingVerticalTransportationSystemTypeId { get; set; }
 
     }
 }

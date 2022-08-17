@@ -12,19 +12,25 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonDemographicRace : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Federal Race and Ethnicity Declined
+        /// <para>
+        /// A parent, guardian, or student declined to report sufficient information for identifying a student's federal race and/or ethnicity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20932">Federal Race and Ethnicity Declined</a>
+        /// </para>
         /// </summary>
-         FederalRaceAndEthnicityDeclined { get; set; }
+        System.Boolean? FederalRaceAndEthnicityDeclined { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefRace"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid RefRaceId { get; set; }
 
     }
 }

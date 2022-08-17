@@ -13,14 +13,14 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12CharterSchoolManagementOrganization : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCharterSchoolManagementOrganizationType"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid? RefCharterSchoolManagementOrganizationTypeId { get; set; }
 
     }
 }

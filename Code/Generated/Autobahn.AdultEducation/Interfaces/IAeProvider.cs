@@ -13,19 +13,14 @@ namespace Autobahn.AdultEducation.Interfaces
     public partial interface IAeProvider : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLevelOfInstitution"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefLevelOfInstitutionId { get; set; }
+        Guid RefLevelOfInstitutionId { get; set; }
 
     }
 }

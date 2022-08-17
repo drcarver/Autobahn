@@ -12,19 +12,22 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPolicy : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        Guid? PolicyType { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Personnel Policy Type
+        /// <para>
+        /// Policies related to personnel in the organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19842">Personnel Policy Type</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String PolicyType { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
+        System.String Value { get; set; }
 
     }
 }

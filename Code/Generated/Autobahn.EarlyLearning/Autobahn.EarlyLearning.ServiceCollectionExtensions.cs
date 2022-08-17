@@ -34,6 +34,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<IELEnrollment, ELEnrollmentViewModel>();
         serviceCollection.AddTransient<IELEnrollmentOtherFunding, ELEnrollmentOtherFundingViewModel>();
         serviceCollection.AddTransient<IELFacilityLicensing, ELFacilityLicensingViewModel>();
+        serviceCollection.AddTransient<IEligibilityEvaluation, EligibilityEvaluationViewModel>();
         serviceCollection.AddTransient<IELOrganization, ELOrganizationViewModel>();
         serviceCollection.AddTransient<IELOrganizationAvailability, ELOrganizationAvailabilityViewModel>();
         serviceCollection.AddTransient<IELOrganizationFund, ELOrganizationFundViewModel>();
@@ -65,6 +66,7 @@ public static partial  class ServiceCollectionExtensions
         serviceCollection.AddTransient<ELEnrollmentView>();
         serviceCollection.AddTransient<ELEnrollmentOtherFundingView>();
         serviceCollection.AddTransient<ELFacilityLicensingView>();
+        serviceCollection.AddTransient<EligibilityEvaluationView>();
         serviceCollection.AddTransient<ELOrganizationView>();
         serviceCollection.AddTransient<ELOrganizationAvailabilityView>();
         serviceCollection.AddTransient<ELOrganizationFundView>();

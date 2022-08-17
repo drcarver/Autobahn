@@ -12,19 +12,20 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationPersonRoleFTE : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Full Time Equivalency
+        /// <para>
+        /// The time a person is enrolled, employed, involved, or participates in the organization, divided by the time the organization defines as full-time for that role.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20906">Full Time Equivalency</a>
+        /// </para>
         /// </summary>
-         FullTimeEquivalency { get; set; }
+        System.Decimal FullTimeEquivalency { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
     }
 }

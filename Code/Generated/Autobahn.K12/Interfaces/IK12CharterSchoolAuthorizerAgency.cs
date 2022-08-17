@@ -13,24 +13,14 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12CharterSchoolAuthorizerAgency : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        Guid? K12CharterSchoolAuthorizerAgencyId { get; set; }
+        Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefCharterSchoolAuthorizerType"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefCharterSchoolAuthorizerTypeId { get; set; }
+        Guid RefCharterSchoolAuthorizerTypeId { get; set; }
 
     }
 }

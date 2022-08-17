@@ -25,10 +25,7 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\AeStudentAcademicRecordView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\ProgramParticipationAEView.xaml">
+    <MauiXaml Update="Views\AeCourseView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Views\AeProviderView.xaml">
@@ -37,10 +34,13 @@
     <MauiXaml Update="Views\AeStaffView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Views\AeStudentAcademicRecordView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Views\AeStudentEmploymentView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-    <MauiXaml Update="Views\AeCourseView.xaml">
+    <MauiXaml Update="Views\ProgramParticipationAEView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>

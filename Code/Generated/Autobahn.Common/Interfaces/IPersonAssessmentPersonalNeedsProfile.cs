@@ -12,14 +12,20 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonAssessmentPersonalNeedsProfile : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Assessment Personal Needs Profile Activate by Default
+        /// <para>
+        /// Determines if the alternative accessible content is rendered as the default content for the learner.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid AssessmentPersonalNeedsProfileId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid PersonId { get; set; }
 
     }
 }

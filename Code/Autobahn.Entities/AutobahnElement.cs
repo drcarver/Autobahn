@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
@@ -21,9 +18,7 @@ namespace Autobahn.Entities
         public string TermID { get; set; }
         public string ChangeNotes { get; set; }
         public string TechnicalName { get; set; }
-        public List<Guid?> AutobahnTableList { get; set; } = new List<Guid?>();
-        public List<Guid?> AutobahnDomainList { get; set; } = new List<Guid?>();
-
+ 
         public AutobahnElement Clone()
         {
             var model = new AutobahnElement
@@ -41,9 +36,7 @@ namespace Autobahn.Entities
                 TermID = TermID,
                 ChangeNotes = ChangeNotes,
                 TechnicalName = TechnicalName,
-                AutobahnDomainList = AutobahnDomainList,
-                AutobahnTableList = AutobahnTableList,
-            };
+             };
             return model;
         }
     }

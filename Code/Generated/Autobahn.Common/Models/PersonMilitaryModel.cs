@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonMilitaryModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The PersonMilitary Model
@@ -12,34 +12,29 @@ namespace Autobahn.Common.Models
     public partial class PersonMilitaryModel : AutobahnBase, Interfaces.IPersonMilitary
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryActiveStudentIndicator"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefMilitaryActiveStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryBranch"/> model
         /// </summary>
-        public  RefMilitaryActiveStudentIndicatorId { get; set; }
+        public Guid? RefMilitaryBranchId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RefMilitaryBranchId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryConnectedStudentIndicator"/> model
         /// </summary>
         public Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefMilitaryVeteranStudentIndicator"/> model
         /// </summary>
-        public  RefMilitaryVeteranStudentIndicatorId { get; set; }
+        public Guid? RefMilitaryVeteranStudentIndicatorId { get; set; }
 
     }
 }

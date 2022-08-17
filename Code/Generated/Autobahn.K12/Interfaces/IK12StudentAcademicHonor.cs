@@ -13,22 +13,23 @@ namespace Autobahn.K12.Interfaces
     public partial interface IK12StudentAcademicHonor : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Honors Description
+        /// <para>
+        /// A description of the type of academic distinctions earned by or awarded to the person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19150">Honors Description</a>
+        /// </para>
         /// </summary>
-         HonorDescription { get; set; }
+        System.String HonorDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAcademicHonorType"/> model
         /// </summary>
         Guid? RefAcademicHonorTypeId { get; set; }
 

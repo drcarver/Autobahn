@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonDigitalAccessSpeedModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The PersonDigitalAccessSpeed Model
@@ -12,29 +12,47 @@ namespace Autobahn.Common.Models
     public partial class PersonDigitalAccessSpeedModel : AutobahnBase, Interfaces.IPersonDigitalAccessSpeed
     {
         /// <summary>
-        /// 
+        /// Internet Download Speed
+        /// <para>
+        /// The speed that data or information can be downloaded from a server on the internet to one's device in megabits per second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20938">Internet Download Speed</a>
+        /// </para>
         /// </summary>
-        public  InternetDownloadSpeed { get; set; }
+        public System.Decimal? InternetDownloadSpeed { get; set; }
 
         /// <summary>
-        /// 
+        /// Internet Speed Test Date Time
+        /// <para>
+        /// The date and, optionally, time that the information was gathered.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20940">Internet Speed Test Date Time</a>
+        /// </para>
         /// </summary>
-        public  InternetSpeedTestDateTime { get; set; }
+        public System.DateTime? InternetSpeedTestDateTime { get; set; }
 
         /// <summary>
-        /// 
+        /// Internet Upload Speed
+        /// <para>
+        /// The speed that data or information can be sent from one's device to another device or server on the internet in megabits per second.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20941">Internet Upload Speed</a>
+        /// </para>
         /// </summary>
-        public  InternetUploadSpeed { get; set; }
+        public System.Decimal? InternetUploadSpeed { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonDigitalAccess"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid? PersonDigitalAccessId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonLearningDevice"/> model
         /// </summary>
-        public Guid? RecordStartDateTime { get; set; }
+        public Guid? PersonLearningDeviceId { get; set; }
 
     }
 }

@@ -12,14 +12,9 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPerson : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPersonMaster"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid? PersonMasterId { get; set; }
 
     }
 }

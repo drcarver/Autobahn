@@ -1,25 +1,15 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonMasterModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The PersonMaster Model
      /// </summary>
     public partial class PersonMasterModel : AutobahnBase, Interfaces.IPersonMaster
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? RecordStartDateTime { get; set; }
-
     }
 }

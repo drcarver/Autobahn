@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   IPEDSFinanceModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Models
+namespace Autobahn.Postsecondary.Interfaces
 {
      /// <summary>
      /// The IPEDSFinance Model
@@ -14,74 +14,81 @@ namespace Autobahn.Postsecondary.Models
     public partial class IPEDSFinanceModel : AutobahnBase, Interfaces.IIPEDSFinance
     {
         /// <summary>
-        /// 
+        /// Financial Accounting Period Actual Value
+        /// <para>
+        /// The actual value of a financial account for the specified accounting period or fiscal year.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20317">Financial Accounting Period Actual Value</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationFinancialId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFinancialPosition"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? RefIPEDSFASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public  RefIPEDSFASBFinancialPositionId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFunctionalExpense"/> model
         /// </summary>
         public Guid? RefIPEDSFASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// 
+        /// IPEDS Finance FASB Pell Grant Transactions
+        /// <para>
+        /// Method of reporting Pell Grants in IPEDS by degree-granting private, not-for-profit institutions and public institutions using FASB Reporting Standards.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20661">IPEDS Finance FASB Pell Grant Transactions</a>
+        /// </para>
         /// </summary>
-        public  RefIPEDSFASBPellGrantTransactionsId { get; set; }
+        public Guid? RefIPEDSFASBPellGrantTransactionsId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenue"/> model
         /// </summary>
-        public  RefIPEDSFASBRevenueId { get; set; }
+        public Guid? RefIPEDSFASBRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenueRestriction"/> model
         /// </summary>
-        public  RefIPEDSFASBRevenueRestrictionId { get; set; }
+        public Guid? RefIPEDSFASBRevenueRestrictionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
-        public  RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
+        public Guid? RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFinancialPosition"/> model
         /// </summary>
-        public  RefIPEDSGASBFinancialPositionId { get; set; }
+        public Guid? RefIPEDSGASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFunctionalExpense"/> model
         /// </summary>
-        public  RefIPEDSGASBFunctionalExpenseId { get; set; }
+        public Guid? RefIPEDSGASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBRevenue"/> model
         /// </summary>
-        public  RefIPEDSGASBRevenueId { get; set; }
+        public Guid? RefIPEDSGASBRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
-        public  RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
+        public Guid? RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSIntercollegiateAthleticsExpenses"/> model
         /// </summary>
-        public  RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
+        public Guid? RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSNaturalExpense"/> model
         /// </summary>
-        public  RefIPEDSNaturalExpenseId { get; set; }
+        public Guid? RefIPEDSNaturalExpenseId { get; set; }
 
     }
 }

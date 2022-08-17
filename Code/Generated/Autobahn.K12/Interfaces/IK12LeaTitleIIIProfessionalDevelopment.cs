@@ -1,6 +1,6 @@
 //***************************************************************************
 //* DomainName: Elementary and Secondary (K12) Interfaces (used by both models and View Models
-//* FileName:   IK12LeaTitleIIIProfessionalDevelopment.cs
+//* FileName:   IK12LEATitleIIIProfessionalDevelopment.cs
 //***************************************************************************
 
 using Autobahn.Common.Interfaces;
@@ -8,24 +8,9 @@ using Autobahn.Common.Interfaces;
 namespace Autobahn.K12.Interfaces
 {
      /// <summary>
-     /// The IK12LeaTitleIIIProfessionalDevelopment Interface
+     /// The IK12LEATitleIIIProfessionalDevelopment Interface
      /// </summary>
-    public partial interface IK12LeaTitleIIIProfessionalDevelopment : IAutobahnBase
+    public partial interface IK12LEATitleIIIProfessionalDevelopment : IAutobahnBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordEndDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
-
     }
 }

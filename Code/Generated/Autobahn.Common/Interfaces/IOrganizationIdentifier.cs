@@ -12,27 +12,28 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationIdentifier : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Course Identifier
+        /// <para>
+        /// The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19055">Course Identifier</a>
+        /// </para>
         /// </summary>
-         Identifier { get; set; }
+        System.String Identifier { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationentificationSystem"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefOrganizationIdentificationSystemId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RefOrganizationIdentificationSystemId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefOrganizationentifierType"/> model
         /// </summary>
         Guid? RefOrganizationIdentifierTypeId { get; set; }
 

@@ -12,19 +12,20 @@ namespace Autobahn.Common.Interfaces
     public partial interface IOrganizationWebsite : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Web Site Address
+        /// <para>
+        /// The Uniform Resource Locator (URL) for the unique address of a Web page.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19300">Web Site Address</a>
+        /// </para>
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? Website { get; set; }
+        System.String Website { get; set; }
 
     }
 }

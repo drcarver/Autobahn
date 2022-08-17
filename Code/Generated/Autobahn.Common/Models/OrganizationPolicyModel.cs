@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationPolicyModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationPolicy Model
@@ -12,19 +12,22 @@ namespace Autobahn.Common.Models
     public partial class OrganizationPolicyModel : AutobahnBase, Interfaces.IOrganizationPolicy
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public Guid? PolicyType { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Personnel Policy Type
+        /// <para>
+        /// Policies related to personnel in the organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19842">Personnel Policy Type</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public System.String PolicyType { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public System.String Value { get; set; }
 
     }
 }

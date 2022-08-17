@@ -13,14 +13,20 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencySetRubricCriterion : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencySet"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid CompetencySetId { get; set; }
 
         /// <summary>
-        /// 
+        /// Rubric Criterion Category
+        /// <para>
+        /// A textual label for category by which Rubric Criterion may be grouped.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20441">Rubric Criterion Category</a>
+        /// </para>
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid RubricCriterionId { get; set; }
 
     }
 }

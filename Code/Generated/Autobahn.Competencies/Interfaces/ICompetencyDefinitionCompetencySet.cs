@@ -13,14 +13,14 @@ namespace Autobahn.Competencies.Interfaces
     public partial interface ICompetencyDefinitionCompetencySet : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencyDefinition"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid CompetencyDefinitionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="ICompetencySet"/> model
         /// </summary>
-        Guid? RecordStartDateTime { get; set; }
+        Guid CompetencySetId { get; set; }
 
     }
 }

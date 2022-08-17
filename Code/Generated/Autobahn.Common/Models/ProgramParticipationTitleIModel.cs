@@ -1,0 +1,25 @@
+//**********************************************************
+//* DomainName: Common Models
+//* FileName:   ProgramParticipationTitleIModel.cs
+//***************************************************************************
+
+
+namespace Autobahn.Common.Interfaces
+{
+     /// <summary>
+     /// The ProgramParticipationTitleI Model
+     /// </summary>
+    public partial class ProgramParticipationTitleIModel : AutobahnBase, Interfaces.IProgramParticipationTitleI
+    {
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IPersonProgramParticipation"/> model
+        /// </summary>
+        public Guid PersonProgramParticipationId { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IRefTitleIIndicator"/> model
+        /// </summary>
+        public Guid? RefTitleIIndicatorId { get; set; }
+
+    }
+}

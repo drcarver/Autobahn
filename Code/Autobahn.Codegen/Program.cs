@@ -6,6 +6,154 @@ namespace AutobahnCodeGen
 {
     internal class Program
     {
+        //List<string> propertiesToIgnore = new List<string>
+        //{
+        //    "RecordStartDateTime",
+        //    "RecordEndDateTime",
+        //    "RecordStatusId",
+        //    "Description",
+        //    "Code",
+        //    "Definition",
+        //    "RefJurisdictionId",
+        //    "SortOrder",
+        //    "DataCollectionId",
+        //    $"{type.Name}Id"
+        //};
+
+        /// <summary>
+        /// Set the domain of the table based on it name
+        /// </summary>
+        /// <param name="autobahnDomains"></param>
+        /// <param name="table"></param>
+        static void SetTableDomain(List<AutobahnDomain> autobahnDomains,  ref AutobahnTable table)
+        {
+            // Set the domains in the tablesMetadata
+            var comdom = autobahnDomains.First(d => d.Module == "Common");
+            var assesdom = autobahnDomains.First(d => d.Module == "Assessments");
+            var aedom = autobahnDomains.First(d => d.Module == "AdultEducation");
+            var eldom = autobahnDomains.First(d => d.Module == "EarlyLearning");
+            var lrdom = autobahnDomains.First(d => d.Module == "LearningResources");
+            var k12dom = autobahnDomains.First(d => d.Module == "K12");
+            var facdom = autobahnDomains.First(d => d.Module == "Facilities");
+            var psdom = autobahnDomains.First(d => d.Module == "Postsecondary");
+            var compdom = autobahnDomains.First(d => d.Module == "Competencies");
+            var creddom = autobahnDomains.First(d => d.Module == "Credentials");
+            var ctedom = autobahnDomains.First(d => d.Module == "CTE");
+            var authdom = autobahnDomains.First(d => d.Module == "Authorization");
+            var wfdom = autobahnDomains.First(d => d.Module == "Workforce");
+            var invaliddom = autobahnDomains.First(d => d.Module == "Invalid");
+
+            if (table.TableName.StartsWith("Ae")
+                || table.TableName.EndsWith("AE")
+                || table.TableName.StartsWith("RefAE")
+                || table.TableName.StartsWith("RefAe"))
+            {
+                table.ModuleName = aedom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("EL")
+                || table.TableName.StartsWith("EarlyChildhood")
+                || table.TableName.EndsWith("EL")
+                || table.TableName.StartsWith("RefEL")
+                || table.TableName.StartsWith("RefEarlyChildhood"))
+            {
+                table.ModuleName = eldom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Assessment")
+                || table.TableName.StartsWith("Rubric")
+                || table.TableName.StartsWith("Goal")
+                || table.TableName.StartsWith("Learner")
+                || table.TableName.StartsWith("RefAssessment")
+                || table.TableName.StartsWith("RefRubric")
+                || table.TableName.StartsWith("RefGoal")
+                || table.TableName.StartsWith("RefLearner"))
+            {
+                table.ModuleName = assesdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Learning")
+                || table.TableName.StartsWith("Peer")
+                || table.TableName.StartsWith("RefLearning")
+                || table.TableName.StartsWith("RefPeer"))
+            {
+                table.ModuleName = lrdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("K12")
+                || table.TableName.StartsWith("RefK12"))
+            {
+                table.ModuleName = k12dom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Build")
+                || table.TableName.StartsWith("Facility")
+                || table.TableName.StartsWith("RefBuild")
+                || table.TableName.StartsWith("RefFacility"))
+            {
+                table.ModuleName = facdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Ps")
+                || table.TableName.StartsWith("PS")
+                || table.TableName.IndexOf("IPEDS", StringComparison.InvariantCulture) > -1
+                || table.TableName.StartsWith("RefPs") 
+                || table.TableName.StartsWith("RefPS"))
+            {
+                table.ModuleName = psdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Competency")
+                || table.TableName.StartsWith("RefCompet"))
+            {
+                table.ModuleName = compdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Credential")
+                || table.TableName.StartsWith("RefCred"))
+            {
+                table.ModuleName = creddom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Cte")
+                || table.TableName.EndsWith("Cte")
+                || table.TableName.StartsWith("RefCte"))
+            {
+                table.ModuleName = ctedom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Organization")
+                || table.TableName.StartsWith("Person")
+                || table.TableName.StartsWith("Staff")
+                || table.TableName.StartsWith("Teacher")
+                || table.TableName.StartsWith("Role")
+                || table.TableName.StartsWith("RefOrganization")
+                || table.TableName.StartsWith("RefPerson")
+                || table.TableName.StartsWith("RefStaff")
+                || table.TableName.StartsWith("RefTeacher")
+                || table.TableName.StartsWith("RefRole"))
+            {
+                table.ModuleName = comdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("App")
+                || table.TableName.StartsWith("Auth")
+                || table.TableName.StartsWith("RefApp")
+                || table.TableName.StartsWith("RefAuth"))
+            {
+                table.ModuleName = authdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            if (table.TableName.StartsWith("Workforce")
+                || table.TableName.StartsWith("RefWorkforce"))
+            {
+                table.ModuleName = wfdom?.Module;
+                table.Id ??= Guid.NewGuid();
+            }
+            table.ModuleName ??= invaliddom?.Module;
+            table.Id ??= Guid.NewGuid();
+        }
+
         /// <summary>
         /// Return the list of autobahn domains
         /// </summary>
@@ -23,193 +171,117 @@ namespace AutobahnCodeGen
         private static List<AutobahnTable> GetAutobahnTables(Assembly types, List<AutobahnDomain> autobahnDomains)
         {
             var csv = new CSVServices();
-            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
-            var cedsElementsMetadata = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv", false, "|");
+            var comdom = autobahnDomains.First(d => d.Module == "Common");
+
+            // Add any missing tables and set the domain for each table
+            foreach (var type in types.GetTypes())
+            {
+                if (!type.IsClass)
+                {
+                    continue;
+                }
+                var table = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
+                                                && string.IsNullOrEmpty(t.ColumnName));
+                if (table == null)
+                {
+                    table = new AutobahnTable
+                    {
+                        ModuleName = string.Empty,
+                        TableName = type.Name,
+                        ColumnName = string.Empty,
+                        GlobalId = string.Empty,
+                        Version = "--dbtable--"
+                    };
+                    autobahnTables.Add(table);
+                }
+
+                table.ColumnType = string.Empty;
+                SetTableDomain(autobahnDomains, ref table);
+            }
 
             //Add any missing classes and columns from the entities
-            foreach (var classtype in types.GetTypes())
+            foreach (var type in types.GetTypes())
             {
-                if (!classtype.IsClass)
+                if (!type.IsClass)
                 {
                     continue;
                 }
 
-                var tableName = classtype.GetCustomAttributes<TableAttribute>().First();
-                AutobahnTable? model = autobahnTables.FirstOrDefault(t => t.TableName == tableName?.Name);
-                var propertytype = string.Empty;
-                foreach (var prop in classtype.GetProperties())
+                var tableName = type.GetCustomAttributes<TableAttribute>().First();
+                AutobahnTable? table = autobahnTables.FirstOrDefault(t => t.TableName == tableName?.Name
+                                                                          && string.IsNullOrEmpty(t.ColumnName));
+                if (table == null)
                 {
-                    List<string> propertiesToIgnore = new List<string>
-                    {
-                        "RecordStartDateTime",
-                        "RecordEndDateTime",
-                        "RecordStatusId",
-                        "Description",
-                        "Code",
-                        "Definition",
-                        "RefJurisdictionId",
-                        "SortOrder",
-                        "DataCollectionId",
-                        $"{classtype.Name}Id"
-                    };
+                    continue;
+                }
+                foreach (var prop in type.GetProperties())
+                {
                     if (prop.GetAccessors()[0].IsVirtual)
                     {
                         continue;
                     }
 
-                    if (prop.Name.EndsWith("Id"))
+                    var col = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
+                                                                 && t.ColumnName == prop.Name);
+                    if (col == null)
                     {
-                        propertytype = Nullable.GetUnderlyingType(prop.PropertyType) != null ? "Guid?" : "Guid";
-                    }
-                    else
-                    {
-                        propertytype = Nullable.GetUnderlyingType(prop.PropertyType) != null
-                            ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?"
-                            : $"{prop.PropertyType}";
-                    }
-
-                    var existing = cedsElementsMetadata.FirstOrDefault(t => t.TechnicalName == prop.Name);
-                    if (model == null)
-                    {
-                        if (propertiesToIgnore.Contains(prop.Name))
+                        col = new AutobahnTable
                         {
-                            continue;
-                        }
-                        var item = new AutobahnTable
-                        {
-                            TableName = classtype.Name,
                             ColumnName = prop.Name,
-                            GlobalId = existing?.GlobalID,
-                            ColumnType = propertytype,
+                            ModuleName = table?.ModuleName,
+                            TableName = table?.TableName,
+                            GlobalId = string.Empty,
+                            ColumnType = string.Empty,
                             Version = "--dbtable--"
                         };
-                        autobahnTables.Add(item);
+                        autobahnTables.Add(col);
+                        SetTableDomain(autobahnDomains, ref col);
+                    }
+
+                    col.Id ??= Guid.NewGuid();
+                    if (prop.Name.EndsWith("Id"))
+                    {
+                        col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null ? "Guid?" : "Guid";
+
+                        // fkref so set the domain of the referenced table to this domain or
+                        // common if it was in another domain
+                        var fkref = autobahnTables.FirstOrDefault(t => t.TableName == col.ColumnName.Replace("Id", string.Empty)
+                                    && string.IsNullOrEmpty(t.ColumnName));
+                        if (fkref == null)
+                        {
+                            fkref = new AutobahnTable
+                            {
+                                ColumnName = string.Empty,
+                                ModuleName = table?.ModuleName,
+                                TableName = col.ColumnName.Replace("Id", string.Empty),
+                                GlobalId = string.Empty,
+                                ColumnType = string.Empty,
+                                Version = "--dbtable--"
+                            };
+                            autobahnTables.Add(fkref);
+                            SetTableDomain(autobahnDomains, ref fkref);
+                        }
+                        if (fkref.ModuleName == string.Empty)
+                        {
+                            foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
+                            {
+                                item.ModuleName = col.ModuleName;
+                            }
+                        }
+                        if (fkref.ModuleName != "Invalid" && fkref.ModuleName != col.ModuleName)
+                        {
+                            foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
+                            {
+                                item.ModuleName = comdom?.Module;
+                            }
+                        }
                     }
                     else
                     {
-                        model.ColumnType = propertytype;
-                        model.Id = Guid.NewGuid();
-                    }
-                }
-            }
-
-            // Set the domains in the tablesMetadata
-            var comdom = autobahnDomains.First(d => d.Module == "Common");
-            var assesdom = autobahnDomains.First(d => d.Module == "Assessments");
-            var aedom = autobahnDomains.First(d => d.Module == "AdultEducation");
-            var eldom = autobahnDomains.First(d => d.Module == "EarlyLearning");
-            var lrdom = autobahnDomains.First(d => d.Module == "LearningResources");
-            var k12dom = autobahnDomains.First(d => d.Module == "K12");
-            var facdom = autobahnDomains.First(d => d.Module == "Facilities");
-            var psdom = autobahnDomains.First(d => d.Module == "Postsecondary");
-            var compdom = autobahnDomains.First(d => d.Module == "Competencies");
-            var creddom = autobahnDomains.First(d => d.Module == "Credentials");
-            var ctedom = autobahnDomains.First(d => d.Module == "CTE");
-            var authdom = autobahnDomains.First(d => d.Module == "Authorization");
-            var wfdom = autobahnDomains.First(d => d.Module == "Workforce");
-            var invaliddom = autobahnDomains.First(d => d.Module == "Invalid");
-            foreach (var table in autobahnTables)
-            {
-                if (table.TableName.StartsWith("Ae")
-                    || table.TableName.EndsWith("AE"))
-                {
-                    table.AutobahnDomainId = aedom?.Id;
-                }
-                if (table.TableName.StartsWith("EL")
-                    || table.TableName.StartsWith("EarlyChildhood")
-                    || table.TableName.EndsWith("EL"))
-                {
-                    table.AutobahnDomainId = eldom?.Id;
-                }
-                if (table.TableName.StartsWith("Assessment")
-                    || table.TableName.StartsWith("Rubric")
-                    || table.TableName.StartsWith("Goal")
-                    || table.TableName.StartsWith("Learner"))
-                {
-                    table.AutobahnDomainId = assesdom?.Id;
-                }
-                if (table.TableName.StartsWith("Learning")
-                    || table.TableName.StartsWith("Peer"))
-                {
-                    table.AutobahnDomainId = lrdom?.Id;
-                }
-                if (table.TableName.StartsWith("K12"))
-                {
-                    table.AutobahnDomainId = k12dom?.Id;
-                }
-                if (table.TableName.StartsWith("Build")
-                    || table.TableName.StartsWith("Facility"))
-                {
-                    table.AutobahnDomainId = facdom?.Id;
-                }
-                if (table.TableName.StartsWith("Ps")
-                    || table.TableName.StartsWith("PS")
-                    || table.TableName.IndexOf("IPEDS", StringComparison.InvariantCulture) > -1)
-                {
-                    table.AutobahnDomainId = psdom?.Id;
-                }
-                if (table.TableName.StartsWith("Competency"))
-                {
-                    table.AutobahnDomainId = compdom?.Id;
-                }
-                if (table.TableName.StartsWith("Credential"))
-                {
-                    table.AutobahnDomainId = creddom?.Id;
-                }
-                if (table.TableName.StartsWith("Cte")
-                    || table.TableName.EndsWith("Cte"))
-                {
-                    table.AutobahnDomainId = ctedom?.Id;
-                }
-                if (table.TableName.StartsWith("Organization")
-                    || table.TableName.StartsWith("Person")
-                    || table.TableName.StartsWith("Staff")
-                    || table.TableName.StartsWith("Teacher")
-                    || table.TableName.StartsWith("Role"))
-                {
-                    table.AutobahnDomainId = comdom?.Id;
-                }
-                if (table.TableName.StartsWith("App")
-                    || table.TableName.StartsWith("Auth"))
-                {
-                    table.AutobahnDomainId = authdom?.Id;
-                }
-                if (table.TableName.StartsWith("Workforce"))
-                {
-                    table.AutobahnDomainId = wfdom?.Id;
-                }
-                table.AutobahnDomainId ??= invaliddom?.Id;
-            }
-
-            foreach (var table in autobahnTables)
-            {
-                var dom = autobahnDomains.FirstOrDefault(d => d?.Id == table.AutobahnDomainId);
-                table.ModuleName = dom?.Module;
-                table.Id ??= Guid.NewGuid();
-            }
-
-            foreach (var item in types.GetTypes())
-            {
-                foreach (var prop in item.GetProperties())
-                {
-                    if (prop.Name.StartsWith("Ref"))
-                    {
-                        var reftable = autobahnTables.FirstOrDefault(t =>
-                            t.TableName == prop.Name.Replace("Id", string.Empty) && string.IsNullOrEmpty(t.ColumnName));
-                        var dom = autobahnTables.FirstOrDefault(t => t.TableName == item.Name && t.ColumnName == prop.Name);
-                        if (reftable?.AutobahnDomainId != null)
-                        {
-                            reftable.AutobahnDomainId = dom?.AutobahnDomainId;
-                            reftable.ModuleName = dom?.ModuleName;
-                        }
-                        if (reftable?.AutobahnDomainId != dom?.AutobahnDomainId)
-                        {
-                            if (reftable != null)
-                            {
-                                reftable.AutobahnDomainId = comdom?.Id;
-                                reftable.ModuleName = comdom?.Module;
-                            }
-                        }
+                        col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null
+                            ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?"
+                            : $"{prop.PropertyType}";
                     }
                 }
             }
@@ -220,86 +292,23 @@ namespace AutobahnCodeGen
             return autobahnTables;
         }
 
-        private static List<AutobahnElement> GetAutobahnElements(List<AutobahnDomain> domains,  List<AutobahnTable> tables, Assembly types)
+        private static List<AutobahnElement> GetAutobahnElements()
         {
             var csv = new CSVServices();
-            var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
-            var autobahnElements = new List<AutobahnElement>();
+            var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv", "|");
 
-            // create a lookup table of models to properties
-            foreach (var model in types.GetTypes().ToList())
+            // Cleanup the Global Id
+            int output;
+            foreach (var element in CEDSElements.Where(element => !Int32.TryParse(element.GlobalID, out output)))
             {
-                if (!model.IsClass)
-                {
-                    continue;
-                }
-
-                // Copy over the element data
-                foreach (var prop in model.GetProperties())
-                {
-                    CEDSElement? elementMeta;
-
-                    var tableMeta = tables.FirstOrDefault(t => t.TableName == model.Name && t.ColumnName == prop.Name);
-                    List<string> propertiesToIgnore = new List<string>
-                    {
-                        "RecordStartDateTime",
-                        "RecordEndDateTime",
-                        "RecordStatusId",
-                        "Description",
-                        "Code",
-                        "Definition",
-                        "RefJurisdictionId",
-                        "SortOrder",
-                        "DataCollectionId",
-                        $"{model.Name}Id"
-                    };
-
-                    // no virtual properties.  We will handle those later as service calls
-                    if (propertiesToIgnore.Contains(prop.Name)
-                        || prop.GetAccessors()[0].IsVirtual)
-                    {
-                        continue;
-                    }
-
-                    var propName = prop.Name;
-                    if (tableMeta == null)
-                    {
-                        string propAsTable = propName;
-                        if (propName.EndsWith("Id"))
-                        {
-                            propAsTable = propName.Replace("Id", String.Empty);
-                        }
-                        tableMeta = tables.FirstOrDefault(t => t.TableName == propAsTable
-                                                               && t.ColumnName == null);
-                    }
-                    var autobahnElement = autobahnElements.FirstOrDefault(e => e.TechnicalName == propName);
-                    if (autobahnElement != null  
-                        && !autobahnElement.AutobahnDomainList.Contains(tableMeta?.AutobahnDomainId))
-                    {
-                        autobahnElement.AutobahnDomainList.Add(tableMeta?.AutobahnDomainId);
-                    }
-                    if (autobahnElement != null
-                        && !autobahnElement.AutobahnTableList.Contains(tableMeta?.AutobahnDomainId))
-                    {
-                        autobahnElement?.AutobahnTableList.Add(tableMeta?.Id);
-                    }
-                }
-            }
-
-            var comdom = domains.First(d => d.Module == "Common");
-            foreach (var element in autobahnElements)
-            {
-                if (element.AutobahnDomainList.Count > 1)
-                {
-                    element.AutobahnDomainList.Clear();
-                    element.AutobahnDomainList.Add(comdom.Id);
-                }
+                element.GlobalID = string.Empty;
             }
 
             // save off the updated elements
-            csv.WriteAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", autobahnElements);
+            csv.WriteCEDSlementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", CEDSElements, "|");
 
-            return autobahnElements;
+            // return the new list
+            return csv.ReadAutobahnElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", "|"); ;
         }
 
         static void Main(string[] args)
@@ -308,17 +317,8 @@ namespace AutobahnCodeGen
             var csv = new CSVServices();
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
             var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-            var autobahnTables = GetAutobahnTables(types, autobahnDomains);
-            var autobahnElements = GetAutobahnElements(autobahnDomains, autobahnTables, types);
-            
-            var sdcnt = autobahnElements.Count(e => e.AutobahnDomainList.Count == 1);
-
-            var secnt = autobahnElements.Count(e => e.AutobahnTableList.Count == 1);
-            var mecnt = autobahnElements.Count(e => e.AutobahnTableList.Count > 1);
-
-            var refcnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref"));
-            var refscnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref") && e.AutobahnTableList.Count == 1);
-            var refmcnt = autobahnElements.Count(e => e.TechnicalName.StartsWith("Ref") && e.AutobahnTableList.Count > 1);
+            var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
+            var autobahnElements = GetAutobahnElements();
 
             MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList());
         }

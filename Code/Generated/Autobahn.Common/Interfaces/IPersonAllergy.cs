@@ -12,29 +12,30 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonAllergy : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-        Guid? ReactionDescription { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Allergy Reaction Description
+        /// <para>
+        /// Describes symptoms know to be associated with a person's reaction to an allergen.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20247">Allergy Reaction Description</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        System.String ReactionDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAllergySeverity"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefAllergySeverityId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefAllergyType"/> model
         /// </summary>
-         RefAllergySeverityId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefAllergyTypeId { get; set; }
+        Guid RefAllergyTypeId { get; set; }
 
     }
 }

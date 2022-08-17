@@ -14,14 +14,13 @@ namespace Autobahn.Codegen.Maps
     {
         public AutobahnTableMap()
         {
-            Map(x => x.GlobalId).Index(0);
-            Map(x => x.TableName).Index(1);
-            Map(x => x.ColumnName).Index(2);
-            Map(x => x.Version).Index(3);
-            Map(x => x.ColumnType).Index(4);
-            Map(x => x.AutobahnDomainId).Index(5);
-            Map(x => x.Id).Index(5);
-            Map(x => x.ModuleName).Index(6);
+            Map(x => x.GlobalId).Name("GlobalId");
+            Map(x => x.TableName).Name("TableName");
+            Map(x => x.ColumnName).Name("ColumnName");
+            Map(x => x.Version).Name("Version");
+            Map(x => x.ColumnType).Name("ColumnType");
+            Map(x => x.Id).Name("Id");
+            Map(x => x.ModuleName).Name("ModuleName");
     }
     }
 }

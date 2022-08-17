@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationImageModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationImage Model
@@ -12,19 +12,20 @@ namespace Autobahn.Common.Models
     public partial class OrganizationImageModel : AutobahnBase, Interfaces.IOrganizationImage
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Organization Image URL
+        /// <para>
+        /// The Uniform Resource Locator (URL) for the unique address of an image representing the Organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20644">Organization Image URL</a>
+        /// </para>
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public Guid? URL { get; set; }
+        public System.String URL { get; set; }
 
     }
 }

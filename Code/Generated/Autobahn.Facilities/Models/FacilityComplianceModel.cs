@@ -1,12 +1,12 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   FacilityComplianceModel.cs
-//**********************************************************
+//***************************************************************************
 
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Models
+namespace Autobahn.Facilities.Interfaces
 {
      /// <summary>
      /// The FacilityCompliance Model
@@ -14,59 +14,107 @@ namespace Autobahn.Facilities.Models
     public partial class FacilityComplianceModel : AutobahnBase, Interfaces.IFacilityCompliance
     {
         /// <summary>
-        /// 
+        /// Building Institutional Equipment Description
+        /// <para>
+        /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20782">Building Institutional Equipment Description</a>
+        /// </para>
         /// </summary>
-        public  ComponentOrFixtureCheckDate { get; set; }
+        public Guid? BuildingSystemComponentId { get; set; }
 
         /// <summary>
-        /// 
+        /// Component or Fixture Check Date
+        /// <para>
+        /// The month, day, and year that the condition of a system, component, equipment, or fixture was  checked.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20879">Component or Fixture Check Date</a>
+        /// </para>
         /// </summary>
-        public  FacilityComplianceDeterminationDate { get; set; }
+        public System.DateTime? ComponentOrFixtureCheckDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Compliance Determination Date
+        /// <para>
+        /// The month, day, and year that the school, building, site, system, component, equipment, or fixture compliance status was determined.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20818">Facility Compliance Determination Date</a>
+        /// </para>
         /// </summary>
-        public  FacilityComplianceName { get; set; }
+        public System.DateTime? FacilityComplianceDeterminationDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Compliance Name
+        /// <para>
+        /// The name of the inspection or process that indicates conformity to the requirements or standards specified in federal, state, or local standards or codes.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20819">Facility Compliance Name</a>
+        /// </para>
         /// </summary>
-        public  FacilityComponentDeficiencyDescription { get; set; }
+        public System.String FacilityComplianceName { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Component Deficiency Description
+        /// <para>
+        /// A description of the component, system, or finish that needs replacement, repair, or maintenance to perform at an optimal level.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20820">Facility Component Deficiency Description</a>
+        /// </para>
         /// </summary>
-        public  FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
+        public System.String FacilityComponentDeficiencyDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Estimated Cost to Eliminate Deferred Maintenance
+        /// <para>
+        /// The estimated cost to bring systems, components, finishes, fixtures, or equipment to a state of good repair.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20822">Facility Estimated Cost to Eliminate Deferred Maintenance</a>
+        /// </para>
         /// </summary>
-        public  FacilityInspectionScoreResultDescription { get; set; }
+        public System.Decimal? FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Inspection Score Result Description
+        /// <para>
+        /// The description of a meaningful raw score of statistical expression of the performance on an inspection.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20827">Facility Inspection Score Result Description</a>
+        /// </para>
         /// </summary>
-        public  FacilityInspectionViolationDescription { get; set; }
+        public System.String FacilityInspectionScoreResultDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Facility Inspection Violation Description
+        /// <para>
+        /// A description of the standard violation(s) found in the inspection.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20828">Facility Inspection Violation Description</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public System.String FacilityInspectionViolationDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IFacilityMandate"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
+        public Guid? FacilityMandateId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilityComplianceStatus"/> model
         /// </summary>
         public Guid? RefFacilityComplianceStatusId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilityMaintStandardType"/> model
         /// </summary>
-        public  RefFacilityMaintStandardTypeId { get; set; }
+        public Guid? RefFacilityMaintStandardTypeId { get; set; }
 
     }
 }

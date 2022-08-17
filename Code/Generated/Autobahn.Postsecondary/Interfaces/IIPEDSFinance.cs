@@ -13,74 +13,81 @@ namespace Autobahn.Postsecondary.Interfaces
     public partial interface IIPEDSFinance : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Financial Accounting Period Actual Value
+        /// <para>
+        /// The actual value of a financial account for the specified accounting period or fiscal year.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20317">Financial Accounting Period Actual Value</a>
+        /// </para>
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid OrganizationFinancialId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFinancialPosition"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid? RefIPEDSFASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RefIPEDSFASBFinancialPositionId { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFunctionalExpense"/> model
         /// </summary>
         Guid? RefIPEDSFASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// 
+        /// IPEDS Finance FASB Pell Grant Transactions
+        /// <para>
+        /// Method of reporting Pell Grants in IPEDS by degree-granting private, not-for-profit institutions and public institutions using FASB Reporting Standards.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20661">IPEDS Finance FASB Pell Grant Transactions</a>
+        /// </para>
         /// </summary>
-         RefIPEDSFASBPellGrantTransactionsId { get; set; }
+        Guid? RefIPEDSFASBPellGrantTransactionsId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenue"/> model
         /// </summary>
-         RefIPEDSFASBRevenueId { get; set; }
+        Guid? RefIPEDSFASBRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenueRestriction"/> model
         /// </summary>
-         RefIPEDSFASBRevenueRestrictionId { get; set; }
+        Guid? RefIPEDSFASBRevenueRestrictionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
-         RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
+        Guid? RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFinancialPosition"/> model
         /// </summary>
-         RefIPEDSGASBFinancialPositionId { get; set; }
+        Guid? RefIPEDSGASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFunctionalExpense"/> model
         /// </summary>
-         RefIPEDSGASBFunctionalExpenseId { get; set; }
+        Guid? RefIPEDSGASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBRevenue"/> model
         /// </summary>
-         RefIPEDSGASBRevenueId { get; set; }
+        Guid? RefIPEDSGASBRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
-         RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
+        Guid? RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSIntercollegiateAthleticsExpenses"/> model
         /// </summary>
-         RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
+        Guid? RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefIPEDSNaturalExpense"/> model
         /// </summary>
-         RefIPEDSNaturalExpenseId { get; set; }
+        Guid? RefIPEDSNaturalExpenseId { get; set; }
 
     }
 }

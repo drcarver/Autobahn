@@ -13,29 +13,30 @@ namespace Autobahn.Facilities.Interfaces
     public partial interface IFacilityManagementPlan : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Facilities Plan Description
+        /// <para>
+        /// A description of the management and accountability plan.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20863">Facilities Plan Description</a>
+        /// </para>
         /// </summary>
-         FacilitiesPlanDescription { get; set; }
+        System.String FacilitiesPlanDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IFacilityManagement"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid FacilityManagementId { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilitiesMgmtEmergencyType"/> model
         /// </summary>
         Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefFacilitiesPlanType"/> model
         /// </summary>
-         RefFacilitiesPlanTypeId { get; set; }
+        Guid? RefFacilitiesPlanTypeId { get; set; }
 
     }
 }

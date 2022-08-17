@@ -12,24 +12,25 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonImmunization : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Immunization Date
+        /// <para>
+        /// The year, month and day of an immunization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19306">Immunization Date</a>
+        /// </para>
         /// </summary>
-        Guid? ImmunizationDate { get; set; }
+        System.DateTime ImmunizationDate { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefImmunizationType"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-         RefImmunizationTypeId { get; set; }
+        Guid RefImmunizationTypeId { get; set; }
 
     }
 }

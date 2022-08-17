@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationEmployeeBenefitModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The OrganizationEmployeeBenefit Model
@@ -12,29 +12,36 @@ namespace Autobahn.Common.Models
     public partial class OrganizationEmployeeBenefitModel : AutobahnBase, Interfaces.IOrganizationEmployeeBenefit
     {
         /// <summary>
-        /// 
+        /// Full-Time Employee Benefits
+        /// <para>
+        /// The benefits offered by a program/facility/employer for full-time staff.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19866">Full-Time Employee Benefits</a>
+        /// </para>
         /// </summary>
-        public Guid? FullTimeBenefitIndicator { get; set; }
+        public System.Boolean? FullTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
-        public  PartTimeBenefitIndicator { get; set; }
+        public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// 
+        /// Part-Time Employee Benefits
+        /// <para>
+        /// The benefits offered by a program/facility/employer for part-time staff.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19867">Part-Time Employee Benefits</a>
+        /// </para>
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public System.Boolean? PartTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefEmployeeBenefit"/> model
         /// </summary>
-        public  RecordStartDateTime { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RefEmployeeBenefitId { get; set; }
+        public Guid? RefEmployeeBenefitId { get; set; }
 
     }
 }

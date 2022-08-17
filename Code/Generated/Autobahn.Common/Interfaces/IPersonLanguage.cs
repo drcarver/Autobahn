@@ -12,24 +12,19 @@ namespace Autobahn.Common.Interfaces
     public partial interface IPersonLanguage : IAutobahnBase
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
         /// </summary>
-         RecordEndDateTime { get; set; }
+        Guid PersonId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
         /// </summary>
-         RecordStartDateTime { get; set; }
+        Guid RefLanguageId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefLanguageUseType"/> model
         /// </summary>
-         RefLanguageId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        Guid? RefLanguageUseTypeId { get; set; }
+        Guid RefLanguageUseTypeId { get; set; }
 
     }
 }

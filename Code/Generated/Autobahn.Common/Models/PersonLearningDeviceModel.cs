@@ -1,10 +1,10 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonLearningDeviceModel.cs
-//**********************************************************
+//***************************************************************************
 
 
-namespace Autobahn.Common.Models
+namespace Autobahn.Common.Interfaces
 {
      /// <summary>
      /// The PersonLearningDevice Model
@@ -12,29 +12,24 @@ namespace Autobahn.Common.Models
     public partial class PersonLearningDeviceModel : AutobahnBase, Interfaces.IPersonLearningDevice
     {
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
-        public  RecordEndDateTime { get; set; }
+        public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAccess"/> model
         /// </summary>
-        public Guid? RecordStartDateTime { get; set; }
+        public Guid? RefPrimaryLearningDeviceAccessId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAwayFromSchool"/> model
         /// </summary>
-        public  RefPrimaryLearningDeviceAccessId { get; set; }
+        public Guid? RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
 
         /// <summary>
-        /// 
+        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceProvider"/> model
         /// </summary>
-        public  RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public  RefPrimaryLearningDeviceProviderId { get; set; }
+        public Guid? RefPrimaryLearningDeviceProviderId { get; set; }
 
     }
 }
