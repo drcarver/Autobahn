@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// A unique number assigned by a school district to a school calendar.

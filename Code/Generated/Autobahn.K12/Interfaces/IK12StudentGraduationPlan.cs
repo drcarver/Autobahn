@@ -42,12 +42,12 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradeLevelWhenCourseTaken"/> model
+        /// Reference to an optional instance of the <see cref="RefGradeLevelWhenCourseTaken"/> model
         /// </summary>
         Guid? RefGradeLevelWhenCourseTakenId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         Guid? RefSCEDCourseSubjectAreaId { get; set; }
 

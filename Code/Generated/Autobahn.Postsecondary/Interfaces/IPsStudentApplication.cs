@@ -73,17 +73,17 @@ namespace Autobahn.Postsecondary.Interfaces
         System.Boolean? PostsecondaryApplicant { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdmittedStudent"/> model
+        /// Reference to an optional instance of the <see cref="RefAdmittedStudent"/> model
         /// </summary>
         Guid? RefAdmittedStudentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGpaWeightedIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefGpaWeightedIndicator"/> model
         /// </summary>
         Guid? RefGpaWeightedIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradePointAverageDomain"/> model
+        /// Reference to an optional instance of the <see cref="RefGradePointAverageDomain"/> model
         /// </summary>
         Guid? RefGradePointAverageDomainId { get; set; }
 

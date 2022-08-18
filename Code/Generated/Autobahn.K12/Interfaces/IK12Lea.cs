@@ -31,27 +31,22 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCharterLeaStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCharterLeaStatus"/> model
         /// </summary>
         Guid? RefCharterLeaStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaImprovementStatus"/> model
         /// </summary>
         Guid? RefLeaImprovementStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLEAImprovementStatus"/> model
-        /// </summary>
-         RefLEAImprovementStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaType"/> model
         /// </summary>
         Guid? RefLeaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPublicSchoolChoiceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefPublicSchoolChoiceStatus"/> model
         /// </summary>
         Guid? RefPublicSchoolChoiceStatusId { get; set; }
 

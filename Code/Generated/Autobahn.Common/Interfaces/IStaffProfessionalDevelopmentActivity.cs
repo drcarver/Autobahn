@@ -101,12 +101,12 @@ namespace Autobahn.Common.Interfaces
         Guid ProfessionalDevelopmentSessionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalDevelopmentFinancialSupport"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalDevelopmentFinancialSupport"/> model
         /// </summary>
         Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 

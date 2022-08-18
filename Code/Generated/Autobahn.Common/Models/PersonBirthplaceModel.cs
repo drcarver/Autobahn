@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      ///  The name of the city in which a person was born.
@@ -30,12 +30,12 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefCountry"/> model
         /// </summary>
         public Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefState"/> model
+        /// Reference to an optional instance of the <see cref="RefState"/> model
         /// </summary>
         public Guid? RefStateId { get; set; }
 

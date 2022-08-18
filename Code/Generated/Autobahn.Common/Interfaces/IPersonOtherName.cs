@@ -61,7 +61,7 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOtherNameType"/> model
+        /// Reference to an optional instance of the <see cref="RefOtherNameType"/> model
         /// </summary>
         Guid? RefOtherNameTypeId { get; set; }
 

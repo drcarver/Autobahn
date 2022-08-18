@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12SchoolCorrectiveAction Model
@@ -25,7 +25,7 @@ namespace Autobahn.K12.Interfaces
         public Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCorrectiveActionType"/> model
+        /// Reference to an optional instance of the <see cref="RefCorrectiveActionType"/> model
         /// </summary>
         public Guid RefCorrectiveActionTypeId { get; set; }
 

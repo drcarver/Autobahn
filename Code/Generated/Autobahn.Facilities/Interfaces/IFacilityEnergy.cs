@@ -37,17 +37,17 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnergySourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnergySourceType"/> model
         /// </summary>
         Guid? RefBuildingEnergySourceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityUtilityProviderType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityProviderType"/> model
         /// </summary>
         Guid? RefFacilityUtilityProviderTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityUtilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityType"/> model
         /// </summary>
         Guid? RefFacilityUtilityTypeId { get; set; }
 

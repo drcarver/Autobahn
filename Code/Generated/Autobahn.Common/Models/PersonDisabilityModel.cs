@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDisability Model
@@ -33,27 +33,27 @@ namespace Autobahn.Common.Interfaces
         public Guid? PrimaryDisabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccommodationsNeededType"/> model
+        /// Reference to an optional instance of the <see cref="RefAccommodationsNeededType"/> model
         /// </summary>
         public Guid? RefAccommodationsNeededTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityConditionStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityConditionStatusCode"/> model
         /// </summary>
         public Guid? RefDisabilityConditionStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityConditionType"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityConditionType"/> model
         /// </summary>
         public Guid? RefDisabilityConditionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityDeterminationSourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityDeterminationSourceType"/> model
         /// </summary>
         public Guid? RefDisabilityDeterminationSourceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEADisabilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEADisabilityType"/> model
         /// </summary>
         public Guid? RefIDEADisabilityTypeId { get; set; }
 

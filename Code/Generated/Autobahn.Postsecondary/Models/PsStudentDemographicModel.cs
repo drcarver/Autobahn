@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// Pell-eligible students whose parent or guardian was a member of the U.S. armed forces and died as a result of military service performed in Iraq or Afghanistan after the events of 9/11 or a public safety officer and died as a result of active service in the line of duty. At the time of the parent's or guardian's death, the student must be less than 24 years of age or enrolled in college or career school at least part-time.
@@ -65,42 +65,42 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusResidencyType"/> model
         /// </summary>
         public Guid? RefCampusResidencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCohortExclusion"/> model
+        /// Reference to an optional instance of the <see cref="RefCohortExclusion"/> model
         /// </summary>
         public Guid? RefCohortExclusionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDependencyStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDependencyStatus"/> model
         /// </summary>
         public Guid? RefDependencyStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMaternalEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefMaternalEducationLevel"/> model
         /// </summary>
         public Guid? RefMaternalEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNumberOfDependentsType"/> model
+        /// Reference to an optional instance of the <see cref="RefNumberOfDependentsType"/> model
         /// </summary>
         public Guid? RefNumberOfDependentsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPaternalEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPaternalEducationLevel"/> model
         /// </summary>
         public Guid? RefPaternalEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPsLepType"/> model
+        /// Reference to an optional instance of the <see cref="RefPsLepType"/> model
         /// </summary>
         public Guid? RefPsLepTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTuitionResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefTuitionResidencyType"/> model
         /// </summary>
         public Guid? RefTuitionResidencyTypeId { get; set; }
 

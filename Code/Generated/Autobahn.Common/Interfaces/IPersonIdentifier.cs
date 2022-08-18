@@ -28,12 +28,12 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
         /// </summary>
         Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonentificationSystem"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonentificationSystem"/> model
         /// </summary>
         Guid RefPersonIdentificationSystemId { get; set; }
 

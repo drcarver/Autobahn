@@ -23,12 +23,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAIEPStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAIEPStatus"/> model
         /// </summary>
         Guid? RefIDEAIEPStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAPartCEligibilityCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAPartCEligibilityCategory"/> model
         /// </summary>
         Guid? RefIDEAPartCEligibilityCategoryId { get; set; }
 

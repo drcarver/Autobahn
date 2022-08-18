@@ -12,7 +12,7 @@ namespace Autobahn.Common.Interfaces
     public partial interface IStaffCompensation : IAutobahnBase
     {
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStaffCompensationSourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStaffCompensationSourceType"/> model
         /// </summary>
         Guid? RefStaffCompensationSourceTypeId { get; set; }
 

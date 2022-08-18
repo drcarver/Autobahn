@@ -35,22 +35,22 @@ namespace Autobahn.Facilities.Interfaces
         System.String FacilityStateOrLocalMandateName { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitiesMandateAuthorityType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitiesMandateAuthorityType"/> model
         /// </summary>
         Guid? RefFacilitiesMandateAuthorityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityApplicableFederalMandateType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityApplicableFederalMandateType"/> model
         /// </summary>
         Guid? RefFacilityApplicableFederalMandateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFederalMandateInterestType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFederalMandateInterestType"/> model
         /// </summary>
         Guid? RefFacilityFederalMandateInterestTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityStateOrLocalMandateInterestType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityStateOrLocalMandateInterestType"/> model
         /// </summary>
         Guid? RefFacilityStateOrLocalMandateInterestTypeId { get; set; }
 

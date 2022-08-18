@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).

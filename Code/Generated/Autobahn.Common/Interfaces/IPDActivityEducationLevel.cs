@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityEducationLevelsAddressed"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityEducationLevelsAddressed"/> model
         /// </summary>
         Guid RefPDActivityEducationLevelsAddressedId { get; set; }
 

@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         System.DateTime? PlannedServiceStartDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramPlannedServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramPlannedServiceType"/> model
         /// </summary>
         Guid? RefIndividualizedProgramPlannedServiceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMethodOfServiceDelivery"/> model
+        /// Reference to an optional instance of the <see cref="RefMethodOfServiceDelivery"/> model
         /// </summary>
         Guid? RefMethodOfServiceDeliveryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefServiceFrequency"/> model
+        /// Reference to an optional instance of the <see cref="RefServiceFrequency"/> model
         /// </summary>
         Guid? RefServiceFrequencyId { get; set; }
 

@@ -86,12 +86,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProgramLicenseStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefELProgramLicenseStatus"/> model
         /// </summary>
         Guid? RefELProgramLicenseStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLicenseExempt"/> model
+        /// Reference to an optional instance of the <see cref="RefLicenseExempt"/> model
         /// </summary>
         Guid? RefLicenseExemptId { get; set; }
 

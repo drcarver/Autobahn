@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ProgramParticipationFoodService Model
@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSchoolFoodServiceProgram"/> model
+        /// Reference to an optional instance of the <see cref="RefSchoolFoodServiceProgram"/> model
         /// </summary>
         public Guid RefSchoolFoodServiceProgramId { get; set; }
 

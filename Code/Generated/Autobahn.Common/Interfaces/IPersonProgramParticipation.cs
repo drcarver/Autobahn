@@ -28,17 +28,17 @@ namespace Autobahn.Common.Interfaces
         System.String ParticipationStatus { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefParticipationType"/> model
+        /// Reference to an optional instance of the <see cref="RefParticipationType"/> model
         /// </summary>
         Guid? RefParticipationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramEntryReason"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramEntryReason"/> model
         /// </summary>
         Guid? RefProgramEntryReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramExitReason"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramExitReason"/> model
         /// </summary>
         Guid? RefProgramExitReasonId { get; set; }
 

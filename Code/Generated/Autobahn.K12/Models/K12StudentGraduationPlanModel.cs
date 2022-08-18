@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The total number of credits required for a student to graduate from the school of enrollment or complete a program.
@@ -43,12 +43,12 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradeLevelWhenCourseTaken"/> model
+        /// Reference to an optional instance of the <see cref="RefGradeLevelWhenCourseTaken"/> model
         /// </summary>
         public Guid? RefGradeLevelWhenCourseTakenId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         public Guid? RefSCEDCourseSubjectAreaId { get; set; }
 

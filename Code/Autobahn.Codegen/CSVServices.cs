@@ -6,13 +6,14 @@
 //   Copyright ©2020 GoDungeon.com
 // *******************************************************************************************************
 
+using System.Globalization;
 using Autobahn.Codegen.Maps;
+using Autobahn.Codegen.Models;
 using Autobahn.Entities;
 using CsvHelper;
 using CsvHelper.Configuration;
-using System.Globalization;
 
-namespace AutobahnCodeGen
+namespace Autobahn.Codegen
 {
 
     public class CSVServices
@@ -91,6 +92,27 @@ namespace AutobahnCodeGen
                     {
                         csv.Context.RegisterClassMap<AutobahnDomainMap>();
                         var records = csv.GetRecords<AutobahnDomain>().ToList();
+                        return records;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public List<ReferenceModel> ReadReferenceFile(string location)
+        {
+            try
+            {
+                using (var reader = new StreamReader(location))
+                {
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    using (var csv = new CsvReader(reader, config))
+                    {
+                        csv.Context.RegisterClassMap<ReferenceModelMap>();
+                        var records = csv.GetRecords<ReferenceModel>().ToList();
                         return records;
                     }
                 }

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The EarlyChildhoodCredential Model
@@ -25,7 +25,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid PersonCredentialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEarlyChildhoodCredential"/> model
+        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodCredential"/> model
         /// </summary>
         public Guid RefEarlyChildhoodCredentialId { get; set; }
 

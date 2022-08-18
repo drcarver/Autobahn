@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The year, month and day on which an individual  application is received by the organization.

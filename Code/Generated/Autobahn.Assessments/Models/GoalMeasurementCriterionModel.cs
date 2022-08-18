@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Assessments.Interfaces
+namespace Autobahn.Assessments.Models
 {
      /// <summary>
      /// The percent of correct results that will be considered to represent successful achievement of a goal.

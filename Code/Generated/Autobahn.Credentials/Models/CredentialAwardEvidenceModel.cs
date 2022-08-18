@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialAwardEvidence Model

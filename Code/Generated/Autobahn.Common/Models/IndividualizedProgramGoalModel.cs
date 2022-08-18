@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramGoal Model
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Interfaces
         public Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIEPGoalType"/> model
+        /// Reference to an optional instance of the <see cref="RefIEPGoalType"/> model
         /// </summary>
         public Guid? RefIEPGoalTypeId { get; set; }
 

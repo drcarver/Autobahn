@@ -18,12 +18,12 @@ namespace Autobahn.AdultEducation.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelType"/> model
         /// </summary>
         Guid? RefCourseLevelTypeId { get; set; }
 

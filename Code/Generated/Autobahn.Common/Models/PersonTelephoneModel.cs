@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonTelephone Model
@@ -39,12 +39,12 @@ namespace Autobahn.Common.Interfaces
         public System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonTelephoneNumberType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonTelephoneNumberType"/> model
         /// </summary>
         public Guid? RefPersonTelephoneNumberTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTelephoneNumberListedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTelephoneNumberListedStatus"/> model
         /// </summary>
         public Guid? RefTelephoneNumberListedStatusId { get; set; }
 

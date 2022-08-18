@@ -64,12 +64,12 @@ namespace Autobahn.Facilities.Interfaces
         System.Boolean? BuildingUnassignedSpaceIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCommunityUseSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCommunityUseSpaceType"/> model
         /// </summary>
         Guid? RefBuildingCommunityUseSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingInstructionalSpaceFactorType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingInstructionalSpaceFactorType"/> model
         /// </summary>
         Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 

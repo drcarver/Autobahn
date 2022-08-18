@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         System.String Outcome { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStaffPerformanceLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefStaffPerformanceLevel"/> model
         /// </summary>
         Guid? RefStaffPerformanceLevelId { get; set; }
 

@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The year for a reported school session for which the data is applicable.
@@ -80,7 +80,7 @@ namespace Autobahn.Common.Interfaces
         public System.String DataCollectionSchoolYear { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDataCollectionStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDataCollectionStatus"/> model
         /// </summary>
         public Guid? RefDataCollectionStatusId { get; set; }
 

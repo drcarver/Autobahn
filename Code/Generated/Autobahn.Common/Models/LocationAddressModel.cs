@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The apartment, room, or suite number of an address.
@@ -129,22 +129,22 @@ namespace Autobahn.Common.Interfaces
         public System.String PostalCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefCountry"/> model
         /// </summary>
         public Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCounty"/> model
+        /// Reference to an optional instance of the <see cref="RefCounty"/> model
         /// </summary>
         public Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefERSRuralUrbanContinuumCode"/> model
+        /// Reference to an optional instance of the <see cref="RefERSRuralUrbanContinuumCode"/> model
         /// </summary>
         public Guid? RefERSRuralUrbanContinuumCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefState"/> model
+        /// Reference to an optional instance of the <see cref="RefState"/> model
         /// </summary>
         public Guid? RefStateId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELQualityInitiative Model

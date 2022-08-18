@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12LeaFederalReporting Model
@@ -113,12 +113,12 @@ namespace Autobahn.K12.Interfaces
         public Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBarrierToEducatingHomeless"/> model
+        /// Reference to an optional instance of the <see cref="RefBarrierToEducatingHomeless"/> model
         /// </summary>
         public Guid? RefBarrierToEducatingHomelessId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIntegratedTechnologyStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefIntegratedTechnologyStatus"/> model
         /// </summary>
         public Guid? RefIntegratedTechnologyStatusId { get; set; }
 

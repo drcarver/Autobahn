@@ -1,4 +1,4 @@
-﻿using AutobahnCodeGen;
+﻿using Autobahn.Codegen.Models;
 using CsvHelper.Configuration;
 
 namespace Autobahn.Codegen.Maps

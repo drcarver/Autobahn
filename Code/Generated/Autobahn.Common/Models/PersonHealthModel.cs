@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonHealth Model
@@ -61,32 +61,32 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDentalInsuranceCoverageType"/> model
+        /// Reference to an optional instance of the <see cref="RefDentalInsuranceCoverageType"/> model
         /// </summary>
         public Guid? RefDentalInsuranceCoverageTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDentalScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDentalScreeningStatus"/> model
         /// </summary>
         public Guid? RefDentalScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHealthInsuranceCoverage"/> model
+        /// Reference to an optional instance of the <see cref="RefHealthInsuranceCoverage"/> model
         /// </summary>
         public Guid? RefHealthInsuranceCoverageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHearingScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHearingScreeningStatus"/> model
         /// </summary>
         public Guid? RefHearingScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMedicalAlertIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefMedicalAlertIndicator"/> model
         /// </summary>
         public Guid? RefMedicalAlertIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefVisionScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefVisionScreeningStatus"/> model
         /// </summary>
         public Guid? RefVisionScreeningStatusId { get; set; }
 

@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The year, month and day or year and month on which the academic award was conferred.
@@ -43,17 +43,17 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicAwardLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicAwardLevel"/> model
         /// </summary>
         public Guid? RefAcademicAwardLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicAwardPrerequisiteType"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicAwardPrerequisiteType"/> model
         /// </summary>
         public Guid? RefAcademicAwardPrerequisiteTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPESCAwardLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefPESCAwardLevelType"/> model
         /// </summary>
         public Guid? RefPESCAwardLevelTypeId { get; set; }
 

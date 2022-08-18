@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Interfaces
+namespace Autobahn.LearningResources.Models
 {
      /// <summary>
      /// The LearnerAction Model
@@ -80,7 +80,7 @@ namespace Autobahn.LearningResources.Interfaces
         public System.String LearnerActionObjectType { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActionType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActionType"/> model
         /// </summary>
         public Guid? RefLearnerActionTypeId { get; set; }
 

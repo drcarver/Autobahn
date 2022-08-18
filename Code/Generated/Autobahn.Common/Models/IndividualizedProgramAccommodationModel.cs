@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// Circumstances in which the accommodation or change to standards or practices will be applied.
@@ -30,7 +30,7 @@ namespace Autobahn.Common.Interfaces
         public Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccommodationType"/> model
+        /// Reference to an optional instance of the <see cref="RefAccommodationType"/> model
         /// </summary>
         public Guid? RefAccommodationTypeId { get; set; }
 

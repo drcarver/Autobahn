@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Authorization.Interfaces
+namespace Autobahn.Authorization.Models
 {
      /// <summary>
      /// The Authentication Model

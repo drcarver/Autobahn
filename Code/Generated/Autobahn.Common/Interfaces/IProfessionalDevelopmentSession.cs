@@ -113,27 +113,27 @@ namespace Autobahn.Common.Interfaces
         Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELTrainerCoreKnowledgeArea"/> model
+        /// Reference to an optional instance of the <see cref="RefELTrainerCoreKnowledgeArea"/> model
         /// </summary>
         Guid? RefELTrainerCoreKnowledgeAreaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDDeliveryMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefPDDeliveryMethod"/> model
         /// </summary>
         Guid? RefPDDeliveryMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDInstructionalDeliveryMode"/> model
+        /// Reference to an optional instance of the <see cref="RefPDInstructionalDeliveryMode"/> model
         /// </summary>
         Guid? RefPDInstructionalDeliveryModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDSessionStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefPDSessionStatus"/> model
         /// </summary>
         Guid? RefPDSessionStatusId { get; set; }
 

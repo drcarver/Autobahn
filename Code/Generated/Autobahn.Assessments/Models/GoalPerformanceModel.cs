@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Assessments.Interfaces
+namespace Autobahn.Assessments.Models
 {
      /// <summary>
      /// Current performance explanation related to the annual goal or short-term objectives.
@@ -34,7 +34,7 @@ namespace Autobahn.Assessments.Interfaces
         public Guid GoalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGoalStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefGoalStatusType"/> model
         /// </summary>
         public Guid? RefGoalStatusTypeId { get; set; }
 

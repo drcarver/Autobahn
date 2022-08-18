@@ -79,12 +79,12 @@ namespace Autobahn.Competencies.Interfaces
         System.String Publisher { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyFrameworkPublicationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyFrameworkPublicationStatus"/> model
         /// </summary>
         Guid? RefCompetencyFrameworkPublicationStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         Guid? RefLanguageId { get; set; }
 

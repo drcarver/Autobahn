@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// A description of the certification or recognition associated with this course (ex. Networking, CAD, etc.)
@@ -52,22 +52,22 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseApplicableEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseApplicableEducationLevel"/> model
         /// </summary>
         public Guid? RefCourseApplicableEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         public Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelCharacteristics"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelCharacteristics"/> model
         /// </summary>
         public Guid? RefCourseLevelCharacteristicsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLanguage"/> model
         /// </summary>
         public Guid? RefInstructionLanguageId { get; set; }
 

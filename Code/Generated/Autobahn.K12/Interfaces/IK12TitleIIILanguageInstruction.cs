@@ -18,7 +18,7 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTitleIIILanguageInstructionProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIIILanguageInstructionProgramType"/> model
         /// </summary>
         Guid RefTitleIIILanguageInstructionProgramTypeId { get; set; }
 

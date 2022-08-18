@@ -18,12 +18,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefChildDevelopmentalScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefChildDevelopmentalScreeningStatus"/> model
         /// </summary>
         Guid? RefChildDevelopmentalScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDevelopmentalEvaluationFinding"/> model
+        /// Reference to an optional instance of the <see cref="RefDevelopmentalEvaluationFinding"/> model
         /// </summary>
         Guid? RefDevelopmentalEvaluationFindingId { get; set; }
 

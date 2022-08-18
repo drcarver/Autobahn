@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ServiceFrequency Model
@@ -45,7 +45,7 @@ namespace Autobahn.Common.Interfaces
         public System.Int32? InstancesPerCycle { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFrequencyUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefFrequencyUnit"/> model
         /// </summary>
         public Guid? RefFrequencyUnitId { get; set; }
 

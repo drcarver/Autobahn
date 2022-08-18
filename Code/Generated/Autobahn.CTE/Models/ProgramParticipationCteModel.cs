@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.CTE.Interfaces
+namespace Autobahn.CTE.Models
 {
      /// <summary>
      /// The year, month and day on which the person ceased to participate in a program.
@@ -109,12 +109,12 @@ namespace Autobahn.CTE.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNonTraditionalGenderStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefNonTraditionalGenderStatus"/> model
         /// </summary>
         public Guid? RefNonTraditionalGenderStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

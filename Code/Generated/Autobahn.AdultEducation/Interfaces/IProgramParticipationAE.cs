@@ -73,47 +73,47 @@ namespace Autobahn.AdultEducation.Interfaces
         System.Decimal? ProxyContactHours { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdultEducationProgramExitReason"/> model
+        /// Reference to an optional instance of the <see cref="RefAdultEducationProgramExitReason"/> model
         /// </summary>
         Guid? RefAdultEducationProgramExitReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeFunctioningLevelAtIntake"/> model
+        /// Reference to an optional instance of the <see cref="RefAeFunctioningLevelAtIntake"/> model
         /// </summary>
         Guid? RefAeFunctioningLevelAtIntakeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeFunctioningLevelAtPosttest"/> model
+        /// Reference to an optional instance of the <see cref="RefAeFunctioningLevelAtPosttest"/> model
         /// </summary>
         Guid? RefAeFunctioningLevelAtPosttestId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeInstructionalProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefAeInstructionalProgramType"/> model
         /// </summary>
         Guid? RefAeInstructionalProgramTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAePostsecondaryTransitionAction"/> model
+        /// Reference to an optional instance of the <see cref="RefAePostsecondaryTransitionAction"/> model
         /// </summary>
         Guid? RefAePostsecondaryTransitionActionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeSpecialProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefAeSpecialProgramType"/> model
         /// </summary>
         Guid? RefAeSpecialProgramTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCorrectionalEducationFacilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefCorrectionalEducationFacilityType"/> model
         /// </summary>
         Guid? RefCorrectionalEducationFacilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGoalsForAttendingAdultEducation"/> model
+        /// Reference to an optional instance of the <see cref="RefGoalsForAttendingAdultEducation"/> model
         /// </summary>
         Guid? RefGoalsForAttendingAdultEducationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

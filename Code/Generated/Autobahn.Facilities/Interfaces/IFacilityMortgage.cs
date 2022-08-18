@@ -46,12 +46,12 @@ namespace Autobahn.Facilities.Interfaces
         System.Decimal? FacilityTotalAssessedValue { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityMortgageInterestType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityMortgageInterestType"/> model
         /// </summary>
         Guid? RefFacilityMortgageInterestTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityMortgageType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityMortgageType"/> model
         /// </summary>
         Guid? RefFacilityMortgageTypeId { get; set; }
 

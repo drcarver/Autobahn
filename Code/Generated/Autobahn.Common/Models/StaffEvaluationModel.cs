@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffEvaluation Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public System.String Outcome { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStaffPerformanceLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefStaffPerformanceLevel"/> model
         /// </summary>
         public Guid? RefStaffPerformanceLevelId { get; set; }
 

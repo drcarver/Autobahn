@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Interfaces
+namespace Autobahn.LearningResources.Models
 {
      /// <summary>
      /// The LearningResourcePeerRating Model

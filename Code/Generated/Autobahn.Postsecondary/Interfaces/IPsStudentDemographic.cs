@@ -64,42 +64,42 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusResidencyType"/> model
         /// </summary>
         Guid? RefCampusResidencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCohortExclusion"/> model
+        /// Reference to an optional instance of the <see cref="RefCohortExclusion"/> model
         /// </summary>
         Guid? RefCohortExclusionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDependencyStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDependencyStatus"/> model
         /// </summary>
         Guid? RefDependencyStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMaternalEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefMaternalEducationLevel"/> model
         /// </summary>
         Guid? RefMaternalEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNumberOfDependentsType"/> model
+        /// Reference to an optional instance of the <see cref="RefNumberOfDependentsType"/> model
         /// </summary>
         Guid? RefNumberOfDependentsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPaternalEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPaternalEducationLevel"/> model
         /// </summary>
         Guid? RefPaternalEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPsLepType"/> model
+        /// Reference to an optional instance of the <see cref="RefPsLepType"/> model
         /// </summary>
         Guid? RefPsLepTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTuitionResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefTuitionResidencyType"/> model
         /// </summary>
         Guid? RefTuitionResidencyTypeId { get; set; }
 

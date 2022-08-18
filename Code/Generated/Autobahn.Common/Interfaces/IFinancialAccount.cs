@@ -60,42 +60,42 @@ namespace Autobahn.Common.Interfaces
         System.String Name { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAccountBalanceSheetCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAccountBalanceSheetCode"/> model
         /// </summary>
         Guid? RefFinancialAccountBalanceSheetCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAccountCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAccountCategory"/> model
         /// </summary>
         Guid? RefFinancialAccountCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAccountFundClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAccountFundClassification"/> model
         /// </summary>
         Guid? RefFinancialAccountFundClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAccountProgramCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAccountProgramCode"/> model
         /// </summary>
         Guid? RefFinancialAccountProgramCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAccountRevenueCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAccountRevenueCode"/> model
         /// </summary>
         Guid? RefFinancialAccountRevenueCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialExpenditureFunctionCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialExpenditureFunctionCode"/> model
         /// </summary>
         Guid? RefFinancialExpenditureFunctionCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialExpenditureLevelOfInstructionCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialExpenditureLevelOfInstructionCode"/> model
         /// </summary>
         Guid? RefFinancialExpenditureLevelOfInstructionCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialExpenditureObjectCode"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialExpenditureObjectCode"/> model
         /// </summary>
         Guid? RefFinancialExpenditureObjectCodeId { get; set; }
 

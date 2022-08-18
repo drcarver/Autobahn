@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
@@ -52,17 +52,17 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDegreeOrCertificateType"/> model
+        /// Reference to an optional instance of the <see cref="RefDegreeOrCertificateType"/> model
         /// </summary>
         public Guid? RefDegreeOrCertificateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEducationVerificationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefEducationVerificationMethod"/> model
         /// </summary>
         public Guid? RefEducationVerificationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
         /// </summary>
         public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 

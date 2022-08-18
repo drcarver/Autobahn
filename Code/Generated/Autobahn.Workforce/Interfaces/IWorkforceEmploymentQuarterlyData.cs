@@ -40,12 +40,12 @@ namespace Autobahn.Workforce.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedAfterExit"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedAfterExit"/> model
         /// </summary>
         Guid? RefEmployedAfterExitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedWhileEnrolled"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedWhileEnrolled"/> model
         /// </summary>
         Guid? RefEmployedWhileEnrolledId { get; set; }
 

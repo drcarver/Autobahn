@@ -53,7 +53,7 @@ namespace Autobahn.CTE.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 

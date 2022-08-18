@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonLanguage Model
@@ -17,12 +17,12 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguageUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguageUseType"/> model
         /// </summary>
         public Guid RefLanguageUseTypeId { get; set; }
 

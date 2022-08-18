@@ -30,7 +30,7 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPopulationServed"/> model
+        /// Reference to an optional instance of the <see cref="RefPopulationServed"/> model
         /// </summary>
         Guid? RefPopulationServedId { get; set; }
 

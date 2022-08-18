@@ -132,12 +132,12 @@ namespace Autobahn.LearningResources.Interfaces
         System.String Prerequisite { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActivityAddToGradeBookFlag"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActivityAddToGradeBookFlag"/> model
         /// </summary>
         Guid? RefLearnerActivityAddToGradeBookFlagId { get; set; }
 
@@ -153,7 +153,7 @@ namespace Autobahn.LearningResources.Interfaces
         Guid? RefLearnerActivityMaximumTimeAllowedUnitsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActivityType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActivityType"/> model
         /// </summary>
         Guid? RefLearnerActivityTypeId { get; set; }
 

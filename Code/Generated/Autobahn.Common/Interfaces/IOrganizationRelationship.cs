@@ -22,7 +22,7 @@ namespace Autobahn.Common.Interfaces
         Guid Parent_OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOrganizationRelationship"/> model
+        /// Reference to an optional instance of the <see cref="RefOrganizationRelationship"/> model
         /// </summary>
         Guid? RefOrganizationRelationshipId { get; set; }
 

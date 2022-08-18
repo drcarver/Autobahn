@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialDefIdentifier Model
@@ -33,7 +33,7 @@ namespace Autobahn.Credentials.Interfaces
         public System.String Identifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialentifierSystem"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialentifierSystem"/> model
         /// </summary>
         public Guid? RefCredentialIdentifierSystemId { get; set; }
 

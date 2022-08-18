@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonLearningDevice Model
@@ -17,17 +17,17 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAccess"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceAccess"/> model
         /// </summary>
         public Guid? RefPrimaryLearningDeviceAccessId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAwayFromSchool"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceAwayFromSchool"/> model
         /// </summary>
         public Guid? RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceProvider"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceProvider"/> model
         /// </summary>
         public Guid? RefPrimaryLearningDeviceProviderId { get; set; }
 

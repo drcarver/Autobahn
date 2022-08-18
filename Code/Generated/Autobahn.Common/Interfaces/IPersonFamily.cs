@@ -80,32 +80,32 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCommunicationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefCommunicationMethod"/> model
         /// </summary>
         Guid? RefCommunicationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProgramEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefELProgramEligibility"/> model
         /// </summary>
         Guid? RefELProgramEligibilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFamilyIncomeSource"/> model
+        /// Reference to an optional instance of the <see cref="RefFamilyIncomeSource"/> model
         /// </summary>
         Guid? RefFamilyIncomeSourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighestEducationLevelCompleted"/> model
+        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
         /// </summary>
         Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncomeCalculationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefIncomeCalculationMethod"/> model
         /// </summary>
         Guid? RefIncomeCalculationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProofOfResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
         /// </summary>
         Guid? RefProofOfResidencyTypeId { get; set; }
 

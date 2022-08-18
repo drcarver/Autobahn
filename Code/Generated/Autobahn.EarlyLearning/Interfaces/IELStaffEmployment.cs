@@ -35,32 +35,32 @@ namespace Autobahn.EarlyLearning.Interfaces
         System.Decimal? HoursWorkedPerWeek { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELEducationStaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefELEducationStaffClassification"/> model
         /// </summary>
         Guid? RefELEducationStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELEmploymentSeparationReason"/> model
+        /// Reference to an optional instance of the <see cref="RefELEmploymentSeparationReason"/> model
         /// </summary>
         Guid? RefELEmploymentSeparationReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELServiceProfessionalStaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefELServiceProfessionalStaffClassification"/> model
         /// </summary>
         Guid? RefELServiceProfessionalStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
         /// </summary>
         Guid? RefEmploymentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWageCollectionMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefWageCollectionMethod"/> model
         /// </summary>
         Guid? RefWageCollectionMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWageVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefWageVerification"/> model
         /// </summary>
         Guid? RefWageVerificationId { get; set; }
 

@@ -29,12 +29,12 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityManagementId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitiesMgmtEmergencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitiesMgmtEmergencyType"/> model
         /// </summary>
         Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitiesPlanType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitiesPlanType"/> model
         /// </summary>
         Guid? RefFacilitiesPlanTypeId { get; set; }
 

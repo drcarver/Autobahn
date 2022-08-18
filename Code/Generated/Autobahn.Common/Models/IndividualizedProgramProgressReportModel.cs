@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramProgressReport Model
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Interfaces
         public System.DateTime? ProgressReportDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportType"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
         /// </summary>
         public Guid? RefIPSPProgressReportTypeId { get; set; }
 

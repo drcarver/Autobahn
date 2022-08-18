@@ -29,47 +29,47 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdministrativeFundingControl"/> model
+        /// Reference to an optional instance of the <see cref="RefAdministrativeFundingControl"/> model
         /// </summary>
         Guid? RefAdministrativeFundingControlId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdmissionConsiderationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefAdmissionConsiderationLevel"/> model
         /// </summary>
         Guid? RefAdmissionConsiderationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdmissionConsiderationType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdmissionConsiderationType"/> model
         /// </summary>
         Guid? RefAdmissionConsiderationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCarnegieBasicClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefCarnegieBasicClassification"/> model
         /// </summary>
         Guid? RefCarnegieBasicClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefControlOfInstitution"/> model
+        /// Reference to an optional instance of the <see cref="RefControlOfInstitution"/> model
         /// </summary>
         Guid? RefControlOfInstitutionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncreasedLearningTimeType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncreasedLearningTimeType"/> model
         /// </summary>
         Guid? RefIncreasedLearningTimeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLevelOfInstitution"/> model
+        /// Reference to an optional instance of the <see cref="RefLevelOfInstitution"/> model
         /// </summary>
         Guid? RefLevelOfInstitutionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPredominantCalendarSystem"/> model
+        /// Reference to an optional instance of the <see cref="RefPredominantCalendarSystem"/> model
         /// </summary>
         Guid? RefPredominantCalendarSystemId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTenureSystem"/> model
+        /// Reference to an optional instance of the <see cref="RefTenureSystem"/> model
         /// </summary>
         Guid? RefTenureSystemId { get; set; }
 

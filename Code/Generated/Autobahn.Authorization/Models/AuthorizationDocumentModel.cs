@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Authorization.Interfaces
+namespace Autobahn.Authorization.Models
 {
      /// <summary>
      /// Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan.
@@ -54,7 +54,7 @@ namespace Autobahn.Authorization.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAuthorizerType"/> model
+        /// Reference to an optional instance of the <see cref="RefAuthorizerType"/> model
         /// </summary>
         public Guid? RefAuthorizerTypeId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELOrganizationMonitoring Model
@@ -30,7 +30,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid? RefOrganizationMonitoringNotificationsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPurposeOfMonitoringVisit"/> model
+        /// Reference to an optional instance of the <see cref="RefPurposeOfMonitoringVisit"/> model
         /// </summary>
         public Guid? RefPurposeOfMonitoringVisitId { get; set; }
 

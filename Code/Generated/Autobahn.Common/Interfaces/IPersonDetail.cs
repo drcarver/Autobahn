@@ -107,37 +107,37 @@ namespace Autobahn.Common.Interfaces
         System.String Prefix { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighestEducationLevelCompleted"/> model
+        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
         /// </summary>
         Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProofOfResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
         /// </summary>
         Guid? RefProofOfResidencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSex"/> model
+        /// Reference to an optional instance of the <see cref="RefSex"/> model
         /// </summary>
         Guid? RefSexId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStateOfResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefStateOfResidence"/> model
         /// </summary>
         Guid? RefStateOfResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTribalAffiliation"/> model
+        /// Reference to an optional instance of the <see cref="RefTribalAffiliation"/> model
         /// </summary>
         Guid? RefTribalAffiliationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefUSCitizenshipStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefUSCitizenshipStatus"/> model
         /// </summary>
         Guid? RefUSCitizenshipStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefVisaType"/> model
+        /// Reference to an optional instance of the <see cref="RefVisaType"/> model
         /// </summary>
         Guid? RefVisaTypeId { get; set; }
 

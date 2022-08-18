@@ -81,12 +81,12 @@ namespace Autobahn.Facilities.Interfaces
         System.Decimal? LifecycleCost { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFurnishingsType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFurnishingsType"/> model
         /// </summary>
         Guid? RefFacilityFurnishingsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitySystemOrComponentCondition"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitySystemOrComponentCondition"/> model
         /// </summary>
         Guid? RefFacilitySystemOrComponentConditionId { get; set; }
 

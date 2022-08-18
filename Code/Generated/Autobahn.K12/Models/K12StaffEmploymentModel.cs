@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The number of days per year that a person is expected to work as outlined specifically in his or her employment agreement.
@@ -38,12 +38,12 @@ namespace Autobahn.K12.Interfaces
         public System.Boolean? MepPersonnelIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
         /// </summary>
         public Guid? RefEmploymentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12StaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
         /// </summary>
         public Guid? RefK12StaffClassificationId { get; set; }
 

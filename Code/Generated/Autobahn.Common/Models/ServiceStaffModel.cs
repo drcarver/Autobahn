@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ServiceStaff Model
@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationStaffCategory"/> model
         /// </summary>
         public Guid RefSpecialEducationStaffCategoryId { get; set; }
 

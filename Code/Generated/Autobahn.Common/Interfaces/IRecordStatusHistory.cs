@@ -42,12 +42,12 @@ namespace Autobahn.Common.Interfaces
         System.String RecordTable { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRecordStatusCreatorEntity"/> model
+        /// Reference to an optional instance of the <see cref="RefRecordStatusCreatorEntity"/> model
         /// </summary>
         Guid? RefRecordStatusCreatorEntityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRecordStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefRecordStatusType"/> model
         /// </summary>
         Guid RefRecordStatusTypeId { get; set; }
 

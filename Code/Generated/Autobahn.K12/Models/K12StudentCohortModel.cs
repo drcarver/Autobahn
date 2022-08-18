@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// A description of the student cohort.

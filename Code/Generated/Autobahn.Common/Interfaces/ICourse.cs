@@ -52,22 +52,22 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseApplicableEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseApplicableEducationLevel"/> model
         /// </summary>
         Guid? RefCourseApplicableEducationLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelCharacteristics"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelCharacteristics"/> model
         /// </summary>
         Guid? RefCourseLevelCharacteristicsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLanguage"/> model
         /// </summary>
         Guid? RefInstructionLanguageId { get; set; }
 

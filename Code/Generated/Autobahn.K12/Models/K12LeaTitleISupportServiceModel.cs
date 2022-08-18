@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12LeaTitleISupportService Model
@@ -25,7 +25,7 @@ namespace Autobahn.K12.Interfaces
         public Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12LeaTitleISupportService"/> model
+        /// Reference to an optional instance of the <see cref="RefK12LeaTitleISupportService"/> model
         /// </summary>
         public Guid RefK12LeaTitleISupportServiceId { get; set; }
 

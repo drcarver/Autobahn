@@ -18,7 +18,7 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityMortgageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFinancingFeeType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFinancingFeeType"/> model
         /// </summary>
         Guid RefFacilityFinancingFeeTypeId { get; set; }
 

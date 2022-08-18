@@ -40,12 +40,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         System.Int32? OldestAgeServed { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELGroupSizeStandardMet"/> model
+        /// Reference to an optional instance of the <see cref="RefELGroupSizeStandardMet"/> model
         /// </summary>
         Guid? RefELGroupSizeStandardMetId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFrequencyOfService"/> model
+        /// Reference to an optional instance of the <see cref="RefFrequencyOfService"/> model
         /// </summary>
         Guid? RefFrequencyOfServiceId { get; set; }
 

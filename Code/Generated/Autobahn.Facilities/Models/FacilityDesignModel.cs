@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The name of the architect of record for the building.
@@ -60,12 +60,12 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingDesignType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingDesignType"/> model
         /// </summary>
         public Guid? RefBuildingDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnvOrEnergyPerformanceRatingCat"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnvOrEnergyPerformanceRatingCat"/> model
         /// </summary>
         public Guid? RefBuildingEnvOrEnergyPerformanceRatingCatId { get; set; }
 

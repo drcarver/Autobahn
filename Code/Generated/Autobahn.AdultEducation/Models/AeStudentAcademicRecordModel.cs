@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.AdultEducation.Interfaces
+namespace Autobahn.AdultEducation.Models
 {
      /// <summary>
      /// The AeStudentAcademicRecord Model
@@ -30,12 +30,12 @@ namespace Autobahn.AdultEducation.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighSchoolDiplomaType"/> model
+        /// Reference to an optional instance of the <see cref="RefHighSchoolDiplomaType"/> model
         /// </summary>
         public Guid? RefHighSchoolDiplomaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 

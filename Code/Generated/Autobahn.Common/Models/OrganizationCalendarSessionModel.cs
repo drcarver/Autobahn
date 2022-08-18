@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// Indicates that the session is an attendance term.
@@ -135,12 +135,12 @@ namespace Autobahn.Common.Interfaces
         public Guid? OrganizationCalendarId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicTermDesignator"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
         /// </summary>
         public Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSessionType"/> model
+        /// Reference to an optional instance of the <see cref="RefSessionType"/> model
         /// </summary>
         public Guid? RefSessionTypeId { get; set; }
 

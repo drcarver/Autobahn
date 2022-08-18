@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PSPriceOfAttendance Model

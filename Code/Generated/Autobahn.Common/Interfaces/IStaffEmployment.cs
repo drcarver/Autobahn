@@ -50,12 +50,12 @@ namespace Autobahn.Common.Interfaces
         System.String PositionTitle { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentSeparationReason"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationReason"/> model
         /// </summary>
         Guid? RefEmploymentSeparationReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentSeparationType"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationType"/> model
         /// </summary>
         Guid? RefEmploymentSeparationTypeId { get; set; }
 

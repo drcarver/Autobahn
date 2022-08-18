@@ -29,12 +29,12 @@ namespace Autobahn.AdultEducation.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighSchoolDiplomaType"/> model
+        /// Reference to an optional instance of the <see cref="RefHighSchoolDiplomaType"/> model
         /// </summary>
         Guid? RefHighSchoolDiplomaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 

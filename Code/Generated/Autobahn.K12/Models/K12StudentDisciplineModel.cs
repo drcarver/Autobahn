@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentDiscipline Model
@@ -90,12 +90,12 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisciplinaryActionTaken"/> model
+        /// Reference to an optional instance of the <see cref="RefDisciplinaryActionTaken"/> model
         /// </summary>
         public Guid? RefDisciplinaryActionTakenId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisciplineLengthDifferenceReason"/> model
+        /// Reference to an optional instance of the <see cref="RefDisciplineLengthDifferenceReason"/> model
         /// </summary>
         public Guid? RefDisciplineLengthDifferenceReasonId { get; set; }
 
@@ -111,27 +111,27 @@ namespace Autobahn.K12.Interfaces
         public Guid? RefDisciplineMethodFirearmsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisciplineMethodOfCwd"/> model
+        /// Reference to an optional instance of the <see cref="RefDisciplineMethodOfCwd"/> model
         /// </summary>
         public Guid? RefDisciplineMethodOfCwdId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisciplineReason"/> model
+        /// Reference to an optional instance of the <see cref="RefDisciplineReason"/> model
         /// </summary>
         public Guid? RefDisciplineReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEADisciplineMethodFirearm"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEADisciplineMethodFirearm"/> model
         /// </summary>
         public Guid? RefIDEADisciplineMethodFirearmId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefeaInterimRemoval"/> model
+        /// Reference to an optional instance of the <see cref="RefeaInterimRemoval"/> model
         /// </summary>
         public Guid? RefIdeaInterimRemovalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefeaInterimRemovalReason"/> model
+        /// Reference to an optional instance of the <see cref="RefeaInterimRemovalReason"/> model
         /// </summary>
         public Guid? RefIdeaInterimRemovalReasonId { get; set; }
 

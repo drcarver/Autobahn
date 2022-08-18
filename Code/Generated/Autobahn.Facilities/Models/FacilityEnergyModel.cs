@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.
@@ -38,17 +38,17 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnergySourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnergySourceType"/> model
         /// </summary>
         public Guid? RefBuildingEnergySourceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityUtilityProviderType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityProviderType"/> model
         /// </summary>
         public Guid? RefFacilityUtilityProviderTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityUtilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityUtilityType"/> model
         /// </summary>
         public Guid? RefFacilityUtilityTypeId { get; set; }
 

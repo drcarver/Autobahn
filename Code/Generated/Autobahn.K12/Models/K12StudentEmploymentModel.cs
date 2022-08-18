@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentEmployment Model
@@ -30,12 +30,12 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedAfterExit"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedAfterExit"/> model
         /// </summary>
         public Guid? RefEmployedAfterExitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedWhileEnrolled"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedWhileEnrolled"/> model
         /// </summary>
         public Guid? RefEmployedWhileEnrolledId { get; set; }
 

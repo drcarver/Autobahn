@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         Guid CourseSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelType"/> model
         /// </summary>
         Guid RefCourseLevelTypeId { get; set; }
 

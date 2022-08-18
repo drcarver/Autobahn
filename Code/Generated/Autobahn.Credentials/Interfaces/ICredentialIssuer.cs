@@ -31,7 +31,7 @@ namespace Autobahn.Credentials.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCTDLOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
         /// </summary>
         Guid? RefCTDLOrganizationTypeId { get; set; }
 

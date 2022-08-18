@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// An indication that the instruction space in a school is used in the calculation of student capacity.
@@ -65,12 +65,12 @@ namespace Autobahn.Facilities.Interfaces
         public System.Boolean? BuildingUnassignedSpaceIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCommunityUseSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCommunityUseSpaceType"/> model
         /// </summary>
         public Guid? RefBuildingCommunityUseSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingInstructionalSpaceFactorType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingInstructionalSpaceFactorType"/> model
         /// </summary>
         public Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 

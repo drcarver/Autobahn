@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The name of the location at which the course is taught.
@@ -32,7 +32,7 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid PsSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseInstructionSiteType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseInstructionSiteType"/> model
         /// </summary>
         public Guid? RefCourseInstructionSiteTypeId { get; set; }
 

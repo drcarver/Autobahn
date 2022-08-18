@@ -29,17 +29,17 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBillableBasisType"/> model
+        /// Reference to an optional instance of the <see cref="RefBillableBasisType"/> model
         /// </summary>
         Guid? RefBillableBasisTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELFederalFundingType"/> model
+        /// Reference to an optional instance of the <see cref="RefELFederalFundingType"/> model
         /// </summary>
         Guid? RefELFederalFundingTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELLocalRevenueSource"/> model
+        /// Reference to an optional instance of the <see cref="RefELLocalRevenueSource"/> model
         /// </summary>
         Guid? RefELLocalRevenueSourceId { get; set; }
 
@@ -55,12 +55,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid? RefELOtherFederalFundingSourcesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELStateRevenueSource"/> model
+        /// Reference to an optional instance of the <see cref="RefELStateRevenueSource"/> model
         /// </summary>
         Guid? RefELStateRevenueSourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReimbursementType"/> model
+        /// Reference to an optional instance of the <see cref="RefReimbursementType"/> model
         /// </summary>
         Guid? RefReimbursementTypeId { get; set; }
 

@@ -18,7 +18,7 @@ namespace Autobahn.K12.Interfaces
         Guid K12SeaFederalFundsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAlternateFundUses"/> model
+        /// Reference to an optional instance of the <see cref="RefAlternateFundUses"/> model
         /// </summary>
         Guid RefAlternateFundUsesId { get; set; }
 

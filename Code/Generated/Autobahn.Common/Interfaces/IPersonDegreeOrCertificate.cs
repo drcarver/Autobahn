@@ -52,17 +52,17 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDegreeOrCertificateType"/> model
+        /// Reference to an optional instance of the <see cref="RefDegreeOrCertificateType"/> model
         /// </summary>
         Guid? RefDegreeOrCertificateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEducationVerificationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefEducationVerificationMethod"/> model
         /// </summary>
         Guid? RefEducationVerificationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
         /// </summary>
         Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 

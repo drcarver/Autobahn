@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
@@ -142,27 +142,27 @@ namespace Autobahn.Facilities.Interfaces
         public Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingHistoricStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingHistoricStatus"/> model
         /// </summary>
         public Guid? RefBuildingHistoricStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingPrimaryUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingPrimaryUseType"/> model
         /// </summary>
         public Guid? RefBuildingPrimaryUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingUseType"/> model
         /// </summary>
         public Guid? RefBuildingUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusStatus"/> model
         /// </summary>
         public Guid? RefCampusStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusType"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusType"/> model
         /// </summary>
         public Guid? RefCampusTypeId { get; set; }
 

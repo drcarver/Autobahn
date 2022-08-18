@@ -69,32 +69,32 @@ namespace Autobahn.Common.Interfaces
         Guid PersonCredentialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeCertificationType"/> model
+        /// Reference to an optional instance of the <see cref="RefAeCertificationType"/> model
         /// </summary>
         Guid? RefAeCertificationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefChildDevAssociateType"/> model
+        /// Reference to an optional instance of the <see cref="RefChildDevAssociateType"/> model
         /// </summary>
         Guid? RefChildDevAssociateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefParaprofessionalQualification"/> model
+        /// Reference to an optional instance of the <see cref="RefParaprofessionalQualification"/> model
         /// </summary>
         Guid? RefParaprofessionalQualificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramSponsorType"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramSponsorType"/> model
         /// </summary>
         Guid? RefProgramSponsorTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingCredentialBasis"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingCredentialBasis"/> model
         /// </summary>
         Guid? RefTeachingCredentialBasisId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingCredentialType"/> model
         /// </summary>
         Guid? RefTeachingCredentialTypeId { get; set; }
 

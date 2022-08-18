@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonHealthBirth Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTrimesterWhenPrenatalCareBegan"/> model
+        /// Reference to an optional instance of the <see cref="RefTrimesterWhenPrenatalCareBegan"/> model
         /// </summary>
         public Guid? RefTrimesterWhenPrenatalCareBeganId { get; set; }
 

@@ -40,17 +40,17 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEarlyChildhoodServicesOffered"/> model
+        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodServicesOffered"/> model
         /// </summary>
         Guid? RefEarlyChildhoodServicesOfferedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEarlyChildhoodServicesReceived"/> model
+        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodServicesReceived"/> model
         /// </summary>
         Guid? RefEarlyChildhoodServicesReceivedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefELServiceType"/> model
         /// </summary>
         Guid? RefELServiceTypeId { get; set; }
 

@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// Indicates that the child demonstrates progress in positive social-emotional skills, including social relationships.

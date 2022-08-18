@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The IEPAuthorization Model
@@ -30,7 +30,7 @@ namespace Autobahn.K12.Interfaces
         public Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIEPAuthorizationDocumentType"/> model
+        /// Reference to an optional instance of the <see cref="RefIEPAuthorizationDocumentType"/> model
         /// </summary>
         public Guid? RefIEPAuthorizationDocumentTypeId { get; set; }
 

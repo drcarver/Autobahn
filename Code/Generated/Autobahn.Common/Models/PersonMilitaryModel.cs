@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonMilitary Model
@@ -17,22 +17,22 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMilitaryActiveStudentIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefMilitaryActiveStudentIndicator"/> model
         /// </summary>
         public Guid? RefMilitaryActiveStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMilitaryBranch"/> model
+        /// Reference to an optional instance of the <see cref="RefMilitaryBranch"/> model
         /// </summary>
         public Guid? RefMilitaryBranchId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMilitaryConnectedStudentIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefMilitaryConnectedStudentIndicator"/> model
         /// </summary>
         public Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMilitaryVeteranStudentIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefMilitaryVeteranStudentIndicator"/> model
         /// </summary>
         public Guid? RefMilitaryVeteranStudentIndicatorId { get; set; }
 

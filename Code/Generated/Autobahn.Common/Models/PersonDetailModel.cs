@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The year, month and day on which a person was born.
@@ -107,37 +107,37 @@ namespace Autobahn.Common.Interfaces
         public System.String Prefix { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighestEducationLevelCompleted"/> model
+        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
         /// </summary>
         public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProofOfResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
         /// </summary>
         public Guid? RefProofOfResidencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSex"/> model
+        /// Reference to an optional instance of the <see cref="RefSex"/> model
         /// </summary>
         public Guid? RefSexId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStateOfResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefStateOfResidence"/> model
         /// </summary>
         public Guid? RefStateOfResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTribalAffiliation"/> model
+        /// Reference to an optional instance of the <see cref="RefTribalAffiliation"/> model
         /// </summary>
         public Guid? RefTribalAffiliationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefUSCitizenshipStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefUSCitizenshipStatus"/> model
         /// </summary>
         public Guid? RefUSCitizenshipStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefVisaType"/> model
+        /// Reference to an optional instance of the <see cref="RefVisaType"/> model
         /// </summary>
         public Guid? RefVisaTypeId { get; set; }
 

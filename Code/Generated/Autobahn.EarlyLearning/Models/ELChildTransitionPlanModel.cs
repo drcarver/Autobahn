@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELChildTransitionPlan Model
@@ -79,7 +79,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReasonDelayTransitionConf"/> model
+        /// Reference to an optional instance of the <see cref="RefReasonDelayTransitionConf"/> model
         /// </summary>
         public Guid? RefReasonDelayTransitionConfId { get; set; }
 

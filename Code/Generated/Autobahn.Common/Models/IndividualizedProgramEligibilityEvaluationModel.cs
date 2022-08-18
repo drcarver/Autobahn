@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramEligibilityEvaluation Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid IndividualizedProgramEligibilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIEPEligibilityEvaluationType"/> model
+        /// Reference to an optional instance of the <see cref="RefIEPEligibilityEvaluationType"/> model
         /// </summary>
         public Guid? RefIEPEligibilityEvaluationTypeId { get; set; }
 

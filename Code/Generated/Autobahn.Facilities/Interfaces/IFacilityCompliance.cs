@@ -106,12 +106,12 @@ namespace Autobahn.Facilities.Interfaces
         Guid? FacilityMandateId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityComplianceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityComplianceStatus"/> model
         /// </summary>
         Guid? RefFacilityComplianceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityMaintStandardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityMaintStandardType"/> model
         /// </summary>
         Guid? RefFacilityMaintStandardTypeId { get; set; }
 

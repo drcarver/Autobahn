@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonReferral Model
@@ -61,7 +61,7 @@ namespace Autobahn.Common.Interfaces
         public System.String ReferredTo { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReferralOutcome"/> model
+        /// Reference to an optional instance of the <see cref="RefReferralOutcome"/> model
         /// </summary>
         public Guid? RefReferralOutcomeId { get; set; }
 

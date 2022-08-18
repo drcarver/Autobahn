@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The IDEAEligibilityEvaluationCategory Model
@@ -19,7 +19,7 @@ namespace Autobahn.K12.Interfaces
         public Guid EligibilityEvaluationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEligibilityEvaluationCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEligibilityEvaluationCategory"/> model
         /// </summary>
         public Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
 

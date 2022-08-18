@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
@@ -32,7 +32,7 @@ namespace Autobahn.Credentials.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCTDLOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
         /// </summary>
         public Guid? RefCTDLOrganizationTypeId { get; set; }
 

@@ -29,27 +29,27 @@ namespace Autobahn.K12.Interfaces
         System.Boolean? ProgramInMultiplePurposeFacility { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefKindergartenDailyLength"/> model
+        /// Reference to an optional instance of the <see cref="RefKindergartenDailyLength"/> model
         /// </summary>
         Guid? RefKindergartenDailyLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepProjectType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepProjectType"/> model
         /// </summary>
         Guid? RefMepProjectTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepSessionType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepSessionType"/> model
         /// </summary>
         Guid? RefMepSessionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrekindergartenDailyLength"/> model
+        /// Reference to an optional instance of the <see cref="RefPrekindergartenDailyLength"/> model
         /// </summary>
         Guid? RefPrekindergartenDailyLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramGiftedEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramGiftedEligibility"/> model
         /// </summary>
         Guid? RefProgramGiftedEligibilityId { get; set; }
 
@@ -65,7 +65,7 @@ namespace Autobahn.K12.Interfaces
         Guid? RefTitleIInstructionalServicesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTitleIProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIProgramType"/> model
         /// </summary>
         Guid? RefTitleIProgramTypeId { get; set; }
 

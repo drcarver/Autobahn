@@ -23,12 +23,12 @@ namespace Autobahn.Credentials.Interfaces
         Guid? PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefAgentRoleType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefAgentRoleType"/> model
         /// </summary>
         Guid? RefCredentialDefAgentRoleTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCTDLOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
         /// </summary>
         Guid? RefCTDLOrganizationTypeId { get; set; }
 

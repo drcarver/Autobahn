@@ -59,12 +59,12 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingDesignType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingDesignType"/> model
         /// </summary>
         Guid? RefBuildingDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnvOrEnergyPerformanceRatingCat"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnvOrEnergyPerformanceRatingCat"/> model
         /// </summary>
         Guid? RefBuildingEnvOrEnergyPerformanceRatingCatId { get; set; }
 

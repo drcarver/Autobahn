@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The ChildOfCompetencyDefinition Model

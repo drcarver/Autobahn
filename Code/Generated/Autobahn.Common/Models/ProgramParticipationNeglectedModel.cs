@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// Student was served by Title I, Part D, Subpart 1 of ESEA as amended for at least 90 consecutive days during the reporting period who took both a pre- and post-test.
@@ -46,7 +46,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNeglectedProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefNeglectedProgramType"/> model
         /// </summary>
         public Guid? RefNeglectedProgramTypeId { get; set; }
 

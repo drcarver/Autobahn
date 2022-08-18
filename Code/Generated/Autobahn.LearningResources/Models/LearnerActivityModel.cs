@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Interfaces
+namespace Autobahn.LearningResources.Models
 {
      /// <summary>
      /// The LearnerActivity Model
@@ -133,12 +133,12 @@ namespace Autobahn.LearningResources.Interfaces
         public System.String Prerequisite { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActivityAddToGradeBookFlag"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActivityAddToGradeBookFlag"/> model
         /// </summary>
         public Guid? RefLearnerActivityAddToGradeBookFlagId { get; set; }
 
@@ -154,7 +154,7 @@ namespace Autobahn.LearningResources.Interfaces
         public Guid? RefLearnerActivityMaximumTimeAllowedUnitsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActivityType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActivityType"/> model
         /// </summary>
         public Guid? RefLearnerActivityTypeId { get; set; }
 

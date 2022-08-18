@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDigitalAccess Model
@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBarrierToInternetAccessInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefBarrierToInternetAccessInResidence"/> model
         /// </summary>
         public Guid? RefBarrierToInternetAccessInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInternetAccessTypeInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefInternetAccessTypeInResidence"/> model
         /// </summary>
         public Guid? RefInternetAccessTypeInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInternetPerformanceInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefInternetPerformanceInResidence"/> model
         /// </summary>
         public Guid? RefInternetPerformanceInResidenceId { get; set; }
 

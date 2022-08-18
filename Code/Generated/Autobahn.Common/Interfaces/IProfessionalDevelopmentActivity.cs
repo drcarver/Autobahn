@@ -118,37 +118,37 @@ namespace Autobahn.Common.Interfaces
         System.Boolean? PublishIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityApprovedPurpose"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityApprovedPurpose"/> model
         /// </summary>
         Guid? RefPDActivityApprovedPurposeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityCreditType"/> model
         /// </summary>
         Guid? RefPDActivityCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityLevel"/> model
         /// </summary>
         Guid? RefPDActivityLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityType"/> model
         /// </summary>
         Guid? RefPDActivityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDAudienceType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDAudienceType"/> model
         /// </summary>
         Guid? RefPDAudienceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalDevelopmentFinancialSupport"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalDevelopmentFinancialSupport"/> model
         /// </summary>
         Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 

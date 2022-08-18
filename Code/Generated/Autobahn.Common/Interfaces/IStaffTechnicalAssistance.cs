@@ -17,12 +17,12 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceDeliveryType"/> model
+        /// Reference to an optional instance of the <see cref="RefTechnicalAssistanceDeliveryType"/> model
         /// </summary>
         Guid? RefTechnicalAssistanceDeliveryTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTechnicalAssistanceType"/> model
+        /// Reference to an optional instance of the <see cref="RefTechnicalAssistanceType"/> model
         /// </summary>
         Guid? RefTechnicalAssistanceTypeId { get; set; }
 

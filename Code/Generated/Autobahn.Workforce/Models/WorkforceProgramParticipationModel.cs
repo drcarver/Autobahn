@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Workforce.Interfaces
+namespace Autobahn.Workforce.Models
 {
      /// <summary>
      /// The WorkforceProgramParticipation Model
@@ -30,12 +30,12 @@ namespace Autobahn.Workforce.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWfProgramParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefWfProgramParticipation"/> model
         /// </summary>
         public Guid? RefWfProgramParticipationId { get; set; }
 

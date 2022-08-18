@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The total number of participants that can be accommodated by a professional development session.
@@ -113,27 +113,27 @@ namespace Autobahn.Common.Interfaces
         public Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELTrainerCoreKnowledgeArea"/> model
+        /// Reference to an optional instance of the <see cref="RefELTrainerCoreKnowledgeArea"/> model
         /// </summary>
         public Guid? RefELTrainerCoreKnowledgeAreaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDDeliveryMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefPDDeliveryMethod"/> model
         /// </summary>
         public Guid? RefPDDeliveryMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDInstructionalDeliveryMode"/> model
+        /// Reference to an optional instance of the <see cref="RefPDInstructionalDeliveryMode"/> model
         /// </summary>
         public Guid? RefPDInstructionalDeliveryModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDSessionStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefPDSessionStatus"/> model
         /// </summary>
         public Guid? RefPDSessionStatusId { get; set; }
 

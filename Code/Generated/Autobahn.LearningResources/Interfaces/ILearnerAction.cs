@@ -79,7 +79,7 @@ namespace Autobahn.LearningResources.Interfaces
         System.String LearnerActionObjectType { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearnerActionType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearnerActionType"/> model
         /// </summary>
         Guid? RefLearnerActionTypeId { get; set; }
 

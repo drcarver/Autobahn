@@ -45,22 +45,22 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELFederalFundingType"/> model
+        /// Reference to an optional instance of the <see cref="RefELFederalFundingType"/> model
         /// </summary>
         Guid? RefELFederalFundingTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFoodServiceParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefFoodServiceParticipation"/> model
         /// </summary>
         Guid? RefFoodServiceParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEnvironmentEL"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEnvironmentEL"/> model
         /// </summary>
         Guid? RefIDEAEnvironmentELId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefServiceOption"/> model
+        /// Reference to an optional instance of the <see cref="RefServiceOption"/> model
         /// </summary>
         Guid? RefServiceOptionId { get; set; }
 

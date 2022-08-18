@@ -24,7 +24,7 @@ namespace Autobahn.K12.Interfaces
         Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12LeaTitleISupportService"/> model
+        /// Reference to an optional instance of the <see cref="RefK12LeaTitleISupportService"/> model
         /// </summary>
         Guid RefK12LeaTitleISupportServiceId { get; set; }
 

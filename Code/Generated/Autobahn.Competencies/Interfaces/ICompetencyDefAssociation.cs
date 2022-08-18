@@ -91,17 +91,17 @@ namespace Autobahn.Competencies.Interfaces
         System.String OriginNodeURI { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefAssociationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefAssociationType"/> model
         /// </summary>
         Guid? RefCompetencyDefAssociationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEntityType"/> model
+        /// Reference to an optional instance of the <see cref="RefEntityType"/> model
         /// </summary>
         Guid RefEntityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceCompetencyAlignmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceCompetencyAlignmentType"/> model
         /// </summary>
         Guid? RefLearningResourceCompetencyAlignmentTypeId { get; set; }
 

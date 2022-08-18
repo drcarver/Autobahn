@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonProgramParticipation Model
@@ -28,17 +28,17 @@ namespace Autobahn.Common.Interfaces
         public System.String ParticipationStatus { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefParticipationType"/> model
+        /// Reference to an optional instance of the <see cref="RefParticipationType"/> model
         /// </summary>
         public Guid? RefParticipationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramEntryReason"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramEntryReason"/> model
         /// </summary>
         public Guid? RefProgramEntryReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramExitReason"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramExitReason"/> model
         /// </summary>
         public Guid? RefProgramExitReasonId { get; set; }
 

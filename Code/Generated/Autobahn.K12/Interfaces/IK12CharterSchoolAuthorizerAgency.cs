@@ -18,7 +18,7 @@ namespace Autobahn.K12.Interfaces
         Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCharterSchoolAuthorizerType"/> model
+        /// Reference to an optional instance of the <see cref="RefCharterSchoolAuthorizerType"/> model
         /// </summary>
         Guid RefCharterSchoolAuthorizerTypeId { get; set; }
 

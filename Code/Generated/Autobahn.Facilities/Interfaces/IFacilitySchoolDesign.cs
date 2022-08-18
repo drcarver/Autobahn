@@ -24,7 +24,7 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityDesignId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSchoolDesignType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSchoolDesignType"/> model
         /// </summary>
         Guid RefBuildingSchoolDesignTypeId { get; set; }
 

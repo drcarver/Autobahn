@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencyFramework Model
@@ -80,12 +80,12 @@ namespace Autobahn.Competencies.Interfaces
         public System.String Publisher { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyFrameworkPublicationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyFrameworkPublicationStatus"/> model
         /// </summary>
         public Guid? RefCompetencyFrameworkPublicationStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 

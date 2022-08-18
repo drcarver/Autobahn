@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonImmunization Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefImmunizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefImmunizationType"/> model
         /// </summary>
         public Guid RefImmunizationTypeId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityHazard Model
@@ -80,12 +80,12 @@ namespace Autobahn.Facilities.Interfaces
         public System.DateTime? HazardousMaterialOrConditionTestingDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityHazardousMaterialsOrCondType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityHazardousMaterialsOrCondType"/> model
         /// </summary>
         public Guid? RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityNaturallyOccurringHazardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityNaturallyOccurringHazardType"/> model
         /// </summary>
         public Guid? RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 

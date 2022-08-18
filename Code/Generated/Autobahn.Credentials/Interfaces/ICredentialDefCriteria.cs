@@ -95,7 +95,7 @@ namespace Autobahn.Credentials.Interfaces
         System.String MinimumDuration { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefAssessMethodType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefAssessMethodType"/> model
         /// </summary>
         Guid? RefCredentialDefAssessMethodTypeId { get; set; }
 

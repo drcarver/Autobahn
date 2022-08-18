@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencyDefEducationLevel Model
@@ -19,7 +19,7 @@ namespace Autobahn.Competencies.Interfaces
         public Guid CompetencyDefinitionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefEducationLevel"/> model
         /// </summary>
         public Guid RefEducationLevelId { get; set; }
 

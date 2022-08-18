@@ -61,32 +61,32 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDentalInsuranceCoverageType"/> model
+        /// Reference to an optional instance of the <see cref="RefDentalInsuranceCoverageType"/> model
         /// </summary>
         Guid? RefDentalInsuranceCoverageTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDentalScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDentalScreeningStatus"/> model
         /// </summary>
         Guid? RefDentalScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHealthInsuranceCoverage"/> model
+        /// Reference to an optional instance of the <see cref="RefHealthInsuranceCoverage"/> model
         /// </summary>
         Guid? RefHealthInsuranceCoverageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHearingScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHearingScreeningStatus"/> model
         /// </summary>
         Guid? RefHearingScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMedicalAlertIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefMedicalAlertIndicator"/> model
         /// </summary>
         Guid? RefMedicalAlertIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefVisionScreeningStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefVisionScreeningStatus"/> model
         /// </summary>
         Guid? RefVisionScreeningStatusId { get; set; }
 

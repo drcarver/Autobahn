@@ -74,12 +74,12 @@ namespace Autobahn.Common.Interfaces
         System.String ProfessionalCertificateOrLicenseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialType"/> model
         /// </summary>
         Guid? RefCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIssuingState"/> model
+        /// Reference to an optional instance of the <see cref="RefIssuingState"/> model
         /// </summary>
         Guid? RefIssuingStateId { get; set; }
 

@@ -40,27 +40,27 @@ namespace Autobahn.Postsecondary.Interfaces
         System.Decimal? ProgramLengthHours { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipVersion"/> model
+        /// Reference to an optional instance of the <see cref="RefCipVersion"/> model
         /// </summary>
         Guid? RefCipVersionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDQPCategoriesOfLearning"/> model
+        /// Reference to an optional instance of the <see cref="RefDQPCategoriesOfLearning"/> model
         /// </summary>
         Guid? RefDQPCategoriesOfLearningId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramLengthHoursType"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramLengthHoursType"/> model
         /// </summary>
         Guid? RefProgramLengthHoursTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPSProgramLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPSProgramLevel"/> model
         /// </summary>
         Guid? RefPSProgramLevelId { get; set; }
 

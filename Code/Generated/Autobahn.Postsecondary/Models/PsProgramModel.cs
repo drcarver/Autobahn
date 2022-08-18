@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsProgram Model
@@ -41,27 +41,27 @@ namespace Autobahn.Postsecondary.Interfaces
         public System.Decimal? ProgramLengthHours { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipVersion"/> model
+        /// Reference to an optional instance of the <see cref="RefCipVersion"/> model
         /// </summary>
         public Guid? RefCipVersionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDQPCategoriesOfLearning"/> model
+        /// Reference to an optional instance of the <see cref="RefDQPCategoriesOfLearning"/> model
         /// </summary>
         public Guid? RefDQPCategoriesOfLearningId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramLengthHoursType"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramLengthHoursType"/> model
         /// </summary>
         public Guid? RefProgramLengthHoursTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPSProgramLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPSProgramLevel"/> model
         /// </summary>
         public Guid? RefPSProgramLevelId { get; set; }
 

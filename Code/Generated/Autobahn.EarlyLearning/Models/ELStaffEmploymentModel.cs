@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELStaffEmployment Model
@@ -36,32 +36,32 @@ namespace Autobahn.EarlyLearning.Interfaces
         public System.Decimal? HoursWorkedPerWeek { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELEducationStaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefELEducationStaffClassification"/> model
         /// </summary>
         public Guid? RefELEducationStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELEmploymentSeparationReason"/> model
+        /// Reference to an optional instance of the <see cref="RefELEmploymentSeparationReason"/> model
         /// </summary>
         public Guid? RefELEmploymentSeparationReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELServiceProfessionalStaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefELServiceProfessionalStaffClassification"/> model
         /// </summary>
         public Guid? RefELServiceProfessionalStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
         /// </summary>
         public Guid? RefEmploymentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWageCollectionMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefWageCollectionMethod"/> model
         /// </summary>
         public Guid? RefWageCollectionMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWageVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefWageVerification"/> model
         /// </summary>
         public Guid? RefWageVerificationId { get; set; }
 

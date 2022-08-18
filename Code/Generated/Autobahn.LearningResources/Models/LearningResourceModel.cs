@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Interfaces
+namespace Autobahn.LearningResources.Models
 {
      /// <summary>
      /// URL identifier of a learning resource for which this resource is an adaptation.
@@ -203,77 +203,77 @@ namespace Autobahn.LearningResources.Interfaces
         public System.String PublisherName { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessAPIType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessAPIType"/> model
         /// </summary>
         public Guid? RefLearningResourceAccessAPITypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessHazardType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessHazardType"/> model
         /// </summary>
         public Guid? RefLearningResourceAccessHazardTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessModeType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessModeType"/> model
         /// </summary>
         public Guid? RefLearningResourceAccessModeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceAccessRightsUrl"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessRightsUrl"/> model
         /// </summary>
         public Guid? RefLearningResourceAccessRightsUrlId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceAuthorType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAuthorType"/> model
         /// </summary>
         public Guid? RefLearningResourceAuthorTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceBookFormatType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceBookFormatType"/> model
         /// </summary>
         public Guid? RefLearningResourceBookFormatTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceControlFlexibilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceControlFlexibilityType"/> model
         /// </summary>
         public Guid? RefLearningResourceControlFlexibilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceDigitalMediaSubType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceDigitalMediaSubType"/> model
         /// </summary>
         public Guid? RefLearningResourceDigitalMediaSubTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceDigitalMediaType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceDigitalMediaType"/> model
         /// </summary>
         public Guid? RefLearningResourceDigitalMediaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceEducationalUse"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceEducationalUse"/> model
         /// </summary>
         public Guid? RefLearningResourceEducationalUseId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceIntendedEndUserRole"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceIntendedEndUserRole"/> model
         /// </summary>
         public Guid? RefLearningResourceIntendedEndUserRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceInteractionMode"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceInteractionMode"/> model
         /// </summary>
         public Guid? RefLearningResourceInteractionModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceInteractivityType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceInteractivityType"/> model
         /// </summary>
         public Guid? RefLearningResourceInteractivityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceType"/> model
         /// </summary>
         public Guid? RefLearningResourceTypeId { get; set; }
 

@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity.
@@ -30,7 +30,7 @@ namespace Autobahn.Common.Interfaces
         public Guid CourseSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLocationType"/> model
         /// </summary>
         public Guid? RefInstructionLocationTypeId { get; set; }
 

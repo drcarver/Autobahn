@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.CTE.Interfaces
+namespace Autobahn.CTE.Models
 {
      /// <summary>
      /// The cumulative number of credits a person attempts to earn by taking courses during their enrollment in their current education institution as well as those credits transferred from an education institution in which the person had been previously enrolled.
@@ -54,7 +54,7 @@ namespace Autobahn.CTE.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 

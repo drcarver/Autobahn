@@ -37,12 +37,12 @@ namespace Autobahn.K12.Interfaces
         System.Boolean? MepPersonnelIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentStatus"/> model
         /// </summary>
         Guid? RefEmploymentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12StaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
         /// </summary>
         Guid? RefK12StaffClassificationId { get; set; }
 

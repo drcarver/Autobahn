@@ -51,17 +51,17 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidVeteransBenefitStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitStatus"/> model
         /// </summary>
         Guid? RefFinancialAidVeteransBenefitStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidVeteransBenefitType"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitType"/> model
         /// </summary>
         Guid? RefFinancialAidVeteransBenefitTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNeedDeterminationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefNeedDeterminationMethod"/> model
         /// </summary>
         Guid? RefNeedDeterminationMethodId { get; set; }
 

@@ -129,22 +129,22 @@ namespace Autobahn.Common.Interfaces
         System.String PostalCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefCountry"/> model
         /// </summary>
         Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCounty"/> model
+        /// Reference to an optional instance of the <see cref="RefCounty"/> model
         /// </summary>
         Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefERSRuralUrbanContinuumCode"/> model
+        /// Reference to an optional instance of the <see cref="RefERSRuralUrbanContinuumCode"/> model
         /// </summary>
         Guid? RefERSRuralUrbanContinuumCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefState"/> model
+        /// Reference to an optional instance of the <see cref="RefState"/> model
         /// </summary>
         Guid? RefStateId { get; set; }
 

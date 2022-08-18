@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The RecordStatusHistory Model
@@ -42,12 +42,12 @@ namespace Autobahn.Common.Interfaces
         public System.String RecordTable { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRecordStatusCreatorEntity"/> model
+        /// Reference to an optional instance of the <see cref="RefRecordStatusCreatorEntity"/> model
         /// </summary>
         public Guid? RefRecordStatusCreatorEntityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRecordStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefRecordStatusType"/> model
         /// </summary>
         public Guid RefRecordStatusTypeId { get; set; }
 

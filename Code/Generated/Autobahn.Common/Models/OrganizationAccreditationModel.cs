@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The full name of an agency that accredited a school.
@@ -54,12 +54,12 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccreditationAgency"/> model
+        /// Reference to an optional instance of the <see cref="RefAccreditationAgency"/> model
         /// </summary>
         public Guid? RefAccreditationAgencyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
         /// </summary>
         public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 

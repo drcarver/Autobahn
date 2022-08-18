@@ -24,7 +24,7 @@ namespace Autobahn.Competencies.Interfaces
         Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCoreKnowledgeArea"/> model
+        /// Reference to an optional instance of the <see cref="RefCoreKnowledgeArea"/> model
         /// </summary>
         Guid RefCoreKnowledgeAreaId { get; set; }
 

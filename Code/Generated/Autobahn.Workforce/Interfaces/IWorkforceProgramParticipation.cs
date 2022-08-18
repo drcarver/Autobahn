@@ -29,12 +29,12 @@ namespace Autobahn.Workforce.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWfProgramParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefWfProgramParticipation"/> model
         /// </summary>
         Guid? RefWfProgramParticipationId { get; set; }
 

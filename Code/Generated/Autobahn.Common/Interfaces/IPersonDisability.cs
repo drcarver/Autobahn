@@ -33,27 +33,27 @@ namespace Autobahn.Common.Interfaces
         Guid? PrimaryDisabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccommodationsNeededType"/> model
+        /// Reference to an optional instance of the <see cref="RefAccommodationsNeededType"/> model
         /// </summary>
         Guid? RefAccommodationsNeededTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityConditionStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityConditionStatusCode"/> model
         /// </summary>
         Guid? RefDisabilityConditionStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityConditionType"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityConditionType"/> model
         /// </summary>
         Guid? RefDisabilityConditionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDisabilityDeterminationSourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefDisabilityDeterminationSourceType"/> model
         /// </summary>
         Guid? RefDisabilityDeterminationSourceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEADisabilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEADisabilityType"/> model
         /// </summary>
         Guid? RefIDEADisabilityTypeId { get; set; }
 

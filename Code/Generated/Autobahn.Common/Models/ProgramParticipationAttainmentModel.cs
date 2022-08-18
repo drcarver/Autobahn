@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// An indication of whether the adult education participant received a secondary school diploma or its recognized equivalent while enrolled in the adult education program or within one year of exiting the adult education program and was employed within one year of exiting the adult education program.
@@ -52,12 +52,12 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEdFactsAcademicOrCareerAndTechnicalOutcomeExitType"/> model
+        /// Reference to an optional instance of the <see cref="RefEdFactsAcademicOrCareerAndTechnicalOutcomeExitType"/> model
         /// </summary>
         public Guid? RefEdFactsAcademicOrCareerAndTechnicalOutcomeExitTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEdFactsAcademicOrCareerAndTechnicalOutcomeType"/> model
+        /// Reference to an optional instance of the <see cref="RefEdFactsAcademicOrCareerAndTechnicalOutcomeType"/> model
         /// </summary>
         public Guid? RefEdFactsAcademicOrCareerAndTechnicalOutcomeTypeId { get; set; }
 

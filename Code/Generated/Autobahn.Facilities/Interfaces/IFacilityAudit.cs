@@ -35,7 +35,7 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityAuditType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityAuditType"/> model
         /// </summary>
         Guid? RefFacilityAuditTypeId { get; set; }
 

@@ -64,12 +64,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEnvironmentSetting"/> model
+        /// Reference to an optional instance of the <see cref="RefEnvironmentSetting"/> model
         /// </summary>
         Guid? RefEnvironmentSettingId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefServiceOption"/> model
+        /// Reference to an optional instance of the <see cref="RefServiceOption"/> model
         /// </summary>
         Guid? RefServiceOptionId { get; set; }
 

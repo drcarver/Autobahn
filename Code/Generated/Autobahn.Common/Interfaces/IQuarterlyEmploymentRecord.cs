@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedPriorToEnrollment"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedPriorToEnrollment"/> model
         /// </summary>
         Guid? RefEmployedPriorToEnrollmentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentLocation"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentLocation"/> model
         /// </summary>
         Guid? RefEmploymentLocationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefERAdministrativeDataSource"/> model
+        /// Reference to an optional instance of the <see cref="RefERAdministrativeDataSource"/> model
         /// </summary>
         Guid? RefERAdministrativeDataSourceId { get; set; }
 

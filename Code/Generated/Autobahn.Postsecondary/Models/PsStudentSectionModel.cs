@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The final grade awarded for participation in the course. 
@@ -87,12 +87,12 @@ namespace Autobahn.Postsecondary.Interfaces
         public System.Decimal? QualityPointsEarned { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseAcademicGradeStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseRepeatCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseRepeatCode"/> model
         /// </summary>
         public Guid? RefCourseRepeatCodeId { get; set; }
 

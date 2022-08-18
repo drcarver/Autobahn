@@ -44,12 +44,12 @@ namespace Autobahn.Common.Interfaces
         Guid? PersonTelephoneId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationType"/> model
         /// </summary>
         Guid? RefPersonalInformationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
         /// </summary>
         Guid? RefPersonalInformationVerificationId { get; set; }
 

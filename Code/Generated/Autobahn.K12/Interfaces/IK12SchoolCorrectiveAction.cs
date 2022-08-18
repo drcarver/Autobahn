@@ -24,7 +24,7 @@ namespace Autobahn.K12.Interfaces
         Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCorrectiveActionType"/> model
+        /// Reference to an optional instance of the <see cref="RefCorrectiveActionType"/> model
         /// </summary>
         Guid RefCorrectiveActionTypeId { get; set; }
 

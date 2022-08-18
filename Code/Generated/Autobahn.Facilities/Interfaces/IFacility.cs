@@ -141,27 +141,27 @@ namespace Autobahn.Facilities.Interfaces
         Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingHistoricStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingHistoricStatus"/> model
         /// </summary>
         Guid? RefBuildingHistoricStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingPrimaryUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingPrimaryUseType"/> model
         /// </summary>
         Guid? RefBuildingPrimaryUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingUseType"/> model
         /// </summary>
         Guid? RefBuildingUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusStatus"/> model
         /// </summary>
         Guid? RefCampusStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCampusType"/> model
+        /// Reference to an optional instance of the <see cref="RefCampusType"/> model
         /// </summary>
         Guid? RefCampusTypeId { get; set; }
 

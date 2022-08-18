@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ProgramParticipationWIOABarriers Model
@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         public Guid ProgramParticipationWIOAId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWIOABarrierstoEmployment"/> model
+        /// Reference to an optional instance of the <see cref="RefWIOABarrierstoEmployment"/> model
         /// </summary>
         public Guid? RefWIOABarrierstoEmploymentId { get; set; }
 

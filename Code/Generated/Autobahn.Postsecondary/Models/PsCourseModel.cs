@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsCourse Model
@@ -69,22 +69,22 @@ namespace Autobahn.Postsecondary.Interfaces
         public System.String OverrideSchoolCourseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditBasisType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditBasisType"/> model
         /// </summary>
         public Guid? RefCourseCreditBasisTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditLevelType"/> model
         /// </summary>
         public Guid? RefCourseCreditLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNCESCollegeCourseMapCode"/> model
+        /// Reference to an optional instance of the <see cref="RefNCESCollegeCourseMapCode"/> model
         /// </summary>
         public Guid? RefNCESCollegeCourseMapCodeId { get; set; }
 

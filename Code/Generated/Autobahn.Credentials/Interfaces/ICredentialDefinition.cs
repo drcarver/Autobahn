@@ -114,48 +114,37 @@ namespace Autobahn.Credentials.Interfaces
         System.String Keywords { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefIntendedPurposeType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefIntendedPurposeType"/> model
         /// </summary>
         Guid? RefCredentialDefIntendedPurposeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefStatusType"/> model
         /// </summary>
         Guid? RefCredentialDefStatusTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefVerificationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefVerificationType"/> model
         /// </summary>
         Guid? RefCredentialDefVerificationTypeId { get; set; }
 
         /// <summary>
-        /// CTDL Audience Level Type
-        /// <para>
-        /// Type of level indicating a point in a progression through an educational or training context, for which the credential is intended; select from an existing enumeration of such types.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20894">CTDL Audience Level Type</a>
-        /// </para>
-        /// </summary>
-         RefCtdlAudienceLevelTypeId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCTDLAudienceLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCTDLAudienceLevelType"/> model
         /// </summary>
         Guid? RefCTDLAudienceLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefONETSOCOccupationType"/> model
+        /// Reference to an optional instance of the <see cref="RefONETSOCOccupationType"/> model
         /// </summary>
         Guid? RefONETSOCOccupationTypeId { get; set; }
 

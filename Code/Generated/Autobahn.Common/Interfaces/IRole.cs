@@ -14,7 +14,7 @@ namespace Autobahn.Common.Interfaces
         System.String Name { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRole"/> model
+        /// Reference to an optional instance of the <see cref="RefRole"/> model
         /// </summary>
         Guid? RefRoleId { get; set; }
 

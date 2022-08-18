@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramProgressReportPlan Model
@@ -17,12 +17,12 @@ namespace Autobahn.Common.Interfaces
         public Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportSchedule"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportSchedule"/> model
         /// </summary>
         public Guid? RefIPSPProgressReportScheduleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportType"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
         /// </summary>
         public Guid? RefIPSPProgressReportTypeId { get; set; }
 

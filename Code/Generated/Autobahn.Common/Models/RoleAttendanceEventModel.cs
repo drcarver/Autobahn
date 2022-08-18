@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The RoleAttendanceEvent Model
@@ -39,27 +39,27 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAbsentAttendanceCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefAbsentAttendanceCategory"/> model
         /// </summary>
         public Guid? RefAbsentAttendanceCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAttendanceEventType"/> model
+        /// Reference to an optional instance of the <see cref="RefAttendanceEventType"/> model
         /// </summary>
         public Guid? RefAttendanceEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAttendanceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefAttendanceStatus"/> model
         /// </summary>
         public Guid? RefAttendanceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaveEventType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaveEventType"/> model
         /// </summary>
         public Guid? RefLeaveEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPresentAttendanceCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefPresentAttendanceCategory"/> model
         /// </summary>
         public Guid? RefPresentAttendanceCategoryId { get; set; }
 

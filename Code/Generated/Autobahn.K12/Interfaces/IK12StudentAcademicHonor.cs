@@ -29,7 +29,7 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicHonorType"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicHonorType"/> model
         /// </summary>
         Guid? RefAcademicHonorTypeId { get; set; }
 

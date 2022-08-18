@@ -46,7 +46,7 @@ namespace Autobahn.Common.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNeglectedProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefNeglectedProgramType"/> model
         /// </summary>
         Guid? RefNeglectedProgramTypeId { get; set; }
 

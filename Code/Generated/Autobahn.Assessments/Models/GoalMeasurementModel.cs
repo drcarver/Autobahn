@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Assessments.Interfaces
+namespace Autobahn.Assessments.Models
 {
      /// <summary>
      /// The GoalMeasurement Model
@@ -19,7 +19,7 @@ namespace Autobahn.Assessments.Interfaces
         public Guid GoalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGoalMeasurementType"/> model
+        /// Reference to an optional instance of the <see cref="RefGoalMeasurementType"/> model
         /// </summary>
         public Guid? RefGoalMeasurementTypeId { get; set; }
 

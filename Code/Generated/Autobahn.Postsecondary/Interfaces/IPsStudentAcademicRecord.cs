@@ -141,17 +141,17 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicTermDesignator"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
         /// </summary>
         Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditHoursAppliedOtherProgram"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditHoursAppliedOtherProgram"/> model
         /// </summary>
         Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechCredentialType"/> model
         /// </summary>
         Guid? RefProfessionalTechCredentialTypeId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencyDefinition Model
@@ -139,27 +139,27 @@ namespace Autobahn.Competencies.Interfaces
         public System.String PreviousVersionIdentifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBloomsTaxonomyDomain"/> model
+        /// Reference to an optional instance of the <see cref="RefBloomsTaxonomyDomain"/> model
         /// </summary>
         public Guid? RefBloomsTaxonomyDomainId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefNodeAccessibilityProfile"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefNodeAccessibilityProfile"/> model
         /// </summary>
         public Guid? RefCompetencyDefNodeAccessibilityProfileId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefTestabilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefTestabilityType"/> model
         /// </summary>
         public Guid? RefCompetencyDefTestabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMultipleIntelligenceType"/> model
+        /// Reference to an optional instance of the <see cref="RefMultipleIntelligenceType"/> model
         /// </summary>
         public Guid? RefMultipleIntelligenceTypeId { get; set; }
 

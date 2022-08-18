@@ -77,52 +77,52 @@ namespace Autobahn.Common.Interfaces
         Guid? OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFirearmType"/> model
+        /// Reference to an optional instance of the <see cref="RefFirearmType"/> model
         /// </summary>
         Guid? RefFirearmTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentBehavior"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentBehavior"/> model
         /// </summary>
         Guid? RefIncidentBehaviorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentBehaviorSecondary"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentBehaviorSecondary"/> model
         /// </summary>
         Guid? RefIncidentBehaviorSecondaryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentInjuryType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentInjuryType"/> model
         /// </summary>
         Guid? RefIncidentInjuryTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentLocation"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentLocation"/> model
         /// </summary>
         Guid? RefIncidentLocationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentMultipleOffenseType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentMultipleOffenseType"/> model
         /// </summary>
         Guid? RefIncidentMultipleOffenseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentPerpetratorInjuryType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentPerpetratorInjuryType"/> model
         /// </summary>
         Guid? RefIncidentPerpetratorInjuryTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentReporterType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentReporterType"/> model
         /// </summary>
         Guid? RefIncidentReporterTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentTimeDescriptionCode"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentTimeDescriptionCode"/> model
         /// </summary>
         Guid? RefIncidentTimeDescriptionCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWeaponType"/> model
+        /// Reference to an optional instance of the <see cref="RefWeaponType"/> model
         /// </summary>
         Guid? RefWeaponTypeId { get; set; }
 

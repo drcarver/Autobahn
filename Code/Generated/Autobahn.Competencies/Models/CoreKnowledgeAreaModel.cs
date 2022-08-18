@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CoreKnowledgeArea Model
@@ -25,7 +25,7 @@ namespace Autobahn.Competencies.Interfaces
         public Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCoreKnowledgeArea"/> model
+        /// Reference to an optional instance of the <see cref="RefCoreKnowledgeArea"/> model
         /// </summary>
         public Guid RefCoreKnowledgeAreaId { get; set; }
 

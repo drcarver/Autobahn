@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
@@ -115,48 +115,37 @@ namespace Autobahn.Credentials.Interfaces
         public System.String Keywords { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         public Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefIntendedPurposeType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefIntendedPurposeType"/> model
         /// </summary>
         public Guid? RefCredentialDefIntendedPurposeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefStatusType"/> model
         /// </summary>
         public Guid? RefCredentialDefStatusTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefVerificationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefVerificationType"/> model
         /// </summary>
         public Guid? RefCredentialDefVerificationTypeId { get; set; }
 
         /// <summary>
-        /// CTDL Audience Level Type
-        /// <para>
-        /// Type of level indicating a point in a progression through an educational or training context, for which the credential is intended; select from an existing enumeration of such types.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20894">CTDL Audience Level Type</a>
-        /// </para>
-        /// </summary>
-        public  RefCtdlAudienceLevelTypeId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCTDLAudienceLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCTDLAudienceLevelType"/> model
         /// </summary>
         public Guid? RefCTDLAudienceLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefONETSOCOccupationType"/> model
+        /// Reference to an optional instance of the <see cref="RefONETSOCOccupationType"/> model
         /// </summary>
         public Guid? RefONETSOCOccupationTypeId { get; set; }
 

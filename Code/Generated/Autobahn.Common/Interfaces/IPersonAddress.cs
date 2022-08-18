@@ -96,27 +96,27 @@ namespace Autobahn.Common.Interfaces
         System.String PostalCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefCountry"/> model
         /// </summary>
         Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCounty"/> model
+        /// Reference to an optional instance of the <see cref="RefCounty"/> model
         /// </summary>
         Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
         /// </summary>
         Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonLocationType"/> model
         /// </summary>
         Guid RefPersonLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefState"/> model
+        /// Reference to an optional instance of the <see cref="RefState"/> model
         /// </summary>
         Guid? RefStateId { get; set; }
 

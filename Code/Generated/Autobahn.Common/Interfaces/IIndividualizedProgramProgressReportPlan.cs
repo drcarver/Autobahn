@@ -17,12 +17,12 @@ namespace Autobahn.Common.Interfaces
         Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportSchedule"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportSchedule"/> model
         /// </summary>
         Guid? RefIPSPProgressReportScheduleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportType"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
         /// </summary>
         Guid? RefIPSPProgressReportTypeId { get; set; }
 

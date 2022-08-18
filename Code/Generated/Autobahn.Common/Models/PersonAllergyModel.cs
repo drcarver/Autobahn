@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonAllergy Model
@@ -28,12 +28,12 @@ namespace Autobahn.Common.Interfaces
         public System.String ReactionDescription { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAllergySeverity"/> model
+        /// Reference to an optional instance of the <see cref="RefAllergySeverity"/> model
         /// </summary>
         public Guid? RefAllergySeverityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAllergyType"/> model
+        /// Reference to an optional instance of the <see cref="RefAllergyType"/> model
         /// </summary>
         public Guid RefAllergyTypeId { get; set; }
 

@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The evidence by which a child's date of birth is confirmed.
@@ -112,32 +112,32 @@ namespace Autobahn.Common.Interfaces
         public System.String QualifyingMoveFromCity { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefContinuationOfServicesReason"/> model
+        /// Reference to an optional instance of the <see cref="RefContinuationOfServicesReason"/> model
         /// </summary>
         public Guid? RefContinuationOfServicesReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepEnrollmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepEnrollmentType"/> model
         /// </summary>
         public Guid? RefMepEnrollmentTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepProjectBased"/> model
+        /// Reference to an optional instance of the <see cref="RefMepProjectBased"/> model
         /// </summary>
         public Guid? RefMepProjectBasedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepServiceType"/> model
         /// </summary>
         public Guid? RefMepServiceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQualifyingMoveFromCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefQualifyingMoveFromCountry"/> model
         /// </summary>
         public Guid? RefQualifyingMoveFromCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQualifyingMoveFromState"/> model
+        /// Reference to an optional instance of the <see cref="RefQualifyingMoveFromState"/> model
         /// </summary>
         public Guid? RefQualifyingMoveFromStateId { get; set; }
 

@@ -68,22 +68,22 @@ namespace Autobahn.Postsecondary.Interfaces
         System.String OverrideSchoolCourseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditBasisType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditBasisType"/> model
         /// </summary>
         Guid? RefCourseCreditBasisTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditLevelType"/> model
         /// </summary>
         Guid? RefCourseCreditLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNCESCollegeCourseMapCode"/> model
+        /// Reference to an optional instance of the <see cref="RefNCESCollegeCourseMapCode"/> model
         /// </summary>
         Guid? RefNCESCollegeCourseMapCodeId { get; set; }
 

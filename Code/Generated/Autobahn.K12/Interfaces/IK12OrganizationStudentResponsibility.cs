@@ -18,12 +18,12 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12ResponsibilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefK12ResponsibilityType"/> model
         /// </summary>
         Guid RefK12ResponsibilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentSchoolAffiliationStateDefinedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentSchoolAffiliationStateDefinedStatus"/> model
         /// </summary>
         Guid? RefStudentSchoolAffiliationStateDefinedStatusId { get; set; }
 

@@ -108,12 +108,12 @@ namespace Autobahn.CTE.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNonTraditionalGenderStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefNonTraditionalGenderStatus"/> model
         /// </summary>
         Guid? RefNonTraditionalGenderStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

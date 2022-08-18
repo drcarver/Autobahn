@@ -31,7 +31,7 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid PsSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseInstructionSiteType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseInstructionSiteType"/> model
         /// </summary>
         Guid? RefCourseInstructionSiteTypeId { get; set; }
 

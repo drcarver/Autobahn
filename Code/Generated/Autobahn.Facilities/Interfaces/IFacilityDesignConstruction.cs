@@ -92,32 +92,32 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityDesignId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnergyConservationMeasureType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnergyConservationMeasureType"/> model
         /// </summary>
         Guid? RefBuildingEnergyConservationMeasureTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityConstructionDateType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityConstructionDateType"/> model
         /// </summary>
         Guid? RefFacilityConstructionDateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityConstructionMaterialType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityConstructionMaterialType"/> model
         /// </summary>
         Guid? RefFacilityConstructionMaterialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityJointDevelopmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityJointDevelopmentType"/> model
         /// </summary>
         Guid? RefFacilityJointDevelopmentTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitySiteImprovementLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitySiteImprovementLocationType"/> model
         /// </summary>
         Guid? RefFacilitySiteImprovementLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityStandardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityStandardType"/> model
         /// </summary>
         Guid? RefFacilityStandardTypeId { get; set; }
 

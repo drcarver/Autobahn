@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationDetail Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefOrganizationType"/> model
         /// </summary>
         public Guid? RefOrganizationTypeId { get; set; }
 

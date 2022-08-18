@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12SchoolGradeLevelsApproved Model
@@ -25,7 +25,7 @@ namespace Autobahn.K12.Interfaces
         public Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradeLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefGradeLevel"/> model
         /// </summary>
         public Guid RefGradeLevelId { get; set; }
 

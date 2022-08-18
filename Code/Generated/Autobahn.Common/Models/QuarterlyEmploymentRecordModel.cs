@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The QuarterlyEmploymentRecord Model
@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedPriorToEnrollment"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedPriorToEnrollment"/> model
         /// </summary>
         public Guid? RefEmployedPriorToEnrollmentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentLocation"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentLocation"/> model
         /// </summary>
         public Guid? RefEmploymentLocationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefERAdministrativeDataSource"/> model
+        /// Reference to an optional instance of the <see cref="RefERAdministrativeDataSource"/> model
         /// </summary>
         public Guid? RefERAdministrativeDataSourceId { get; set; }
 

@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationEmployeeBenefit Model
@@ -39,7 +39,7 @@ namespace Autobahn.Common.Interfaces
         public System.Boolean? PartTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployeeBenefit"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployeeBenefit"/> model
         /// </summary>
         public Guid? RefEmployeeBenefitId { get; set; }
 

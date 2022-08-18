@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramService Model
@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         public System.DateTime? PlannedServiceStartDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramPlannedServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramPlannedServiceType"/> model
         /// </summary>
         public Guid? RefIndividualizedProgramPlannedServiceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMethodOfServiceDelivery"/> model
+        /// Reference to an optional instance of the <see cref="RefMethodOfServiceDelivery"/> model
         /// </summary>
         public Guid? RefMethodOfServiceDeliveryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefServiceFrequency"/> model
+        /// Reference to an optional instance of the <see cref="RefServiceFrequency"/> model
         /// </summary>
         public Guid? RefServiceFrequencyId { get; set; }
 

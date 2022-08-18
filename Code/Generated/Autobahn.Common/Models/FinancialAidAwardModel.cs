@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The FinancialAidAward Model
@@ -39,12 +39,12 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidAwardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidAwardType"/> model
         /// </summary>
         public Guid? RefFinancialAidAwardTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidStatus"/> model
         /// </summary>
         public Guid? RefFinancialAidStatusId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsSection Model
@@ -36,42 +36,37 @@ namespace Autobahn.Postsecondary.Interfaces
         public System.String GradeValueQualifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGpaApplicability"/> model
-        /// </summary>
-        public  RefCourseGpaApplicabilityId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
         /// </summary>
         public Guid? RefCourseGPAApplicabilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseHonorsType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseHonorsType"/> model
         /// </summary>
         public Guid? RefCourseHonorsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseInstructionMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseInstructionMethod"/> model
         /// </summary>
         public Guid? RefCourseInstructionMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelType"/> model
         /// </summary>
         public Guid? RefCourseLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDevelopmentalEducationType"/> model
+        /// Reference to an optional instance of the <see cref="RefDevelopmentalEducationType"/> model
         /// </summary>
         public Guid? RefDevelopmentalEducationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

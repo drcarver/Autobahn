@@ -28,12 +28,12 @@ namespace Autobahn.Common.Interfaces
         System.String ReactionDescription { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAllergySeverity"/> model
+        /// Reference to an optional instance of the <see cref="RefAllergySeverity"/> model
         /// </summary>
         Guid? RefAllergySeverityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAllergyType"/> model
+        /// Reference to an optional instance of the <see cref="RefAllergyType"/> model
         /// </summary>
         Guid RefAllergyTypeId { get; set; }
 

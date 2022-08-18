@@ -30,7 +30,7 @@ namespace Autobahn.Common.Interfaces
         Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccommodationType"/> model
+        /// Reference to an optional instance of the <see cref="RefAccommodationType"/> model
         /// </summary>
         Guid? RefAccommodationTypeId { get; set; }
 

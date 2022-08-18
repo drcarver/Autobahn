@@ -51,7 +51,7 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLiteracyAssessment"/> model
+        /// Reference to an optional instance of the <see cref="RefLiteracyAssessment"/> model
         /// </summary>
         Guid? RefLiteracyAssessmentId { get; set; }
 

@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The EarlyChildhoodProgramTypeOffered Model
@@ -30,12 +30,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCommunityBasedType"/> model
+        /// Reference to an optional instance of the <see cref="RefCommunityBasedType"/> model
         /// </summary>
         public Guid? RefCommunityBasedTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEarlyChildhoodProgramEnrollmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodProgramEnrollmentType"/> model
         /// </summary>
         public Guid RefEarlyChildhoodProgramEnrollmentTypeId { get; set; }
 

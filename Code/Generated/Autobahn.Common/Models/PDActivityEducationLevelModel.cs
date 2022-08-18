@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PDActivityEducationLevel Model
@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         public Guid ProfessionalDevelopmentActivityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityEducationLevelsAddressed"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityEducationLevelsAddressed"/> model
         /// </summary>
         public Guid RefPDActivityEducationLevelsAddressedId { get; set; }
 

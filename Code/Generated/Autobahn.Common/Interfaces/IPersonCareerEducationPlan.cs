@@ -50,7 +50,7 @@ namespace Autobahn.Common.Interfaces
         System.DateTime? ProfessionalDevelopmentPlanCompletion { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerEducationPlanType"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerEducationPlanType"/> model
         /// </summary>
         Guid? RefCareerEducationPlanTypeId { get; set; }
 

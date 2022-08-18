@@ -51,22 +51,22 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDirectoryInformationBlockStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDirectoryInformationBlockStatus"/> model
         /// </summary>
         Guid? RefDirectoryInformationBlockStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEndOfTermStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEndOfTermStatus"/> model
         /// </summary>
         Guid? RefEndOfTermStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEnrollmentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEnrollmentStatus"/> model
         /// </summary>
         Guid? RefEnrollmentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEntryGradeLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefEntryGradeLevel"/> model
         /// </summary>
         Guid? RefEntryGradeLevelId { get; set; }
 
@@ -82,32 +82,32 @@ namespace Autobahn.K12.Interfaces
         System.Int32? RefEntryType { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefExitGradeLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefExitGradeLevel"/> model
         /// </summary>
         Guid? RefExitGradeLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefExitOrWithdrawalStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefExitOrWithdrawalStatus"/> model
         /// </summary>
         Guid? RefExitOrWithdrawalStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefExitOrWithdrawalType"/> model
+        /// Reference to an optional instance of the <see cref="RefExitOrWithdrawalType"/> model
         /// </summary>
         Guid? RefExitOrWithdrawalTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFoodServiceEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefFoodServiceEligibility"/> model
         /// </summary>
         Guid? RefFoodServiceEligibilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNonPromotionReason"/> model
+        /// Reference to an optional instance of the <see cref="RefNonPromotionReason"/> model
         /// </summary>
         Guid? RefNonPromotionReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPromotionReason"/> model
+        /// Reference to an optional instance of the <see cref="RefPromotionReason"/> model
         /// </summary>
         Guid? RefPromotionReasonId { get; set; }
 
@@ -123,7 +123,7 @@ namespace Autobahn.K12.Interfaces
         System.Int32? RefPublicSchoolResidence { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentEnrollmentAccessType"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentEnrollmentAccessType"/> model
         /// </summary>
         Guid? RefStudentEnrollmentAccessTypeId { get; set; }
 

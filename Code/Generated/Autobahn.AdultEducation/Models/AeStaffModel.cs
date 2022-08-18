@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.AdultEducation.Interfaces
+namespace Autobahn.AdultEducation.Models
 {
      /// <summary>
      /// The AeStaff Model
@@ -19,12 +19,12 @@ namespace Autobahn.AdultEducation.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeStaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefAeStaffClassification"/> model
         /// </summary>
         public Guid? RefAeStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAeStaffEmploymentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefAeStaffEmploymentStatus"/> model
         /// </summary>
         public Guid? RefAeStaffEmploymentStatusId { get; set; }
 

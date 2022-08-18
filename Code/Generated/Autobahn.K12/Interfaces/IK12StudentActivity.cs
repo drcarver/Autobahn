@@ -31,7 +31,7 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefActivityTimeMeasurementType"/> model
+        /// Reference to an optional instance of the <see cref="RefActivityTimeMeasurementType"/> model
         /// </summary>
         Guid? RefActivityTimeMeasurementTypeId { get; set; }
 

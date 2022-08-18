@@ -78,7 +78,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReasonDelayTransitionConf"/> model
+        /// Reference to an optional instance of the <see cref="RefReasonDelayTransitionConf"/> model
         /// </summary>
         Guid? RefReasonDelayTransitionConfId { get; set; }
 

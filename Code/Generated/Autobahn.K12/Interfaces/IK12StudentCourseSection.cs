@@ -73,62 +73,57 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
         /// </summary>
         Guid? RefAdditionalCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGpaApplicability"/> model
-        /// </summary>
-         RefCourseGpaApplicabilityId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
         /// </summary>
         Guid? RefCourseGPAApplicabilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseRepeatCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseRepeatCode"/> model
         /// </summary>
         Guid? RefCourseRepeatCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseSectionEnrollmentStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseSectionEnrollmentStatusType"/> model
         /// </summary>
         Guid? RefCourseSectionEnrollmentStatusTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseSectionEntryType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseSectionEntryType"/> model
         /// </summary>
         Guid? RefCourseSectionEntryTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseSectionExitType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseSectionExitType"/> model
         /// </summary>
         Guid? RefCourseSectionExitTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditTypeEarned"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditTypeEarned"/> model
         /// </summary>
         Guid? RefCreditTypeEarnedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefExitOrWithdrawalStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefExitOrWithdrawalStatus"/> model
         /// </summary>
         Guid? RefExitOrWithdrawalStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradeLevelWhenCourseTaken"/> model
+        /// Reference to an optional instance of the <see cref="RefGradeLevelWhenCourseTaken"/> model
         /// </summary>
         Guid? RefGradeLevelWhenCourseTakenId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPreAndPostTestIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefPreAndPostTestIndicator"/> model
         /// </summary>
         Guid? RefPreAndPostTestIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgressLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefProgressLevel"/> model
         /// </summary>
         Guid? RefProgressLevelId { get; set; }
 

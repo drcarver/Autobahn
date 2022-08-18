@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// A unique number or alphanumeric code assigned to a building addition by a school, school system, state, or other agency or entity.
@@ -93,32 +93,32 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityDesignId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingEnergyConservationMeasureType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingEnergyConservationMeasureType"/> model
         /// </summary>
         public Guid? RefBuildingEnergyConservationMeasureTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityConstructionDateType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityConstructionDateType"/> model
         /// </summary>
         public Guid? RefFacilityConstructionDateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityConstructionMaterialType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityConstructionMaterialType"/> model
         /// </summary>
         public Guid? RefFacilityConstructionMaterialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityJointDevelopmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityJointDevelopmentType"/> model
         /// </summary>
         public Guid? RefFacilityJointDevelopmentTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitySiteImprovementLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitySiteImprovementLocationType"/> model
         /// </summary>
         public Guid? RefFacilitySiteImprovementLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityStandardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityStandardType"/> model
         /// </summary>
         public Guid? RefFacilityStandardTypeId { get; set; }
 

@@ -112,12 +112,12 @@ namespace Autobahn.K12.Interfaces
         Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBarrierToEducatingHomeless"/> model
+        /// Reference to an optional instance of the <see cref="RefBarrierToEducatingHomeless"/> model
         /// </summary>
         Guid? RefBarrierToEducatingHomelessId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIntegratedTechnologyStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefIntegratedTechnologyStatus"/> model
         /// </summary>
         Guid? RefIntegratedTechnologyStatusId { get; set; }
 

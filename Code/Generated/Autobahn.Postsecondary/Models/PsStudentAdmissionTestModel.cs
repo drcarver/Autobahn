@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentAdmissionTest Model
@@ -19,7 +19,7 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStandardizedAdmissionTest"/> model
+        /// Reference to an optional instance of the <see cref="RefStandardizedAdmissionTest"/> model
         /// </summary>
         public Guid RefStandardizedAdmissionTestId { get; set; }
 

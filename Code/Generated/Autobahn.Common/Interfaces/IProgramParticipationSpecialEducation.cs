@@ -41,17 +41,17 @@ namespace Autobahn.Common.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEducationalEnvironmentEC"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEducationalEnvironmentEC"/> model
         /// </summary>
         Guid? RefIDEAEducationalEnvironmentECId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEducationalEnvironmentSchoolAge"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEducationalEnvironmentSchoolAge"/> model
         /// </summary>
         Guid? RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationExitReason"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationExitReason"/> model
         /// </summary>
         Guid? RefSpecialEducationExitReasonId { get; set; }
 

@@ -53,7 +53,7 @@ namespace Autobahn.Authorization.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAuthorizerType"/> model
+        /// Reference to an optional instance of the <see cref="RefAuthorizerType"/> model
         /// </summary>
         Guid? RefAuthorizerTypeId { get; set; }
 

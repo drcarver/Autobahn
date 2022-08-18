@@ -63,32 +63,32 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
         /// </summary>
         Guid? RefAdditionalCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdvancedPlacementCourseCode"/> model
+        /// Reference to an optional instance of the <see cref="RefAdvancedPlacementCourseCode"/> model
         /// </summary>
         Guid? RefAdvancedPlacementCourseCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseSectionDeliveryMode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseSectionDeliveryMode"/> model
         /// </summary>
         Guid? RefCourseSectionDeliveryModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditTypeEarned"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditTypeEarned"/> model
         /// </summary>
         Guid? RefCreditTypeEarnedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLanguage"/> model
         /// </summary>
         Guid? RefInstructionLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSingleSexClassStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefSingleSexClassStatus"/> model
         /// </summary>
         Guid? RefSingleSexClassStatusId { get; set; }
 

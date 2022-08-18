@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12ProgramOrService Model
@@ -30,27 +30,27 @@ namespace Autobahn.K12.Interfaces
         public System.Boolean? ProgramInMultiplePurposeFacility { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefKindergartenDailyLength"/> model
+        /// Reference to an optional instance of the <see cref="RefKindergartenDailyLength"/> model
         /// </summary>
         public Guid? RefKindergartenDailyLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepProjectType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepProjectType"/> model
         /// </summary>
         public Guid? RefMepProjectTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepSessionType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepSessionType"/> model
         /// </summary>
         public Guid? RefMepSessionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrekindergartenDailyLength"/> model
+        /// Reference to an optional instance of the <see cref="RefPrekindergartenDailyLength"/> model
         /// </summary>
         public Guid? RefPrekindergartenDailyLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgramGiftedEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefProgramGiftedEligibility"/> model
         /// </summary>
         public Guid? RefProgramGiftedEligibilityId { get; set; }
 
@@ -66,7 +66,7 @@ namespace Autobahn.K12.Interfaces
         public Guid? RefTitleIInstructionalServicesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTitleIProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIProgramType"/> model
         /// </summary>
         public Guid? RefTitleIProgramTypeId { get; set; }
 

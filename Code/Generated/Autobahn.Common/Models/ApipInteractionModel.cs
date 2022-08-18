@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ApipInteraction Model
@@ -34,7 +34,7 @@ namespace Autobahn.Common.Interfaces
         public Guid AssessmentItemApipId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefApipInteractionType"/> model
+        /// Reference to an optional instance of the <see cref="RefApipInteractionType"/> model
         /// </summary>
         public Guid? RefApipInteractionTypeId { get; set; }
 
@@ -50,17 +50,6 @@ namespace Autobahn.Common.Interfaces
         /// </para>
         /// </summary>
         public System.String Xml { get; set; }
-
-        /// <summary>
-        /// Assessment Item Body Drawing Interaction XML
-        /// <para>
-        /// The drawing interaction allows the candidate to use a common set of drawing tools to modify a given graphical image (the canvas). It must be bound to a response variable with base-type file and single cardinality. The result is a file in the same format as the original image. The XML from the IMS Global APIP Specification would be included.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20080">Assessment Item Body Drawing Interaction XML</a>
-        /// </para>
-        /// </summary>
-        public  XML { get; set; }
 
     }
 }

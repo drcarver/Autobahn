@@ -112,32 +112,32 @@ namespace Autobahn.Common.Interfaces
         System.String QualifyingMoveFromCity { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefContinuationOfServicesReason"/> model
+        /// Reference to an optional instance of the <see cref="RefContinuationOfServicesReason"/> model
         /// </summary>
         Guid? RefContinuationOfServicesReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepEnrollmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepEnrollmentType"/> model
         /// </summary>
         Guid? RefMepEnrollmentTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepProjectBased"/> model
+        /// Reference to an optional instance of the <see cref="RefMepProjectBased"/> model
         /// </summary>
         Guid? RefMepProjectBasedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefMepServiceType"/> model
         /// </summary>
         Guid? RefMepServiceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQualifyingMoveFromCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefQualifyingMoveFromCountry"/> model
         /// </summary>
         Guid? RefQualifyingMoveFromCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQualifyingMoveFromState"/> model
+        /// Reference to an optional instance of the <see cref="RefQualifyingMoveFromState"/> model
         /// </summary>
         Guid? RefQualifyingMoveFromStateId { get; set; }
 

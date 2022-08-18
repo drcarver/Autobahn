@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
@@ -82,12 +82,12 @@ namespace Autobahn.Facilities.Interfaces
         public System.Decimal? LifecycleCost { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFurnishingsType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFurnishingsType"/> model
         /// </summary>
         public Guid? RefFacilityFurnishingsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitySystemOrComponentCondition"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitySystemOrComponentCondition"/> model
         /// </summary>
         public Guid? RefFacilitySystemOrComponentConditionId { get; set; }
 

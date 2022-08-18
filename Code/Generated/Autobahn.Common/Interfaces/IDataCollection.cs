@@ -80,7 +80,7 @@ namespace Autobahn.Common.Interfaces
         System.String DataCollectionSchoolYear { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefDataCollectionStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefDataCollectionStatus"/> model
         /// </summary>
         Guid? RefDataCollectionStatusId { get; set; }
 

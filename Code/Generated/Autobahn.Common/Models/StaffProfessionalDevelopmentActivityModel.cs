@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The year, month and day on which an individual completed a course, an education program or a staff development activity.
@@ -101,12 +101,12 @@ namespace Autobahn.Common.Interfaces
         public Guid ProfessionalDevelopmentSessionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         public Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalDevelopmentFinancialSupport"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalDevelopmentFinancialSupport"/> model
         /// </summary>
         public Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 

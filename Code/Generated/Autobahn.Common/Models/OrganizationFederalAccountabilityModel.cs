@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The title of the accountability report.
@@ -118,67 +118,67 @@ namespace Autobahn.Common.Interfaces
         public System.Boolean? PersistentlyDangerousStatus { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalTargetedSupportAndImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalTargetedSupportAndImprovementStatus"/> model
         /// </summary>
         public Guid? RefAdditionalTargetedSupportAndImprovementStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAypStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefAypStatus"/> model
         /// </summary>
         public Guid? RefAypStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefComprehensiveSupportAndImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefComprehensiveSupportAndImprovementStatus"/> model
         /// </summary>
         public Guid? RefComprehensiveSupportAndImprovementStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCteGraduationRateInclusion"/> model
+        /// Reference to an optional instance of the <see cref="RefCteGraduationRateInclusion"/> model
         /// </summary>
         public Guid? RefCteGraduationRateInclusionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefElementaryMiddleAdditional"/> model
+        /// Reference to an optional instance of the <see cref="RefElementaryMiddleAdditional"/> model
         /// </summary>
         public Guid? RefElementaryMiddleAdditionalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGunFreeSchoolsActReportingStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefGunFreeSchoolsActReportingStatus"/> model
         /// </summary>
         public Guid? RefGunFreeSchoolsActReportingStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighSchoolGraduationRateIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefHighSchoolGraduationRateIndicator"/> model
         /// </summary>
         public Guid? RefHighSchoolGraduationRateIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefParticipationStatusMath"/> model
+        /// Reference to an optional instance of the <see cref="RefParticipationStatusMath"/> model
         /// </summary>
         public Guid? RefParticipationStatusMathId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefParticipationStatusRla"/> model
+        /// Reference to an optional instance of the <see cref="RefParticipationStatusRla"/> model
         /// </summary>
         public Guid? RefParticipationStatusRlaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProficiencyTargetStatusMath"/> model
+        /// Reference to an optional instance of the <see cref="RefProficiencyTargetStatusMath"/> model
         /// </summary>
         public Guid? RefProficiencyTargetStatusMathId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProficiencyTargetStatusRLA"/> model
+        /// Reference to an optional instance of the <see cref="RefProficiencyTargetStatusRLA"/> model
         /// </summary>
         public Guid? RefProficiencyTargetStatusRLAId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReconstitutedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefReconstitutedStatus"/> model
         /// </summary>
         public Guid? RefReconstitutedStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTargetedSupportAndImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTargetedSupportAndImprovementStatus"/> model
         /// </summary>
         public Guid? RefTargetedSupportAndImprovementStatusId { get; set; }
 

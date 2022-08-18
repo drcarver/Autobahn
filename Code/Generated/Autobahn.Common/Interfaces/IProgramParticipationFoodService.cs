@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSchoolFoodServiceProgram"/> model
+        /// Reference to an optional instance of the <see cref="RefSchoolFoodServiceProgram"/> model
         /// </summary>
         Guid RefSchoolFoodServiceProgramId { get; set; }
 

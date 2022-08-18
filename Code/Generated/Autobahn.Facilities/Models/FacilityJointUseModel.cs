@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityJointUse Model
@@ -25,17 +25,17 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingJointUseRationaleType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingJointUseRationaleType"/> model
         /// </summary>
         public Guid? RefBuildingJointUseRationaleTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingJointUserType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingJointUserType"/> model
         /// </summary>
         public Guid? RefBuildingJointUserTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingJointUseSchedulingType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingJointUseSchedulingType"/> model
         /// </summary>
         public Guid? RefBuildingJointUseSchedulingTypeId { get; set; }
 

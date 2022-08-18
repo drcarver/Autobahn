@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
@@ -63,32 +63,32 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
         /// </summary>
         public Guid? RefAdditionalCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdvancedPlacementCourseCode"/> model
+        /// Reference to an optional instance of the <see cref="RefAdvancedPlacementCourseCode"/> model
         /// </summary>
         public Guid? RefAdvancedPlacementCourseCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseSectionDeliveryMode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseSectionDeliveryMode"/> model
         /// </summary>
         public Guid? RefCourseSectionDeliveryModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditTypeEarned"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditTypeEarned"/> model
         /// </summary>
         public Guid? RefCreditTypeEarnedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLanguage"/> model
         /// </summary>
         public Guid? RefInstructionLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSingleSexClassStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefSingleSexClassStatus"/> model
         /// </summary>
         public Guid? RefSingleSexClassStatusId { get; set; }
 

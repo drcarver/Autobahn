@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The TeacherEducationCredentialExam Model
@@ -23,17 +23,17 @@ namespace Autobahn.Common.Interfaces
         public Guid ProgramParticipationTeacherPrepId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationCredentialExam"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationCredentialExam"/> model
         /// </summary>
         public Guid? RefTeacherEducationCredentialExamId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationExamScoreType"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationExamScoreType"/> model
         /// </summary>
         public Guid? RefTeacherEducationExamScoreTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationTestCompany"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationTestCompany"/> model
         /// </summary>
         public Guid? RefTeacherEducationTestCompanyId { get; set; }
 

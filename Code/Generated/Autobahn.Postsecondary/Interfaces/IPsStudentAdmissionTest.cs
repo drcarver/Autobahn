@@ -18,7 +18,7 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStandardizedAdmissionTest"/> model
+        /// Reference to an optional instance of the <see cref="RefStandardizedAdmissionTest"/> model
         /// </summary>
         Guid RefStandardizedAdmissionTestId { get; set; }
 

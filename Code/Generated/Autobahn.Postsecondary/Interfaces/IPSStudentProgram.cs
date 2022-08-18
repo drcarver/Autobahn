@@ -23,22 +23,22 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid? PsProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCipUse"/> model
+        /// Reference to an optional instance of the <see cref="RefCipUse"/> model
         /// </summary>
         Guid? RefCipUseId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTransferOutIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefTransferOutIndicator"/> model
         /// </summary>
         Guid? RefTransferOutIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

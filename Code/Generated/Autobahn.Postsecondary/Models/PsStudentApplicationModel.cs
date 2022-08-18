@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentApplication Model
@@ -74,17 +74,17 @@ namespace Autobahn.Postsecondary.Interfaces
         public System.Boolean? PostsecondaryApplicant { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdmittedStudent"/> model
+        /// Reference to an optional instance of the <see cref="RefAdmittedStudent"/> model
         /// </summary>
         public Guid? RefAdmittedStudentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGpaWeightedIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefGpaWeightedIndicator"/> model
         /// </summary>
         public Guid? RefGpaWeightedIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradePointAverageDomain"/> model
+        /// Reference to an optional instance of the <see cref="RefGradePointAverageDomain"/> model
         /// </summary>
         public Guid? RefGradePointAverageDomainId { get; set; }
 

@@ -18,7 +18,7 @@ namespace Autobahn.K12.Interfaces
         Guid EligibilityEvaluationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEligibilityEvaluationCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEligibilityEvaluationCategory"/> model
         /// </summary>
         Guid RefIDEAEligibilityEvaluationCategoryId { get; set; }
 

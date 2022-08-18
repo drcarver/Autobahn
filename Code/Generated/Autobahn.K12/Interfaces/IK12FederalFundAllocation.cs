@@ -34,17 +34,17 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationCalendarSessionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFederalProgramFundingAllocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefFederalProgramFundingAllocationType"/> model
         /// </summary>
         Guid? RefFederalProgramFundingAllocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaFundsTransferType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaFundsTransferType"/> model
         /// </summary>
         Guid? RefLeaFundsTransferTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReapAlternativeFundingStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefReapAlternativeFundingStatus"/> model
         /// </summary>
         Guid? RefReapAlternativeFundingStatusId { get; set; }
 

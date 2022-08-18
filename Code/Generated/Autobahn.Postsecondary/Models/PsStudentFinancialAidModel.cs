@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentFinancialAid Model
@@ -52,17 +52,17 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidVeteransBenefitStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitStatus"/> model
         /// </summary>
         public Guid? RefFinancialAidVeteransBenefitStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFinancialAidVeteransBenefitType"/> model
+        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitType"/> model
         /// </summary>
         public Guid? RefFinancialAidVeteransBenefitTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefNeedDeterminationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefNeedDeterminationMethod"/> model
         /// </summary>
         public Guid? RefNeedDeterminationMethodId { get; set; }
 

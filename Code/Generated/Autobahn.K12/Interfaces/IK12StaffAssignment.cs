@@ -75,57 +75,57 @@ namespace Autobahn.K12.Interfaces
         System.Boolean? PrimaryAssignment { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefClassroomPositionType"/> model
+        /// Reference to an optional instance of the <see cref="RefClassroomPositionType"/> model
         /// </summary>
         Guid? RefClassroomPositionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEDFactsTeacherInexperiencedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEDFactsTeacherInexperiencedStatus"/> model
         /// </summary>
         Guid? RefEDFactsTeacherInexperiencedStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmergencyOrProvisionalCredentialStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmergencyOrProvisionalCredentialStatus"/> model
         /// </summary>
         Guid? RefEmergencyOrProvisionalCredentialStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12StaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
         /// </summary>
         Guid? RefK12StaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefMepStaffCategory"/> model
         /// </summary>
         Guid? RefMepStaffCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOutOfFieldStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefOutOfFieldStatus"/> model
         /// </summary>
         Guid? RefOutOfFieldStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalEducationJobClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalEducationJobClassification"/> model
         /// </summary>
         Guid? RefProfessionalEducationJobClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationAgeGroupTaught"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationAgeGroupTaught"/> model
         /// </summary>
         Guid? RefSpecialEducationAgeGroupTaughtId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationStaffCategory"/> model
         /// </summary>
         Guid? RefSpecialEducationStaffCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingAssignmentRole"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingAssignmentRole"/> model
         /// </summary>
         Guid? RefTeachingAssignmentRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTitleIProgramStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIProgramStaffCategory"/> model
         /// </summary>
         Guid? RefTitleIProgramStaffCategoryId { get; set; }
 

@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// Awaiting initial evaluation for special education programs and related services under the Individuals with Disabilities Education Act (IDEA). 
@@ -41,17 +41,17 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEducationalEnvironmentEC"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEducationalEnvironmentEC"/> model
         /// </summary>
         public Guid? RefIDEAEducationalEnvironmentECId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEducationalEnvironmentSchoolAge"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEducationalEnvironmentSchoolAge"/> model
         /// </summary>
         public Guid? RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationExitReason"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationExitReason"/> model
         /// </summary>
         public Guid? RefSpecialEducationExitReasonId { get; set; }
 

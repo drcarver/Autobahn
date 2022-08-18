@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The CourseSectionLevel Model
@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         public Guid CourseSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseLevelType"/> model
         /// </summary>
         public Guid RefCourseLevelTypeId { get; set; }
 

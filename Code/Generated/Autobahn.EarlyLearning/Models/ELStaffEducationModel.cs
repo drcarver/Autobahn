@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELStaffEducation Model
@@ -30,12 +30,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid ELStaffId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELLevelOfSpecialization"/> model
+        /// Reference to an optional instance of the <see cref="RefELLevelOfSpecialization"/> model
         /// </summary>
         public Guid? RefELLevelOfSpecializationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProfessionalDevelopmentTopicArea"/> model
+        /// Reference to an optional instance of the <see cref="RefELProfessionalDevelopmentTopicArea"/> model
         /// </summary>
         public Guid? RefELProfessionalDevelopmentTopicAreaId { get; set; }
 

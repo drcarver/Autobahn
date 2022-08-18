@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityAudit Model
@@ -36,7 +36,7 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityAuditType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityAuditType"/> model
         /// </summary>
         public Guid? RefFacilityAuditTypeId { get; set; }
 

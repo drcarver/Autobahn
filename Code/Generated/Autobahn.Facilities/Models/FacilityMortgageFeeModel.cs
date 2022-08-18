@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityMortgageFee Model
@@ -19,7 +19,7 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityMortgageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFinancingFeeType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFinancingFeeType"/> model
         /// </summary>
         public Guid RefFacilityFinancingFeeTypeId { get; set; }
 

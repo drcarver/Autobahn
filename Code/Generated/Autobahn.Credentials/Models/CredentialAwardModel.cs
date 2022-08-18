@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// A description of a credential that reduced the time or cost of attaining this credential.

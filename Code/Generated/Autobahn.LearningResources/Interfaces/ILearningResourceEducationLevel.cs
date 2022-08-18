@@ -24,7 +24,7 @@ namespace Autobahn.LearningResources.Interfaces
         Guid LearningResourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefEducationLevel"/> model
         /// </summary>
         Guid RefEducationLevelId { get; set; }
 

@@ -92,17 +92,6 @@ namespace Autobahn.K12.Interfaces
         System.Boolean? CharterSchoolOpenEnrollmentIndicator { get; set; }
 
         /// <summary>
-        /// Record End Date Time
-        /// <para>
-        /// The end date and, optionally, time that a record is active as used to support version control.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20899">Record End Date Time</a>
-        /// </para>
-        /// </summary>
-         K12CharterSchoolApprovalAgencyId { get; set; }
-
-        /// <summary>
         /// Reference to an optional instance of the <see cref="IK12CharterSchoolAuthorizerAgency"/> model
         /// </summary>
         Guid? K12CharterSchoolAuthorizerAgencyId { get; set; }
@@ -118,32 +107,32 @@ namespace Autobahn.K12.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdministrativeFundingControl"/> model
+        /// Reference to an optional instance of the <see cref="RefAdministrativeFundingControl"/> model
         /// </summary>
         Guid? RefAdministrativeFundingControlId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCharterSchoolType"/> model
+        /// Reference to an optional instance of the <see cref="RefCharterSchoolType"/> model
         /// </summary>
         Guid? RefCharterSchoolTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncreasedLearningTimeType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncreasedLearningTimeType"/> model
         /// </summary>
         Guid? RefIncreasedLearningTimeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSchoolLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefSchoolLevel"/> model
         /// </summary>
         Guid? RefSchoolLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSchoolType"/> model
+        /// Reference to an optional instance of the <see cref="RefSchoolType"/> model
         /// </summary>
         Guid? RefSchoolTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStatePovertyDesignation"/> model
+        /// Reference to an optional instance of the <see cref="RefStatePovertyDesignation"/> model
         /// </summary>
         Guid? RefStatePovertyDesignationId { get; set; }
 

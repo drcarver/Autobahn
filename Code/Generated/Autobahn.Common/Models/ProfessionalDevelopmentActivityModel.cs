@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// A code assigned to an professional development activity by the organization offering the activity that is unique to the non-variable activity details.
@@ -118,37 +118,37 @@ namespace Autobahn.Common.Interfaces
         public System.Boolean? PublishIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseCreditUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
         /// </summary>
         public Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityApprovedPurpose"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityApprovedPurpose"/> model
         /// </summary>
         public Guid? RefPDActivityApprovedPurposeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityCreditType"/> model
         /// </summary>
         public Guid? RefPDActivityCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityLevel"/> model
         /// </summary>
         public Guid? RefPDActivityLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDActivityType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDActivityType"/> model
         /// </summary>
         public Guid? RefPDActivityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPDAudienceType"/> model
+        /// Reference to an optional instance of the <see cref="RefPDAudienceType"/> model
         /// </summary>
         public Guid? RefPDAudienceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalDevelopmentFinancialSupport"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalDevelopmentFinancialSupport"/> model
         /// </summary>
         public Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 

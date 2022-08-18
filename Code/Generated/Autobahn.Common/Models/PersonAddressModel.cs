@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
@@ -96,27 +96,27 @@ namespace Autobahn.Common.Interfaces
         public System.String PostalCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCountry"/> model
+        /// Reference to an optional instance of the <see cref="RefCountry"/> model
         /// </summary>
         public Guid? RefCountryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCounty"/> model
+        /// Reference to an optional instance of the <see cref="RefCounty"/> model
         /// </summary>
         public Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonLocationType"/> model
         /// </summary>
         public Guid RefPersonLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefState"/> model
+        /// Reference to an optional instance of the <see cref="RefState"/> model
         /// </summary>
         public Guid? RefStateId { get; set; }
 

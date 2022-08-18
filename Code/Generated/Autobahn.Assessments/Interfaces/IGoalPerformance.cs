@@ -33,7 +33,7 @@ namespace Autobahn.Assessments.Interfaces
         Guid GoalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGoalStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefGoalStatusType"/> model
         /// </summary>
         Guid? RefGoalStatusTypeId { get; set; }
 

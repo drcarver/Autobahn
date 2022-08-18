@@ -135,12 +135,12 @@ namespace Autobahn.Common.Interfaces
         Guid? OrganizationCalendarId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicTermDesignator"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
         /// </summary>
         Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSessionType"/> model
+        /// Reference to an optional instance of the <see cref="RefSessionType"/> model
         /// </summary>
         Guid? RefSessionTypeId { get; set; }
 

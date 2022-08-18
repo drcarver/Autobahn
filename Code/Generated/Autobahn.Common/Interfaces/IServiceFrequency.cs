@@ -45,7 +45,7 @@ namespace Autobahn.Common.Interfaces
         System.Int32? InstancesPerCycle { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFrequencyUnit"/> model
+        /// Reference to an optional instance of the <see cref="RefFrequencyUnit"/> model
         /// </summary>
         Guid? RefFrequencyUnitId { get; set; }
 

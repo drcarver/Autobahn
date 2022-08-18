@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffEmployment Model
@@ -50,12 +50,12 @@ namespace Autobahn.Common.Interfaces
         public System.String PositionTitle { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentSeparationReason"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationReason"/> model
         /// </summary>
         public Guid? RefEmploymentSeparationReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentSeparationType"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationType"/> model
         /// </summary>
         public Guid? RefEmploymentSeparationTypeId { get; set; }
 

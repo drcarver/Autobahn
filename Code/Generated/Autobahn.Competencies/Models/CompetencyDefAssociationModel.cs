@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)
@@ -92,17 +92,17 @@ namespace Autobahn.Competencies.Interfaces
         public System.String OriginNodeURI { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefAssociationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefAssociationType"/> model
         /// </summary>
         public Guid? RefCompetencyDefAssociationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEntityType"/> model
+        /// Reference to an optional instance of the <see cref="RefEntityType"/> model
         /// </summary>
         public Guid RefEntityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourceCompetencyAlignmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceCompetencyAlignmentType"/> model
         /// </summary>
         public Guid? RefLearningResourceCompetencyAlignmentTypeId { get; set; }
 

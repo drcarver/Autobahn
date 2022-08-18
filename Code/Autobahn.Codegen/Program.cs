@@ -1,25 +1,12 @@
-﻿using Autobahn.Entities;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
+using Autobahn.Codegen.Models;
+using Autobahn.Entities;
 
-namespace AutobahnCodeGen
+namespace Autobahn.Codegen
 {
     internal class Program
     {
-        //List<string> propertiesToIgnore = new List<string>
-        //{
-        //    "RecordStartDateTime",
-        //    "RecordEndDateTime",
-        //    "RecordStatusId",
-        //    "Description",
-        //    "Code",
-        //    "Definition",
-        //    "RefJurisdictionId",
-        //    "SortOrder",
-        //    "DataCollectionId",
-        //    $"{type.Name}Id"
-        //};
-
         /// <summary>
         /// Set the domain of the table based on it name
         /// </summary>
@@ -313,14 +300,43 @@ namespace AutobahnCodeGen
 
         static void Main(string[] args)
         {
-            Dictionary<string, List<ModelProperty>> ModelProperties = new Dictionary<string, List<ModelProperty>>();
             var csv = new CSVServices();
             var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
             var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
             var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
             var autobahnElements = GetAutobahnElements();
 
-            MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList());
+            var domainReferenceList = BuildTableListByProperty(autobahnTables);
+
+            var one = domainReferenceList.Where(t => t.Value.Count == 1).ToList();
+            var two = domainReferenceList.Where(t => t.Value.Count == 2).ToList();
+            var many = domainReferenceList.Where(t => t.Value.Count > 2).ToList();
+
+            MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList(), domainReferenceList);
+        }
+
+        private static Dictionary<string, List<AutobahnTable>> BuildTableListByProperty(List<AutobahnTable> tables)
+        {
+            var domainFiles = new Dictionary<string, List<AutobahnTable>>();
+            foreach (var table in tables.Where(t => t.ColumnName.StartsWith("Ref") && t.ColumnName.EndsWith("Id")))
+            {
+                var columnKey = table.ColumnName.Replace("Id", string.Empty);
+                if (domainFiles.ContainsKey(columnKey))
+                {
+                    var exists = domainFiles.Values.Any(v => v.Any(t => t.TableName == table.TableName));
+                    if (!exists)
+                    {
+                        domainFiles[columnKey].Add(table);
+                    }
+                }
+                else
+                {
+                    domainFiles.Add(columnKey, new List<AutobahnTable>());
+                    domainFiles[columnKey].Add(table);
+                }
+            }
+
+            return  domainFiles;
         }
     }
 }

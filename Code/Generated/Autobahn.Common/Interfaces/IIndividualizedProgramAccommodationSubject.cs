@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         Guid IndividualizedProgramAccommodationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         Guid RefSCEDCourseSubjectAreaId { get; set; }
 

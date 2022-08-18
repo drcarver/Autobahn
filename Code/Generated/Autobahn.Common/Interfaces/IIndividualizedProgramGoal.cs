@@ -22,7 +22,7 @@ namespace Autobahn.Common.Interfaces
         Guid IndividualizedProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIEPGoalType"/> model
+        /// Reference to an optional instance of the <see cref="RefIEPGoalType"/> model
         /// </summary>
         Guid? RefIEPGoalTypeId { get; set; }
 

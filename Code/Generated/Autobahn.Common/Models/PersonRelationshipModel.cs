@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The numeric order in the preferred sequence and priority for contacting a person related to the learner.
@@ -85,7 +85,7 @@ namespace Autobahn.Common.Interfaces
         public System.Boolean? PrimaryContactIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonRelationshipType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonRelationshipType"/> model
         /// </summary>
         public Guid RefPersonRelationshipTypeId { get; set; }
 

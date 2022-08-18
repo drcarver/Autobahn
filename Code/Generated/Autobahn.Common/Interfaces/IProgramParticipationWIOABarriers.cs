@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         Guid ProgramParticipationWIOAId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWIOABarrierstoEmployment"/> model
+        /// Reference to an optional instance of the <see cref="RefWIOABarrierstoEmployment"/> model
         /// </summary>
         Guid? RefWIOABarrierstoEmploymentId { get; set; }
 

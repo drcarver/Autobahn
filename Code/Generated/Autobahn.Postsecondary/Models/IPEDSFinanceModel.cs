@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The IPEDSFinance Model
@@ -25,12 +25,12 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationFinancialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFinancialPosition"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBFinancialPosition"/> model
         /// </summary>
         public Guid? RefIPEDSFASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFunctionalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBFunctionalExpense"/> model
         /// </summary>
         public Guid? RefIPEDSFASBFunctionalExpenseId { get; set; }
 
@@ -46,47 +46,47 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid? RefIPEDSFASBPellGrantTransactionsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBRevenue"/> model
         /// </summary>
         public Guid? RefIPEDSFASBRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenueRestriction"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBRevenueRestriction"/> model
         /// </summary>
         public Guid? RefIPEDSFASBRevenueRestrictionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
         public Guid? RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFinancialPosition"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBFinancialPosition"/> model
         /// </summary>
         public Guid? RefIPEDSGASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFunctionalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBFunctionalExpense"/> model
         /// </summary>
         public Guid? RefIPEDSGASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBRevenue"/> model
         /// </summary>
         public Guid? RefIPEDSGASBRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
         public Guid? RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSIntercollegiateAthleticsExpenses"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSIntercollegiateAthleticsExpenses"/> model
         /// </summary>
         public Guid? RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSNaturalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSNaturalExpense"/> model
         /// </summary>
         public Guid? RefIPEDSNaturalExpenseId { get; set; }
 

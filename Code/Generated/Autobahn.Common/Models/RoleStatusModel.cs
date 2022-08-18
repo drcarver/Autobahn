@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The RoleStatus Model
@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRoleStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefRoleStatus"/> model
         /// </summary>
         public Guid? RefRoleStatusId { get; set; }
 

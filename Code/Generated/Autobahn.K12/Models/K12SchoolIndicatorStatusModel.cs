@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12SchoolIndicatorStatus Model
@@ -29,22 +29,22 @@ namespace Autobahn.K12.Interfaces
         public Guid K12SchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndicatorStateDefinedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefIndicatorStateDefinedStatus"/> model
         /// </summary>
         public Guid? RefIndicatorStateDefinedStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndicatorStatusCustomType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndicatorStatusCustomType"/> model
         /// </summary>
         public Guid? RefIndicatorStatusCustomTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndicatorStatusSubgroupType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndicatorStatusSubgroupType"/> model
         /// </summary>
         public Guid? RefIndicatorStatusSubgroupTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndicatorStatusType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndicatorStatusType"/> model
         /// </summary>
         public Guid RefIndicatorStatusTypeId { get; set; }
 

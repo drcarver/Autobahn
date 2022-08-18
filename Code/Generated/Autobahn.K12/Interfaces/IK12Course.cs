@@ -103,62 +103,57 @@ namespace Autobahn.K12.Interfaces
         System.Boolean? HighSchoolCourseRequirement { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
         /// </summary>
         Guid? RefAdditionalCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBlendedLearningModelType"/> model
+        /// Reference to an optional instance of the <see cref="RefBlendedLearningModelType"/> model
         /// </summary>
         Guid? RefBlendedLearningModelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGpaApplicability"/> model
-        /// </summary>
-         RefCourseGpaApplicabilityId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
         /// </summary>
         Guid? RefCourseGPAApplicabilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseInteractionMode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseInteractionMode"/> model
         /// </summary>
         Guid? RefCourseInteractionModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditTypeEarned"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditTypeEarned"/> model
         /// </summary>
         Guid? RefCreditTypeEarnedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCurriculumFrameworkType"/> model
+        /// Reference to an optional instance of the <see cref="RefCurriculumFrameworkType"/> model
         /// </summary>
         Guid? RefCurriculumFrameworkTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12EndOfCourseRequirement"/> model
+        /// Reference to an optional instance of the <see cref="RefK12EndOfCourseRequirement"/> model
         /// </summary>
         Guid? RefK12EndOfCourseRequirementId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseLevel"/> model
         /// </summary>
         Guid? RefSCEDCourseLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         Guid? RefSCEDCourseSubjectAreaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

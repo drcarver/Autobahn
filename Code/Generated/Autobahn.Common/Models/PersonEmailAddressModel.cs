@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonEmailAddress Model
@@ -39,7 +39,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmailType"/> model
+        /// Reference to an optional instance of the <see cref="RefEmailType"/> model
         /// </summary>
         public Guid? RefEmailTypeId { get; set; }
 

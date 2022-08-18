@@ -29,7 +29,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid? RefOrganizationMonitoringNotificationsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPurposeOfMonitoringVisit"/> model
+        /// Reference to an optional instance of the <see cref="RefPurposeOfMonitoringVisit"/> model
         /// </summary>
         Guid? RefPurposeOfMonitoringVisitId { get; set; }
 

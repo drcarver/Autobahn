@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELClassSectionService Model
@@ -41,12 +41,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         public System.Int32? OldestAgeServed { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELGroupSizeStandardMet"/> model
+        /// Reference to an optional instance of the <see cref="RefELGroupSizeStandardMet"/> model
         /// </summary>
         public Guid? RefELGroupSizeStandardMetId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFrequencyOfService"/> model
+        /// Reference to an optional instance of the <see cref="RefFrequencyOfService"/> model
         /// </summary>
         public Guid? RefFrequencyOfServiceId { get; set; }
 

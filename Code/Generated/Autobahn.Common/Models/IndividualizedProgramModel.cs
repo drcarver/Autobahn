@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgram Model
@@ -72,22 +72,22 @@ namespace Autobahn.Common.Interfaces
         public System.Int32? RefIndividualizedProgramDateType { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramLocation"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramLocation"/> model
         /// </summary>
         public Guid? RefIndividualizedProgramLocationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramTransitionType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramTransitionType"/> model
         /// </summary>
         public Guid? RefIndividualizedProgramTransitionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramType"/> model
         /// </summary>
         public Guid? RefIndividualizedProgramTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentSupportServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
         /// </summary>
         public Guid? RefStudentSupportServiceTypeId { get; set; }
 

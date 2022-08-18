@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonCareerEducationPlan Model
@@ -50,7 +50,7 @@ namespace Autobahn.Common.Interfaces
         public System.DateTime? ProfessionalDevelopmentPlanCompletion { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerEducationPlanType"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerEducationPlanType"/> model
         /// </summary>
         public Guid? RefCareerEducationPlanTypeId { get; set; }
 

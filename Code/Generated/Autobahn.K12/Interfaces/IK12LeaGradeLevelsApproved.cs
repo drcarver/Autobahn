@@ -24,7 +24,7 @@ namespace Autobahn.K12.Interfaces
         Guid K12LeaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGradeLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefGradeLevel"/> model
         /// </summary>
         Guid RefGradeLevelId { get; set; }
 

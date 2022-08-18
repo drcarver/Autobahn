@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12CharterSchoolManagementOrganization Model
@@ -19,7 +19,7 @@ namespace Autobahn.K12.Interfaces
         public Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCharterSchoolManagementOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCharterSchoolManagementOrganizationType"/> model
         /// </summary>
         public Guid? RefCharterSchoolManagementOrganizationTypeId { get; set; }
 

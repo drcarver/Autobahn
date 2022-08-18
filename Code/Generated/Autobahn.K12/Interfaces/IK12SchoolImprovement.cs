@@ -35,12 +35,12 @@ namespace Autobahn.K12.Interfaces
         Guid? RefSchoolImprovementFundsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSchoolImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefSchoolImprovementStatus"/> model
         /// </summary>
         Guid? RefSchoolImprovementStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSigInterventionType"/> model
+        /// Reference to an optional instance of the <see cref="RefSigInterventionType"/> model
         /// </summary>
         Guid? RefSigInterventionTypeId { get; set; }
 

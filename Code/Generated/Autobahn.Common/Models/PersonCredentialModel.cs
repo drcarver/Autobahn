@@ -6,7 +6,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The name of the license/credential awarded by a given profession.
@@ -74,12 +74,12 @@ namespace Autobahn.Common.Interfaces
         public System.String ProfessionalCertificateOrLicenseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialType"/> model
         /// </summary>
         public Guid? RefCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIssuingState"/> model
+        /// Reference to an optional instance of the <see cref="RefIssuingState"/> model
         /// </summary>
         public Guid? RefIssuingStateId { get; set; }
 

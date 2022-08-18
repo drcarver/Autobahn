@@ -138,27 +138,27 @@ namespace Autobahn.Competencies.Interfaces
         System.String PreviousVersionIdentifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBloomsTaxonomyDomain"/> model
+        /// Reference to an optional instance of the <see cref="RefBloomsTaxonomyDomain"/> model
         /// </summary>
         Guid? RefBloomsTaxonomyDomainId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefNodeAccessibilityProfile"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefNodeAccessibilityProfile"/> model
         /// </summary>
         Guid? RefCompetencyDefNodeAccessibilityProfileId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompetencyDefTestabilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefCompetencyDefTestabilityType"/> model
         /// </summary>
         Guid? RefCompetencyDefTestabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLanguage"/> model
+        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
         /// </summary>
         Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMultipleIntelligenceType"/> model
+        /// Reference to an optional instance of the <see cref="RefMultipleIntelligenceType"/> model
         /// </summary>
         Guid? RefMultipleIntelligenceTypeId { get; set; }
 

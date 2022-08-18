@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonPersonalInformationVerification Model
@@ -44,12 +44,12 @@ namespace Autobahn.Common.Interfaces
         public Guid? PersonTelephoneId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationType"/> model
         /// </summary>
         public Guid? RefPersonalInformationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonalInformationVerification"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 

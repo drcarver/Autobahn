@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Workforce.Interfaces
+namespace Autobahn.Workforce.Models
 {
      /// <summary>
      /// The WorkforceProgramParticipantCohort Model

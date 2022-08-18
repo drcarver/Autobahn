@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Assessments.Interfaces
+namespace Autobahn.Assessments.Models
 {
      /// <summary>
      /// The ChildOfFormSection Model

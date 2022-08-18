@@ -17,17 +17,17 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAccess"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceAccess"/> model
         /// </summary>
         Guid? RefPrimaryLearningDeviceAccessId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceAwayFromSchool"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceAwayFromSchool"/> model
         /// </summary>
         Guid? RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPrimaryLearningDeviceProvider"/> model
+        /// Reference to an optional instance of the <see cref="RefPrimaryLearningDeviceProvider"/> model
         /// </summary>
         Guid? RefPrimaryLearningDeviceProviderId { get; set; }
 

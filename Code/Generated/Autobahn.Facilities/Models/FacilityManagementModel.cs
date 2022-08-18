@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityManagement Model
@@ -25,27 +25,27 @@ namespace Autobahn.Facilities.Interfaces
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCharterSchoolRealtyAccessType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCharterSchoolRealtyAccessType"/> model
         /// </summary>
         public Guid? RefBuildingCharterSchoolRealtyAccessTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCleaningStandardType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCleaningStandardType"/> model
         /// </summary>
         public Guid? RefBuildingCleaningStandardTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityCapitalProgramMgmtType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityCapitalProgramMgmtType"/> model
         /// </summary>
         public Guid? RefFacilityCapitalProgramMgmtTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityComplianceAgencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityComplianceAgencyType"/> model
         /// </summary>
         public Guid? RefFacilityComplianceAgencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityOperationsMgmtType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityOperationsMgmtType"/> model
         /// </summary>
         public Guid? RefFacilityOperationsMgmtTypeId { get; set; }
 

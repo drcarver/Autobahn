@@ -62,7 +62,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         System.String QrisScore { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQrisParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefQrisParticipation"/> model
         /// </summary>
         Guid? RefQrisParticipationId { get; set; }
 

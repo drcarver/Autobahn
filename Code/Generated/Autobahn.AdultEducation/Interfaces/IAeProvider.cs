@@ -18,7 +18,7 @@ namespace Autobahn.AdultEducation.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLevelOfInstitution"/> model
+        /// Reference to an optional instance of the <see cref="RefLevelOfInstitution"/> model
         /// </summary>
         Guid RefLevelOfInstitutionId { get; set; }
 

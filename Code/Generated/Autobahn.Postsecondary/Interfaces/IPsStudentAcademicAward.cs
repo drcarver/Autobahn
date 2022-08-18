@@ -42,17 +42,17 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicAwardLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicAwardLevel"/> model
         /// </summary>
         Guid? RefAcademicAwardLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicAwardPrerequisiteType"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicAwardPrerequisiteType"/> model
         /// </summary>
         Guid? RefAcademicAwardPrerequisiteTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPESCAwardLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefPESCAwardLevelType"/> model
         /// </summary>
         Guid? RefPESCAwardLevelTypeId { get; set; }
 

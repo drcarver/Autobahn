@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ActivityRecognition Model
@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefActivityRecognitionType"/> model
+        /// Reference to an optional instance of the <see cref="RefActivityRecognitionType"/> model
         /// </summary>
         public Guid RefActivityRecognitionTypeId { get; set; }
 

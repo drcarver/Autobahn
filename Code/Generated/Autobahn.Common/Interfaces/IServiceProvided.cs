@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         Guid? RefServicesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentSupportServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
         /// </summary>
         Guid? RefStudentSupportServiceTypeId { get; set; }
 

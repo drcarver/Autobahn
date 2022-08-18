@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELEnrollment Model
@@ -46,22 +46,22 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELFederalFundingType"/> model
+        /// Reference to an optional instance of the <see cref="RefELFederalFundingType"/> model
         /// </summary>
         public Guid? RefELFederalFundingTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFoodServiceParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefFoodServiceParticipation"/> model
         /// </summary>
         public Guid? RefFoodServiceParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIDEAEnvironmentEL"/> model
+        /// Reference to an optional instance of the <see cref="RefIDEAEnvironmentEL"/> model
         /// </summary>
         public Guid? RefIDEAEnvironmentELId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefServiceOption"/> model
+        /// Reference to an optional instance of the <see cref="RefServiceOption"/> model
         /// </summary>
         public Guid? RefServiceOptionId { get; set; }
 

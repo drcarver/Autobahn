@@ -18,7 +18,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefChildDevelopmentAssociateType"/> model
+        /// Reference to an optional instance of the <see cref="RefChildDevelopmentAssociateType"/> model
         /// </summary>
         Guid? RefChildDevelopmentAssociateTypeId { get; set; }
 

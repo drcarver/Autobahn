@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityMandate Model
@@ -36,22 +36,22 @@ namespace Autobahn.Facilities.Interfaces
         public System.String FacilityStateOrLocalMandateName { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitiesMandateAuthorityType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitiesMandateAuthorityType"/> model
         /// </summary>
         public Guid? RefFacilitiesMandateAuthorityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityApplicableFederalMandateType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityApplicableFederalMandateType"/> model
         /// </summary>
         public Guid? RefFacilityApplicableFederalMandateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityFederalMandateInterestType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityFederalMandateInterestType"/> model
         /// </summary>
         public Guid? RefFacilityFederalMandateInterestTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityStateOrLocalMandateInterestType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityStateOrLocalMandateInterestType"/> model
         /// </summary>
         public Guid? RefFacilityStateOrLocalMandateInterestTypeId { get; set; }
 

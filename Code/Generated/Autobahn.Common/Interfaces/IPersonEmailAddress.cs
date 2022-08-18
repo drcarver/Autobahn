@@ -39,7 +39,7 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmailType"/> model
+        /// Reference to an optional instance of the <see cref="RefEmailType"/> model
         /// </summary>
         Guid? RefEmailTypeId { get; set; }
 

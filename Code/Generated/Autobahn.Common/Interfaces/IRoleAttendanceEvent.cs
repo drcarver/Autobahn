@@ -39,27 +39,27 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAbsentAttendanceCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefAbsentAttendanceCategory"/> model
         /// </summary>
         Guid? RefAbsentAttendanceCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAttendanceEventType"/> model
+        /// Reference to an optional instance of the <see cref="RefAttendanceEventType"/> model
         /// </summary>
         Guid? RefAttendanceEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAttendanceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefAttendanceStatus"/> model
         /// </summary>
         Guid? RefAttendanceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaveEventType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaveEventType"/> model
         /// </summary>
         Guid? RefLeaveEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPresentAttendanceCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefPresentAttendanceCategory"/> model
         /// </summary>
         Guid? RefPresentAttendanceCategoryId { get; set; }
 

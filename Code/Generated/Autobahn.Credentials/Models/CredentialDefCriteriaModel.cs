@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Credentials.Interfaces
+namespace Autobahn.Credentials.Models
 {
      /// <summary>
      /// The CredentialDefCriteria Model
@@ -96,7 +96,7 @@ namespace Autobahn.Credentials.Interfaces
         public System.String MinimumDuration { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialDefAssessMethodType"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialDefAssessMethodType"/> model
         /// </summary>
         public Guid? RefCredentialDefAssessMethodTypeId { get; set; }
 

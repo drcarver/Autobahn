@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.LearningResources.Interfaces
+namespace Autobahn.LearningResources.Models
 {
      /// <summary>
      /// The LearningResourceEducationLevel Model
@@ -25,7 +25,7 @@ namespace Autobahn.LearningResources.Interfaces
         public Guid LearningResourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEducationLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefEducationLevel"/> model
         /// </summary>
         public Guid RefEducationLevelId { get; set; }
 

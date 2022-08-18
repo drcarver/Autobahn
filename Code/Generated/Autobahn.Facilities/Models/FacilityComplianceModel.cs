@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityCompliance Model
@@ -107,12 +107,12 @@ namespace Autobahn.Facilities.Interfaces
         public Guid? FacilityMandateId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityComplianceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityComplianceStatus"/> model
         /// </summary>
         public Guid? RefFacilityComplianceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityMaintStandardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityMaintStandardType"/> model
         /// </summary>
         public Guid? RefFacilityMaintStandardTypeId { get; set; }
 

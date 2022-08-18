@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationOperationalStatus Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOperationalStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefOperationalStatus"/> model
         /// </summary>
         public Guid RefOperationalStatusId { get; set; }
 

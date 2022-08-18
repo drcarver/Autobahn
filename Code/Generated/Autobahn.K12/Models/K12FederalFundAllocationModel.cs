@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12FederalFundAllocation Model
@@ -35,17 +35,17 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationCalendarSessionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFederalProgramFundingAllocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefFederalProgramFundingAllocationType"/> model
         /// </summary>
         public Guid? RefFederalProgramFundingAllocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaFundsTransferType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaFundsTransferType"/> model
         /// </summary>
         public Guid? RefLeaFundsTransferTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefReapAlternativeFundingStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefReapAlternativeFundingStatus"/> model
         /// </summary>
         public Guid? RefReapAlternativeFundingStatusId { get; set; }
 

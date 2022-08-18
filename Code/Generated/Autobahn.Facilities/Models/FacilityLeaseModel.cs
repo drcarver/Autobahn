@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilityLease Model
@@ -36,12 +36,12 @@ namespace Autobahn.Facilities.Interfaces
         public System.Decimal? FacilityLeaseAmount { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityLeaseAmountCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityLeaseAmountCategory"/> model
         /// </summary>
         public Guid? RefFacilityLeaseAmountCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityLeaseType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityLeaseType"/> model
         /// </summary>
         public Guid? RefFacilityLeaseTypeId { get; set; }
 

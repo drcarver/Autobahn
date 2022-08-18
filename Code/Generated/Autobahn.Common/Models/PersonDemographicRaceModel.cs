@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDemographicRace Model
@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRace"/> model
+        /// Reference to an optional instance of the <see cref="RefRace"/> model
         /// </summary>
         public Guid RefRaceId { get; set; }
 

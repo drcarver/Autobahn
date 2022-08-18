@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The K12StudentLiteracyAssessment Model
@@ -52,7 +52,7 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLiteracyAssessment"/> model
+        /// Reference to an optional instance of the <see cref="RefLiteracyAssessment"/> model
         /// </summary>
         public Guid? RefLiteracyAssessmentId { get; set; }
 

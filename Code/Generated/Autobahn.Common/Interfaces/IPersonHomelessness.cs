@@ -28,7 +28,7 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHomelessNighttimeResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefHomelessNighttimeResidence"/> model
         /// </summary>
         Guid RefHomelessNighttimeResidenceId { get; set; }
 

@@ -70,42 +70,42 @@ namespace Autobahn.Postsecondary.Interfaces
         System.Boolean? MedicalSchoolStaffStatus { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicRank"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicRank"/> model
         /// </summary>
         Guid? RefAcademicRankId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentContractType"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentContractType"/> model
         /// </summary>
         Guid? RefEmploymentContractTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFullTimeStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefFullTimeStatus"/> model
         /// </summary>
         Guid? RefFullTimeStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGraduateAssistantIpedsCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefGraduateAssistantIpedsCategory"/> model
         /// </summary>
         Guid? RefGraduateAssistantIpedsCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionalStaffContractLength"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionalStaffContractLength"/> model
         /// </summary>
         Guid? RefInstructionalStaffContractLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionalStaffFacultyTenure"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionalStaffFacultyTenure"/> model
         /// </summary>
         Guid? RefInstructionalStaffFacultyTenureId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionCreditType"/> model
         /// </summary>
         Guid? RefInstructionCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIpedsOccupationalCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefIpedsOccupationalCategory"/> model
         /// </summary>
         Guid? RefIpedsOccupationalCategoryId { get; set; }
 

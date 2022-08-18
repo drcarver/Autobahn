@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The BuildingSystemCategory Model
@@ -25,72 +25,72 @@ namespace Autobahn.Facilities.Interfaces
         public Guid BuildingSystemComponentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingAirDistributionSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingAirDistributionSystemType"/> model
         /// </summary>
         public Guid? RefBuildingAirDistributionSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCommMgmtComponentSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCommMgmtComponentSystemType"/> model
         /// </summary>
         public Guid? RefBuildingCommMgmtComponentSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCoolingGenerationSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCoolingGenerationSystemType"/> model
         /// </summary>
         public Guid? RefBuildingCoolingGenerationSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingElectricalSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingElectricalSystemType"/> model
         /// </summary>
         public Guid? RefBuildingElectricalSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingFireProtectionSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingFireProtectionSystemType"/> model
         /// </summary>
         public Guid? RefBuildingFireProtectionSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingHeatingGenerationSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingHeatingGenerationSystemType"/> model
         /// </summary>
         public Guid? RefBuildingHeatingGenerationSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingHVACSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingHVACSystemType"/> model
         /// </summary>
         public Guid? RefBuildingHVACSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingMechanicalConveyingSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingMechanicalConveyingSystemType"/> model
         /// </summary>
         public Guid? RefBuildingMechanicalConveyingSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingMechanicalSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingMechanicalSystemType"/> model
         /// </summary>
         public Guid? RefBuildingMechanicalSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingPlumbingSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingPlumbingSystemType"/> model
         /// </summary>
         public Guid? RefBuildingPlumbingSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSecuritySystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSecuritySystemType"/> model
         /// </summary>
         public Guid? RefBuildingSecuritySystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSystemType"/> model
         /// </summary>
         public Guid? RefBuildingSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingTechnologyWiringSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingTechnologyWiringSystemType"/> model
         /// </summary>
         public Guid? RefBuildingTechnologyWiringSystemTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingVerticalTransportationSystemType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingVerticalTransportationSystemType"/> model
         /// </summary>
         public Guid? RefBuildingVerticalTransportationSystemTypeId { get; set; }
 

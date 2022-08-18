@@ -1,18 +1,23 @@
 ﻿using Autobahn.Entities;
 using System.IO.Compression;
 using System.Xml.Linq;
+using Autobahn.Codegen.Models;
 using File = System.IO.File;
 
-namespace AutobahnCodeGen
+namespace Autobahn.Codegen
 {
     public class MauiModule
     {
         private static List<AutobahnTable> Models { get; set; }
+        private static List<string> ModelsGenerated { get; set; } = new List<string>();
+        private static Dictionary<string, List<AutobahnTable>> DomainReferenceList { get; set; }
 
         public static void GenerateModule(List<AutobahnDomain> domains, List<AutobahnTable> allModels,
-                List<AutobahnElement> elements, List<Type> types)
+                List<AutobahnElement> elements, List<Type> types, Dictionary<string, List<AutobahnTable>> domainReferenceList)
         {
             Models = allModels;
+            DomainReferenceList = domainReferenceList;
+
             var filePath = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
             foreach (var domain in domains)
             {
@@ -25,10 +30,10 @@ namespace AutobahnCodeGen
                 ServiceCollectionExtensions($@"{filePath}\{moduleName}\{moduleName}.ServiceCollectionExtensions.cs", domain, domainModels.Where(t => !t.TableName.StartsWith("Ref") && string.IsNullOrEmpty(t.ColumnName)).ToList());
                 GenerateInterfaceFiles($@"{filePath}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.TableName.StartsWith("Ref")).ToList(), elements);
                 GenerateModelFiles($@"{filePath}\{moduleName}\Models\", domain, domainModels.Where(t => !t.TableName.StartsWith("Ref")).ToList(), elements);
-                //GenerateViewModelFiles($@"{filePath}\{moduleName}\ViewModels\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
-                //GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
-                //GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
-                //GenerateReferenceModels(filePath, domain, domainModels.Where(m => m.TableName.StartsWith("Ref")).ToList(), elements);
+                GenerateViewModelFiles($@"{filePath}\{moduleName}\ViewModels\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
+                GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
+                GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
+                GenerateReferenceModels(filePath, domain, domainModels.Where(m => m.TableName.StartsWith("Ref")).ToList(), elements);
             }
         }
 
@@ -116,17 +121,12 @@ namespace AutobahnCodeGen
         
         private static void GenerateReferenceModels(string filePath, AutobahnDomain domain, List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            foreach (var model in models)
-            {
-                // is this a reference list to be embedded in a view model file?
-                //if (elements.FirstOrDefault(e => e.AutobahnTableList.Count == 1) == null)
-                //{
-                //    continue;
-                //}
-                GenerateReferenceFile($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model, models.Where(m => m.TableName == model.TableName).ToList(), elements);
-                GenerateReferenceInterfaceFile($@"{filePath}Autobahn.{domain.Module}\Interfaces\", domain, model, models.Where(m => m.TableName == model.TableName).ToList(), elements);
-                GenerateReferenceList($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model);
-            }
+            //foreach (var model in models)
+            //{
+            //    GenerateReferenceFile($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model, models.Where(m => m.TableName == model.TableName).ToList(), elements);
+            //    GenerateReferenceInterfaceFile($@"{filePath}Autobahn.{domain.Module}\Interfaces\", domain, model, models.Where(m => m.TableName == model.TableName).ToList(), elements);
+            //    GenerateReferenceList($@"{filePath}Autobahn.{domain.Module}\Models\", domain, model);
+            //}
         }
 
         private static void GenerateReferenceFile(string filePath, AutobahnDomain domain, AutobahnTable model, List<AutobahnTable> columns, List<AutobahnElement> elements)
@@ -273,14 +273,14 @@ namespace AutobahnCodeGen
 
         private static void GenerateViewFiles(string filePath, AutobahnDomain domain, List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            var modelsGenerated = new List<AutobahnTable>();
+            var modelsGenerated = new List<string>();
             foreach (var model in models)
             {
-                if (modelsGenerated.Contains(model))
+                if (modelsGenerated.Contains(model.TableName))
                 {
                     continue;
                 }
-                modelsGenerated.Add(model);
+                modelsGenerated.Add(model.TableName);
                 Console.WriteLine($"Generating code behind file for {domain.Module}.{model.TableName}View.xaml");
                 using (var stream = File.CreateText($@"{filePath}\{model.TableName}View.xaml.cs"))
                 {
@@ -313,21 +313,27 @@ namespace AutobahnCodeGen
         private static void GenerateViewModelFiles(string filePath, AutobahnDomain domain,
             List<AutobahnTable> models, List<AutobahnElement> elements)
         {
-            var modelsGenerated = new List<string>();
+            var ModelsGenerated = new List<string>();
             foreach (var model in models)
             {
-                if (modelsGenerated.Contains(model.TableName))
+                if (ModelsGenerated.Contains(model.TableName))
                 {
                     continue;
                 }
-                modelsGenerated.Add(model.TableName);
+                ModelsGenerated.Add(model.TableName);
                 Console.WriteLine($"Generating view model for {domain.Module}.{model.TableName}ViewModel");
+                var tableMeta = GetTableMeta(model.TableName, string.Empty, elements);
                 using (var stream = File.CreateText($@"{filePath}\{model.TableName}ViewModel.cs"))
                 {
                     stream.WriteLine($"//**********************************************************");
                     stream.WriteLine($"//* DomainName: {domain.Name}");
                     stream.WriteLine($"//* FileName:   {model.TableName}ViewModel.cs");
-                    stream.WriteLine($"//**********************************************************");
+                    if (tableMeta != null)
+                    {
+                        stream.WriteLine($"//* Name:       {tableMeta.ElementName}");
+                        stream.WriteLine($"//* Definition: {tableMeta.Format}");
+                    }
+                    stream.WriteLine($"//***************************************************************************");
                     if (domain.Module != "Common")
                     {
                         stream.WriteLine("");
@@ -335,17 +341,26 @@ namespace AutobahnCodeGen
                         stream.WriteLine($"using Autobahn.Common.ViewModels;");
                     }
                     stream.WriteLine("");
+                    stream.WriteLine($"using Autobahn.Common.Models;");
                     stream.WriteLine("using System.ComponentModel;");
                     stream.WriteLine("using System.Windows.Input;");
                     stream.WriteLine("");
                     stream.WriteLine($"namespace Autobahn.{domain.Module}.ViewModels");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
-                    stream.WriteLine($"     /// The {model.TableName}ViewModel");
+                    if (tableMeta != null)
+                    {
+                        stream.WriteLine($"     /// {tableMeta.Format}");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"     /// The {model.TableName} View Model");
+                    }
                     stream.WriteLine($"     /// </summary>");
                     stream.WriteLine($@"    public partial class {model.TableName}ViewModel : ViewModelBase, Interfaces.I{model.TableName}");
                     stream.WriteLine($@"    {{");
-                    //GenerateBindableProperties(stream, model, models.Where(m => m.TableName == model.TableName).ToList(), elements.Where(e => e.AutobahnDomainList.Contains(domain.Id) && e.AutobahnTableList.Contains(model.Id)).ToList(), false);
+                    GenerateBindableProperties(stream, model, models.Where(m => m.TableName == model.TableName).ToList(), elements, false);
+                    GenerateEmbeddedReferences(stream, model, models.Where(m => m.TableName == model.TableName).ToList(), elements);
                     stream.WriteLine($@"    }}");
                     stream.WriteLine("}");
                 }
@@ -383,7 +398,7 @@ namespace AutobahnCodeGen
                         stream.WriteLine($"using Autobahn.Common.Models;");
                     }
                     stream.WriteLine("");
-                    stream.WriteLine($"namespace Autobahn.{domain.Module}.Interfaces");
+                    stream.WriteLine($"namespace Autobahn.{domain.Module}.Models");
                     stream.WriteLine("{");
                     stream.WriteLine($"     /// <summary>");
                     if (tableMeta != null)
@@ -476,6 +491,7 @@ namespace AutobahnCodeGen
                 };
                 if (propertiesGenerated.Contains(column.ColumnName)
                     || propertiesToIgnore.Contains(column.ColumnName)
+                    || string.IsNullOrEmpty(column.ColumnType)
                     || string.IsNullOrEmpty(column.ColumnName))
                 {
                     continue;
@@ -496,7 +512,14 @@ namespace AutobahnCodeGen
                 if (element == null && column.ColumnName.EndsWith("Id"))
                 {
                     stream.WriteLine($"        /// <summary>");
-                    stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"I{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    if (column.ColumnName.StartsWith("Ref"))
+                    {
+                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"I{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    }
                     stream.WriteLine($"        /// </summary>");
                 }
 
@@ -549,31 +572,74 @@ namespace AutobahnCodeGen
             var propertiesGenerated = new List<string>();
             foreach (var column in columns.OrderBy(o => o.ColumnName))
             {
-                if (propertiesGenerated.Contains(column.ColumnName))
+                List<string> propertiesToIgnore = new List<string>
+                {
+                    "RecordStartDateTime",
+                    "RecordEndDateTime",
+                    "RecordStatusId",
+                    "Description",
+                    "Code",
+                    "Definition",
+                    "RefJurisdictionId",
+                    "SortOrder",
+                    "DataCollectionId",
+                    $"{model.TableName}Id"
+                };
+                if (propertiesGenerated.Contains(column.ColumnName)
+                    || propertiesToIgnore.Contains(column.ColumnName)
+                    || string.IsNullOrEmpty(column.ColumnType)
+                    || string.IsNullOrEmpty(column.ColumnName))
                 {
                     continue;
                 }
                 propertiesGenerated.Add(column.ColumnName);
-                var element = elements.FirstOrDefault(e => e.GlobalId == column.GlobalId);
-                stream.WriteLine($"        /// <summary>");
-                if (column.ColumnName.EndsWith("Id"))
+                var element = GetTableMeta(column.TableName, column.ColumnName, elements);
+                if (element == null && column.ColumnName.EndsWith("Id"))
                 {
-                    stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    stream.WriteLine($"        /// <summary>");
+                    if (column.ColumnName.StartsWith("Ref"))
+                    {
+                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    }
+                    else
+                    {
+                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"I{column.ColumnName.Replace("Id", string.Empty)}\"/> model");
+                    }
+                    stream.WriteLine($"        /// </summary>");
                 }
-                else if (!string.IsNullOrEmpty(element?.Definition))
+                if (element != null)
                 {
-                    stream.WriteLine($"        /// {element.Definition}");
+                    stream.WriteLine($"        /// <summary>");
                 }
-                if (!string.IsNullOrEmpty(element?.URL))
-                {
-                    stream.WriteLine($"        /// <para>");
-                    stream.WriteLine($"        /// <a href=\"{element.URL}\">{element?.ElementName}</a>");
-                    stream.WriteLine($"        /// </para>");
-                }
-                stream.WriteLine($"        /// </summary>");
                 if (!string.IsNullOrEmpty(element?.ElementName))
                 {
-                    stream.WriteLine($"        [DisplayName(\"{element.ElementName}\")]");
+                    stream.WriteLine($"        /// {element.ElementName}");
+                }
+                if (!string.IsNullOrEmpty(element?.Format))
+                {
+                    if (!string.IsNullOrEmpty(element?.ElementName))
+                    {
+                        stream.WriteLine($"        /// <para>");
+                    }
+                    stream.WriteLine($"        /// {element?.Format}");
+                    if (!string.IsNullOrEmpty(element?.ElementName))
+                    {
+                        stream.WriteLine($"        /// </para>");
+                    }
+                }
+                if (!string.IsNullOrEmpty(element?.ChangeNotes))
+                {
+                    stream.WriteLine($"        /// <para>");
+                    stream.WriteLine($"        /// <a href=\"{element.ChangeNotes}\">{element?.ElementName}</a>");
+                    stream.WriteLine($"        /// </para>");
+                }
+                if (element != null)
+                {
+                    stream.WriteLine($"        /// </summary>");
+                }
+                if (element != null)
+                {
+                    stream.WriteLine($"        /// </summary>");
                 }
                 stream.WriteLine($"        public {column.ColumnType} {column.ColumnName} {{ get => _{column.ColumnName}; set => SetProperty(ref _{column.ColumnName}, value); }}");
                 stream.WriteLine();
@@ -592,42 +658,87 @@ namespace AutobahnCodeGen
             propertiesGenerated.Clear();
             foreach (var column in columns.OrderBy(o => o.ColumnName))
             {
-                if (propertiesGenerated.Contains(column.ColumnName))
+                List<string> propertiesToIgnore = new List<string>
+                {
+                    "RecordStartDateTime",
+                    "RecordEndDateTime",
+                    "RecordStatusId",
+                    "Description",
+                    "Code",
+                    "Definition",
+                    "RefJurisdictionId",
+                    "SortOrder",
+                    "DataCollectionId",
+                    $"{model.TableName}Id"
+                };
+                if (propertiesGenerated.Contains(column.ColumnName)
+                    || propertiesToIgnore.Contains(column.ColumnName)
+                    || string.IsNullOrEmpty(column.ColumnType)
+                    || string.IsNullOrEmpty(column.ColumnName))
                 {
                     continue;
                 }
                 propertiesGenerated.Add(column.ColumnName);
-                var element = elements.FirstOrDefault(e => e.GlobalId == column.GlobalId);
+                var element = GetTableMeta(column.TableName, column.ColumnName, elements);
                 stream.WriteLine($"            {column.ColumnName} = model.{column.ColumnName}; // {element?.ElementName}");
             }
             stream.WriteLine($"            _isChanged = false;");
             stream.WriteLine($"            IsNew = false;");
             stream.WriteLine($"            IsBusy = false;");
             stream.WriteLine($"        }}");
-            GenerateVirtualProperties(stream, model, columns, elements);
-            GenerateEmbeddedReferenceList(stream, columns, elements);
+            //GenerateVirtualProperties(stream, model, columns, elements);
+            //GenerateEmbeddedReferenceList(stream, columns, elements);
         }
 
-        private static void GenerateEmbeddedReferenceList(StreamWriter stream, List<AutobahnTable> columns, List<AutobahnElement> elements)
+        private static void GenerateEmbeddedReferences(StreamWriter stream, AutobahnTable model, List<AutobahnTable> columns, List<AutobahnElement> elements)
         {
-            foreach (var prop in elements.Where(e => e.TechnicalName.StartsWith("Ref")))
+            var csv = new CSVServices();
+            foreach (var table in columns.Where(c => c.ColumnName.StartsWith("Ref") && c.ColumnName.EndsWith("Id")))
             {
-                var refName = prop.TechnicalName.Replace("Id", string.Empty);
+                var refName = table.ColumnName.Replace("Id", string.Empty);
+                
+                // embed the reference list if this is the only table it is in. Otherwise
+                // we wil generate it in a separate partial file
+                if (ModelsGenerated.Contains(refName) || DomainReferenceList[refName].Count > 1)
+                {
+                    continue;
+                }
+                ModelsGenerated.Add(refName);
+
+                List<ReferenceModel> refData;
+                try
+                {
+                    refData = csv.ReadReferenceFile(@$"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{refName}.csv");
+                }
+                catch
+                {
+                    refData = new List<ReferenceModel>();
+                }
+
+                var element = GetTableMeta(model.TableName, string.Empty, elements);
+                stream.WriteLine("");
                 stream.WriteLine($"        #region {refName} List");
                 stream.WriteLine($@"        /// <summary>");
-                stream.WriteLine($@"        /// The complete <see cref=""{refName}""> List");
-                stream.WriteLine($"         /// </summary>");
-                stream.WriteLine($@"        public static List<ReferenceModel> {refName}List = new List<ReferenceModel>");
+                if (element == null)
+                {
+                    stream.WriteLine($@"        /// The complete <see cref=""{refName}""> List");
+                }
+                else
+                {
+                    stream.WriteLine($@"        /// The complete {element.ElementName} List");
+                }
+                stream.WriteLine($@"        /// </summary>");
+                stream.WriteLine($@"        private static List<ReferenceModelBase> {refName}List = new List<ReferenceModelBase>");
                 stream.WriteLine($@"        {{");
                 var quote = "\"";
-                //foreach (var item in referenceModelList)
-                //{
-                //    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-                //    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
-                //    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-                //    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
-                //    stream.WriteLine($@"            new {model.ModelName}Model {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-                //}
+                foreach (var item in refData)
+                {
+                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
+                    stream.WriteLine($@"            new ReferenceModelBase {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+                }
                 stream.WriteLine($@"        }};");
                 stream.WriteLine($"        #endregion");
             }
@@ -678,12 +789,28 @@ namespace AutobahnCodeGen
             var propertiesGenerated = new List<string>();
             foreach (var column in columns.OrderBy(c => c.ColumnName))
             {
-                if (propertiesGenerated.Contains(column.ColumnName))
+                List<string> propertiesToIgnore = new List<string>
+                {
+                    "RecordStartDateTime",
+                    "RecordEndDateTime",
+                    "RecordStatusId",
+                    "Description",
+                    "Code",
+                    "Definition",
+                    "RefJurisdictionId",
+                    "SortOrder",
+                    "DataCollectionId",
+                    $"{model.TableName}Id"
+                };
+                if (propertiesGenerated.Contains(column.ColumnName)
+                    || propertiesToIgnore.Contains(column.ColumnName)
+                    || string.IsNullOrEmpty(column.ColumnType)
+                    || string.IsNullOrEmpty(column.ColumnName))
                 {
                     continue;
                 }
                 propertiesGenerated.Add(column.ColumnName);
-                var element = elements.FirstOrDefault(e => e.GlobalId == column.GlobalId);
+                var element = GetTableMeta(column.TableName, column.ColumnName, elements);
                 if (string.IsNullOrEmpty(element?.ElementName))
                 {
                     stream.WriteLine($"        // member variable for the {column.ColumnName} property");

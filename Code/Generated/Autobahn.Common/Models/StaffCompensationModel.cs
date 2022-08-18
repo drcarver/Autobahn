@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffCompensation Model
@@ -12,7 +12,7 @@ namespace Autobahn.Common.Interfaces
     public partial class StaffCompensationModel : AutobahnBase, Interfaces.IStaffCompensation
     {
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStaffCompensationSourceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStaffCompensationSourceType"/> model
         /// </summary>
         public Guid? RefStaffCompensationSourceTypeId { get; set; }
 

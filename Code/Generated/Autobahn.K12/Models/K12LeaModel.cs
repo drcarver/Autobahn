@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
@@ -32,27 +32,22 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCharterLeaStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefCharterLeaStatus"/> model
         /// </summary>
         public Guid? RefCharterLeaStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaImprovementStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaImprovementStatus"/> model
         /// </summary>
         public Guid? RefLeaImprovementStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLEAImprovementStatus"/> model
-        /// </summary>
-        public  RefLEAImprovementStatusId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLeaType"/> model
+        /// Reference to an optional instance of the <see cref="RefLeaType"/> model
         /// </summary>
         public Guid? RefLeaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPublicSchoolChoiceStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefPublicSchoolChoiceStatus"/> model
         /// </summary>
         public Guid? RefPublicSchoolChoiceStatusId { get; set; }
 

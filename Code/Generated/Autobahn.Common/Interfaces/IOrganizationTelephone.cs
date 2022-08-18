@@ -39,12 +39,12 @@ namespace Autobahn.Common.Interfaces
         System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstitutionTelephoneType"/> model
+        /// Reference to an optional instance of the <see cref="RefInstitutionTelephoneType"/> model
         /// </summary>
         Guid? RefInstitutionTelephoneTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTelephoneNumberListedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTelephoneNumberListedStatus"/> model
         /// </summary>
         Guid? RefTelephoneNumberListedStatusId { get; set; }
 

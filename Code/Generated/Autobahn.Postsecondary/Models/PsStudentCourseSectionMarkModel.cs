@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The narrative of the grade awarded to an individual in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier.
@@ -38,7 +38,7 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid PsStudentSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseAcademicGradeStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 

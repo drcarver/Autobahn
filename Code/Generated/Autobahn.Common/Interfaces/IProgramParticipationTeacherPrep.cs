@@ -30,37 +30,37 @@ namespace Autobahn.Common.Interfaces
         Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAltRouteToCertificationOrLicensure"/> model
+        /// Reference to an optional instance of the <see cref="RefAltRouteToCertificationOrLicensure"/> model
         /// </summary>
         Guid? RefAltRouteToCertificationOrLicensureId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCriticalTeacherShortageCandidate"/> model
+        /// Reference to an optional instance of the <see cref="RefCriticalTeacherShortageCandidate"/> model
         /// </summary>
         Guid? RefCriticalTeacherShortageCandidateId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSupervisedClinicalExperience"/> model
+        /// Reference to an optional instance of the <see cref="RefSupervisedClinicalExperience"/> model
         /// </summary>
         Guid? RefSupervisedClinicalExperienceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherPrepCompleterStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherPrepCompleterStatus"/> model
         /// </summary>
         Guid? RefTeacherPrepCompleterStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherPrepEnrollmentStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherPrepEnrollmentStatus"/> model
         /// </summary>
         Guid? RefTeacherPrepEnrollmentStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingCredentialBasis"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingCredentialBasis"/> model
         /// </summary>
         Guid? RefTeachingCredentialBasisId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingCredentialType"/> model
         /// </summary>
         Guid? RefTeachingCredentialTypeId { get; set; }
 

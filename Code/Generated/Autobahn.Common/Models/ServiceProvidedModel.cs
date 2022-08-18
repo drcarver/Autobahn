@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The ServiceProvided Model
@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         public Guid? RefServicesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentSupportServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
         /// </summary>
         public Guid? RefStudentSupportServiceTypeId { get; set; }
 

@@ -29,12 +29,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid ELStaffId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELLevelOfSpecialization"/> model
+        /// Reference to an optional instance of the <see cref="RefELLevelOfSpecialization"/> model
         /// </summary>
         Guid? RefELLevelOfSpecializationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProfessionalDevelopmentTopicArea"/> model
+        /// Reference to an optional instance of the <see cref="RefELProfessionalDevelopmentTopicArea"/> model
         /// </summary>
         Guid? RefELProfessionalDevelopmentTopicAreaId { get; set; }
 

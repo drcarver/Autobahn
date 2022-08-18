@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The year, month and day on which a program or center received its continuing license.
@@ -87,12 +87,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProgramLicenseStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefELProgramLicenseStatus"/> model
         /// </summary>
         public Guid? RefELProgramLicenseStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLicenseExempt"/> model
+        /// Reference to an optional instance of the <see cref="RefLicenseExempt"/> model
         /// </summary>
         public Guid? RefLicenseExemptId { get; set; }
 

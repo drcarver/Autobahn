@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The PsStudentEmployment Model
@@ -30,17 +30,17 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedAfterExit"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedAfterExit"/> model
         /// </summary>
         public Guid? RefEmployedAfterExitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployedWhileEnrolled"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployedWhileEnrolled"/> model
         /// </summary>
         public Guid? RefEmployedWhileEnrolledId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmploymentStatusWhileEnrolled"/> model
+        /// Reference to an optional instance of the <see cref="RefEmploymentStatusWhileEnrolled"/> model
         /// </summary>
         public Guid? RefEmploymentStatusWhileEnrolledId { get; set; }
 

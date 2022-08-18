@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The date class ranking was determined.
@@ -109,42 +109,42 @@ namespace Autobahn.K12.Interfaces
         public System.DateTime? ProjectedGraduationDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefGpaWeightedIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefGpaWeightedIndicator"/> model
         /// </summary>
         public Guid? RefGpaWeightedIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighSchoolDiplomaDistinctionType"/> model
+        /// Reference to an optional instance of the <see cref="RefHighSchoolDiplomaDistinctionType"/> model
         /// </summary>
         public Guid? RefHighSchoolDiplomaDistinctionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighSchoolDiplomaType"/> model
+        /// Reference to an optional instance of the <see cref="RefHighSchoolDiplomaType"/> model
         /// </summary>
         public Guid? RefHighSchoolDiplomaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPreAndPostTestIndicator"/> model
+        /// Reference to an optional instance of the <see cref="RefPreAndPostTestIndicator"/> model
         /// </summary>
         public Guid? RefPreAndPostTestIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechnicalCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechnicalCredentialType"/> model
         /// </summary>
         public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProgressLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefProgressLevel"/> model
         /// </summary>
         public Guid? RefProgressLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPsEnrollmentAction"/> model
+        /// Reference to an optional instance of the <see cref="RefPsEnrollmentAction"/> model
         /// </summary>
         public Guid? RefPsEnrollmentActionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTechnologyLiteracyStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTechnologyLiteracyStatus"/> model
         /// </summary>
         public Guid? RefTechnologyLiteracyStatusId { get; set; }
 

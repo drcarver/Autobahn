@@ -17,7 +17,7 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefRoleStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefRoleStatus"/> model
         /// </summary>
         Guid? RefRoleStatusId { get; set; }
 

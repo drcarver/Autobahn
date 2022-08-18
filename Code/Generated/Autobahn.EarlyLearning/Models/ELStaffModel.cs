@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELStaff Model
@@ -19,7 +19,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefChildDevelopmentAssociateType"/> model
+        /// Reference to an optional instance of the <see cref="RefChildDevelopmentAssociateType"/> model
         /// </summary>
         public Guid? RefChildDevelopmentAssociateTypeId { get; set; }
 

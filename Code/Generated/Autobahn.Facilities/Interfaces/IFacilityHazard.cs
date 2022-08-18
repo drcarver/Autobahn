@@ -79,12 +79,12 @@ namespace Autobahn.Facilities.Interfaces
         System.DateTime? HazardousMaterialOrConditionTestingDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityHazardousMaterialsOrCondType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityHazardousMaterialsOrCondType"/> model
         /// </summary>
         Guid? RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilityNaturallyOccurringHazardType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilityNaturallyOccurringHazardType"/> model
         /// </summary>
         Guid? RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 

@@ -29,12 +29,12 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCommunityBasedType"/> model
+        /// Reference to an optional instance of the <see cref="RefCommunityBasedType"/> model
         /// </summary>
         Guid? RefCommunityBasedTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEarlyChildhoodProgramEnrollmentType"/> model
+        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodProgramEnrollmentType"/> model
         /// </summary>
         Guid RefEarlyChildhoodProgramEnrollmentTypeId { get; set; }
 

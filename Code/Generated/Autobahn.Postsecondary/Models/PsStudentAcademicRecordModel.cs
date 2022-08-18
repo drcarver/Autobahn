@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Postsecondary.Interfaces
+namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
      /// The academic year for which the data apply.
@@ -142,17 +142,17 @@ namespace Autobahn.Postsecondary.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAcademicTermDesignator"/> model
+        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
         /// </summary>
         public Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditHoursAppliedOtherProgram"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditHoursAppliedOtherProgram"/> model
         /// </summary>
         public Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalTechCredentialType"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalTechCredentialType"/> model
         /// </summary>
         public Guid? RefProfessionalTechCredentialTypeId { get; set; }
 

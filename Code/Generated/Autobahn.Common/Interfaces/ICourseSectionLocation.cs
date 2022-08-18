@@ -30,7 +30,7 @@ namespace Autobahn.Common.Interfaces
         Guid CourseSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInstructionLocationType"/> model
+        /// Reference to an optional instance of the <see cref="RefInstructionLocationType"/> model
         /// </summary>
         Guid? RefInstructionLocationTypeId { get; set; }
 

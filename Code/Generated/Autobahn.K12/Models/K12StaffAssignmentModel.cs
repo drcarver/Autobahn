@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// A percentage used to weight the educator's assigned responsibility for student learning in a Class Section, particularly when more than one educator is assigned to the class section.
@@ -76,57 +76,57 @@ namespace Autobahn.K12.Interfaces
         public System.Boolean? PrimaryAssignment { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefClassroomPositionType"/> model
+        /// Reference to an optional instance of the <see cref="RefClassroomPositionType"/> model
         /// </summary>
         public Guid? RefClassroomPositionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEDFactsTeacherInexperiencedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEDFactsTeacherInexperiencedStatus"/> model
         /// </summary>
         public Guid? RefEDFactsTeacherInexperiencedStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmergencyOrProvisionalCredentialStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEmergencyOrProvisionalCredentialStatus"/> model
         /// </summary>
         public Guid? RefEmergencyOrProvisionalCredentialStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12StaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
         /// </summary>
         public Guid? RefK12StaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefMepStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefMepStaffCategory"/> model
         /// </summary>
         public Guid? RefMepStaffCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefOutOfFieldStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefOutOfFieldStatus"/> model
         /// </summary>
         public Guid? RefOutOfFieldStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProfessionalEducationJobClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefProfessionalEducationJobClassification"/> model
         /// </summary>
         public Guid? RefProfessionalEducationJobClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationAgeGroupTaught"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationAgeGroupTaught"/> model
         /// </summary>
         public Guid? RefSpecialEducationAgeGroupTaughtId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpecialEducationStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefSpecialEducationStaffCategory"/> model
         /// </summary>
         public Guid? RefSpecialEducationStaffCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeachingAssignmentRole"/> model
+        /// Reference to an optional instance of the <see cref="RefTeachingAssignmentRole"/> model
         /// </summary>
         public Guid? RefTeachingAssignmentRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTitleIProgramStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIProgramStaffCategory"/> model
         /// </summary>
         public Guid? RefTitleIProgramStaffCategoryId { get; set; }
 

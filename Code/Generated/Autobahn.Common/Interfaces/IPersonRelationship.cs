@@ -85,7 +85,7 @@ namespace Autobahn.Common.Interfaces
         System.Boolean? PrimaryContactIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefPersonRelationshipType"/> model
+        /// Reference to an optional instance of the <see cref="RefPersonRelationshipType"/> model
         /// </summary>
         Guid RefPersonRelationshipTypeId { get; set; }
 

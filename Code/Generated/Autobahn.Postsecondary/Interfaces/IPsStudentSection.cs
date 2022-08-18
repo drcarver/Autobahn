@@ -86,12 +86,12 @@ namespace Autobahn.Postsecondary.Interfaces
         System.Decimal? QualityPointsEarned { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseAcademicGradeStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseRepeatCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseRepeatCode"/> model
         /// </summary>
         Guid? RefCourseRepeatCodeId { get; set; }
 

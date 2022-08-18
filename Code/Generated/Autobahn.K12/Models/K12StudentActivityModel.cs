@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// The amount of time the student participated in the events and procedures of an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
@@ -32,7 +32,7 @@ namespace Autobahn.K12.Interfaces
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefActivityTimeMeasurementType"/> model
+        /// Reference to an optional instance of the <see cref="RefActivityTimeMeasurementType"/> model
         /// </summary>
         public Guid? RefActivityTimeMeasurementTypeId { get; set; }
 

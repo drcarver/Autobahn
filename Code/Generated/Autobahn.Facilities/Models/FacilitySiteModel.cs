@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Facilities.Interfaces
+namespace Autobahn.Facilities.Models
 {
      /// <summary>
      /// The FacilitySite Model
@@ -47,12 +47,12 @@ namespace Autobahn.Facilities.Interfaces
         public System.String FacilitySiteIdentifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSiteUseRestrictionsType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSiteUseRestrictionsType"/> model
         /// </summary>
         public Guid? RefBuildingSiteUseRestrictionsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFacilitySiteOutdoorAreaType"/> model
+        /// Reference to an optional instance of the <see cref="RefFacilitySiteOutdoorAreaType"/> model
         /// </summary>
         public Guid? RefFacilitySiteOutdoorAreaTypeId { get; set; }
 

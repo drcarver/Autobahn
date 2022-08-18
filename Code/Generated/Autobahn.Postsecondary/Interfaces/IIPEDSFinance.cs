@@ -24,12 +24,12 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid OrganizationFinancialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFinancialPosition"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBFinancialPosition"/> model
         /// </summary>
         Guid? RefIPEDSFASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBFunctionalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBFunctionalExpense"/> model
         /// </summary>
         Guid? RefIPEDSFASBFunctionalExpenseId { get; set; }
 
@@ -45,47 +45,47 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid? RefIPEDSFASBPellGrantTransactionsId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBRevenue"/> model
         /// </summary>
         Guid? RefIPEDSFASBRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBRevenueRestriction"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBRevenueRestriction"/> model
         /// </summary>
         Guid? RefIPEDSFASBRevenueRestrictionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSFASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
         Guid? RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFinancialPosition"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBFinancialPosition"/> model
         /// </summary>
         Guid? RefIPEDSGASBFinancialPositionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBFunctionalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBFunctionalExpense"/> model
         /// </summary>
         Guid? RefIPEDSGASBFunctionalExpenseId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBRevenue"/> model
         /// </summary>
         Guid? RefIPEDSGASBRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSGASBScholarshipsandFellowshipsRevenue"/> model
         /// </summary>
         Guid? RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSIntercollegiateAthleticsExpenses"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSIntercollegiateAthleticsExpenses"/> model
         /// </summary>
         Guid? RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPEDSNaturalExpense"/> model
+        /// Reference to an optional instance of the <see cref="RefIPEDSNaturalExpense"/> model
         /// </summary>
         Guid? RefIPEDSNaturalExpenseId { get; set; }
 

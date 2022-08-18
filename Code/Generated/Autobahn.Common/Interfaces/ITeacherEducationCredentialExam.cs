@@ -23,17 +23,17 @@ namespace Autobahn.Common.Interfaces
         Guid ProgramParticipationTeacherPrepId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationCredentialExam"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationCredentialExam"/> model
         /// </summary>
         Guid? RefTeacherEducationCredentialExamId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationExamScoreType"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationExamScoreType"/> model
         /// </summary>
         Guid? RefTeacherEducationExamScoreTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefTeacherEducationTestCompany"/> model
+        /// Reference to an optional instance of the <see cref="RefTeacherEducationTestCompany"/> model
         /// </summary>
         Guid? RefTeacherEducationTestCompanyId { get; set; }
 

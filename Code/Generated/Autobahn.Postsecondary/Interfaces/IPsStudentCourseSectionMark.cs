@@ -37,7 +37,7 @@ namespace Autobahn.Postsecondary.Interfaces
         Guid PsStudentSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseAcademicGradeStatusCode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
         /// </summary>
         Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 

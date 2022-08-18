@@ -72,22 +72,22 @@ namespace Autobahn.Common.Interfaces
         System.Int32? RefIndividualizedProgramDateType { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramLocation"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramLocation"/> model
         /// </summary>
         Guid? RefIndividualizedProgramLocationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramTransitionType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramTransitionType"/> model
         /// </summary>
         Guid? RefIndividualizedProgramTransitionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIndividualizedProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefIndividualizedProgramType"/> model
         /// </summary>
         Guid? RefIndividualizedProgramTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefStudentSupportServiceType"/> model
+        /// Reference to an optional instance of the <see cref="RefStudentSupportServiceType"/> model
         /// </summary>
         Guid? RefStudentSupportServiceTypeId { get; set; }
 

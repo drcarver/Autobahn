@@ -32,7 +32,7 @@ namespace Autobahn.Credentials.Interfaces
         System.String Identifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCredentialentifierSystem"/> model
+        /// Reference to an optional instance of the <see cref="RefCredentialentifierSystem"/> model
         /// </summary>
         Guid? RefCredentialIdentifierSystemId { get; set; }
 

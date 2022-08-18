@@ -24,97 +24,97 @@ namespace Autobahn.Facilities.Interfaces
         Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingAdministrativeSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingAdministrativeSpaceType"/> model
         /// </summary>
         Guid? RefBuildingAdministrativeSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingArtSpecialtySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingArtSpecialtySpaceType"/> model
         /// </summary>
         Guid? RefBuildingArtSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingAssemblySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingAssemblySpaceType"/> model
         /// </summary>
         Guid? RefBuildingAssemblySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingBasicClassroomDesignType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingBasicClassroomDesignType"/> model
         /// </summary>
         Guid? RefBuildingBasicClassroomDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCareerTechEducationSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCareerTechEducationSpaceType"/> model
         /// </summary>
         Guid? RefBuildingCareerTechEducationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingCirculationSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingCirculationSpaceType"/> model
         /// </summary>
         Guid? RefBuildingCirculationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingFoodServiceSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingFoodServiceSpaceType"/> model
         /// </summary>
         Guid? RefBuildingFoodServiceSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingFullServiceKitchenType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingFullServiceKitchenType"/> model
         /// </summary>
         Guid? RefBuildingFullServiceKitchenTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingIndoorAthleticOrPhysEdSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingIndoorAthleticOrPhysEdSpaceType"/> model
         /// </summary>
         Guid? RefBuildingIndoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingLibMediaCenterSpecialtySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingLibMediaCenterSpecialtySpaceType"/> model
         /// </summary>
         Guid? RefBuildingLibMediaCenterSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingOperationsOrMaintSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingOperationsOrMaintSpaceType"/> model
         /// </summary>
         Guid? RefBuildingOperationsOrMaintSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingOutdoorAthleticOrPhysEdSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingOutdoorAthleticOrPhysEdSpaceType"/> model
         /// </summary>
         Guid? RefBuildingOutdoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingOutdoorOrNonathleticSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingOutdoorOrNonathleticSpaceType"/> model
         /// </summary>
         Guid? RefBuildingOutdoorOrNonathleticSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingPerformingArtsSpecialtySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingPerformingArtsSpecialtySpaceType"/> model
         /// </summary>
         Guid? RefBuildingPerformingArtsSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingScienceSpecialtySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingScienceSpecialtySpaceType"/> model
         /// </summary>
         Guid? RefBuildingScienceSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSpaceDesignType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSpaceDesignType"/> model
         /// </summary>
         Guid? RefBuildingSpaceDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingSpecEdSpecialtySpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingSpecEdSpecialtySpaceType"/> model
         /// </summary>
         Guid? RefBuildingSpecEdSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBuildingStudentSupportSpaceType"/> model
+        /// Reference to an optional instance of the <see cref="RefBuildingStudentSupportSpaceType"/> model
         /// </summary>
         Guid? RefBuildingStudentSupportSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSpaceUseType"/> model
+        /// Reference to an optional instance of the <see cref="RefSpaceUseType"/> model
         /// </summary>
         Guid? RefSpaceUseTypeId { get; set; }
 

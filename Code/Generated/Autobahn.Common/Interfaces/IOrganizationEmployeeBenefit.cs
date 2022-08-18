@@ -39,7 +39,7 @@ namespace Autobahn.Common.Interfaces
         System.Boolean? PartTimeBenefitIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefEmployeeBenefit"/> model
+        /// Reference to an optional instance of the <see cref="RefEmployeeBenefit"/> model
         /// </summary>
         Guid? RefEmployeeBenefitId { get; set; }
 

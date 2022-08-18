@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.Competencies.Interfaces
+namespace Autobahn.Competencies.Models
 {
      /// <summary>
      /// The CompetencySet Model
@@ -27,7 +27,7 @@ namespace Autobahn.Competencies.Interfaces
         public System.Int32? CompletionCriteriaThreshold { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCompletionCriteria"/> model
+        /// Reference to an optional instance of the <see cref="RefCompletionCriteria"/> model
         /// </summary>
         public Guid? RefCompletionCriteriaId { get; set; }
 

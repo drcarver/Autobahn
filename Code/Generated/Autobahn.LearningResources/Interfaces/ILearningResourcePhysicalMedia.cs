@@ -24,7 +24,7 @@ namespace Autobahn.LearningResources.Interfaces
         Guid LearningResourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefLearningResourcePhysicalMediaType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourcePhysicalMediaType"/> model
         /// </summary>
         Guid RefLearningResourcePhysicalMediaTypeId { get; set; }
 

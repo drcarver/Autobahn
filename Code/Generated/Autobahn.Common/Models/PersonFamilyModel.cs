@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonFamily Model
@@ -80,32 +80,32 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCommunicationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefCommunicationMethod"/> model
         /// </summary>
         public Guid? RefCommunicationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProgramEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefELProgramEligibility"/> model
         /// </summary>
         public Guid? RefELProgramEligibilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefFamilyIncomeSource"/> model
+        /// Reference to an optional instance of the <see cref="RefFamilyIncomeSource"/> model
         /// </summary>
         public Guid? RefFamilyIncomeSourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHighestEducationLevelCompleted"/> model
+        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
         /// </summary>
         public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncomeCalculationMethod"/> model
+        /// Reference to an optional instance of the <see cref="RefIncomeCalculationMethod"/> model
         /// </summary>
         public Guid? RefIncomeCalculationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefProofOfResidencyType"/> model
+        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
         /// </summary>
         public Guid? RefProofOfResidencyTypeId { get; set; }
 

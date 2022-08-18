@@ -29,7 +29,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefELProgramEligibilityStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefELProgramEligibilityStatus"/> model
         /// </summary>
         Guid? RefELProgramEligibilityStatusId { get; set; }
 

@@ -8,7 +8,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.K12.Interfaces
+namespace Autobahn.K12.Models
 {
      /// <summary>
      /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
@@ -104,62 +104,57 @@ namespace Autobahn.K12.Interfaces
         public System.Boolean? HighSchoolCourseRequirement { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAdditionalCreditType"/> model
+        /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
         /// </summary>
         public Guid? RefAdditionalCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBlendedLearningModelType"/> model
+        /// Reference to an optional instance of the <see cref="RefBlendedLearningModelType"/> model
         /// </summary>
         public Guid? RefBlendedLearningModelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCareerCluster"/> model
+        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
         /// </summary>
         public Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGpaApplicability"/> model
-        /// </summary>
-        public  RefCourseGpaApplicabilityId { get; set; }
-
-        /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
         /// </summary>
         public Guid? RefCourseGPAApplicabilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCourseInteractionMode"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseInteractionMode"/> model
         /// </summary>
         public Guid? RefCourseInteractionModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCreditTypeEarned"/> model
+        /// Reference to an optional instance of the <see cref="RefCreditTypeEarned"/> model
         /// </summary>
         public Guid? RefCreditTypeEarnedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefCurriculumFrameworkType"/> model
+        /// Reference to an optional instance of the <see cref="RefCurriculumFrameworkType"/> model
         /// </summary>
         public Guid? RefCurriculumFrameworkTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefK12EndOfCourseRequirement"/> model
+        /// Reference to an optional instance of the <see cref="RefK12EndOfCourseRequirement"/> model
         /// </summary>
         public Guid? RefK12EndOfCourseRequirementId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseLevel"/> model
         /// </summary>
         public Guid? RefSCEDCourseLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         public Guid? RefSCEDCourseSubjectAreaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefWorkbasedLearningOpportunityType"/> model
+        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

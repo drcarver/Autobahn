@@ -44,7 +44,7 @@ namespace Autobahn.Common.Interfaces
         System.DateTime? ProgressReportDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIPSPProgressReportType"/> model
+        /// Reference to an optional instance of the <see cref="RefIPSPProgressReportType"/> model
         /// </summary>
         Guid? RefIPSPProgressReportTypeId { get; set; }
 

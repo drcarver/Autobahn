@@ -39,17 +39,17 @@ namespace Autobahn.Common.Interfaces
         Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefBarrierToInternetAccessInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefBarrierToInternetAccessInResidence"/> model
         /// </summary>
         Guid? RefBarrierToInternetAccessInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInternetAccessTypeInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefInternetAccessTypeInResidence"/> model
         /// </summary>
         Guid? RefInternetAccessTypeInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefInternetPerformanceInResidence"/> model
+        /// Reference to an optional instance of the <see cref="RefInternetPerformanceInResidence"/> model
         /// </summary>
         Guid? RefInternetPerformanceInResidenceId { get; set; }
 

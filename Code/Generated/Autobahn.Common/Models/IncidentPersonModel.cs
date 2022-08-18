@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IncidentPerson Model
@@ -33,12 +33,12 @@ namespace Autobahn.Common.Interfaces
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentPersonRoleType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentPersonRoleType"/> model
         /// </summary>
         public Guid RefIncidentPersonRoleTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefIncidentPersonType"/> model
+        /// Reference to an optional instance of the <see cref="RefIncidentPersonType"/> model
         /// </summary>
         public Guid? RefIncidentPersonTypeId { get; set; }
 

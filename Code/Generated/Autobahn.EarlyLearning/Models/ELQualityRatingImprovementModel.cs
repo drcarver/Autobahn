@@ -6,7 +6,7 @@
 using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
 
-namespace Autobahn.EarlyLearning.Interfaces
+namespace Autobahn.EarlyLearning.Models
 {
      /// <summary>
      /// The ELQualityRatingImprovement Model
@@ -63,7 +63,7 @@ namespace Autobahn.EarlyLearning.Interfaces
         public System.String QrisScore { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefQrisParticipation"/> model
+        /// Reference to an optional instance of the <see cref="RefQrisParticipation"/> model
         /// </summary>
         public Guid? RefQrisParticipationId { get; set; }
 

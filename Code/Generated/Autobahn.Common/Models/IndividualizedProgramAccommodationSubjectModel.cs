@@ -4,7 +4,7 @@
 //***************************************************************************
 
 
-namespace Autobahn.Common.Interfaces
+namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The IndividualizedProgramAccommodationSubject Model
@@ -23,7 +23,7 @@ namespace Autobahn.Common.Interfaces
         public Guid IndividualizedProgramAccommodationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
         /// </summary>
         public Guid RefSCEDCourseSubjectAreaId { get; set; }
 

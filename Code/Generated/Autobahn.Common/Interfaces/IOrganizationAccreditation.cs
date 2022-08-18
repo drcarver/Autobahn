@@ -54,12 +54,12 @@ namespace Autobahn.Common.Interfaces
         Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefAccreditationAgency"/> model
+        /// Reference to an optional instance of the <see cref="RefAccreditationAgency"/> model
         /// </summary>
         Guid? RefAccreditationAgencyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IRefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
         /// </summary>
         Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
