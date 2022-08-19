@@ -80,9 +80,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefOrganizationLocationTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("718bdbc7-12bd-49f8-9319-d30c4a7e998d"), Code="Mailing", Description="Mailing", Definition="Mailing is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("fcf9d259-5177-46fb-b6ff-03dbec77575f"), Code="Physical", Description="Physical", Definition="Physical is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0e474f9a-e50e-4c6f-8952-a693c281bb8f"), Code="Shipping", Description="Shipping", Definition="Shipping is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a0698148-a933-4d82-b297-f6b2c219befb"), Code="Mailing", Description="Mailing", Definition="Mailing is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6d3b6725-3ad6-4e11-aec3-4287ab759817"), Code="Physical", Description="Physical", Definition="Physical is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a130e38c-e58e-46b7-8dbd-c6b0b19cb5e0"), Code="Shipping", Description="Shipping", Definition="Shipping is specified as the type of address listed for an organization.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

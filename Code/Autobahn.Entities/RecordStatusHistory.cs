@@ -5,14 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Autobahn.Entities
 {
     [Table("RecordStatusHistory")]
-    public partial class RecordStatusHistory
+    public partial class RecordStatusHistory : EntityBase
     {
-        public int RecordStatusHistoryId { get; set; }
-
-        public int RecordStatusId { get; set; }
-
-        public int RecordId { get; set; }
-
         [Required]
         [StringLength(100)]
         public string RecordPKColumn { get; set; }

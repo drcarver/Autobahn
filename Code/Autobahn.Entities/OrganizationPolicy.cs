@@ -9,7 +9,7 @@ namespace Autobahn.Entities
     {
         public int OrganizationPolicyId { get; set; }
 
-        public int OrganizationId { get; set; }
+        public Guid OrganizationId { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -23,9 +23,9 @@ namespace Autobahn.Entities
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

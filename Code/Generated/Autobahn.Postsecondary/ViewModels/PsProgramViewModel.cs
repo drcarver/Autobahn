@@ -186,8 +186,8 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefProgramLengthHoursTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("76336c03-9869-424d-a319-d736c8913248"), Code="Credit", Description="Credit", Definition="Credit is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("688c77f3-68b4-4fed-85fa-63acf949875e"), Code="Contact", Description="Contact", Definition="Contact is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("3bf1f79c-08c8-410d-8d1a-5a9341717b95"), Code="Credit", Description="Credit", Definition="Credit is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("47d52393-5096-4475-9778-3cdfe411aabe"), Code="Contact", Description="Contact", Definition="Contact is the type of hours (credit or contact) by which the normal length of a program of study is measured.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -197,10 +197,10 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPSProgramLevelList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("4670417c-6772-4beb-8e9a-4e15db100633"), Code="Major", Description="Major", Definition="Major is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2f4236e7-b311-4f40-aef7-c6d01465fdd6"), Code="Minor", Description="Minor", Definition="Minor is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("871ac68e-0b84-4664-bd50-5a9f5839e62d"), Code="Certificate", Description="Certificate", Definition="Certificate is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8af39960-b18a-4a25-a029-b01f25e4e5fa"), Code="Other", Description="Other", Definition="The concentration of study for the postsecondary program is in a category not yet defined in CEDS. ", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("fe1bec70-610c-403d-a309-d10b4f0d68aa"), Code="Major", Description="Major", Definition="Major is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6aa67e42-4762-43ef-8a86-358c3e65c678"), Code="Minor", Description="Minor", Definition="Minor is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ad23c443-526b-434c-a052-62778141c245"), Code="Certificate", Description="Certificate", Definition="Certificate is the  concentration of study for the postsecondary program.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("593154e0-dd94-4389-8533-d52d60a8fe68"), Code="Other", Description="Other", Definition="The concentration of study for the postsecondary program is in a category not yet defined in CEDS. ", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
 
@@ -210,11 +210,11 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTimeForCompletionUnitsList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("f5e78efe-95a9-4243-b62d-d123ef09003f"), Code="Hours", Description="Hours", Definition="The value given for Normal Length of Time for Completion is in Hours.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("916571e1-4004-4576-b67d-86405bf1e43f"), Code="Weeks", Description="Weeks", Definition="The value given for Normal Length of Time for Completion is in Weeks.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("53b2ce75-8ed7-4469-a8cf-4c1976bdb12d"), Code="Quarters", Description="Quarters", Definition="The value given for Normal Length of Time for Completion is in Quarters.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ff87f779-3416-4816-8ed0-af477d94184f"), Code="Semesters", Description="Semesters", Definition="The value given for Normal Length of Time for Completion is in Semesters.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8450d6e2-8fcb-41bb-8811-fe5ad26f22d1"), Code="Years", Description="Years", Definition="The value given for Normal Length of Time for Completion is in Years.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0cf7d147-6746-45fc-acc4-04c6d2f7ac52"), Code="Hours", Description="Hours", Definition="The value given for Normal Length of Time for Completion is in Hours.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("311af1e0-6d39-48ce-b0da-dcca479690aa"), Code="Weeks", Description="Weeks", Definition="The value given for Normal Length of Time for Completion is in Weeks.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7c910478-0290-43c8-af20-53665a3b6f8b"), Code="Quarters", Description="Quarters", Definition="The value given for Normal Length of Time for Completion is in Quarters.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8a6b4a45-aff3-49d9-8fb6-e5bcec8480a3"), Code="Semesters", Description="Semesters", Definition="The value given for Normal Length of Time for Completion is in Semesters.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("96b67127-e502-41d2-a42d-37956903d7e6"), Code="Years", Description="Years", Definition="The value given for Normal Length of Time for Completion is in Years.", SortOrder=Convert.ToDecimal("5.00") },
         };
         #endregion
     }

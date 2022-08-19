@@ -234,9 +234,9 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLevelOfInstitutionList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("63593f5c-f9b0-4a2e-999c-debcee50a749"), Code="FourYear", Description="Four or more years", Definition="The postsecondary institution's highest level of offering is a program of four or more years.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a05c35ff-c616-47b8-977c-40a43d8e617a"), Code="TwoToFour", Description="At least 2 but less than 4 years", Definition="The postsecondary institution's highest level of offering is a program of at least 2 but less than 4 years.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7f392245-891e-44ae-89c8-e1809414096a"), Code="LessThanTwo", Description="Less than 2 years (below associate)", Definition="The postsecondary institution's highest level of offering is a program of less than 2 years (below associate).", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("18b394d5-40f0-4d89-9814-1ab4dfb23636"), Code="FourYear", Description="Four or more years", Definition="The postsecondary institution's highest level of offering is a program of four or more years.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d880fa90-bcc3-4a82-9fd1-006798e01057"), Code="TwoToFour", Description="At least 2 but less than 4 years", Definition="The postsecondary institution's highest level of offering is a program of at least 2 but less than 4 years.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("831525f5-438e-4a5e-9681-abdfbd8841e3"), Code="LessThanTwo", Description="Less than 2 years (below associate)", Definition="The postsecondary institution's highest level of offering is a program of less than 2 years (below associate).", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -246,13 +246,13 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPredominantCalendarSystemList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("51bf65b4-168e-47df-9b17-db0a48299097"), Code="Semester", Description="Semester ", Definition="The institution structures most of its courses for the academic year by Semester.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("24d0ccfb-506a-4b85-a0f0-88b8a3b3a8a3"), Code="Quarter", Description="Quarter ", Definition="The institution structures most of its courses for the academic year by Quarter.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("23023335-9ebc-4710-b73c-a555aa08e27f"), Code="Trimester", Description="Trimester", Definition="The institution structures most of its courses for the academic year by Trimester.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c1a2b8ae-1fe9-4cfd-8f00-61b60585d02c"), Code="4-1-4", Description="4-1-4 or similar plan", Definition="The institution structures most of its courses for the academic year by 4-1-4 or similar plan.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("955a1abb-039e-47d2-a4ea-aa7a5cf143b0"), Code="Other", Description="Other academic plan", Definition="The institution structures most of its courses for the academic year by an academic plan not yet defined in CEDS.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("33b29325-3502-493a-9520-5baad5c4e6b1"), Code="DiffersByProgram", Description="Differs by program", Definition="The method by which an institution structures most of its courses for the academic year differs by program.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("80c4319a-088b-44e9-8df9-d773b71806b9"), Code="ContinuousBasis", Description="Continuous basis", Definition="The institution structures most of its courses for the academic year on a continuous basis.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("84b6efdc-8f34-4b13-a783-b81c003ad158"), Code="Semester", Description="Semester ", Definition="The institution structures most of its courses for the academic year by Semester.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c115c961-e8f8-4f6b-810f-d34ada152d8e"), Code="Quarter", Description="Quarter ", Definition="The institution structures most of its courses for the academic year by Quarter.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ca3b1ad7-defa-4eaa-9954-f5febeabfba5"), Code="Trimester", Description="Trimester", Definition="The institution structures most of its courses for the academic year by Trimester.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("20cc2fe4-ea4b-4c26-8a36-f6c46ed29d7d"), Code="4-1-4", Description="4-1-4 or similar plan", Definition="The institution structures most of its courses for the academic year by 4-1-4 or similar plan.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1763353a-085f-49a6-911d-58cd4504d854"), Code="Other", Description="Other academic plan", Definition="The institution structures most of its courses for the academic year by an academic plan not yet defined in CEDS.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5cb8c4dc-ffaf-497f-8ae7-8ec9519f2616"), Code="DiffersByProgram", Description="Differs by program", Definition="The method by which an institution structures most of its courses for the academic year differs by program.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("671e6607-7b96-41d0-916f-26f0e9b311e8"), Code="ContinuousBasis", Description="Continuous basis", Definition="The institution structures most of its courses for the academic year on a continuous basis.", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
 
@@ -262,8 +262,8 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTenureSystemList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("d2b630c6-e700-4f7d-8878-675eff944210"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("b027e4ed-a30c-4ca6-b12d-a89f8b6b573c"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c8bde9c6-fc79-43e5-9e13-3076b0423ae5"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a41a9ddd-8d49-416f-abf6-1f22e8da7eef"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
     }

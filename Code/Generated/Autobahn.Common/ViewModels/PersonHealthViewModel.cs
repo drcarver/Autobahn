@@ -231,9 +231,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefMedicalAlertIndicatorList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("de54c125-58ba-4144-855a-03749be03fd0"), Code="Chronic", Description="Chronic", Definition="The person has an alert indicator for a chronic medical/health condition.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("24305e4c-7f34-4fd6-86dd-342760b1e4b9"), Code="Acute", Description="Acute", Definition="The person has an alert indicator for an acute medical/health condition.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d288f93f-6135-4021-a80e-6c9e719c804f"), Code="None", Description="None", Definition="The person does not have an alert indicator for a medical/health condition.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ea3371f1-fc96-4df6-afc6-dbb2f7bf8a1c"), Code="Chronic", Description="Chronic", Definition="The person has an alert indicator for a chronic medical/health condition.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7c1af283-0f99-4736-b65a-6bf25a8c5a33"), Code="Acute", Description="Acute", Definition="The person has an alert indicator for an acute medical/health condition.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("fcbcabbd-4a85-46b8-b3f5-c5c3f0496ba4"), Code="None", Description="None", Definition="The person does not have an alert indicator for a medical/health condition.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -243,8 +243,8 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefVisionScreeningStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("b0fbdec7-6781-424d-b163-724ccac9f03d"), Code="Passed", Description="Passed", Definition="The person passed the screening.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c286961d-3eac-4ca7-a733-aecd6e101e8b"), Code="FurtherEvaluation", Description="Further Evaluation Needed", Definition="Further evaluation is needed.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1c1d61cf-1ade-44d5-8e14-f02a5061734a"), Code="Passed", Description="Passed", Definition="The person passed the screening.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a756a611-ed16-4394-a37f-c1f813c47533"), Code="FurtherEvaluation", Description="Further Evaluation Needed", Definition="Further evaluation is needed.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
     }

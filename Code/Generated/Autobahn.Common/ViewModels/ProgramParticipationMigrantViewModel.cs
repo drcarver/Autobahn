@@ -297,12 +297,12 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefMepEnrollmentTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("dcd3b66d-402b-4b89-a8b6-6754fd3b04b9"), Code="01", Description="Basic School Program", Definition="Basic School Program is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("06a0fefe-9e6a-4328-8139-c072705471ef"), Code="02", Description="Regular Term MEP-Funded Project", Definition="Regular Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("54c2b30f-250f-4b7f-bf99-af61bd17972a"), Code="03", Description="Summer/Intersession MEP-Funded Project", Definition="Summer/Intersession MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d8d37b55-f24c-4160-af30-cbd905af3852"), Code="04", Description="Year Round MEP-Funded Project", Definition="Year Round MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ac9c82bb-9edb-47c5-8d9c-99d417bd87b4"), Code="05", Description="Basic School Program and Regular-Term MEP-Funded Project", Definition="Basic School Program and Regular-Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("783e1bdc-14f5-4a71-beda-94cc9aea1dea"), Code="06", Description="Residency Only (none of the above)", Definition="Residency Only (none of the above)", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8a9e0b57-05c9-497f-b92e-53dd8d4f9ebc"), Code="01", Description="Basic School Program", Definition="Basic School Program is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("45ac8df8-c92d-4a4e-a496-53e5de21dfce"), Code="02", Description="Regular Term MEP-Funded Project", Definition="Regular Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1f569020-c285-4845-ac9c-4382b9aa810a"), Code="03", Description="Summer/Intersession MEP-Funded Project", Definition="Summer/Intersession MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("492da832-5784-4e85-ac8d-b301c93238f1"), Code="04", Description="Year Round MEP-Funded Project", Definition="Year Round MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c845be38-9bf4-47e4-a393-f0f8d3f58606"), Code="05", Description="Basic School Program and Regular-Term MEP-Funded Project", Definition="Basic School Program and Regular-Term MEP-Funded Project is the type of school/migrant education project in which instruction and/or support services are provided.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a137f352-922a-494b-b2b5-1336165c7ccd"), Code="06", Description="Residency Only (none of the above)", Definition="Residency Only (none of the above)", SortOrder=Convert.ToDecimal("6.00") },
         };
         #endregion
 
@@ -312,8 +312,8 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefMepProjectBasedList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("9713e9e3-f50f-4c43-9664-5d5506de5b10"), Code="SchoolBased", Description="School-based MEP Project", Definition="School-based Migrant Education Program Project", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7ec8580f-8895-4788-bfcd-13255f737b3c"), Code="NonSchoolBased", Description="Non-school-based MEP project", Definition="Non-school-based Migrant Education Program project", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ed7f6693-0eca-4581-a4e0-346e6d87984c"), Code="SchoolBased", Description="School-based MEP Project", Definition="School-based Migrant Education Program Project", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1c0aca1c-f748-4088-a159-1902fe832347"), Code="NonSchoolBased", Description="Non-school-based MEP project", Definition="Non-school-based Migrant Education Program project", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -323,13 +323,13 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefMepServiceTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("60576b07-ce60-4eb9-8e57-a412514d8f3f"), Code="CounselingServices", Description="Counseling Services", Definition="Counseling Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("56cabac1-968f-46f7-a625-8d53ab082099"), Code="HighSchoolAccrual", Description="High School Accrual", Definition="High School Accrual provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("428a44b2-f2a3-4c28-ae2a-5d6a7a287bf3"), Code="InstructionalServices", Description="Instructional Services", Definition="Instructional Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("aac59891-084b-4d89-b55a-dbe4f86b037f"), Code="MathematicsInstruction", Description="Mathematics Instruction", Definition="Mathematics Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("31f112c1-45b4-40a2-aba7-f6a9049e5f17"), Code="ReadingInstruction", Description="Reading Instruction", Definition="Reading Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a959d047-16d4-4ed9-9ae9-15d24232ae48"), Code="ReferralServices", Description="Referral Services", Definition="Referral Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("48427b8b-ec61-4d5a-a338-f071b1aa5390"), Code="SupportServices", Description="Support Services", Definition="Support Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d63176b5-d66b-454d-81bb-05156ee9422c"), Code="CounselingServices", Description="Counseling Services", Definition="Counseling Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("03bba1b8-d23c-4de2-8b3c-beaf41dbd577"), Code="HighSchoolAccrual", Description="High School Accrual", Definition="High School Accrual provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9a5a68b3-ed1a-4814-a22f-a49e71cb9ca6"), Code="InstructionalServices", Description="Instructional Services", Definition="Instructional Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a982aafd-9255-4db7-9fc5-9afe4d1b1ba5"), Code="MathematicsInstruction", Description="Mathematics Instruction", Definition="Mathematics Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("2f8c5319-0efc-453e-be76-d96914dba0c6"), Code="ReadingInstruction", Description="Reading Instruction", Definition="Reading Instruction provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("364ace30-0fc3-4b4e-aca9-caf8c106e48a"), Code="ReferralServices", Description="Referral Services", Definition="Referral Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c097f0a4-8fa2-4cf2-9856-aed660ec63d8"), Code="SupportServices", Description="Support Services", Definition="Support Services provided as part of a Migrant Education Program.", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
 

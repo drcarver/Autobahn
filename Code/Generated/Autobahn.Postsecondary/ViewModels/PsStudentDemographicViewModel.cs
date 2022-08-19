@@ -261,10 +261,10 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefNumberOfDependentsTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("53ee84f5-23c3-4df1-bb2e-abcdd5322892"), Code="All", Description="All", Definition="The dependents are the person's children, spouse, and person other than the children or spouse", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("300bfe33-61a2-49e3-8d14-8f66d3e7cc1c"), Code="Children", Description="Children", Definition="The dependents are the person's children.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("24d62cb0-fc00-4ed2-a78e-09ad1288f033"), Code="PersonOtherThanChildrenOrSpouse", Description="Person other than children or spouse", Definition="The dependent is a person other than the person's children or spouse", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("21e98e34-3853-424e-a288-856e9e0cb219"), Code="Spouse", Description="Spouse", Definition="The dependent is the person's spouse.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("496a8f11-af9f-4b10-ac6e-63c65c83c1cb"), Code="All", Description="All", Definition="The dependents are the person's children, spouse, and person other than the children or spouse", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("eefc8139-5e65-4297-be96-010d6f37f93d"), Code="Children", Description="Children", Definition="The dependents are the person's children.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c0386d46-d9c4-4d09-8c35-7cb3126bb4ef"), Code="PersonOtherThanChildrenOrSpouse", Description="Person other than children or spouse", Definition="The dependent is a person other than the person's children or spouse", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7d1c222e-41f5-43a3-852d-dcb8679c5ef7"), Code="Spouse", Description="Spouse", Definition="The dependent is the person's spouse.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
 
@@ -283,9 +283,9 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPsLepTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("bc68893a-df13-4613-af08-cfd183d39900"), Code="Yes", Description="Currently meets standard for limited English proficiency", Definition="The person currently meets the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("830b063a-d263-4030-af6f-548cb5bc2a46"), Code="No", Description="Currently does not meet standard for limited English proficiency", Definition="The person currently does not meet the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d28bb206-7a30-45eb-8195-d6a0d35fdde7"), Code="Ever", Description="Ever met standard for limited English proficiency", Definition="The person currently does not meet the standard for limited English proficiency, but previously did meet the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("3118dfad-8c41-4724-92f0-7512b7bf8bdf"), Code="Yes", Description="Currently meets standard for limited English proficiency", Definition="The person currently meets the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b018c5aa-fa9c-480b-80e3-d504ecaa552d"), Code="No", Description="Currently does not meet standard for limited English proficiency", Definition="The person currently does not meet the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f9d1a3fb-9c62-45d8-9a6d-bcdf6a717f51"), Code="Ever", Description="Ever met standard for limited English proficiency", Definition="The person currently does not meet the standard for limited English proficiency, but previously did meet the standard for limited English proficiency.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -295,10 +295,10 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTuitionResidencyTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("3a02cb5e-63e5-4c29-972b-fd15043c7a63"), Code="InDistrict", Description="In-district", Definition="The person's residency status for tuition purposes is: In-district.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("10ddb887-4217-4e4b-be41-75009612aece"), Code="InState", Description="In-state", Definition="The person's residency status for tuition purposes is: In-state.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("fde39357-54c4-4b31-887c-c11acfca6a82"), Code="OutOfState", Description="Out-of-state", Definition="The person's residency status for tuition purposes is: Out-of-state.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("9949613b-768c-45b4-baf4-6f423a4cce8d"), Code="NoDifferential", Description="No differential tuition based on residency", Definition="No differential tuition based on residency is provided.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("169b67ea-38e8-4c5f-b92b-8b22b4a64bdc"), Code="InDistrict", Description="In-district", Definition="The person's residency status for tuition purposes is: In-district.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bcadb0b2-52c3-47cf-b822-d3a1eab3a264"), Code="InState", Description="In-state", Definition="The person's residency status for tuition purposes is: In-state.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9cb15288-472e-40b1-bca9-946c9f3392b6"), Code="OutOfState", Description="Out-of-state", Definition="The person's residency status for tuition purposes is: Out-of-state.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("18488356-6305-4954-a671-1c7f1e2ffcd6"), Code="NoDifferential", Description="No differential tuition based on residency", Definition="No differential tuition based on residency is provided.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
     }

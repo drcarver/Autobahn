@@ -135,9 +135,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTelephoneNumberListedStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("4e2d3bee-7e4e-49fa-b0d6-0ba26aaeab30"), Code="Listed", Description="Listed", Definition="The telephone number is listed under a directory assistance service.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f4a1ac98-e0d6-4562-a3fc-c9ef5015c3cf"), Code="Unknown", Description="Unknown", Definition="It is not known if the telephone number is listed under a directory assistance service.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0bebe544-c50e-426e-8d1b-5ca9f967b55c"), Code="Unlisted", Description="Unlisted", Definition="The telephone number is not listed under a directory assistance service.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0c79e466-dad3-43c1-8875-d7d97700bd2e"), Code="Listed", Description="Listed", Definition="The telephone number is listed under a directory assistance service.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0021c300-66af-482b-9941-7fe2539cca4e"), Code="Unknown", Description="Unknown", Definition="It is not known if the telephone number is listed under a directory assistance service.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("60c5df85-2a95-4113-93ff-f8adaccf12ce"), Code="Unlisted", Description="Unlisted", Definition="The telephone number is not listed under a directory assistance service.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

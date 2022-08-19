@@ -135,8 +135,8 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefMethodOfServiceDeliveryList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("2d127b2f-0aad-4f34-bd72-7367eb8bb8ec"), Code="Individual", Description="Individual", Definition="The services will be provided individually.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f2a71313-5ccb-44cc-a03d-18dc91706984"), Code="Group", Description="Group", Definition="The services will be provided in a group.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8ec103a9-2288-4c7e-a47f-1cc3e0b3c60c"), Code="Individual", Description="Individual", Definition="The services will be provided individually.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e378daae-56a9-4380-ba24-969a3953bb1b"), Code="Group", Description="Group", Definition="The services will be provided in a group.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
 
@@ -146,15 +146,15 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefServiceFrequencyList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("fcecf238-741e-44ac-8119-a19bfe4a750c"), Code="Daily", Description="Daily", Definition="The service is planned to be provided Daily.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d75b853b-bdac-45e0-81ba-f0de31c1ed5a"), Code="Weekly", Description="Weekly", Definition="The service is planned to be provided Weekly.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("101f00d1-0055-4d09-8cc6-a24ee2c9de25"), Code="Biweekly", Description="Biweekly", Definition="The service is planned to be provided Biweekly.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2f9e5cc0-67bd-4a32-9e83-06f584a6da42"), Code="Monthly", Description="Monthly", Definition="The service is planned to be provided Monthly.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("85b995d8-ddc3-4ca2-9340-baa27b80323d"), Code="Bimonthly", Description="Bimonthly", Definition="The service is planned to be provided Bimonthly.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2bd42f1d-0b08-462c-861e-ee834ed6f293"), Code="Quarterly", Description="Quarterly", Definition="The service is planned to be provided Quarterly.", SortOrder=Convert.ToDecimal("12.00") },
-            new ReferenceModelBase { Id=Guid.Parse("674a3ba6-ce79-46c1-84d9-2ed13dbf9204"), Code="Semiannually", Description="Semiannually", Definition="The service is planned to be provided Semiannually.", SortOrder=Convert.ToDecimal("14.00") },
-            new ReferenceModelBase { Id=Guid.Parse("4012a524-8798-4045-a653-a2789eb80373"), Code="Annually", Description="Annually", Definition="The service is planned to be provided Annually.", SortOrder=Convert.ToDecimal("16.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0f198be6-5f4f-4a4e-8165-d1cdd3486593"), Code="Other", Description="Other", Definition="The service is planned to be provided at a frequency not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("90d35baf-6688-4ac6-b285-f494ae26968f"), Code="Daily", Description="Daily", Definition="The service is planned to be provided Daily.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bd70aeb8-817f-47c2-9571-8733c4c1dc85"), Code="Weekly", Description="Weekly", Definition="The service is planned to be provided Weekly.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9346d9be-5402-49ab-8ab6-d41899c72a7b"), Code="Biweekly", Description="Biweekly", Definition="The service is planned to be provided Biweekly.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("18375dad-5b4e-49fb-9b05-9c06f3bc4814"), Code="Monthly", Description="Monthly", Definition="The service is planned to be provided Monthly.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("796e2760-19ab-498c-9bcd-246a4c1f60fb"), Code="Bimonthly", Description="Bimonthly", Definition="The service is planned to be provided Bimonthly.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("24db8b65-8b93-4c75-983e-ad0bc39b4816"), Code="Quarterly", Description="Quarterly", Definition="The service is planned to be provided Quarterly.", SortOrder=Convert.ToDecimal("12.00") },
+            new ReferenceModelBase { Id=Guid.Parse("dcd24660-5370-4f9a-8728-627dbecd3e05"), Code="Semiannually", Description="Semiannually", Definition="The service is planned to be provided Semiannually.", SortOrder=Convert.ToDecimal("14.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b0334dd7-ddb0-4c55-aa6c-20e8ab2e7223"), Code="Annually", Description="Annually", Definition="The service is planned to be provided Annually.", SortOrder=Convert.ToDecimal("16.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b6143417-caf9-42b5-8ce7-af67eaf591c4"), Code="Other", Description="Other", Definition="The service is planned to be provided at a frequency not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
     }

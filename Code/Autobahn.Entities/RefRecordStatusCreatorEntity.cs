@@ -1,46 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   RefRecordStatusCreatorEntity.cs
+//**********************************************************
+
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    /// <summary>
+    /// The type of entity that created or indicated the Record Status Type
+    /// </summary>
     [Table("RefRecordStatusCreatorEntity")]
-    public partial class RefRecordStatusCreatorEntity
+    public partial class RefRecordStatusCreatorEntity : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RefRecordStatusCreatorEntity()
         {
-            RecordStatus = new HashSet<RecordStatus>();
-            RecordStatusHistories = new HashSet<RecordStatusHistory>();
+            //RecordStatusHistories = new HashSet<RecordStatusHistory>();
         }
 
-        public int RefRecordStatusCreatorEntityId { get; set; }
-
-        [Required]
-        [StringLength(150)]
-        public string Description { get; set; }
-
-        [StringLength(50)]
-        public string Code { get; set; }
-
-        [StringLength(4000)]
-        public string Definition { get; set; }
-
-        public int? RefJurisdictionId { get; set; }
-
-        public decimal? SortOrder { get; set; }
-
-        public DateTime? RecordStartDateTime { get; set; }
-
-        public DateTime? RecordEndDateTime { get; set; }
+        /// <summary>
+        /// The Id of the creator's organization
+        /// </summary>
+        [ForeignKey("Organization")]
+        public Guid OrganizationId { get; set; }
 
         public virtual Organization Organization { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecordStatus> RecordStatus { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecordStatusHistory> RecordStatusHistories { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<RecordStatusHistory> RecordStatusHistories { get; set; }
     }
 }

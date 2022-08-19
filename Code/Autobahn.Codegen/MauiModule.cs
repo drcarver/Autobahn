@@ -705,15 +705,15 @@ namespace Autobahn.Codegen
                 }
                 ModelsGenerated.Add(refName);
 
-                List<ReferenceModel> refData;
-                try
-                {
-                    refData = csv.ReadReferenceFile(@$"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{refName}.csv");
-                }
-                catch
-                {
-                    refData = new List<ReferenceModel>();
-                }
+                //List<ReferenceModel> refData;
+                //try
+                //{
+                //    refData = csv.ReadReferenceFile(@$"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\{refName}.csv");
+                //}
+                //catch
+                //{
+                //    refData = new List<ReferenceModel>();
+                //}
 
                 var element = GetTableMeta(model.TableName, string.Empty, elements);
                 stream.WriteLine("");
@@ -731,14 +731,14 @@ namespace Autobahn.Codegen
                 stream.WriteLine($@"        private static List<ReferenceModelBase> {refName}List = new List<ReferenceModelBase>");
                 stream.WriteLine($@"        {{");
                 var quote = "\"";
-                foreach (var item in refData)
-                {
-                    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
-                    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
-                    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
-                    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
-                    stream.WriteLine($@"            new ReferenceModelBase {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
-                }
+                //foreach (var item in refData)
+                //{
+                //    var fixedId = $"Guid.Parse({quote}{item.Id}{quote})";
+                //    var fixedCode = $"{quote}{item.Code?.Replace("\u0022", "\\u0022")}{quote}";
+                //    var fixedDescription = $"{quote}{item.Description?.Replace("\u0022", "\\u0022")}{quote}";
+                //    var fixedDefinition = $"{quote}{item.Definition?.Replace("\u0022", "\\u0022")}{quote}";
+                //    stream.WriteLine($@"            new ReferenceModelBase {{ Id={fixedId}, Code={fixedCode}, Description={fixedDescription}, Definition={fixedDefinition}, SortOrder=Convert.ToDecimal({quote}{item.SortOrder}{quote}) }},");
+                //}
                 stream.WriteLine($@"        }};");
                 stream.WriteLine($"        #endregion");
             }

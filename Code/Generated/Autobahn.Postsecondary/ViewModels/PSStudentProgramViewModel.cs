@@ -131,9 +131,9 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTransferOutIndicatorList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("8e6c4036-a82b-4228-9545-ffa7a494f268"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ce08f111-4c1b-4e98-b42a-62dd37ed9fe6"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("198aaab9-e7ae-4182-a362-d5b587df5967"), Code="Unknown", Description="Unknown", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("99d9ca81-bb66-44b1-8ef6-129635906817"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bd112d66-5c29-434f-8980-ced725ad48a8"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a049d1c0-82dc-4088-8475-b0f105f859b6"), Code="Unknown", Description="Unknown", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

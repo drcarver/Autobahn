@@ -195,10 +195,10 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefReasonDelayTransitionConfList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("1bc7ffde-9d96-475d-b1ec-c8c3e15f02de"), Code="Family", Description="Family", Definition="The reasons for the delay of a transition conference is attributed to the family.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("86e047d0-2843-421e-bcf0-db0a4458478c"), Code="Program", Description="Program", Definition="The reasons for the delay of a transition conference is attributed to the program.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f4813234-5711-4a19-832b-4f116a06b369"), Code="BeyondProgramControl", Description="Other beyond the control of the program", Definition="The reasons for the delay of a transition conference is other, beyond the control of the program.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("6438b779-2c6b-4cdd-8233-11ffeaee9e50"), Code="Promotion", Description="Promotion or advancement", Definition="The reasons for the delay of a transition conference is attributed to promotion or advancement.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8f63b75f-f590-4f4b-9dfd-18bb3223837a"), Code="Family", Description="Family", Definition="The reasons for the delay of a transition conference is attributed to the family.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bb817e90-483b-4d08-930b-e6d81a650dbe"), Code="Program", Description="Program", Definition="The reasons for the delay of a transition conference is attributed to the program.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("23a9c616-078f-4bde-8e3c-b5b104eee0b0"), Code="BeyondProgramControl", Description="Other beyond the control of the program", Definition="The reasons for the delay of a transition conference is other, beyond the control of the program.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7921c962-1507-423e-a3a8-184f86671d2a"), Code="Promotion", Description="Promotion or advancement", Definition="The reasons for the delay of a transition conference is attributed to promotion or advancement.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
     }

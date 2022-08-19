@@ -9,7 +9,7 @@ namespace Autobahn.Entities
     {
         public int ELQualityRatingImprovementId { get; set; }
 
-        public int OrganizationId { get; set; }
+        public Guid OrganizationId { get; set; }
 
         public int? NumberQrisLevels { get; set; }
 
@@ -28,9 +28,9 @@ namespace Autobahn.Entities
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

@@ -44,7 +44,7 @@ namespace Autobahn.Entities
 
         public int? RefBuildingUseTypeId { get; set; }
 
-        public int? OrganizationId { get; set; }
+        public Guid? OrganizationId { get; set; }
 
         [StringLength(100)]
         public string BuildingArea { get; set; }
@@ -81,9 +81,9 @@ namespace Autobahn.Entities
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BuildingSpace> BuildingSpaces { get; set; }

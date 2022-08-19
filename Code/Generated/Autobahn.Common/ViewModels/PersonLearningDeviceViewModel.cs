@@ -103,9 +103,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPrimaryLearningDeviceAccessList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("c0b1211e-3525-40de-ad08-0135e59d430e"), Code="NotShared", Description="Not Shared", Definition="The primary learning device is not shared with another individual.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("405cf2e0-4342-4fd2-af82-aaccf92a3afc"), Code="Shared", Description="Shared", Definition="The primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c44548fd-1c7d-492d-a62c-0c387dece12a"), Code="Unknown", Description="Unknown", Definition="It is not known whether the primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d24ed7f3-4127-4ae4-aa99-41baa978a74d"), Code="NotShared", Description="Not Shared", Definition="The primary learning device is not shared with another individual.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("cafeb6a0-8bba-4e6f-be96-db7d270a4692"), Code="Shared", Description="Shared", Definition="The primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e08534cb-be67-4b30-a5da-44591614c5dc"), Code="Unknown", Description="Unknown", Definition="It is not known whether the primary learning device is shared with another individual.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -115,13 +115,13 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPrimaryLearningDeviceAwayFromSchoolList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("bbe42e74-25f5-4b8f-8936-b0a3d99246c4"), Code="Chromebook", Description="Chromebook", Definition="A Chromebook is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2e0d923c-05da-4a72-ad75-02d1060a111a"), Code="DesktopComputer", Description="Desktop Computer", Definition="A desktop computer is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("eee4dc64-8df6-484a-995a-1bc880a65abb"), Code="LaptopComputer", Description="Laptop Computer", Definition="A Laptop Computer is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a2797df9-94bd-4135-9abd-046548fa6231"), Code="None", Description="None", Definition="There is not a device the student uses to complete learning activities away from school.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2d9f9dc7-be15-4b57-a07c-3e5b92cd0624"), Code="Smartphone", Description="Smartphone", Definition="A Smartphone is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d89388bf-cfb6-45b9-bc9e-a0263b3cda8e"), Code="Tablet", Description="Tablet", Definition="A Tablet is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("18f064bc-a518-47ef-bb39-b14381215fde"), Code="Other", Description="Other", Definition="The type of device the student uses most often to complete learning activities away from school is not yet defined.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f60290f6-3600-48d0-af0f-5b3416b08c23"), Code="Chromebook", Description="Chromebook", Definition="A Chromebook is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5c19adb2-bc26-458c-ab96-dbd6b5f4d75c"), Code="DesktopComputer", Description="Desktop Computer", Definition="A desktop computer is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("2f77a169-1b76-4cf6-a385-aa555f28c551"), Code="LaptopComputer", Description="Laptop Computer", Definition="A Laptop Computer is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7a37229f-33d1-4eff-b99d-9511f8ac6745"), Code="None", Description="None", Definition="There is not a device the student uses to complete learning activities away from school.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4f087f32-0113-42d0-b53a-77a01486502d"), Code="Smartphone", Description="Smartphone", Definition="A Smartphone is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f002c331-f28e-483a-b892-8373dd72a831"), Code="Tablet", Description="Tablet", Definition="A Tablet is the type of device the student uses most often to complete learning activities away from school.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("29201250-be9d-4b96-abbb-f267b0de2e55"), Code="Other", Description="Other", Definition="The type of device the student uses most often to complete learning activities away from school is not yet defined.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
 
@@ -131,9 +131,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPrimaryLearningDeviceProviderList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("f7bc7e1b-a014-49b5-ad09-d93014a1c8b4"), Code="Personal", Description="Personal", Definition="The provider of the primary learning device is the student or guardian.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7eacae43-1485-40f4-9202-999073f83b8c"), Code="School", Description="School", Definition="The provider of the primary learning device is the school.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("736d5290-c02c-41a9-bd91-913542571602"), Code="Other", Description="Other", Definition="The provider of the primary learning device is not yet defined.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("67938185-61ae-4654-ae75-aff3f4cb4e0f"), Code="Personal", Description="Personal", Definition="The provider of the primary learning device is the student or guardian.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e23e639e-cb57-4d3e-9a4b-ac3b08642b9b"), Code="School", Description="School", Definition="The provider of the primary learning device is the school.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ba512ee1-0ef0-437e-8bfa-82b60f0e2ef8"), Code="Other", Description="Other", Definition="The provider of the primary learning device is not yet defined.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
     }

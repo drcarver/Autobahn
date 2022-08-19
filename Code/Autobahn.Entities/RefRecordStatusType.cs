@@ -1,46 +1,28 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   RefRecordStatusType.cs
+//**********************************************************
+
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    /// <summary>
+    /// A process indicator of the level of stability, quality, and/or preparedness of the record.
+    /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermxTopicId=57529">Record Status Type</a>
+    /// </summary>
     [Table("RefRecordStatusType")]
-    public partial class RefRecordStatusType
+    public partial class RefRecordStatusType : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RefRecordStatusType()
         {
-            RecordStatus = new HashSet<RecordStatus>();
-            RecordStatusHistories = new HashSet<RecordStatusHistory>();
+            //RecordStatusHistories = new HashSet<RecordStatusHistory>();
         }
-
-        public int RefRecordStatusTypeId { get; set; }
-
-        [Required]
-        [StringLength(150)]
-        public string Description { get; set; }
-
-        [StringLength(50)]
-        public string Code { get; set; }
-
-        [StringLength(4000)]
-        public string Definition { get; set; }
-
-        public int? RefJurisdictionId { get; set; }
-
-        public decimal? SortOrder { get; set; }
-
-        public DateTime? RecordStartDateTime { get; set; }
-
-        public DateTime? RecordEndDateTime { get; set; }
 
         public virtual Organization Organization { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecordStatus> RecordStatus { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RecordStatusHistory> RecordStatusHistories { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<RecordStatusHistory> RecordStatusHistories { get; set; }
     }
 }

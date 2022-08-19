@@ -74,9 +74,9 @@ namespace Autobahn.Entities
 
         public bool? CredentialDefinitionTerminalDegreeIndicator { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CredentialAward> CredentialAwards { get; set; }

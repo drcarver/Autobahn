@@ -183,10 +183,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefEmploymentSeparationTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("04891585-1c8f-429c-8de7-f28bdd5f343e"), Code="Involuntary", Description="Involuntary separation", Definition="Involuntary separation is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("3bbd6e60-049d-4397-b1c9-925a3ec5600e"), Code="MutualAgreement", Description="Mutual agreement", Definition="Mutual agreement is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("301f64a9-c568-4ae4-92e8-f70217ce6f3b"), Code="Other", Description="Other", Definition="The type of separation occurring between a person and the organization is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("6d69bb76-405e-4e08-a1d6-71cfefc53841"), Code="Voluntary", Description="Voluntary separation", Definition="Voluntary separation is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ec1f5590-92f8-467d-a667-ba1cccb7c1c9"), Code="Involuntary", Description="Involuntary separation", Definition="Involuntary separation is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("16890810-5ba7-41d1-b1c0-0b0d3d5b809f"), Code="MutualAgreement", Description="Mutual agreement", Definition="Mutual agreement is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ee47db88-28f3-4753-9466-693ea8f4a3d2"), Code="Other", Description="Other", Definition="The type of separation occurring between a person and the organization is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("345ab418-e9f4-4e13-a8ed-7c212b14e6e5"), Code="Voluntary", Description="Voluntary separation", Definition="Voluntary separation is the type of separation occurring between a person and the organization.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
     }

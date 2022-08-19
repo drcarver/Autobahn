@@ -138,8 +138,8 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefOrganizationMonitoringNotificationsList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("083565f0-841a-4657-8da3-b0fd15bcb496"), Code="Announced", Description="Announced", Definition="The organization received notification about monitoring.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("6796065d-b10f-4fd5-8421-475f433c7a51"), Code="Unannounced", Description="Unannounced", Definition="The organization did not received notification about monitoring.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9ffa0b33-3466-4950-911f-99f7b8f3c675"), Code="Announced", Description="Announced", Definition="The organization received notification about monitoring.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("34b4b3f3-57a7-4957-956b-b67183fd40e5"), Code="Unannounced", Description="Unannounced", Definition="The organization did not received notification about monitoring.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -149,11 +149,11 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPurposeOfMonitoringVisitList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("19038e3e-d140-44f2-8cd2-42b5ec0ab4d0"), Code="LicensingVisits", Description="Licensing Visits", Definition="The monitoring visit is for licensing.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("9a198ba8-1bac-46fb-b188-dc7c0ab1c4e6"), Code="HeathSafety", Description="Health and Safety", Definition="The monitoring visit is for Health and Safety.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8724d97f-8e94-4f9d-a589-a55d037b06ed"), Code="Renewal", Description="Renewal", Definition="The monitoring visit is for Renewal.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("53bf886c-a1b7-455a-b0fa-f322854817bc"), Code="Review", Description="Review", Definition="The monitoring visit is for Review.", SortOrder=Convert.ToDecimal("7.00") },
-            new ReferenceModelBase { Id=Guid.Parse("206d4357-d655-4d91-a1a0-eee6fa714d83"), Code="Other", Description="Other", Definition="The monitoring visit is for Other.", SortOrder=Convert.ToDecimal("9.00") },
+            new ReferenceModelBase { Id=Guid.Parse("17710df6-e87a-440b-b94b-f1b45b1d6292"), Code="LicensingVisits", Description="Licensing Visits", Definition="The monitoring visit is for licensing.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("122118dc-4f86-46f8-8e45-92cc86c7a412"), Code="HeathSafety", Description="Health and Safety", Definition="The monitoring visit is for Health and Safety.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bef41eec-4473-4903-bf81-0656688dde37"), Code="Renewal", Description="Renewal", Definition="The monitoring visit is for Renewal.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9a036bd9-946b-4dea-a317-291db11073ea"), Code="Review", Description="Review", Definition="The monitoring visit is for Review.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6876eb7b-abb5-4ebb-84cc-282437517c34"), Code="Other", Description="Other", Definition="The monitoring visit is for Other.", SortOrder=Convert.ToDecimal("9.00") },
         };
         #endregion
     }

@@ -135,13 +135,13 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefOtherNameTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("79a91b69-ae81-4a89-a76d-42df3c656d8a"), Code="Alias", Description="Alias", Definition="The value specified for Other Name is the person's Alias.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("19e82f16-45de-4da0-8a35-911a3a82737b"), Code="Nickname", Description="Nickname", Definition="The value specified for Other Name is the person's Nickname.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("47c8524f-f7cb-4f12-8edc-b2d5202ffe8c"), Code="OtherName", Description="Other name", Definition="The value specified for Other Name is the person's Other name.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("91689172-dd8d-4ddb-bf44-23d3b7546f7e"), Code="PreviousLegalName", Description="Previous legal name", Definition="The value specified for Other Name is the person's Previous legal name.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("72aeaa7c-3492-49de-aac3-4e13c1be6f3c"), Code="PreferredFamilyName", Description="Preferred Family Name", Definition="The value specified for Other Name is the person's Preferred Family Name.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("13ae4da8-60f2-424e-bb98-792e8f978523"), Code="PreferredGivenName", Description="Preferred Given Name", Definition="The value specified for Other Name is the person's Preferred Given Name.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ed2d016a-b886-4deb-861a-696f734baccd"), Code="FullName", Description="Full Name", Definition="The value specified for Other Name is the person's  Full Name.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c761399d-584b-4c7b-9269-261390ecaafb"), Code="Alias", Description="Alias", Definition="The value specified for Other Name is the person's Alias.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b4e908e2-5cc4-4aa6-a83e-c275d81c23b9"), Code="Nickname", Description="Nickname", Definition="The value specified for Other Name is the person's Nickname.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e24351de-efd7-4c83-951e-c353abb0ba1c"), Code="OtherName", Description="Other name", Definition="The value specified for Other Name is the person's Other name.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bfa773e9-6d6e-464b-a4c0-7352868d1656"), Code="PreviousLegalName", Description="Previous legal name", Definition="The value specified for Other Name is the person's Previous legal name.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("03e7ae14-d67e-4991-8bb3-c9062044dd14"), Code="PreferredFamilyName", Description="Preferred Family Name", Definition="The value specified for Other Name is the person's Preferred Family Name.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("09a1be49-8e3b-46bb-9b4a-c342df294612"), Code="PreferredGivenName", Description="Preferred Given Name", Definition="The value specified for Other Name is the person's Preferred Given Name.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0c0f30b8-23f7-4ca7-a630-978765daa3e6"), Code="FullName", Description="Full Name", Definition="The value specified for Other Name is the person's  Full Name.", SortOrder=Convert.ToDecimal("10.00") },
         };
         #endregion
     }

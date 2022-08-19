@@ -226,13 +226,13 @@ namespace Autobahn.Competencies.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLearningResourceCompetencyAlignmentTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("1d18e7cc-d352-4514-95ed-54acc2615de1"), Code="Assesses", Description="Assesses", Definition="The learning resource Assesses the aligned competency.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0eb47f12-7bee-4fe6-93f2-e1425ab2d1a8"), Code="Teaches", Description="Teaches", Definition="The learning resource Teaches the aligned competency.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2cd9a45f-80aa-48f8-b54e-08a320651f7d"), Code="Requires", Description="Requires", Definition="The learning resource Requires the aligned competency.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("363b4455-a7d7-4eb1-812d-2fa2c8e1254c"), Code="TextComplexity", Description="Text Complexity", Definition="The aligned item specifies the Text Complexity of the learning resource.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("879540dc-f8a0-447f-9e0a-30e446e0a2cc"), Code="ReadingLevel", Description="Reading Level", Definition="The aligned item specifies the Reading Level of the learning resource.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("b8eefe42-d3ac-4aed-b45e-59a50fa62633"), Code="EducationalSubject", Description="Educational Subject", Definition="The aligned item specifies the Educational Subject of the learning resource.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("3d95b85b-85fb-4ce2-b660-5a37dc1678af"), Code="EducationLevel", Description="Education Level", Definition="The aligned item specifies the Education Level of the learning resource.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f8309d80-aa72-453f-acdd-61c04db361e3"), Code="Assesses", Description="Assesses", Definition="The learning resource Assesses the aligned competency.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("538a0915-bcc0-44ba-b19f-e89bbfee7d8c"), Code="Teaches", Description="Teaches", Definition="The learning resource Teaches the aligned competency.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("59e121ff-2f78-4a2f-9a6b-f2d60fa310f8"), Code="Requires", Description="Requires", Definition="The learning resource Requires the aligned competency.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("88fe2948-b2a1-46be-a26c-41cacb39b366"), Code="TextComplexity", Description="Text Complexity", Definition="The aligned item specifies the Text Complexity of the learning resource.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("91c9062c-89a6-4b40-b94d-5c437609af95"), Code="ReadingLevel", Description="Reading Level", Definition="The aligned item specifies the Reading Level of the learning resource.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("46b31617-0260-4c66-ab0f-69e12a198615"), Code="EducationalSubject", Description="Educational Subject", Definition="The aligned item specifies the Educational Subject of the learning resource.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("137c6c78-baf4-4bc7-939e-ed82f3e26e0d"), Code="EducationLevel", Description="Education Level", Definition="The aligned item specifies the Education Level of the learning resource.", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
     }

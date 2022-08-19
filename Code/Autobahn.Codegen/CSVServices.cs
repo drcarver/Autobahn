@@ -123,6 +123,27 @@ namespace Autobahn.Codegen
             }
         }
 
+        public List<MarcModel> ReadMarcReferenceFile(string location)
+        {
+            try
+            {
+                using (var reader = new StreamReader(location))
+                {
+                    var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
+                    using (var csv = new CsvReader(reader, config))
+                    {
+                        csv.Context.RegisterClassMap<MarcModelMap>();
+                        var records = csv.GetRecords<MarcModel>().ToList();
+                        return records;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public void WriteAutobahnDomainsFile(string location, List<AutobahnDomain> domains)
         {
             using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
@@ -136,6 +157,18 @@ namespace Autobahn.Codegen
         }
 
         public void WriteTablesFile(string location, List<AutobahnTable> tables, bool hasHeaderRecord, string delimeter = "|")
+        {
+            using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
+            {
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = hasHeaderRecord, Delimiter = delimeter };
+                using (var csv = new CsvWriter(writer, config))
+                {
+                    csv.WriteRecords(tables);
+                }
+            }
+        }
+
+        public void WriteReferenceFile(string location, List<ReferenceModel> tables, bool hasHeaderRecord, string delimeter = "|")
         {
             using (TextWriter writer = new StreamWriter(location, false, System.Text.Encoding.UTF8))
             {

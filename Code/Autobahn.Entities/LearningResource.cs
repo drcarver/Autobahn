@@ -133,6 +133,8 @@ namespace Autobahn.Entities
 
         public int? RefLearningResourceAccessRightsUrlId { get; set; }
 
+        public int? RefMarcRelatorId { get; set; }
+
         public int? RefLearningResourceAuthorTypeId { get; set; }
 
         public int? RefLearningResourceInteractionModeId { get; set; }
@@ -141,9 +143,9 @@ namespace Autobahn.Entities
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssessmentAsset> AssessmentAssets { get; set; }
@@ -196,6 +198,8 @@ namespace Autobahn.Entities
         public virtual RefLearningResourceInteractivityType RefLearningResourceInteractivityType { get; set; }
 
         public virtual RefLearningResourceType RefLearningResourceType { get; set; }
+
+        public virtual RefMarcRelator RefMarcRelator { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LearningResourceAdaptation> LearningResourceAdaptations { get; set; }

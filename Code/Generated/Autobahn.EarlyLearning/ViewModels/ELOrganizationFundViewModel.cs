@@ -121,11 +121,11 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefReimbursementTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("73b508f3-f73c-48f0-8c10-bb6aa78e5ed6"), Code="FeeForService", Description="Fee for Service", Definition="Reimbursed via fee for service.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2f41a80b-da42-46b7-8f50-0ee7cf255c25"), Code="CapitatedRate", Description="Capitated Rate", Definition="Reimbursed via capitated rate.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("56f86a25-d9a6-4b6b-ad32-a785c534ad4e"), Code="GrantContract", Description="Grant/contract", Definition="Reimbursed via grant/contract.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("464d3c7f-7b77-4e40-bcdd-574e10dba842"), Code="Subsidy", Description="Subsidy", Definition="Reimbursed via subsidy.", SortOrder=Convert.ToDecimal("7.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c709fd5f-99f2-43c2-abf2-4cfef5227767"), Code="Other", Description="Other", Definition="The reimbursement type is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a49b4e0f-cef0-4551-a282-7609a15972fa"), Code="FeeForService", Description="Fee for Service", Definition="Reimbursed via fee for service.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("37ca58d1-2595-4229-aa3a-c22c4b92dbc3"), Code="CapitatedRate", Description="Capitated Rate", Definition="Reimbursed via capitated rate.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("036f8073-a718-4076-9f02-2ac0166907a0"), Code="GrantContract", Description="Grant/contract", Definition="Reimbursed via grant/contract.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("50c5b133-8f79-4bbd-9d44-ff23ba575e08"), Code="Subsidy", Description="Subsidy", Definition="Reimbursed via subsidy.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("895973e8-5d1c-4f73-a9d1-6e7b073a9bda"), Code="Other", Description="Other", Definition="The reimbursement type is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("9.00") },
         };
         #endregion
     }

@@ -236,8 +236,8 @@ namespace Autobahn.CTE.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefNonTraditionalGenderStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("dbf7ba44-2347-40c3-99ae-e2f4b55e334c"), Code="Underrepresented", Description="Members of an underrepresented gender group", Definition="CTE participants were members of an underrepresented gender group.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("1f4dd8d5-7313-4e15-9178-b4782ccc7090"), Code="NotUnderrepresented", Description="Not members of an underrepresented gender group", Definition="CTE participants were not members of an underrepresented gender group.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d12e08d4-fc1b-4f3b-8f07-663d052a2993"), Code="Underrepresented", Description="Members of an underrepresented gender group", Definition="CTE participants were members of an underrepresented gender group.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bd9fe7a2-6e3a-4c90-9ed6-fd14c9f1ec32"), Code="NotUnderrepresented", Description="Not members of an underrepresented gender group", Definition="CTE participants were not members of an underrepresented gender group.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
     }

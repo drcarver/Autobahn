@@ -140,9 +140,9 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLicenseExemptList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("dd777447-2546-4509-8084-937bc4c1c2c7"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a7464512-4a10-43d6-ad0f-b0ebb697b479"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a309dcf7-48ab-4b88-b58c-ea583e4b50c0"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c1a8e558-bd18-4320-b7e0-4195d4b84bb0"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4db00c76-9655-4aaf-8eaf-01d8eb454680"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("df139e78-59ea-4895-8849-96b6e03c40aa"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

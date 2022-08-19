@@ -138,11 +138,11 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefQrisParticipationList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("cbc4db49-a71a-46ff-8d11-84ebdac7ea88"), Code="Yes", Description="Yes", Definition="Yes: Provider does participate in the QRIS", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8f2b8c68-69d8-42a2-af7f-76c06e13b305"), Code="No", Description="No", Definition="No: Provider is eligible, but does not participate in the QRIS", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("cf18b99d-9ba1-4aaf-b1b2-1ce2083c1b79"), Code="NotEligible", Description="Not Eligible", Definition="The State has an operating QRIS in the provider's area, but the provider is not eligible to participate", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("64b9aefc-6e95-43f5-b051-7589a5ba43f9"), Code="NoOperatingQRIS", Description="No Operating QRIS", Definition="The State does not have an operating QRIS in the provider's area", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("9c4f8d24-b084-4618-a3c4-2c78691536f5"), Code="InformationUnavailable", Description="Information Unavailable", Definition="The State has an operating QRIS in the provider's area, but information is currently unavailable at the provider level", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("40e6937c-557a-41c8-bda6-0f0e77c18d0e"), Code="Yes", Description="Yes", Definition="Yes: Provider does participate in the QRIS", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("72079317-5111-4d58-bef9-e6722b88c1b3"), Code="No", Description="No", Definition="No: Provider is eligible, but does not participate in the QRIS", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7fa7597e-4d7a-42a0-831a-f07caae4e5f0"), Code="NotEligible", Description="Not Eligible", Definition="The State has an operating QRIS in the provider's area, but the provider is not eligible to participate", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e61a6fc4-9746-4a6c-8807-e67bf0c1e86c"), Code="NoOperatingQRIS", Description="No Operating QRIS", Definition="The State does not have an operating QRIS in the provider's area", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4d281b54-3d41-4606-a0ec-1b09b3327143"), Code="InformationUnavailable", Description="Information Unavailable", Definition="The State has an operating QRIS in the provider's area, but information is currently unavailable at the provider level", SortOrder=Convert.ToDecimal("5.00") },
         };
         #endregion
     }

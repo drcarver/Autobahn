@@ -445,8 +445,8 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefReconstitutedStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("971e3b49-6cb4-4434-ab4c-afc12dd58e48"), Code="Yes", Description="Reconstituted school", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("61f7361f-3e05-46a0-9a16-f2acc2582a57"), Code="No", Description="Not a reconstituted school", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c2e0918c-6feb-4d04-ae43-d6e6064a40e7"), Code="Yes", Description="Reconstituted school", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a5730f71-d357-4031-a443-94330663a8dd"), Code="No", Description="Not a reconstituted school", Definition="", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -456,9 +456,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTargetedSupportAndImprovementStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("66a01467-ed4e-4116-828b-95fe0621148e"), Code="NOTTSI", Description="Not targeted support and improvement", Definition="Not targeted support and improvement is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("b3635ad1-b28c-4898-8b8c-f0d91211f246"), Code="TSI", Description="Targeted support and improvement", Definition="Targeted support and improvement is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("af9063c1-2900-4200-9fdc-635a8de49497"), Code="TSIEXIT", Description="Targeted support and improvement - exit status", Definition="Targeted support and improvement - exit status is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("32d90db9-f759-459a-a75d-9e3e8dc297c2"), Code="NOTTSI", Description="Not targeted support and improvement", Definition="Not targeted support and improvement is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("10b88824-51c4-4403-8c53-628fb1801d26"), Code="TSI", Description="Targeted support and improvement", Definition="Targeted support and improvement is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("edb24f7d-f2c9-4dbe-abe8-855e89251f47"), Code="TSIEXIT", Description="Targeted support and improvement - exit status", Definition="Targeted support and improvement - exit status is the designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

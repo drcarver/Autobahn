@@ -352,9 +352,9 @@ namespace Autobahn.LearningResources.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLearnerActivityAddToGradeBookFlagList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("a290a174-02d3-4400-b14e-3f95317715c6"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ebcc308c-0e8b-478c-a935-d47ef8813cba"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("812aa0a4-260b-43f8-8877-94b7f3c9b0da"), Code="NotSelected", Description="Not selected", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c26075e8-7ae9-4e2a-9500-8c608d2880b1"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("32a6532e-d17b-4392-930a-21ff63849b5f"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e471c5e2-b6af-4aec-8de8-8a4a0f3eec08"), Code="NotSelected", Description="Not selected", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -364,11 +364,11 @@ namespace Autobahn.LearningResources.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLearnerActivityMaximumTimeAllowedUnitsList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("a3321ab9-2ca1-4088-9473-624849e0e3d3"), Code="Week", Description="Week", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of weeks.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c3916de6-8c9e-49c1-94de-7da14bcb6833"), Code="Day", Description="Day", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of days.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("4638dc12-7348-4650-8e6a-9afdcb33bba2"), Code="Hour", Description="Hour", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of hours.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("061e476b-787f-41a4-bb92-528815b6a06f"), Code="Minute", Description="Minute", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of minute.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("9f2bd2d7-e174-4683-9d0c-8127692082b0"), Code="Second", Description="Second", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of seconds.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b90673e3-149e-47a4-863e-fd11998a2bb7"), Code="Week", Description="Week", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of weeks.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b9bfa9b8-5d6d-4516-9265-db7c7c54ca98"), Code="Day", Description="Day", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of days.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f3966540-6cd4-475d-9c35-f5979cc9b8b5"), Code="Hour", Description="Hour", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of hours.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("152badaa-23fa-46d3-a4de-188943068d1f"), Code="Minute", Description="Minute", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of minute.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0907272d-2d2d-47df-8a75-619e7cdd09ff"), Code="Second", Description="Second", Definition="The value specified for Learner Activity Maximum Time Allowed is a number of seconds.", SortOrder=Convert.ToDecimal("5.00") },
         };
         #endregion
 
@@ -378,10 +378,10 @@ namespace Autobahn.LearningResources.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLearnerActivityTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ebc095a2-788d-47bc-95c7-f1f9ab457d2a"), Code="Assignment", Description="Assignment", Definition="The type of work assigned to the learner is an assignment.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("50385410-ab7e-47eb-b5eb-b642812e9fdb"), Code="LearningResource", Description="Learning Resource", Definition="The type of assignment to the learner is a learning resource.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("bde1fff2-29cc-4e97-847e-8c9c9c53b41e"), Code="Activity", Description="Activity", Definition="The type of work assigned to the learner is an activity.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("efec7d03-859e-4a2b-9e3d-e5f4e70bf168"), Code="Lesson", Description="Lesson", Definition="The type of work assigned to the learner is a lesson.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("03888e59-1dc9-4448-b7c6-6a2969964a93"), Code="Assignment", Description="Assignment", Definition="The type of work assigned to the learner is an assignment.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("40386368-f9c0-45ab-8c2d-f4a28e161489"), Code="LearningResource", Description="Learning Resource", Definition="The type of assignment to the learner is a learning resource.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("21462b70-5df2-497f-b304-2c1f073e9e71"), Code="Activity", Description="Activity", Definition="The type of work assigned to the learner is an activity.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a3ebf820-d519-40ac-902b-08cd9fa16a3b"), Code="Lesson", Description="Lesson", Definition="The type of work assigned to the learner is a lesson.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
     }

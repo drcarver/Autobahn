@@ -1,31 +1,41 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   Activity.cs
+//**********************************************************
+
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
+    /// <summary>
+    /// An activity, such as a co-curricular or extra-curricular
+    /// activity that is offered at an education institution.
+    /// </summary>
     [Table("Activity")]
-    public partial class Activity
+    public partial class Activity : EntityBase
     {
-        public int ActivityId { get; set; }
+        /// <summary>
+        /// The organization sponsoring the Activity
+        /// </summary>
+        [ForeignKey("Organization")]
+        public Guid OrganizationId { get; set; }
 
-        public int OrganizationId { get; set; }
-
+        /// <summary>
+        /// A description of the events and procedures that
+        /// take place under the purview of an organized
+        /// activity, such as a co-curricular or
+        /// extra-curricular activity that is offered at
+        /// an education institution.
+        /// </summary>
+        [Display(Name= "Activity Description")]
         [StringLength(300)]
         public string ActivityDescription { get; set; }
 
-        public DateTime? RecordStartDateTime { get; set; }
-
-        public DateTime? RecordEndDateTime { get; set; }
-
-        public int? RecordStatusId { get; set; }
-
-        public int? DataCollectionId { get; set; }
-
-        public virtual DataCollection DataCollection { get; set; }
-
+        /// <summary>
+        /// The organization sponsoring the Activity
+        /// </summary>
         public virtual Organization Organization { get; set; }
-
-        public virtual RecordStatus RecordStatus { get; set; }
     }
 }

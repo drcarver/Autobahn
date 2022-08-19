@@ -119,10 +119,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTrimesterWhenPrenatalCareBeganList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("1e2b06a7-078e-405e-b382-2e4bbfb2e597"), Code="FirstTrimester", Description="First trimester", Definition="The  child's mother began receiving prenatal health care in the first trimester.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("91fadc10-87a6-4cba-85e3-47fa620872f0"), Code="SecondTrimester", Description="Second trimester", Definition="The  child's mother began receiving prenatal health care in the second trimester.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("249b26ac-b82e-47ec-8966-0d0499c614f5"), Code="ThirdTrimester", Description="Third trimester", Definition="The  child's mother began receiving prenatal health care in the third trimester.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("02570374-0d71-4be6-adfa-1a8e9abe0081"), Code="NoPrenatalHealthCare", Description="No prenatal health care", Definition="The  child's mother did not receive prenatal health care.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7fda5d37-9bd6-487e-afb7-af7bdd62b5e8"), Code="FirstTrimester", Description="First trimester", Definition="The  child's mother began receiving prenatal health care in the first trimester.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1ffa3530-60f8-477d-8786-b2dd677f4905"), Code="SecondTrimester", Description="Second trimester", Definition="The  child's mother began receiving prenatal health care in the second trimester.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f44aec4f-d120-4f64-bed6-82e021f2fa8d"), Code="ThirdTrimester", Description="Third trimester", Definition="The  child's mother began receiving prenatal health care in the third trimester.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4126204f-e97a-47cd-bf6a-a3e8c78e26c9"), Code="NoPrenatalHealthCare", Description="No prenatal health care", Definition="The  child's mother did not receive prenatal health care.", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
     }

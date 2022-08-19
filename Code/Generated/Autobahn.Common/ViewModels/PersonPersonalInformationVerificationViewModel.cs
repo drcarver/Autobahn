@@ -114,10 +114,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPersonalInformationTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("507123c1-cca0-4720-b68b-639428cda232"), Code="Address", Description="Address", Definition="Address is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2e409eef-e5fa-40f3-ac7f-e0d1a9731199"), Code="Birthdate", Description="Birthdate", Definition="Birthdate is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("fb1e44d5-d17b-49f4-8c67-1574e4dfa9da"), Code="Name", Description="Name", Definition="Name is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("cc43f02f-1bde-4cbe-88f7-ac8cada5d120"), Code="TelephoneNumber", Description="Telephone Number", Definition="Telephone Number is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("26d140e3-b791-4a48-8df6-3e2b92f0d717"), Code="Address", Description="Address", Definition="Address is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("2dbd2c0a-20e0-440e-9028-65c28be95a87"), Code="Birthdate", Description="Birthdate", Definition="Birthdate is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bdc88de7-7bc0-4486-b267-47a7a1268f2d"), Code="Name", Description="Name", Definition="Name is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("cd02a962-1d2c-4061-a185-37bbae0e9613"), Code="TelephoneNumber", Description="Telephone Number", Definition="Telephone Number is the type of personal information verified through the Personal Information Verification evidence.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
     }

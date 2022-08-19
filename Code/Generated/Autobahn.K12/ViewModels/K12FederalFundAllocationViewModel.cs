@@ -133,8 +133,8 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefLeaFundsTransferTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("a95e0420-c111-4f6c-af9e-c95bc4f99a28"), Code="FromEligibleProgram", Description="From Eligible Program", Definition="The LEA  transferred funds from an eligible program.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("69864c19-13ee-4655-aa5f-22693e7b141d"), Code="ToEligibleProgram", Description="To Eligible Program", Definition="The LEA  transferred funds to an eligible program.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c8d0cced-91c6-4d6e-9733-210a863eec9a"), Code="FromEligibleProgram", Description="From Eligible Program", Definition="The LEA  transferred funds from an eligible program.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4f085a65-8cd0-4fa6-a62e-9917be0585a4"), Code="ToEligibleProgram", Description="To Eligible Program", Definition="The LEA  transferred funds to an eligible program.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -144,9 +144,9 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefReapAlternativeFundingStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("2630601e-364e-4339-825e-af97166ade8f"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("707b435a-9e37-4eaf-97af-4511bdef297d"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("15a5001b-5971-4a36-a49a-63ed41de900f"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("95637eff-5ad9-46ed-8d42-92c11641b77a"), Code="Yes", Description="Yes", Definition="", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e9a36ebe-e0a1-4e50-a76f-e37fd8ec4ebe"), Code="No", Description="No", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6ea55c88-ccf1-4e5e-ae52-537341c400d8"), Code="NA", Description="Not applicable", Definition="", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

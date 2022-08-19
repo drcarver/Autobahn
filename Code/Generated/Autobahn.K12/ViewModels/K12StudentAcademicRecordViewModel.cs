@@ -332,8 +332,8 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPreAndPostTestIndicatorList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("1d9eac84-b6ce-46a7-b9d9-32a3bdf185e2"), Code="PreAndPostTest", Description="The student took both a pre-test and post-test", Definition="The student took both a pre-test and post-test.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("5e6c9497-5a54-4b42-9d30-3a9cb75a3fb9"), Code="DidNotTakeBoth", Description="The student did not take both a pre-test and a post-test", Definition="The student did not take both a pre-test and a post-test.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("802f4e3a-0d35-4f24-aa3f-93d04c5291d1"), Code="PreAndPostTest", Description="The student took both a pre-test and post-test", Definition="The student took both a pre-test and post-test.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a9eb2b2a-dcb1-4807-81fa-198d28ce55d9"), Code="DidNotTakeBoth", Description="The student did not take both a pre-test and a post-test", Definition="The student did not take both a pre-test and a post-test.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -343,11 +343,11 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefProgressLevelList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ccd79d6e-cd27-4eeb-84ba-acefa67cbd15"), Code="NEGGRADE", Description="Negative grade level change", Definition="The students showed a negative grade level change from the pre- to post- test", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("754bcc73-f4ac-4fb5-9956-8a434d40cefb"), Code="NOCHANGE", Description="No change", Definition="The students showed no change from the pre- to post- test", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("79e2862c-9422-4858-878d-fb28c8bf6946"), Code="UPHALFGRADE", Description="Improvement of up to one half grade level", Definition="The students showed improvement of up to one half grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8bfa1080-390b-4ab9-a9eb-ded9848f8190"), Code="UPONEGRADE", Description="Improvement from one half grade level up to one full grade level", Definition="The students showed improvement from one half grade level up to one full grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ab18c39d-49ba-4ed4-9dea-18b6c73e1fc0"), Code="UPGTONE", Description="Improvement of more than one full grade level", Definition="The students showed improvement of more than one full grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("efd11d0f-3050-453f-8a85-17e8be9a1365"), Code="NEGGRADE", Description="Negative grade level change", Definition="The students showed a negative grade level change from the pre- to post- test", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("92e1f6a8-7b21-492c-8f3d-9da113088ef6"), Code="NOCHANGE", Description="No change", Definition="The students showed no change from the pre- to post- test", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("30be85ec-6233-4059-be70-68e4f998c0d2"), Code="UPHALFGRADE", Description="Improvement of up to one half grade level", Definition="The students showed improvement of up to one half grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("47057758-0d38-483a-ba9f-193c0a4b4c2d"), Code="UPONEGRADE", Description="Improvement from one half grade level up to one full grade level", Definition="The students showed improvement from one half grade level up to one full grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e73ff74e-5e5f-4b0d-8d84-97ab642165f3"), Code="UPGTONE", Description="Improvement of more than one full grade level", Definition="The students showed improvement of more than one full grade level from the pre- to post- test", SortOrder=Convert.ToDecimal("5.00") },
         };
         #endregion
 
@@ -357,8 +357,8 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefTechnologyLiteracyStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("910d257d-462b-40a0-9dde-d89d30efa4ed"), Code="TechnologyLiterate", Description="Technology literate", Definition="Technology literate is the technology literacy of person(s) in 8th grade.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c74d9041-9d12-4c74-9c62-2dc98ee4ff59"), Code="NotTechnologyLiterate", Description="Not technology literate", Definition="Not technology literate is the technology literacy of person(s) in 8th grade.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8a74b47b-1da3-4530-b3b4-ae25680f6f1f"), Code="TechnologyLiterate", Description="Technology literate", Definition="Technology literate is the technology literacy of person(s) in 8th grade.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("94ee1c06-25e6-4e62-8ac4-130ccbc6b123"), Code="NotTechnologyLiterate", Description="Not technology literate", Definition="Not technology literate is the technology literacy of person(s) in 8th grade.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
     }

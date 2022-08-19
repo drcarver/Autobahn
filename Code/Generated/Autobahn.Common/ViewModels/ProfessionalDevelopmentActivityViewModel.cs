@@ -338,10 +338,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDActivityApprovedPurposeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("49eeab10-5260-4535-8928-9afa4fd64377"), Code="QRIS", Description="Quality Rating and Improvement System", Definition="Quality Rating and Improvement System is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8a48981d-06a8-490e-aa30-32a42adcbdda"), Code="Licensing", Description="Licensing", Definition="Licensing is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("db153473-005c-4760-810d-2028ecc7ff75"), Code="StateStandard", Description="State standard", Definition="State standard is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e2b07457-67a0-426d-aa9b-a2fd8164d981"), Code="Other", Description="Other", Definition="The purposes for which the professional development activity was approved is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1f03caf3-a496-4c28-a703-4341fc889726"), Code="QRIS", Description="Quality Rating and Improvement System", Definition="Quality Rating and Improvement System is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6d81640b-d03e-4c56-8bce-8310dd805f4b"), Code="Licensing", Description="Licensing", Definition="Licensing is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("3dbf6862-0331-438a-be46-3b4a6fe103c8"), Code="StateStandard", Description="State standard", Definition="State standard is the purposes for which the professional development activity was approved.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("06218722-1c6d-4b0d-833c-a84744aaf72a"), Code="Other", Description="Other", Definition="The purposes for which the professional development activity was approved is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("8.00") },
         };
         #endregion
 
@@ -351,10 +351,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDActivityCreditTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("0e214b5b-125c-4ebe-b4db-6cd48c66fcaf"), Code="Hours", Description="Hours", Definition="Hours is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c91c1b59-dbc5-4233-be9b-00539d477844"), Code="CEUs", Description="Continuing Education Units", Definition="Continuing Education Units is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a6a78d08-e800-4b02-b676-c12715354c72"), Code="QuarterCredits", Description="Quarter credits", Definition="Quarter credits is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("03ca31df-3375-4d12-b587-7c484a0eb8f5"), Code="SemesterCredits", Description="Semester credits", Definition="Semester credits is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("76d93009-78fb-4adf-ab86-055f4882ec2d"), Code="Hours", Description="Hours", Definition="Hours is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e0278616-f5fa-48e8-8d64-d3e23c8b8464"), Code="CEUs", Description="Continuing Education Units", Definition="Continuing Education Units is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("97d3c9b6-3cb9-4726-a429-dc21dfea981d"), Code="QuarterCredits", Description="Quarter credits", Definition="Quarter credits is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0b9f5f37-30c9-4b24-a816-0edf4e39a826"), Code="SemesterCredits", Description="Semester credits", Definition="Semester credits is the type of professional development credit awarded.", SortOrder=Convert.ToDecimal("8.00") },
         };
         #endregion
 
@@ -364,9 +364,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDActivityLevelList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("063025e2-2226-4f0b-8544-fa9c52050ea4"), Code="Beginner", Description="Beginner", Definition="The level of expertise for the professional development activity is beginner.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7ff567dc-5ab0-4f4b-b8ef-19e50c4c064a"), Code="Intermediate", Description="Intermediate", Definition="The level of expertise for the professional development activity is intermediate.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2eabb513-ccd8-4b94-8afb-25c8394e1899"), Code="Advanced", Description="Advanced", Definition="The level of expertise for the professional development activity is advanced.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d4bd3d16-a394-4bd7-a23a-dd0cb219b636"), Code="Beginner", Description="Beginner", Definition="The level of expertise for the professional development activity is beginner.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("046ce15b-6dca-42ff-92ae-b9f7684e4d3a"), Code="Intermediate", Description="Intermediate", Definition="The level of expertise for the professional development activity is intermediate.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("cdba3b5f-509c-45ca-8250-9487350244be"), Code="Advanced", Description="Advanced", Definition="The level of expertise for the professional development activity is advanced.", SortOrder=Convert.ToDecimal("6.00") },
         };
         #endregion
 
@@ -376,16 +376,16 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDActivityTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("6efb189c-9f39-48c0-88df-8019e580daf9"), Code="CollegeCourse", Description="College Course", Definition="The type of professional development activity is a College Course.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("cdd7aef1-4a95-46b9-bd87-4bdc15c39d4a"), Code="Coaching", Description="Coaching", Definition="The type of professional development activity is Coaching.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("675e7373-fc34-4a22-8286-11a6fb3cbbad"), Code="Mentoring", Description="Mentoring", Definition="The type of professional development activity is Mentoring.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8112d78c-c4da-4593-96d5-88140523701e"), Code="Consultation", Description="Consultation", Definition="The type of professional development activity is Consultation.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("1ecbdbb3-bd8c-495b-a6e3-fe75a0089160"), Code="P2P", Description="Person-to-Person", Definition="The type of professional development activity is Person-to-Person.", SortOrder=Convert.ToDecimal("12.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e842fc52-c274-48da-8b35-2a492f999bc1"), Code="TechnicalAssistance", Description="Technical Assistance", Definition="The type of professional development activity is Technical Assistance.", SortOrder=Convert.ToDecimal("14.00") },
-            new ReferenceModelBase { Id=Guid.Parse("824618d1-82b8-456e-9169-19017af6d592"), Code="Advisement", Description="Advisement", Definition="The type of professional development activity is Advisement.", SortOrder=Convert.ToDecimal("16.00") },
-            new ReferenceModelBase { Id=Guid.Parse("227a7853-6d0f-4b31-8969-7bdd6630ac25"), Code="OneTimeWorkshopTraining", Description="One-time Workshop Training", Definition="The type of professional development activity is One-time Workshop Training.", SortOrder=Convert.ToDecimal("18.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0b3177cd-8a8e-4f4b-9842-b754644b314d"), Code="SeriesOfWorkshopsTraining", Description="Series of Workshops Training", Definition="The type of professional development activity is Series of Workshops Training.", SortOrder=Convert.ToDecimal("19.00") },
-            new ReferenceModelBase { Id=Guid.Parse("adeda421-74c3-4f61-9d7e-c5eb295dd9f3"), Code="Other", Description="Other", Definition="The type of professional development activity is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("20.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7b657018-3e82-4854-ad58-a2de008f970b"), Code="CollegeCourse", Description="College Course", Definition="The type of professional development activity is a College Course.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("436f772c-dfdf-4f2b-b806-3a638f4258e3"), Code="Coaching", Description="Coaching", Definition="The type of professional development activity is Coaching.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d9ce2ff9-44be-4f01-a3e2-1c407475d8a6"), Code="Mentoring", Description="Mentoring", Definition="The type of professional development activity is Mentoring.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("f0a4d990-45a9-41c7-ba5f-7342623634b2"), Code="Consultation", Description="Consultation", Definition="The type of professional development activity is Consultation.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5a54bc16-3994-47fe-aff0-aeb2e0fafdc0"), Code="P2P", Description="Person-to-Person", Definition="The type of professional development activity is Person-to-Person.", SortOrder=Convert.ToDecimal("12.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d6210b82-ac44-46b5-be34-02359963e346"), Code="TechnicalAssistance", Description="Technical Assistance", Definition="The type of professional development activity is Technical Assistance.", SortOrder=Convert.ToDecimal("14.00") },
+            new ReferenceModelBase { Id=Guid.Parse("39b97ef3-ff7c-435a-ad87-2e985dd4d6d8"), Code="Advisement", Description="Advisement", Definition="The type of professional development activity is Advisement.", SortOrder=Convert.ToDecimal("16.00") },
+            new ReferenceModelBase { Id=Guid.Parse("fd139228-7fef-463a-87f3-7c51a2bfa811"), Code="OneTimeWorkshopTraining", Description="One-time Workshop Training", Definition="The type of professional development activity is One-time Workshop Training.", SortOrder=Convert.ToDecimal("18.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b2c00856-ed1b-420c-b2ba-d640abda1ca9"), Code="SeriesOfWorkshopsTraining", Description="Series of Workshops Training", Definition="The type of professional development activity is Series of Workshops Training.", SortOrder=Convert.ToDecimal("19.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d7722edd-1b21-4c42-8578-0817d8446a4e"), Code="Other", Description="Other", Definition="The type of professional development activity is in a category not yet defined by CEDS.", SortOrder=Convert.ToDecimal("20.00") },
         };
         #endregion
 
@@ -395,8 +395,8 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDAudienceTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("3d2a3517-d061-44b6-a229-4f5c189ede6f"), Code="Individual", Description="Individual", Definition="The professional development activity is intended for delivery to an individual.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c9ea4c34-fcec-49f2-91ee-7bdcb920b666"), Code="Group", Description="Group", Definition="The professional development activity is intended for delivery to a group.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c253a1c2-c4ba-4a53-b43d-466d5851be84"), Code="Individual", Description="Individual", Definition="The professional development activity is intended for delivery to an individual.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("3783917f-6cc8-4c62-b4b6-3f70ca9b8af0"), Code="Group", Description="Group", Definition="The professional development activity is intended for delivery to a group.", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
 
@@ -406,17 +406,17 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefProfessionalDevelopmentFinancialSupportList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ed52923a-58dc-4735-a3e6-c97c5ee5c51c"), Code="01", Description="One time non-credit", Definition="One time financial assistance received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ec64edb0-b3c3-47af-9c8f-0af24a681cf7"), Code="02", Description="One time credit paid", Definition="One time credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("6c3efefd-ce01-4f4b-afdf-d10f1ca3b57b"), Code="03", Description="On-going non-credit paid", Definition="On-going non-credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0e4e133a-e40a-46b8-a338-62a2c53c6858"), Code="04", Description="On-going credit paid", Definition="On-going credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7d30132f-95a3-4acd-a830-075b3c4f065d"), Code="05", Description="Salary bonus", Definition="Salary bonus received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("1ccf5d39-4556-4df6-a76c-e2268a231a51"), Code="06", Description="Wage enhancement", Definition="Wage enhancement received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a2a8492c-b1e7-4274-aea4-8cc3fc08d31b"), Code="07", Description="Tuition reimbursement", Definition="Tuition reimbursement received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("7.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d2e34532-011a-4dae-8feb-4d7f6e4f279a"), Code="08", Description="Travel child care", Definition="Travel child care received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e09d38a0-142e-4595-b20f-6dce8a6c9ad1"), Code="09", Description="Release time", Definition="Release time received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("9.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ec94155d-d7c3-4661-9c47-96e6b910b2d8"), Code="10", Description="Scholarship", Definition="Scholarship received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("cc0282b6-ef9b-47cc-9cf5-de30dd8c5d8c"), Code="11", Description="Loan", Definition="Loan received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("11.00") },
+            new ReferenceModelBase { Id=Guid.Parse("969be26d-3571-40c9-a785-ad7a9ff5ed97"), Code="01", Description="One time non-credit", Definition="One time financial assistance received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6f535842-ddea-4552-a03a-90963bc46d95"), Code="02", Description="One time credit paid", Definition="One time credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("27a4b191-7aab-4c67-b947-73a91a637bab"), Code="03", Description="On-going non-credit paid", Definition="On-going non-credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("918989ca-d0a7-4b73-a378-85f595fdd515"), Code="04", Description="On-going credit paid", Definition="On-going credit paid in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5eea0935-7c36-42c1-bc55-43bf288d145f"), Code="05", Description="Salary bonus", Definition="Salary bonus received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4b4c4fa5-3910-4979-8851-4e94c6071981"), Code="06", Description="Wage enhancement", Definition="Wage enhancement received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1cc9f0a4-a2fc-47a4-bc43-0227c9014cd8"), Code="07", Description="Tuition reimbursement", Definition="Tuition reimbursement received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("55fd0eb6-2b81-49ba-a234-a84ca7b2b24a"), Code="08", Description="Travel child care", Definition="Travel child care received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8f6bb3ce-f802-4e5b-b0a3-c4b3db59feb1"), Code="09", Description="Release time", Definition="Release time received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("9.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d00daff9-bd9f-485c-8534-6fec9c9bce01"), Code="10", Description="Scholarship", Definition="Scholarship received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("12ecda2f-3b61-405c-b2b8-1a364b7966bb"), Code="11", Description="Loan", Definition="Loan received in support of the non-credit professional development activity.", SortOrder=Convert.ToDecimal("11.00") },
         };
         #endregion
     }

@@ -80,11 +80,11 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefRaceList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("4ff36668-8a62-49c3-a136-d3873a3b6faa"), Code="RaceAmericanIndianorAlaskaNative", Description="American Indian or Alaska Native", Definition="", SortOrder=Convert.ToDecimal("") },
-            new ReferenceModelBase { Id=Guid.Parse("e52388c7-301d-41d0-8f23-5995b870a893"), Code="RaceAsian", Description="Asian", Definition="", SortOrder=Convert.ToDecimal("") },
-            new ReferenceModelBase { Id=Guid.Parse("bd02dd76-89e5-4f59-80b5-834e4ed80766"), Code="RaceBlackorAfricanAmerican", Description="Black or African American", Definition="", SortOrder=Convert.ToDecimal("") },
-            new ReferenceModelBase { Id=Guid.Parse("4ecb49db-3886-413c-a7f2-e10cbe721ca9"), Code="RaceNativeHawaiianorOtherPacificIslander", Description="Native Hawaiian or Other Pacific Islander", Definition="", SortOrder=Convert.ToDecimal("") },
-            new ReferenceModelBase { Id=Guid.Parse("e1220d83-70a1-40da-accc-e0e53c89103c"), Code="RaceWhite", Description="White", Definition="", SortOrder=Convert.ToDecimal("") },
+            new ReferenceModelBase { Id=Guid.Parse("917a529f-d0a6-42b6-80a8-ae06ff2fe7b4"), Code="RaceAmericanIndianorAlaskaNative", Description="American Indian or Alaska Native", Definition="", SortOrder=Convert.ToDecimal("") },
+            new ReferenceModelBase { Id=Guid.Parse("29cb3007-03a3-4595-ab1f-a7dbf9a74a73"), Code="RaceAsian", Description="Asian", Definition="", SortOrder=Convert.ToDecimal("") },
+            new ReferenceModelBase { Id=Guid.Parse("6c1a14f0-c967-4940-b572-ae0e14c7afdb"), Code="RaceBlackorAfricanAmerican", Description="Black or African American", Definition="", SortOrder=Convert.ToDecimal("") },
+            new ReferenceModelBase { Id=Guid.Parse("2c8b9a06-d2ee-4a2e-9dbf-7b9116595552"), Code="RaceNativeHawaiianorOtherPacificIslander", Description="Native Hawaiian or Other Pacific Islander", Definition="", SortOrder=Convert.ToDecimal("") },
+            new ReferenceModelBase { Id=Guid.Parse("469341ff-93e0-4d8d-a6e1-54bf0f4b35b6"), Code="RaceWhite", Description="White", Definition="", SortOrder=Convert.ToDecimal("") },
         };
         #endregion
     }

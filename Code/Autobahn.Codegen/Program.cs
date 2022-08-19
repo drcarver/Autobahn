@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
+using System.Security.Principal;
 using Autobahn.Codegen.Models;
 using Autobahn.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Autobahn.Codegen
 {
@@ -306,13 +308,59 @@ namespace Autobahn.Codegen
             var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
             var autobahnElements = GetAutobahnElements();
 
+            //SeedOrganization();
+            //SeedRefRecordStatusType();
+
+            var autobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\MarcRelator.csv");
+//            csv.WriteReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv", autobahnMarc, false, "|");
+            var marc = autobahnTables.Where(t => t.TableName == "RefMarcRelator");
+            var RefAutobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv").ToList();
             var domainReferenceList = BuildTableListByProperty(autobahnTables);
 
             var one = domainReferenceList.Where(t => t.Value.Count == 1).ToList();
             var two = domainReferenceList.Where(t => t.Value.Count == 2).ToList();
             var many = domainReferenceList.Where(t => t.Value.Count > 2).ToList();
+            var manymore = domainReferenceList.Where(t => t.Key.StartsWith("RefM")).ToList();
 
             MauiModule.GenerateModule(autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList(), domainReferenceList);
+        }
+
+        private static void SeedRefRecordStatusType()
+        {
+            var csv = new CSVServices();
+            using (var ctx = new AutobahnCommonContext())
+            {
+                var reftype = csv.ReadReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefRecordStatusType.csv");
+                foreach (var item in reftype)
+                {
+                    ctx.RefRecordStatusType.Add(new RefRecordStatusType
+                    {
+                        Id = item.Id, // ?? Guid.NewGuid(),
+                        Code = item.Code,
+                        Description = item.Description,
+                        Definition = item.Definition,
+                        SortOrder = item.SortOrder
+                    });
+                }
+
+                ctx.SaveChanges();
+            }
+        }
+
+        private static void SeedOrganization()
+        {
+            using (var ctx = new AutobahnCommonContext())
+            {
+                // Autobahn
+                var Organization = new Organization { Id = Guid.Parse("22B1FD25-AE5C-4B03-B463-284D0C1B49F5") };
+                ctx.Organization.Add(Organization);
+
+                // Project GutenBurg
+                Organization = new Organization { Id = Guid.Parse("BC734F30-EADD-4456-9B34-8583ABC17CD0") };
+                ctx.Organization.Add(Organization);
+
+                ctx.SaveChanges();
+            }
         }
 
         private static Dictionary<string, List<AutobahnTable>> BuildTableListByProperty(List<AutobahnTable> tables)
@@ -321,6 +369,10 @@ namespace Autobahn.Codegen
             foreach (var table in tables.Where(t => t.ColumnName.StartsWith("Ref") && t.ColumnName.EndsWith("Id")))
             {
                 var columnKey = table.ColumnName.Replace("Id", string.Empty);
+                if (columnKey.StartsWith("RefMarc"))
+                {
+
+                }
                 if (domainFiles.ContainsKey(columnKey))
                 {
                     var exists = domainFiles.Values.Any(v => v.Any(t => t.TableName == table.TableName));

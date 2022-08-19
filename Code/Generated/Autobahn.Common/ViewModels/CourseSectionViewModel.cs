@@ -251,9 +251,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefSingleSexClassStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("8454c0c0-b6ab-41fe-8376-4d2d844ddd0e"), Code="MaleOnly", Description="Male-only", Definition="Male-only is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2e36e9f4-215f-4558-933e-55eba94250bc"), Code="FemaleOnly", Description="Female-only", Definition="Female-only is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f946e35f-ddee-4f99-901e-05d42e2cfbce"), Code="NotSingleSex", Description="Not a single-sex class", Definition="Not a single-sex class is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("08f42340-eabc-4a5f-81f6-a712301321cf"), Code="MaleOnly", Description="Male-only", Definition="Male-only is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0e30fbae-96c2-4017-907e-f460ed65656c"), Code="FemaleOnly", Description="Female-only", Definition="Female-only is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c07fd848-7440-4af2-91a1-ca865a44103d"), Code="NotSingleSex", Description="Not a single-sex class", Definition="Not a single-sex class is specified for a section in a co-educational school where only male or only female students are permitted to take the course.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

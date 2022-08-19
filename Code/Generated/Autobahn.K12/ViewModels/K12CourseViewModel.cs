@@ -366,9 +366,9 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefCourseGpaApplicabilityList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("88c6695a-600d-4127-9bc5-6ea41461c150"), Code="Applicable", Description="Applicable in GPA", Definition="The course being described is included in the computation of the student's Grade Point Average (GPA).", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("45a091bb-6b0b-4e90-a182-38cb54b978b1"), Code="NotApplicable", Description="Not Applicable in GPA", Definition="The course being described is not included in the computation of the student's Grade Point Average (GPA).", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2b76c7ea-13f1-400e-b2df-ffc80fcffd15"), Code="Weighted", Description="Weighted in GPA", Definition="The course being described is weighted in the computation of the student's Grade Point Average (GPA)", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a579c0ad-c4c9-4c12-8ff8-b2ef77421dc3"), Code="Applicable", Description="Applicable in GPA", Definition="The course being described is included in the computation of the student's Grade Point Average (GPA).", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c47dc3a5-05c7-4c71-9284-ecc2f9ab452f"), Code="NotApplicable", Description="Not Applicable in GPA", Definition="The course being described is not included in the computation of the student's Grade Point Average (GPA).", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6a717114-6a55-4b28-9948-050c9fde319e"), Code="Weighted", Description="Weighted in GPA", Definition="The course being described is weighted in the computation of the student's Grade Point Average (GPA)", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
 
@@ -378,10 +378,10 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefK12EndOfCourseRequirementList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("0f849b2b-2feb-49c1-9cd8-9ed2fbe7bfae"), Code="LEAOnly", Description="LEA only", Definition="This course has an end of course examination required by the LEA only.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("da36ffd3-0b31-4b81-a84b-817c1a649cb6"), Code="SEAOnly", Description="SEA only", Definition="This course has an end of course examination required by the SEA only.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("96da4097-5578-4ffd-8399-1fd109a49208"), Code="Both", Description="LEA and SEA", Definition="This course has an end of course examination required by the LEA and SEA.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("2a078a3d-8189-4a32-b36e-e93d595948fd"), Code="Neither", Description="Neither LEA or SEA", Definition="This course has an end of course examination required by neither the LEA or SEA.", SortOrder=Convert.ToDecimal("7.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7458a5cd-d897-4ed4-badd-2fdd5128d57c"), Code="LEAOnly", Description="LEA only", Definition="This course has an end of course examination required by the LEA only.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("11915b8a-9384-4447-a4c2-8b23c7b74219"), Code="SEAOnly", Description="SEA only", Definition="This course has an end of course examination required by the SEA only.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("105a977f-fa8d-4ded-a845-e7e5a9160e4b"), Code="Both", Description="LEA and SEA", Definition="This course has an end of course examination required by the LEA and SEA.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6d528ad1-a2e5-4f16-809b-762a064ccebd"), Code="Neither", Description="Neither LEA or SEA", Definition="This course has an end of course examination required by neither the LEA or SEA.", SortOrder=Convert.ToDecimal("7.00") },
         };
         #endregion
 
@@ -391,12 +391,12 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefSCEDCourseLevelList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("c0266baa-8480-49ff-8fa3-5a2bc58a2578"), Code="B", Description="Basic or remedial", Definition="The course's level of rigor is basic or remedial.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("3acf0ccd-cfa3-4069-811f-9cb3ab34c4c8"), Code="E", Description="Enriched or advanced", Definition="The course's level of rigor is enriched or advanced.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a24b890f-fa2b-405f-8416-6f7762b43659"), Code="G", Description="General or regular", Definition="The course's level of rigor is general or regular.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e9c0d0bb-b810-4a73-b4ae-c3d5a191c120"), Code="H", Description="Honors", Definition="The course's level of rigor is honors.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("d3f33aac-23f1-4502-8055-ff9a0a7e122b"), Code="C", Description="College", Definition="The course's level of rigor is college.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f46b7603-3e79-4e45-b5d3-1d5721fa9f97"), Code="X", Description="No specified level of rigor", Definition="The course has no specified level of rigor.", SortOrder=Convert.ToDecimal("12.00") },
+            new ReferenceModelBase { Id=Guid.Parse("2416c929-31b1-43b4-a186-63701c1020ca"), Code="B", Description="Basic or remedial", Definition="The course's level of rigor is basic or remedial.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("82bb7cf4-7dce-4f49-ae02-32db511d5329"), Code="E", Description="Enriched or advanced", Definition="The course's level of rigor is enriched or advanced.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c7b0e632-825e-4096-bb32-659e8c4b34fb"), Code="G", Description="General or regular", Definition="The course's level of rigor is general or regular.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a91f2810-57f3-44ad-9545-5f924e417de8"), Code="H", Description="Honors", Definition="The course's level of rigor is honors.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("83208056-8f32-42ae-85e3-633a904feb3e"), Code="C", Description="College", Definition="The course's level of rigor is college.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c4c25c8a-8963-4c39-a66d-d39990aa9110"), Code="X", Description="No specified level of rigor", Definition="The course has no specified level of rigor.", SortOrder=Convert.ToDecimal("12.00") },
         };
         #endregion
 
@@ -406,18 +406,18 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefWorkbasedLearningOpportunityTypeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("3988e378-e65b-4e29-b0d5-a18de8123d8c"), Code="Apprenticeship", Description="Apprenticeship", Definition="Apprenticeship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("9b8ce1e9-8f41-46b6-bfce-3a1fb75f0703"), Code="ClinicalWork", Description="Clinical work experience", Definition="Clinical work experience is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("caf4166a-dc1f-4bd8-9afe-2f672d91edab"), Code="CooperativeEducation", Description="Cooperative education", Definition="Cooperative education is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("5.00") },
-            new ReferenceModelBase { Id=Guid.Parse("27a8ea7e-6af0-440a-b237-60febd5c3e2f"), Code="JobShadowing", Description="Job shadowing", Definition="Job shadowing is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("c91c292d-8a14-4b3d-998e-e452dd64974c"), Code="Mentorship", Description="Mentorship", Definition="Mentorship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("5068f3eb-77d2-49be-b213-42b39c283230"), Code="NonPaidInternship", Description="Non-Paid Internship", Definition="Non-Paid Internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("9.00") },
-            new ReferenceModelBase { Id=Guid.Parse("69fac516-ff59-43ec-856c-563d15612f9b"), Code="OnTheJob", Description="On-the-Job", Definition="On-the-Job is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("69864bfc-4b13-4b8e-ba72-5449d6141be8"), Code="PaidInternship", Description="Paid internship", Definition="Paid internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("11.00") },
-            new ReferenceModelBase { Id=Guid.Parse("dca1f664-8f40-45e2-9292-2bd215a0082d"), Code="ServiceLearning", Description="Service learning", Definition="Service learning is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("16.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f480d61e-7c11-45ff-a1b4-dadb0d24245b"), Code="SupervisedAgricultural", Description="Supervised agricultural experience", Definition="Supervised agricultural experience is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("18.00") },
-            new ReferenceModelBase { Id=Guid.Parse("aa768465-1f7e-4d5f-b426-bbdae1779bdb"), Code="UnpaidInternship", Description="Unpaid internship", Definition="Unpaid internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("30.00") },
-            new ReferenceModelBase { Id=Guid.Parse("6250c946-82e2-483a-934c-09e4b4ce4975"), Code="Other", Description="Other", Definition="The type of work-based learning opportunity the student participated in is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("995f8141-50c4-4257-ba9b-0cd46e021100"), Code="Apprenticeship", Description="Apprenticeship", Definition="Apprenticeship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("29600457-b19d-4bbd-b268-11437b78744e"), Code="ClinicalWork", Description="Clinical work experience", Definition="Clinical work experience is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5178e797-edbc-4f79-b358-688c565a84ef"), Code="CooperativeEducation", Description="Cooperative education", Definition="Cooperative education is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("5.00") },
+            new ReferenceModelBase { Id=Guid.Parse("112a6de0-8ee8-47c7-8c40-a1a6f1b81868"), Code="JobShadowing", Description="Job shadowing", Definition="Job shadowing is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("244f26c8-bdb8-46a9-aff4-47c8707faae7"), Code="Mentorship", Description="Mentorship", Definition="Mentorship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("bafa480f-f4f4-4ea6-af86-01edd35c1063"), Code="NonPaidInternship", Description="Non-Paid Internship", Definition="Non-Paid Internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("9.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1c7daf32-9d94-4243-ad06-a31ceb8667ed"), Code="OnTheJob", Description="On-the-Job", Definition="On-the-Job is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("42bf8e0b-e6ba-4c2d-aed4-f7a13369f24f"), Code="PaidInternship", Description="Paid internship", Definition="Paid internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("11.00") },
+            new ReferenceModelBase { Id=Guid.Parse("66e8fa52-b8e0-4137-8fe5-ba2b07944445"), Code="ServiceLearning", Description="Service learning", Definition="Service learning is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("16.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4140fd52-2f6a-42f0-9e64-63952fe80d1f"), Code="SupervisedAgricultural", Description="Supervised agricultural experience", Definition="Supervised agricultural experience is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("18.00") },
+            new ReferenceModelBase { Id=Guid.Parse("2bf5bf29-f3fd-4a97-8333-bf11b1f4cca9"), Code="UnpaidInternship", Description="Unpaid internship", Definition="Unpaid internship is the type of work-based learning opportunity the student participated in.", SortOrder=Convert.ToDecimal("30.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a56c4c73-bb35-4990-be94-432042d54ab6"), Code="Other", Description="Other", Definition="The type of work-based learning opportunity the student participated in is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
     }

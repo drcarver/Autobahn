@@ -345,10 +345,10 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDDeliveryMethodList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("304fb5f2-7449-4109-a60b-dbc91cdcc87f"), Code="Onsite", Description="Onsite", Definition="", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e46ef58f-f744-4780-a402-aa866025f113"), Code="Virtual", Description="Virtual classroom", Definition="", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7b6f7b6a-bc6f-4ccd-b67f-b443caa68892"), Code="Off-Site", Description="Off-site classroom", Definition="", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("7dd10033-c644-4aed-b2f8-a504fb4ef7e1"), Code="Conference", Description="Conference", Definition="", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("88196db0-f565-4f86-9d06-8535942d7e39"), Code="Onsite", Description="Onsite", Definition="", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9f9404df-afa8-4472-821a-a68808af3222"), Code="Virtual", Description="Virtual classroom", Definition="", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("0e01daa1-9a7f-488e-aaac-27b493baa86f"), Code="Off-Site", Description="Off-site classroom", Definition="", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("37397885-f4ea-4516-bf2e-05f3b1b53337"), Code="Conference", Description="Conference", Definition="", SortOrder=Convert.ToDecimal("8.00") },
         };
         #endregion
 
@@ -358,16 +358,16 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDInstructionalDeliveryModeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("6d1480fd-4f31-4260-b807-19c239d6b8d4"), Code="Broadcast", Description="Broadcast", Definition="The primary setting or medium of the professional development delivery is Broadcast.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f5d06a8e-edf7-414c-80de-115c05ed6e72"), Code="Correspondence", Description="Correspondence", Definition="The primary setting or medium of the professional development delivery is Correspondence.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a3e3d706-8d8b-4e40-8fb8-308637531bed"), Code="EarlyCollege", Description="Early College", Definition="The primary setting or medium of the professional development delivery is Early College.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a5c1a25d-181f-4408-84ea-39bc1a40415e"), Code="AudioVideo", Description="Interactive Audio/Video", Definition="The primary setting or medium of the professional development delivery is Interactive Audio/Video.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("b9ec8fd2-8e55-4f6c-a84c-7bb2cb9ca700"), Code="Conference", Description="Conference", Definition="The primary setting or medium of the professional development delivery is Conference.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("081fb3ee-0b6a-4be4-810b-cd3ab588e5da"), Code="Online", Description="Online", Definition="The primary setting or medium of the professional development delivery is Online.", SortOrder=Convert.ToDecimal("12.00") },
-            new ReferenceModelBase { Id=Guid.Parse("568edcc4-4e91-4511-8d96-0eb10902868a"), Code="IndependentStudy", Description="Independent Study", Definition="The primary setting or medium of the professional development delivery is Independent Study.", SortOrder=Convert.ToDecimal("14.00") },
-            new ReferenceModelBase { Id=Guid.Parse("73c6bc55-2f9e-4229-ac4e-22d0e74b1169"), Code="FaceToFace", Description="Face To Face", Definition="The primary setting or medium of the professional development delivery is Face To Face.", SortOrder=Convert.ToDecimal("16.00") },
-            new ReferenceModelBase { Id=Guid.Parse("e86ab815-2071-4ed4-8145-bc0dbcc3c9ce"), Code="BlendedLearning", Description="Blended Learning", Definition="The primary setting or medium of the professional development delivery is Blended Learning.", SortOrder=Convert.ToDecimal("18.00") },
-            new ReferenceModelBase { Id=Guid.Parse("bfa2fd10-5e8a-414c-b4d8-6e17b37f2e7a"), Code="Other", Description="Other", Definition="The primary setting or medium of the professional development delivery is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("20.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ea691a62-3e61-48a1-8295-b21fa372f30b"), Code="Broadcast", Description="Broadcast", Definition="The primary setting or medium of the professional development delivery is Broadcast.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("ce322e91-cb4f-4c4e-9478-23ad0ba3275e"), Code="Correspondence", Description="Correspondence", Definition="The primary setting or medium of the professional development delivery is Correspondence.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c8ca2b59-1ca7-4bff-99bc-517896bbf5bd"), Code="EarlyCollege", Description="Early College", Definition="The primary setting or medium of the professional development delivery is Early College.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("8c8894a7-57da-4f3f-a2a6-8b6d4dc6a5c8"), Code="AudioVideo", Description="Interactive Audio/Video", Definition="The primary setting or medium of the professional development delivery is Interactive Audio/Video.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("4e6de7d0-d309-4120-b8eb-c6b0d8b53d53"), Code="Conference", Description="Conference", Definition="The primary setting or medium of the professional development delivery is Conference.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("122f069d-06e0-4a48-9215-4f03462e8fe5"), Code="Online", Description="Online", Definition="The primary setting or medium of the professional development delivery is Online.", SortOrder=Convert.ToDecimal("12.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e6c95ae8-d56a-4de4-8bdc-2dbf561b00da"), Code="IndependentStudy", Description="Independent Study", Definition="The primary setting or medium of the professional development delivery is Independent Study.", SortOrder=Convert.ToDecimal("14.00") },
+            new ReferenceModelBase { Id=Guid.Parse("151df5b5-506d-4237-a5b3-b009ae93e16a"), Code="FaceToFace", Description="Face To Face", Definition="The primary setting or medium of the professional development delivery is Face To Face.", SortOrder=Convert.ToDecimal("16.00") },
+            new ReferenceModelBase { Id=Guid.Parse("02b3ee9a-4d95-4e69-9227-d3f19c5e755e"), Code="BlendedLearning", Description="Blended Learning", Definition="The primary setting or medium of the professional development delivery is Blended Learning.", SortOrder=Convert.ToDecimal("18.00") },
+            new ReferenceModelBase { Id=Guid.Parse("acac133b-af09-4062-a582-9434a7f8fb49"), Code="Other", Description="Other", Definition="The primary setting or medium of the professional development delivery is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("20.00") },
         };
         #endregion
 
@@ -377,9 +377,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefPDSessionStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("3b782f5b-014c-4597-ad00-839caeb22694"), Code="Registering", Description="Registering", Definition="The person is registering for the professional development session.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("a9bb7c48-1432-47e3-903f-22b8191ceb58"), Code="Completed", Description="Completed", Definition="The person completed the professional development session.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("53f1a59a-e9ac-4be0-80b7-9258e43feaf3"), Code="Cancelled", Description="Cancelled", Definition="The professional development session was cancelled.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("1b9da9c5-a524-4005-a80e-05dd30ab7409"), Code="Registering", Description="Registering", Definition="The person is registering for the professional development session.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c6641a24-5482-47da-89a5-80cfe399a0df"), Code="Completed", Description="Completed", Definition="The person completed the professional development session.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("29367ec9-7e60-4790-8b87-fb53c98995b4"), Code="Cancelled", Description="Cancelled", Definition="The professional development session was cancelled.", SortOrder=Convert.ToDecimal("6.00") },
         };
         #endregion
     }

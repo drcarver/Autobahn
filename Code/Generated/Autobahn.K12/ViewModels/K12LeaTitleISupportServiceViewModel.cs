@@ -74,9 +74,9 @@ namespace Autobahn.K12.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefK12LeaTitleISupportServiceList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("439aabc3-ebf5-4641-8a8a-283b2e9d7bbf"), Code="HealthDentalEyeCare", Description="Health, Dental and Eye Care", Definition="Health, Dental and Eye Care is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("816824c0-bd66-4dbc-929f-fca241daa0ea"), Code="GuidanceAdvocacy", Description="Supporting Guidance/Advocacy", Definition="Supporting Guidance/Advocacy is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("35bdb483-0fa8-4b7e-9aca-9fe8ab08b4bf"), Code="Other", Description="Other", Definition="Any other type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("d428a51e-1141-438a-9973-bbdada990573"), Code="HealthDentalEyeCare", Description="Health, Dental and Eye Care", Definition="Health, Dental and Eye Care is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b34f7a11-bbf7-4c80-9773-e22e49f7d683"), Code="GuidanceAdvocacy", Description="Supporting Guidance/Advocacy", Definition="Supporting Guidance/Advocacy is the type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b34ab642-8aec-452e-a413-9c1edb5705ec"), Code="Other", Description="Other", Definition="Any other type of support services provided to students in Title I programs.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

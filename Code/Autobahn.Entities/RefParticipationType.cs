@@ -16,7 +16,7 @@ namespace Autobahn.Entities
 
         public int RefParticipationTypeId { get; set; }
 
-        public int? OrganizationId { get; set; }
+        public Guid? OrganizationId { get; set; }
 
         [Required]
         [StringLength(150)]

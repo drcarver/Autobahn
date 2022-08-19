@@ -7,14 +7,14 @@ namespace Autobahn.Entities
     [Table("OrganizationIdentifier")]
     public partial class OrganizationIdentifier
     {
-        public int OrganizationIdentifierId { get; set; }
+        public Guid OrganizationIdentifierId { get; set; }
 
         [StringLength(40)]
         public string Identifier { get; set; }
 
         public int? RefOrganizationIdentificationSystemId { get; set; }
 
-        public int OrganizationId { get; set; }
+        public Guid OrganizationId { get; set; }
 
         public int? RefOrganizationIdentifierTypeId { get; set; }
 
@@ -22,9 +22,9 @@ namespace Autobahn.Entities
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 

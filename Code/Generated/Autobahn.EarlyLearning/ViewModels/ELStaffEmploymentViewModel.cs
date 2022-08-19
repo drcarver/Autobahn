@@ -218,10 +218,10 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefWageCollectionMethodList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ce8f797c-fd39-4559-82ce-6ad943028186"), Code="01", Description="Collected as an hourly wage amount", Definition="The wage data for an employment record was collected as an hourly wage amount.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8d14f205-dba1-4c49-b8b1-362593d97f1a"), Code="02", Description="Collected as salary and converted to an hourly wage amount", Definition="The wage data for an employment record was collected as salary and converted to an hourly wage amount.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f4b2db3b-a27d-4f43-b6f0-c48260e61564"), Code="03", Description="Collected in both methods but method not tracked on an individual record", Definition="The wage data for an employment record was collected in both methods but method not tracked on an individual record.", SortOrder=Convert.ToDecimal("3.00") },
-            new ReferenceModelBase { Id=Guid.Parse("3f5338de-92ff-49f2-9de1-658278b9ac81"), Code="99", Description="Wage data not present", Definition="Wage data not present in the employment record.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a9a69643-e7c9-4525-8170-39019168f425"), Code="01", Description="Collected as an hourly wage amount", Definition="The wage data for an employment record was collected as an hourly wage amount.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("fa5a9f95-bbef-4d86-8f41-5d4c70f96ffa"), Code="02", Description="Collected as salary and converted to an hourly wage amount", Definition="The wage data for an employment record was collected as salary and converted to an hourly wage amount.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("90cad34a-3cc0-4efe-84e7-f9ef9e3cb7c3"), Code="03", Description="Collected in both methods but method not tracked on an individual record", Definition="The wage data for an employment record was collected in both methods but method not tracked on an individual record.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("450fba43-87cc-47d1-837f-c252c78db033"), Code="99", Description="Wage data not present", Definition="Wage data not present in the employment record.", SortOrder=Convert.ToDecimal("4.00") },
         };
         #endregion
 
@@ -231,9 +231,9 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefWageVerificationList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ec972535-0f10-4c04-8c97-c3507a8efd12"), Code="01", Description="Verified", Definition="The wage information has been verified.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("0a2ac867-1189-4e40-b998-0923f7dc8d3f"), Code="02", Description="Not verified", Definition="The wage information has NOT been verified.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("35f69da6-98d7-4de9-98dc-ff93b10625f0"), Code="03", Description="Wage data not present", Definition="Wage data not present.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("3dc8bef2-5e93-47b5-88f5-20285b37e988"), Code="01", Description="Verified", Definition="The wage information has been verified.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("096b5cdc-72f2-4a0c-8d80-7c7c5dd1e123"), Code="02", Description="Not verified", Definition="The wage information has NOT been verified.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("64782cfc-d332-440a-9612-df097d54064b"), Code="03", Description="Wage data not present", Definition="Wage data not present.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

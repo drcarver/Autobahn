@@ -74,9 +74,9 @@ namespace Autobahn.EarlyLearning.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefProfitStatusList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("b441f364-598e-401d-a999-62619f29e59c"), Code="ForProfit", Description="For-profit facility", Definition="The facility is for-profit.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("f8793b0d-e049-4c52-9b97-de0e4ead954f"), Code="NonProfit", Description="Non-profit facility", Definition="The facility is non-profit.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("af940881-00b7-4502-a4ad-3310fdb17232"), Code="GovernmentRun", Description="Government run facility", Definition="The facility is government run.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("5b8d44ca-6561-4857-a912-e829c8f5cf2f"), Code="ForProfit", Description="For-profit facility", Definition="The facility is for-profit.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("dc9857e6-b9d5-424e-96ac-1200f777c819"), Code="NonProfit", Description="Non-profit facility", Definition="The facility is non-profit.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c269eb3f-01f0-44d1-81a8-fec94498a293"), Code="GovernmentRun", Description="Government run facility", Definition="The facility is government run.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

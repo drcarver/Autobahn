@@ -151,12 +151,12 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefReferralOutcomeList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("bdbf0cbb-a6d2-4e55-b171-8daae813a3ea"), Code="WaitingList", Description="Waiting list", Definition="The student is on a waiting list to receive services based on the referral.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("10e24a9b-0019-47f3-8479-fbf409666ed6"), Code="ParentDeclined", Description="Parent declined service", Definition="Parent declined service offered based on the referral.", SortOrder=Convert.ToDecimal("4.00") },
-            new ReferenceModelBase { Id=Guid.Parse("81778bbf-f610-4413-bae4-faafeb003236"), Code="Enrolled", Description="Enrolled", Definition="The student is enrolled based on the referral.", SortOrder=Convert.ToDecimal("6.00") },
-            new ReferenceModelBase { Id=Guid.Parse("34f0fbd0-0388-42f4-afc4-9554fd2d432b"), Code="Unreachable", Description="Unable to contact parent/family/guardian", Definition="The service provider has been unable to contact parent/family/guardian.", SortOrder=Convert.ToDecimal("8.00") },
-            new ReferenceModelBase { Id=Guid.Parse("b30988cf-29b9-4297-bb37-be6baa0034d7"), Code="NotEligible", Description="Not eligible", Definition="The student is not eligible to receive services related to the referral.", SortOrder=Convert.ToDecimal("10.00") },
-            new ReferenceModelBase { Id=Guid.Parse("8dfe2634-7c4a-4b4c-80e9-53bad209d005"), Code="Other", Description="Other", Definition="The outcome of the referral is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
+            new ReferenceModelBase { Id=Guid.Parse("a6a5a314-75e7-4d28-a325-4aaaaaaffbf3"), Code="WaitingList", Description="Waiting list", Definition="The student is on a waiting list to receive services based on the referral.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("38b0578d-6e3a-46b1-a89d-d7bf22745697"), Code="ParentDeclined", Description="Parent declined service", Definition="Parent declined service offered based on the referral.", SortOrder=Convert.ToDecimal("4.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c656ab9d-4c05-416f-b931-6050c7395009"), Code="Enrolled", Description="Enrolled", Definition="The student is enrolled based on the referral.", SortOrder=Convert.ToDecimal("6.00") },
+            new ReferenceModelBase { Id=Guid.Parse("47450612-b8fd-4c64-b83b-5080e2703989"), Code="Unreachable", Description="Unable to contact parent/family/guardian", Definition="The service provider has been unable to contact parent/family/guardian.", SortOrder=Convert.ToDecimal("8.00") },
+            new ReferenceModelBase { Id=Guid.Parse("9b8c996c-86c8-44c9-8554-4f45654dd0eb"), Code="NotEligible", Description="Not eligible", Definition="The student is not eligible to receive services related to the referral.", SortOrder=Convert.ToDecimal("10.00") },
+            new ReferenceModelBase { Id=Guid.Parse("b22fe22b-a7e7-4599-96d0-a568794b1ba4"), Code="Other", Description="Other", Definition="The outcome of the referral is in a category not yet defined in CEDS.", SortOrder=Convert.ToDecimal("99.00") },
         };
         #endregion
     }

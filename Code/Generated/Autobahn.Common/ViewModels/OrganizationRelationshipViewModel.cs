@@ -80,9 +80,9 @@ namespace Autobahn.Common.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefOrganizationRelationshipList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("94d8c42a-e8b6-4b30-97e8-c53fa7b9100a"), Code="AuthorizingBody", Description="Authorizing Body", Definition="The primary entity with legal authority to create or close the organization.", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("ead806f6-2567-48d9-86a3-b2554285efd1"), Code="OperatingBody", Description="Operating Body", Definition="The entity responsible for operating the organization.", SortOrder=Convert.ToDecimal("2.00") },
-            new ReferenceModelBase { Id=Guid.Parse("30b9ff1b-4157-44c8-8c53-01fa467d5d6f"), Code="SecondaryAuthorizingBody", Description="Secondary Authorizing Body", Definition="The secondary entity with legal authority to create or close the organization.", SortOrder=Convert.ToDecimal("3.00") },
+            new ReferenceModelBase { Id=Guid.Parse("e3a79de3-f97d-4f29-b791-446b15338b61"), Code="AuthorizingBody", Description="Authorizing Body", Definition="The primary entity with legal authority to create or close the organization.", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("7c41d224-6a0c-442f-8e2d-2ef1cd491dc3"), Code="OperatingBody", Description="Operating Body", Definition="The entity responsible for operating the organization.", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("6d43d9c8-ba30-438b-905f-8482a0a8e64a"), Code="SecondaryAuthorizingBody", Description="Secondary Authorizing Body", Definition="The secondary entity with legal authority to create or close the organization.", SortOrder=Convert.ToDecimal("3.00") },
         };
         #endregion
     }

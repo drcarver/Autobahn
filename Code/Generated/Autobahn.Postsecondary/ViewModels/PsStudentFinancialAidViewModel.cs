@@ -170,8 +170,8 @@ namespace Autobahn.Postsecondary.ViewModels
         /// </summary>
         private static List<ReferenceModelBase> RefNeedDeterminationMethodList = new List<ReferenceModelBase>
         {
-            new ReferenceModelBase { Id=Guid.Parse("ed05614e-bfb4-4aab-ab39-54d1fb9f023f"), Code="Federal", Description="Federal", Definition="Federal", SortOrder=Convert.ToDecimal("1.00") },
-            new ReferenceModelBase { Id=Guid.Parse("109c49e7-c6b9-4adc-a70a-934b6d8bc70f"), Code="Institutional", Description="Institutional", Definition="Institutional", SortOrder=Convert.ToDecimal("2.00") },
+            new ReferenceModelBase { Id=Guid.Parse("c7ef8b65-0669-48df-bf70-715cecb37501"), Code="Federal", Description="Federal", Definition="Federal", SortOrder=Convert.ToDecimal("1.00") },
+            new ReferenceModelBase { Id=Guid.Parse("41fd5647-999d-48b8-a054-4f8ef31f3abb"), Code="Institutional", Description="Institutional", Definition="Institutional", SortOrder=Convert.ToDecimal("2.00") },
         };
         #endregion
     }

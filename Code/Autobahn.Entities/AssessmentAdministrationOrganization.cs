@@ -9,15 +9,15 @@ namespace Autobahn.Entities
 
         public int AssessmentAdministrationId { get; set; }
 
-        public int OrganizationId { get; set; }
+        public Guid OrganizationId { get; set; }
 
         public DateTime? RecordStartDateTime { get; set; }
 
         public DateTime? RecordEndDateTime { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         public virtual AssessmentAdministration AssessmentAdministration { get; set; }
 

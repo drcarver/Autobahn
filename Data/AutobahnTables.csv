@@ -10616,3 +10616,12 @@ af220f66-b4a7-4cb2-8268-f481322b56ce,Workforce,783,WorkforceProgramParticipation
 51a7baf1-ef86-4716-9dcf-eeb628fb1b9a,Workforce,997,WorkforceProgramParticipation,RefWfProgramParticipationId,,10,Guid?
 d87c7112-a376-4562-a50a-e4241bb65b14,Workforce,,WorkforceProgramParticipation,WorkforceProgramParticipationId,,--dbtable--,Guid
 f1cbe033-05e3-476f-86d7-09e3510a0e66,Workforce,,WorkforceProgramParticipation,,,--dbtable--,
+,Common,,RefMarcRelator,,,10,
+,Common,,RefMarcRelator,Code,,--dbtable--,System.String
+,Common,,RefMarcRelator,Definition,,--dbtable--,System.String
+,Common,,RefMarcRelator,Description,,--dbtable--,System.String
+,Common,,RefMarcRelator,RecordEndDateTime,,--dbtable--,System.DateTime?
+,Common,,RefMarcRelator,RecordStartDateTime,,--dbtable--,System.DateTime?
+,Common,,RefMarcRelator,RefJurisdictionId,,--dbtable--,Guid?
+,Common,,RefMarcRelator,RefWorkbasedLearningOpportunityTypeId,,--dbtable--,Guid
+,Common,,RefMarcRelator,SortOrder,,--dbtable--,System.Decimal?

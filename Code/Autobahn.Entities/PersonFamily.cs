@@ -40,9 +40,9 @@ namespace Autobahn.Entities
 
         public int? NumberOfHouseholdCollegeStudents { get; set; }
 
-        public int? RecordStatusId { get; set; }
+        public Guid? RecordStatusId { get; set; }
 
-        public int? DataCollectionId { get; set; }
+        public Guid? DataCollectionId { get; set; }
 
         public virtual DataCollection DataCollection { get; set; }
 
