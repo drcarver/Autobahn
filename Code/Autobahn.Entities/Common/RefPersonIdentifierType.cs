@@ -1,22 +1,22 @@
 //**********************************************************
 //* DomainName: Autobahn.Common
-//* FileName:   RefPersonTelephoneNumberType.cs
+//* FileName:   RefPersonIdentifierType.cs
 //**********************************************************
 
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefPersonTelephoneNumberType")]
-    public partial class RefPersonTelephoneNumberType : EntityReferenceBase
+    [Table("RefPersonIdentifierType")]
+    public partial class RefPersonIdentifierType : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RefPersonTelephoneNumberType()
+        public RefPersonIdentifierType()
         {
-            PersonTelephones = new HashSet<PersonTelephone>();
+            RefPersonIdentificationSystems = new HashSet<RefPersonIdentificationSystem>();
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PersonTelephone> PersonTelephones { get; set; }
+        public virtual ICollection<RefPersonIdentificationSystem> RefPersonIdentificationSystems { get; set; }
     }
 }

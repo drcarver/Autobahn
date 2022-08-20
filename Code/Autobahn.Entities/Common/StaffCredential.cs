@@ -5,7 +5,6 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Autobahn.Entities.AdultEducation;
 
 namespace Autobahn.Entities.Common
 {

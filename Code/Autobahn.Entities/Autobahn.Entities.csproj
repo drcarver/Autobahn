@@ -1014,6 +1014,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="AdultEducation\" />
 	  <Folder Include="Migrations\" />
 	</ItemGroup>
 
