@@ -9,7 +9,7 @@
 using System.Globalization;
 using Autobahn.Codegen.Maps;
 using Autobahn.Codegen.Models;
-using Autobahn.Entities;
+using Autobahn.Entities.Common;
 using CsvHelper;
 using CsvHelper.Configuration;
 
@@ -102,7 +102,7 @@ namespace Autobahn.Codegen
             }
         }
 
-        public List<ReferenceModel> ReadReferenceFile(string location)
+        public List<EntityReferenceBase> ReadReferenceFile(string location)
         {
             try
             {
@@ -112,7 +112,7 @@ namespace Autobahn.Codegen
                     using (var csv = new CsvReader(reader, config))
                     {
                         csv.Context.RegisterClassMap<ReferenceModelMap>();
-                        var records = csv.GetRecords<ReferenceModel>().ToList();
+                        var records = csv.GetRecords<EntityReferenceBase>().ToList();
                         return records;
                     }
                 }

@@ -1,9 +1,10 @@
 ﻿using Autobahn.Codegen.Models;
+using Autobahn.Entities.Common;
 using CsvHelper.Configuration;
 
 namespace Autobahn.Codegen.Maps
 {
-    public sealed class ReferenceModelMap : ClassMap<ReferenceModel>
+    public sealed class ReferenceModelMap : ClassMap<EntityReferenceBase>
     {
         public ReferenceModelMap()
         {

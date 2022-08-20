@@ -308,7 +308,6 @@
 	  <Compile Remove="PersonMaster.cs" />
 	  <Compile Remove="PersonMilitary.cs" />
 	  <Compile Remove="PersonOtherName.cs" />
-	  <Compile Remove="PersonPersonalInformationVerification.cs" />
 	  <Compile Remove="PersonProgramParticipation.cs" />
 	  <Compile Remove="PersonReferral.cs" />
 	  <Compile Remove="PersonRelationship.cs" />
@@ -373,7 +372,6 @@
 	  <Compile Remove="RefAdmittedStudent.cs" />
 	  <Compile Remove="RefAdultEducationProgramExitReason.cs" />
 	  <Compile Remove="RefAdvancedPlacementCourseCode.cs" />
-	  <Compile Remove="RefAeCertificationType.cs" />
 	  <Compile Remove="RefAeFunctioningLevelAtIntake.cs" />
 	  <Compile Remove="RefAeFunctioningLevelAtPosttest.cs" />
 	  <Compile Remove="RefAeInstructionalProgramType.cs" />
@@ -851,7 +849,6 @@
 	  <Compile Remove="RefPersonLocationType.cs" />
 	  <Compile Remove="RefPersonRelationshipType.cs" />
 	  <Compile Remove="RefPersonStatusType.cs" />
-	  <Compile Remove="RefPersonTelephoneNumberType.cs" />
 	  <Compile Remove="RefPESCAwardLevelType.cs" />
 	  <Compile Remove="RefPopulationServed.cs" />
 	  <Compile Remove="RefPreAndPostTestIndicator.cs" />
@@ -859,7 +856,6 @@
 	  <Compile Remove="RefPreKEligibleAgesNonIDEA.cs" />
 	  <Compile Remove="RefPrekindergartenEligibility.cs" />
 	  <Compile Remove="RefPresentAttendanceCategory.cs" />
-	  <Compile Remove="RefPrimaryLearningDeviceAccess.cs" />
 	  <Compile Remove="RefPrimaryLearningDeviceAwayFromSchool.cs" />
 	  <Compile Remove="RefPrimaryLearningDeviceProvider.cs" />
 	  <Compile Remove="RefProfessionalDevelopmentFinancialSupport.cs" />

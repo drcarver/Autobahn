@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Security.Principal;
 using Autobahn.Codegen.Models;
 using Autobahn.Entities;
+using Autobahn.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Autobahn.Codegen
@@ -303,13 +304,14 @@ namespace Autobahn.Codegen
         static void Main(string[] args)
         {
             var csv = new CSVServices();
-            var types = Assembly.Load(typeof(Autobahn.Entities.Activity).Assembly.FullName);
+            var types = Assembly.Load(typeof(Activity).Assembly.FullName);
             var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
             var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
             var autobahnElements = GetAutobahnElements();
 
             //SeedOrganization();
             //SeedRefRecordStatusType();
+            //SeedRefRecordStatusCreatorEntity();
 
             var autobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\MarcRelator.csv");
 //            csv.WriteReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv", autobahnMarc, false, "|");
@@ -334,6 +336,28 @@ namespace Autobahn.Codegen
                 foreach (var item in reftype)
                 {
                     ctx.RefRecordStatusType.Add(new RefRecordStatusType
+                    {
+                        Id = item.Id, // ?? Guid.NewGuid(),
+                        Code = item.Code,
+                        Description = item.Description,
+                        Definition = item.Definition,
+                        SortOrder = item.SortOrder
+                    });
+                }
+
+                ctx.SaveChanges();
+            }
+        }
+
+        private static void SeedRefRecordStatusCreatorEntity()
+        {
+            var csv = new CSVServices();
+            using (var ctx = new AutobahnCommonContext())
+            {
+                var reftype = csv.ReadReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefRecordStatusCreatorEntity.csv");
+                foreach (var item in reftype)
+                {
+                    ctx.RefRecordStatusCreatorEntity.Add(new RefRecordStatusCreatorEntity
                     {
                         Id = item.Id, // ?? Guid.NewGuid(),
                         Code = item.Code,

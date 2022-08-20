@@ -1,8 +1,8 @@
-﻿using Autobahn.Entities;
-using System.IO.Compression;
+﻿using System.IO.Compression;
 using System.Xml.Linq;
 using Autobahn.Codegen.Models;
 using File = System.IO.File;
+using Autobahn.Entities.Common;
 
 namespace Autobahn.Codegen
 {
