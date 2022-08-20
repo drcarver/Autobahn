@@ -8,7 +8,7 @@ using Autobahn.Entities.EarlyLearning;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefChildDevelopmentAssociateType")]
+    [Table("RefChildDevelopmentAssociateType", Schema = "Common")]
     public partial class RefChildDevelopmentAssociateType : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

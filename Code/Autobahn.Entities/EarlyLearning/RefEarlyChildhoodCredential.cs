@@ -4,11 +4,10 @@
 //**********************************************************
 
 using System.ComponentModel.DataAnnotations.Schema;
-using Autobahn.Entities.Common;
 
 namespace Autobahn.Entities.EarlyLearning
 {
-    [Table("RefEarlyChildhoodCredential")]
+    [Table("RefEarlyChildhoodCredential", Schema = "EarlyLearning")]
     public partial class RefEarlyChildhoodCredential : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

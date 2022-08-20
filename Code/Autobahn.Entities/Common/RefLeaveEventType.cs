@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefLeaveEventType")]
+    [Table("RefLeaveEventType", Schema = "Common")]
     public partial class RefLeaveEventType : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

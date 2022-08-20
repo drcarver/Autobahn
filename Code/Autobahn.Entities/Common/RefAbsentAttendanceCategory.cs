@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefAbsentAttendanceCategory")]
+    [Table("RefAbsentAttendanceCategory", Schema = "Common")]
     public partial class RefAbsentAttendanceCategory : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

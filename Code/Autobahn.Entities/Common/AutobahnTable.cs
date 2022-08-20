@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("AutobahnTable")]
+    [Table("AutobahnTable", Schema = "Common")]
     public partial class AutobahnTable
     {
         public Guid? Id { get; set; } = Guid.NewGuid();

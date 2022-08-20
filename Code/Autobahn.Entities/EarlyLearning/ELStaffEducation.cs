@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    [Table("ELStaffEducation")]
+    [Table("ELStaffEducation", Schema = "EarlyLearning")]
     public partial class ELStaffEducation
     {
         public int ELStaffEducationId { get; set; }

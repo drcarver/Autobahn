@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    [Table("OrganizationRelationship")]
+    [Table("OrganizationRelationship", Schema = "Common")]
     public partial class OrganizationRelationship
     {
         public int OrganizationRelationshipId { get; set; }

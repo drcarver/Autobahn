@@ -5,32 +5,34 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Entities.Common;
+using Autobahn.Interfaces;
 
-namespace Autobahn.Entities.Common
+namespace Autobahn.Entities
 {
     /// <summary>
     /// The Base Entity for Autobahn
     /// </summary>
-    public partial class EntityBase
+    public partial class EntityBase : IAutobahnBase
     {
         /// <summary>
-        /// THe Id of the ViewModel
+        /// The Id of the entity
         /// </summary>
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         /// <summary>
-        /// Is it a deleted model?
+        /// Is it a deleted entity?
         /// </summary>
         public bool IsDeleted { get; set; } = false;
 
         /// <summary>
-        /// Last person to modify the row
+        /// Last person to modify the entity
         /// </summary>
         public Guid? ModifiedBy { get; set; } = Guid.Parse("{E6A19048-C454-4076-BCC5-F0B836388A72}");
 
         /// <summary>
-        /// Dte and time the row was last modified
+        /// Date and time the entity was last modified
         /// </summary>
         public DateTime ModifiedOn { get; set; } = DateTime.UtcNow;
 
@@ -53,11 +55,20 @@ namespace Autobahn.Entities.Common
         [ForeignKey("RecordStatus")]
         public Guid? RecordStatusId { get; set; }
 
+        /// <summary>
+        /// The Data Collection entity
+        /// </summary>
         [ForeignKey("DataCollection")]
         public Guid? DataCollectionId { get; set; }
 
+        /// <summary>
+        /// The Data Collection entity
+        /// </summary>
         public virtual DataCollection DataCollection { get; set; }
 
+        /// <summary>
+        /// The record status 
+        /// </summary>
         public virtual RecordStatus RecordStatus { get; set; }
     }
 }

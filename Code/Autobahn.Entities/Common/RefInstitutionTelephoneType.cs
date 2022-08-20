@@ -3,12 +3,11 @@
 //* FileName:   RefInstitutionTelephoneType.cs
 //**********************************************************
 
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefInstitutionTelephoneType")]
+    [Table("RefInstitutionTelephoneType", Schema = "Common")]
     public partial class RefInstitutionTelephoneType : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

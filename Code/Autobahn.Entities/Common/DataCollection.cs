@@ -3,15 +3,14 @@
 //* FileName:   DataCollection.cs
 //**********************************************************
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Interfaces.Common;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("DataCollection")]
-    public partial class DataCollection : EntityBase
+    [Table("DataCollection", Schema = "Common")]
+    public partial class DataCollection : EntityBase, IDataCollection
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DataCollection()
@@ -691,7 +690,7 @@ namespace Autobahn.Entities.Common
         //    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         //    public virtual ICollection<CteStudentAcademicRecord> CteStudentAcademicRecords { get; set; }
 
-        //    public virtual RefDataCollectionStatus RefDataCollectionStatus { get; set; }
+        public virtual RefDataCollectionStatus RefDataCollectionStatus { get; set; }
 
         //    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         //    public virtual ICollection<EarlyChildhoodCredential> EarlyChildhoodCredentials { get; set; }

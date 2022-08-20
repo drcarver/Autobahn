@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Autobahn.Entities
+namespace Autobahn.Entities.Common
 {
-    [Table("OrganizationFinancial")]
+    [Table("OrganizationFinancial", Schema = "Common")]
     public partial class OrganizationFinancial
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

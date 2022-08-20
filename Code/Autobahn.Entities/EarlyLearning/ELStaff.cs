@@ -8,7 +8,7 @@ using Autobahn.Entities.Common;
 
 namespace Autobahn.Entities.EarlyLearning
 {
-    [Table("ELStaff")]
+    [Table("ELStaff", Schema = "EarlyLearning")]
     public partial class ELStaff : EntityBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

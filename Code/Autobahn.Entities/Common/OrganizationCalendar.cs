@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Entities.Common;
 
 namespace Autobahn.Entities
 {
-    [Table("OrganizationCalendar")]
+    [Table("OrganizationCalendar", Schema = "Common")]
     public partial class OrganizationCalendar
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

@@ -8,7 +8,7 @@ using Autobahn.Entities.Common;
 
 namespace Autobahn.Entities.EarlyLearning
 {
-    [Table("EarlyChildhoodCredential")]
+    [Table("EarlyChildhoodCredential", Schema = "EarlyLearning")]
     public partial class EarlyChildhoodCredential : EntityBase
     {
         [ForeignKey("PersonCredential")]

@@ -13,7 +13,7 @@ namespace Autobahn.Entities.Common
     /// An activity, such as a co-curricular or extra-curricular
     /// activity that is offered at an education institution.
     /// </summary>
-    [Table("Activity")]
+    [Table("Activity", Schema = "Common")]
     public partial class Activity : EntityBase
     {
         /// <summary>

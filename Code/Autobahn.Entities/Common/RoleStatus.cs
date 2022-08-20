@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RoleStatus")]
+    [Table("RoleStatus", Schema = "Common")]
     public partial class RoleStatus : EntityReferenceBase
     {
         [Column(TypeName = "date")]

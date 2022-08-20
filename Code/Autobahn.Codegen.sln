@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autobahn.Codegen", "Autobahn.Codegen\Autobahn.Codegen.csproj", "{8EF309EF-6116-4F5A-8F27-1A52EF905665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Entities", "Autobahn.Entities\Autobahn.Entities.csproj", "{DB97F6A2-CE67-462C-BBFE-CBB947D4396A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autobahn.Entities", "Autobahn.Entities\Autobahn.Entities.csproj", "{DB97F6A2-CE67-462C-BBFE-CBB947D4396A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autobahn.Interfaces", "Autobahn.Interfaces\Autobahn.Interfaces.csproj", "{2BBB1819-964A-45E2-94F2-CBE24A1DD91E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DB97F6A2-CE67-462C-BBFE-CBB947D4396A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB97F6A2-CE67-462C-BBFE-CBB947D4396A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB97F6A2-CE67-462C-BBFE-CBB947D4396A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBB1819-964A-45E2-94F2-CBE24A1DD91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBB1819-964A-45E2-94F2-CBE24A1DD91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBB1819-964A-45E2-94F2-CBE24A1DD91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBB1819-964A-45E2-94F2-CBE24A1DD91E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

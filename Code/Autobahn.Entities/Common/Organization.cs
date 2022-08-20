@@ -14,7 +14,7 @@ namespace Autobahn.Entities.Common
     /// purpose, especially a business, society,
     /// association, etc.:
     /// </summary>
-    [Table("Organization")]
+    [Table("Organization", Schema = "Common")]
     public partial class Organization : EntityBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

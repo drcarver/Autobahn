@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("OrganizationLocation")]
+    [Table("OrganizationLocation", Schema = "Common")]
     public partial class OrganizationLocation : EntityBase
     {
         [ForeignKey("Organization")]

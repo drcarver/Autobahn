@@ -10,7 +10,7 @@ namespace Autobahn.Entities.Common
     /// <summary>
     /// The type of entity that created or indicated the Record Status Type
     /// </summary>
-    [Table("RefRecordStatusCreatorEntity")]
+    [Table("RefRecordStatusCreatorEntity", Schema = "Common")]
     public partial class RefRecordStatusCreatorEntity : EntityReferenceBase
     {
         /// <summary>

@@ -3,12 +3,11 @@
 //* FileName:   Role.cs
 //**********************************************************
 
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefRole")]
+    [Table("RefRole", Schema = "Common")]
     public partial class RefRole : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

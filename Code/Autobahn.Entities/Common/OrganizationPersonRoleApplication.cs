@@ -1,10 +1,8 @@
-using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using Autobahn.Entities.Common;
 
-namespace Autobahn.Entities
+namespace Autobahn.Entities.Common
 {
-    [Table("OrganizationPersonRoleApplication")]
+    [Table("OrganizationPersonRoleApplication", Schema = "Common")]
     public partial class OrganizationPersonRoleApplication
     {
         public int OrganizationPersonRoleApplicationId { get; set; }

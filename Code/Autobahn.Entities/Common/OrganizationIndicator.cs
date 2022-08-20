@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities
 {
-    [Table("OrganizationIndicator")]
+    [Table("OrganizationIndicator", Schema = "Common")]
     public partial class OrganizationIndicator
     {
         public int OrganizationIndicatorId { get; set; }

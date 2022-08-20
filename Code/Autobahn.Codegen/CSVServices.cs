@@ -9,6 +9,7 @@
 using System.Globalization;
 using Autobahn.Codegen.Maps;
 using Autobahn.Codegen.Models;
+using Autobahn.Entities;
 using Autobahn.Entities.Common;
 using CsvHelper;
 using CsvHelper.Configuration;

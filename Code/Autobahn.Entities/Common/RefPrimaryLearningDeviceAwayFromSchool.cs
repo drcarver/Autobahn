@@ -4,11 +4,10 @@
 //**********************************************************using System.ComponentModel.DataAnnotations.Schema;
 
 using System.ComponentModel.DataAnnotations.Schema;
-using Autobahn.Entities.Common;
 
-namespace Autobahn.Entities
+namespace Autobahn.Entities.Common
 {
-    [Table("RefPrimaryLearningDeviceAwayFromSchool")]
+    [Table("RefPrimaryLearningDeviceAwayFromSchool", Schema = "Common")]
     public partial class RefPrimaryLearningDeviceAwayFromSchool : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

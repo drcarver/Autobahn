@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("AutobahnDomain")]
+    [Table("AutobahnDomain", Schema = "Common")]
     public class AutobahnDomain
     {
         public string Module { get; set; }

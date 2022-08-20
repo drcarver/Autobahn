@@ -5,7 +5,7 @@ using Autobahn.Entities.Common;
 
 namespace Autobahn.Entities
 {
-    [Table("ProgramParticipationMigrant")]
+    [Table("ProgramParticipationMigrant", Schema = "Common")]
     public partial class ProgramParticipationMigrant : EntityReferenceBase
     {
         public Guid? RefMepEnrollmentTypeId { get; set; }

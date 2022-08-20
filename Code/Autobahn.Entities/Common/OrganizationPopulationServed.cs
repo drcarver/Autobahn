@@ -1,10 +1,9 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Autobahn.Entities
+namespace Autobahn.Entities.Common
 {
-    [Table("OrganizationPopulationServed")]
+    [Table("OrganizationPopulationServed", Schema = "Common")]
     public partial class OrganizationPopulationServed
     {
         public int OrganizationPopulationServedId { get; set; }

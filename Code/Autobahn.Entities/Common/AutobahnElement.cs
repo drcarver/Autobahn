@@ -2,7 +2,7 @@
 
 namespace Autobahn.Entities.Common
 {
-    [Table("AutobahnElement")]
+    [Table("AutobahnElement", Schema = "Common")]
     public partial class AutobahnElement
     {
         public Guid Id { get; set; } = Guid.NewGuid();

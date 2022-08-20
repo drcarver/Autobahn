@@ -1018,4 +1018,8 @@
 	  <Folder Include="Migrations\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Autobahn.Interfaces\Autobahn.Interfaces.csproj" />
+	</ItemGroup>
+
 </Project>

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("StaffCredential")]
+    [Table("StaffCredential", Schema = "Common")]
     public partial class StaffCredential : EntityBase
     {
         public bool? TechnologySkillsStandardsMet { get; set; }

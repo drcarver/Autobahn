@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("PersonPersonalInformationVerification")]
+    [Table("PersonPersonalInformationVerification", Schema = "Common")]
     public partial class PersonPersonalInformationVerification : EntityBase
     {
         [ForeignKey("Person")]

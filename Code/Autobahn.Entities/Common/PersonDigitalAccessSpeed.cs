@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("PersonDigitalAccessSpeed")]
+    [Table("PersonDigitalAccessSpeed", Schema = "Common")]
     public partial class PersonDigitalAccessSpeed : EntityBase
     {
         public decimal? InternetDownloadSpeed { get; set; }

@@ -9,7 +9,7 @@ using Autobahn.Entities.EarlyLearning;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("PersonCredential")]
+    [Table("PersonCredential", Schema = "Common")]
     public partial class PersonCredential : EntityBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

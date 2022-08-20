@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("PersonMaster")]
+    [Table("PersonMaster", Schema = "Common")]
     public partial class PersonMaster : EntityBase
     {
     }

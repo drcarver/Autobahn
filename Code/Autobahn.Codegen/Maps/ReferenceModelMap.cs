@@ -1,5 +1,5 @@
 ﻿using Autobahn.Codegen.Models;
-using Autobahn.Entities.Common;
+using Autobahn.Entities;
 using CsvHelper.Configuration;
 
 namespace Autobahn.Codegen.Maps

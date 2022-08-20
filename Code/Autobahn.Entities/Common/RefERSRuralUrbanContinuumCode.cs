@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Autobahn.Entities.Common
 {
-    [Table("RefERSRuralUrbanContinuumCode")]
+    [Table("RefERSRuralUrbanContinuumCode", Schema = "Common")]
     public partial class RefERSRuralUrbanContinuumCode : EntityReferenceBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
