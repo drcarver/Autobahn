@@ -1,10 +1,17 @@
+//**********************************************************
+//* DomainName: Autobahn.Common
+//* FileName:   OrganizationCalendarSession.cs
+//**********************************************************
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Entities.Financial;
+using Autobahn.Entities.LearningResources;
 
 namespace Autobahn.Entities.Common
 {
     [Table("OrganizationCalendarSession", Schema = "Common")]
-    public partial class OrganizationCalendarSession
+    public partial class OrganizationCalendarSession : EntityBase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public OrganizationCalendarSession()
@@ -17,8 +24,6 @@ namespace Autobahn.Entities.Common
             OrganizationFinancials = new HashSet<OrganizationFinancial>();
         }
 
-        public int OrganizationCalendarSessionId { get; set; }
-
         [StringLength(7)]
         public string Designator { get; set; }
 
@@ -28,7 +33,8 @@ namespace Autobahn.Entities.Common
         [Column(TypeName = "date")]
         public DateTime? EndDate { get; set; }
 
-        public int? RefSessionTypeId { get; set; }
+        [ForeignKey("RefSessionType")]
+        public Guid? RefSessionTypeId { get; set; }
 
         [Column(TypeName = "numeric")]
         public decimal? InstructionalMinutes { get; set; }
@@ -44,6 +50,7 @@ namespace Autobahn.Entities.Common
 
         public bool? AttendanceTermIndicator { get; set; }
 
+        [ForeignKey("OrganizationCalendar")]
         public int? OrganizationCalendarId { get; set; }
 
         public int? DaysInSession { get; set; }
@@ -60,20 +67,10 @@ namespace Autobahn.Entities.Common
 
         public TimeSpan? SessionEndTime { get; set; }
 
-        public DateTime? RecordStartDateTime { get; set; }
-
-        public DateTime? RecordEndDateTime { get; set; }
-
         public int? RefAcademicTermDesignatorId { get; set; }
-
-        public Guid? RecordStatusId { get; set; }
-
-        public Guid? DataCollectionId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CourseSection> CourseSections { get; set; }
-
-        public virtual DataCollection DataCollection { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<K12FederalFundAllocation> K12FederalFundAllocation { get; set; }
@@ -88,8 +85,6 @@ namespace Autobahn.Entities.Common
         public virtual ICollection<LearnerActivity> LearnerActivities { get; set; }
 
         public virtual OrganizationCalendar OrganizationCalendar { get; set; }
-
-        public virtual RecordStatus RecordStatus { get; set; }
 
         public virtual RefAcademicTermDesignator RefAcademicTermDesignator { get; set; }
 

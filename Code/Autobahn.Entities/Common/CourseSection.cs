@@ -5,6 +5,8 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Entities.Assessments;
+using Autobahn.Entities.LearningResources;
 using Autobahn.Interfaces.Common;
 
 namespace Autobahn.Entities.Common

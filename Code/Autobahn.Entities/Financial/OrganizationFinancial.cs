@@ -1,10 +1,18 @@
+//**********************************************************
+//* DomainName: Autobahn.Financial
+//* FileName:   OrganizationFinancial.cs
+//**********************************************************
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Autobahn.Entities.Common;
+using Autobahn.Entities.Facility;
+using Autobahn.Interfaces.Financial;
 
-namespace Autobahn.Entities.Common
+namespace Autobahn.Entities.Financial
 {
-    [Table("OrganizationFinancial", Schema = "Common")]
-    public partial class OrganizationFinancial
+    [Table("OrganizationFinancial", Schema = "Financial")]
+    public partial class OrganizationFinancial : EntityBase, IOrganizationFinancial
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public OrganizationFinancial()
@@ -13,11 +21,11 @@ namespace Autobahn.Entities.Common
             IPEDSFinances = new HashSet<IPEDSFinance>();
         }
 
-        public int OrganizationFinancialId { get; set; }
+        [ForeignKey("FinancialAccount")]
+        public Guid FinancialAccountId { get; set; }
 
-        public int FinancialAccountId { get; set; }
-
-        public int OrganizationCalendarSessionId { get; set; }
+        [ForeignKey("OrganizationCalendarSession")]
+        public Guid OrganizationCalendarSessionId { get; set; }
 
         public decimal? ActualValue { get; set; }
 
@@ -39,17 +47,8 @@ namespace Autobahn.Entities.Common
         [StringLength(4)]
         public string FiscalYear { get; set; }
 
-        public int? FinancialAccountProgramId { get; set; }
-
-        public DateTime? RecordStartDateTime { get; set; }
-
-        public DateTime? RecordEndDateTime { get; set; }
-
-        public Guid? RecordStatusId { get; set; }
-
-        public Guid? DataCollectionId { get; set; }
-
-        public virtual DataCollection DataCollection { get; set; }
+        [ForeignKey("FinancialAccountProgram")]
+        public Guid? FinancialAccountProgramId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FacilityFinancial> FacilityFinancials { get; set; }
@@ -62,7 +61,5 @@ namespace Autobahn.Entities.Common
         public virtual ICollection<IPEDSFinance> IPEDSFinances { get; set; }
 
         public virtual OrganizationCalendarSession OrganizationCalendarSession { get; set; }
-
-        public virtual RecordStatus RecordStatus { get; set; }
     }
 }

@@ -39,24 +39,31 @@ namespace Autobahn.Entities.Common
         [Column(TypeName = "date")]
         public DateTime? Birthdate { get; set; }
 
-        public int? RefSexId { get; set; }
+        [ForeignKey("RefSex")]
+        public Guid? RefSexId { get; set; }
 
         public bool? HispanicLatinoEthnicity { get; set; }
 
-        public int? RefUSCitizenshipStatusId { get; set; }
+        [ForeignKey("RefUSCitizenshipStatus")]
+        public Guid? RefUSCitizenshipStatusId { get; set; }
 
-        public int? RefVisaTypeId { get; set; }
+        [ForeignKey("RefVisaType")]
+        public Guid? RefVisaTypeId { get; set; }
 
-        public int? RefStateOfResidenceId { get; set; }
+        [ForeignKey("RefState")]
+        public Guid? RefStateOfResidenceId { get; set; }
 
-        public int? RefProofOfResidencyTypeId { get; set; }
+        [ForeignKey("RefProofOfResidencyType")]
+        public Guid? RefProofOfResidencyTypeId { get; set; }
 
-        public int? RefHighestEducationLevelCompletedId { get; set; }
+        [ForeignKey("RefHighestEducationLevelCompleted")]
+        public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         [StringLength(60)]
         public string BirthdateVerification { get; set; }
 
-        public int? RefTribalAffiliationId { get; set; }
+        [ForeignKey("RefTribalAffiliation")]
+        public Guid? RefTribalAffiliationId { get; set; }
 
         public virtual Person Person { get; set; }
 
