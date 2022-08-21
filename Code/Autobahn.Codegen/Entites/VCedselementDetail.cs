@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace ScafoldADatabase.Entities
+{
+    [Keyless]
+    public partial class VCedselementDetail
+    {
+        [StringLength(128)]
+        public string TableName { get; set; } = null!;
+        [StringLength(128)]
+        public string? ColumnName { get; set; }
+        [StringLength(128)]
+        public string? DataType { get; set; }
+        public int? MaxLength { get; set; }
+        public int? ColumnPostion { get; set; }
+        [Unicode(false)]
+        public string? Description { get; set; }
+        [Unicode(false)]
+        public string? CedsElement { get; set; }
+        [Unicode(false)]
+        public string? Url { get; set; }
+        [Unicode(false)]
+        public string? GlobalId { get; set; }
+    }
+}
