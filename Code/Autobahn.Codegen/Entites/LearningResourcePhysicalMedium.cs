@@ -9,6 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
+    [Table("LearningResourcePhysicalMedium", Schema = "LearningResource")]
     public partial class LearningResourcePhysicalMedium
     {
         /// <summary>

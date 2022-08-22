@@ -2,7 +2,7 @@ using System;
 
 namespace Autobahn.Codegen.Models
 {
-    public partial class ReferenceModel
+    internal partial class ReferenceModel
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Description { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Autobahn.Codegen.Models
 {
-    public class NDSElement
+    internal class NDSElement
     {
         public string GlobalID { get; set; }
         public string ElementName { get; set; }

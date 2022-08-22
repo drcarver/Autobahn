@@ -9,6 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
+    [Table("RefLearnerActivityMaximumTimeAllowedUnit")]
     public partial class RefLearnerActivityMaximumTimeAllowedUnit
     {
         public RefLearnerActivityMaximumTimeAllowedUnit()

@@ -6,9 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Keyless]
-    public partial class VCedselementDetail
+    [Table("CedselementDetail")]
+    public partial class CedselementDetail
     {
+        [Key]
+        [Required]
+        Guid Id { get; set; } = default(Guid);
+
         [StringLength(128)]
         public string TableName { get; set; } = null!;
         [StringLength(128)]

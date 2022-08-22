@@ -3,9 +3,9 @@ using CsvHelper.Configuration;
 
 namespace Autobahn.Codegen.Maps
 {
-    public sealed class _CEDSElementMap : ClassMap<_CEDSElement>
+    internal sealed class _CEDSElementMap : ClassMap<_CEDSElement>
     {
-        public _CEDSElementMap()
+        internal _CEDSElementMap()
         {
             Map(x => x.GlobalID).Index(0);
             Map(x => x.ElementName).Index(1);

@@ -9,6 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// CEDS Element has been removed.
     /// </summary>
+    [Table("RefAlternateFundUse", Schema="Financial")]
     public partial class RefAlternateFundUse
     {
         public RefAlternateFundUse()

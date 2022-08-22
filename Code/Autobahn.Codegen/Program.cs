@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 
 namespace Autobahn.Codegen
@@ -149,159 +150,164 @@ namespace Autobahn.Codegen
         //    return csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
         //}
 
-        ///// <summary>
-        ///// Return the list of autobahn tables
-        ///// </summary>
-        ///// <returns>Return the list of Autobahn tables</returns>
-        //private static List<AutobahnTable> GetAutobahnTables(Assembly types, List<AutobahnDomain> autobahnDomains)
-        //{
-        //    var csv = new CSVServices();
-        //    var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv", false, "|");
-        //    var comdom = autobahnDomains.First(d => d.Module == "Common");
+        /// <summary>
+        /// Return the list of autobahn tables
+        /// </summary>
+        /// <returns>Return the list of Autobahn tables</returns>
+        private static /*List<AutobahnTable>*/ void GetAutobahnTables(List<Type> types) //, List<AutobahnDomain> autobahnDomains)
+        {
+            //    var csv = new CSVServices();
+            //    var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv", false, "|");
+            //    var comdom = autobahnDomains.First(d => d.Module == "Common");
 
-        //    // Add any missing tables and set the domain for each table
-        //    foreach (var type in types.GetTypes())
-        //    {
-        //        if (!type.IsClass)
-        //        {
-        //            continue;
-        //        }
-        //        var table = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
-        //                                        && string.IsNullOrEmpty(t.ColumnName));
-        //        if (table == null)
-        //        {
-        //            table = new AutobahnTable
-        //            {
-        //                ModuleName = string.Empty,
-        //                TableName = type.Name,
-        //                ColumnName = string.Empty,
-        //                GlobalId = string.Empty,
-        //                Version = "--dbtable--"
-        //            };
-        //            autobahnTables.Add(table);
-        //        }
+            //    // Add any missing tables and set the domain for each table
+            //    foreach (var type in types.GetTypes())
+            //    {
+            //        if (!type.IsClass)
+            //        {
+            //            continue;
+            //        }
+            //        var table = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
+            //                                        && string.IsNullOrEmpty(t.ColumnName));
+            //        if (table == null)
+            //        {
+            //            table = new AutobahnTable
+            //            {
+            //                ModuleName = string.Empty,
+            //                TableName = type.Name,
+            //                ColumnName = string.Empty,
+            //                GlobalId = string.Empty,
+            //                Version = "--dbtable--"
+            //            };
+            //            autobahnTables.Add(table);
+            //        }
 
-        //        table.ColumnType = string.Empty;
-        //        SetTableDomain(autobahnDomains, ref table);
-        //    }
+            //        table.ColumnType = string.Empty;
+            //        SetTableDomain(autobahnDomains, ref table);
+            //    }
 
-        //    //Add any missing classes and columns from the entities
-        //    foreach (var type in types.GetTypes())
-        //    {
-        //        if (!type.IsClass)
-        //        {
-        //            continue;
-        //        }
+            //    //Add any missing classes and columns from the entities
+            foreach (var type in types)
+            {
+                if (!type.IsClass)
+                {
+                    continue;
+                }
 
-        //        var tableName = type.GetCustomAttributes<TableAttribute>().First();
-        //        AutobahnTable? table = autobahnTables.FirstOrDefault(t => t.TableName == tableName?.Name
-        //                                                                  && string.IsNullOrEmpty(t.ColumnName));
-        //        if (table == null)
-        //        {
-        //            continue;
-        //        }
-        //        foreach (var prop in type.GetProperties())
-        //        {
-        //            if (prop.GetAccessors()[0].IsVirtual)
-        //            {
-        //                continue;
-        //            }
+                var tableName = type.GetCustomAttributes<TableAttribute>().First();
+                var name = tableName?.Name;
+                var schema= tableName?.Schema;
+                var len = type.GetCustomAttributes<MaxLengthAttribute>();
 
-        //            var col = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
-        //                                                         && t.ColumnName == prop.Name);
-        //            if (col == null)
-        //            {
-        //                col = new AutobahnTable
-        //                {
-        //                    ColumnName = prop.Name,
-        //                    ModuleName = table?.ModuleName,
-        //                    TableName = table?.TableName,
-        //                    GlobalId = string.Empty,
-        //                    ColumnType = string.Empty,
-        //                    Version = "--dbtable--"
-        //                };
-        //                autobahnTables.Add(col);
-        //                SetTableDomain(autobahnDomains, ref col);
-        //            }
+                //AutobahnTable? table = autobahnTables.FirstOrDefault(t => t.TableName == tableName?.Name
+                //                                                          && string.IsNullOrEmpty(t.ColumnName));
+                //if (table == null)
+                //{
+                //    continue;
+                //}
+            }
+                //        foreach (var prop in type.GetProperties())
+                //        {
+                //            if (prop.GetAccessors()[0].IsVirtual)
+                //            {
+                //                continue;
+                //            }
 
-        //            col.Id ??= Guid.NewGuid();
-        //            if (prop.Name.EndsWith("Id"))
-        //            {
-        //                col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null ? "Guid?" : "Guid";
+                //            var col = autobahnTables.FirstOrDefault(t => t.TableName == type.Name
+                //                                                         && t.ColumnName == prop.Name);
+                //            if (col == null)
+                //            {
+                //                col = new AutobahnTable
+                //                {
+                //                    ColumnName = prop.Name,
+                //                    ModuleName = table?.ModuleName,
+                //                    TableName = table?.TableName,
+                //                    GlobalId = string.Empty,
+                //                    ColumnType = string.Empty,
+                //                    Version = "--dbtable--"
+                //                };
+                //                autobahnTables.Add(col);
+                //                SetTableDomain(autobahnDomains, ref col);
+                //            }
 
-        //                // fkref so set the domain of the referenced table to this domain or
-        //                // common if it was in another domain
-        //                var fkref = autobahnTables.FirstOrDefault(t => t.TableName == col.ColumnName.Replace("Id", string.Empty)
-        //                            && string.IsNullOrEmpty(t.ColumnName));
-        //                if (fkref == null)
-        //                {
-        //                    fkref = new AutobahnTable
-        //                    {
-        //                        ColumnName = string.Empty,
-        //                        ModuleName = table?.ModuleName,
-        //                        TableName = col.ColumnName.Replace("Id", string.Empty),
-        //                        GlobalId = string.Empty,
-        //                        ColumnType = string.Empty,
-        //                        Version = "--dbtable--"
-        //                    };
-        //                    autobahnTables.Add(fkref);
-        //                    SetTableDomain(autobahnDomains, ref fkref);
-        //                }
-        //                if (fkref.ModuleName == string.Empty)
-        //                {
-        //                    foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
-        //                    {
-        //                        item.ModuleName = col.ModuleName;
-        //                    }
-        //                }
-        //                if (fkref.ModuleName != "Invalid" && fkref.ModuleName != col.ModuleName)
-        //                {
-        //                    foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
-        //                    {
-        //                        item.ModuleName = comdom?.Module;
-        //                    }
-        //                }
-        //            }
-        //            else
-        //            {
-        //                col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null
-        //                    ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?"
-        //                    : $"{prop.PropertyType}";
-        //            }
-        //        }
-        //    }
+                //            col.Id ??= Guid.NewGuid();
+                //            if (prop.Name.EndsWith("Id"))
+                //            {
+                //                col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null ? "Guid?" : "Guid";
 
-        //    // Write the updated table file
-        //    csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", autobahnTables, true, ",");
+                //                // fkref so set the domain of the referenced table to this domain or
+                //                // common if it was in another domain
+                //                var fkref = autobahnTables.FirstOrDefault(t => t.TableName == col.ColumnName.Replace("Id", string.Empty)
+                //                            && string.IsNullOrEmpty(t.ColumnName));
+                //                if (fkref == null)
+                //                {
+                //                    fkref = new AutobahnTable
+                //                    {
+                //                        ColumnName = string.Empty,
+                //                        ModuleName = table?.ModuleName,
+                //                        TableName = col.ColumnName.Replace("Id", string.Empty),
+                //                        GlobalId = string.Empty,
+                //                        ColumnType = string.Empty,
+                //                        Version = "--dbtable--"
+                //                    };
+                //                    autobahnTables.Add(fkref);
+                //                    SetTableDomain(autobahnDomains, ref fkref);
+                //                }
+                //                if (fkref.ModuleName == string.Empty)
+                //                {
+                //                    foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
+                //                    {
+                //                        item.ModuleName = col.ModuleName;
+                //                    }
+                //                }
+                //                if (fkref.ModuleName != "Invalid" && fkref.ModuleName != col.ModuleName)
+                //                {
+                //                    foreach (var item in autobahnTables.Where(t => t.TableName == fkref.TableName))
+                //                    {
+                //                        item.ModuleName = comdom?.Module;
+                //                    }
+                //                }
+                //            }
+                //            else
+                //            {
+                //                col.ColumnType = Nullable.GetUnderlyingType(prop.PropertyType) != null
+                //                    ? $"{Nullable.GetUnderlyingType(prop.PropertyType)}?"
+                //                    : $"{prop.PropertyType}";
+                //            }
+                //        }
+                //    }
 
-        //    return autobahnTables;
-        //}
+                //    // Write the updated table file
+                //    csv.WriteTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", autobahnTables, true, ",");
 
-        //private static List<AutobahnElement> GetAutobahnElements()
-        //{
-        //    var csv = new CSVServices();
-        //    var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv", "|");
+                //    return autobahnTables;
+                //}
 
-        //    // Cleanup the Global Id
-        //    int output;
-        //    foreach (var element in CEDSElements.Where(element => !Int32.TryParse(element.GlobalID, out output)))
-        //    {
-        //        element.GlobalID = string.Empty;
-        //    }
+                //private static List<AutobahnElement> GetAutobahnElements()
+                //{
+                //    var csv = new CSVServices();
+                //    var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv", "|");
 
-        //    // save off the updated elements
-        //    csv.WriteCEDSlementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", CEDSElements, "|");
+                //    // Cleanup the Global Id
+                //    int output;
+                //    foreach (var element in CEDSElements.Where(element => !Int32.TryParse(element.GlobalID, out output)))
+                //    {
+                //        element.GlobalID = string.Empty;
+                //    }
 
-        //    // return the new list
-        //    return csv.ReadAutobahnElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", "|"); ;
-        //}
+                //    // save off the updated elements
+                //    csv.WriteCEDSlementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", CEDSElements, "|");
+
+                //    // return the new list
+                //    return csv.ReadAutobahnElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", "|"); ;
+            }
 
         static void Main(string[] args)
         {
             //var csv = new CSVServices();
-            var types = Assembly.GetExecutingAssembly().GetExportedTypes();
+            var types = Assembly.GetExecutingAssembly().GetExportedTypes().OrderBy(o => o.Name).ToList();
             //var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-            //var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
+            GetAutobahnTables(types); // csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnTables.csv", true, ",");
             //var autobahnElements = GetAutobahnElements();
 
             //SeedOrganization();

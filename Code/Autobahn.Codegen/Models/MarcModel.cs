@@ -1,6 +1,6 @@
 ﻿namespace Autobahn.Codegen.Models
 {
-    public class MarcModel
+    internal class MarcModel
     {
         public Guid Id { get; set; }
         public string Definition { get; set; }
