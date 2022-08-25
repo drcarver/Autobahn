@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class SkosExactMatch
+public partial class SkosExactMatch
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

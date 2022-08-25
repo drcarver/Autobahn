@@ -11555,7 +11555,7 @@
     {
       "@id": "schema:CohortStudy",
       "@type": "schema:MedicalObservationalStudyDesign",
-      "rdfs:comment": "Also known as a panel study. A cohort study is a form of longitudinal study used in medicine and social science. It is one type of study design and should be compared with a cross-sectional study.  A cohort is a group of people who share a common characteristic or experience within a defined period (e.g., are born, leave school, lose their job, are exposed to a drug or a vaccine, etc.). The comparison group may be the general population from which the cohort is drawn, or it may be another cohort of persons thought to have had little or no exposure to the substance under investigation, but otherwise similar. Alternatively, subgroups within the cohort may be compared with each other.",
+      "rdfs:comment": "Also known as a panel study. A cohort study is a form of longitudinal study used in medicine and social science.",
       "rdfs:label": "CohortStudy",
       "schema:isPartOf": {
         "@id": "http://health-lifesci.schema.org"
@@ -11650,14 +11650,8 @@
     {
       "@id": "schema:materialExtent",
       "@type": "rdf:Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "The quantity of the materials being described or an expression of the physical space they occupy."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "materialExtent"
-      },
+      "rdfs:comment": "The quantity of the materials being described or an expression of the physical space they occupy.",
+      "rdfs:label": "materialExtent",
       "schema:domainIncludes": {
         "@id": "schema:CreativeWork"
       },
@@ -14726,14 +14720,8 @@
     {
       "@id": "schema:ArchiveOrganization",
       "@type": "rdfs:Class",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ArchiveOrganization"
-      },
+      "rdfs:comment": "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.",
+      "rdfs:label":"ArchiveOrganization",
       "rdfs:subClassOf": {
         "@id": "schema:LocalBusiness"
       },
@@ -17157,14 +17145,8 @@
     {
       "@id": "schema:ArchiveComponent",
       "@type": "rdfs:Class",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ArchiveComponent"
-      },
+      "rdfs:comment": "An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.",
+      "rdfs:label": "ArchiveComponent",
       "rdfs:subClassOf": {
         "@id": "schema:CreativeWork"
       },
@@ -21873,14 +21855,8 @@
     {
       "@id": "schema:holdingArchive",
       "@type": "rdf:Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]]."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "holdingArchive"
-      },
+      "rdfs:comment": "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].",
+      "rdfs:label": "holdingArchive",
       "schema:domainIncludes": {
         "@id": "schema:ArchiveComponent"
       },
@@ -28285,14 +28261,8 @@
     {
       "@id": "schema:itemLocation",
       "@type": "rdf:Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Current location of the item."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "itemLocation"
-      },
+      "rdfs:comment":"Current location of the item.",
+      "rdfs:label": "itemLocation",
       "rdfs:subPropertyOf": {
         "@id": "schema:location"
       },
@@ -34940,14 +34910,8 @@
     {
       "@id": "schema:archiveHeld",
       "@type": "rdf:Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]]."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "archiveHeld"
-      },
+      "rdfs:comment": "Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].",
+      "rdfs:label": "archiveHeld",
       "schema:domainIncludes": {
         "@id": "schema:ArchiveOrganization"
       },
@@ -35688,14 +35652,8 @@
     {
       "@id": "schema:collectionSize",
       "@type": "rdf:Property",
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "The number of items in the [[Collection]]."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "collectionSize"
-      },
+      "rdfs:comment": "The number of items in the [[Collection]].",
+      "rdfs:label": "collectionSize",
       "schema:domainIncludes": {
         "@id": "schema:Collection"
       },

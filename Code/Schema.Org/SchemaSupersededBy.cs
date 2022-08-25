@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class SchemaSupersededBy
+public partial class SchemaSupersededBy
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

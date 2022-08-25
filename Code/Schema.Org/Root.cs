@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class Root
+public partial class Root
 {
     [JsonProperty("@context")]
     public Context Context { get; set; }

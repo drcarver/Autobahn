@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class DctermsSource
+public partial class DctermsSource
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

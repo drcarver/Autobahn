@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class SchemaInverseOf
+public partial class SchemaInverseOf
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

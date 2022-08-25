@@ -6,15 +6,26 @@ namespace Autobahn.Codegen.Models
 {
     internal class EntityAttributes
     {
-        internal EntityAttributes(Type type)
+        internal EntityAttributes()
         {
+        }
+
+        internal EntityAttributes(Type? type)
+        {
+            if (type == null) 
+            { 
+                return; 
+            }
+
             CommentAttribute = type.GetCustomAttributes<CommentAttribute>().FirstOrDefault();
             IndexAttribute = type.GetCustomAttributes<IndexAttribute>().FirstOrDefault();
+            KeylessAttribute = type.GetCustomAttributes<KeylessAttribute>().FirstOrDefault();
             NotMappedAttribute = type.GetCustomAttributes<NotMappedAttribute>().FirstOrDefault();
             TableAttribute = type.GetCustomAttributes<TableAttribute>().FirstOrDefault();
         }
         internal CommentAttribute? CommentAttribute { get; set; }
         internal IndexAttribute? IndexAttribute { get; set; }
+        internal KeylessAttribute? KeylessAttribute { get; set; }
         internal NotMappedAttribute? NotMappedAttribute { get; set; }
         internal TableAttribute? TableAttribute { get; set; }
     }

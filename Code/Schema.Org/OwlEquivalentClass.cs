@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class OwlEquivalentClass
+public partial class OwlEquivalentClass
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

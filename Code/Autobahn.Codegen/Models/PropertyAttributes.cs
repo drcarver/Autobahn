@@ -1,35 +1,32 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Common;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Autobahn.Codegen.Models
 {
     internal class PropertyAttributes
     {
-        internal PropertyAttributes(Type type)
+        internal PropertyAttributes()
         {
-            ColumnAttribute = type.GetCustomAttributes<ColumnAttribute>().FirstOrDefault();
-            CommentAttribute = type.GetCustomAttributes<CommentAttribute>().FirstOrDefault();
-            ConcurrencyCheckAttribute = type.GetCustomAttributes<ConcurrencyCheckAttribute>().FirstOrDefault();
-            DatabaseGeneratedAttribute = type.GetCustomAttributes<DatabaseGeneratedAttribute>().FirstOrDefault();
-            ForeignKeyAttribute = type.GetCustomAttributes<ForeignKeyAttribute>().FirstOrDefault();
-            InversePropertyAttribute = type.GetCustomAttributes<InversePropertyAttribute>().FirstOrDefault();
-            KeyAttribute = type.GetCustomAttributes<KeyAttribute>().FirstOrDefault();
-            KeylessAttribute = type.GetCustomAttributes<KeylessAttribute>().FirstOrDefault();
-            MaxLengthAttribute = type.GetCustomAttributes<MaxLengthAttribute>().FirstOrDefault();
-            NotMappedAttribute = type.GetCustomAttributes<NotMappedAttribute>().FirstOrDefault();
-            PrecisionAttribute = type.GetCustomAttributes<PrecisionAttribute>().FirstOrDefault();
-            RequiredAttribute = type.GetCustomAttributes<RequiredAttribute>().FirstOrDefault();
-            TimestampAttribute = type.GetCustomAttributes<TimestampAttribute>().FirstOrDefault();
-            UnicodeAttribute = type.GetCustomAttributes<UnicodeAttribute>().FirstOrDefault();
+        }
+
+        internal PropertyAttributes(PropertyInfo property)
+        {
+            ColumnAttribute = property.GetCustomAttributes<ColumnAttribute>().FirstOrDefault();
+            CommentAttribute = property.GetCustomAttributes<CommentAttribute>().FirstOrDefault();
+            ConcurrencyCheckAttribute = property.GetCustomAttributes<ConcurrencyCheckAttribute>().FirstOrDefault();
+            DatabaseGeneratedAttribute = property.GetCustomAttributes<DatabaseGeneratedAttribute>().FirstOrDefault();
+            ForeignKeyAttribute = property.GetCustomAttributes<ForeignKeyAttribute>().FirstOrDefault();
+            InversePropertyAttribute = property.GetCustomAttributes<InversePropertyAttribute>().FirstOrDefault();
+            KeyAttribute = property.GetCustomAttributes<KeyAttribute>().FirstOrDefault();
+            KeylessAttribute = property.GetCustomAttributes<KeylessAttribute>().FirstOrDefault();
+            MaxLengthAttribute = property.GetCustomAttributes<MaxLengthAttribute>().FirstOrDefault();
+            NotMappedAttribute = property.GetCustomAttributes<NotMappedAttribute>().FirstOrDefault();
+            PrecisionAttribute = property.GetCustomAttributes<PrecisionAttribute>().FirstOrDefault();
+            RequiredAttribute = property.GetCustomAttributes<RequiredAttribute>().FirstOrDefault();
+            TimestampAttribute = property.GetCustomAttributes<TimestampAttribute>().FirstOrDefault();
+            UnicodeAttribute = property.GetCustomAttributes<UnicodeAttribute>().FirstOrDefault();
         }
         internal ColumnAttribute? ColumnAttribute { get; set; }
         internal CommentAttribute? CommentAttribute { get; set; }

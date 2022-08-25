@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class SkosCloseMatch
+public partial class SkosCloseMatch
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace Autobahn.Codegen.Models
 {
-    internal class _CEDSElement
+    internal class AutobahnElement
     {
         public string GlobalID { get; set; }
         public string ElementName { get; set; }
@@ -14,7 +14,5 @@
         public string TermID { get; set; }
         public string ChangedInThisVersionInd { get; set; }
         public string ChangeNotes { get; set; }
-
-
-    }
+     }
 }

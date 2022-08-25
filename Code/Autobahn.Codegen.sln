@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autobahn.Codegen", "Autobahn.Codegen\Autobahn.Codegen.csproj", "{8EF309EF-6116-4F5A-8F27-1A52EF905665}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schema.Org", "Schema.Org\Schema.Org.csproj", "{77F5F62C-896E-443B-B2DF-6411A5FBA05B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchemaOrg", "Schema.Org\SchemaOrg.csproj", "{77F5F62C-896E-443B-B2DF-6411A5FBA05B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

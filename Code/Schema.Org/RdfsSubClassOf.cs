@@ -2,7 +2,7 @@
 
 namespace SchemaOrg;
 
-public partial class OwlEquivalentProperty
+public partial class RdfsSubClassOf
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

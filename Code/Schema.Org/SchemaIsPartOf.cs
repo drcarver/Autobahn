@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class SchemaIsPartOf
+public partial class SchemaIsPartOf
 {
     [JsonProperty("@id")]
     public string Id { get; set; }

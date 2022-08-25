@@ -1,14 +1,15 @@
 ﻿using Newtonsoft.Json;
 
-namespace Schema.Org;
+namespace SchemaOrg;
 
-public class Graph
+public partial class Graph
 {
     [JsonProperty("@id")]
     public string Id { get; set; }
 
     [JsonProperty("@type")]
-    public string Type { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<string>))]
+    public List<string> SchemaType { get; set; }
 
     [JsonProperty("rdfs:comment")]
     public string RdfsComment { get; set; }
@@ -17,19 +18,23 @@ public class Graph
     public string RdfsLabel { get; set; }
 
     [JsonProperty("schema:domainIncludes")]
-    public object SchemaDomainIncludes { get; set; }
-
+    [JsonConverter(typeof(SingleOrArrayConverter<SchemaDomainIncludes>))]
+    public List<SchemaDomainIncludes> SchemaDomainIncludes { get; set; }
+ 
     [JsonProperty("schema:rangeIncludes")]
-    public object SchemaRangeIncludes { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<SchemaRangeIncludes>))]
+    public List<SchemaRangeIncludes> SchemaRangeIncludes { get; set; }
 
     [JsonProperty("schema:isPartOf")]
     public SchemaIsPartOf SchemaIsPartOf { get; set; }
 
     [JsonProperty("schema:source")]
-    public object SchemaSource { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<SchemaSource>))]
+    public List<SchemaSource> SchemaSource { get; set; }
 
     [JsonProperty("rdfs:subClassOf")]
-    public object RdfsSubClassOf { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<RdfsSubClassOf>))]
+    public List<RdfsSubClassOf> RdfsSubClassOf { get; set; }
 
     [JsonProperty("skos:exactMatch")]
     public SkosExactMatch SkosExactMatch { get; set; }
@@ -38,19 +43,23 @@ public class Graph
     public OwlEquivalentProperty OwlEquivalentProperty { get; set; }
 
     [JsonProperty("rdfs:subPropertyOf")]
-    public RdfsSubPropertyOf RdfsSubPropertyOf { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<RdfsSubPropertyOf>))]
+    public List<RdfsSubPropertyOf> RdfsSubPropertyOf { get; set; }
 
     [JsonProperty("schema:supersededBy")]
     public SchemaSupersededBy SchemaSupersededBy { get; set; }
 
     [JsonProperty("skos:closeMatch")]
-    public SkosCloseMatch SkosCloseMatch { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<SkosCloseMatch>))]
+    public List<SkosCloseMatch> SkosCloseMatch { get; set; }
 
     [JsonProperty("owl:equivalentClass")]
-    public OwlEquivalentClass OwlEquivalentClass { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<OwlEquivalentClass>))]
+    public List<OwlEquivalentClass> OwlEquivalentClass { get; set; }
 
     [JsonProperty("dcterms:source")]
-    public DctermsSource DctermsSource { get; set; }
+    [JsonConverter(typeof(SingleOrArrayConverter<DctermsSource>))]
+    public List<DctermsSource> DctermsSource { get; set; }
 
     [JsonProperty("schema:inverseOf")]
     public SchemaInverseOf SchemaInverseOf { get; set; }
