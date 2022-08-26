@@ -3,7 +3,8 @@
 //* FileName:   LearningResourcePeerRatingModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.LearningResources;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.LearningResources.Models
@@ -11,7 +12,7 @@ namespace Autobahn.LearningResources.Models
      /// <summary>
      /// The LearningResourcePeerRating Model
      /// </summary>
-    public partial class LearningResourcePeerRatingModel : AutobahnBase, Interfaces.ILearningResourcePeerRating
+    public partial class LearningResourcePeerRatingModel : AutobahnBase, ILearningResourcePeerRating
     {
         /// <summary>
         /// Peer Rating Date
@@ -22,16 +23,10 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20171">Peer Rating Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? Date { get; set; }
+        public DateTime? Date { get; set; }
 
         /// <summary>
-        /// Learning Resource Adapted From URL
-        /// <para>
-        /// URL identifier of a learning resource for which this resource is an adaptation.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20367">Learning Resource Adapted From URL</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ILearningResource"/> model
         /// </summary>
         public Guid LearningResourceId { get; set; }
 
@@ -54,7 +49,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20161">Learning Resource Peer Rating Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? Value { get; set; }
+        public Decimal? Value { get; set; }
 
     }
 }

@@ -3,29 +3,22 @@
 //* FileName:   OrganizationImageModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationImage Model
      /// </summary>
-    public partial class OrganizationImageModel : AutobahnBase, Interfaces.IOrganizationImage
+    public partial class OrganizationImageModel : AutobahnBase, IOrganizationImage
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
         /// </summary>
         public Guid OrganizationId { get; set; }
 
-        /// <summary>
-        /// Organization Image URL
-        /// <para>
-        /// The Uniform Resource Locator (URL) for the unique address of an image representing the Organization.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20644">Organization Image URL</a>
-        /// </para>
-        /// </summary>
-        public System.String URL { get; set; }
+        public System.String Url { get; set; }
 
     }
 }

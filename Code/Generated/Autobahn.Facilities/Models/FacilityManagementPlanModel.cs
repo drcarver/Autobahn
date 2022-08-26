@@ -3,7 +3,8 @@
 //* FileName:   FacilityManagementPlanModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The FacilityManagementPlan Model
      /// </summary>
-    public partial class FacilityManagementPlanModel : AutobahnBase, Interfaces.IFacilityManagementPlan
+    public partial class FacilityManagementPlanModel : AutobahnBase, IFacilityManagementPlan
     {
         /// <summary>
         /// Facilities Plan Description
@@ -30,12 +31,24 @@ namespace Autobahn.Facilities.Models
         public Guid FacilityManagementId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilitiesMgmtEmergencyType"/> model
+        /// Facilities Management Emergency Type
+        /// <para>
+        /// The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20852">Facilities Management Emergency Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilitiesPlanType"/> model
+        /// Facilities Plan Type
+        /// <para>
+        /// The type of management and accountability plan.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20864">Facilities Plan Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilitiesPlanTypeId { get; set; }
 

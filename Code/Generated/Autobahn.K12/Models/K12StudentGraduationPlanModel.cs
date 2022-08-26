@@ -1,41 +1,25 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12StudentGraduationPlanModel.cs
-//* Name:       Credits Required
-//* Definition: The total number of credits required for a student to graduate from the school of enrollment or complete a program.
+//* FileName:   K12studentGraduationPlanModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The total number of credits required for a student to graduate from the school of enrollment or complete a program.
+     /// The K12studentGraduationPlan Model
      /// </summary>
-    public partial class K12StudentGraduationPlanModel : AutobahnBase, Interfaces.IK12StudentGraduationPlan
+    public partial class K12studentGraduationPlanModel : AutobahnBase, IK12studentGraduationPlan
     {
-        /// <summary>
-        /// Credits Required
-        /// <para>
-        /// The total number of credits required for a student to graduate from the school of enrollment or complete a program.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20553">Credits Required</a>
-        /// </para>
-        /// </summary>
-        public System.Decimal? CreditsRequired { get; set; }
+        public Decimal? CreditsRequired { get; set; }
 
         /// <summary>
-        /// Available Carnegie Unit Credit
-        /// <para>
-        /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19030">Available Carnegie Unit Credit</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12course"/> model
         /// </summary>
-        public Guid K12CourseId { get; set; }
+        public Guid K12courseId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -48,9 +32,9 @@ namespace Autobahn.K12.Models
         public Guid? RefGradeLevelWhenCourseTakenId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefScedcourseSubjectArea"/> model
         /// </summary>
-        public Guid? RefSCEDCourseSubjectAreaId { get; set; }
+        public Guid? RefScedcourseSubjectAreaId { get; set; }
 
     }
 }

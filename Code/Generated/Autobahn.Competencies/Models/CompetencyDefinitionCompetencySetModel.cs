@@ -3,7 +3,8 @@
 //* FileName:   CompetencyDefinitionCompetencySetModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Competencies;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Competencies.Models
      /// <summary>
      /// The CompetencyDefinitionCompetencySet Model
      /// </summary>
-    public partial class CompetencyDefinitionCompetencySetModel : AutobahnBase, Interfaces.ICompetencyDefinitionCompetencySet
+    public partial class CompetencyDefinitionCompetencySetModel : AutobahnBase, ICompetencyDefinitionCompetencySet
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="ICompetencyDefinition"/> model

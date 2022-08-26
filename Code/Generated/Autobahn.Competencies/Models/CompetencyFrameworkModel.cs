@@ -3,7 +3,8 @@
 //* FileName:   CompetencyFrameworkModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Competencies;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Competencies.Models
      /// <summary>
      /// The CompetencyFramework Model
      /// </summary>
-    public partial class CompetencyFrameworkModel : AutobahnBase, Interfaces.ICompetencyFramework
+    public partial class CompetencyFrameworkModel : AutobahnBase, ICompetencyFramework
     {
         /// <summary>
         /// Competency Framework Publication Date
@@ -22,7 +23,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20548">Competency Framework Publication Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CompetencyFrameworkPublicationDate { get; set; }
+        public DateTime? CompetencyFrameworkPublicationDate { get; set; }
 
         /// <summary>
         /// Competency Framework Source URL
@@ -80,12 +81,24 @@ namespace Autobahn.Competencies.Models
         public System.String Publisher { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCompetencyFrameworkPublicationStatus"/> model
+        /// Competency Framework Publication Status
+        /// <para>
+        /// The publication status of the competency framework.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19675">Competency Framework Publication Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefCompetencyFrameworkPublicationStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
+        /// Competency Framework Language
+        /// <para>
+        /// The default language of the text used for the content in the competency framework.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19880">Competency Framework Language</a>
+        /// </para>
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
@@ -133,16 +146,7 @@ namespace Autobahn.Competencies.Models
         /// </summary>
         public System.String Title { get; set; }
 
-        /// <summary>
-        /// Competency Framework Identifier URI
-        /// <para>
-        /// An unambiguous reference to the competency framework using a network-resolvable URI.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19670">Competency Framework Identifier URI</a>
-        /// </para>
-        /// </summary>
-        public System.String URI { get; set; }
+        public System.String Uri { get; set; }
 
         /// <summary>
         /// Competency Framework Valid End Date

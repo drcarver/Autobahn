@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Credentials
 //* FileName:   CredentialDefinitionModel.cs
-//* Name:       Credential Definition Alternate Name
-//* Definition: An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Credentials;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
-     /// An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
+     /// The CredentialDefinition Model
      /// </summary>
-    public partial class CredentialDefinitionModel : AutobahnBase, Interfaces.ICredentialDefinition
+    public partial class CredentialDefinitionModel : AutobahnBase, ICredentialDefinition
     {
         /// <summary>
         /// Credential Definition Alternate Name
@@ -35,7 +34,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20891">Credential Definition Date Effective</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CredentialDefDateEffective { get; set; }
+        public DateTime? CredentialDefDateEffective { get; set; }
 
         /// <summary>
         /// Credential Definition Terminal Degree Indicator
@@ -46,29 +45,11 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20919">Credential Definition Terminal Degree Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CredentialDefinitionTerminalDegreeIndicator { get; set; }
+        public Boolean? CredentialDefinitionTerminalDegreeIndicator { get; set; }
 
-        /// <summary>
-        /// Credential Definition NAICS Industry Type
-        /// <para>
-        /// The North American Industry Classification System (NAICS) class identifier for an industry associated with the credential.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20723">Credential Definition NAICS Industry Type</a>
-        /// </para>
-        /// </summary>
-        public System.String CredentialNAICSIndustryType { get; set; }
+        public System.String CredentialNaicsindustryType { get; set; }
 
-        /// <summary>
-        /// Employment NAICS Code
-        /// <para>
-        /// The North American Industry Classification System (NAICS) code associated with an individual's employment.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20070">Employment NAICS Code</a>
-        /// </para>
-        /// </summary>
-        public System.String EmploymentNAICSCode { get; set; }
+        public System.String EmploymentNaicscode { get; set; }
 
         /// <summary>
         /// Credential Image URL
@@ -115,39 +96,69 @@ namespace Autobahn.Credentials.Models
         public System.String Keywords { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCareerCluster"/> model
+        /// Career Cluster
+        /// <para>
+        /// The career cluster that defines the industry or occupational focus which may be associated with a career pathways program, plan of study, or course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20254">Career Cluster</a>
+        /// </para>
         /// </summary>
         public Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
+        /// Classification of Instructional Program Code
+        /// <para>
+        /// A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19043">Classification of Instructional Program Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCredentialDefIntendedPurposeType"/> model
+        /// Credential Definition Intended Purpose Type
+        /// <para>
+        /// The intended type of application of the credential by the holder.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20730">Credential Definition Intended Purpose Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCredentialDefIntendedPurposeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCredentialDefStatusType"/> model
+        /// Credential Definition Status Type
+        /// <para>
+        /// The status of the credential offered by a credentialing organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20721">Credential Definition Status Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCredentialDefStatusTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCredentialDefVerificationType"/> model
+        /// Credential Definition Verification Type
+        /// <para>
+        /// A resource describing the means by which someone can verify whether a credential has been attained by a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20734">Credential Definition Verification Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCredentialDefVerificationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCTDLAudienceLevelType"/> model
+        /// Reference to an optional instance of the <see cref="RefCtdlaudienceLevelType"/> model
         /// </summary>
-        public Guid? RefCTDLAudienceLevelTypeId { get; set; }
+        public Guid? RefCtdlaudienceLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefONETSOCOccupationType"/> model
+        /// Reference to an optional instance of the <see cref="RefOnetsococcupationType"/> model
         /// </summary>
-        public Guid? RefONETSOCOccupationTypeId { get; set; }
+        public Guid? RefOnetsococcupationTypeId { get; set; }
 
         /// <summary>
         /// Credential Definition Title
@@ -180,7 +191,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20735">Credential Definition Version</a>
         /// </para>
         /// </summary>
-        public System.Decimal? Version { get; set; }
+        public Decimal? Version { get; set; }
 
     }
 }

@@ -1,30 +1,20 @@
 //**********************************************************
 //* DomainName: Learning Resources
 //* FileName:   LearningResourceModel.cs
-//* Name:       Learning Resource Adapted From URL
-//* Definition: URL identifier of a learning resource for which this resource is an adaptation.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.LearningResources;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.LearningResources.Models
 {
      /// <summary>
-     /// URL identifier of a learning resource for which this resource is an adaptation.
+     /// The LearningResource Model
      /// </summary>
-    public partial class LearningResourceModel : AutobahnBase, Interfaces.ILearningResource
+    public partial class LearningResourceModel : AutobahnBase, ILearningResource
     {
-        /// <summary>
-        /// Learning Resource Adapted From URL
-        /// <para>
-        /// URL identifier of a learning resource for which this resource is an adaptation.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20367">Learning Resource Adapted From URL</a>
-        /// </para>
-        /// </summary>
-        public System.String AdaptedFromURL { get; set; }
+        public System.String AdaptedFromUrl { get; set; }
 
         /// <summary>
         /// Learning Resource Assistive Technologies Compatible Indicator
@@ -35,7 +25,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20362">Learning Resource Assistive Technologies Compatible Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? AssistiveTechnologiesCompatibleInd { get; set; }
+        public Boolean? AssistiveTechnologiesCompatibleInd { get; set; }
 
         /// <summary>
         /// Learning Resource Based on URL
@@ -101,7 +91,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19916">Learning Resource Date Created</a>
         /// </para>
         /// </summary>
-        public System.DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; set; }
 
         /// <summary>
         /// Learning Resource Author Email
@@ -114,16 +104,7 @@ namespace Autobahn.LearningResources.Models
         /// </summary>
         public System.String LearningResourceAuthorEmail { get; set; }
 
-        /// <summary>
-        /// Learning Resource Author URL
-        /// <para>
-        /// A Uniform Resource Locator (URL) attributed to the author of a learning resource.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20541">Learning Resource Author URL</a>
-        /// </para>
-        /// </summary>
-        public System.String LearningResourceAuthorURL { get; set; }
+        public System.String LearningResourceAuthorUrl { get; set; }
 
         /// <summary>
         /// Learning Resource Date Modified
@@ -134,18 +115,9 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20542">Learning Resource Date Modified</a>
         /// </para>
         /// </summary>
-        public System.DateTime? LearningResourceDateModified { get; set; }
+        public DateTime? LearningResourceDateModified { get; set; }
 
-        /// <summary>
-        /// Learning Resource License URL
-        /// <para>
-        /// The URL where the owner specifies permissions for using the resource.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19922">Learning Resource License URL</a>
-        /// </para>
-        /// </summary>
-        public System.String LearningResourceLicenseURL { get; set; }
+        public System.String LearningResourceLicenseUrl { get; set; }
 
         /// <summary>
         /// Learning Resource Publisher Email
@@ -158,16 +130,7 @@ namespace Autobahn.LearningResources.Models
         /// </summary>
         public System.String LearningResourcePublisherEmail { get; set; }
 
-        /// <summary>
-        /// Learning Resource Publisher URL
-        /// <para>
-        /// A Uniform Resource Locator (URL) attributed to the publisher of a learning resource.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20547">Learning Resource Publisher URL</a>
-        /// </para>
-        /// </summary>
-        public System.String LearningResourcePublisherURL { get; set; }
+        public System.String LearningResourcePublisherUrl { get; set; }
 
         /// <summary>
         /// Learning Resource Peer Rating Sample Size
@@ -178,7 +141,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20369">Learning Resource Peer Rating Sample Size</a>
         /// </para>
         /// </summary>
-        public System.Int32? PeerRatingSampleSize { get; set; }
+        public Int32? PeerRatingSampleSize { get; set; }
 
         /// <summary>
         /// Learning Resource Published Date
@@ -189,7 +152,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20135">Learning Resource Published Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? PublishedDate { get; set; }
+        public DateTime? PublishedDate { get; set; }
 
         /// <summary>
         /// Learning Resource Publisher Name
@@ -203,77 +166,161 @@ namespace Autobahn.LearningResources.Models
         public System.String PublisherName { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
+        /// Learning Resource Language
+        /// <para>
+        /// The primary language of the resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19920">Learning Resource Language</a>
+        /// </para>
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessAPIType"/> model
+        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessApitype"/> model
         /// </summary>
-        public Guid? RefLearningResourceAccessAPITypeId { get; set; }
+        public Guid? RefLearningResourceAccessApitypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessHazardType"/> model
+        /// Learning Resource Access Hazard Type
+        /// <para>
+        /// A characteristic of the described learning resource that is physiologically dangerous to some users.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20359">Learning Resource Access Hazard Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceAccessHazardTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessModeType"/> model
+        /// Learning Resource Access Mode Type
+        /// <para>
+        /// An access mode through which the intellectual content of a described learning resource or adaptation is communicated; if adaptations for the resource are known, the access modes of those adaptations are not included.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20360">Learning Resource Access Mode Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceAccessModeTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceAccessRightsUrl"/> model
+        /// Learning Resource Access Rights URL
+        /// <para>
+        /// A Uniform Resource Locator (URL) that identifies the conditions that govern the user's ability to access a learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20537">Learning Resource Access Rights URL</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceAccessRightsUrlId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceAuthorType"/> model
+        /// Learning Resource Author Type
+        /// <para>
+        /// The type of entity, organization or person, that authored the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20540">Learning Resource Author Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceAuthorTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceBookFormatType"/> model
+        /// Learning Resource Book Format Type
+        /// <para>
+        /// Specifies the format for a learning resource that is a book.  Other options may be considered for inclusion in the option set.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20363">Learning Resource Book Format Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceBookFormatTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceControlFlexibilityType"/> model
+        /// Learning Resource Control Flexibility Type
+        /// <para>
+        /// Identifies a single input method that is sufficient to control the described learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20364">Learning Resource Control Flexibility Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceControlFlexibilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceDigitalMediaSubType"/> model
+        /// Learning Resource Digital Media Sub Type
+        /// <para>
+        /// The media or file subtype of the digital resource being based on the Media Types and Subtypes, formerly known as MIME types, defined by the Internet Assigned Numbers Authority (IANA).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20365">Learning Resource Digital Media Sub Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceDigitalMediaSubTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceDigitalMediaType"/> model
+        /// Learning Resource Digital Media Type
+        /// <para>
+        /// The media or file type of the digital resource being based on the media types defined by the Internet Assigned Numbers Authority (AINA) at http://www.iana.org/assignments/media-types.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20366">Learning Resource Digital Media Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceDigitalMediaTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceEducationalUse"/> model
+        /// Learning Resource Educational Use
+        /// <para>
+        /// The purpose of the work in the context of education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20005">Learning Resource Educational Use</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceEducationalUseId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceIntendedEndUserRole"/> model
+        /// Learning Resource Intended End User Role
+        /// <para>
+        /// The individual or group for which the resource was produced.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19924">Learning Resource Intended End User Role</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceIntendedEndUserRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceInteractionMode"/> model
+        /// Learning Resource Interaction Mode
+        /// <para>
+        /// The primary type of interaction, synchronous or asynchronous, defined for the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20543">Learning Resource Interaction Mode</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceInteractionModeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceInteractivityType"/> model
+        /// Learning Resource Interactivity Type
+        /// <para>
+        /// The predominate mode of learning supported by the learning resource. Acceptable values are active, expositive, or mixed.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19928">Learning Resource Interactivity Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceInteractivityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLearningResourceType"/> model
+        /// Learning Resource Type
+        /// <para>
+        /// The predominate type or kind characterizing the learning resource.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19929">Learning Resource Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLearningResourceTypeId { get; set; }
 
@@ -341,7 +388,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19925">Learning Resource Time Required</a>
         /// </para>
         /// </summary>
-        public System.Decimal? TimeRequired { get; set; }
+        public Decimal? TimeRequired { get; set; }
 
         /// <summary>
         /// Learning Resource Title
@@ -363,7 +410,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19927">Learning Resource Typical Age Range Maximum</a>
         /// </para>
         /// </summary>
-        public System.Byte? TypicalAgeRangeMaximum { get; set; }
+        public Byte? TypicalAgeRangeMaximum { get; set; }
 
         /// <summary>
         /// Learning Resource Typical Age Range Minimum
@@ -374,7 +421,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19926">Learning Resource Typical Age Range Minimum</a>
         /// </para>
         /// </summary>
-        public System.Byte? TypicalAgeRangeMinimum { get; set; }
+        public Byte? TypicalAgeRangeMinimum { get; set; }
 
         /// <summary>
         /// Learning Resource URL

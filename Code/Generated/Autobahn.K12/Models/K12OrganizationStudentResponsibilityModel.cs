@@ -1,17 +1,18 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12OrganizationStudentResponsibilityModel.cs
+//* FileName:   K12organizationStudentResponsibilityModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12OrganizationStudentResponsibility Model
+     /// The K12organizationStudentResponsibility Model
      /// </summary>
-    public partial class K12OrganizationStudentResponsibilityModel : AutobahnBase, Interfaces.IK12OrganizationStudentResponsibility
+    public partial class K12organizationStudentResponsibilityModel : AutobahnBase, IK12organizationStudentResponsibility
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -19,9 +20,9 @@ namespace Autobahn.K12.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefK12ResponsibilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefK12responsibilityType"/> model
         /// </summary>
-        public Guid RefK12ResponsibilityTypeId { get; set; }
+        public Guid RefK12responsibilityTypeId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefStudentSchoolAffiliationStateDefinedStatus"/> model

@@ -3,13 +3,15 @@
 //* FileName:   PersonReferralModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonReferral Model
      /// </summary>
-    public partial class PersonReferralModel : AutobahnBase, Interfaces.IPersonReferral
+    public partial class PersonReferralModel : AutobahnBase, IPersonReferral
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -36,7 +38,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20453">Referral Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ReferralDate { get; set; }
+        public DateTime? ReferralDate { get; set; }
 
         /// <summary>
         /// Referral Type Received
@@ -61,7 +63,13 @@ namespace Autobahn.Common.Models
         public System.String ReferredTo { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefReferralOutcome"/> model
+        /// Referral Outcome
+        /// <para>
+        /// The outcome of the referral.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20454">Referral Outcome</a>
+        /// </para>
         /// </summary>
         public Guid? RefReferralOutcomeId { get; set; }
 

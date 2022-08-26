@@ -3,13 +3,15 @@
 //* FileName:   PersonDigitalAccessSpeedModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDigitalAccessSpeed Model
      /// </summary>
-    public partial class PersonDigitalAccessSpeedModel : AutobahnBase, Interfaces.IPersonDigitalAccessSpeed
+    public partial class PersonDigitalAccessSpeedModel : AutobahnBase, IPersonDigitalAccessSpeed
     {
         /// <summary>
         /// Internet Download Speed
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20938">Internet Download Speed</a>
         /// </para>
         /// </summary>
-        public System.Decimal? InternetDownloadSpeed { get; set; }
+        public Decimal? InternetDownloadSpeed { get; set; }
 
         /// <summary>
         /// Internet Speed Test Date Time
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20940">Internet Speed Test Date Time</a>
         /// </para>
         /// </summary>
-        public System.DateTime? InternetSpeedTestDateTime { get; set; }
+        public DateTime? InternetSpeedTestDateTime { get; set; }
 
         /// <summary>
         /// Internet Upload Speed
@@ -42,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20941">Internet Upload Speed</a>
         /// </para>
         /// </summary>
-        public System.Decimal? InternetUploadSpeed { get; set; }
+        public Decimal? InternetUploadSpeed { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPersonDigitalAccess"/> model

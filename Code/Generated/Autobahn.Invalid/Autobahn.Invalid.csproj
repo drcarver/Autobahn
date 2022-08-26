@@ -17,15 +17,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <ApplicationId>com.drcarver.autobahn.invalid</ApplicationId>
+    <ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1.0</ApplicationVersion>
+    <ApplicationIdGuid>6ada287e-1ec9-4e52-8df6-36a3045fcce4</ApplicationIdGuid>
+    <ApplicationTitle>Invalid or Unreferenced Models</ApplicationTitle>
+    <AssemblyName>Autobahn.Invalid</AssemblyName>
+    <CompanyName>dcarver.com</CompanyName>
+    <Copyright>(c)Darrel Carver, 2021-2022</Copyright>
+    <Description>Legacy models no longer used in any domain.</Description>
+    <ProductName>Autobahn</ProductName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Autobahn.Common\Autobahn.Common.csproj" />
+    <ProjectReference Include="..\Autobahn.Interfaces\Autobahn.Interfaces.csproj" />
   </ItemGroup>
 </Project>

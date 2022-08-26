@@ -1,27 +1,19 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12StudentEmploymentModel.cs
+//* FileName:   K12studentEmploymentModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12StudentEmployment Model
+     /// The K12studentEmployment Model
      /// </summary>
-    public partial class K12StudentEmploymentModel : AutobahnBase, Interfaces.IK12StudentEmployment
+    public partial class K12studentEmploymentModel : AutobahnBase, IK12studentEmployment
     {
-        /// <summary>
-        /// Employment NAICS Code
-        /// <para>
-        /// The North American Industry Classification System (NAICS) code associated with an individual's employment.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20070">Employment NAICS Code</a>
-        /// </para>
-        /// </summary>
         public System.String EmploymentNaicsCode { get; set; }
 
         /// <summary>

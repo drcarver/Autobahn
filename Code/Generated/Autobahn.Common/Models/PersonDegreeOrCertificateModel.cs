@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonDegreeOrCertificateModel.cs
-//* Name:       Diploma or Credential Award Date
-//* Definition: The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.
+     /// The PersonDegreeOrCertificate Model
      /// </summary>
-    public partial class PersonDegreeOrCertificateModel : AutobahnBase, Interfaces.IPersonDegreeOrCertificate
+    public partial class PersonDegreeOrCertificateModel : AutobahnBase, IPersonDegreeOrCertificate
     {
         /// <summary>
         /// Diploma or Credential Award Date
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? AwardDate { get; set; }
+        public DateTime? AwardDate { get; set; }
 
         /// <summary>
         /// Degree or Certificate Title or Subject
@@ -52,17 +52,35 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDegreeOrCertificateType"/> model
+        /// Degree or Certificate Type
+        /// <para>
+        /// The type of degree or certificate earned by a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19342">Degree or Certificate Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDegreeOrCertificateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEducationVerificationMethod"/> model
+        /// Education Verification Method
+        /// <para>
+        /// The method by which the formal education is verified.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20586">Education Verification Method</a>
+        /// </para>
         /// </summary>
         public Guid? RefEducationVerificationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Higher Education Institution Accreditation Status
+        /// <para>
+        /// An indication of the accreditation status of a higher education institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19817">Higher Education Institution Accreditation Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 

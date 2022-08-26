@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Career and Technical Education (CTE)
 //* FileName:   ProgramParticipationCteModel.cs
-//* Name:       Career Pathways Program Participation Exit Date
-//* Definition: The year, month and day on which the person ceased to participate in a program.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.CTE;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.CTE.Models
 {
      /// <summary>
-     /// The year, month and day on which the person ceased to participate in a program.
+     /// The ProgramParticipationCte Model
      /// </summary>
-    public partial class ProgramParticipationCteModel : AutobahnBase, Interfaces.IProgramParticipationCte
+    public partial class ProgramParticipationCteModel : AutobahnBase, IProgramParticipationCte
     {
         /// <summary>
         /// Career Pathways Program Participation Exit Date
@@ -24,7 +23,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20562">Career Pathways Program Participation Exit Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CareerPathwaysProgramParticipationExitDate { get; set; }
+        public DateTime? CareerPathwaysProgramParticipationExitDate { get; set; }
 
         /// <summary>
         /// Career Pathways Program Participation Start Date
@@ -35,7 +34,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20563">Career Pathways Program Participation Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CareerPathwaysProgramParticipationStartDate { get; set; }
+        public DateTime? CareerPathwaysProgramParticipationStartDate { get; set; }
 
         /// <summary>
         /// Career and Technical Education Completer
@@ -46,7 +45,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19036">Career and Technical Education Completer</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CteCompleter { get; set; }
+        public Boolean? CteCompleter { get; set; }
 
         /// <summary>
         /// Career and Technical Education Concentrator
@@ -57,7 +56,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19037">Career and Technical Education Concentrator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CteConcentrator { get; set; }
+        public Boolean? CteConcentrator { get; set; }
 
         /// <summary>
         /// Career and Technical Education Nontraditional Completion
@@ -68,7 +67,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19586">Career and Technical Education Nontraditional Completion</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CteNonTraditionalCompletion { get; set; }
+        public Boolean? CteNonTraditionalCompletion { get; set; }
 
         /// <summary>
         /// Career and Technical Education Participant
@@ -79,7 +78,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19585">Career and Technical Education Participant</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CteParticipant { get; set; }
+        public Boolean? CteParticipant { get; set; }
 
         /// <summary>
         /// Career-Technical-Adult Education Displaced Homemaker Indicator
@@ -90,7 +89,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19084">Career-Technical-Adult Education Displaced Homemaker Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DisplacedHomemakerIndicator { get; set; }
+        public Boolean? DisplacedHomemakerIndicator { get; set; }
 
         /// <summary>
         /// Out of Workforce Indicator
@@ -101,7 +100,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20908">Out of Workforce Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? OutOfWorkforceIndicator { get; set; }
+        public Boolean? OutOfWorkforceIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPersonProgramParticipation"/> model
@@ -109,12 +108,24 @@ namespace Autobahn.CTE.Models
         public Guid PersonProgramParticipationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefNonTraditionalGenderStatus"/> model
+        /// Career Technical Education Nontraditional Gender Status
+        /// <para>
+        /// An indication of whether CTE participants were members of an underrepresented gender group (where one gender comprises less than 25 percent of the persons employed in those occupations or field of work).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19581">Career Technical Education Nontraditional Gender Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefNonTraditionalGenderStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
+        /// Work-based Learning Opportunity Type
+        /// <para>
+        /// The type of work-based learning opportunity a student participated in.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20471">Work-based Learning Opportunity Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 
@@ -127,7 +138,7 @@ namespace Autobahn.CTE.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19573">Single Parent or Single Pregnant Woman Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? SingleParentOrSinglePregnantWoman { get; set; }
+        public Boolean? SingleParentOrSinglePregnantWoman { get; set; }
 
     }
 }

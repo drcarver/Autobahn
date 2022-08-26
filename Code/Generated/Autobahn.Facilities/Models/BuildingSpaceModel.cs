@@ -3,7 +3,8 @@
 //* FileName:   BuildingSpaceModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,111 +12,219 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The BuildingSpace Model
      /// </summary>
-    public partial class BuildingSpaceModel : AutobahnBase, Interfaces.IBuildingSpace
+    public partial class BuildingSpaceModel : AutobahnBase, IBuildingSpace
     {
         /// <summary>
-        /// Building Area
-        /// <para>
-        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20745">Building Area</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFacility"/> model
         /// </summary>
         public Guid FacilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingAdministrativeSpaceType"/> model
+        /// Building Administrative Space Type
+        /// <para>
+        /// The space designed primarily for conducting administrative and business functions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20794">Building Administrative Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingAdministrativeSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingArtSpecialtySpaceType"/> model
+        /// Building Art Specialty Space Type
+        /// <para>
+        /// The space designed to support the teaching and learning of 2 dimensional or 3 dimensional visual arts.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20795">Building Art Specialty Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingArtSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingAssemblySpaceType"/> model
+        /// Building Assembly Space Type
+        /// <para>
+        /// An area designed primarily for theater productions, assemblies, and other large gatherings.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20817">Building Assembly Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingAssemblySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingBasicClassroomDesignType"/> model
+        /// Building Basic Classroom Design Type
+        /// <para>
+        /// A classroom designed for instruction of a particular age group, but not a specific subject.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20796">Building Basic Classroom Design Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingBasicClassroomDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingCareerTechEducationSpaceType"/> model
+        /// Building Career-Technical Education Space Type
+        /// <para>
+        /// The classroom, laboratory, or shop specially located, designed, furnished, and equipped to support instruction of technical and technology related curriculum, usually tied to particular industry, for example, bio-tech, construction, or agriculture.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20798">Building Career-Technical Education Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingCareerTechEducationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingCirculationSpaceType"/> model
+        /// Building Circulation Space Type
+        /// <para>
+        /// A space designed to enable people to move within the building.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20799">Building Circulation Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingCirculationSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingFoodServiceSpaceType"/> model
+        /// Building Food Service Space Type
+        /// <para>
+        /// The space located, designed, furnished and equipped to support meal programs.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20802">Building Food Service Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingFoodServiceSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingFullServiceKitchenType"/> model
+        /// Building Full Service Kitchen Type
+        /// <para>
+        /// The type of kitchen housed in the facility as defined by whether it prepares food to be served onsite and/or at additional locations.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20824">Building Full Service Kitchen Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingFullServiceKitchenTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingIndoorAthleticOrPhysEdSpaceType"/> model
+        /// Building Indoor Athletic or Physical Education Space Type
+        /// <para>
+        /// The indoor space designed, located, furnished, and equipped for instruction and support of a physical education curriculum and athletic program.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20803">Building Indoor Athletic or Physical Education Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingIndoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingLibMediaCenterSpecialtySpaceType"/> model
+        /// Building Library or Media Center Specialty Space Type
+        /// <para>
+        /// The primary and auxiliary space designed to provide and support student and staff access to books, periodicals, software, videos, and the Internet.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20804">Building Library or Media Center Specialty Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingLibMediaCenterSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingOperationsOrMaintSpaceType"/> model
+        /// Building Operations or Maintenance Space Type
+        /// <para>
+        /// The area designed primarily for conducting activities concerned with maintaining the grounds, buildings, and equipment.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20805">Building Operations or Maintenance Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingOperationsOrMaintSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingOutdoorAthleticOrPhysEdSpaceType"/> model
+        /// Building Outdoor Athletic or Physical Education Space Type
+        /// <para>
+        /// The outdoor space designed, located, furnished, and equipped for instruction and support of a physical education curriculum and athletic program.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20806">Building Outdoor Athletic or Physical Education Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingOutdoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingOutdoorOrNonathleticSpaceType"/> model
+        /// Building Outdoor or Non-athletic Space Type
+        /// <para>
+        /// The outdoor space located, designed, furnished, and equipped primarily for recreation, play and outdoor environmental education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20807">Building Outdoor or Non-athletic Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingOutdoorOrNonathleticSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingPerformingArtsSpecialtySpaceType"/> model
+        /// Building Performing Arts Specialty Space Type
+        /// <para>
+        /// The space designed, located, furnished, and equipped for instruction and support of music and drama curricula and productions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20808">Building Performing Arts Specialty Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingPerformingArtsSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingScienceSpecialtySpaceType"/> model
+        /// Building Science Specialty Space Type
+        /// <para>
+        /// The space designed, located, furnished, and equipped for instruction and experimentation in science.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20810">Building Science Specialty Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingScienceSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingSpaceDesignType"/> model
+        /// Building Space Design Type
+        /// <para>
+        /// The primary design or purpose of a space, as determined by its physical layout and built-in systems and equipment, regardless of its current use.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20812">Building Space Design Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingSpaceDesignTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingSpecEdSpecialtySpaceType"/> model
+        /// Building Special Education Specialty Space Type
+        /// <para>
+        /// The space designed, located, furnished, and equipped to support instruction of children with special physical, emotional, and/or educational needs.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20813">Building Special Education Specialty Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingSpecEdSpecialtySpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingStudentSupportSpaceType"/> model
+        /// Building Student Support Space Type
+        /// <para>
+        /// The space designed to provide student support services such as administrative, technical (e.g., guidance and health), and logistical support to facilitate and enhance instruction.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20814">Building Student Support Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingStudentSupportSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSpaceUseType"/> model
+        /// Facility Space Use Type
+        /// <para>
+        /// The primary use of a space, as determined by its physical layout and built-in systems and equipment, regardless of its original design.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20175">Facility Space Use Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefSpaceUseTypeId { get; set; }
 

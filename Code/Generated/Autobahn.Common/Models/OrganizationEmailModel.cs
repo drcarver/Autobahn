@@ -3,13 +3,15 @@
 //* FileName:   OrganizationEmailModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationEmail Model
      /// </summary>
-    public partial class OrganizationEmailModel : AutobahnBase, Interfaces.IOrganizationEmail
+    public partial class OrganizationEmailModel : AutobahnBase, IOrganizationEmail
     {
         /// <summary>
         /// Do Not Publish Indicator
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DoNotPublishIndicator { get; set; }
+        public Boolean? DoNotPublishIndicator { get; set; }
 
         /// <summary>
         /// Electronic Mail Address
@@ -39,7 +41,13 @@ namespace Autobahn.Common.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEmailType"/> model
+        /// Electronic Mail Address Type
+        /// <para>
+        /// The type of electronic mail (e-mail) address listed for a person or organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19089">Electronic Mail Address Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefEmailTypeId { get; set; }
 

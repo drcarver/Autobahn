@@ -17,46 +17,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <MauiXaml Update="Views\LearnerActionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearnerActivityView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearnerActivityLearningResourceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourceAdaptationView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourceEducationLevelView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourceMediaFeatureView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourcePeerRatingView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\LearningResourcePhysicalMediaView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PeerRatingSystemView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <ApplicationId>com.drcarver.autobahn.learningresources</ApplicationId>
+    <ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1.0</ApplicationVersion>
+    <ApplicationIdGuid>27d1aa01-f176-4c6d-bbfb-7a4aa6b2ec25</ApplicationIdGuid>
+    <ApplicationTitle>Learning Resources</ApplicationTitle>
+    <AssemblyName>Autobahn.LearningResources</AssemblyName>
+    <CompanyName>dcarver.com</CompanyName>
+    <Copyright>(c)Darrel Carver, 2021-2022</Copyright>
+    <Description>Information about materials that support teaching and learning.</Description>
+    <ProductName>Autobahn</ProductName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Autobahn.Common\Autobahn.Common.csproj" />
+    <ProjectReference Include="..\Autobahn.Interfaces\Autobahn.Interfaces.csproj" />
   </ItemGroup>
 </Project>

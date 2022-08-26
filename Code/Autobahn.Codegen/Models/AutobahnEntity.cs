@@ -22,7 +22,7 @@
         internal string Name { get; set; }
         internal Guid Id { get; set; } = Guid.NewGuid();
         internal string Label { get; set; }
-        internal AutobahnElement AutobahnElement { get; set; }
+        internal AutobahnElement? AutobahnElement { get; set; }
         internal List<string> SubClass { get; set; } = new List<string>();
         internal List<AutobahnProperty> AutobahnProperties { get; set; } = new List<AutobahnProperty>();
     }

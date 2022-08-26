@@ -1,17 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
-//* FileName:   PSStudentProgramModel.cs
+//* FileName:   PsstudentProgramModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The PSStudentProgram Model
+     /// The PsstudentProgram Model
      /// </summary>
-    public partial class PSStudentProgramModel : AutobahnBase, Interfaces.IPSStudentProgram
+    public partial class PsstudentProgramModel : AutobahnBase, IPsstudentProgram
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model

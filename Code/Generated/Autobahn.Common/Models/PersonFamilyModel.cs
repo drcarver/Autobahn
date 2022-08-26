@@ -3,13 +3,15 @@
 //* FileName:   PersonFamilyModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonFamily Model
      /// </summary>
-    public partial class PersonFamilyModel : AutobahnBase, Interfaces.IPersonFamily
+    public partial class PersonFamilyModel : AutobahnBase, IPersonFamily
     {
         /// <summary>
         /// Family Identifier
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19331">Family Income</a>
         /// </para>
         /// </summary>
-        public System.Decimal? FamilyIncome { get; set; }
+        public Decimal? FamilyIncome { get; set; }
 
         /// <summary>
         /// Included in Counted Family Size
@@ -42,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20591">Included in Counted Family Size</a>
         /// </para>
         /// </summary>
-        public System.Boolean? IncludedInCountedFamilySize { get; set; }
+        public Boolean? IncludedInCountedFamilySize { get; set; }
 
         /// <summary>
         /// Number of Household College Students
@@ -53,15 +55,18 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20950">Number of Household College Students</a>
         /// </para>
         /// </summary>
-        public System.Int32? NumberOfHouseholdCollegeStudents { get; set; }
+        public Int32? NumberOfHouseholdCollegeStudents { get; set; }
 
         /// <summary>
         /// Number of People in Family
         /// <para>
         /// Total number of persons in immediate family. Family means for the purposes of the regulations in this part all persons: (i) Living in the same household who are: (A) Supported by the income of the parent(s) or guardian(s) of the child enrolling or participating in the program; or (B) Related to the child by blood, marriage, or adoption; or &#x0D;
         /// </para>
+        /// <para>
+        /// <a href="">Number of People in Family</a>
+        /// </para>
         /// </summary>
-        public System.Int32? NumberOfPeopleInFamily { get; set; }
+        public Int32? NumberOfPeopleInFamily { get; set; }
 
         /// <summary>
         /// Number of People in Household
@@ -72,7 +77,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19330">Number of People in Household</a>
         /// </para>
         /// </summary>
-        public System.Int32? NumberOfPeopleInHousehold { get; set; }
+        public Int32? NumberOfPeopleInHousehold { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -80,32 +85,62 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCommunicationMethod"/> model
+        /// Parent Communication Method
+        /// <para>
+        /// The types of communication methods with parents.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19857">Parent Communication Method</a>
+        /// </para>
         /// </summary>
         public Guid? RefCommunicationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefELProgramEligibility"/> model
+        /// Reference to an optional instance of the <see cref="RefElprogramEligibility"/> model
         /// </summary>
-        public Guid? RefELProgramEligibilityId { get; set; }
+        public Guid? RefElprogramEligibilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFamilyIncomeSource"/> model
+        /// Source of Family Income
+        /// <para>
+        /// Sources of total family income.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19332">Source of Family Income</a>
+        /// </para>
         /// </summary>
         public Guid? RefFamilyIncomeSourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
+        /// Highest Level of Education Completed
+        /// <para>
+        /// The extent of formal instruction a person has received (e.g., the highest grade in school completed or its equivalent or the highest degree received).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19141">Highest Level of Education Completed</a>
+        /// </para>
         /// </summary>
         public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIncomeCalculationMethod"/> model
+        /// Income Calculation Method
+        /// <para>
+        /// The calculation method used by a program to determine total family income.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19333">Income Calculation Method</a>
+        /// </para>
         /// </summary>
         public Guid? RefIncomeCalculationMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
+        /// Proof of Residency Type
+        /// <para>
+        /// An accepted form of proof of residency in the district/county/other locality.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19305">Proof of Residency Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefProofOfResidencyTypeId { get; set; }
 

@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonRelationshipModel.cs
-//* Name:       Person Relationship to Learner Contact Priority Number
-//* Definition: The numeric order in the preferred sequence and priority for contacting a person related to the learner.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The numeric order in the preferred sequence and priority for contacting a person related to the learner.
+     /// The PersonRelationship Model
      /// </summary>
-    public partial class PersonRelationshipModel : AutobahnBase, Interfaces.IPersonRelationship
+    public partial class PersonRelationshipModel : AutobahnBase, IPersonRelationship
     {
         /// <summary>
         /// Person Relationship to Learner Contact Priority Number
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20392">Person Relationship to Learner Contact Priority Number</a>
         /// </para>
         /// </summary>
-        public System.Int32? ContactPriorityNumber { get; set; }
+        public Int32? ContactPriorityNumber { get; set; }
 
         /// <summary>
         /// Person Relationship to Learner Contact Restrictions Description
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19328">Custodial Parent or Guardian Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CustodialRelationshipIndicator { get; set; }
+        public Boolean? CustodialRelationshipIndicator { get; set; }
 
         /// <summary>
         /// Emergency Contact Indicator
@@ -55,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20308">Emergency Contact Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? EmergencyContactInd { get; set; }
+        public Boolean? EmergencyContactInd { get; set; }
 
         /// <summary>
         /// Person Relationship to Learner Lives with Indicator
@@ -66,7 +66,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20394">Person Relationship to Learner Lives with Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? LivesWithIndicator { get; set; }
+        public Boolean? LivesWithIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -82,10 +82,16 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20397">Primary Contact Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? PrimaryContactIndicator { get; set; }
+        public Boolean? PrimaryContactIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonRelationshipType"/> model
+        /// Person Relationship Type
+        /// <para>
+        /// The nature of a person's relationship to another person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19415">Person Relationship Type</a>
+        /// </para>
         /// </summary>
         public Guid RefPersonRelationshipTypeId { get; set; }
 

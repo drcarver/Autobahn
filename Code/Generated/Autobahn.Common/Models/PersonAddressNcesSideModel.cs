@@ -3,13 +3,15 @@
 //* FileName:   PersonAddressNcesSideModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonAddressNcesSide Model
      /// </summary>
-    public partial class PersonAddressNcesSideModel : AutobahnBase, Interfaces.IPersonAddressNcesSide
+    public partial class PersonAddressNcesSideModel : AutobahnBase, IPersonAddressNcesSide
     {
         /// <summary>
         /// NCES SIDE Date Processed
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20943">NCES SIDE Date Processed</a>
         /// </para>
         /// </summary>
-        public System.DateTime? NcesSideDateProcessed { get; set; }
+        public DateTime? NcesSideDateProcessed { get; set; }
 
         /// <summary>
         /// NCES SIDE Estimate
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20944">NCES SIDE Estimate</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NcesSideEstimate { get; set; }
+        public Decimal? NcesSideEstimate { get; set; }
 
         /// <summary>
         /// NCES SIDE Standard Error
@@ -42,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20945">NCES SIDE Standard Error</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NcesSideStandardError { get; set; }
+        public Decimal? NcesSideStandardError { get; set; }
 
         /// <summary>
         /// NCES SIDE Vintage Begin Year
@@ -67,13 +69,7 @@ namespace Autobahn.Common.Models
         public System.String NcesSideVintageEndYear { get; set; }
 
         /// <summary>
-        /// Address County Name
-        /// <para>
-        /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19190">Address County Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonAddress"/> model
         /// </summary>
         public Guid PersonAddressId { get; set; }
 

@@ -3,13 +3,15 @@
 //* FileName:   OrganizationPersonRoleModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationPersonRole Model
      /// </summary>
-    public partial class OrganizationPersonRoleModel : AutobahnBase, Interfaces.IOrganizationPersonRole
+    public partial class OrganizationPersonRoleModel : AutobahnBase, IOrganizationPersonRole
     {
         /// <summary>
         /// Activity Involvement Begin Date
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19007">Activity Involvement Begin Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? EntryDate { get; set; }
+        public DateTime? EntryDate { get; set; }
 
         /// <summary>
         /// Activity Involvement End Date
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19008">Activity Involvement End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ExitDate { get; set; }
+        public DateTime? ExitDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model

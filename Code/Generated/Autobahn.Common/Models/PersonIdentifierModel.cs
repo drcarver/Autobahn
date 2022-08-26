@@ -3,13 +3,15 @@
 //* FileName:   PersonIdentifierModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonIdentifier Model
      /// </summary>
-    public partial class PersonIdentifierModel : AutobahnBase, Interfaces.IPersonIdentifier
+    public partial class PersonIdentifierModel : AutobahnBase, IPersonIdentifier
     {
         /// <summary>
         /// Staff Member Identifier
@@ -28,12 +30,24 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
+        /// Personal Information Verification
+        /// <para>
+        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19611">Personal Information Verification</a>
+        /// </para>
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonentificationSystem"/> model
+        /// Staff Member Identification System
+        /// <para>
+        /// A coding scheme that is used for identification and record-keeping purposes by schools, social services, registry, or other agencies to refer to a staff member.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19162">Staff Member Identification System</a>
+        /// </para>
         /// </summary>
         public Guid RefPersonIdentificationSystemId { get; set; }
 

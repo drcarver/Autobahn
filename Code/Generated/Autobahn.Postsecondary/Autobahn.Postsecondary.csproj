@@ -17,82 +17,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <MauiXaml Update="Views\IPEDSFinanceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsCourseView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsInstitutionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsPriceOfAttendanceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PSPriceOfAttendanceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsProgramView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsSectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsSectionLocationView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStaffEmploymentView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentAcademicAwardView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentAcademicRecordView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentAdmissionTestView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentApplicationView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentCohortView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentCourseSectionMarkView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentDemographicView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentEmploymentView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentEnrollmentView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PSStudentEnrollmentView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentFinancialAidView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PSStudentProgramView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\PsStudentSectionView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <ApplicationId>com.drcarver.autobahn.postsecondary</ApplicationId>
+    <ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1.0</ApplicationVersion>
+    <ApplicationIdGuid>839bef77-95c2-4db8-ac2a-3a83d0aaa1a7</ApplicationIdGuid>
+    <ApplicationTitle>Postsecondary (PS)</ApplicationTitle>
+    <AssemblyName>Autobahn.Postsecondary</AssemblyName>
+    <CompanyName>dcarver.com</CompanyName>
+    <Copyright>(c)Darrel Carver, 2021-2022</Copyright>
+    <Description>Postsecondary (PS) is the CEDS domain on the formal instructional program whose curriculum is designed primarily for students who are beyond the compulsory age for high school. This includes programs whose purpose is academic, vocational, and continuing professional education and excludes avocational and adult basic education programs. (See also the Integrated Postsecondary Education Data System [IPEDS]).</Description>
+    <ProductName>Autobahn</ProductName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Autobahn.Common\Autobahn.Common.csproj" />
+    <ProjectReference Include="..\Autobahn.Interfaces\Autobahn.Interfaces.csproj" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,8 @@
 //* FileName:   AuthorizationModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Authorization;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Authorization.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Authorization.Models
      /// <summary>
      /// The Authorization Model
      /// </summary>
-    public partial class AuthorizationModel : AutobahnBase, Interfaces.IAuthorization
+    public partial class AuthorizationModel : AutobahnBase, IAuthorization
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IApplication"/> model
@@ -38,7 +39,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20131">Authorization End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -54,7 +55,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20130">Authorization Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
     }
 }

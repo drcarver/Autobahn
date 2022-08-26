@@ -1,4 +1,5 @@
 ﻿using Autobahn.Codegen.Models;
+using CsvHelper.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using SchemaOrg;
@@ -141,21 +142,15 @@ internal class Program
         }
     }
 
-    ///// <summary>
-    ///// Return the list of autobahn domains
-    ///// </summary>
-    ///// <returns>Return the list of Autobahn domains</returns>
-    //private static List<AutobahnDomain> GetAutobahnDomains()
-    //{
-    //    var csv = new CSVServices();
-    //    return csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-    //}
-
     /// <summary>
     /// Return the list of autobahn entities from a list of types
     /// </summary>
     /// <returns>Return the list of Autobahn Entities</returns>
-    private static List<AutobahnEntity> GetAutobahnEntities(List<Type> types, List<AutobahnDomain> autobahnDomains)
+    private static List<AutobahnEntity> GetAutobahnEntities(
+        List<Type> types, 
+        List<AutobahnDomain> domains, 
+        List<AutobahnTable> tables, 
+        List<AutobahnElement> elements)
     {
         // iterate the known types and create a list of
         // autobahn types
@@ -168,12 +163,43 @@ internal class Program
             }
 
             var entity = new AutobahnEntity(type);
+            var globalId = tables.FirstOrDefault(t => t.TableName == entity.Name && string.IsNullOrEmpty(t.ColumnName.Trim()))?.GlobalId;
+            entity.AutobahnElement = elements.FirstOrDefault(e => e.GlobalID == globalId);
             if (entity.Attributes.CommentAttribute == null)
             {
-                entity.Attributes.CommentAttribute = new($"The {entity.Name} Entity");
+                if (!string.IsNullOrEmpty(entity.AutobahnElement?.Definition))
+                {
+                    entity.Attributes.CommentAttribute = new($"{entity.AutobahnElement?.Definition}");
+                }
+                else
+                {
+                    entity.Attributes.CommentAttribute = new($"The {entity.Name} Entity");
+                }
             }
-            SetTableDomain(autobahnDomains, ref entity);
+            SetTableDomain(domains, ref entity);
+            foreach (var prop in entity.AutobahnProperties)
+            {
+                globalId = tables.FirstOrDefault(t => t.TableName == entity.Name && t.ColumnName == prop.Name)?.GlobalId;
+                prop.AutobahnElement = elements.FirstOrDefault(e => e.GlobalID == globalId);
+                if (!string.IsNullOrEmpty(prop.AutobahnElement?.Definition))
+                {
+                    prop.Attributes.CommentAttribute = new(prop.AutobahnElement.Definition);
+                }
+            }
             autobahnEntities.Add(entity);
+        }
+
+        int entityCount = 0;
+        int propertyCount = 0;
+        int propertyTotal = 0;
+        foreach (var entity in autobahnEntities)
+        {
+            if (entity.AutobahnElement != null)
+            {
+                entityCount++;
+            }
+            propertyTotal += entity.AutobahnProperties.Count();
+            propertyCount += entity.AutobahnProperties.Count(p => p.AutobahnElement != null);
         }
 
         return autobahnEntities;
@@ -201,11 +227,13 @@ internal class Program
     {
         var csv = new CSVServices();
         var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv");
-        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv", false);
+        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
 
         // Autobahn Domains
-        var autobahnEntites = GetAutobahnEntities(Assembly.GetExecutingAssembly().GetExportedTypes().OrderBy(o => o.Name).ToList(), autobahnDomains);
+        var autobahnEntites = GetAutobahnEntities(
+            Assembly.GetExecutingAssembly().GetExportedTypes().OrderBy(o => o.Name).ToList(), 
+            autobahnDomains, autobahnTables, autobahnElements);
 
         var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\schemaorg-all-http.jsonld");
 
@@ -219,7 +247,7 @@ internal class Program
         //var RefAutobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv").ToList();
         //var domainReferenceList = BuildTableListByProperty(autobahnTables);
 
-        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Autobahn\Generated\";
+        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
         MauiModule.GenerateModule(location, autobahnEntites, autobahnDomains); //autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList(), domainReferenceList);
     }
 

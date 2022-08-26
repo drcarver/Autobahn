@@ -3,16 +3,24 @@
 //* FileName:   StaffCompensationModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffCompensation Model
      /// </summary>
-    public partial class StaffCompensationModel : AutobahnBase, Interfaces.IStaffCompensation
+    public partial class StaffCompensationModel : AutobahnBase, IStaffCompensation
     {
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStaffCompensationSourceType"/> model
+        /// Staff Compensation Source Type
+        /// <para>
+        /// The source for the staff compensation a person receives.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20964">Staff Compensation Source Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefStaffCompensationSourceTypeId { get; set; }
 
@@ -25,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20962">Staff Compensation Annual Supplement</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationAnnualSupplement { get; set; }
+        public Decimal? StaffCompensationAnnualSupplement { get; set; }
 
         /// <summary>
         /// Staff Compensation Base Salary
@@ -36,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19032">Staff Compensation Base Salary</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationBaseSalary { get; set; }
+        public Decimal? StaffCompensationBaseSalary { get; set; }
 
         /// <summary>
         /// Staff Compensation Health Benefits
@@ -47,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19136">Staff Compensation Health Benefits</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationHealthBenefits { get; set; }
+        public Decimal? StaffCompensationHealthBenefits { get; set; }
 
         /// <summary>
         /// Staff Compensation Longevity
@@ -58,7 +66,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20963">Staff Compensation Longevity</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationLongevity { get; set; }
+        public Decimal? StaffCompensationLongevity { get; set; }
 
         /// <summary>
         /// Staff Compensation Other Benefits
@@ -69,7 +77,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19205">Staff Compensation Other Benefits</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationOtherBenefits { get; set; }
+        public Decimal? StaffCompensationOtherBenefits { get; set; }
 
         /// <summary>
         /// Staff Compensation Retirement Benefits
@@ -80,7 +88,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19233">Staff Compensation Retirement Benefits</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationRetirementBenefits { get; set; }
+        public Decimal? StaffCompensationRetirementBenefits { get; set; }
 
         /// <summary>
         /// Staff Compensation Total Benefits
@@ -91,7 +99,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19293">Staff Compensation Total Benefits</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationTotalBenefits { get; set; }
+        public Decimal? StaffCompensationTotalBenefits { get; set; }
 
         /// <summary>
         /// Staff Compensation Total Salary
@@ -102,7 +110,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19295">Staff Compensation Total Salary</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StaffCompensationTotalSalary { get; set; }
+        public Decimal? StaffCompensationTotalSalary { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IStaffEmployment"/> model

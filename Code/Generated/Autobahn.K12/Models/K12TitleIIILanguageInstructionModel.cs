@@ -1,17 +1,18 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12TitleIIILanguageInstructionModel.cs
+//* FileName:   K12titleIiilanguageInstructionModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12TitleIIILanguageInstruction Model
+     /// The K12titleIiilanguageInstruction Model
      /// </summary>
-    public partial class K12TitleIIILanguageInstructionModel : AutobahnBase, Interfaces.IK12TitleIIILanguageInstruction
+    public partial class K12titleIiilanguageInstructionModel : AutobahnBase, IK12titleIiilanguageInstruction
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -19,9 +20,9 @@ namespace Autobahn.K12.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIIILanguageInstructionProgramType"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIiilanguageInstructionProgramType"/> model
         /// </summary>
-        public Guid RefTitleIIILanguageInstructionProgramTypeId { get; set; }
+        public Guid RefTitleIiilanguageInstructionProgramTypeId { get; set; }
 
     }
 }

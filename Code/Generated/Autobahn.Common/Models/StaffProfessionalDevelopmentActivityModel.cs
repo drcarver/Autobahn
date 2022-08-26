@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   StaffProfessionalDevelopmentActivityModel.cs
-//* Name:       Staff Professional Development Activity Completion Date
-//* Definition: The year, month and day on which an individual completed a course, an education program or a staff development activity.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The year, month and day on which an individual completed a course, an education program or a staff development activity.
+     /// The StaffProfessionalDevelopmentActivity Model
      /// </summary>
-    public partial class StaffProfessionalDevelopmentActivityModel : AutobahnBase, Interfaces.IStaffProfessionalDevelopmentActivity
+    public partial class StaffProfessionalDevelopmentActivityModel : AutobahnBase, IStaffProfessionalDevelopmentActivity
     {
         /// <summary>
         /// Staff Professional Development Activity Completion Date
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20068">Staff Professional Development Activity Completion Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ActivityCompletionDate { get; set; }
+        public DateTime? ActivityCompletionDate { get; set; }
 
         /// <summary>
         /// Professional Development Activity Identifier
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20067">Staff Professional Development Activity Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ActivityStartDate { get; set; }
+        public DateTime? ActivityStartDate { get; set; }
 
         /// <summary>
         /// Professional Development Activity Title
@@ -66,7 +66,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19200">Number of Credits Earned</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfCreditsEarned { get; set; }
+        public Decimal? NumberOfCreditsEarned { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -74,13 +74,7 @@ namespace Autobahn.Common.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Professional Development Activity Code
-        /// <para>
-        /// A code assigned to an professional development activity by the organization offering the activity that is unique to the non-variable activity details.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20404">Professional Development Activity Code</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IProfessionalDevelopmentActivity"/> model
         /// </summary>
         public Guid ProfessionalDevelopmentActivityId { get; set; }
 
@@ -90,23 +84,29 @@ namespace Autobahn.Common.Models
         public Guid ProfessionalDevelopmentRequirementId { get; set; }
 
         /// <summary>
-        /// Professional Development Session Capacity
-        /// <para>
-        /// The total number of participants that can be accommodated by a professional development session.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20416">Professional Development Session Capacity</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IProfessionalDevelopmentSession"/> model
         /// </summary>
         public Guid ProfessionalDevelopmentSessionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseCreditUnit"/> model
+        /// Course Credit Units
+        /// <para>
+        /// The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course. 
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19057">Course Credit Units</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseCreditUnitId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProfessionalDevelopmentFinancialSupport"/> model
+        /// Professional Development Financial Support Type
+        /// <para>
+        /// The type of financial assistance received in support of non-credit professional development activities.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19811">Professional Development Financial Support Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 
@@ -119,7 +119,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19810">Professional Development Scholarship Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? ScholarshipStatus { get; set; }
+        public Boolean? ScholarshipStatus { get; set; }
 
     }
 }

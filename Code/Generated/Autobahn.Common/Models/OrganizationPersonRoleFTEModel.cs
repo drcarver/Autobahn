@@ -1,26 +1,21 @@
 //**********************************************************
 //* DomainName: Common Models
-//* FileName:   OrganizationPersonRoleFTEModel.cs
+//* FileName:   OrganizationPersonRoleFteModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The OrganizationPersonRoleFTE Model
+     /// The OrganizationPersonRoleFte Model
      /// </summary>
-    public partial class OrganizationPersonRoleFTEModel : AutobahnBase, Interfaces.IOrganizationPersonRoleFTE
+    public partial class OrganizationPersonRoleFteModel : AutobahnBase, IOrganizationPersonRoleFte
     {
-        /// <summary>
-        /// Full Time Equivalency
-        /// <para>
-        /// The time a person is enrolled, employed, involved, or participates in the organization, divided by the time the organization defines as full-time for that role.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20906">Full Time Equivalency</a>
-        /// </para>
-        /// </summary>
         public System.Decimal FullTimeEquivalency { get; set; }
+
+        public System.Int32 OrganizationPersonRoleFteid { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model

@@ -3,13 +3,15 @@
 //* FileName:   StaffEmploymentModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffEmployment Model
      /// </summary>
-    public partial class StaffEmploymentModel : AutobahnBase, Interfaces.IStaffEmployment
+    public partial class StaffEmploymentModel : AutobahnBase, IStaffEmployment
     {
         /// <summary>
         /// Staff Full Time Equivalency
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19118">Staff Full Time Equivalency</a>
         /// </para>
         /// </summary>
-        public System.Decimal? FullTimeEquivalency { get; set; }
+        public Decimal? FullTimeEquivalency { get; set; }
 
         /// <summary>
         /// Hire Date
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19143">Hire Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? HireDate { get; set; }
+        public DateTime? HireDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -50,12 +52,24 @@ namespace Autobahn.Common.Models
         public System.String PositionTitle { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationReason"/> model
+        /// Employment Separation Reason
+        /// <para>
+        /// The primary reason for the termination of the employment relationship.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19613">Employment Separation Reason</a>
+        /// </para>
         /// </summary>
         public Guid? RefEmploymentSeparationReasonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEmploymentSeparationType"/> model
+        /// Employment Separation Type
+        /// <para>
+        /// A designation of the type of separation occurring between a person and the organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19614">Employment Separation Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefEmploymentSeparationTypeId { get; set; }
 
@@ -90,7 +104,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20470">Weeks Employed Per Year</a>
         /// </para>
         /// </summary>
-        public System.Int32? WeeksEmployedPerYear { get; set; }
+        public Int32? WeeksEmployedPerYear { get; set; }
 
     }
 }

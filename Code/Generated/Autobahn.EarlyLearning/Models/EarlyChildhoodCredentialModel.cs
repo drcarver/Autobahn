@@ -3,7 +3,8 @@
 //* FileName:   EarlyChildhoodCredentialModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.EarlyLearning;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.EarlyLearning.Models
@@ -11,21 +12,21 @@ namespace Autobahn.EarlyLearning.Models
      /// <summary>
      /// The EarlyChildhoodCredential Model
      /// </summary>
-    public partial class EarlyChildhoodCredentialModel : AutobahnBase, Interfaces.IEarlyChildhoodCredential
+    public partial class EarlyChildhoodCredentialModel : AutobahnBase, IEarlyChildhoodCredential
     {
         /// <summary>
-        /// Name of Professional Credential or License
-        /// <para>
-        /// The name of the license/credential awarded by a given profession.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20064">Name of Professional Credential or License</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonCredential"/> model
         /// </summary>
         public Guid PersonCredentialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEarlyChildhoodCredential"/> model
+        /// Early Childhood Credential
+        /// <para>
+        /// The credential related to early childhood education or development held by a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19344">Early Childhood Credential</a>
+        /// </para>
         /// </summary>
         public Guid RefEarlyChildhoodCredentialId { get; set; }
 

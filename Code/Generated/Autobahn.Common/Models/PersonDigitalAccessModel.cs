@@ -3,13 +3,15 @@
 //* FileName:   PersonDigitalAccessModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDigitalAccess Model
      /// </summary>
-    public partial class PersonDigitalAccessModel : AutobahnBase, Interfaces.IPersonDigitalAccess
+    public partial class PersonDigitalAccessModel : AutobahnBase, IPersonDigitalAccess
     {
         /// <summary>
         /// Internet Access In Residence
@@ -20,16 +22,10 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20936">Internet Access In Residence</a>
         /// </para>
         /// </summary>
-        public System.Boolean? InternetAccessInResidence { get; set; }
+        public Boolean? InternetAccessInResidence { get; set; }
 
         /// <summary>
-        /// Address County Name
-        /// <para>
-        /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19190">Address County Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonAddress"/> model
         /// </summary>
         public Guid? PersonAddressId { get; set; }
 
@@ -39,17 +35,35 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBarrierToInternetAccessInResidence"/> model
+        /// Barrier to Internet Access In Residence
+        /// <para>
+        /// An indication of the barrier to having internet access in the student's primary place of residence.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20916">Barrier to Internet Access In Residence</a>
+        /// </para>
         /// </summary>
         public Guid? RefBarrierToInternetAccessInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInternetAccessTypeInResidence"/> model
+        /// Internet Access Type In Residence
+        /// <para>
+        /// The primary type of internet service used in the student's primary place of residence.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20937">Internet Access Type In Residence</a>
+        /// </para>
         /// </summary>
         public Guid? RefInternetAccessTypeInResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInternetPerformanceInResidence"/> model
+        /// Internet Performance In Residence
+        /// <para>
+        /// An indication of whether the student can complete the full range of learning activities, including video streaming and assignment upload, without interruptions caused by poor internet performance in their primary place of residence.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20939">Internet Performance In Residence</a>
+        /// </para>
         /// </summary>
         public Guid? RefInternetPerformanceInResidenceId { get; set; }
 

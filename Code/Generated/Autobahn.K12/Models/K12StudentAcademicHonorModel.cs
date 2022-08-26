@@ -1,27 +1,19 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12StudentAcademicHonorModel.cs
+//* FileName:   K12studentAcademicHonorModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12StudentAcademicHonor Model
+     /// The K12studentAcademicHonor Model
      /// </summary>
-    public partial class K12StudentAcademicHonorModel : AutobahnBase, Interfaces.IK12StudentAcademicHonor
+    public partial class K12studentAcademicHonorModel : AutobahnBase, IK12studentAcademicHonor
     {
-        /// <summary>
-        /// Honors Description
-        /// <para>
-        /// A description of the type of academic distinctions earned by or awarded to the person.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19150">Honors Description</a>
-        /// </para>
-        /// </summary>
         public System.String HonorDescription { get; set; }
 
         /// <summary>

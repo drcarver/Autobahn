@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonAddressModel.cs
-//* Name:       Address County Name
-//* Definition: The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
+     /// The PersonAddress Model
      /// </summary>
-    public partial class PersonAddressModel : AutobahnBase, Interfaces.IPersonAddress
+    public partial class PersonAddressModel : AutobahnBase, IPersonAddress
     {
         /// <summary>
         /// Address County Name
@@ -55,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DoNotPublishIndicator { get; set; }
+        public Boolean? DoNotPublishIndicator { get; set; }
 
         /// <summary>
         /// Latitude
@@ -96,7 +96,13 @@ namespace Autobahn.Common.Models
         public System.String PostalCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCountry"/> model
+        /// Country Code
+        /// <para>
+        /// The unique two character International Organization for Standardization (ISO) code for the country in which an address is located.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19050">Country Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCountryId { get; set; }
 
@@ -106,17 +112,35 @@ namespace Autobahn.Common.Models
         public Guid? RefCountyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
+        /// Personal Information Verification
+        /// <para>
+        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19611">Personal Information Verification</a>
+        /// </para>
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonLocationType"/> model
+        /// Address Type for Learner or Family
+        /// <para>
+        /// The type of address listed for a learner or a parent, guardian, family member or related person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19358">Address Type for Learner or Family</a>
+        /// </para>
         /// </summary>
         public Guid RefPersonLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefState"/> model
+        /// State Abbreviation
+        /// <para>
+        /// The abbreviation for the state (within the United States) or outlying area in which an address is located.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19267">State Abbreviation</a>
+        /// </para>
         /// </summary>
         public Guid? RefStateId { get; set; }
 

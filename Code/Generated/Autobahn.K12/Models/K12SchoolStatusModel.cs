@@ -1,51 +1,26 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12SchoolStatusModel.cs
-//* Name:       Consolidated Migrant Education Program Funds Status
-//* Definition: An indication of whether the school has a school-wide program, as defined by current law, in which federal Migrant Education Program (MEP) funds are consolidated.
+//* FileName:   K12schoolStatusModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// An indication of whether the school has a school-wide program, as defined by current law, in which federal Migrant Education Program (MEP) funds are consolidated.
+     /// The K12schoolStatus Model
      /// </summary>
-    public partial class K12SchoolStatusModel : AutobahnBase, Interfaces.IK12SchoolStatus
+    public partial class K12schoolStatusModel : AutobahnBase, IK12schoolStatus
     {
-        /// <summary>
-        /// Consolidated Migrant Education Program Funds Status
-        /// <para>
-        /// An indication of whether the school has a school-wide program, as defined by current law, in which federal Migrant Education Program (MEP) funds are consolidated.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19533">Consolidated Migrant Education Program Funds Status</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? ConsolidatedMepFundsStatus { get; set; }
+        public Boolean? ConsolidatedMepFundsStatus { get; set; }
 
         /// <summary>
-        /// Accreditation Agency Name
-        /// <para>
-        /// The full name of an agency that accredited a school.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12school"/> model
         /// </summary>
-        public Guid K12SchoolId { get; set; }
+        public Guid K12schoolId { get; set; }
 
-        /// <summary>
-        /// Progress Achieving English Language Proficiency State Defined Status
-        /// <para>
-        /// The state defined status assigned to the school's performance on the progress of achieving the English language proficiency indicator.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20897">Progress Achieving English Language Proficiency State Defined Status</a>
-        /// </para>
-        /// </summary>
         public System.String ProgressAcheivingEnglishLearnerProficiencyStateDefinedStatus { get; set; }
 
         /// <summary>
@@ -84,9 +59,9 @@ namespace Autobahn.K12.Models
         public Guid? RefNationalSchoolLunchProgramStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefNSLPStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefNslpstatus"/> model
         /// </summary>
-        public Guid? RefNSLPStatusId { get; set; }
+        public Guid? RefNslpstatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus"/> model
@@ -114,9 +89,9 @@ namespace Autobahn.K12.Models
         public Guid? RefTargetedSupportId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleISchoolStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIschoolStatus"/> model
         /// </summary>
-        public Guid? RefTitleISchoolStatusId { get; set; }
+        public Guid? RefTitleIschoolStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefVirtualSchoolStatus"/> model

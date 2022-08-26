@@ -3,13 +3,15 @@
 //* FileName:   PersonDisabilityModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonDisability Model
      /// </summary>
-    public partial class PersonDisabilityModel : AutobahnBase, Interfaces.IPersonDisability
+    public partial class PersonDisabilityModel : AutobahnBase, IPersonDisability
     {
         /// <summary>
         /// Disability Status
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19569">Disability Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DisabilityStatus { get; set; }
+        public Boolean? DisabilityStatus { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -28,34 +30,64 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IPrimaryDisabilityType"/> model
+        /// Primary Disability Type
+        /// <para>
+        /// The major or overriding disability condition that best describes a person's impairment.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19218">Primary Disability Type</a>
+        /// </para>
         /// </summary>
         public Guid? PrimaryDisabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAccommodationsNeededType"/> model
+        /// Accommodations Needed Type
+        /// <para>
+        /// Codes identifying the set of health accommodations.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20243">Accommodations Needed Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefAccommodationsNeededTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDisabilityConditionStatusCode"/> model
+        /// Disability Condition Status Type
+        /// <para>
+        /// A code indicating the disability condition status.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20285">Disability Condition Status Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDisabilityConditionStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDisabilityConditionType"/> model
+        /// Disability Condition Type
+        /// <para>
+        /// Codes identifying the set of disability conditions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20286">Disability Condition Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDisabilityConditionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDisabilityDeterminationSourceType"/> model
+        /// Disability Determination Source Type
+        /// <para>
+        /// Codes identifying the set of disability determination sources.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20287">Disability Determination Source Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDisabilityDeterminationSourceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIDEADisabilityType"/> model
+        /// Reference to an optional instance of the <see cref="RefeadisabilityType"/> model
         /// </summary>
-        public Guid? RefIDEADisabilityTypeId { get; set; }
+        public Guid? RefIdeadisabilityTypeId { get; set; }
 
         /// <summary>
         /// Significant Cognitive Disability Indicator
@@ -66,7 +98,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20746">Significant Cognitive Disability Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? SignificantCognitiveDisabilityIndicator { get; set; }
+        public Boolean? SignificantCognitiveDisabilityIndicator { get; set; }
 
     }
 }

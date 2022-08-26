@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Authentication and Authorization
 //* FileName:   AuthorizationDocumentModel.cs
-//* Name:       Authorization Acceptance Indicator
-//* Definition: Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Authorization;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Authorization.Models
 {
      /// <summary>
-     /// Indicates authorizer agreement to a document or plan, such as plan for delivery of student services, program, or improvement plan.
+     /// The AuthorizationDocument Model
      /// </summary>
-    public partial class AuthorizationDocumentModel : AutobahnBase, Interfaces.IAuthorizationDocument
+    public partial class AuthorizationDocumentModel : AutobahnBase, IAuthorizationDocument
     {
         /// <summary>
         /// Authorization Acceptance Indicator
@@ -24,7 +23,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20702">Authorization Acceptance Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? AcceptanceIndicator { get; set; }
+        public Boolean? AcceptanceIndicator { get; set; }
 
         /// <summary>
         /// Authorization Date
@@ -35,7 +34,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20706">Authorization Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? AuthorizationDate { get; set; }
+        public DateTime? AuthorizationDate { get; set; }
 
         /// <summary>
         /// Authorization Decision Explanation
@@ -54,7 +53,13 @@ namespace Autobahn.Authorization.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAuthorizerType"/> model
+        /// Authorizer Type
+        /// <para>
+        /// Type of person who authorized the decision or document.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20701">Authorizer Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefAuthorizerTypeId { get; set; }
 

@@ -3,22 +3,18 @@
 //* FileName:   PersonAssessmentPersonalNeedsProfileModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonAssessmentPersonalNeedsProfile Model
      /// </summary>
-    public partial class PersonAssessmentPersonalNeedsProfileModel : AutobahnBase, Interfaces.IPersonAssessmentPersonalNeedsProfile
+    public partial class PersonAssessmentPersonalNeedsProfileModel : AutobahnBase, IPersonAssessmentPersonalNeedsProfile
     {
         /// <summary>
-        /// Assessment Personal Needs Profile Activate by Default
-        /// <para>
-        /// Determines if the alternative accessible content is rendered as the default content for the learner.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IAssessmentPersonalNeedsProfile"/> model
         /// </summary>
         public Guid AssessmentPersonalNeedsProfileId { get; set; }
 

@@ -3,7 +3,8 @@
 //* FileName:   CompetencyDefinitionModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Competencies;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Competencies.Models
      /// <summary>
      /// The CompetencyDefinition Model
      /// </summary>
-    public partial class CompetencyDefinitionModel : AutobahnBase, Interfaces.ICompetencyDefinition
+    public partial class CompetencyDefinitionModel : AutobahnBase, ICompetencyDefinition
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IChildOfCompetencyDefinition"/> model
@@ -30,7 +31,13 @@ namespace Autobahn.Competencies.Models
         public System.String CompetencyDefParentCode { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="ICompetencyDefParent"/> model
+        /// Competency Definition Parent Identifier
+        /// <para>
+        /// The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the parent item in the hierarchy of competency definitions using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19872">Competency Definition Parent Identifier</a>
+        /// </para>
         /// </summary>
         public Guid CompetencyDefParentId { get; set; }
 
@@ -92,7 +99,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20499">Competency Definition Current Version Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? CurrentVersionIndicator { get; set; }
+        public Boolean? CurrentVersionIndicator { get; set; }
 
         /// <summary>
         /// Competency Definition Identifier
@@ -139,27 +146,57 @@ namespace Autobahn.Competencies.Models
         public System.String PreviousVersionIdentifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBloomsTaxonomyDomain"/> model
+        /// Competency Definition Blooms Taxonomy Domain
+        /// <para>
+        /// Classification of the Competency Definition using Bloom's Taxonomy Domains.�
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19875">Competency Definition Blooms Taxonomy Domain</a>
+        /// </para>
         /// </summary>
         public Guid? RefBloomsTaxonomyDomainId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCompetencyDefNodeAccessibilityProfile"/> model
+        /// Competency Definition Node Accessibility Profile
+        /// <para>
+        /// When the Competency Definition is used as a node in a learning map, this element supports alternative pathways based on a learner's accessibility profile. The type selected indicates which accessibility profile the node is designed to address.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20377">Competency Definition Node Accessibility Profile</a>
+        /// </para>
         /// </summary>
         public Guid? RefCompetencyDefNodeAccessibilityProfileId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCompetencyDefTestabilityType"/> model
+        /// Competency Definition Testability Type
+        /// <para>
+        /// Indicates if the competency described in the Competency Definition Statement can be tested using one or more assessment items.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20380">Competency Definition Testability Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCompetencyDefTestabilityTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLanguage"/> model
+        /// Competency Definition Language
+        /// <para>
+        /// The default language of the text used for the content in the competency definition statement.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19881">Competency Definition Language</a>
+        /// </para>
         /// </summary>
         public Guid? RefLanguageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMultipleIntelligenceType"/> model
+        /// Competency Definition Multiple Intelligence
+        /// <para>
+        /// Classification of the Competency Definition using intelligences defined for Howard Earl Gardner's Theory of Multiple Intelligences.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19876">Competency Definition Multiple Intelligence</a>
+        /// </para>
         /// </summary>
         public Guid? RefMultipleIntelligenceTypeId { get; set; }
 
@@ -194,7 +231,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20115">Competency Definition Text Complexity Maximum Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? TextComplexityMaximumValue { get; set; }
+        public Decimal? TextComplexityMaximumValue { get; set; }
 
         /// <summary>
         /// Competency Definition Text Complexity Minimum Value
@@ -205,7 +242,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20114">Competency Definition Text Complexity Minimum Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? TextComplexityMinimumValue { get; set; }
+        public Decimal? TextComplexityMinimumValue { get; set; }
 
         /// <summary>
         /// Competency Definition Text Complexity System
@@ -229,16 +266,7 @@ namespace Autobahn.Competencies.Models
         /// </summary>
         public System.String Type { get; set; }
 
-        /// <summary>
-        /// Competency Definition Type URL
-        /// <para>
-        /// The class of statement in the structure of statements in the Competency Framework according to a controlled vocabulary, specified as a URI referencing a controlled vocabulary.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20738">Competency Definition Type URL</a>
-        /// </para>
-        /// </summary>
-        public System.String TypeURL { get; set; }
+        public System.String TypeUrl { get; set; }
 
         public System.String TypicalAgeRange { get; set; }
 
@@ -251,7 +279,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20890">Competency Definition Typical Age Range Maximum</a>
         /// </para>
         /// </summary>
-        public System.Int32? TypicalAgeRangeMaximum { get; set; }
+        public Int32? TypicalAgeRangeMaximum { get; set; }
 
         /// <summary>
         /// Competency Definition Typical Age Range Minimum
@@ -262,18 +290,9 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20889">Competency Definition Typical Age Range Minimum</a>
         /// </para>
         /// </summary>
-        public System.Int32? TypicalAgeRangeMinimum { get; set; }
+        public Int32? TypicalAgeRangeMinimum { get; set; }
 
-        /// <summary>
-        /// Competency Definition URL
-        /// <para>
-        /// A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the competency definition.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19874">Competency Definition URL</a>
-        /// </para>
-        /// </summary>
-        public System.String URL { get; set; }
+        public System.String Url { get; set; }
 
         /// <summary>
         /// Competency Definition Valid End Date
@@ -284,7 +303,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20483">Competency Definition Valid End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ValidEndDate { get; set; }
+        public DateTime? ValidEndDate { get; set; }
 
         /// <summary>
         /// Competency Definition Valid Start Date
@@ -295,7 +314,7 @@ namespace Autobahn.Competencies.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20484">Competency Definition Valid Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ValidStartDate { get; set; }
+        public DateTime? ValidStartDate { get; set; }
 
         /// <summary>
         /// Competency Definition Version

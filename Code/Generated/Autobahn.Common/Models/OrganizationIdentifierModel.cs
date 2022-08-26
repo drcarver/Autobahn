@@ -3,13 +3,15 @@
 //* FileName:   OrganizationIdentifierModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationIdentifier Model
      /// </summary>
-    public partial class OrganizationIdentifierModel : AutobahnBase, Interfaces.IOrganizationIdentifier
+    public partial class OrganizationIdentifierModel : AutobahnBase, IOrganizationIdentifier
     {
         /// <summary>
         /// Course Identifier
@@ -28,12 +30,24 @@ namespace Autobahn.Common.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefOrganizationentificationSystem"/> model
+        /// Course Code System
+        /// <para>
+        /// A system that is used to identify the organization of subject matter and related learning experiences provided for the instruction of students.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19056">Course Code System</a>
+        /// </para>
         /// </summary>
         public Guid? RefOrganizationIdentificationSystemId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefOrganizationentifierType"/> model
+        /// Activity Identifier
+        /// <para>
+        /// A unique number or alphanumeric code used in the local system to identify an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19006">Activity Identifier</a>
+        /// </para>
         /// </summary>
         public Guid? RefOrganizationIdentifierTypeId { get; set; }
 

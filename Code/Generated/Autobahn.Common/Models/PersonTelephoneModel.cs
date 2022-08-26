@@ -3,13 +3,15 @@
 //* FileName:   PersonTelephoneModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonTelephone Model
      /// </summary>
-    public partial class PersonTelephoneModel : AutobahnBase, Interfaces.IPersonTelephone
+    public partial class PersonTelephoneModel : AutobahnBase, IPersonTelephone
     {
         /// <summary>
         /// Do Not Publish Indicator
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DoNotPublishIndicator { get; set; }
+        public Boolean? DoNotPublishIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -39,12 +41,24 @@ namespace Autobahn.Common.Models
         public System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonTelephoneNumberType"/> model
+        /// Telephone Number Type
+        /// <para>
+        /// The type of communication number listed for a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19280">Telephone Number Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefPersonTelephoneNumberTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTelephoneNumberListedStatus"/> model
+        /// Telephone Number Listed Status
+        /// <para>
+        /// An indication of whether a telephone number is listed under a directory assistance service.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20911">Telephone Number Listed Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefTelephoneNumberListedStatusId { get; set; }
 

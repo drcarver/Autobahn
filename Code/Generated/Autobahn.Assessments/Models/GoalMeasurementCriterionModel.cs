@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Assessments
 //* FileName:   GoalMeasurementCriterionModel.cs
-//* Name:       Goal Measurement Criterion Accuracy Percent
-//* Definition: The percent of correct results that will be considered to represent successful achievement of a goal.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Assessments;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Assessments.Models
 {
      /// <summary>
-     /// The percent of correct results that will be considered to represent successful achievement of a goal.
+     /// The GoalMeasurementCriterion Model
      /// </summary>
-    public partial class GoalMeasurementCriterionModel : AutobahnBase, Interfaces.IGoalMeasurementCriterion
+    public partial class GoalMeasurementCriterionModel : AutobahnBase, IGoalMeasurementCriterion
     {
         /// <summary>
         /// Goal Measurement Criterion Accuracy Percent
@@ -24,7 +23,7 @@ namespace Autobahn.Assessments.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20672">Goal Measurement Criterion Accuracy Percent</a>
         /// </para>
         /// </summary>
-        public System.Decimal? AccuracyPercent { get; set; }
+        public Decimal? AccuracyPercent { get; set; }
 
         /// <summary>
         /// Goal Measurement Criterion Attempts Count
@@ -35,7 +34,7 @@ namespace Autobahn.Assessments.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20673">Goal Measurement Criterion Attempts Count</a>
         /// </para>
         /// </summary>
-        public System.Int32? AttemptsCount { get; set; }
+        public Int32? AttemptsCount { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IGoalMeasurement"/> model
@@ -62,7 +61,7 @@ namespace Autobahn.Assessments.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20675">Goal Measurement Criterion Success Count</a>
         /// </para>
         /// </summary>
-        public System.Int32? SuccessCount { get; set; }
+        public Int32? SuccessCount { get; set; }
 
     }
 }

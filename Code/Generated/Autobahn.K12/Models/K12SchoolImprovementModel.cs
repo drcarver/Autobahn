@@ -1,37 +1,26 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12SchoolImprovementModel.cs
+//* FileName:   K12schoolImprovementModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12SchoolImprovement Model
+     /// The K12schoolImprovement Model
      /// </summary>
-    public partial class K12SchoolImprovementModel : AutobahnBase, Interfaces.IK12SchoolImprovement
+    public partial class K12schoolImprovementModel : AutobahnBase, IK12schoolImprovement
     {
         /// <summary>
-        /// Accreditation Agency Name
-        /// <para>
-        /// The full name of an agency that accredited a school.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12school"/> model
         /// </summary>
-        public Guid K12SchoolId { get; set; }
+        public Guid K12schoolId { get; set; }
 
         /// <summary>
-        /// School Improvement Funds Status
-        /// <para>
-        /// An indication of whether the school received funds under Section 1003 of ESEA, as amended.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19238">School Improvement Funds Status</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="RefSchoolImprovementFunds"/> model
         /// </summary>
         public Guid? RefSchoolImprovementFundsId { get; set; }
 
@@ -45,16 +34,7 @@ namespace Autobahn.K12.Models
         /// </summary>
         public Guid? RefSigInterventionTypeId { get; set; }
 
-        /// <summary>
-        /// School Improvement Exit Date
-        /// <para>
-        /// Date the school exited school improvement status.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19472">School Improvement Exit Date</a>
-        /// </para>
-        /// </summary>
-        public System.DateTime? SchoolImprovementExitDate { get; set; }
+        public DateTime? SchoolImprovementExitDate { get; set; }
 
     }
 }

@@ -3,7 +3,7 @@
 //* FileName:   ReferenceModelBase.cs
 //**********************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Common;
 
 namespace Autobahn.Common.Models
 {

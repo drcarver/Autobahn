@@ -3,13 +3,15 @@
 //* FileName:   StaffEvaluationModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffEvaluation Model
      /// </summary>
-    public partial class StaffEvaluationModel : AutobahnBase, Interfaces.IStaffEvaluation
+    public partial class StaffEvaluationModel : AutobahnBase, IStaffEvaluation
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -28,7 +30,13 @@ namespace Autobahn.Common.Models
         public System.String Outcome { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStaffPerformanceLevel"/> model
+        /// Faculty and Administration Performance Level
+        /// <para>
+        /// The levels used in district evaluation systems for assigning teacher or principal performance ratings.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19582">Faculty and Administration Performance Level</a>
+        /// </para>
         /// </summary>
         public Guid? RefStaffPerformanceLevelId { get; set; }
 

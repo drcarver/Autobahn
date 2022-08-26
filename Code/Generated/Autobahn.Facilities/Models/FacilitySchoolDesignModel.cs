@@ -3,7 +3,8 @@
 //* FileName:   FacilitySchoolDesignModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,21 +12,21 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The FacilitySchoolDesign Model
      /// </summary>
-    public partial class FacilitySchoolDesignModel : AutobahnBase, Interfaces.IFacilitySchoolDesign
+    public partial class FacilitySchoolDesignModel : AutobahnBase, IFacilitySchoolDesign
     {
         /// <summary>
-        /// Building Architect Name
-        /// <para>
-        /// The name of the architect of record for the building.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20815">Building Architect Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFacilityDesign"/> model
         /// </summary>
         public Guid FacilityDesignId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingSchoolDesignType"/> model
+        /// Building School Design Type
+        /// <para>
+        /// The physical layout and character of a school facility, as determined by age groups served and educational programs provided.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20809">Building School Design Type</a>
+        /// </para>
         /// </summary>
         public Guid RefBuildingSchoolDesignTypeId { get; set; }
 

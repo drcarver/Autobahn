@@ -3,7 +3,8 @@
 //* FileName:   PsProgramModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsProgram Model
      /// </summary>
-    public partial class PsProgramModel : AutobahnBase, Interfaces.IPsProgram
+    public partial class PsProgramModel : AutobahnBase, IPsProgram
     {
         /// <summary>
         /// Normal Length of Time for Completion
@@ -38,32 +39,50 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19223">Program Length Hours</a>
         /// </para>
         /// </summary>
-        public System.Decimal? ProgramLengthHours { get; set; }
+        public Decimal? ProgramLengthHours { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
+        /// Classification of Instructional Program Code
+        /// <para>
+        /// A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19043">Classification of Instructional Program Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipVersion"/> model
+        /// Classification of Instructional Program Version
+        /// <para>
+        /// The version of CIP being reported.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19045">Classification of Instructional Program Version</a>
+        /// </para>
         /// </summary>
         public Guid? RefCipVersionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDQPCategoriesOfLearning"/> model
+        /// Reference to an optional instance of the <see cref="RefDqpcategoriesOfLearning"/> model
         /// </summary>
-        public Guid? RefDQPCategoriesOfLearningId { get; set; }
+        public Guid? RefDqpcategoriesOfLearningId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramLengthHoursType"/> model
+        /// Program Length Hours Type
+        /// <para>
+        /// The type of hours (credit or contact) by which the normal length of a program of study is measured.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19224">Program Length Hours Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefProgramLengthHoursTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPSProgramLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefPsprogramLevel"/> model
         /// </summary>
-        public Guid? RefPSProgramLevelId { get; set; }
+        public Guid? RefPsprogramLevelId { get; set; }
 
         /// <summary>
         /// Normal Length of Time for Completion Units

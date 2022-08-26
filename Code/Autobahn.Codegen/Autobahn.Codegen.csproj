@@ -27,6 +27,9 @@
     <None Update="Reference\Autobahn.Common.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Reference\Autobahn.Interfaces.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Reference\MauiProject.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

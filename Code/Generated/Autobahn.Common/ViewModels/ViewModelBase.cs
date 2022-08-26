@@ -1,5 +1,5 @@
-﻿using Autobahn.Common.Interfaces;
-using Autobahn.Common.Models;
+﻿using Autobahn.Common.Models;
+using Autobahn.Interfaces.Common;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 

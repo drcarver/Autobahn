@@ -3,7 +3,8 @@
 //* FileName:   FacilityHazardModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The FacilityHazard Model
      /// </summary>
-    public partial class FacilityHazardModel : AutobahnBase, Interfaces.IFacilityHazard
+    public partial class FacilityHazardModel : AutobahnBase, IFacilityHazard
     {
         /// <summary>
         /// Facility Hazardous Condition Expected Remediation Date
@@ -22,16 +23,10 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20823">Facility Hazardous Condition Expected Remediation Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FacilityHazardousCondExpectedRemediationDate { get; set; }
+        public DateTime? FacilityHazardousCondExpectedRemediationDate { get; set; }
 
         /// <summary>
-        /// Building Area
-        /// <para>
-        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20745">Building Area</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFacility"/> model
         /// </summary>
         public Guid FacilityId { get; set; }
 
@@ -77,15 +72,27 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20826">Hazardous Material or Condition Testing Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? HazardousMaterialOrConditionTestingDate { get; set; }
+        public DateTime? HazardousMaterialOrConditionTestingDate { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityHazardousMaterialsOrCondType"/> model
+        /// Facility Hazardous Materials or Condition Type
+        /// <para>
+        /// The type of hazardous materials or conditions tested for at a site or building.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20855">Facility Hazardous Materials or Condition Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityNaturallyOccurringHazardType"/> model
+        /// Facility Naturally Occurring Hazard Type
+        /// <para>
+        /// Type of natural hazard that can affect the health, safety and operation of school facilities and their occupants.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20858">Facility Naturally Occurring Hazard Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 

@@ -3,13 +3,15 @@
 //* FileName:   PersonCareerEducationPlanModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonCareerEducationPlan Model
      /// </summary>
-    public partial class PersonCareerEducationPlanModel : AutobahnBase, Interfaces.IPersonCareerEducationPlan
+    public partial class PersonCareerEducationPlanModel : AutobahnBase, IPersonCareerEducationPlan
     {
         /// <summary>
         /// Career Education Plan Date
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20255">Career Education Plan Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? LastUpdated { get; set; }
+        public DateTime? LastUpdated { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -36,7 +38,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20599">Professional Development Plan Approved by Supervisor</a>
         /// </para>
         /// </summary>
-        public System.Boolean? ProfessionalDevelopmentPlanApprovedBySupervisor { get; set; }
+        public Boolean? ProfessionalDevelopmentPlanApprovedBySupervisor { get; set; }
 
         /// <summary>
         /// Professional Development Plan Completion
@@ -47,10 +49,16 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20600">Professional Development Plan Completion</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ProfessionalDevelopmentPlanCompletion { get; set; }
+        public DateTime? ProfessionalDevelopmentPlanCompletion { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCareerEducationPlanType"/> model
+        /// Career Education Plan Type
+        /// <para>
+        /// An indication of whether an individual completed an individualized guidance and counseling plan
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20256">Career Education Plan Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCareerEducationPlanTypeId { get; set; }
 
@@ -63,7 +71,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20554">Tuition Funded</a>
         /// </para>
         /// </summary>
-        public System.Boolean? TuitionFunded { get; set; }
+        public Boolean? TuitionFunded { get; set; }
 
     }
 }

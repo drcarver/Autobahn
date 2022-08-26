@@ -3,13 +3,15 @@
 //* FileName:   PersonHomelessnessModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonHomelessness Model
      /// </summary>
-    public partial class PersonHomelessnessModel : AutobahnBase, Interfaces.IPersonHomelessness
+    public partial class PersonHomelessnessModel : AutobahnBase, IPersonHomelessness
     {
         /// <summary>
         /// Homelessness Status
@@ -28,7 +30,13 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHomelessNighttimeResidence"/> model
+        /// Homeless Primary Nighttime Residence
+        /// <para>
+        /// The primary nighttime residence of the person at the time the person was identified as homeless.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19146">Homeless Primary Nighttime Residence</a>
+        /// </para>
         /// </summary>
         public Guid RefHomelessNighttimeResidenceId { get; set; }
 

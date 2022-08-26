@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   FacilityDesignConstructionModel.cs
-//* Name:       Building Addition Code
-//* Definition: A unique number or alphanumeric code assigned to a building addition by a school, school system, state, or other agency or entity.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
-     /// A unique number or alphanumeric code assigned to a building addition by a school, school system, state, or other agency or entity.
+     /// The FacilityDesignConstruction Model
      /// </summary>
-    public partial class FacilityDesignConstructionModel : AutobahnBase, Interfaces.IFacilityDesignConstruction
+    public partial class FacilityDesignConstructionModel : AutobahnBase, IFacilityDesignConstruction
     {
         /// <summary>
         /// Building Addition Code
@@ -68,7 +67,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20761">Facility Construction Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FacilityConstructionDate { get; set; }
+        public DateTime? FacilityConstructionDate { get; set; }
 
         /// <summary>
         /// Facility Construction Year
@@ -82,43 +81,73 @@ namespace Autobahn.Facilities.Models
         public System.String FacilityConstructionYear { get; set; }
 
         /// <summary>
-        /// Building Architect Name
-        /// <para>
-        /// The name of the architect of record for the building.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20815">Building Architect Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFacilityDesign"/> model
         /// </summary>
         public Guid FacilityDesignId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingEnergyConservationMeasureType"/> model
+        /// Building Energy Conservation Measure Type
+        /// <para>
+        /// The type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20849">Building Energy Conservation Measure Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingEnergyConservationMeasureTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityConstructionDateType"/> model
+        /// Facility Construction Date Type
+        /// <para>
+        /// Designation of the nature of the construction completion date.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20762">Facility Construction Date Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityConstructionDateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityConstructionMaterialType"/> model
+        /// Facility Construction Material Type
+        /// <para>
+        /// The primary material used for the construction of a building.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20763">Facility Construction Material Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityConstructionMaterialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityJointDevelopmentType"/> model
+        /// Facility Joint Development Type
+        /// <para>
+        /// The type of development where two or more entities partner to plan, site, design, and/or build a new school or renovate an existing school to better support the joint use of the building and/or land.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20856">Facility Joint Development Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityJointDevelopmentTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilitySiteImprovementLocationType"/> model
+        /// Facility Site Improvement Location Type
+        /// <para>
+        /// The type of location of the designed and constructed improvements made to a site.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20768">Facility Site Improvement Location Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilitySiteImprovementLocationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityStandardType"/> model
+        /// Facility Standard Type
+        /// <para>
+        /// An indication of the district or state requirements or guidelines for the design and construction of school facilities.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20865">Facility Standard Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityStandardTypeId { get; set; }
 

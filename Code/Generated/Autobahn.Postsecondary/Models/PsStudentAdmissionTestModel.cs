@@ -3,7 +3,8 @@
 //* FileName:   PsStudentAdmissionTestModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsStudentAdmissionTest Model
      /// </summary>
-    public partial class PsStudentAdmissionTestModel : AutobahnBase, Interfaces.IPsStudentAdmissionTest
+    public partial class PsStudentAdmissionTestModel : AutobahnBase, IPsStudentAdmissionTest
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -19,7 +20,13 @@ namespace Autobahn.Postsecondary.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStandardizedAdmissionTest"/> model
+        /// Standardized Admission Test Type
+        /// <para>
+        /// The type of test prepared and administered by an agency that is independent of any postsecondary education institution and is typically used for admissions purposes. Tests provide information about prospective students and their academic qualifications relative to a national sample.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19266">Standardized Admission Test Type</a>
+        /// </para>
         /// </summary>
         public Guid RefStandardizedAdmissionTestId { get; set; }
 
@@ -32,7 +39,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19265">Standardized Admission Test Score</a>
         /// </para>
         /// </summary>
-        public System.Decimal? StandardizedAdmissionTestScore { get; set; }
+        public Decimal? StandardizedAdmissionTestScore { get; set; }
 
     }
 }

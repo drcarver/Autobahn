@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationPersonRoleApplicationModel.cs
-//* Name:       Application Date
-//* Definition: The year, month and day on which an individual  application is received by the organization.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The year, month and day on which an individual  application is received by the organization.
+     /// The OrganizationPersonRoleApplication Model
      /// </summary>
-    public partial class OrganizationPersonRoleApplicationModel : AutobahnBase, Interfaces.IOrganizationPersonRoleApplication
+    public partial class OrganizationPersonRoleApplicationModel : AutobahnBase, IOrganizationPersonRoleApplication
     {
         /// <summary>
         /// Application Date

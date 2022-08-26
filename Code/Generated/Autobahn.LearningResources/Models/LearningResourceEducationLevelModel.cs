@@ -3,7 +3,8 @@
 //* FileName:   LearningResourceEducationLevelModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.LearningResources;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.LearningResources.Models
@@ -11,21 +12,21 @@ namespace Autobahn.LearningResources.Models
      /// <summary>
      /// The LearningResourceEducationLevel Model
      /// </summary>
-    public partial class LearningResourceEducationLevelModel : AutobahnBase, Interfaces.ILearningResourceEducationLevel
+    public partial class LearningResourceEducationLevelModel : AutobahnBase, ILearningResourceEducationLevel
     {
         /// <summary>
-        /// Learning Resource Adapted From URL
-        /// <para>
-        /// URL identifier of a learning resource for which this resource is an adaptation.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20367">Learning Resource Adapted From URL</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ILearningResource"/> model
         /// </summary>
         public Guid LearningResourceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEducationLevel"/> model
+        /// Learning Resource Education Level�
+        /// <para>
+        /// The education level, grade level or primary instructional level at which a Learning Resource is intended.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20212">Learning Resource Education Level�</a>
+        /// </para>
         /// </summary>
         public Guid RefEducationLevelId { get; set; }
 

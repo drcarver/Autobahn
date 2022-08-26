@@ -13,7 +13,4 @@ Implementation|Implementation|Information used for implementing data systems and
 Authorization|Authentication and Authorization|Information used by an application or service that authenticates the identity of a person or authorizes a person’s access to information or services.|c3f2eba2-9b12-4e33-87da-034590d0ff97
 Common|Common Models|Common models used in multiple domains.|6D255E48-2117-43D5-9611-CFC8C9BAABEC
 Invalid|Invalid or Unreferenced Models|Legacy models no longer used in any domain.| {6ADA287E-1EC9-4E52-8DF6-36A3045FCCE4}
-
-
-
-
+Interfaces|Autobahn Interface files|Autobahn Interface files. Thee are used for DI and all models|3A1D46C9-BAF0-42E1-B996-EE2A12274236

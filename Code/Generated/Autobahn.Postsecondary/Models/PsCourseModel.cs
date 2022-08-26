@@ -3,7 +3,8 @@
 //* FileName:   PsCourseModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,16 +12,10 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsCourse Model
      /// </summary>
-    public partial class PsCourseModel : AutobahnBase, Interfaces.IPsCourse
+    public partial class PsCourseModel : AutobahnBase, IPsCourse
     {
         /// <summary>
-        /// Course Certification Description
-        /// <para>
-        /// A description of the certification or recognition associated with this course (ex. Networking, CAD, etc.)
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20268">Course Certification Description</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICourse"/> model
         /// </summary>
         public Guid CourseId { get; set; }
 
@@ -35,16 +30,7 @@ namespace Autobahn.Postsecondary.Models
         /// </summary>
         public System.String CourseNumber { get; set; }
 
-        /// <summary>
-        /// National Collegiate Athletic Association Eligibility
-        /// <para>
-        /// An indication that the course is approved for determining NCAA eligibility.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20382">National Collegiate Athletic Association Eligibility</a>
-        /// </para>
-        /// </summary>
-        public System.Int32? NCAAEligibilityInd { get; set; }
+        public Int32? NcaaeligibilityInd { get; set; }
 
         /// <summary>
         /// Original Course Identifier
@@ -69,24 +55,42 @@ namespace Autobahn.Postsecondary.Models
         public System.String OverrideSchoolCourseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
+        /// Classification of Instructional Program Code
+        /// <para>
+        /// A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19043">Classification of Instructional Program Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseCreditBasisType"/> model
+        /// Course Credit Basis Type
+        /// <para>
+        /// The type of enrollment associated with the credit hours for the course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20269">Course Credit Basis Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseCreditBasisTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseCreditLevelType"/> model
+        /// Course Credit Level Type
+        /// <para>
+        /// The level of credit associated with the credit hours earned for the course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20270">Course Credit Level Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseCreditLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefNCESCollegeCourseMapCode"/> model
+        /// Reference to an optional instance of the <see cref="RefNcescollegeCourseMapCode"/> model
         /// </summary>
-        public Guid? RefNCESCollegeCourseMapCodeId { get; set; }
+        public Guid? RefNcescollegeCourseMapCodeId { get; set; }
 
     }
 }

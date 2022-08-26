@@ -3,15 +3,15 @@
 //* FileName:   ApplicationModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
 using Autobahn.Common.Models;
+using IApplication = Autobahn.Interfaces.Authorization.IApplication;
 
 namespace Autobahn.Authorization.Models
 {
      /// <summary>
      /// The Application Model
      /// </summary>
-    public partial class ApplicationModel : AutobahnBase, Interfaces.IApplication
+    public partial class ApplicationModel : AutobahnBase, IApplication
     {
         /// <summary>
         /// Authorization Application Name

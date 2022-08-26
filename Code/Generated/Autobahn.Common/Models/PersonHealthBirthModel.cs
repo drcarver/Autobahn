@@ -3,13 +3,15 @@
 //* FileName:   PersonHealthBirthModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonHealthBirth Model
      /// </summary>
-    public partial class PersonHealthBirthModel : AutobahnBase, Interfaces.IPersonHealthBirth
+    public partial class PersonHealthBirthModel : AutobahnBase, IPersonHealthBirth
     {
         /// <summary>
         /// Multiple Birth Indicator
@@ -20,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19421">Multiple Birth Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? MultipleBirthIndicator { get; set; }
+        public Boolean? MultipleBirthIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -28,7 +30,13 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTrimesterWhenPrenatalCareBegan"/> model
+        /// Trimester When Prenatal Care Began
+        /// <para>
+        /// The trimester of pregnancy in which a child's mother began receiving prenatal health care.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20611">Trimester When Prenatal Care Began</a>
+        /// </para>
         /// </summary>
         public Guid? RefTrimesterWhenPrenatalCareBeganId { get; set; }
 
@@ -41,7 +49,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19313">Weeks of Gestation</a>
         /// </para>
         /// </summary>
-        public System.Int32? WeeksOfGestation { get; set; }
+        public Int32? WeeksOfGestation { get; set; }
 
         /// <summary>
         /// Weight at Birth

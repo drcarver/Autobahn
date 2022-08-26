@@ -9,7 +9,7 @@ namespace Autobahn.Codegen.Models
         /// </summary>
         public AutobahnProperty()
         {
-            Attributes = new PropertyAttributes(); 
+            Attributes = new PropertyAttributes();
         }
 
         /// <summary>
@@ -22,12 +22,37 @@ namespace Autobahn.Codegen.Models
             Attributes = new(property);
             Name = property.Name;
             Property = property;
+            IsVirtual = property.GetAccessors()[0].IsVirtual;
+            if (property.PropertyType.IsGenericType && property.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                if (property.Name.EndsWith("Id"))
+                {
+                    // If it is NULLABLE, then get the underlying type. eg if "Nullable<int>" then this will return just "int"
+                    PropertyType = $"Guid?";
+                }
+                else
+                {
+                    // If it is NULLABLE, then get the underlying type. eg if "Nullable<int>" then this will return just "int"
+                    PropertyType = $"{property.PropertyType.GetGenericArguments()[0].Name}?";
+                }
+            }
+            else
+            {
+                if (property.Name.EndsWith("Id"))
+                {
+                    PropertyType = "Guid";
+                }
+                else
+                {
+                    PropertyType = property.PropertyType.ToString();
+                }
+            } 
         }
         internal PropertyAttributes Attributes { get; set; }
         internal string Name { get; set; }
         internal PropertyInfo Property { get; set; }
         internal string PropertyType { get; set; }
-        internal AutobahnElement AutobahnElement { get; set; }
+        internal AutobahnElement? AutobahnElement { get; set; }
         internal bool IsVirtual { get; set; } = false;
     }
 }

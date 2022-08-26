@@ -3,13 +3,15 @@
 //* FileName:   OrganizationDetailModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationDetail Model
      /// </summary>
-    public partial class OrganizationDetailModel : AutobahnBase, Interfaces.IOrganizationDetail
+    public partial class OrganizationDetailModel : AutobahnBase, IOrganizationDetail
     {
         /// <summary>
         /// Activity Title
@@ -32,16 +34,7 @@ namespace Autobahn.Common.Models
         /// </summary>
         public Guid? RefOrganizationTypeId { get; set; }
 
-        /// <summary>
-        /// Organization Region GeoJSON
-        /// <para>
-        /// The geo-political area of the organization's facility, building, or site.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20731">Organization Region GeoJSON</a>
-        /// </para>
-        /// </summary>
-        public System.String RegionGeoJSON { get; set; }
+        public System.String RegionGeoJson { get; set; }
 
         /// <summary>
         /// Short Name of Institution

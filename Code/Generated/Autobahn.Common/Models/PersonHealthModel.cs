@@ -3,13 +3,15 @@
 //* FileName:   PersonHealthModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonHealth Model
      /// </summary>
-    public partial class PersonHealthModel : AutobahnBase, Interfaces.IPersonHealth
+    public partial class PersonHealthModel : AutobahnBase, IPersonHealth
     {
         /// <summary>
         /// Dental Screening Date
@@ -53,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19681">Hearing Screening Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? HearingScreeningDate { get; set; }
+        public DateTime? HearingScreeningDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -61,32 +63,68 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDentalInsuranceCoverageType"/> model
+        /// Dental Insurance Coverage Type
+        /// <para>
+        /// The source of insurance covering an person's dental care.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19335">Dental Insurance Coverage Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDentalInsuranceCoverageTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDentalScreeningStatus"/> model
+        /// Dental Screening Status
+        /// <para>
+        /// The condition of a person's mouth or oral cavity; more specifically the condition of the hard tissues (i.e., teeth and jaws) and the soft tissues (i.e., gums, tongue, lips, palate, mouth floor, and inner cheeks). Good oral health denotes the absence of clinically manifested disease or abnormalities of the oral cavity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19310">Dental Screening Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefDentalScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHealthInsuranceCoverage"/> model
+        /// Insurance Coverage
+        /// <para>
+        /// The nature of insurance covering an person's hospitalization and other health or medical care.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19334">Insurance Coverage</a>
+        /// </para>
         /// </summary>
         public Guid? RefHealthInsuranceCoverageId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHearingScreeningStatus"/> model
+        /// Hearing Screening Status
+        /// <para>
+        /// Status of an examination used to measure a person's ability to perceive sounds.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19309">Hearing Screening Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefHearingScreeningStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMedicalAlertIndicator"/> model
+        /// Medical Alert Indicator
+        /// <para>
+        /// Alert indicator for a medical/health condition.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19429">Medical Alert Indicator</a>
+        /// </para>
         /// </summary>
         public Guid? RefMedicalAlertIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefVisionScreeningStatus"/> model
+        /// Vision Screening Status
+        /// <para>
+        /// Status of an examination used to measure a person's ability to see.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19308">Vision Screening Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefVisionScreeningStatusId { get; set; }
 
@@ -99,7 +137,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19680">Vision Screening Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? VisionScreeningDate { get; set; }
+        public DateTime? VisionScreeningDate { get; set; }
 
     }
 }

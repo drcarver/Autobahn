@@ -3,7 +3,8 @@
 //* FileName:   FacilityComplianceModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,16 +12,10 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The FacilityCompliance Model
      /// </summary>
-    public partial class FacilityComplianceModel : AutobahnBase, Interfaces.IFacilityCompliance
+    public partial class FacilityComplianceModel : AutobahnBase, IFacilityCompliance
     {
         /// <summary>
-        /// Building Institutional Equipment Description
-        /// <para>
-        /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20782">Building Institutional Equipment Description</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IBuildingSystemComponent"/> model
         /// </summary>
         public Guid? BuildingSystemComponentId { get; set; }
 
@@ -33,7 +28,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20879">Component or Fixture Check Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ComponentOrFixtureCheckDate { get; set; }
+        public DateTime? ComponentOrFixtureCheckDate { get; set; }
 
         /// <summary>
         /// Facility Compliance Determination Date
@@ -44,7 +39,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20818">Facility Compliance Determination Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FacilityComplianceDeterminationDate { get; set; }
+        public DateTime? FacilityComplianceDeterminationDate { get; set; }
 
         /// <summary>
         /// Facility Compliance Name
@@ -77,7 +72,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20822">Facility Estimated Cost to Eliminate Deferred Maintenance</a>
         /// </para>
         /// </summary>
-        public System.Decimal? FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
+        public Decimal? FacilityEstimatedCostToEliminateDeferredMaint { get; set; }
 
         /// <summary>
         /// Facility Inspection Score Result Description
@@ -107,12 +102,24 @@ namespace Autobahn.Facilities.Models
         public Guid? FacilityMandateId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityComplianceStatus"/> model
+        /// Facility Compliance Status
+        /// <para>
+        /// An indication of whether the school, building, site, system, component, equipment, vehicle, or fixture conforms to the requirements or standards specified in federal, state, or local standards or codes or other officially required guidelines or regulations.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20773">Facility Compliance Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityComplianceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityMaintStandardType"/> model
+        /// Facility Maintenance Standard Type
+        /// <para>
+        /// The standard for maintenance of a component, system, or building.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20857">Facility Maintenance Standard Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityMaintStandardTypeId { get; set; }
 

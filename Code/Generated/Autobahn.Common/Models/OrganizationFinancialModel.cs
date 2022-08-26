@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationFinancialModel.cs
-//* Name:       Financial Accounting Period Actual Value
-//* Definition: The actual value of a financial account for the specified accounting period or fiscal year.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The actual value of a financial account for the specified accounting period or fiscal year.
+     /// The OrganizationFinancial Model
      /// </summary>
-    public partial class OrganizationFinancialModel : AutobahnBase, Interfaces.IOrganizationFinancial
+    public partial class OrganizationFinancialModel : AutobahnBase, IOrganizationFinancial
     {
         /// <summary>
         /// Financial Accounting Period Actual Value
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20317">Financial Accounting Period Actual Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? ActualValue { get; set; }
+        public Decimal? ActualValue { get; set; }
 
         /// <summary>
         /// Financial Accounting Period Budgeted Value
@@ -33,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20318">Financial Accounting Period Budgeted Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? BudgetedValue { get; set; }
+        public Decimal? BudgetedValue { get; set; }
 
         /// <summary>
         /// Financial Accounting Date
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20629">Financial Accounting Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? Date { get; set; }
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Financial Accounting Period Encumbered Value
@@ -55,16 +55,10 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20625">Financial Accounting Period Encumbered Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? EncumberedValue { get; set; }
+        public Decimal? EncumberedValue { get; set; }
 
         /// <summary>
-        /// Financial Account Number
-        /// <para>
-        /// A number given to a financial account within a local source accounting system. The number may be a concatenation of a standard  prefix for the type of account with digits added that have specific meaning within the local system.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20530">Financial Account Number</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFinancialAccount"/> model
         /// </summary>
         public Guid FinancialAccountId { get; set; }
 
@@ -82,7 +76,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20623">Fiscal Period Begin Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FiscalPeriodBeginDate { get; set; }
+        public DateTime? FiscalPeriodBeginDate { get; set; }
 
         /// <summary>
         /// Fiscal Period End Date
@@ -93,7 +87,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20624">Fiscal Period End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FiscalPeriodEndDate { get; set; }
+        public DateTime? FiscalPeriodEndDate { get; set; }
 
         /// <summary>
         /// Fiscal Year
@@ -107,13 +101,7 @@ namespace Autobahn.Common.Models
         public System.String FiscalYear { get; set; }
 
         /// <summary>
-        /// Session Attendance Term Indicator
-        /// <para>
-        /// Indicates that the session is an attendance term.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20240">Session Attendance Term Indicator</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IOrganizationCalendarSession"/> model
         /// </summary>
         public Guid OrganizationCalendarSessionId { get; set; }
 
@@ -126,7 +114,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20628">Financial Accounting Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? Value { get; set; }
+        public Decimal? Value { get; set; }
 
     }
 }

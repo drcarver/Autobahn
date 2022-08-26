@@ -1,107 +1,37 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12CourseModel.cs
-//* Name:       Available Carnegie Unit Credit
-//* Definition: Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
+//* FileName:   K12courseModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
+     /// The K12course Model
      /// </summary>
-    public partial class K12CourseModel : AutobahnBase, Interfaces.IK12Course
+    public partial class K12courseModel : AutobahnBase, IK12course
     {
-        /// <summary>
-        /// Available Carnegie Unit Credit
-        /// <para>
-        /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19030">Available Carnegie Unit Credit</a>
-        /// </para>
-        /// </summary>
-        public System.Decimal? AvailableCarnegieUnitCredit { get; set; }
+        public Decimal? AvailableCarnegieUnitCredit { get; set; }
 
-        /// <summary>
-        /// Core Academic Course
-        /// <para>
-        /// The course meets the state definition of a core academic course.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19509">Core Academic Course</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? CoreAcademicCourse { get; set; }
+        public Boolean? CoreAcademicCourse { get; set; }
 
-        /// <summary>
-        /// Course Aligned with Standards
-        /// <para>
-        /// An indication whether a course is aligned with the established standards of a curriculum framework.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19013">Course Aligned with Standards</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? CourseAlignedWithStandards { get; set; }
+        public Boolean? CourseAlignedWithStandards { get; set; }
 
-        /// <summary>
-        /// Course Department Name
-        /// <para>
-        /// Department with jurisdiction over this course.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20525">Course Department Name</a>
-        /// </para>
-        /// </summary>
         public System.String CourseDepartmentName { get; set; }
 
         /// <summary>
-        /// Course Certification Description
-        /// <para>
-        /// A description of the certification or recognition associated with this course (ex. Networking, CAD, etc.)
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20268">Course Certification Description</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICourse"/> model
         /// </summary>
         public Guid CourseId { get; set; }
 
-        /// <summary>
-        /// Family and Consumer Sciences Course Indicator
-        /// <para>
-        /// An indication that the course is associated with the Family and Consumer Sciences plan of study.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20311">Family and Consumer Sciences Course Indicator</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? FamilyConsumerSciencesCourseInd { get; set; }
+        public Boolean? FamilyConsumerSciencesCourseInd { get; set; }
 
-        /// <summary>
-        /// Course Funding Program
-        /// <para>
-        /// A program through which the course is funded.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20272">Course Funding Program</a>
-        /// </para>
-        /// </summary>
         public System.String FundingProgram { get; set; }
 
-        /// <summary>
-        /// High School Course Requirement
-        /// <para>
-        /// An indication that this course credit is required for a high school diploma.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19137">High School Course Requirement</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? HighSchoolCourseRequirement { get; set; }
+        public Boolean? HighSchoolCourseRequirement { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefAdditionalCreditType"/> model
@@ -119,9 +49,9 @@ namespace Autobahn.K12.Models
         public Guid? RefCareerClusterId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGpaapplicability"/> model
         /// </summary>
-        public Guid? RefCourseGPAApplicabilityId { get; set; }
+        public Guid? RefCourseGpaapplicabilityId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefCourseInteractionMode"/> model
@@ -139,46 +69,28 @@ namespace Autobahn.K12.Models
         public Guid? RefCurriculumFrameworkTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefK12EndOfCourseRequirement"/> model
+        /// Reference to an optional instance of the <see cref="RefK12endOfCourseRequirement"/> model
         /// </summary>
-        public Guid? RefK12EndOfCourseRequirementId { get; set; }
+        public Guid? RefK12endOfCourseRequirementId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSCEDCourseLevel"/> model
+        /// Reference to an optional instance of the <see cref="RefScedcourseLevel"/> model
         /// </summary>
-        public Guid? RefSCEDCourseLevelId { get; set; }
+        public Guid? RefScedcourseLevelId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSCEDCourseSubjectArea"/> model
+        /// Reference to an optional instance of the <see cref="RefScedcourseSubjectArea"/> model
         /// </summary>
-        public Guid? RefSCEDCourseSubjectAreaId { get; set; }
+        public Guid? RefScedcourseSubjectAreaId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 
-        /// <summary>
-        /// School Courses for the Exchange of Data Course Code
-        /// <para>
-        /// The five-digit SCED code. The first two-digits of the code represent the Course Subject Area and the next three digits identify the course number. These identifiers are fairly general but provide enough specificity to identify the course's topic and to distinguish it from other courses in that subject area.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20490">School Courses for the Exchange of Data Course Code</a>
-        /// </para>
-        /// </summary>
-        public System.String SCEDCourseCode { get; set; }
+        public System.String ScedcourseCode { get; set; }
 
-        /// <summary>
-        /// School Courses for the Exchange of Data Grade Span
-        /// <para>
-        /// The grade span for which the course is appropriate.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20452">School Courses for the Exchange of Data Grade Span</a>
-        /// </para>
-        /// </summary>
-        public System.String SCEDGradeSpan { get; set; }
+        public System.String ScedgradeSpan { get; set; }
 
     }
 }

@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStudentSectionModel.cs
-//* Name:       Course Academic Grade
-//* Definition: The final grade awarded for participation in the course. 
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The final grade awarded for participation in the course. 
+     /// The PsStudentSection Model
      /// </summary>
-    public partial class PsStudentSectionModel : AutobahnBase, Interfaces.IPsStudentSection
+    public partial class PsStudentSectionModel : AutobahnBase, IPsStudentSection
     {
         /// <summary>
         /// Course Academic Grade
@@ -46,7 +45,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19077">Degree Applicability</a>
         /// </para>
         /// </summary>
-        public System.Boolean? DegreeApplicability { get; set; }
+        public Boolean? DegreeApplicability { get; set; }
 
         /// <summary>
         /// Number of Credits Attempted
@@ -57,7 +56,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19199">Number of Credits Attempted</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfCreditsAttempted { get; set; }
+        public Decimal? NumberOfCreditsAttempted { get; set; }
 
         /// <summary>
         /// Number of Credits Earned
@@ -68,7 +67,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19200">Number of Credits Earned</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfCreditsEarned { get; set; }
+        public Decimal? NumberOfCreditsEarned { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -84,15 +83,27 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19064">Course Quality Points Earned</a>
         /// </para>
         /// </summary>
-        public System.Decimal? QualityPointsEarned { get; set; }
+        public Decimal? QualityPointsEarned { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
+        /// Course Academic Grade Status Code
+        /// <para>
+        /// Additional information regarding the context of the given grade.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20265">Course Academic Grade Status Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseRepeatCode"/> model
+        /// Course Repeat Code
+        /// <para>
+        /// Indicates that an academic course has been repeated by a student and how that repeat is to be computed in the student's academic grade average.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19065">Course Repeat Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseRepeatCodeId { get; set; }
 

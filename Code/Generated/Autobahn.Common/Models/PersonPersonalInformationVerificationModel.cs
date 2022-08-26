@@ -3,33 +3,23 @@
 //* FileName:   PersonPersonalInformationVerificationModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonPersonalInformationVerification Model
      /// </summary>
-    public partial class PersonPersonalInformationVerificationModel : AutobahnBase, Interfaces.IPersonPersonalInformationVerification
+    public partial class PersonPersonalInformationVerificationModel : AutobahnBase, IPersonPersonalInformationVerification
     {
         /// <summary>
-        /// Address County Name
-        /// <para>
-        /// The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19190">Address County Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonAddress"/> model
         /// </summary>
         public Guid? PersonAddressId { get; set; }
 
         /// <summary>
-        /// Birthdate
-        /// <para>
-        /// The year, month and day on which a person was born.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19033">Birthdate</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonDetail"/> model
         /// </summary>
         public Guid? PersonDetailId { get; set; }
 
@@ -44,12 +34,24 @@ namespace Autobahn.Common.Models
         public Guid? PersonTelephoneId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonalInformationType"/> model
+        /// Personal Information Type
+        /// <para>
+        /// The type of personal information verified through the Personal Information Verification evidence.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20951">Personal Information Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefPersonalInformationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonalInformationVerification"/> model
+        /// Personal Information Verification
+        /// <para>
+        /// The evidence by which a persons name, address, date of birth, etc. is confirmed.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19611">Personal Information Verification</a>
+        /// </para>
         /// </summary>
         public Guid? RefPersonalInformationVerificationId { get; set; }
 

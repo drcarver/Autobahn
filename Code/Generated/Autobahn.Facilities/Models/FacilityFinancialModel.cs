@@ -3,7 +3,8 @@
 //* FileName:   FacilityFinancialModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The FacilityFinancial Model
      /// </summary>
-    public partial class FacilityFinancialModel : AutobahnBase, Interfaces.IFacilityFinancial
+    public partial class FacilityFinancialModel : AutobahnBase, IFacilityFinancial
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IFacilityLease"/> model
@@ -29,13 +30,7 @@ namespace Autobahn.Facilities.Models
         public Guid? FacilityMortgageId { get; set; }
 
         /// <summary>
-        /// Financial Accounting Period Actual Value
-        /// <para>
-        /// The actual value of a financial account for the specified accounting period or fiscal year.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20317">Financial Accounting Period Actual Value</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IOrganizationFinancial"/> model
         /// </summary>
         public Guid OrganizationFinancialId { get; set; }
 

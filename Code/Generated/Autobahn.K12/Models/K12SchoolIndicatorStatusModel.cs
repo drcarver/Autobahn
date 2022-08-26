@@ -1,32 +1,27 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12SchoolIndicatorStatusModel.cs
+//* FileName:   K12schoolIndicatorStatusModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12SchoolIndicatorStatus Model
+     /// The K12schoolIndicatorStatus Model
      /// </summary>
-    public partial class K12SchoolIndicatorStatusModel : AutobahnBase, Interfaces.IK12SchoolIndicatorStatus
+    public partial class K12schoolIndicatorStatusModel : AutobahnBase, IK12schoolIndicatorStatus
     {
         public System.String IndicatorStatus { get; set; }
 
         public System.String IndicatorStatusSubgroup { get; set; }
 
         /// <summary>
-        /// Accreditation Agency Name
-        /// <para>
-        /// The full name of an agency that accredited a school.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20500">Accreditation Agency Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12school"/> model
         /// </summary>
-        public Guid K12SchoolId { get; set; }
+        public Guid K12schoolId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefIndicatorStateDefinedStatus"/> model

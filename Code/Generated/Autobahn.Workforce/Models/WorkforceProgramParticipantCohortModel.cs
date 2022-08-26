@@ -3,7 +3,8 @@
 //* FileName:   WorkforceProgramParticipantCohortModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Workforce;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Workforce.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Workforce.Models
      /// <summary>
      /// The WorkforceProgramParticipantCohort Model
      /// </summary>
-    public partial class WorkforceProgramParticipantCohortModel : AutobahnBase, Interfaces.IWorkforceProgramParticipantCohort
+    public partial class WorkforceProgramParticipantCohortModel : AutobahnBase, IWorkforceProgramParticipantCohort
     {
         public System.String CohortDescription { get; set; }
 
@@ -24,7 +25,7 @@ namespace Autobahn.Workforce.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20918">Cohort Median Earnings</a>
         /// </para>
         /// </summary>
-        public System.Decimal? CohortMedianEarnings { get; set; }
+        public Decimal? CohortMedianEarnings { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model

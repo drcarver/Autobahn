@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationCalendarModel.cs
-//* Name:       Calendar Code
-//* Definition: A unique number assigned by a school district to a school calendar.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// A unique number assigned by a school district to a school calendar.
+     /// The OrganizationCalendar Model
      /// </summary>
-    public partial class OrganizationCalendarModel : AutobahnBase, Interfaces.IOrganizationCalendar
+    public partial class OrganizationCalendarModel : AutobahnBase, IOrganizationCalendar
     {
         /// <summary>
         /// Calendar Code

@@ -3,7 +3,8 @@
 //* FileName:   CredentialCriteriaCourseModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Credentials;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
@@ -11,16 +12,10 @@ namespace Autobahn.Credentials.Models
      /// <summary>
      /// The CredentialCriteriaCourse Model
      /// </summary>
-    public partial class CredentialCriteriaCourseModel : AutobahnBase, Interfaces.ICredentialCriteriaCourse
+    public partial class CredentialCriteriaCourseModel : AutobahnBase, ICredentialCriteriaCourse
     {
         /// <summary>
-        /// Course Certification Description
-        /// <para>
-        /// A description of the certification or recognition associated with this course (ex. Networking, CAD, etc.)
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20268">Course Certification Description</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICourse"/> model
         /// </summary>
         public Guid CourseId { get; set; }
 

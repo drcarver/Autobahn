@@ -3,13 +3,15 @@
 //* FileName:   RoleAttendanceEventModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The RoleAttendanceEvent Model
      /// </summary>
-    public partial class RoleAttendanceEventModel : AutobahnBase, Interfaces.IRoleAttendanceEvent
+    public partial class RoleAttendanceEventModel : AutobahnBase, IRoleAttendanceEvent
     {
         /// <summary>
         /// Attendance Event Date
@@ -31,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20901">End Time</a>
         /// </para>
         /// </summary>
-        public System.TimeSpan? EndTime { get; set; }
+        public TimeSpan? EndTime { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -39,27 +41,57 @@ namespace Autobahn.Common.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAbsentAttendanceCategory"/> model
+        /// Absent Attendance Category
+        /// <para>
+        ///  The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19592">Absent Attendance Category</a>
+        /// </para>
         /// </summary>
         public Guid? RefAbsentAttendanceCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAttendanceEventType"/> model
+        /// Attendance Event Type
+        /// <para>
+        /// The type of attendance event.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19594">Attendance Event Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefAttendanceEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAttendanceStatus"/> model
+        /// Attendance Status
+        /// <para>
+        /// The status of a person's attendance associated with an Attendance Event Type and Attendance Event Date in an organization-person-role context.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19076">Attendance Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefAttendanceStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefLeaveEventType"/> model
+        /// Leave Event Type
+        /// <para>
+        /// The type of the leave event.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19617">Leave Event Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefLeaveEventTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPresentAttendanceCategory"/> model
+        /// Present Attendance Category
+        /// <para>
+        /// The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19593">Present Attendance Category</a>
+        /// </para>
         /// </summary>
         public Guid? RefPresentAttendanceCategoryId { get; set; }
 
@@ -72,7 +104,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20900">Start Time</a>
         /// </para>
         /// </summary>
-        public System.TimeSpan? StartTime { get; set; }
+        public TimeSpan? StartTime { get; set; }
 
     }
 }

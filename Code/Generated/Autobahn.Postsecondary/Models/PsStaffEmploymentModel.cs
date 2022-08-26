@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStaffEmploymentModel.cs
-//* Name:       Annual Base Contractual Salary
-//* Definition: The total annual base contractual salary of a person.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The total annual base contractual salary of a person.
+     /// The PsStaffEmployment Model
      /// </summary>
-    public partial class PsStaffEmploymentModel : AutobahnBase, Interfaces.IPsStaffEmployment
+    public partial class PsStaffEmploymentModel : AutobahnBase, IPsStaffEmployment
     {
         /// <summary>
         /// Annual Base Contractual Salary
@@ -24,7 +23,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19722">Annual Base Contractual Salary</a>
         /// </para>
         /// </summary>
-        public System.Decimal? AnnualBaseContractualSalary { get; set; }
+        public Decimal? AnnualBaseContractualSalary { get; set; }
 
         /// <summary>
         /// Faculty Status
@@ -35,7 +34,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19711">Faculty Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? FacultyStatus { get; set; }
+        public Boolean? FacultyStatus { get; set; }
 
         /// <summary>
         /// Graduate Assistant Status
@@ -46,7 +45,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19720">Graduate Assistant Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? GraduateAssistantStatus { get; set; }
+        public Boolean? GraduateAssistantStatus { get; set; }
 
         /// <summary>
         /// Instructional Staff Status
@@ -57,7 +56,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19709">Instructional Staff Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? InstructionalStaffStatus { get; set; }
+        public Boolean? InstructionalStaffStatus { get; set; }
 
         /// <summary>
         /// Medical School Staff Status
@@ -68,45 +67,93 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19710">Medical School Staff Status</a>
         /// </para>
         /// </summary>
-        public System.Boolean? MedicalSchoolStaffStatus { get; set; }
+        public Boolean? MedicalSchoolStaffStatus { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAcademicRank"/> model
+        /// Academic Rank
+        /// <para>
+        /// The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "No Academic Rank."
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19717">Academic Rank</a>
+        /// </para>
         /// </summary>
         public Guid? RefAcademicRankId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEmploymentContractType"/> model
+        /// Contract Type
+        /// <para>
+        /// The type of employment contract used by an institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19714">Contract Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefEmploymentContractTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFullTimeStatus"/> model
+        /// Full-time Status
+        /// <para>
+        /// An indication of whether an individual is employed for a standard number of hours (as determined by civil or organizational policies) in a week, month, or other period of time.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19713">Full-time Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefFullTimeStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGraduateAssistantIpedsCategory"/> model
+        /// Graduate Assistant IPEDS Occupation Category
+        /// <para>
+        /// The Integrated Postsecondary Education Data System (IPEDS) occupational categories used to report graduate assistants.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19721">Graduate Assistant IPEDS Occupation Category</a>
+        /// </para>
         /// </summary>
         public Guid? RefGraduateAssistantIpedsCategoryId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInstructionalStaffContractLength"/> model
+        /// Instructional Staff Contract Length
+        /// <para>
+        /// The contracted teaching period for faculty.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19712">Instructional Staff Contract Length</a>
+        /// </para>
         /// </summary>
         public Guid? RefInstructionalStaffContractLengthId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInstructionalStaffFacultyTenure"/> model
+        /// Instructional Staff Faculty Tenure Status
+        /// <para>
+        /// An indicator of the type of faculty status a person has if, by institutional definition, a staff member has faculty status.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19716">Instructional Staff Faculty Tenure Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefInstructionalStaffFacultyTenureId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefInstructionCreditType"/> model
+        /// Instruction Credit Type
+        /// <para>
+        /// A designation of the type(s) of instruction being delivered by staff whose primary responsibility is instruction.  Instruction that is for "credit" can be applied toward the requirements for a postsecondary degree, diploma, certificate or other formal award.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19719">Instruction Credit Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefInstructionCreditTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIpedsOccupationalCategory"/> model
+        /// IPEDS Occupational Category
+        /// <para>
+        /// The Integrated Postsecondary Education Data System (IPEDS) occupational categories used to report employees.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19708">IPEDS Occupational Category</a>
+        /// </para>
         /// </summary>
         public Guid? RefIpedsOccupationalCategoryId { get; set; }
 

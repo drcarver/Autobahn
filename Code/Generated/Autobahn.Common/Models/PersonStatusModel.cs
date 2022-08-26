@@ -3,13 +3,15 @@
 //* FileName:   PersonStatusModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonStatus Model
      /// </summary>
-    public partial class PersonStatusModel : AutobahnBase, Interfaces.IPersonStatus
+    public partial class PersonStatusModel : AutobahnBase, IPersonStatus
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -17,7 +19,13 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPersonStatusType"/> model
+        /// Economic Disadvantage Status
+        /// <para>
+        /// An indication that the student met the State criteria for classification as having an economic disadvantage.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19086">Economic Disadvantage Status</a>
+        /// </para>
         /// </summary>
         public Guid RefPersonStatusTypeId { get; set; }
 
@@ -30,7 +38,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20193">Status End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? StatusEndDate { get; set; }
+        public DateTime? StatusEndDate { get; set; }
 
         /// <summary>
         /// Status Start Date
@@ -41,7 +49,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20192">Status Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? StatusStartDate { get; set; }
+        public DateTime? StatusStartDate { get; set; }
 
         public System.Boolean StatusValue { get; set; }
 

@@ -3,13 +3,15 @@
 //* FileName:   OrganizationPolicyModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationPolicy Model
      /// </summary>
-    public partial class OrganizationPolicyModel : AutobahnBase, Interfaces.IOrganizationPolicy
+    public partial class OrganizationPolicyModel : AutobahnBase, IOrganizationPolicy
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model

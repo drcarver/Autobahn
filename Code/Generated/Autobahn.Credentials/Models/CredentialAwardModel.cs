@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Credentials
 //* FileName:   CredentialAwardModel.cs
-//* Name:       Credential Advanced Standing Description
-//* Definition: A description of a credential that reduced the time or cost of attaining this credential.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Credentials;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
-     /// A description of a credential that reduced the time or cost of attaining this credential.
+     /// The CredentialAward Model
      /// </summary>
-    public partial class CredentialAwardModel : AutobahnBase, Interfaces.ICredentialAward
+    public partial class CredentialAwardModel : AutobahnBase, ICredentialAward
     {
         /// <summary>
         /// Credential Advanced Standing Description
@@ -26,16 +25,7 @@ namespace Autobahn.Credentials.Models
         /// </summary>
         public System.String AdvancedStandingDescription { get; set; }
 
-        /// <summary>
-        /// Credential Advanced Standing URL
-        /// <para>
-        /// A URL that resolves to information about a credential that reduced the time or cost of attaining this credential.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20716">Credential Advanced Standing URL</a>
-        /// </para>
-        /// </summary>
-        public System.String AdvancedStandingURL { get; set; }
+        public System.String AdvancedStandingUrl { get; set; }
 
         /// <summary>
         /// Credential Award Approver Name
@@ -57,7 +47,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20645">Credential Completion Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CompletionDate { get; set; }
+        public DateTime? CompletionDate { get; set; }
 
         /// <summary>
         /// Credential Award End Date
@@ -68,7 +58,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20121">Credential Award End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CredentialAwardEndDate { get; set; }
+        public DateTime? CredentialAwardEndDate { get; set; }
 
         /// <summary>
         /// Credential Award Start Date
@@ -79,40 +69,19 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20120">Credential Award Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CredentialAwardStartDate { get; set; }
+        public DateTime? CredentialAwardStartDate { get; set; }
 
         /// <summary>
-        /// Credential Definition Alternate Name
-        /// <para>
-        /// An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20717">Credential Definition Alternate Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICredentialDefinition"/> model
         /// </summary>
         public Guid CredentialDefinitionId { get; set; }
 
         /// <summary>
-        /// Credential Award Issuer Origin URL
-        /// <para>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19900">Credential Award Issuer Origin URL</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICredentialIssuer"/> model
         /// </summary>
         public Guid CredentialIssuerId { get; set; }
 
-        /// <summary>
-        /// Credential Award Evidence URL
-        /// <para>
-        /// A URL to a page that describes the evidence that the learner met the criteria for attainment of the credential award.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20650">Credential Award Evidence URL</a>
-        /// </para>
-        /// </summary>
-        public System.String EvidenceURL { get; set; }
+        public System.String EvidenceUrl { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -133,7 +102,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20641">Credential Revoked Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? RevokedDate { get; set; }
+        public DateTime? RevokedDate { get; set; }
 
         /// <summary>
         /// Credential Revoked Indicator
@@ -144,7 +113,7 @@ namespace Autobahn.Credentials.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20732">Credential Revoked Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? RevokedIndicator { get; set; }
+        public Boolean? RevokedIndicator { get; set; }
 
         /// <summary>
         /// Credential Revoked Reason

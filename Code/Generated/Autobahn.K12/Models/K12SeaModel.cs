@@ -1,17 +1,18 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12SeaModel.cs
+//* FileName:   K12seaModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12Sea Model
+     /// The K12sea Model
      /// </summary>
-    public partial class K12SeaModel : AutobahnBase, Interfaces.IK12Sea
+    public partial class K12seaModel : AutobahnBase, IK12sea
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -19,9 +20,9 @@ namespace Autobahn.K12.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStateANSICode"/> model
+        /// Reference to an optional instance of the <see cref="RefStateAnsicode"/> model
         /// </summary>
-        public Guid? RefStateANSICodeId { get; set; }
+        public Guid? RefStateAnsicodeId { get; set; }
 
     }
 }

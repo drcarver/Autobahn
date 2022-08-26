@@ -1,37 +1,23 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12StudentSessionModel.cs
+//* FileName:   K12studentSessionModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12StudentSession Model
+     /// The K12studentSession Model
      /// </summary>
-    public partial class K12StudentSessionModel : AutobahnBase, Interfaces.IK12StudentSession
+    public partial class K12studentSessionModel : AutobahnBase, IK12studentSession
     {
-        /// <summary>
-        /// Grade Point Average Given Session
-        /// <para>
-        /// A measure of average performance in all courses taken by a person during a given session. This is obtained by dividing the total grade points received by the number of credits attempted for the same session.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19129">Grade Point Average Given Session</a>
-        /// </para>
-        /// </summary>
-        public System.Decimal? GradePointAverageGivenSession { get; set; }
+        public Decimal? GradePointAverageGivenSession { get; set; }
 
         /// <summary>
-        /// Session Attendance Term Indicator
-        /// <para>
-        /// Indicates that the session is an attendance term.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20240">Session Attendance Term Indicator</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IOrganizationCalendarSession"/> model
         /// </summary>
         public Guid? OrganizationCalendarSessionId { get; set; }
 

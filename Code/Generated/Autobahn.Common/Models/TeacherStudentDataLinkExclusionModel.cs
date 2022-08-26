@@ -1,31 +1,35 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   TeacherStudentDataLinkExclusionModel.cs
+//* Name:       Teacher Student Data Link Exclusion Flag
+//* Definition: Indicates that the student is excluded from calculation of value-added or growth attribution calculations used for teacher evaluation.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The TeacherStudentDataLinkExclusion Model
+     /// Teacher Student Data Link Exclusion Flag <see cref="TeacherStudentDataLinkExclusion"/>
+     /// <para>
+     /// Indicates that the student is excluded from calculation of value-added or growth attribution calculations used for teacher evaluation.
+     /// </para>
+     /// <para>
+     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19973">Teacher Student Data Link Exclusion Flag</a>
+     /// </para>
      /// </summary>
-    public partial class TeacherStudentDataLinkExclusionModel : AutobahnBase, Interfaces.ITeacherStudentDataLinkExclusion
+    public partial class TeacherStudentDataLinkExclusionModel : AutobahnBase, ITeacherStudentDataLinkExclusion
     {
         /// <summary>
-        /// Teaching Assignment Contribution Percentage
-        /// <para>
-        /// A percentage used to weight the educator's assigned responsibility for student learning in a Class Section, particularly when more than one educator is assigned to the class section.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19651">Teaching Assignment Contribution Percentage</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12staffAssignment"/> model
         /// </summary>
-        public Guid K12StaffAssignmentId { get; set; }
+        public Guid K12staffAssignmentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="IK12StudentCourseSection"/> model
+        /// Reference to an optional instance of the <see cref="IK12studentCourseSection"/> model
         /// </summary>
-        public Guid K12StudentCourseSectionId { get; set; }
+        public Guid K12studentCourseSectionId { get; set; }
 
     }
 }

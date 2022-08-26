@@ -3,7 +3,8 @@
 //* FileName:   CompetencySetRubricCriterionModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Competencies;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Competencies.Models
      /// <summary>
      /// The CompetencySetRubricCriterion Model
      /// </summary>
-    public partial class CompetencySetRubricCriterionModel : AutobahnBase, Interfaces.ICompetencySetRubricCriterion
+    public partial class CompetencySetRubricCriterionModel : AutobahnBase, ICompetencySetRubricCriterion
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="ICompetencySet"/> model
@@ -19,13 +20,7 @@ namespace Autobahn.Competencies.Models
         public Guid CompetencySetId { get; set; }
 
         /// <summary>
-        /// Rubric Criterion Category
-        /// <para>
-        /// A textual label for category by which Rubric Criterion may be grouped.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20441">Rubric Criterion Category</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IRubricCriterion"/> model
         /// </summary>
         public Guid RubricCriterionId { get; set; }
 

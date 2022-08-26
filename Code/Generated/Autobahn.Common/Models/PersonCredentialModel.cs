@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonCredentialModel.cs
-//* Name:       Name of Professional Credential or License
-//* Definition: The name of the license/credential awarded by a given profession.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The name of the license/credential awarded by a given profession.
+     /// The PersonCredential Model
      /// </summary>
-    public partial class PersonCredentialModel : AutobahnBase, Interfaces.IPersonCredential
+    public partial class PersonCredentialModel : AutobahnBase, IPersonCredential
     {
         /// <summary>
         /// Name of Professional Credential or License
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19069">Credential Expiration Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// Credential Issuance Date
@@ -55,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19070">Credential Issuance Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? IssuanceDate { get; set; }
+        public DateTime? IssuanceDate { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -74,12 +74,24 @@ namespace Autobahn.Common.Models
         public System.String ProfessionalCertificateOrLicenseNumber { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCredentialType"/> model
+        /// Credential Type
+        /// <para>
+        /// An indication of the category of credential a person holds.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19071">Credential Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCredentialTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefIssuingState"/> model
+        /// State Issuing Professional Credential or License
+        /// <para>
+        /// State where the professional license/credential was issued.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19804">State Issuing Professional Credential or License</a>
+        /// </para>
         /// </summary>
         public Guid? RefIssuingStateId { get; set; }
 

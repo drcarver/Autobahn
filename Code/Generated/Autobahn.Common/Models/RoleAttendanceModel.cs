@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   RoleAttendanceModel.cs
-//* Name:       Student Attendance Rate
-//* Definition: The number of school days during the regular school year (plus summer, if applicable, if part of implementing the restart, transformation, or turnaround model) the student attended school divided by the maximum number of days the student could have attended school during the regular school year.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The number of school days during the regular school year (plus summer, if applicable, if part of implementing the restart, transformation, or turnaround model) the student attended school divided by the maximum number of days the student could have attended school during the regular school year.
+     /// The RoleAttendance Model
      /// </summary>
-    public partial class RoleAttendanceModel : AutobahnBase, Interfaces.IRoleAttendance
+    public partial class RoleAttendanceModel : AutobahnBase, IRoleAttendance
     {
         /// <summary>
         /// Student Attendance Rate
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19271">Student Attendance Rate</a>
         /// </para>
         /// </summary>
-        public System.Decimal? AttendanceRate { get; set; }
+        public Decimal? AttendanceRate { get; set; }
 
         /// <summary>
         /// Number of Days Absent
@@ -33,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19201">Number of Days Absent</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfDaysAbsent { get; set; }
+        public Decimal? NumberOfDaysAbsent { get; set; }
 
         /// <summary>
         /// Number of Days in Attendance
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19202">Number of Days in Attendance</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfDaysInAttendance { get; set; }
+        public Decimal? NumberOfDaysInAttendance { get; set; }
 
         /// <summary>
         /// Number of Days Tardy
@@ -55,7 +55,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20948">Number of Days Tardy</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfDaysTardy { get; set; }
+        public Decimal? NumberOfDaysTardy { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model

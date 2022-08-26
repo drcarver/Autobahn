@@ -3,7 +3,8 @@
 //* FileName:   GoalMeasurementModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Assessments;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Assessments.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Assessments.Models
      /// <summary>
      /// The GoalMeasurement Model
      /// </summary>
-    public partial class GoalMeasurementModel : AutobahnBase, Interfaces.IGoalMeasurement
+    public partial class GoalMeasurementModel : AutobahnBase, IGoalMeasurement
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IGoal"/> model
@@ -19,7 +20,13 @@ namespace Autobahn.Assessments.Models
         public Guid GoalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGoalMeasurementType"/> model
+        /// Goal Measurement Type
+        /// <para>
+        /// Type of evidence appropriate for assessing achievement of a goal or short-term objective.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20678">Goal Measurement Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefGoalMeasurementTypeId { get; set; }
 

@@ -1,79 +1,33 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12StaffAssignmentModel.cs
-//* Name:       Teaching Assignment Contribution Percentage
-//* Definition: A percentage used to weight the educator's assigned responsibility for student learning in a Class Section, particularly when more than one educator is assigned to the class section.
+//* FileName:   K12staffAssignmentModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// A percentage used to weight the educator's assigned responsibility for student learning in a Class Section, particularly when more than one educator is assigned to the class section.
+     /// The K12staffAssignment Model
      /// </summary>
-    public partial class K12StaffAssignmentModel : AutobahnBase, Interfaces.IK12StaffAssignment
+    public partial class K12staffAssignmentModel : AutobahnBase, IK12staffAssignment
     {
-        /// <summary>
-        /// Teaching Assignment Contribution Percentage
-        /// <para>
-        /// A percentage used to weight the educator's assigned responsibility for student learning in a Class Section, particularly when more than one educator is assigned to the class section.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19651">Teaching Assignment Contribution Percentage</a>
-        /// </para>
-        /// </summary>
-        public System.Decimal? ContributionPercentage { get; set; }
+        public Decimal? ContributionPercentage { get; set; }
 
-        /// <summary>
-        /// Staff Full Time Equivalency
-        /// <para>
-        /// The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19118">Staff Full Time Equivalency</a>
-        /// </para>
-        /// </summary>
-        public System.Decimal? FullTimeEquivalency { get; set; }
+        public Decimal? FullTimeEquivalency { get; set; }
 
-        /// <summary>
-        /// Highly Qualified Teacher Indicator
-        /// <para>
-        /// An indication that the teacher has been classified as highly qualified based on assignment.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19142">Highly Qualified Teacher Indicator</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? HighlyQualifiedTeacherIndicator { get; set; }
+        public Boolean? HighlyQualifiedTeacherIndicator { get; set; }
 
-        /// <summary>
-        /// Itinerant Teacher
-        /// <para>
-        /// An indication of whether a teacher provides instruction in more than one instructional site.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19519">Itinerant Teacher</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? ItinerantTeacher { get; set; }
+        public Boolean? ItinerantTeacher { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
         /// </summary>
         public Guid OrganizationPersonRoleId { get; set; }
 
-        /// <summary>
-        /// Primary Assignment Indicator
-        /// <para>
-        /// An indication of whether the assignment is the staff member's primary assignment.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19516">Primary Assignment Indicator</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? PrimaryAssignment { get; set; }
+        public Boolean? PrimaryAssignment { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefClassroomPositionType"/> model
@@ -81,9 +35,9 @@ namespace Autobahn.K12.Models
         public Guid? RefClassroomPositionTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefEDFactsTeacherInexperiencedStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefEdfactsTeacherInexperiencedStatus"/> model
         /// </summary>
-        public Guid? RefEDFactsTeacherInexperiencedStatusId { get; set; }
+        public Guid? RefEdfactsTeacherInexperiencedStatusId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefEmergencyOrProvisionalCredentialStatus"/> model
@@ -91,9 +45,9 @@ namespace Autobahn.K12.Models
         public Guid? RefEmergencyOrProvisionalCredentialStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefK12StaffClassification"/> model
+        /// Reference to an optional instance of the <see cref="RefK12staffClassification"/> model
         /// </summary>
-        public Guid? RefK12StaffClassificationId { get; set; }
+        public Guid? RefK12staffClassificationId { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="RefMepStaffCategory"/> model
@@ -126,53 +80,17 @@ namespace Autobahn.K12.Models
         public Guid? RefTeachingAssignmentRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTitleIProgramStaffCategory"/> model
+        /// Reference to an optional instance of the <see cref="RefTitleIprogramStaffCategory"/> model
         /// </summary>
-        public Guid? RefTitleIProgramStaffCategoryId { get; set; }
+        public Guid? RefTitleIprogramStaffCategoryId { get; set; }
 
-        /// <summary>
-        /// Special Education Paraprofessional
-        /// <para>
-        /// An indication of whether a paraprofessional is employed or contracted to work with children with disabilities who are ages 3 through 21.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19261">Special Education Paraprofessional</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? SpecialEducationParaprofessional { get; set; }
+        public Boolean? SpecialEducationParaprofessional { get; set; }
 
-        /// <summary>
-        /// Special Education Related Services Personnel
-        /// <para>
-        /// An indication of whether a related services person is employed or contracted to work with children with disabilities who are ages 3 through 21.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19262">Special Education Related Services Personnel</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? SpecialEducationRelatedServicesPersonnel { get; set; }
+        public Boolean? SpecialEducationRelatedServicesPersonnel { get; set; }
 
-        /// <summary>
-        /// Special Education Teacher
-        /// <para>
-        /// An indication of whether a teacher is employed or contracted to work with children with disabilities who are ages 3 through 21.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19264">Special Education Teacher</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? SpecialEducationTeacher { get; set; }
+        public Boolean? SpecialEducationTeacher { get; set; }
 
-        /// <summary>
-        /// Teacher of Record
-        /// <para>
-        /// Staff member who has a Teacher of Record responsibility for a Class Section based upon the state's definition of Teacher of Record.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19649">Teacher of Record</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? TeacherOfRecord { get; set; }
+        public Boolean? TeacherOfRecord { get; set; }
 
     }
 }

@@ -1,14 +1,16 @@
-﻿namespace Autobahn.Codegen.Models
+﻿using CsvHelper.Configuration.Attributes;
+
+namespace Autobahn.Codegen.Models
 {
     internal class AutobahnTable
     {
-        internal Guid Id { get; set; } = Guid.NewGuid();
-        internal string ModuleName { get; set; }
-        internal string GlobalId { get; set; }
-        internal string TableName { get; set; }
-        internal string ColumnName { get; set; }
-        internal string Description { get; set; }
-        internal string Version { get; set; }
-        internal string ColumnType { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string ModuleName { get; set; }
+        public string GlobalId { get; set; }
+        public string TableName { get; set; }
+        public string ColumnName { get; set; }
+        public string Description { get; set; }
+        public string Version { get; set; }
+        public string ColumnType { get; set; }
     }
 }

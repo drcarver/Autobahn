@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationCalendarCrisisModel.cs
-//* Name:       Crisis Code
-//* Definition: A unique number or alphanumeric code used to identify a crisis. This code should be able to accommodate numerous crises within a single school year. It is associated with the displaced student identifier in order to link a crisis to a student who was displaced or otherwise affected by the event. If the same code values are to be used over multiple years, it is important to have enough crisis-specific items (e.g., school year, date/time) to keep the events unique over time.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// A unique number or alphanumeric code used to identify a crisis. This code should be able to accommodate numerous crises within a single school year. It is associated with the displaced student identifier in order to link a crisis to a student who was displaced or otherwise affected by the event. If the same code values are to be used over multiple years, it is important to have enough crisis-specific items (e.g., school year, date/time) to keep the events unique over time.
+     /// The OrganizationCalendarCrisis Model
      /// </summary>
-    public partial class OrganizationCalendarCrisisModel : AutobahnBase, Interfaces.IOrganizationCalendarCrisis
+    public partial class OrganizationCalendarCrisisModel : AutobahnBase, IOrganizationCalendarCrisis
     {
         /// <summary>
         /// Crisis Description
@@ -33,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20528">Crisis End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CrisisEndDate { get; set; }
+        public DateTime? CrisisEndDate { get; set; }
 
         /// <summary>
         /// Crisis End Date
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20528">Crisis End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Crisis Name
@@ -71,7 +71,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19607">Crisis Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Crisis Type

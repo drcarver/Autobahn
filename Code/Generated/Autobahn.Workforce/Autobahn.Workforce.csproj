@@ -17,25 +17,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <MauiXaml Update="Views\WorkforceEmploymentQuarterlyDataView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\WorkforceProgramParticipantCohortView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Views\WorkforceProgramParticipationView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <ApplicationId>com.drcarver.autobahn.workforce</ApplicationId>
+    <ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1.0</ApplicationVersion>
+    <ApplicationIdGuid>89bd4d6a-e227-4dd6-99f3-f018f8941a3d</ApplicationIdGuid>
+    <ApplicationTitle>Workforce</ApplicationTitle>
+    <AssemblyName>Autobahn.Workforce</AssemblyName>
+    <CompanyName>dcarver.com</CompanyName>
+    <Copyright>(c)Darrel Carver, 2021-2022</Copyright>
+    <Description>Workforce (WF) is the CEDS domain on people’s participation in workforce and employment development programs, as well as on employment and earnings data that are matched between education and workforce data sources.</Description>
+    <ProductName>Autobahn</ProductName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Autobahn.Common\Autobahn.Common.csproj" />
+    <ProjectReference Include="..\Autobahn.Interfaces\Autobahn.Interfaces.csproj" />
   </ItemGroup>
 </Project>

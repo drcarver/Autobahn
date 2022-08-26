@@ -1,33 +1,28 @@
 //**********************************************************
 //* DomainName: Elementary and Secondary (K12)
-//* FileName:   K12LeaTitleISupportServiceModel.cs
+//* FileName:   K12leaTitleIsupportServiceModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.K12;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.K12.Models
 {
      /// <summary>
-     /// The K12LeaTitleISupportService Model
+     /// The K12leaTitleIsupportService Model
      /// </summary>
-    public partial class K12LeaTitleISupportServiceModel : AutobahnBase, Interfaces.IK12LeaTitleISupportService
+    public partial class K12leaTitleIsupportServiceModel : AutobahnBase, IK12leaTitleIsupportService
     {
         /// <summary>
-        /// Charter School Indicator
-        /// <para>
-        /// An indication that a public school provides free public elementary and/or secondary education to eligible students under a specific charter executed, pursuant to a state charter school law, by an authorized chartering agency/authority and that is designated by such authority to be a public charter school.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19039">Charter School Indicator</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IK12lea"/> model
         /// </summary>
-        public Guid K12LeaId { get; set; }
+        public Guid K12leaId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefK12LeaTitleISupportService"/> model
+        /// Reference to an optional instance of the <see cref="RefK12leaTitleIsupportService"/> model
         /// </summary>
-        public Guid RefK12LeaTitleISupportServiceId { get; set; }
+        public Guid RefK12leaTitleIsupportServiceId { get; set; }
 
     }
 }

@@ -1,30 +1,20 @@
 //**********************************************************
 //* DomainName: Credentials
 //* FileName:   CredentialIssuerModel.cs
-//* Name:       Credential Award Issuer Origin URL
-//* Definition: The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Credentials;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
-     /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
+     /// The CredentialIssuer Model
      /// </summary>
-    public partial class CredentialIssuerModel : AutobahnBase, Interfaces.ICredentialIssuer
+    public partial class CredentialIssuerModel : AutobahnBase, ICredentialIssuer
     {
-        /// <summary>
-        /// Credential Award Issuer Origin URL
-        /// <para>
-        /// The Uniform Resource Locator (URL) from which the qualification, achievement, personal or organizational quality, or aspect of an identity was issued.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19900">Credential Award Issuer Origin URL</a>
-        /// </para>
-        /// </summary>
-        public System.String AwardIssuerOriginURL { get; set; }
+        public System.String AwardIssuerOriginUrl { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -32,20 +22,11 @@ namespace Autobahn.Credentials.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCTDLOrganizationType"/> model
+        /// Reference to an optional instance of the <see cref="RefCtdlorganizationType"/> model
         /// </summary>
-        public Guid? RefCTDLOrganizationTypeId { get; set; }
+        public Guid? RefCtdlorganizationTypeId { get; set; }
 
-        /// <summary>
-        /// Credential Issuer Revocation List URL
-        /// <para>
-        /// The URL to a document that includes a list of credential award assertions an issuer has revoked.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20643">Credential Issuer Revocation List URL</a>
-        /// </para>
-        /// </summary>
-        public System.String RevocationListURL { get; set; }
+        public System.String RevocationListUrl { get; set; }
 
     }
 }

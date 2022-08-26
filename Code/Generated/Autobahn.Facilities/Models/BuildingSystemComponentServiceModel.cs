@@ -3,7 +3,8 @@
 //* FileName:   BuildingSystemComponentServiceModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
@@ -11,16 +12,10 @@ namespace Autobahn.Facilities.Models
      /// <summary>
      /// The BuildingSystemComponentService Model
      /// </summary>
-    public partial class BuildingSystemComponentServiceModel : AutobahnBase, Interfaces.IBuildingSystemComponentService
+    public partial class BuildingSystemComponentServiceModel : AutobahnBase, IBuildingSystemComponentService
     {
         /// <summary>
-        /// Building Institutional Equipment Description
-        /// <para>
-        /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20782">Building Institutional Equipment Description</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IBuildingSystemComponent"/> model
         /// </summary>
         public Guid BuildingSystemComponentId { get; set; }
 
@@ -33,7 +28,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20881">Component or Fixture Scheduled Serviced Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ComponentOrFixtureScheduledServicedDate { get; set; }
+        public DateTime? ComponentOrFixtureScheduledServicedDate { get; set; }
 
         /// <summary>
         /// Component or Fixture Serviced Date
@@ -44,7 +39,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20880">Component or Fixture Serviced Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? ComponentOrFixtureServicedDate { get; set; }
+        public DateTime? ComponentOrFixtureServicedDate { get; set; }
 
     }
 }

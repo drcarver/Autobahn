@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Assessments
 //* FileName:   GoalPerformanceModel.cs
-//* Name:       Goal Current Performance Description
-//* Definition: Current performance explanation related to the annual goal or short-term objectives.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Assessments;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Assessments.Models
 {
      /// <summary>
-     /// Current performance explanation related to the annual goal or short-term objectives.
+     /// The GoalPerformance Model
      /// </summary>
-    public partial class GoalPerformanceModel : AutobahnBase, Interfaces.IGoalPerformance
+    public partial class GoalPerformanceModel : AutobahnBase, IGoalPerformance
     {
         /// <summary>
         /// Goal Current Performance Description
@@ -26,7 +25,7 @@ namespace Autobahn.Assessments.Models
         /// </summary>
         public System.String CurrentPerformanceDescription { get; set; }
 
-        public System.DateTime? Date { get; set; }
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IGoal"/> model
@@ -34,7 +33,13 @@ namespace Autobahn.Assessments.Models
         public Guid GoalId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGoalStatusType"/> model
+        /// Goal Status Type
+        /// <para>
+        /// Status toward achievement of the annual goal or short-term objectives.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20683">Goal Status Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefGoalStatusTypeId { get; set; }
 

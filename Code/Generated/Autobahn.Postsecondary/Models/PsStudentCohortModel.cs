@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStudentCohortModel.cs
-//* Name:       Cohort Graduation Year
-//* Definition: The year the cohort is expected to graduate.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The year the cohort is expected to graduate.
+     /// The PsStudentCohort Model
      /// </summary>
-    public partial class PsStudentCohortModel : AutobahnBase, Interfaces.IPsStudentCohort
+    public partial class PsStudentCohortModel : AutobahnBase, IPsStudentCohort
     {
         /// <summary>
         /// Cohort Graduation Year

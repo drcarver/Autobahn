@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Credentials
 //* FileName:   CredentialDefCategoryModel.cs
-//* Name:       Credential Definition Category Type
-//* Definition: A category for defining the qualification, achievement, personal or organizational quality, or aspect of an identity.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Credentials;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Credentials.Models
 {
      /// <summary>
-     /// A category for defining the qualification, achievement, personal or organizational quality, or aspect of an identity.
+     /// The CredentialDefCategory Model
      /// </summary>
-    public partial class CredentialDefCategoryModel : AutobahnBase, Interfaces.ICredentialDefCategory
+    public partial class CredentialDefCategoryModel : AutobahnBase, ICredentialDefCategory
     {
         /// <summary>
         /// Credential Definition Category Type
@@ -38,13 +37,7 @@ namespace Autobahn.Credentials.Models
         public System.String CategorySystem { get; set; }
 
         /// <summary>
-        /// Credential Definition Alternate Name
-        /// <para>
-        /// An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20717">Credential Definition Alternate Name</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICredentialDefinition"/> model
         /// </summary>
         public Guid CredentialDefinitionId { get; set; }
 

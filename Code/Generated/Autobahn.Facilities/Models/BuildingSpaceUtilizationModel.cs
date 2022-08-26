@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   BuildingSpaceUtilizationModel.cs
-//* Name:       Available Utilized Instructional Space
-//* Definition: An indication that the instruction space in a school is used in the calculation of student capacity.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
-     /// An indication that the instruction space in a school is used in the calculation of student capacity.
+     /// The BuildingSpaceUtilization Model
      /// </summary>
-    public partial class BuildingSpaceUtilizationModel : AutobahnBase, Interfaces.IBuildingSpaceUtilization
+    public partial class BuildingSpaceUtilizationModel : AutobahnBase, IBuildingSpaceUtilization
     {
         /// <summary>
         /// Available Utilized Instructional Space
@@ -24,7 +23,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20883">Available Utilized Instructional Space</a>
         /// </para>
         /// </summary>
-        public System.Boolean? AvailableUtilizedInstructionalSpace { get; set; }
+        public Boolean? AvailableUtilizedInstructionalSpace { get; set; }
 
         /// <summary>
         /// Building Capacity Factor Indicator
@@ -35,7 +34,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20884">Building Capacity Factor Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? BuildingCapacityFactorIndicator { get; set; }
+        public Boolean? BuildingCapacityFactorIndicator { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IBuildingSpace"/> model
@@ -51,7 +50,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20842">Building Space Utilization Area</a>
         /// </para>
         /// </summary>
-        public System.Decimal? BuildingSpaceUtilizationArea { get; set; }
+        public Decimal? BuildingSpaceUtilizationArea { get; set; }
 
         /// <summary>
         /// Building Unassigned Space Indicator
@@ -62,15 +61,27 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20844">Building Unassigned Space Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? BuildingUnassignedSpaceIndicator { get; set; }
+        public Boolean? BuildingUnassignedSpaceIndicator { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingCommunityUseSpaceType"/> model
+        /// Building Community Use Space Type
+        /// <para>
+        /// The space designed primarily for community or shared use.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20836">Building Community Use Space Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingCommunityUseSpaceTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingInstructionalSpaceFactorType"/> model
+        /// Building Instructional Space Factor Type
+        /// <para>
+        /// A designation as to whether the space is considered an instructional space under state or local guidelines.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20832">Building Instructional Space Factor Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 

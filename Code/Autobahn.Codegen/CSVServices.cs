@@ -6,12 +6,11 @@
 //   Copyright ©2020 GoDungeon.com
 // *******************************************************************************************************
 
-using System.Collections.Generic;
-using System.Globalization;
 using Autobahn.Codegen.Maps;
 using Autobahn.Codegen.Models;
 using CsvHelper;
 using CsvHelper.Configuration;
+using System.Globalization;
 
 namespace Autobahn.Codegen;
 
@@ -38,13 +37,13 @@ internal class CSVServices
         }
     }
 
-    internal List<AutobahnElement> ReadAutobahnElementFile(string location, string delimiter = "|")
+    internal List<AutobahnElement> ReadAutobahnElementFile(string location)
     {
         try
         {
             using (var reader = new StreamReader(location))
             {
-                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = true, Delimiter = delimiter, BadDataFound = null, MissingFieldFound = null };
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
                 using (var csv = new CsvReader(reader, config))
                 {
                     csv.Context.RegisterClassMap<AutobahnElementMap>();
@@ -59,19 +58,17 @@ internal class CSVServices
         }
     }
 
-    public List<AutobahnTable> ReadTablesFile(string location, bool hasHeaderRecord, string delimiter = "|")
+    public List<AutobahnTable> ReadTablesFile(string location)
     {
-        List<AutobahnTable> records = new();
         try
         {
             using (var reader = new StreamReader(location))
             {
-                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = hasHeaderRecord, Delimiter = delimiter, BadDataFound = null, MissingFieldFound = null };
+                var config = new CsvConfiguration(CultureInfo.InvariantCulture) { HasHeaderRecord = false, Delimiter = "|", BadDataFound = null, MissingFieldFound = null };
                 using (var csv = new CsvReader(reader, config))
                 {
                     csv.Context.RegisterClassMap<AutobahnTableMap>();
-                    csv.GetRecords<AutobahnTableMap>().ToArray();
-                    //records = csv.GetRecords<AutobahnTable>().ToList();
+                    return csv.GetRecords<AutobahnTable>().ToList();
                 }
             }
         }
@@ -79,7 +76,6 @@ internal class CSVServices
         {
             throw new Exception(e.Message);
         }
-        return records;
     }
 
 }

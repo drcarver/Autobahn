@@ -3,7 +3,8 @@
 //* FileName:   AuthenticationModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Authorization;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Authorization.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Authorization.Models
      /// <summary>
      /// The Authentication Model
      /// </summary>
-    public partial class AuthenticationModel : AutobahnBase, Interfaces.IAuthentication
+    public partial class AuthenticationModel : AutobahnBase, IAuthentication
     {
         /// <summary>
         /// Authentication Identity Provider End Date
@@ -22,7 +23,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20126">Authentication Identity Provider End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Authentication Identity Provider Name
@@ -71,7 +72,7 @@ namespace Autobahn.Authorization.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20125">Authentication Identity Provider Start Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
     }
 }

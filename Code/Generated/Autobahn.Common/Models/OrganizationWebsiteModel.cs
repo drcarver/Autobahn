@@ -3,13 +3,15 @@
 //* FileName:   OrganizationWebsiteModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationWebsite Model
      /// </summary>
-    public partial class OrganizationWebsiteModel : AutobahnBase, Interfaces.IOrganizationWebsite
+    public partial class OrganizationWebsiteModel : AutobahnBase, IOrganizationWebsite
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model

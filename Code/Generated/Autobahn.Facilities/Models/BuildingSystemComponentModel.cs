@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   BuildingSystemComponentModel.cs
-//* Name:       Building Institutional Equipment Description
-//* Definition: Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
-     /// Equipment that is installed for use in support of instructional program such as kilns for art, planetarium equipment for astronomy, fitness equipment for physical education.
+     /// The BuildingSystemComponent Model
      /// </summary>
-    public partial class BuildingSystemComponentModel : AutobahnBase, Interfaces.IBuildingSystemComponent
+    public partial class BuildingSystemComponentModel : AutobahnBase, IBuildingSystemComponent
     {
         /// <summary>
         /// Building Institutional Equipment Description
@@ -35,16 +34,10 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20882">Component or Fixture Useful Life</a>
         /// </para>
         /// </summary>
-        public System.Int32? ComponentOrFixtureUsefulLife { get; set; }
+        public Int32? ComponentOrFixtureUsefulLife { get; set; }
 
         /// <summary>
-        /// Building Area
-        /// <para>
-        /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20745">Building Area</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IFacility"/> model
         /// </summary>
         public Guid FacilityId { get; set; }
 
@@ -79,15 +72,27 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20830">Life-cycle Cost</a>
         /// </para>
         /// </summary>
-        public System.Decimal? LifecycleCost { get; set; }
+        public Decimal? LifecycleCost { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilityFurnishingsType"/> model
+        /// Facility Furnishings Type
+        /// <para>
+        /// Moveable assets that are provided so the building or interior assets can be utilized by occupants for their intended purposes.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20801">Facility Furnishings Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilityFurnishingsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFacilitySystemOrComponentCondition"/> model
+        /// Facility System or Component Condition
+        /// <para>
+        /// The rating of the system or component functions under the demands of its regular operation.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20774">Facility System or Component Condition</a>
+        /// </para>
         /// </summary>
         public Guid? RefFacilitySystemOrComponentConditionId { get; set; }
 

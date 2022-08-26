@@ -3,7 +3,8 @@
 //* FileName:   CompetencySetRubricModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Competencies;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Competencies.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Competencies.Models
      /// <summary>
      /// The CompetencySetRubric Model
      /// </summary>
-    public partial class CompetencySetRubricModel : AutobahnBase, Interfaces.ICompetencySetRubric
+    public partial class CompetencySetRubricModel : AutobahnBase, ICompetencySetRubric
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="ICompetencySet"/> model

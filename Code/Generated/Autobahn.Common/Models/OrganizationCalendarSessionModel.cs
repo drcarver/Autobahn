@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationCalendarSessionModel.cs
-//* Name:       Session Attendance Term Indicator
-//* Definition: Indicates that the session is an attendance term.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// Indicates that the session is an attendance term.
+     /// The OrganizationCalendarSession Model
      /// </summary>
-    public partial class OrganizationCalendarSessionModel : AutobahnBase, Interfaces.IOrganizationCalendarSession
+    public partial class OrganizationCalendarSessionModel : AutobahnBase, IOrganizationCalendarSession
     {
         /// <summary>
         /// Session Attendance Term Indicator
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20240">Session Attendance Term Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? AttendanceTermIndicator { get; set; }
+        public Boolean? AttendanceTermIndicator { get; set; }
 
         /// <summary>
         /// Course Begin Date
@@ -33,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19054">Course Begin Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? BeginDate { get; set; }
+        public DateTime? BeginDate { get; set; }
 
         /// <summary>
         /// Days in Session
@@ -44,7 +44,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19487">Days in Session</a>
         /// </para>
         /// </summary>
-        public System.Int32? DaysInSession { get; set; }
+        public Int32? DaysInSession { get; set; }
 
         /// <summary>
         /// Session Designator
@@ -66,7 +66,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19059">Course End Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// First Instruction Date
@@ -77,7 +77,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19488">First Instruction Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FirstInstructionDate { get; set; }
+        public DateTime? FirstInstructionDate { get; set; }
 
         /// <summary>
         /// School Year Minutes
@@ -88,7 +88,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19244">School Year Minutes</a>
         /// </para>
         /// </summary>
-        public System.Decimal? InstructionalMinutes { get; set; }
+        public Decimal? InstructionalMinutes { get; set; }
 
         /// <summary>
         /// Last Instruction Date
@@ -99,7 +99,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19489">Last Instruction Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? LastInstructionDate { get; set; }
+        public DateTime? LastInstructionDate { get; set; }
 
         /// <summary>
         /// Session Marking Term Indicator
@@ -110,7 +110,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20238">Session Marking Term Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? MarkingTermIndicator { get; set; }
+        public Boolean? MarkingTermIndicator { get; set; }
 
         /// <summary>
         /// Minutes Per Day
@@ -121,26 +121,32 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19491">Minutes Per Day</a>
         /// </para>
         /// </summary>
-        public System.Int32? MinutesPerDay { get; set; }
+        public Int32? MinutesPerDay { get; set; }
 
         /// <summary>
-        /// Calendar Code
-        /// <para>
-        /// A unique number assigned by a school district to a school calendar.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19485">Calendar Code</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IOrganizationCalendar"/> model
         /// </summary>
         public Guid? OrganizationCalendarId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
+        /// Academic Term Designator
+        /// <para>
+        /// The academic term for which the data apply.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19703">Academic Term Designator</a>
+        /// </para>
         /// </summary>
         public Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSessionType"/> model
+        /// Session Type
+        /// <para>
+        /// A prescribed span of time when an education institution is open, instruction is provided, and students are under the direction and guidance of teachers and/or education institution administration. A session may be interrupted by one or more vacations.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19254">Session Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefSessionTypeId { get; set; }
 
@@ -153,7 +159,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20239">Session Scheduling Term Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? SchedulingTermIndicator { get; set; }
+        public Boolean? SchedulingTermIndicator { get; set; }
 
         /// <summary>
         /// Session End Time
@@ -164,7 +170,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19988">Session End Time</a>
         /// </para>
         /// </summary>
-        public System.TimeSpan? SessionEndTime { get; set; }
+        public TimeSpan? SessionEndTime { get; set; }
 
         /// <summary>
         /// Session Start Time
@@ -175,7 +181,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19986">Session Start Time</a>
         /// </para>
         /// </summary>
-        public System.TimeSpan? SessionStartTime { get; set; }
+        public TimeSpan? SessionStartTime { get; set; }
 
     }
 }

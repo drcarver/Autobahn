@@ -3,13 +3,15 @@
 //* FileName:   StaffEvaluationPartModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The StaffEvaluationPart Model
      /// </summary>
-    public partial class StaffEvaluationPartModel : AutobahnBase, Interfaces.IStaffEvaluationPart
+    public partial class StaffEvaluationPartModel : AutobahnBase, IStaffEvaluationPart
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model

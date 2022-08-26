@@ -3,7 +3,8 @@
 //* FileName:   PsSectionModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,16 +12,10 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsSection Model
      /// </summary>
-    public partial class PsSectionModel : AutobahnBase, Interfaces.IPsSection
+    public partial class PsSectionModel : AutobahnBase, IPsSection
     {
         /// <summary>
-        /// Available Carnegie Unit Credit
-        /// <para>
-        /// Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19030">Available Carnegie Unit Credit</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="ICourseSection"/> model
         /// </summary>
         public Guid CourseSectionId { get; set; }
 
@@ -36,37 +31,73 @@ namespace Autobahn.Postsecondary.Models
         public System.String GradeValueQualifier { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCipCode"/> model
+        /// Classification of Instructional Program Code
+        /// <para>
+        /// A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19043">Classification of Instructional Program Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCipCodeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseGPAApplicability"/> model
+        /// Reference to an optional instance of the <see cref="RefCourseGpaapplicability"/> model
         /// </summary>
-        public Guid? RefCourseGPAApplicabilityId { get; set; }
+        public Guid? RefCourseGpaapplicabilityId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseHonorsType"/> model
+        /// Course Honors Type
+        /// <para>
+        /// An indication that the course is or can be counted as an honors course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20273">Course Honors Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseHonorsTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseInstructionMethod"/> model
+        /// Course Instruction Method
+        /// <para>
+        /// The primary method of instruction used for the course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20274">Course Instruction Method</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseInstructionMethodId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseLevelType"/> model
+        /// Course Level Type
+        /// <para>
+        /// The level of work which is reflected in the credits associated with the academic course being described or the level of the typical individual taking the academic course.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20278">Course Level Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseLevelTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefDevelopmentalEducationType"/> model
+        /// Developmental Education Type
+        /// <para>
+        /// An indicator of the category of developmental education.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20568">Developmental Education Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefDevelopmentalEducationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefWorkbasedLearningOpportunityType"/> model
+        /// Work-based Learning Opportunity Type
+        /// <para>
+        /// The type of work-based learning opportunity a student participated in.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20471">Work-based Learning Opportunity Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 

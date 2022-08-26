@@ -3,7 +3,8 @@
 //* FileName:   PeerRatingSystemModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.LearningResources;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.LearningResources.Models
@@ -11,7 +12,7 @@ namespace Autobahn.LearningResources.Models
      /// <summary>
      /// The PeerRatingSystem Model
      /// </summary>
-    public partial class PeerRatingSystemModel : AutobahnBase, Interfaces.IPeerRatingSystem
+    public partial class PeerRatingSystemModel : AutobahnBase, IPeerRatingSystem
     {
         /// <summary>
         /// Peer Rating System Maximum Value
@@ -22,7 +23,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20162">Peer Rating System Maximum Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? MaximumValue { get; set; }
+        public Decimal? MaximumValue { get; set; }
 
         /// <summary>
         /// Peer Rating System Minimum Value
@@ -55,7 +56,7 @@ namespace Autobahn.LearningResources.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20164">Peer Rating System Optimum Value</a>
         /// </para>
         /// </summary>
-        public System.Decimal? OptimumValue { get; set; }
+        public Decimal? OptimumValue { get; set; }
 
     }
 }

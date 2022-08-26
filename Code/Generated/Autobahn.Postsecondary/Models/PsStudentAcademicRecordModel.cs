@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStudentAcademicRecordModel.cs
-//* Name:       Academic Year Designator
-//* Definition: The academic year for which the data apply.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The academic year for which the data apply.
+     /// The PsStudentAcademicRecord Model
      /// </summary>
-    public partial class PsStudentAcademicRecordModel : AutobahnBase, Interfaces.IPsStudentAcademicRecord
+    public partial class PsStudentAcademicRecordModel : AutobahnBase, IPsStudentAcademicRecord
     {
         /// <summary>
         /// Academic Year Designator
@@ -35,7 +34,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19018">Advanced Placement Credits Awarded</a>
         /// </para>
         /// </summary>
-        public System.Int32? AdvancedPlacementCreditsAwarded { get; set; }
+        public Int32? AdvancedPlacementCreditsAwarded { get; set; }
 
         /// <summary>
         /// Course Total
@@ -46,7 +45,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20282">Course Total</a>
         /// </para>
         /// </summary>
-        public System.Int32? CourseTotal { get; set; }
+        public Int32? CourseTotal { get; set; }
 
         /// <summary>
         /// Credits Attempted Cumulative
@@ -57,7 +56,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19073">Credits Attempted Cumulative</a>
         /// </para>
         /// </summary>
-        public System.Decimal? CreditsAttemptedCumulative { get; set; }
+        public Decimal? CreditsAttemptedCumulative { get; set; }
 
         /// <summary>
         /// Credits Earned Cumulative
@@ -68,7 +67,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19074">Credits Earned Cumulative</a>
         /// </para>
         /// </summary>
-        public System.Decimal? CreditsEarnedCumulative { get; set; }
+        public Decimal? CreditsEarnedCumulative { get; set; }
 
         /// <summary>
         /// Diploma or Credential Award Date
@@ -90,7 +89,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19085">Dual Credit Dual Enrollment Credits Awarded</a>
         /// </para>
         /// </summary>
-        public System.Decimal? DualCreditDualEnrollmentCredits { get; set; }
+        public Decimal? DualCreditDualEnrollmentCredits { get; set; }
 
         /// <summary>
         /// Postsecondary Student Entering Term
@@ -112,7 +111,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19127">Grade Point Average</a>
         /// </para>
         /// </summary>
-        public System.Decimal? GradePointAverage { get; set; }
+        public Decimal? GradePointAverage { get; set; }
 
         /// <summary>
         /// Grade Point Average Cumulative
@@ -123,7 +122,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19128">Grade Point Average Cumulative</a>
         /// </para>
         /// </summary>
-        public System.Decimal? GradePointAverageCumulative { get; set; }
+        public Decimal? GradePointAverageCumulative { get; set; }
 
         /// <summary>
         /// Number of Credits Attempted
@@ -134,7 +133,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19199">Number of Credits Attempted</a>
         /// </para>
         /// </summary>
-        public System.Decimal? NumberOfCreditsAttempted { get; set; }
+        public Decimal? NumberOfCreditsAttempted { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -142,17 +141,35 @@ namespace Autobahn.Postsecondary.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAcademicTermDesignator"/> model
+        /// Academic Term Designator
+        /// <para>
+        /// The academic term for which the data apply.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19703">Academic Term Designator</a>
+        /// </para>
         /// </summary>
         public Guid? RefAcademicTermDesignatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCreditHoursAppliedOtherProgram"/> model
+        /// Credit Hours Applied Other Program
+        /// <para>
+        /// Codes identifying the set of credit hours taken in other programs or degrees that were applied to the individual's degree.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20283">Credit Hours Applied Other Program</a>
+        /// </para>
         /// </summary>
         public Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProfessionalTechCredentialType"/> model
+        /// Professional or Technical Credential Conferred
+        /// <para>
+        /// An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19780">Professional or Technical Credential Conferred</a>
+        /// </para>
         /// </summary>
         public Guid? RefProfessionalTechCredentialTypeId { get; set; }
 

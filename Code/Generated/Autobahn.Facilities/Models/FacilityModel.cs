@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Facilities
 //* FileName:   FacilityModel.cs
-//* Name:       Building Area
-//* Definition: The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Facilities;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Facilities.Models
 {
      /// <summary>
-     /// The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.
+     /// The Facility Model
      /// </summary>
-    public partial class FacilityModel : AutobahnBase, Interfaces.IFacility
+    public partial class FacilityModel : AutobahnBase, IFacility
     {
         /// <summary>
         /// Building Area
@@ -90,7 +89,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20749">Facility Acquisition Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FacilityAcquisitionDate { get; set; }
+        public DateTime? FacilityAcquisitionDate { get; set; }
 
         /// <summary>
         /// Facility Building Permanency
@@ -123,7 +122,7 @@ namespace Autobahn.Facilities.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20887">Facility Ownership Indicator</a>
         /// </para>
         /// </summary>
-        public System.Boolean? FacilityOwnershipIndicator { get; set; }
+        public Boolean? FacilityOwnershipIndicator { get; set; }
 
         /// <summary>
         /// Facilities Identifier
@@ -142,27 +141,57 @@ namespace Autobahn.Facilities.Models
         public Guid? OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingHistoricStatus"/> model
+        /// Building Historic Status
+        /// <para>
+        /// An indication of whether or not a building is eligible to be or has been declared a landmark or historic building.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20753">Building Historic Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingHistoricStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingPrimaryUseType"/> model
+        /// Building Primary Use Type
+        /// <para>
+        /// The primary use type of the building in which a school is located.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20758">Building Primary Use Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingPrimaryUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefBuildingUseType"/> model
+        /// Building Use Type
+        /// <para>
+        /// How a building is principally used, regardless of its original design.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20173">Building Use Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefBuildingUseTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCampusStatus"/> model
+        /// Campus Status
+        /// <para>
+        /// The generalized use or control of a campus, independent of program type.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20759">Campus Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefCampusStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCampusType"/> model
+        /// Campus Facility Type
+        /// <para>
+        /// The primary purpose for which a campus is designed and/or used.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20878">Campus Facility Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCampusTypeId { get; set; }
 

@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   StaffCredentialModel.cs
-//* Name:       Cardiopulmonary Resuscitation Certification Expiration Date
-//* Definition: The date an individual's cardiopulmonary resuscitation (CPR) training certification expires.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The date an individual's cardiopulmonary resuscitation (CPR) training certification expires.
+     /// The StaffCredential Model
      /// </summary>
-    public partial class StaffCredentialModel : AutobahnBase, Interfaces.IStaffCredential
+    public partial class StaffCredentialModel : AutobahnBase, IStaffCredential
     {
         /// <summary>
         /// Cardiopulmonary Resuscitation Certification Expiration Date
@@ -22,18 +22,9 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20065">Cardiopulmonary Resuscitation Certification Expiration Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? CardiopulmonaryResuscitationCertification { get; set; }
+        public DateTime? CardiopulmonaryResuscitationCertification { get; set; }
 
-        /// <summary>
-        /// Career and Technical Education Instructor Industry Certification
-        /// <para>
-        /// An indication of whether a Career and Technical Education (CTE) instructor holds a current industry-recognized credential related to their teaching field.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20284">Career and Technical Education Instructor Industry Certification</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? CTEInstructorIndustryCertification { get; set; }
+        public Boolean? CteinstructorIndustryCertification { get; set; }
 
         /// <summary>
         /// Diploma or Credential Award Date
@@ -55,46 +46,76 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20066">First Aid Certification Expiration Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? FirstAidCertification { get; set; }
+        public DateTime? FirstAidCertification { get; set; }
 
         /// <summary>
-        /// Name of Professional Credential or License
-        /// <para>
-        /// The name of the license/credential awarded by a given profession.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20064">Name of Professional Credential or License</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPersonCredential"/> model
         /// </summary>
         public Guid PersonCredentialId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAeCertificationType"/> model
+        /// Adult Education Certification Type
+        /// <para>
+        /// An indication of the category of the adult education certification a person holds.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19775">Adult Education Certification Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefAeCertificationTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefChildDevAssociateType"/> model
+        /// Child Development Associate Type
+        /// <para>
+        /// Type of Child Development Associate credential as defined by options.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19805">Child Development Associate Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefChildDevAssociateTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefParaprofessionalQualification"/> model
+        /// Paraprofessional Qualification Status
+        /// <para>
+        /// An indication of whether paraprofessionals are classified as qualified for their assignment according to state definition.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19207">Paraprofessional Qualification Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefParaprofessionalQualificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProgramSponsorType"/> model
+        /// Program Sponsor Type
+        /// <para>
+        /// A type of organization providing funds for a particular educational or service program or activity or for an individual's participation in the program or activity.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19692">Program Sponsor Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefProgramSponsorTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTeachingCredentialBasis"/> model
+        /// Teaching Credential Basis
+        /// <para>
+        /// An indication of the pre-determined criteria for granting the teaching credential that a person holds.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19277">Teaching Credential Basis</a>
+        /// </para>
         /// </summary>
         public Guid? RefTeachingCredentialBasisId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTeachingCredentialType"/> model
+        /// Teaching Credential Type
+        /// <para>
+        /// An indication of the category of a legal document giving authorization to perform teaching assignment services.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19278">Teaching Credential Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefTeachingCredentialTypeId { get; set; }
 
@@ -107,7 +128,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19537">Technology Skills Standards Met</a>
         /// </para>
         /// </summary>
-        public System.Boolean? TechnologySkillsStandardsMet { get; set; }
+        public Boolean? TechnologySkillsStandardsMet { get; set; }
 
     }
 }

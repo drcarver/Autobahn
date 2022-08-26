@@ -3,13 +3,15 @@
 //* FileName:   OrganizationPopulationServedModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The OrganizationPopulationServed Model
      /// </summary>
-    public partial class OrganizationPopulationServedModel : AutobahnBase, Interfaces.IOrganizationPopulationServed
+    public partial class OrganizationPopulationServedModel : AutobahnBase, IOrganizationPopulationServed
     {
         public System.String AgeUnit { get; set; }
 
@@ -22,7 +24,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20189">Early Learning Oldest Age Authorized to Serve</a>
         /// </para>
         /// </summary>
-        public System.Int32? OldestAgeServed { get; set; }
+        public Int32? OldestAgeServed { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -30,7 +32,13 @@ namespace Autobahn.Common.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefPopulationServed"/> model
+        /// Special Circumstances Population Served
+        /// <para>
+        /// Program provides services to meet the needs of children in special circumstances.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19852">Special Circumstances Population Served</a>
+        /// </para>
         /// </summary>
         public Guid? RefPopulationServedId { get; set; }
 
@@ -43,7 +51,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19626">Early Learning Youngest Age Authorized to Serve</a>
         /// </para>
         /// </summary>
-        public System.Int32? YoungestAgeServed { get; set; }
+        public Int32? YoungestAgeServed { get; set; }
 
     }
 }

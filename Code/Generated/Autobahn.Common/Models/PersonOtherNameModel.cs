@@ -3,13 +3,15 @@
 //* FileName:   PersonOtherNameModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonOtherName Model
      /// </summary>
-    public partial class PersonOtherNameModel : AutobahnBase, Interfaces.IPersonOtherName
+    public partial class PersonOtherNameModel : AutobahnBase, IPersonOtherName
     {
         /// <summary>
         /// Other First Name
@@ -61,7 +63,13 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefOtherNameType"/> model
+        /// Other Name Type
+        /// <para>
+        /// The types of previous, alternate or other names for a person.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19627">Other Name Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefOtherNameTypeId { get; set; }
 

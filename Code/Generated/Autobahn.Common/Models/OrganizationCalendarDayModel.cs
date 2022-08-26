@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationCalendarDayModel.cs
-//* Name:       Alternate Day Name
-//* Definition: An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).
+     /// The OrganizationCalendarDay Model
      /// </summary>
-    public partial class OrganizationCalendarDayModel : AutobahnBase, Interfaces.IOrganizationCalendarDay
+    public partial class OrganizationCalendarDayModel : AutobahnBase, IOrganizationCalendarDay
     {
         /// <summary>
         /// Alternate Day Name
@@ -27,13 +27,7 @@ namespace Autobahn.Common.Models
         public System.String DayName { get; set; }
 
         /// <summary>
-        /// Calendar Code
-        /// <para>
-        /// A unique number assigned by a school district to a school calendar.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19485">Calendar Code</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IOrganizationCalendar"/> model
         /// </summary>
         public Guid OrganizationCalendarId { get; set; }
 

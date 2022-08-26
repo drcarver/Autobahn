@@ -3,13 +3,15 @@
 //* FileName:   PersonMilitaryModel.cs
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
      /// The PersonMilitary Model
      /// </summary>
-    public partial class PersonMilitaryModel : AutobahnBase, Interfaces.IPersonMilitary
+    public partial class PersonMilitaryModel : AutobahnBase, IPersonMilitary
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IPerson"/> model
@@ -17,22 +19,46 @@ namespace Autobahn.Common.Models
         public Guid PersonId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMilitaryActiveStudentIndicator"/> model
+        /// Military Active Student Indicator
+        /// <para>
+        /// An indication that the student is currently serving on Active Duty, in the National Guard, or in the Reserve components of the United States military services
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20556">Military Active Student Indicator</a>
+        /// </para>
         /// </summary>
         public Guid? RefMilitaryActiveStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMilitaryBranch"/> model
+        /// Military Branch
+        /// <para>
+        /// A branch of the U.S. Military applicable for specifying more details when using Military Connected Student Indicator, Military Active Student Indicator,  Military Veteran Student Indicator, and Military Enlistment After Exit elements.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20621">Military Branch</a>
+        /// </para>
         /// </summary>
         public Guid? RefMilitaryBranchId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMilitaryConnectedStudentIndicator"/> model
+        /// Military Connected Student Indicator
+        /// <para>
+        /// An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20555">Military Connected Student Indicator</a>
+        /// </para>
         /// </summary>
         public Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefMilitaryVeteranStudentIndicator"/> model
+        /// Military Veteran Student Indicator
+        /// <para>
+        /// An indication that the student is a veteran who served on Active Duty, in the National Guard, or in the Reserve components of the United States military services
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20557">Military Veteran Student Indicator</a>
+        /// </para>
         /// </summary>
         public Guid? RefMilitaryVeteranStudentIndicatorId { get; set; }
 

@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   OrganizationAccreditationModel.cs
-//* Name:       Accreditation Agency Name
-//* Definition: The full name of an agency that accredited a school.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The full name of an agency that accredited a school.
+     /// The OrganizationAccreditation Model
      /// </summary>
-    public partial class OrganizationAccreditationModel : AutobahnBase, Interfaces.IOrganizationAccreditation
+    public partial class OrganizationAccreditationModel : AutobahnBase, IOrganizationAccreditation
     {
         /// <summary>
         /// Accreditation Agency Name
@@ -33,7 +33,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19840">Accreditation Award Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? AccreditationAwardDate { get; set; }
+        public DateTime? AccreditationAwardDate { get; set; }
 
         /// <summary>
         /// Accreditation Expiration Date
@@ -44,9 +44,9 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19841">Accreditation Expiration Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? AccreditationExpirationDate { get; set; }
+        public DateTime? AccreditationExpirationDate { get; set; }
 
-        public System.Boolean? AccreditationStatus { get; set; }
+        public Boolean? AccreditationStatus { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganization"/> model
@@ -54,12 +54,24 @@ namespace Autobahn.Common.Models
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAccreditationAgency"/> model
+        /// Accreditation Agency
+        /// <para>
+        /// The agency that accredited a program.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19983">Accreditation Agency</a>
+        /// </para>
         /// </summary>
         public Guid? RefAccreditationAgencyId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHigherEducationInstitutionAccreditationStatus"/> model
+        /// Higher Education Institution Accreditation Status
+        /// <para>
+        /// An indication of the accreditation status of a higher education institution.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19817">Higher Education Institution Accreditation Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
@@ -72,7 +84,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20388">Organization Seeking Accreditation Date</a>
         /// </para>
         /// </summary>
-        public System.DateTime? SeekingAccreditationDate { get; set; }
+        public DateTime? SeekingAccreditationDate { get; set; }
 
     }
 }

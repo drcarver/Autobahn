@@ -3,7 +3,8 @@
 //* FileName:   PsStudentApplicationModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsStudentApplication Model
      /// </summary>
-    public partial class PsStudentApplicationModel : AutobahnBase, Interfaces.IPsStudentApplication
+    public partial class PsStudentApplicationModel : AutobahnBase, IPsStudentApplication
     {
         /// <summary>
         /// Grade Point Average Cumulative
@@ -22,7 +23,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19128">Grade Point Average Cumulative</a>
         /// </para>
         /// </summary>
-        public System.Decimal? GradePointAverageCumulative { get; set; }
+        public Decimal? GradePointAverageCumulative { get; set; }
 
         /// <summary>
         /// Size of High School Graduating Class
@@ -33,7 +34,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19294">Size of High School Graduating Class</a>
         /// </para>
         /// </summary>
-        public System.Int32? HighSchoolGraduatingClassSize { get; set; }
+        public Int32? HighSchoolGraduatingClassSize { get; set; }
 
         /// <summary>
         /// High School Percentile
@@ -44,7 +45,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19740">High School Percentile</a>
         /// </para>
         /// </summary>
-        public System.Decimal? HighSchoolPercentile { get; set; }
+        public Decimal? HighSchoolPercentile { get; set; }
 
         /// <summary>
         /// High School Student Class Rank
@@ -55,7 +56,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19041">High School Student Class Rank</a>
         /// </para>
         /// </summary>
-        public System.Int32? HighSchoolStudentClassRank { get; set; }
+        public Int32? HighSchoolStudentClassRank { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -71,20 +72,38 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19735">Postsecondary Applicant</a>
         /// </para>
         /// </summary>
-        public System.Boolean? PostsecondaryApplicant { get; set; }
+        public Boolean? PostsecondaryApplicant { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAdmittedStudent"/> model
+        /// Admitted Student
+        /// <para>
+        /// Applicant who has been granted an official offer to enroll in a postsecondary institution. Admitted applicants should include wait-listed students who were subsequently offered admission.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19736">Admitted Student</a>
+        /// </para>
         /// </summary>
         public Guid? RefAdmittedStudentId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGpaWeightedIndicator"/> model
+        /// Grade Point Average Weighted Indicator
+        /// <para>
+        /// An indication of whether the reported Grade Point Average is weighted or unweighted.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19123">Grade Point Average Weighted Indicator</a>
+        /// </para>
         /// </summary>
         public Guid? RefGpaWeightedIndicatorId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefGradePointAverageDomain"/> model
+        /// Grade Point Average Domain
+        /// <para>
+        /// The domain to which the Grade Point Average is referencing.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19739">Grade Point Average Domain</a>
+        /// </para>
         /// </summary>
         public Guid? RefGradePointAverageDomainId { get; set; }
 
@@ -97,7 +116,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19738">Wait Listed Student</a>
         /// </para>
         /// </summary>
-        public System.Boolean? WaitListedStudent { get; set; }
+        public Boolean? WaitListedStudent { get; set; }
 
     }
 }

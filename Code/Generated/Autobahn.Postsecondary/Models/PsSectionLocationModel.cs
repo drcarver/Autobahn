@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsSectionLocationModel.cs
-//* Name:       Course Instruction Site Name
-//* Definition: The name of the location at which the course is taught.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The name of the location at which the course is taught.
+     /// The PsSectionLocation Model
      /// </summary>
-    public partial class PsSectionLocationModel : AutobahnBase, Interfaces.IPsSectionLocation
+    public partial class PsSectionLocationModel : AutobahnBase, IPsSectionLocation
     {
         /// <summary>
         /// Course Instruction Site Name
@@ -32,7 +31,13 @@ namespace Autobahn.Postsecondary.Models
         public Guid PsSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseInstructionSiteType"/> model
+        /// Course Instruction Site Type
+        /// <para>
+        /// An indication of the type of location at which the course is taught.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20276">Course Instruction Site Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseInstructionSiteTypeId { get; set; }
 

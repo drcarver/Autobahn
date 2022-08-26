@@ -3,7 +3,8 @@
 //* FileName:   AeStaffModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.AdultEducation;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.AdultEducation.Models
@@ -11,7 +12,7 @@ namespace Autobahn.AdultEducation.Models
      /// <summary>
      /// The AeStaff Model
      /// </summary>
-    public partial class AeStaffModel : AutobahnBase, Interfaces.IAeStaff
+    public partial class AeStaffModel : AutobahnBase, IAeStaff
     {
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -19,12 +20,24 @@ namespace Autobahn.AdultEducation.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAeStaffClassification"/> model
+        /// Adult Education Staff Classification
+        /// <para>
+        /// The titles of employment, official status, or rank of adult education staff.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19770">Adult Education Staff Classification</a>
+        /// </para>
         /// </summary>
         public Guid? RefAeStaffClassificationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefAeStaffEmploymentStatus"/> model
+        /// Adult Education Staff Employment Status
+        /// <para>
+        /// The condition under which a person has agreed to serve as an employee.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19771">Adult Education Staff Employment Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefAeStaffEmploymentStatusId { get; set; }
 
@@ -37,7 +50,7 @@ namespace Autobahn.AdultEducation.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19774">Years of Prior Adult Education Teaching Experience</a>
         /// </para>
         /// </summary>
-        public System.Decimal? YearsOfPriorAeTeachingExperience { get; set; }
+        public Decimal? YearsOfPriorAeTeachingExperience { get; set; }
 
     }
 }

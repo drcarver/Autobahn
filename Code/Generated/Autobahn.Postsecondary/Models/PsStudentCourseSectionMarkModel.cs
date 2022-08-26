@@ -1,19 +1,18 @@
 //**********************************************************
 //* DomainName: Postsecondary (PS)
 //* FileName:   PsStudentCourseSectionMarkModel.cs
-//* Name:       Course Narrative Explanation Grade
-//* Definition: The narrative of the grade awarded to an individual in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier.
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
 {
      /// <summary>
-     /// The narrative of the grade awarded to an individual in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier.
+     /// The PsStudentCourseSectionMark Model
      /// </summary>
-    public partial class PsStudentCourseSectionMarkModel : AutobahnBase, Interfaces.IPsStudentCourseSectionMark
+    public partial class PsStudentCourseSectionMarkModel : AutobahnBase, IPsStudentCourseSectionMark
     {
         /// <summary>
         /// Course Narrative Explanation Grade
@@ -27,18 +26,18 @@ namespace Autobahn.Postsecondary.Models
         public System.String CourseNarrativeExplanationGrade { get; set; }
 
         /// <summary>
-        /// Course Academic Grade
-        /// <para>
-        /// The final grade awarded for participation in the course. 
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19053">Course Academic Grade</a>
-        /// </para>
+        /// Reference to an optional instance of the <see cref="IPsStudentSection"/> model
         /// </summary>
         public Guid PsStudentSectionId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefCourseAcademicGradeStatusCode"/> model
+        /// Course Academic Grade Status Code
+        /// <para>
+        /// Additional information regarding the context of the given grade.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20265">Course Academic Grade Status Code</a>
+        /// </para>
         /// </summary>
         public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 

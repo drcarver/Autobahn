@@ -1,17 +1,17 @@
 //**********************************************************
 //* DomainName: Common Models
 //* FileName:   PersonDetailModel.cs
-//* Name:       Birthdate
-//* Definition: The year, month and day on which a person was born.
 //***************************************************************************
 
+using Autobahn.Interfaces.Common;
+using Autobahn.Common.Models;
 
 namespace Autobahn.Common.Models
 {
      /// <summary>
-     /// The year, month and day on which a person was born.
+     /// The PersonDetail Model
      /// </summary>
-    public partial class PersonDetailModel : AutobahnBase, Interfaces.IPersonDetail
+    public partial class PersonDetailModel : AutobahnBase, IPersonDetail
     {
         /// <summary>
         /// Birthdate
@@ -22,7 +22,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19033">Birthdate</a>
         /// </para>
         /// </summary>
-        public System.DateTime? Birthdate { get; set; }
+        public DateTime? Birthdate { get; set; }
 
         /// <summary>
         /// Birthdate Verification
@@ -66,7 +66,7 @@ namespace Autobahn.Common.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19144">Hispanic or Latino Ethnicity</a>
         /// </para>
         /// </summary>
-        public System.Boolean? HispanicLatinoEthnicity { get; set; }
+        public Boolean? HispanicLatinoEthnicity { get; set; }
 
         /// <summary>
         /// Last or Surname
@@ -107,37 +107,73 @@ namespace Autobahn.Common.Models
         public System.String Prefix { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefHighestEducationLevelCompleted"/> model
+        /// Highest Level of Education Completed
+        /// <para>
+        /// The extent of formal instruction a person has received (e.g., the highest grade in school completed or its equivalent or the highest degree received).
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19141">Highest Level of Education Completed</a>
+        /// </para>
         /// </summary>
         public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefProofOfResidencyType"/> model
+        /// Proof of Residency Type
+        /// <para>
+        /// An accepted form of proof of residency in the district/county/other locality.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19305">Proof of Residency Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefProofOfResidencyTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefSex"/> model
+        /// Sex
+        /// <para>
+        /// The concept describing the biological traits that distinguish the males and females of a species.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19255">Sex</a>
+        /// </para>
         /// </summary>
         public Guid? RefSexId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefStateOfResidence"/> model
+        /// State of Residence
+        /// <para>
+        /// An person's permanent address as determined by such evidence as a driver's license or voter registration. For entering freshmen, state of residence may be the legal state of residence of a parent or guardian.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19268">State of Residence</a>
+        /// </para>
         /// </summary>
         public Guid? RefStateOfResidenceId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefTribalAffiliation"/> model
+        /// Tribal Affiliation
+        /// <para>
+        /// The Native American tribal entity recognized and eligible to receive services from the United States Bureau of Indian Affairs to which a person is affiliated.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20638">Tribal Affiliation</a>
+        /// </para>
         /// </summary>
         public Guid? RefTribalAffiliationId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefUSCitizenshipStatus"/> model
+        /// Reference to an optional instance of the <see cref="RefUscitizenshipStatus"/> model
         /// </summary>
-        public Guid? RefUSCitizenshipStatusId { get; set; }
+        public Guid? RefUscitizenshipStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefVisaType"/> model
+        /// Visa Type
+        /// <para>
+        /// An indicator of a non-US citizen's Visa type.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19196">Visa Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefVisaTypeId { get; set; }
 

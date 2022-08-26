@@ -3,7 +3,8 @@
 //* FileName:   PsStudentFinancialAidModel.cs
 //***************************************************************************
 
-using Autobahn.Common.Interfaces;
+using Autobahn.Interfaces.Postsecondary;
+using Autobahn.Interfaces.Common;
 using Autobahn.Common.Models;
 
 namespace Autobahn.Postsecondary.Models
@@ -11,7 +12,7 @@ namespace Autobahn.Postsecondary.Models
      /// <summary>
      /// The PsStudentFinancialAid Model
      /// </summary>
-    public partial class PsStudentFinancialAidModel : AutobahnBase, Interfaces.IPsStudentFinancialAid
+    public partial class PsStudentFinancialAidModel : AutobahnBase, IPsStudentFinancialAid
     {
         /// <summary>
         /// Financial Aid Applicant
@@ -22,7 +23,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19745">Financial Aid Applicant</a>
         /// </para>
         /// </summary>
-        public System.Boolean? FinancialAidApplicant { get; set; }
+        public Boolean? FinancialAidApplicant { get; set; }
 
         /// <summary>
         /// Financial Aid Income Level
@@ -33,7 +34,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20319">Financial Aid Income Level</a>
         /// </para>
         /// </summary>
-        public System.Decimal? FinancialAidIncomeLevel { get; set; }
+        public Decimal? FinancialAidIncomeLevel { get; set; }
 
         /// <summary>
         /// Financial Need
@@ -44,7 +45,7 @@ namespace Autobahn.Postsecondary.Models
         /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19747">Financial Need</a>
         /// </para>
         /// </summary>
-        public System.Decimal? FinancialNeed { get; set; }
+        public Decimal? FinancialNeed { get; set; }
 
         /// <summary>
         /// Reference to an optional instance of the <see cref="IOrganizationPersonRole"/> model
@@ -52,30 +53,39 @@ namespace Autobahn.Postsecondary.Models
         public Guid OrganizationPersonRoleId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitStatus"/> model
+        /// Financial Aid Veteran's Benefit Status
+        /// <para>
+        /// An indication of whether a person is receiving Veteran's benefits.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20588">Financial Aid Veteran's Benefit Status</a>
+        /// </para>
         /// </summary>
         public Guid? RefFinancialAidVeteransBenefitStatusId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefFinancialAidVeteransBenefitType"/> model
+        /// Financial Aid Veteran's Benefit Type
+        /// <para>
+        /// The type of Veteran's benefits a person is receiving.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20589">Financial Aid Veteran's Benefit Type</a>
+        /// </para>
         /// </summary>
         public Guid? RefFinancialAidVeteransBenefitTypeId { get; set; }
 
         /// <summary>
-        /// Reference to an optional instance of the <see cref="RefNeedDeterminationMethod"/> model
+        /// Financial Need Determination Methodology
+        /// <para>
+        /// The methodology used to determine an individual's financial need.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20188">Financial Need Determination Methodology</a>
+        /// </para>
         /// </summary>
         public Guid? RefNeedDeterminationMethodId { get; set; }
 
-        /// <summary>
-        /// Title IV Participant and Recipient
-        /// <para>
-        /// A person who receives Title IV aid.  Title IV aid includes grant aid, work study aid, and loan aid such as: Federal Pell Grant, Federal Supplemental Educational Opportunity Grant (FSEOG), Teacher Education Assistance for College and Higher Education (TEACH) Grant, Federal Work-Study, Federal Perkins Loan, Subsidized Direct or FFEL Stafford Loan, and Unsubsidized Direct or FFEL Stafford Loan.  Title IV aid specifications are defined by the instructions for the IPEDS Student Financial Aid survey.
-        /// </para>
-        /// <para>
-        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19292">Title IV Participant and Recipient</a>
-        /// </para>
-        /// </summary>
-        public System.Boolean? TitleIVParticipantAndRecipient { get; set; }
+        public Boolean? TitleIvparticipantAndRecipient { get; set; }
 
     }
 }
