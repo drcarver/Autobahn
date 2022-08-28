@@ -1,0 +1,88 @@
+//**********************************************************
+//* DomainName: Common Models
+//* FileName:   PersonBirthplaceModel.cs
+//***************************************************************************
+
+using Autobahn.Education.Interfaces.Common;
+
+namespace Autobahn.Education.Common.Models
+{
+     /// <summary>
+     /// The PersonBirthplace Model
+     /// </summary>
+    public partial class PersonBirthplaceModel : IPersonBirthplace
+    {
+        // Concrete implementation of IAutobahnBase
+        #region IAutobahnBase
+        /// <summary>
+        /// Gets the model's changed status.
+        /// </summary>
+        public bool IsChanged { get; private set; } = false;
+
+        /// <summary>
+        /// Resets the model's state to unchanged by accepting the modifications.
+        /// </summary>
+        public void AcceptChanges()
+        {
+             IsChanged = false;
+             IsNew = false;
+        }
+
+        /// <summary>
+        /// True if the model is new and unsaved.
+        /// </summary>
+        public bool IsNew { get; set; } =  false;
+
+        /// <summary>
+        /// Is it a deleted model?
+        /// </summary>
+        public bool IsDeleted { get; set; } = false;
+
+        /// <summary>
+        /// The Id of the Model
+        /// </summary>
+        public Guid Id { get; set; } = Guid.NewGuid();
+        #endregion
+
+        #region IPersonBirthplace
+        /// <summary>
+        /// City of Birth
+        /// <para>
+        ///  The name of the city in which a person was born.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19416">City of Birth</a>
+        /// </para>
+        /// </summary>
+        public System.String City { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
+        /// </summary>
+        public Guid PersonId { get; set; }
+
+        /// <summary>
+        /// Country of Birth Code
+        /// <para>
+        /// The unique two digit International Organization for Standardization (ISO) code for the country in which a person is born.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19051">Country of Birth Code</a>
+        /// </para>
+        /// </summary>
+        public Guid? RefCountryId { get; set; }
+
+        /// <summary>
+        /// State of Birth Abbreviation
+        /// <para>
+        /// The abbreviation for the name of the state (within the United States) or extra-state jurisdiction in which a person was born.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19417">State of Birth Abbreviation</a>
+        /// </para>
+        /// </summary>
+        public Guid? RefStateId { get; set; }
+
+        #endregion
+    }
+}

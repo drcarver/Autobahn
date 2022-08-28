@@ -1,0 +1,88 @@
+//**********************************************************
+//* DomainName: Common Models
+//* FileName:   PersonEmailAddressModel.cs
+//***************************************************************************
+
+using Autobahn.Education.Interfaces.Common;
+
+namespace Autobahn.Education.Common.Models
+{
+     /// <summary>
+     /// The PersonEmailAddress Model
+     /// </summary>
+    public partial class PersonEmailAddressModel : IPersonEmailAddress
+    {
+        // Concrete implementation of IAutobahnBase
+        #region IAutobahnBase
+        /// <summary>
+        /// Gets the model's changed status.
+        /// </summary>
+        public bool IsChanged { get; private set; } = false;
+
+        /// <summary>
+        /// Resets the model's state to unchanged by accepting the modifications.
+        /// </summary>
+        public void AcceptChanges()
+        {
+             IsChanged = false;
+             IsNew = false;
+        }
+
+        /// <summary>
+        /// True if the model is new and unsaved.
+        /// </summary>
+        public bool IsNew { get; set; } =  false;
+
+        /// <summary>
+        /// Is it a deleted model?
+        /// </summary>
+        public bool IsDeleted { get; set; } = false;
+
+        /// <summary>
+        /// The Id of the Model
+        /// </summary>
+        public Guid Id { get; set; } = Guid.NewGuid();
+        #endregion
+
+        #region IPersonEmailAddress
+        /// <summary>
+        /// Do Not Publish Indicator
+        /// <para>
+        /// An indication that the record should not be published.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
+        /// </para>
+        /// </summary>
+        public Boolean? DoNotPublishIndicator { get; set; }
+
+        /// <summary>
+        /// Electronic Mail Address
+        /// <para>
+        /// The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the person or organization belongs.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19088">Electronic Mail Address</a>
+        /// </para>
+        /// </summary>
+        public System.String EmailAddress { get; set; }
+
+        /// <summary>
+        /// Reference to an optional instance of the <see cref="IPerson"/> model
+        /// </summary>
+        public Guid PersonId { get; set; }
+
+        /// <summary>
+        /// Electronic Mail Address Type
+        /// <para>
+        /// The type of electronic mail (e-mail) address listed for a person or organization.
+        /// </para>
+        /// <para>
+        /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19089">Electronic Mail Address Type</a>
+        /// </para>
+        /// </summary>
+        public Guid? RefEmailTypeId { get; set; }
+
+        #endregion
+    }
+}

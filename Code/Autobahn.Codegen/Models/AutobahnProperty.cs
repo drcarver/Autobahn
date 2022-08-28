@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace Autobahn.Codegen.Models
 {
@@ -38,6 +39,7 @@ namespace Autobahn.Codegen.Models
             }
             else
             {
+                Attributes.RequiredAttribute = new RequiredAttribute();
                 if (property.Name.EndsWith("Id"))
                 {
                     PropertyType = "Guid";
@@ -47,11 +49,15 @@ namespace Autobahn.Codegen.Models
                     PropertyType = property.PropertyType.ToString();
                 }
             } 
+            NeedsValidation = Attributes.MaxLengthAttribute != null
+                           || Attributes.RequiredAttribute != null
+                           || Attributes.StringLengthAttribute != null;
         }
         internal PropertyAttributes Attributes { get; set; }
         internal string Name { get; set; }
         internal PropertyInfo Property { get; set; }
         internal string PropertyType { get; set; }
+        internal bool NeedsValidation { get; set; }
         internal AutobahnElement? AutobahnElement { get; set; }
         internal bool IsVirtual { get; set; } = false;
     }

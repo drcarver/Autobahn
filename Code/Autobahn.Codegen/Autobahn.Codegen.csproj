@@ -24,10 +24,13 @@
     <None Update="Reference\APi.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Reference\Autobahn.Common.zip">
+    <None Update="Reference\Autobahn.Education.Common..zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Reference\Autobahn.Interfaces.zip">
+    <None Update="Reference\Autobahn.Education.Common.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reference\Autobahn.Education.Interfaces.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Reference\MauiProject.zip">
