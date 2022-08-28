@@ -6,6 +6,11 @@
 public interface IOrganizationPersonRole
 {
     /// <summary>
+    /// The primary key of the view model
+    /// </summary>
+    Guid Id { get; set; }
+
+    /// <summary>
     /// Activity Involvement Begin Date
     /// <para>
     /// The year, month and day on which the person began

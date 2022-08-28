@@ -1,5 +1,5 @@
 ﻿//**********************************************************
-//* DomainName: Common models used in multiple domains.
+//* DomainName: Autobahn.Core
 //* FileName:   OrganizationViewModel.cs
 //***************************************************************************
 
@@ -13,8 +13,8 @@ using System.ComponentModel.DataAnnotations;
 /// more people and having a particular purpose.
 /// </summary>
 [ObservableRecipient]
-public partial class OrganizationViewModel : ObservableValidator, EntityBase
-{
+public partial class OrganizationViewModel : ObservableValidator, IOrganization 
+{ 
     #region "OrganizationViewModel Constructor"
     /// </summary>
     /// The service provider instance.
@@ -43,7 +43,7 @@ public partial class OrganizationViewModel : ObservableValidator, EntityBase
 
     #region "Backing Fields"
     // Every viewmodel has a Title property
-    private string viewTitle = "Hello from OrganizationDetail";
+    private string viewTitle = "Hello from Organization";
 
     // The isNew property is set if the view model has been created but not saved to the database
     private bool isNew = false;
@@ -118,7 +118,7 @@ public partial class OrganizationViewModel : ObservableValidator, EntityBase
     /// <summary>
     /// Load the viewmodel from a model
     /// </summary>
-    public void Load(EntityBase model)
+    public void Load(IOrganization model)
     {
         IsBusy = true;
         Id = model.Id;

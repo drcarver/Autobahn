@@ -1,9 +1,17 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿//**********************************************************
+//* DomainName: Autobahn.Core
+//* FileName:   PickListItemViewModel.cs
+//***************************************************************************
 
+using CommunityToolkit.Mvvm.ComponentModel;
+
+/// <summary>
+/// An item in a pick list
+/// </summary>
 public class PickListItemViewModel : ObservableObject
 {
     // private member variable for the Item's description
-    private string _description;
+    private string? description;
 
     // private member variable for the item's id
     private Guid id;
@@ -20,10 +28,10 @@ public class PickListItemViewModel : ObservableObject
     /// <summary>
     /// The description of the item in the list
     /// </summary>
-    public string Description
+    public string? Description
     {
-        get => _description;
-        set => SetProperty(ref _description, value);
+        get => description;
+        set => SetProperty(ref description, value);
     }
 
     /// <summary>

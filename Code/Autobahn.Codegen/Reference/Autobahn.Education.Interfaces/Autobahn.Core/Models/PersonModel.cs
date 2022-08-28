@@ -1,25 +1,21 @@
-﻿//**********************************************************
-//* DomainName: Common models used in multiple domains.
-//* FileName:   IPerson.cs
+//**********************************************************
+//* DomainName: Autobahn.Core
+//* FileName:   PersonModel.cs
 //***************************************************************************
 
 /// <summary>
 /// A human being regarded as an individual
 /// </summary>
-public interface IPerson
+public partial class PersonModel : AutobahnBaseModel, IPerson
 {
-    /// <summary>
-    /// The primary key of the view model
-    /// </summary>
-    Guid Id { get; set; }
-
+    #region "IPerson Properties"
     /// <summary>
     /// Birthdate
     /// <para>
     /// The year, month and day on which a person was born.
     /// </para>
     /// </summary>
-    DateTime? Birthdate { get; set; }
+    public DateTime? Birthdate { get; set; }
 
     /// <summary>
     /// Deathdate
@@ -27,7 +23,7 @@ public interface IPerson
     /// The year, month and day on which a person died.
     /// </para>
     /// </summary>
-    DateTime? Deathdate { get; set; }
+    public DateTime? Deathdate { get; set; }
 
     /// <summary>
     /// First Name
@@ -36,7 +32,7 @@ public interface IPerson
     /// baptism, or through legal change.
     /// </para>
     /// </summary>
-    System.String FirstName { get; set; }
+    public System.String? FirstName { get; set; }
 
     /// <summary>
     /// Generation Code or Suffix
@@ -45,7 +41,7 @@ public interface IPerson
     /// in his family (e.g., Jr., Sr., III).
     /// </para>
     /// </summary>
-    System.String GenerationCode { get; set; }
+    public System.String? GenerationCode { get; set; }
 
     /// <summary>
     /// Last or Surname
@@ -53,32 +49,30 @@ public interface IPerson
     /// The full legal last name borne in common by members of a family.
     /// </para>
     /// </summary>
-    System.String LastName { get; set; }
+    public System.String? LastName { get; set; }
 
     /// <summary>
     /// Middle Name
     /// <para>
-    /// A full legal middle name given to a person at birth, baptism, 
-    /// or through legal change.
+    /// A full legal middle name given to a person at birth, baptism, or through legal change.
     /// </para>
     /// </summary>
-    System.String MiddleName { get; set; }
+    public System.String? MiddleName { get; set; }
 
     /// <summary>
     /// Personal Title or Prefix
     /// <para>
-    /// An appellation, if any, used to denote rank, placement, or 
-    /// status (e.g., Mr., Ms., Reverend, Sister, Dr., Colonel).
+    /// An appellation, if any, used to denote rank, placement, or status (e.g., Mr., Ms., Reverend, Sister, Dr., Colonel).
     /// </para>
     /// </summary>
-    System.String Prefix { get;  set; }
+    public System.String? Prefix { get; set; }
 
     /// <summary>
     /// Sex
     /// <para>
-    /// The concept describing the biological traits that distinguish 
-    /// the males and females of a species.
+    /// The concept describing the biological traits that distinguish the males and females of a species.
     /// </para>
     /// </summary>
-    Guid? RefSexId { get; set; }
+    public Guid? RefSexId { get; set; }
+    #endregion
 }

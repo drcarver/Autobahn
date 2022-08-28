@@ -33,9 +33,4 @@ public class EntityBase
     /// </summary>
     [ForeignKey("Person")]
     public Guid UpdatedBy { get; set; }
-
-    /// <summary>
-    /// The last person to updaate the entity
-    /// </summary>
-    public virtual PersonEntity UpdateBy { get; set; }
 }

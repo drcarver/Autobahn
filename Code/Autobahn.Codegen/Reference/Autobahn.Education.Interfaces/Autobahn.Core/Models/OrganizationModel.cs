@@ -13,7 +13,7 @@ public partial class OrganizationModel : AutobahnBaseModel, IOrganization
     /// <summary>
     /// The Name of the Organization
     /// </summary>
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// The short name of the organization

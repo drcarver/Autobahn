@@ -3,6 +3,10 @@
 //* FileName:   OrganizationPersonRoleModel.cs
 //**********************************************************
 
+/// <summary>
+/// The relation role a person plays in an organization and the 
+/// dates of the relation ship is active
+/// </summary>
 public class OrganizationPersonRoleModel : AutobahnBaseModel, IOrganizationPersonRole
 {
     /// <summary>
@@ -12,7 +16,7 @@ public class OrganizationPersonRoleModel : AutobahnBaseModel, IOrganizationPerso
     /// to participate in the activity.
     /// </para>
     /// </summary>
-    DateTime? EntryDate { get; set; }
+    public DateTime? EntryDate { get; set; }
 
     /// <summary>
     /// Activity Involvement End Date
@@ -21,11 +25,11 @@ public class OrganizationPersonRoleModel : AutobahnBaseModel, IOrganizationPerso
     /// to participate in the activity.
     /// </para>
     /// </summary>
-    DateTime? ExitDate { get; set; }
+    public DateTime? ExitDate { get; set; }
 
     /// <summary>
     /// Reference to an optional instance of the 
-    /// <see cref="EntityBase"/> model
+    /// <see cref="IOrganization"/> model
     /// </summary>
     public Guid OrganizationId { get; set; }
 

@@ -1,5 +1,5 @@
 //**********************************************************
-//* DomainName: Common models used in multiple domains.
+//* DomainName: Autobahn.Core.
 //* FileName:   OrganizationPersonRoleViewModel.cs
 //***************************************************************************
 
@@ -8,7 +8,8 @@ using System.ComponentModel.DataAnnotations;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 /// <summary>
-/// The OrganizationPersonRole View Model
+/// The relation role a person plays in an organization and the 
+/// dates of the relation ship is active
 /// </summary>
 public partial class OrganizationPersonRoleViewModel : ObservableValidator, IOrganizationPersonRole
 {
@@ -40,7 +41,7 @@ public partial class OrganizationPersonRoleViewModel : ObservableValidator, IOrg
 
     #region "Backing Fields"
     // Every viewmodel has a Title property
-    private string viewTitle = "Hello from OrganizationPersonRole";
+    private string viewTitle = "Hello from Organization Person Role";
 
     // The isNew property is set if the view model has been created but not saved to the database
     private bool isNew = false;

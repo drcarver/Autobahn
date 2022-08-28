@@ -11,6 +11,11 @@
 public partial interface IOrganization
 {
     /// <summary>
+    /// The primary key of the view model
+    /// </summary>
+    Guid Id { get; set; }
+
+    /// <summary>
     /// The short name of the organization
     /// </summary>
     string ShortName { get; set; }

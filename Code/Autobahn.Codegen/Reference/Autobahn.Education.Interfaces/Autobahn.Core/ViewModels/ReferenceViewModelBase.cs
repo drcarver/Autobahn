@@ -1,27 +1,33 @@
 //**********************************************************
 //* DomainName: Autobahn.Core
-//* FileName:   ReferenceBaseEntity.cs
-//**********************************************************
+//* FileName:   ReferenceViewModelBase.cs
+//***************************************************************************
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 /// <summary>
-/// The base abstract reference Entity
+/// The Reference View Model Base
 /// </summary>
-public class ReferenceBaseEntity : EntityBase, IReferenceBase
+public abstract class ReferenceViewModelBase : IReferenceBase
 {
+    /// <summary>
+    /// The primary key
+    /// </summary>
+    [Key]
+    public Guid Id { get; set; }
+
     /// <summary>
     /// Defines the Code non nullable property
     /// </summary>
-    [Required(ErrorMessage = "{0} is required")]
+    [Required]
     [StringLength(50)]
     public string? Code { get; set; }
 
     /// <summary>
     /// Defines the Description non nullable property
     /// </summary>
-    [Required(ErrorMessage = "{0} is required")]
+    [Required]
     [StringLength(150)]
     public string? Description { get; set; }
 
@@ -32,7 +38,7 @@ public class ReferenceBaseEntity : EntityBase, IReferenceBase
     public string? Definition { get; set; }
 
     /// <summary>
-    /// Surrogate key from <see cref="EntityBase"/> identifying the publisher of the reference value.
+    /// Surrogate key from <see cref="IOrganization"/> identifying the publisher of the reference value.
     /// </summary>
     [ForeignKey("Organization")]
     public Guid? RefJurisdictionId { get; set; }
@@ -41,9 +47,4 @@ public class ReferenceBaseEntity : EntityBase, IReferenceBase
     /// Defines the SortOrder nullable property
     /// </summary>
     public decimal? SortOrder { get; set; }
-
-    /// <summary>
-    /// The Organization for the Reference
-    /// </summary>
-    public virtual OrganizationEntity? Organization { get; set; }
 }
