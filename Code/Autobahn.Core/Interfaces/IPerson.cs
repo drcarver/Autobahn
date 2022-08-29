@@ -9,7 +9,7 @@
 public interface IPerson
 {
     /// <summary>
-    /// The primary key of the view model
+    /// The primary key of the model
     /// </summary>
     Guid Id { get; set; }
 

@@ -11,7 +11,7 @@
 public partial interface IReferenceBase
 {
     /// <summary>
-    /// The Id (Primary key) of the Reference
+    /// The primary key of the model
     /// </summary>
     Guid Id { get; set; }
 

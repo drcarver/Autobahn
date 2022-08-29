@@ -1,12 +1,12 @@
 ﻿//**********************************************************
-//* DomainName: Common models used in multiple domains.
+//* DomainName: Autobahn.Core
 //* FileName:   IRole.cs
 //***************************************************************************
 
 public interface IRole
 {
     /// <summary>
-    /// The primary key of the view model
+    /// The primary key of the model
     /// </summary>
     Guid Id { get; set; }
 

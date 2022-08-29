@@ -1,5 +1,5 @@
 ﻿//**********************************************************
-//* DomainName: Common models used in multiple domains.
+//* DomainName: Autobahn.Core
 //* FileName:   RefRoleEntity.cs
 //***************************************************************************
 
