@@ -24,5 +24,10 @@
         /// The description of the domain
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Generate code for the domain
+        /// </summary>
+        public bool GenerateCode { get;set; }
     }
 }

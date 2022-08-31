@@ -1,0 +1,65 @@
+//***************************************************************************
+//* DomainName: Elementary and Secondary (K12)
+//* FileName:   K12programOrServiceEntity.g.cs
+//***************************************************************************
+
+/// <summary>
+/// The IK12programOrService file
+/// </summary>
+[Table("K12programOrService", Schema = "K12")]
+public partial class K12programOrServiceEntity : EntityBase, IK12programOrService
+{
+    #region "IK12programOrService Properties"
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="IOrganization"/> model
+    /// </summary>
+    [Required(ErrorMessage="{0} is required.")]
+    [ForeignKey("Organization")]
+    public Guid OrganizationId { get; set; }
+
+    public Boolean? ProgramInMultiplePurposeFacility { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefKindergartenDailyLength"/> model
+    /// </summary>
+    [ForeignKey("RefKindergartenDailyLength")]
+    public Guid? RefKindergartenDailyLengthId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefMepProjectType"/> model
+    /// </summary>
+    [ForeignKey("RefMepProjectType")]
+    public Guid? RefMepProjectTypeId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefMepSessionType"/> model
+    /// </summary>
+    [ForeignKey("RefMepSessionType")]
+    public Guid? RefMepSessionTypeId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefPrekindergartenDailyLength"/> model
+    /// </summary>
+    [ForeignKey("RefPrekindergartenDailyLength")]
+    public Guid? RefPrekindergartenDailyLengthId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefProgramGiftedEligibility"/> model
+    /// </summary>
+    [ForeignKey("RefProgramGiftedEligibility")]
+    public Guid? RefProgramGiftedEligibilityId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefTitleIinstructionalServices"/> model
+    /// </summary>
+    [ForeignKey("RefTitleIinstructionalServices")]
+    public Guid? RefTitleIinstructionalServicesId { get; set; }
+
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="RefTitleIprogramType"/> model
+    /// </summary>
+    [ForeignKey("RefTitleIprogramType")]
+    public Guid? RefTitleIprogramTypeId { get; set; }
+
+    #endregion
+}

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CDM\CDM.csproj" />
     <ProjectReference Include="..\Schema.Org\SchemaOrg.csproj" />
   </ItemGroup>
 
@@ -31,6 +32,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Reference\Autobahn.Education.Interfaces.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Reference\Autobahn.Library.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Reference\MauiProject.zip">

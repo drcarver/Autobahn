@@ -1,0 +1,59 @@
+//***************************************************************************
+//* DomainName: Common Models
+//* FileName:   PersonAllergyEntity.g.cs
+//***************************************************************************
+
+/// <summary>
+/// The IPersonAllergy file
+/// </summary>
+[Table("PersonAllergy", Schema = "Common")]
+public partial class PersonAllergyEntity : EntityBase, IPersonAllergy
+{
+    #region "IPersonAllergy Properties"
+    /// <summary>
+    /// Reference to an optional instance of the <see cref="IPerson"/> model
+    /// </summary>
+    [Required(ErrorMessage="{0} is required.")]
+    [ForeignKey("Person")]
+    public Guid PersonId { get; set; }
+
+    /// <summary>
+    /// Allergy Reaction Description
+    /// <para>
+    /// Describes symptoms know to be associated with a person's reaction to an allergen.
+    /// </para>
+    /// <para>
+    /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20247">Allergy Reaction Description</a>
+    /// </para>
+    /// </summary>
+    [Required(ErrorMessage="{0} is required.")]
+    [StringLength(2000,ErrorMessage="The {0} must be less then {1} characters.")]
+    public System.String ReactionDescription { get; set; }
+
+    /// <summary>
+    /// Allergy Severity
+    /// <para>
+    /// The level of severity of a person's reaction to an allergen.
+    /// </para>
+    /// <para>
+    /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20248">Allergy Severity</a>
+    /// </para>
+    /// </summary>
+    [ForeignKey("RefAllergySeverity")]
+    public Guid? RefAllergySeverityId { get; set; }
+
+    /// <summary>
+    /// Allergy Type
+    /// <para>
+    /// Type of allergy condition attributed to a person as defined by the SNOWMED Clinical Terms(r) vocabulary.
+    /// </para>
+    /// <para>
+    /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20249">Allergy Type</a>
+    /// </para>
+    /// </summary>
+    [Required(ErrorMessage="{0} is required.")]
+    [ForeignKey("RefAllergyType")]
+    public Guid RefAllergyTypeId { get; set; }
+
+    #endregion
+}

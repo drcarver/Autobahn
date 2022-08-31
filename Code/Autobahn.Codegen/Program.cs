@@ -1,7 +1,7 @@
 ﻿using Autobahn.Codegen.Models;
-using CsvHelper.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using ScafoldADatabase.Entities;
 using SchemaOrg;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
@@ -155,9 +155,23 @@ internal class Program
         // iterate the known types and create a list of
         // autobahn types
         List<AutobahnEntity> autobahnEntities = new();
+
+        List<string> EntitiesToIgnore = new List<string>
+        {
+            "Authentication",
+            "Authorization",
+            "AuthorizationDocument",
+            "Application",
+            "Organization",
+            "OrganizationPersonRole",
+            "Person",
+            "Role"
+        };
+
         foreach (var type in types)
         {
-            if (!type.IsClass)
+            if (!type.IsClass  
+                || EntitiesToIgnore.Contains(type.Name))
             {
                 continue;
             }
@@ -223,7 +237,7 @@ internal class Program
     //    // return the new list
     //    return csv.ReadAutobahnElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", "|"); ;
 
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         var csv = new CSVServices();
         var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
@@ -236,6 +250,11 @@ internal class Program
             autobahnDomains, autobahnTables, autobahnElements);
 
         var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\schemaorg-all-http.jsonld");
+
+        //var CDMPath = $@"C:\Users\drcarver\Desktop\codegen\CDM\schemaDocuments";
+        //var CDMStorage = new Microsoft.CommonDataModel.ObjectModel.Storage.LocalAdapter(CDMPath);
+        //var files = CDMStorage.FetchAllFilesAsync(CDMPath).Result;
+        //var date = CDMStorage
 
         //SeedOrganization();
         //SeedRefRecordStatusType();
