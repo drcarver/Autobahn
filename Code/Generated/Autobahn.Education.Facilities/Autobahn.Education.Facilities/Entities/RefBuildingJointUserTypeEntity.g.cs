@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20835">Building Joint User Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingJointUserType", Schema = "Facilities")]
+[Comment("The types of users sharing school district controlled, owned, or utilized facilities.")]
 public partial class RefBuildingJointUserTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

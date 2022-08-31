@@ -20,6 +20,7 @@ public partial class GoalPerformanceEntity : EntityBase, IGoalPerformance
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Current performance explanation related to the annual goal or short-term objectives.")]
     public System.String CurrentPerformanceDescription { get; set; }
 
     public DateTime? Date { get; set; }
@@ -41,6 +42,7 @@ public partial class GoalPerformanceEntity : EntityBase, IGoalPerformance
     /// </para>
     /// </summary>
     [ForeignKey("RefGoalStatusType")]
+    [Comment("Status toward achievement of the annual goal or short-term objectives.")]
     public Guid? RefGoalStatusTypeId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class GoalPerformanceEntity : EntityBase, IGoalPerformance
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Description of status toward achievement of the annual goal or short-term objectives.")]
     public System.String Status { get; set; }
 
     #endregion

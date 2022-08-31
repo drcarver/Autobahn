@@ -26,6 +26,7 @@ public partial class FacilityMortgageEntity : EntityBase, IFacilityMortgage
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20871">Facility Mortgage Interest Amount</a>
     /// </para>
     /// </summary>
+    [Comment("The amount the borrower pays the lender to compensate the lender for the use of money to purchase a building or facility.")]
     public Decimal? FacilityMortgageInterestAmount { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class FacilityMortgageEntity : EntityBase, IFacilityMortgage
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20877">Facility Total Assessed Value</a>
     /// </para>
     /// </summary>
+    [Comment("The total assessed value of property that constitutes the basis for public borrowing.")]
     public Decimal? FacilityTotalAssessedValue { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class FacilityMortgageEntity : EntityBase, IFacilityMortgage
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityMortgageInterestType")]
+    [Comment("The type of interest paid on a mortgage to the lender to compensate the lender for the use of money to purchase a building or facility.")]
     public Guid? RefFacilityMortgageInterestTypeId { get; set; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public partial class FacilityMortgageEntity : EntityBase, IFacilityMortgage
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityMortgageType")]
+    [Comment("The status of a mortgage as it relates to priority of payment.")]
     public Guid? RefFacilityMortgageTypeId { get; set; }
 
     #endregion

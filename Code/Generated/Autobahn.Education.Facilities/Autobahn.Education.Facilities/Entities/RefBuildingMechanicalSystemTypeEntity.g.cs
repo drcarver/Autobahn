@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20790">Building Mechanical System Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingMechanicalSystemType", Schema = "Facilities")]
+[Comment("The major manufactured systems required to operate a building.")]
 public partial class RefBuildingMechanicalSystemTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

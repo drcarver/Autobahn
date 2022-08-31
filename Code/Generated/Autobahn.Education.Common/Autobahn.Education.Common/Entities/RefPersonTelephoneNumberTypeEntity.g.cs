@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19280">Telephone Number Type</a>
 /// </para>
 /// </summary>
+[Table("RefPersonTelephoneNumberType", Schema = "Common")]
+[Comment("The type of communication number listed for a person.")]
 public partial class RefPersonTelephoneNumberTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

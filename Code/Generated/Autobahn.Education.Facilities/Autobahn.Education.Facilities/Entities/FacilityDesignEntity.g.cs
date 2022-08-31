@@ -21,6 +21,7 @@ public partial class FacilityDesignEntity : EntityBase, IFacilityDesign
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(45,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the architect of record for the building.")]
     public System.String BuildingArchitectName { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class FacilityDesignEntity : EntityBase, IFacilityDesign
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the architectural firm responsible for the building design.")]
     public System.String BuildingArchitecturalFirmName { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class FacilityDesignEntity : EntityBase, IFacilityDesign
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20861">Building Date of Certificate of Occupancy</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day and year in which a certificate of occupancy was granted by the appropriate local authority.")]
     public DateTime? BuildingDateOfCertificateOfOccupancy { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class FacilityDesignEntity : EntityBase, IFacilityDesign
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingDesignType")]
+    [Comment("The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.")]
     public Guid? RefBuildingDesignTypeId { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class FacilityDesignEntity : EntityBase, IFacilityDesign
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingEnvOrEnergyPerformanceRatingCat")]
+    [Comment("The primary groupings that rating organizations use to evaluate environmental sustainability and energy use.")]
     public Guid? RefBuildingEnvOrEnergyPerformanceRatingCatId { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20803">Building Indoor Athletic or Physical Education Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingIndoorAthleticOrPhysEdSpaceType", Schema = "Facilities")]
+[Comment("The indoor space designed, located, furnished, and equipped for instruction and support of a physical education curriculum and athletic program.")]
 public partial class RefBuildingIndoorAthleticOrPhysEdSpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

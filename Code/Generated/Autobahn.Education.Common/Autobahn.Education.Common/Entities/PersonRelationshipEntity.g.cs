@@ -19,6 +19,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20392">Person Relationship to Learner Contact Priority Number</a>
     /// </para>
     /// </summary>
+    [Comment("The numeric order in the preferred sequence and priority for contacting a person related to the learner.")]
     public Int32? ContactPriorityNumber { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(2000,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Restrictions for student and/or teacher contact with the individual (e.g., the student may not be picked up by the individual)")]
     public System.String ContactRestrictions { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19328">Custodial Parent or Guardian Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that a person has legal custody of a child.")]
     public Boolean? CustodialRelationshipIndicator { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20308">Emergency Contact Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether or not the person is a designated emergency contact for the learner.")]
     public Boolean? EmergencyContactInd { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20394">Person Relationship to Learner Lives with Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether or not the learner lives with the related person.")]
     public Boolean? LivesWithIndicator { get; set; }
 
     /// <summary>
@@ -83,6 +88,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20397">Primary Contact Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that a person is a primary contact within the specified context, such as a primary parental contact specified in Person Relationship to Learner or a primary administrative contact for an organization.")]
     public Boolean? PrimaryContactIndicator { get; set; }
 
     /// <summary>
@@ -96,6 +102,7 @@ public partial class PersonRelationshipEntity : EntityBase, IPersonRelationship
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefPersonRelationshipType")]
+    [Comment("The nature of a person's relationship to another person.")]
     public Guid RefPersonRelationshipTypeId { get; set; }
 
     /// <summary>

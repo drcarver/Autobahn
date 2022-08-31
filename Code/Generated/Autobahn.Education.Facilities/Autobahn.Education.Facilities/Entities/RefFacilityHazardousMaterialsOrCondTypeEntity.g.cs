@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20855">Facility Hazardous Materials or Condition Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityHazardousMaterialsOrCondType", Schema = "Facilities")]
+[Comment("The type of hazardous materials or conditions tested for at a site or building.")]
 public partial class RefFacilityHazardousMaterialsOrCondTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

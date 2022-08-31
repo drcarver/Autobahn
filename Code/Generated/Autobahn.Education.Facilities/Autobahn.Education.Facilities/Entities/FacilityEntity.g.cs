@@ -21,6 +21,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The sum of the areas at each floor level included within the principal outside faces of exterior walls, including roofed areas with finished floors that may not have exterior walls, but are connected to the main building. This sum should include all stories or areas having floor surfaces with clear standing head room (6.5 feet or 1.98 meters) but omit architectural setbacks or projections.")]
     public System.String BuildingArea { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full, legally accepted  name of the institution at the site level.")]
     public System.String BuildingName { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The number of stories in a building, excluding the basement if its ceiling is less than three feet above ground level.")]
     public System.String BuildingNumberOfStories { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The number of the building on the site, if more than one building shares the same address.")]
     public System.String BuildingSiteNumber { get; set; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year a building was constructed, as indicated by cornerstone or official government records.")]
     public System.String BuildingYearBuilt { get; set; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The most recent year that a comprehensive upgrade of ALL major building systems and components was completed, such that it functions as a modern building, as measured by a facility condition index not greater than 15%.")]
     public System.String BuildingYearOfLastModernization { get; set; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20749">Facility Acquisition Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date the property/facility was acquired.")]
     public DateTime? FacilityAcquisitionDate { get; set; }
 
     /// <summary>
@@ -110,6 +117,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An indication of whether the building is built for permanent use in the same location or is relocatable.")]
     public System.String FacilityBuildingPermanency { get; set; }
 
     /// <summary>
@@ -123,6 +131,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The time, in years, of the expected useful life of a facility for the purposes of depreciation.")]
     public System.String FacilityExpectedLife { get; set; }
 
     /// <summary>
@@ -134,6 +143,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20887">Facility Ownership Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates the public or private entity holds legal title to the building and/or site.")]
     public Boolean? FacilityOwnershipIndicator { get; set; }
 
     /// <summary>
@@ -147,6 +157,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A locally assigned unique number or alphanumeric code used to capture precise information on locations specific to a school (e.g., building number, class number, hall number, school bus number, computer station number, or internet protocol (IP) address).")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -165,6 +176,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingHistoricStatus")]
+    [Comment("An indication of whether or not a building is eligible to be or has been declared a landmark or historic building.")]
     public Guid? RefBuildingHistoricStatusId { get; set; }
 
     /// <summary>
@@ -177,6 +189,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingPrimaryUseType")]
+    [Comment("The primary use type of the building in which a school is located.")]
     public Guid? RefBuildingPrimaryUseTypeId { get; set; }
 
     /// <summary>
@@ -189,6 +202,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingUseType")]
+    [Comment("How a building is principally used, regardless of its original design.")]
     public Guid? RefBuildingUseTypeId { get; set; }
 
     /// <summary>
@@ -201,6 +215,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </para>
     /// </summary>
     [ForeignKey("RefCampusStatus")]
+    [Comment("The generalized use or control of a campus, independent of program type.")]
     public Guid? RefCampusStatusId { get; set; }
 
     /// <summary>
@@ -213,6 +228,7 @@ public partial class FacilityEntity : EntityBase, IFacility
     /// </para>
     /// </summary>
     [ForeignKey("RefCampusType")]
+    [Comment("The primary purpose for which a campus is designed and/or used.")]
     public Guid? RefCampusTypeId { get; set; }
 
     #endregion

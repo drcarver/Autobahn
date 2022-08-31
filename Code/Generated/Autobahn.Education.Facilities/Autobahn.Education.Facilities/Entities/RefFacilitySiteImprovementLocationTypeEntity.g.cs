@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20768">Facility Site Improvement Location Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilitySiteImprovementLocationType", Schema = "Facilities")]
+[Comment("The type of location of the designed and constructed improvements made to a site.")]
 public partial class RefFacilitySiteImprovementLocationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

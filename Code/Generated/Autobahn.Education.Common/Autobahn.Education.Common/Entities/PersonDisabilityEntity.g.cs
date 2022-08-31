@@ -19,6 +19,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19569">Disability Status</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether a person is classified as disabled under the American's with Disability Act (ADA).")]
     public Boolean? DisabilityStatus { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// </para>
     /// </summary>
     [ForeignKey("PrimaryDisabilityType")]
+    [Comment("The major or overriding disability condition that best describes a person's impairment.")]
     public Guid? PrimaryDisabilityTypeId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// </para>
     /// </summary>
     [ForeignKey("RefAccommodationsNeededType")]
+    [Comment("Codes identifying the set of health accommodations.")]
     public Guid? RefAccommodationsNeededTypeId { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// </para>
     /// </summary>
     [ForeignKey("RefDisabilityConditionStatusCode")]
+    [Comment("A code indicating the disability condition status.")]
     public Guid? RefDisabilityConditionStatusCodeId { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// </para>
     /// </summary>
     [ForeignKey("RefDisabilityConditionType")]
+    [Comment("Codes identifying the set of disability conditions.")]
     public Guid? RefDisabilityConditionTypeId { get; set; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// </para>
     /// </summary>
     [ForeignKey("RefDisabilityDeterminationSourceType")]
+    [Comment("Codes identifying the set of disability determination sources.")]
     public Guid? RefDisabilityDeterminationSourceTypeId { get; set; }
 
     /// <summary>
@@ -103,6 +109,7 @@ public partial class PersonDisabilityEntity : EntityBase, IPersonDisability
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20746">Significant Cognitive Disability Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Student has an existing IDEA disability with cognitive impairments which may prevent him/her from attaining grade-level achievement standards.")]
     public Boolean? SignificantCognitiveDisabilityIndicator { get; set; }
 
     #endregion

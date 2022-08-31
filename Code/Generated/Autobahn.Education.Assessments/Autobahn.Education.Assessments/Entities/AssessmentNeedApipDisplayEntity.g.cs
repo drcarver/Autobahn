@@ -26,6 +26,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
     /// </para>
     /// </summary>
+    [Comment("Determines if the alternative accessible content is rendered as the default content for the learner.")]
     public Boolean? EncouragementActivateByDefaultIndicator { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
     /// </para>
     /// </summary>
+    [Comment("Defines whether or not the individual needs the kind of support defined by the entity.")]
     public Boolean? EncouragementAssignedSupportIndicator { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The URI of the sound file that is to be played to the user as an expression of encouragement when Masking is specified as part of an Assessment Personal Needs Profile. It is left to the system to determine when to play this audio file.")]
     public System.String EncouragementSoundFileUrl { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4000,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The text string that is to be displayed to the user as an expression of encouragement when Masking is specified as part of an Assessment Personal Needs Profile.  It is left to the system to determine when to display this string.")]
     public System.String EncouragementTextMessagingString { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
     /// </para>
     /// </summary>
+    [Comment("Determines if the alternative accessible content is rendered as the default content for the learner.")]
     public Boolean? MaskingActivateByDefaultIndicator { get; set; }
 
     /// <summary>
@@ -85,6 +90,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
     /// </para>
     /// </summary>
+    [Comment("Defines whether or not the individual needs the kind of support defined by the entity.")]
     public Boolean? MaskingAssignedSupportIndicator { get; set; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public partial class AssessmentNeedApipDisplayEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedMaskingType")]
+    [Comment("Specifies as part of an Assessment Personal Needs Profile the type of masks the user is able to create  to cover portions of the question until needed.")]
     public Guid? RefAssessmentNeedMaskingTypeId { get; set; }
 
     #endregion

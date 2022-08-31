@@ -19,6 +19,7 @@ public partial class PersonDigitalAccessEntity : EntityBase, IPersonDigitalAcces
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20936">Internet Access In Residence</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether the student is able to access the internet in their primary place of residence.")]
     public Boolean? InternetAccessInResidence { get; set; }
 
     /// <summary>
@@ -44,6 +45,7 @@ public partial class PersonDigitalAccessEntity : EntityBase, IPersonDigitalAcces
     /// </para>
     /// </summary>
     [ForeignKey("RefBarrierToInternetAccessInResidence")]
+    [Comment("An indication of the barrier to having internet access in the student's primary place of residence.")]
     public Guid? RefBarrierToInternetAccessInResidenceId { get; set; }
 
     /// <summary>
@@ -56,6 +58,7 @@ public partial class PersonDigitalAccessEntity : EntityBase, IPersonDigitalAcces
     /// </para>
     /// </summary>
     [ForeignKey("RefInternetAccessTypeInResidence")]
+    [Comment("The primary type of internet service used in the student's primary place of residence.")]
     public Guid? RefInternetAccessTypeInResidenceId { get; set; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public partial class PersonDigitalAccessEntity : EntityBase, IPersonDigitalAcces
     /// </para>
     /// </summary>
     [ForeignKey("RefInternetPerformanceInResidence")]
+    [Comment("An indication of whether the student can complete the full range of learning activities, including video streaming and assignment upload, without interruptions caused by poor internet performance in their primary place of residence.")]
     public Guid? RefInternetPerformanceInResidenceId { get; set; }
 
     #endregion

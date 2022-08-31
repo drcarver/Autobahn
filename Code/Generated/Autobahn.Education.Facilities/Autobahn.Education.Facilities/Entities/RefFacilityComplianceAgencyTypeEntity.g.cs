@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20848">Facility Compliance Agency Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityComplianceAgencyType", Schema = "Facilities")]
+[Comment("The type of agency that has ultimate responsibility for the compliance determination.")]
 public partial class RefFacilityComplianceAgencyTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

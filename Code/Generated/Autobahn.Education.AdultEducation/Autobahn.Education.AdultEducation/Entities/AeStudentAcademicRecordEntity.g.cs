@@ -21,6 +21,7 @@ public partial class AeStudentAcademicRecordEntity : EntityBase, IAeStudentAcade
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(7,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.")]
     public System.String DiplomaOrCredentialAwardDate { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class AeStudentAcademicRecordEntity : EntityBase, IAeStudentAcade
     /// </para>
     /// </summary>
     [ForeignKey("RefHighSchoolDiplomaType")]
+    [Comment("The type of diploma/credential that is awarded to a person in recognition of his/her completion of the curricular requirements.")]
     public Guid? RefHighSchoolDiplomaTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class AeStudentAcademicRecordEntity : EntityBase, IAeStudentAcade
     /// </para>
     /// </summary>
     [ForeignKey("RefProfessionalTechnicalCredentialType")]
+    [Comment("An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.")]
     public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
     #endregion

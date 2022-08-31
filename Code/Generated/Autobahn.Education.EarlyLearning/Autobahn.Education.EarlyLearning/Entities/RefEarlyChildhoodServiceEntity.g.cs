@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefEarlyChildhoodService file
 /// </summary>
+[Table("RefEarlyChildhoodService", Schema = "EarlyLearning")]
 public partial class RefEarlyChildhoodServiceEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefEarlyChildhoodService Properties"

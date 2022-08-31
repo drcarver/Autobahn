@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19374">Assessment Accommodation Category</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentAccommodationCategory", Schema = "Assessments")]
+[Comment("A category of accommodations needed for a given assessment.")]
 public partial class RefAssessmentAccommodationCategoryEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

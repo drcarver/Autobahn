@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19006">Activity Identifier</a>
 /// </para>
 /// </summary>
+[Table("RefOrganizationIdentificationSystem", Schema = "Common")]
+[Comment("A unique number or alphanumeric code used in the local system to identify an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.")]
 public partial class RefOrganizationIdentificationSystemEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefOrganizationIdentificationSystem Properties"

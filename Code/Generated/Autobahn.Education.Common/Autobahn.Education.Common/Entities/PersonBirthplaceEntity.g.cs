@@ -21,6 +21,7 @@ public partial class PersonBirthplaceEntity : EntityBase, IPersonBirthplace
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment(" The name of the city in which a person was born.")]
     public System.String City { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PersonBirthplaceEntity : EntityBase, IPersonBirthplace
     /// </para>
     /// </summary>
     [ForeignKey("RefCountry")]
+    [Comment("The unique two digit International Organization for Standardization (ISO) code for the country in which a person is born.")]
     public Guid? RefCountryId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class PersonBirthplaceEntity : EntityBase, IPersonBirthplace
     /// </para>
     /// </summary>
     [ForeignKey("RefState")]
+    [Comment("The abbreviation for the name of the state (within the United States) or extra-state jurisdiction in which a person was born.")]
     public Guid? RefStateId { get; set; }
 
     #endregion

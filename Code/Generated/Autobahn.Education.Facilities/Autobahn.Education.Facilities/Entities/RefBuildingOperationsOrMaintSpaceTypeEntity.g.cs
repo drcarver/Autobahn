@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20805">Building Operations or Maintenance Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingOperationsOrMaintSpaceType", Schema = "Facilities")]
+[Comment("The area designed primarily for conducting activities concerned with maintaining the grounds, buildings, and equipment.")]
 public partial class RefBuildingOperationsOrMaintSpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

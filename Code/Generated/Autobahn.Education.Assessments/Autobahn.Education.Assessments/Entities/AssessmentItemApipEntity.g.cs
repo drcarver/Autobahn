@@ -19,6 +19,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20111">Assessment Item Adaptive Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("This indicator determines whether an assessment item is an adaptive item.")]
     public Boolean? AdaptiveIndicator { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The item body contains the text, graphics, media objects, and interactions that describe the item's content and information about how it is structured. The body is presented by combining it with stylesheet information, either explicitly or implicitly using the default style rules of the delivery or authoring system. This element contains the appropriate XML from the IMS Global APIP Specification defining the various item body interactions.")]
     public System.String ItemBodyXml { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Modal feedback is shown to the candidate directly following response processing. The value of an outcome variable is used in conjunction with the showHide and identifier attributes to determine whether or not the feedback is shown in a similar way to feedbackElement. The XML from the IMS Global APIP Specification would be included.")]
     public System.String ModalFeedbackXml { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Outcome variables are declared by outcome declarations. Their value is set either from a default given in the declaration itself or by a responseRule during response processing.  The XML from the IMS Global APIP Specification would be included.")]
     public System.String OutcomeDeclarationXml { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Response declarations state what the response variables include.  The response declaration may assign an optional correct response. The XML from the IMS Global APIP Specification would be included.")]
     public System.String ResponseDeclarationXml { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("These templates are described using the processing language defined in IMS Global APIP specification and are distributed (in XML form) along with it. Delivery engines that support generalized response processing do not need to implement special mechanisms to support them as a template file can be parsed directly while processing the assessment item that refers to it. This element provides the URL for the template.")]
     public System.String ResponseProcessingTemplateUrl { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Response processing is the process by which the Delivery Engine assigns outcomes based on the learner's responses. The outcomes may be used to provide feedback to the learner Feedback is either provided immediately following the end of the learner's attempt or it is provided at some later time, perhaps as part of a summary report on the item session. The XML from the IMS Global APIP Specification would be included.")]
     public System.String ResponseProcessingXml { get; set; }
 
     /// <summary>
@@ -111,6 +118,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Template declarations declare item variables that are to be used specifically for the purposes of cloning items. They can have their value set only during template processing. They are referred to within the item body in order to individualize the clone and possibly also within the response Processing rules if the cloning process affects the way the item is scored.  The XML from the IMS Global APIP Specification would be included.")]
     public System.String TemplateDeclarationXml { get; set; }
 
     /// <summary>
@@ -123,6 +131,7 @@ public partial class AssessmentItemApipEntity : EntityBase, IAssessmentItemApip
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Template processing consists of one or more template rules that are followed by the cloning engine or delivery system in order to assign values to the template variables. Template processing is identical in form to responseProcessing except that the purpose is to assign values to template variables, not outcome variables. The XML from the IMS Global APIP Specification would be included.")]
     public System.String TemplateProcessingXml { get; set; }
 
     #endregion

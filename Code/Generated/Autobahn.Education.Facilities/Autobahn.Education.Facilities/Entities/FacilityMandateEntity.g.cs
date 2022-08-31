@@ -28,6 +28,7 @@ public partial class FacilityMandateEntity : EntityBase, IFacilityMandate
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The specific law, rule, regulation, or standard of a state or local government that pertains to public school facilities.")]
     public System.String FacilityStateOrLocalMandateName { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class FacilityMandateEntity : EntityBase, IFacilityMandate
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilitiesMandateAuthorityType")]
+    [Comment("The authority that mandates through law, regulation, or standard that pertains to a specific mandate.")]
     public Guid? RefFacilitiesMandateAuthorityTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class FacilityMandateEntity : EntityBase, IFacilityMandate
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityApplicableFederalMandateType")]
+    [Comment("The particular federal law, regulation, or standard that pertains to a school facility.")]
     public Guid? RefFacilityApplicableFederalMandateTypeId { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class FacilityMandateEntity : EntityBase, IFacilityMandate
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityFederalMandateInterestType")]
+    [Comment("The area of interest controlled by a federal law, regulation, or standard that pertains to a school facility.")]
     public Guid? RefFacilityFederalMandateInterestTypeId { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class FacilityMandateEntity : EntityBase, IFacilityMandate
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityStateOrLocalMandateInterestType")]
+    [Comment("The area of interest controlled by a law, rule, regulation, or standard of state and local governments that pertains to public school facilities.")]
     public Guid? RefFacilityStateOrLocalMandateInterestTypeId { get; set; }
 
     #endregion

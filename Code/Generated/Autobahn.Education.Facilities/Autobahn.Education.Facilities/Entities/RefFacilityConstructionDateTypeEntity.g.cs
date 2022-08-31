@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20762">Facility Construction Date Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityConstructionDateType", Schema = "Facilities")]
+[Comment("Designation of the nature of the construction completion date.")]
 public partial class RefFacilityConstructionDateTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

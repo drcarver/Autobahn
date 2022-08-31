@@ -19,6 +19,7 @@ public partial class PeerRatingSystemEntity : EntityBase, IPeerRatingSystem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20162">Peer Rating System Maximum Value</a>
     /// </para>
     /// </summary>
+    [Comment(" The maximum value allowed by the Peer Rating System.")]
     public Decimal? MaximumValue { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class PeerRatingSystemEntity : EntityBase, IPeerRatingSystem
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The minimum value allowed by the Peer Rating System.")]
     public System.Decimal MinimumValue { get; set; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public partial class PeerRatingSystemEntity : EntityBase, IPeerRatingSystem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the scaling system used to specify the Peer Rating.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -55,6 +58,7 @@ public partial class PeerRatingSystemEntity : EntityBase, IPeerRatingSystem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20164">Peer Rating System Optimum Value</a>
     /// </para>
     /// </summary>
+    [Comment("The optimum value allowed by the Peer Rating System.  The optimum or best rating may be the maximum value, the minimum value, or something in between.")]
     public Decimal? OptimumValue { get; set; }
 
     #endregion

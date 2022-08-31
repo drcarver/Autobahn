@@ -26,6 +26,7 @@ public partial class FacilityFinanceEntity : EntityBase, IFacilityFinance
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20765">Facility Replacement Value</a>
     /// </para>
     /// </summary>
+    [Comment("The estimated cost of replacing a facility using current per square foot estimates of total project costs.")]
     public Decimal? FacilityReplacementValue { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class FacilityFinanceEntity : EntityBase, IFacilityFinance
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20874">Indebtedness Amount Allowed</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of indebtedness allowed by law to be carried by the school district.")]
     public Decimal? IndebtednessAmountAllowed { get; set; }
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class FacilityFinanceEntity : EntityBase, IFacilityFinance
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20875">Insurance Deductible</a>
     /// </para>
     /// </summary>
+    [Comment("The dollar amount a school district must pay before its insurance will compensate it for loss.")]
     public Decimal? InsuranceDeductible { get; set; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public partial class FacilityFinanceEntity : EntityBase, IFacilityFinance
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20876">Public Education Mill Rate</a>
     /// </para>
     /// </summary>
+    [Comment("The millage rate used to calculate property tax revenue for K-12 public education.")]
     public Decimal? PublicEducationMillRate { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20777">Facility Applicable Federal Mandate Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityApplicableFederalMandateType", Schema = "Facilities")]
+[Comment("The particular federal law, regulation, or standard that pertains to a school facility.")]
 public partial class RefFacilityApplicableFederalMandateTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

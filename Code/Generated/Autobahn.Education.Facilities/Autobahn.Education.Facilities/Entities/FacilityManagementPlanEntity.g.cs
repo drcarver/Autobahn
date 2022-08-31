@@ -21,6 +21,7 @@ public partial class FacilityManagementPlanEntity : EntityBase, IFacilityManagem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the management and accountability plan.")]
     public System.String FacilitiesPlanDescription { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class FacilityManagementPlanEntity : EntityBase, IFacilityManagem
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilitiesMgmtEmergencyType")]
+    [Comment("The type of abnormal and urgent circumstances that disrupt the normal operation of the building, threaten the health and safety of the occupants, or require an emergency response.")]
     public Guid? RefFacilitiesMgmtEmergencyTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class FacilityManagementPlanEntity : EntityBase, IFacilityManagem
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilitiesPlanType")]
+    [Comment("The type of management and accountability plan.")]
     public Guid? RefFacilitiesPlanTypeId { get; set; }
 
     #endregion

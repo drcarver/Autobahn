@@ -27,6 +27,7 @@ public partial class PersonMilitaryEntity : EntityBase, IPersonMilitary
     /// </para>
     /// </summary>
     [ForeignKey("RefMilitaryActiveStudentIndicator")]
+    [Comment("An indication that the student is currently serving on Active Duty, in the National Guard, or in the Reserve components of the United States military services")]
     public Guid? RefMilitaryActiveStudentIndicatorId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class PersonMilitaryEntity : EntityBase, IPersonMilitary
     /// </para>
     /// </summary>
     [ForeignKey("RefMilitaryBranch")]
+    [Comment("A branch of the U.S. Military applicable for specifying more details when using Military Connected Student Indicator, Military Active Student Indicator,  Military Veteran Student Indicator, and Military Enlistment After Exit elements.")]
     public Guid? RefMilitaryBranchId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class PersonMilitaryEntity : EntityBase, IPersonMilitary
     /// </para>
     /// </summary>
     [ForeignKey("RefMilitaryConnectedStudentIndicator")]
+    [Comment("An indication that the student's parent or guardian is on Active Duty, in the National Guard, or in the Reserve components of the United States military services")]
     public Guid? RefMilitaryConnectedStudentIndicatorId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class PersonMilitaryEntity : EntityBase, IPersonMilitary
     /// </para>
     /// </summary>
     [ForeignKey("RefMilitaryVeteranStudentIndicator")]
+    [Comment("An indication that the student is a veteran who served on Active Duty, in the National Guard, or in the Reserve components of the United States military services")]
     public Guid? RefMilitaryVeteranStudentIndicatorId { get; set; }
 
     #endregion

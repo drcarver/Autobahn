@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20799">Building Circulation Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingCirculationSpaceType", Schema = "Facilities")]
+[Comment("A space designed to enable people to move within the building.")]
 public partial class RefBuildingCirculationSpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

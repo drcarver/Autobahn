@@ -28,6 +28,7 @@ public partial class PersonLanguageEntity : EntityBase, IPersonLanguage
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefLanguage")]
+    [Comment("The code for the specific language or dialect that a person uses to communicate.")]
     public Guid RefLanguageId { get; set; }
 
     /// <summary>
@@ -41,6 +42,7 @@ public partial class PersonLanguageEntity : EntityBase, IPersonLanguage
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefLanguageUseType")]
+    [Comment("An indication of the function and context in which a person uses a language to communicate.")]
     public Guid RefLanguageUseTypeId { get; set; }
 
     #endregion

@@ -28,6 +28,7 @@ public partial class OrganizationWebsiteEntity : EntityBase, IOrganizationWebsit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The Uniform Resource Locator (URL) for the unique address of a Web page.")]
     public System.String Website { get; set; }
 
     #endregion

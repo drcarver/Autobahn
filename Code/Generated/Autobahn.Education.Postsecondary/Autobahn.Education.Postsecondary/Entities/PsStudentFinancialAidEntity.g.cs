@@ -19,6 +19,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19745">Financial Aid Applicant</a>
     /// </para>
     /// </summary>
+    [Comment("Any applicant who submits any one of the institutionally required financial aid applications/forms, such as the  Free Application for Federal Student Aid (FAFSA).")]
     public Boolean? FinancialAidApplicant { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20319">Financial Aid Income Level</a>
     /// </para>
     /// </summary>
+    [Comment("The income level of an individual that is used by an institution's financial aid office to determine an individual's Expected Family Contribution (EFC).  For dependent students this will include the parents' adjusted gross income and the student's adjusted gross income.  For independent students this will include the student's adjusted gross income.")]
     public Decimal? FinancialAidIncomeLevel { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19747">Financial Need</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of financial need as determined by an institution using the federal methodology and/or your institution's own standards.")]
     public Decimal? FinancialNeed { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// </para>
     /// </summary>
     [ForeignKey("RefFinancialAidVeteransBenefitStatus")]
+    [Comment("An indication of whether a person is receiving Veteran's benefits.")]
     public Guid? RefFinancialAidVeteransBenefitStatusId { get; set; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// </para>
     /// </summary>
     [ForeignKey("RefFinancialAidVeteransBenefitType")]
+    [Comment("The type of Veteran's benefits a person is receiving.")]
     public Guid? RefFinancialAidVeteransBenefitTypeId { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class PsStudentFinancialAidEntity : EntityBase, IPsStudentFinanci
     /// </para>
     /// </summary>
     [ForeignKey("RefNeedDeterminationMethod")]
+    [Comment("The methodology used to determine an individual's financial need.")]
     public Guid? RefNeedDeterminationMethodId { get; set; }
 
     public Boolean? TitleIvparticipantAndRecipient { get; set; }

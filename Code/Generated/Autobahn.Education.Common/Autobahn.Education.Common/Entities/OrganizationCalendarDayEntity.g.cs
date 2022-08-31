@@ -21,6 +21,7 @@ public partial class OrganizationCalendarDayEntity : EntityBase, IOrganizationCa
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An alternate name used for the school day, typically used for the bell schedule (e.g., Blue day, Red day).")]
     public System.String AlternateDayName { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]

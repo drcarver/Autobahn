@@ -21,6 +21,7 @@ public partial class PsStudentCohortEntity : EntityBase, IPsStudentCohort
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year the cohort is expected to graduate.")]
     public System.String CohortGraduationYear { get; set; }
 
     /// <summary>

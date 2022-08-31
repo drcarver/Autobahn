@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20853">Facility Capital Program Management Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityCapitalProgramMgmtType", Schema = "Facilities")]
+[Comment("The type of management organization for planning, design, and construction of major capital projects.")]
 public partial class RefFacilityCapitalProgramMgmtTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

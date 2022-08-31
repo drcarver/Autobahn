@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefOrganizationMonitoringNotification file
 /// </summary>
+[Table("RefOrganizationMonitoringNotification", Schema = "Common")]
 public partial class RefOrganizationMonitoringNotificationEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefOrganizationMonitoringNotification Properties"

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20810">Building Science Specialty Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingScienceSpecialtySpaceType", Schema = "Facilities")]
+[Comment("The space designed, located, furnished, and equipped for instruction and experimentation in science.")]
 public partial class RefBuildingScienceSpecialtySpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

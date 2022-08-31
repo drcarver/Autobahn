@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20035">Assessment Need Braille Grade Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedBrailleGradeType", Schema = "Assessments")]
+[Comment("Defines as part of an Assessment Personal Needs Profile the grade of Braille to use when using a Braille display.")]
 public partial class RefAssessmentNeedBrailleGradeTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

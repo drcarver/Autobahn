@@ -19,6 +19,7 @@ public partial class AssessmentPersonalNeedsProfileEntity : EntityBase, IAssessm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
     /// </para>
     /// </summary>
+    [Comment("Determines if the alternative accessible content is rendered as the default content for the learner.")]
     public Boolean? ActivateByDefault { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class AssessmentPersonalNeedsProfileEntity : EntityBase, IAssessm
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A type of need identified for a learner as part of an assessment need profile.")]
     public System.String AssessmentNeedType { get; set; }
 
     /// <summary>
@@ -42,6 +44,7 @@ public partial class AssessmentPersonalNeedsProfileEntity : EntityBase, IAssessm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
     /// </para>
     /// </summary>
+    [Comment("Defines whether or not the individual needs the kind of support defined by the entity.")]
     public Boolean? AssignedSupportFlag { get; set; }
 
     #endregion

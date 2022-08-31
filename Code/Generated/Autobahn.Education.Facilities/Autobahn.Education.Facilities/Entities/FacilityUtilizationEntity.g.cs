@@ -19,6 +19,7 @@ public partial class FacilityUtilizationEntity : EntityBase, IFacilityUtilizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20837">Building Hours of Public Use Per Week</a>
     /// </para>
     /// </summary>
+    [Comment("The number of hours that all or part of a building is used for purposes other than general education by the community or other organizations.")]
     public Int32? BuildingHoursOfPublicUsePerWeek { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class FacilityUtilizationEntity : EntityBase, IFacilityUtilizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20838">Building Net Area of Instructional Space</a>
     /// </para>
     /// </summary>
+    [Comment("The area of space directly used for instruction excluding circulation, administration, student services, and building support.")]
     public Decimal? BuildingNetAreaOfInstructionalSpace { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class FacilityUtilizationEntity : EntityBase, IFacilityUtilizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20839">Building Number of Teaching Stations</a>
     /// </para>
     /// </summary>
+    [Comment("The number of teaching stations, as defined by how many spaces have, or could have, a teacher assigned to them for classroom instruction.")]
     public Int32? BuildingNumberOfTeachingStations { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class FacilityUtilizationEntity : EntityBase, IFacilityUtilizatio
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the policy that enables the community or other organizations to use all or part of a building for purposes other than general education.")]
     public System.String BuildingPublicUsePolicyDescription { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class FacilityUtilizationEntity : EntityBase, IFacilityUtilizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20885">Facility Enrollment Capacity</a>
     /// </para>
     /// </summary>
+    [Comment("The maximum number of age appropriate students who can be enrolled in a facility such that the district's programmatic, operational, and student/teacher work load requirements are met.")]
     public Int32? FacilityEnrollmentCapacity { get; set; }
 
     /// <summary>

@@ -21,6 +21,7 @@ public partial class PsStudentCourseSectionMarkEntity : EntityBase, IPsStudentCo
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The narrative of the grade awarded to an individual in an academic course in those cases where a course does not receive a letter or numeric grade included in the grading scale of the Course Academic Grade Qualifier.")]
     public System.String CourseNarrativeExplanationGrade { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PsStudentCourseSectionMarkEntity : EntityBase, IPsStudentCo
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseAcademicGradeStatusCode")]
+    [Comment("Additional information regarding the context of the given grade.")]
     public Guid? RefCourseAcademicGradeStatusCodeId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class PsStudentCourseSectionMarkEntity : EntityBase, IPsStudentCo
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The narrative of the student performance in a course section as submitted by the instructor.")]
     public System.String StudentCourseSectionGradeNarrative { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19943">Learner Activity Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearnerActivityType", Schema = "Assessments")]
+[Comment("The type of work assigned to the learner.")]
 public partial class RefLearnerActivityTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

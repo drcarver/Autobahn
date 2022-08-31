@@ -27,6 +27,7 @@ public partial class PersonLearningDeviceEntity : EntityBase, IPersonLearningDev
     /// </para>
     /// </summary>
     [ForeignKey("RefPrimaryLearningDeviceAccess")]
+    [Comment("An indication of whether the primary learning device is shared or not shared with another individual")]
     public Guid? RefPrimaryLearningDeviceAccessId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class PersonLearningDeviceEntity : EntityBase, IPersonLearningDev
     /// </para>
     /// </summary>
     [ForeignKey("RefPrimaryLearningDeviceAwayFromSchool")]
+    [Comment("The type of device the student uses most often to complete learning activities away from school.")]
     public Guid? RefPrimaryLearningDeviceAwayFromSchoolId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class PersonLearningDeviceEntity : EntityBase, IPersonLearningDev
     /// </para>
     /// </summary>
     [ForeignKey("RefPrimaryLearningDeviceProvider")]
+    [Comment("The provider of the primary learning device.")]
     public Guid? RefPrimaryLearningDeviceProviderId { get; set; }
 
     #endregion

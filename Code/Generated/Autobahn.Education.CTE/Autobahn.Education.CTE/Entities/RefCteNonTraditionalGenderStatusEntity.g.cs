@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19581">Career Technical Education Nontraditional Gender Status</a>
 /// </para>
 /// </summary>
+[Table("RefCteNonTraditionalGenderStatus", Schema = "CTE")]
+[Comment("An indication of whether CTE participants were members of an underrepresented gender group (where one gender comprises less than 25 percent of the persons employed in those occupations or field of work).")]
 public partial class RefCteNonTraditionalGenderStatusEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefCteNonTraditionalGenderStatus Properties"

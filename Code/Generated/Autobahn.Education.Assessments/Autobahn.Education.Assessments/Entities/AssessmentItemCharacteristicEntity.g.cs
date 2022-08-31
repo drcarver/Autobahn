@@ -27,6 +27,7 @@ public partial class AssessmentItemCharacteristicEntity : EntityBase, IAssessmen
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentItemCharacteristicType")]
+    [Comment("The type of psychometric measure provided for assessment item.")]
     public Guid? RefAssessmentItemCharacteristicTypeId { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class AssessmentItemCharacteristicEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The distribution of responses for each choice in the assessment item.")]
     public System.String ResponseChoicePattern { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class AssessmentItemCharacteristicEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A psychometric measure provided for an assessment item.")]
     public System.String Value { get; set; }
 
     #endregion

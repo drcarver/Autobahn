@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19075">Career and Technical Education Graduation Rate Inclusion</a>
 /// </para>
 /// </summary>
+[Table("RefCteGraduationRateInclusion", Schema = "CTE")]
+[Comment("An indication of how CTE concentrators are included in the state's computation of its graduation rate.")]
 public partial class RefCteGraduationRateInclusionEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

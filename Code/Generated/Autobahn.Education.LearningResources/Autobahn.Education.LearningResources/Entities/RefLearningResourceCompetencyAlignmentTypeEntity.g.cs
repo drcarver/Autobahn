@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19879">Learning Resource Competency Alignment Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceCompetencyAlignmentType", Schema = "LearningResources")]
+[Comment("The alignment relationship between the resource and a competency definition object.")]
 public partial class RefLearningResourceCompetencyAlignmentTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

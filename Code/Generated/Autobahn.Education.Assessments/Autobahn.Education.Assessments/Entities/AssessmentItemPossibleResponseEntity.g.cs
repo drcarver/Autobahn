@@ -26,6 +26,7 @@ public partial class AssessmentItemPossibleResponseEntity : EntityBase, IAssessm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20183">Assessment Item Possible Response Correct Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the possible response is the correct response.")]
     public Boolean? CorrectIndicator { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class AssessmentItemPossibleResponseEntity : EntityBase, IAssessm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A message provided to the person being assessed after giving a response that matches the possible response.")]
     public System.String FeedbackMessage { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class AssessmentItemPossibleResponseEntity : EntityBase, IAssessm
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The possible response presented to the participant within a selected-response/multiple-choice assessment item.")]
     public System.String PossibleResponseOption { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class AssessmentItemPossibleResponseEntity : EntityBase, IAssessm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19905">Assessment Item Possible Response Sequence Number</a>
     /// </para>
     /// </summary>
+    [Comment("The position of this response in the list of responses displayed, such as for a multiple choice item type.")]
     public Int32? SequenceNumber { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class AssessmentItemPossibleResponseEntity : EntityBase, IAssessm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The description of each distracter on an assessment item, explaining why it is there, what misunderstandings it exposes.")]
     public System.String Value { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20886">Organization Relationship Type</a>
 /// </para>
 /// </summary>
+[Table("RefOrganizationRelationship", Schema = "Common")]
+[Comment("The nature of one organization's relationship to another.")]
 public partial class RefOrganizationRelationshipEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

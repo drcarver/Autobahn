@@ -19,6 +19,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20068">Staff Professional Development Activity Completion Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which an individual completed a course, an education program or a staff development activity.")]
     public DateTime? ActivityCompletionDate { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to the Professional Development Activity as assigned by the organization offering the training.")]
     public System.String ActivityIdentifier { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20067">Staff Professional Development Activity Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which an individual begins a course, an education program or a staff development activity.")]
     public DateTime? ActivityStartDate { get; set; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of an activity designed for the purpose of developing someone professionally.")]
     public System.String ActivityTitle { get; set; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19200">Number of Credits Earned</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credits an individual earns by the successful completion of a course.")]
     public Decimal? NumberOfCreditsEarned { get; set; }
 
     /// <summary>
@@ -107,6 +112,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseCreditUnit")]
+    [Comment("The type of credit (unit, semester, or quarter) associated with the credit hours earned for the course. ")]
     public Guid? RefCourseCreditUnitId { get; set; }
 
     /// <summary>
@@ -119,6 +125,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// </para>
     /// </summary>
     [ForeignKey("RefProfessionalDevelopmentFinancialSupport")]
+    [Comment("The type of financial assistance received in support of non-credit professional development activities.")]
     public Guid? RefProfessionalDevelopmentFinancialSupportId { get; set; }
 
     /// <summary>
@@ -130,6 +137,7 @@ public partial class StaffProfessionalDevelopmentActivityEntity : EntityBase, IS
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19810">Professional Development Scholarship Status</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether a scholarship was received for the person to participate in the professional development.")]
     public Boolean? ScholarshipStatus { get; set; }
 
     #endregion

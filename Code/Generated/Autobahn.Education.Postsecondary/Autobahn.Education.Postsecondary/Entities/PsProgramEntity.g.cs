@@ -21,6 +21,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The amount of time necessary for a person to complete all requirements for a degree or certificate according to the institution's catalog. This is typically 4 years (8 semesters or trimesters, or 12 quarters, excluding summer terms) for a bachelor's degree in a standard term-based institution; 2 years (4 semesters or trimesters, or 6 quarters, excluding summer terms) for an associate's degree in a standard term-based institution; and the various scheduled times for certificate programs.")]
     public System.String NormalLengthTimeForCompletion { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19223">Program Length Hours</a>
     /// </para>
     /// </summary>
+    [Comment("The normal length in credit/contact hours of a person's program as published in the institution's catalogue, website, or other official documents.")]
     public Decimal? ProgramLengthHours { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// </para>
     /// </summary>
     [ForeignKey("RefCipCode")]
+    [Comment("A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.")]
     public Guid? RefCipCodeId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// </para>
     /// </summary>
     [ForeignKey("RefCipVersion")]
+    [Comment("The version of CIP being reported.")]
     public Guid? RefCipVersionId { get; set; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// </para>
     /// </summary>
     [ForeignKey("RefProgramLengthHoursType")]
+    [Comment("The type of hours (credit or contact) by which the normal length of a program of study is measured.")]
     public Guid? RefProgramLengthHoursTypeId { get; set; }
 
     /// <summary>
@@ -99,6 +104,7 @@ public partial class PsProgramEntity : EntityBase, IPsProgram
     /// </para>
     /// </summary>
     [ForeignKey("RefTimeForCompletionUnits")]
+    [Comment("The unit of measurement for length of time for completion.")]
     public Guid? RefTimeForCompletionUnitsId { get; set; }
 
     #endregion

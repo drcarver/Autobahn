@@ -28,6 +28,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The official reference number portion of a course identifier.  This number normally designates the level of the course as well as the level of the individual expected to enroll in the course.")]
     public System.String CourseNumber { get; set; }
 
     public Int32? NcaaeligibilityInd { get; set; }
@@ -43,6 +44,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The course identifier as it was listed when the credit was earned (e.g. before a system conversion) to show consistency between present transcripts and older ones.")]
     public System.String OriginalCourseIdentifier { get; set; }
 
     /// <summary>
@@ -56,6 +58,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An indication of the way an academic course was identified at an educational institution.")]
     public System.String OverrideSchoolCourseNumber { get; set; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCipCode")]
+    [Comment("A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.")]
     public Guid? RefCipCodeId { get; set; }
 
     /// <summary>
@@ -80,6 +84,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseCreditBasisType")]
+    [Comment("The type of enrollment associated with the credit hours for the course.")]
     public Guid? RefCourseCreditBasisTypeId { get; set; }
 
     /// <summary>
@@ -92,6 +97,7 @@ public partial class PsCourseEntity : EntityBase, IPsCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseCreditLevelType")]
+    [Comment("The level of credit associated with the credit hours earned for the course.")]
     public Guid? RefCourseCreditLevelTypeId { get; set; }
 
     /// <summary>

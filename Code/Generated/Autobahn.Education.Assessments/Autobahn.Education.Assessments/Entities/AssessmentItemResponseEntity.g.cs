@@ -21,6 +21,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A tool or aid set used while viewing the item. This can include things like a calculator, reference tools, etc.")]
     public System.String AidSetUsed { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20512">Assessment Item Response Descriptive Feedback Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date and time the descriptive feedback was entered in response to the results from a scored/evaluated assessment item.")]
     public DateTime? AssessmentItemResponseDescriptiveFeedbackDate { get; set; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The formative descriptive feedback that was given to a learner in response to the results from a scored/evaluated assessment item.")]
     public System.String DescriptiveFeedback { get; set; }
 
     /// <summary>
@@ -70,6 +73,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19394">Assessment Item Response Duration</a>
     /// </para>
     /// </summary>
+    [Comment("The total amount of time in seconds or milliseconds  that a person spent responding to a given assessment item.")]
     public TimeSpan? Duration { get; set; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19958">Assessment Item Response First Attempt Duration</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of time in seconds or milliseconds that a person took to give an initial response, a first attempt to answer a formative assessment item.")]
     public TimeSpan? FirstAttemptDuration { get; set; }
 
     /// <summary>
@@ -92,6 +97,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19956">Assessment Item Response Hint Count</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of hints presented as the learner responded to a formative assessment item.  This may include hints requested by the learner or hints automatically presented such as in an online tutoring system. Presentation of a scaffolding item is a separate response record and not counted as a hint.")]
     public Int32? HintCount { get; set; }
 
     /// <summary>
@@ -103,6 +109,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19957">Assessment Item Response Hint Included Answer</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that one of the hints presented included the correct answer.")]
     public Boolean? HintIncludedAnswer { get; set; }
 
     /// <summary>
@@ -115,6 +122,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessItemResponseStatus")]
+    [Comment("The status of the response for a given item.")]
     public Guid? RefAssessItemResponseStatusId { get; set; }
 
     /// <summary>
@@ -127,6 +135,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentItemResponseScoreStatus")]
+    [Comment("The status of scoring a person's response to an assessment item.")]
     public Guid? RefAssessmentItemResponseScoreStatusId { get; set; }
 
     /// <summary>
@@ -139,6 +148,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </para>
     /// </summary>
     [ForeignKey("RefProficiencyStatus")]
+    [Comment("An indication of whether a student's scores were proficient.")]
     public Guid? RefProficiencyStatusId { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -153,6 +163,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19955">Assessment Item Response Scaffolding Item Flag</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the response is to a scaffolding problem rather than the main/assigned problem.  A scaffolding item is a follow-up formative assessment item used to assess prerequisite or component skills, presented immediately after a learner gives an incorrect answer on the previous item.")]
     public Boolean? ScaffoldingItemFlag { get; set; }
 
     /// <summary>
@@ -166,6 +177,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The score given to a person's response to an assessment item.")]
     public System.String ScoreValue { get; set; }
 
     /// <summary>
@@ -179,6 +191,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The description of security issue, if any, related to a learner's response to an assessment item.")]
     public System.String SecurityIssue { get; set; }
 
     /// <summary>
@@ -190,6 +203,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19960">Assessment Item Response Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the assessment item was presented to the learner.")]
     public DateTime? StartDate { get; set; }
 
     /// <summary>
@@ -201,6 +215,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19959">Assessment Item Response Start Time</a>
     /// </para>
     /// </summary>
+    [Comment("The time of day that the assessment item was presented to the learner.")]
     public TimeSpan? StartTime { get; set; }
 
     /// <summary>
@@ -214,6 +229,7 @@ public partial class AssessmentItemResponseEntity : EntityBase, IAssessmentItemR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("�A specific response to an assessment item by the person being assessed.")]
     public System.String Value { get; set; }
 
     #endregion

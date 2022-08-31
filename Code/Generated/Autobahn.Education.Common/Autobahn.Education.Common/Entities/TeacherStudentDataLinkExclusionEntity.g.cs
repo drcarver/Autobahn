@@ -15,6 +15,7 @@
 /// </para>
 /// </summary>
 [Table("TeacherStudentDataLinkExclusion", Schema = "Common")]
+[Comment("Indicates that the student is excluded from calculation of value-added or growth attribution calculations used for teacher evaluation.")]
 public partial class TeacherStudentDataLinkExclusionEntity : EntityBase, ITeacherStudentDataLinkExclusion
 {
     #region "ITeacherStudentDataLinkExclusion Properties"

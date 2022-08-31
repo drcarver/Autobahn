@@ -19,6 +19,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20883">Available Utilized Instructional Space</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the instruction space in a school is used in the calculation of student capacity.")]
     public Boolean? AvailableUtilizedInstructionalSpace { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20884">Building Capacity Factor Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("A designation as to whether the space is included in the calculation of school building capacity under state or local guidelines.")]
     public Boolean? BuildingCapacityFactorIndicator { get; set; }
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20842">Building Space Utilization Area</a>
     /// </para>
     /// </summary>
+    [Comment("The area in square feet measured between the principal wall that faces at or near floor level, including alcove spaces, and the outer limits of space designed to serve the activity. Structural space is excluded.")]
     public Decimal? BuildingSpaceUtilizationArea { get; set; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20844">Building Unassigned Space Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the space in a school, including circulation, administration offices, support spaces, and common areas, is not part of the calculation for capacity.")]
     public Boolean? BuildingUnassignedSpaceIndicator { get; set; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCommunityUseSpaceType")]
+    [Comment("The space designed primarily for community or shared use.")]
     public Guid? RefBuildingCommunityUseSpaceTypeId { get; set; }
 
     /// <summary>
@@ -83,6 +88,7 @@ public partial class BuildingSpaceUtilizationEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingInstructionalSpaceFactorType")]
+    [Comment("A designation as to whether the space is considered an instructional space under state or local guidelines.")]
     public Guid? RefBuildingInstructionalSpaceFactorTypeId { get; set; }
 
     #endregion

@@ -28,6 +28,7 @@ public partial class EarlyChildhoodCredentialEntity : EntityBase, IEarlyChildhoo
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefEarlyChildhoodCredential")]
+    [Comment("The credential related to early childhood education or development held by a person.")]
     public Guid RefEarlyChildhoodCredentialId { get; set; }
 
     #endregion

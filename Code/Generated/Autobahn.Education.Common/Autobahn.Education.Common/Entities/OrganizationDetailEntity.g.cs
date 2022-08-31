@@ -21,6 +21,7 @@ public partial class OrganizationDetailEntity : EntityBase, IOrganizationDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(128,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title for a particular activity, such as a co-curricular or extra-curricular activity.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -51,6 +52,7 @@ public partial class OrganizationDetailEntity : EntityBase, IOrganizationDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the institution, which may be the abbreviated form of the full legally accepted name.")]
     public System.String ShortName { get; set; }
 
     #endregion

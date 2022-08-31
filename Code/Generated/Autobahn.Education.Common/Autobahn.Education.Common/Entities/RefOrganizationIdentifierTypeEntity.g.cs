@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefOrganizationIdentifierType file
 /// </summary>
+[Table("RefOrganizationIdentifierType", Schema = "Common")]
 public partial class RefOrganizationIdentifierTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

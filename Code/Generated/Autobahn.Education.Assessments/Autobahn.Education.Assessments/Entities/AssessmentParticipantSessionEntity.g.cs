@@ -19,6 +19,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20024">Assessment Session Actual End Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment actually ended.")]
     public DateTime? ActualEndDateTime { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20023">Assessment Session Actual Start Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment actually began.")]
     public DateTime? ActualStartDateTime { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the database that was used to administer the test.")]
     public System.String AssessmentParticipantSessionDatabaseName { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -79,6 +82,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The details about the device or platform by with which the assessment was delivered to the learner.")]
     public System.String DeliveryDeviceDetails { get; set; }
 
     /// <summary>
@@ -91,6 +95,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </para>
     /// </summary>
     [ForeignKey("Location")]
+    [Comment(" The description of the place where an assessment is administered.")]
     public Guid? LocationId { get; set; }
 
     /// <summary>
@@ -104,6 +109,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment(" A list of product tokens (keywords) with optional comments that identifies the client hardware and software with which the assessment was delivered to the student during the assessment session.")]
     public System.String PlatformUserAgent { get; set; }
 
     /// <summary>
@@ -116,6 +122,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentPlatformType")]
+    [Comment("The platform with which the assessment was delivered to the student during the assessment session.")]
     public Guid? RefAssessmentPlatformTypeId { get; set; }
 
     /// <summary>
@@ -128,6 +135,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentSessionSpecialCircumstanceType")]
+    [Comment("An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.")]
     public Guid? RefAssessmentSessionSpecialCircumstanceTypeId { get; set; }
 
     /// <summary>
@@ -140,6 +148,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </para>
     /// </summary>
     [ForeignKey("RefLanguage")]
+    [Comment("The language that the assessment is administered.")]
     public Guid? RefLanguageId { get; set; }
 
     /// <summary>
@@ -153,6 +162,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Describes an issue related to the security of a testing instrument identified during a specific instance of delivering an assessment to a specific person during a specific time period.")]
     public System.String SecurityIssue { get; set; }
 
     /// <summary>
@@ -166,6 +176,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Describes special events that occur before during or after the assessment session that may impact use of results according to rules related to the Assessment Registration Testing Indicator.")]
     public System.String SpecialEventDescription { get; set; }
 
     /// <summary>
@@ -179,6 +190,7 @@ public partial class AssessmentParticipantSessionEntity : EntityBase, IAssessmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The overall time a learner actually spent during the  assessment session.")]
     public System.String TimeAssessed { get; set; }
 
     #endregion

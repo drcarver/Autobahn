@@ -20,6 +20,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The human readable list of one or more of the specific accommodations available. If no accommodations are provided, then this list will not be present.")]
     public System.String AccommodationList { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20507">Assessment Form Adaptive Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the assessment form was generated using an algorithm rather than a fixed form.")]
     public Boolean? AssessmentFormAdaptiveIndicator { get; set; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An identifier for algorithm used to generate a custom form for an adaptive test.")]
     public System.String AssessmentFormAlgorithmIdentifier { get; set; }
 
     /// <summary>
@@ -57,6 +60,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The version of the algorithm used to generate a custom form for an adaptive test.")]
     public System.String AssessmentFormAlgorithmVersion { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -81,6 +85,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("If the assessment is provided with an item bank, then this identifies the item bank: a unique code or number used by the item banking system.")]
     public System.String AssessmentItemBankIdentifier { get; set; }
 
     /// <summary>
@@ -94,6 +99,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("If the assessment is provided with an item bank, then this is the name of the item bank.")]
     public System.String AssessmentItemBankName { get; set; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19375">Assessment Secure Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether or not the assessment is a secure assessment.")]
     public Boolean? AssessmentSecureIndicator { get; set; }
 
     /// <summary>
@@ -118,6 +125,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The number of a given assessment form.")]
     public System.String FormNumber { get; set; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20138">Assessment Form Intended Administration End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The ending date of the time period in which the assessment form is intended to be administered.")]
     public DateTime? IntendedAdministrationEndDate { get; set; }
 
     /// <summary>
@@ -140,6 +149,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20137">Intended Administration Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The beginning date of the time period in which the form is intended to be administered.")]
     public DateTime? IntendedAdministrationStartDate { get; set; }
 
     /// <summary>
@@ -159,6 +169,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of a given assessment form.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -171,6 +182,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A human readable list of delivery platforms the form will support.")]
     public System.String PlatformsSupported { get; set; }
 
     /// <summary>
@@ -182,6 +194,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20135">Learning Resource Published Date</a>
     /// </para>
     /// </summary>
+    [Comment("The published date of an educational resource, such as instructional media, an assessment form, or section of an assessment form.")]
     public DateTime? PublishedDate { get; set; }
 
     /// <summary>
@@ -194,6 +207,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentLanguage")]
+    [Comment("The language in which the assessment form is designed to be delivered.")]
     public Guid? RefAssessmentLanguageId { get; set; }
 
     /// <summary>
@@ -207,6 +221,7 @@ public partial class AssessmentFormEntity : EntityBase, IAssessmentForm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The version number of the Assessment Form.")]
     public System.String Version { get; set; }
 
     #endregion

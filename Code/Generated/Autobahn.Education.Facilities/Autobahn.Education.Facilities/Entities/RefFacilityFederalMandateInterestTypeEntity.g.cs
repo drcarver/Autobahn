@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20778">Facility Federal Mandate Interest Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityFederalMandateInterestType", Schema = "Facilities")]
+[Comment("The area of interest controlled by a federal law, regulation, or standard that pertains to a school facility.")]
 public partial class RefFacilityFederalMandateInterestTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

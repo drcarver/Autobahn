@@ -27,6 +27,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The reason for the referral.")]
     public System.String Reason { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20453">Referral Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date of referral.")]
     public DateTime? ReferralDate { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A type of service that a child or family has received a referral for.")]
     public System.String ReferralTypeReceived { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The program or organization to which the child/family was referred.")]
     public System.String ReferredTo { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// </para>
     /// </summary>
     [ForeignKey("RefReferralOutcome")]
+    [Comment("The outcome of the referral.")]
     public Guid? RefReferralOutcomeId { get; set; }
 
     /// <summary>
@@ -89,6 +94,7 @@ public partial class PersonReferralEntity : EntityBase, IPersonReferral
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The person, program, or organization making the initial referral.")]
     public System.String Source { get; set; }
 
     #endregion

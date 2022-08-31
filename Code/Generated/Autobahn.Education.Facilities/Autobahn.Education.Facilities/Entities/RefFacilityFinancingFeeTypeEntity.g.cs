@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20867">Facility Financing Fee Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityFinancingFeeType", Schema = "Facilities")]
+[Comment("The type of fee that one must pay when getting a mortgage.")]
 public partial class RefFacilityFinancingFeeTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20045">Assessment Need Alternative Representation Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedAlternativeRepresentationType", Schema = "Assessments")]
+[Comment("Defines as part of an Assessment Personal Needs Profile the default presentation mode of the associated Alternative Representations accessibility.")]
 public partial class RefAssessmentNeedAlternativeRepresentationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

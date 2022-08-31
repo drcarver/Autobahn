@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefK12leaTitleIsupportService file
 /// </summary>
+[Table("RefK12leaTitleIsupportService", Schema = "K12")]
 public partial class RefK12leaTitleIsupportServiceEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefK12leaTitleIsupportService Properties"

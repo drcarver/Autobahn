@@ -19,6 +19,7 @@ public partial class OrganizationCalendarEventEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20901">End Time</a>
     /// </para>
     /// </summary>
+    [Comment("The ending hour, minute and second.")]
     public TimeSpan? EndTime { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class OrganizationCalendarEventEntity : EntityBase, IOrganization
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The date of the scheduled or unscheduled calendar event.")]
     public System.DateTime EventDate { get; set; }
 
     /// <summary>
@@ -44,6 +46,7 @@ public partial class OrganizationCalendarEventEntity : EntityBase, IOrganization
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A name used for the day of the calendar event.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class OrganizationCalendarEventEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19596">Calendar Event Type</a>
     /// </para>
     /// </summary>
+    [Comment("A type of scheduled or unscheduled calendar event.")]
     public Int32? RefCalendarEventType { get; set; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public partial class OrganizationCalendarEventEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20900">Start Time</a>
     /// </para>
     /// </summary>
+    [Comment("The starting hour, minute and second.")]
     public TimeSpan? StartTime { get; set; }
 
     #endregion

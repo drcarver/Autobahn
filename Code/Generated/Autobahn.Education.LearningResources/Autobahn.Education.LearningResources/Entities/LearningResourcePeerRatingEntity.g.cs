@@ -19,6 +19,7 @@ public partial class LearningResourcePeerRatingEntity : EntityBase, ILearningRes
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20171">Peer Rating Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the Peer Rating was entered.")]
     public DateTime? Date { get; set; }
 
     /// <summary>
@@ -51,6 +52,7 @@ public partial class LearningResourcePeerRatingEntity : EntityBase, ILearningRes
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20161">Learning Resource Peer Rating Value</a>
     /// </para>
     /// </summary>
+    [Comment("An individual score, rating or level assigned to a Learning Resource by a person within the boundaries set by a Peer Rating System that may be aggregated to derive an overall score for the learning resource.")]
     public Decimal? Value { get; set; }
 
     #endregion

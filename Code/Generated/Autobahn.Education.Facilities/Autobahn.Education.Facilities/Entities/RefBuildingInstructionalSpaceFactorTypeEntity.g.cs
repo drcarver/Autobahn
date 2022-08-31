@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20832">Building Instructional Space Factor Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingInstructionalSpaceFactorType", Schema = "Facilities")]
+[Comment("A designation as to whether the space is considered an instructional space under state or local guidelines.")]
 public partial class RefBuildingInstructionalSpaceFactorTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

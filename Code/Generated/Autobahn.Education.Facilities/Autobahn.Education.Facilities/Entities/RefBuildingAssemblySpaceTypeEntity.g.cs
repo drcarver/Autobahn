@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20817">Building Assembly Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingAssemblySpaceType", Schema = "Facilities")]
+[Comment("An area designed primarily for theater productions, assemblies, and other large gatherings.")]
 public partial class RefBuildingAssemblySpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

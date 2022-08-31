@@ -21,6 +21,7 @@ public partial class PersonOtherNameEntity : EntityBase, IPersonOtherName
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(35,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A first name given to a person.")]
     public System.String FirstName { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class PersonOtherNameEntity : EntityBase, IPersonOtherName
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(35,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A last name given to a person.")]
     public System.String LastName { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class PersonOtherNameEntity : EntityBase, IPersonOtherName
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(35,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A middle name given to a person.")]
     public System.String MiddleName { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class PersonOtherNameEntity : EntityBase, IPersonOtherName
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Previous, alternate or other names or aliases associated with the person.")]
     public System.String OtherName { get; set; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public partial class PersonOtherNameEntity : EntityBase, IPersonOtherName
     /// </para>
     /// </summary>
     [ForeignKey("RefOtherNameType")]
+    [Comment("The types of previous, alternate or other names for a person.")]
     public Guid? RefOtherNameTypeId { get; set; }
 
     #endregion

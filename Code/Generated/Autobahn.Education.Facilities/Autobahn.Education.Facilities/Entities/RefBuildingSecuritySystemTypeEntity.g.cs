@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20785">Building Security System Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingSecuritySystemType", Schema = "Facilities")]
+[Comment("The type of system that protects the facility from intrusion.")]
 public partial class RefBuildingSecuritySystemTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -28,6 +28,7 @@ public partial class PersonProgramParticipationEntity : EntityBase, IPersonProgr
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An indication that the student is participating in and served by a Gifted/Talented program.")]
     public System.String ParticipationStatus { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PersonProgramParticipationEntity : EntityBase, IPersonProgr
     /// </para>
     /// </summary>
     [ForeignKey("RefParticipationType")]
+    [Comment("An indication that a student aged 16-19 participates in a General Educational Development (GED) preparation program.")]
     public Guid? RefParticipationTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class PersonProgramParticipationEntity : EntityBase, IPersonProgr
     /// </para>
     /// </summary>
     [ForeignKey("RefProgramEntryReason")]
+    [Comment("The documented or assumed reason a person is being served by a program.")]
     public Guid? RefProgramEntryReasonId { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class PersonProgramParticipationEntity : EntityBase, IPersonProgr
     /// </para>
     /// </summary>
     [ForeignKey("RefProgramExitReason")]
+    [Comment("The documented or assumed reason a student is no longer being served by a special program.")]
     public Guid? RefProgramExitReasonId { get; set; }
 
     #endregion

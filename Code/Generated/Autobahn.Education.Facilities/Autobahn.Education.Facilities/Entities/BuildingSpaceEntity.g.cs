@@ -27,6 +27,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingAdministrativeSpaceType")]
+    [Comment("The space designed primarily for conducting administrative and business functions.")]
     public Guid? RefBuildingAdministrativeSpaceTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingArtSpecialtySpaceType")]
+    [Comment("The space designed to support the teaching and learning of 2 dimensional or 3 dimensional visual arts.")]
     public Guid? RefBuildingArtSpecialtySpaceTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingAssemblySpaceType")]
+    [Comment("An area designed primarily for theater productions, assemblies, and other large gatherings.")]
     public Guid? RefBuildingAssemblySpaceTypeId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingBasicClassroomDesignType")]
+    [Comment("A classroom designed for instruction of a particular age group, but not a specific subject.")]
     public Guid? RefBuildingBasicClassroomDesignTypeId { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCareerTechEducationSpaceType")]
+    [Comment("The classroom, laboratory, or shop specially located, designed, furnished, and equipped to support instruction of technical and technology related curriculum, usually tied to particular industry, for example, bio-tech, construction, or agriculture.")]
     public Guid? RefBuildingCareerTechEducationSpaceTypeId { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCirculationSpaceType")]
+    [Comment("A space designed to enable people to move within the building.")]
     public Guid? RefBuildingCirculationSpaceTypeId { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingFoodServiceSpaceType")]
+    [Comment("The space located, designed, furnished and equipped to support meal programs.")]
     public Guid? RefBuildingFoodServiceSpaceTypeId { get; set; }
 
     /// <summary>
@@ -111,6 +118,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingFullServiceKitchenType")]
+    [Comment("The type of kitchen housed in the facility as defined by whether it prepares food to be served onsite and/or at additional locations.")]
     public Guid? RefBuildingFullServiceKitchenTypeId { get; set; }
 
     /// <summary>
@@ -123,6 +131,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingIndoorAthleticOrPhysEdSpaceType")]
+    [Comment("The indoor space designed, located, furnished, and equipped for instruction and support of a physical education curriculum and athletic program.")]
     public Guid? RefBuildingIndoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
     /// <summary>
@@ -135,6 +144,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingLibMediaCenterSpecialtySpaceType")]
+    [Comment("The primary and auxiliary space designed to provide and support student and staff access to books, periodicals, software, videos, and the Internet.")]
     public Guid? RefBuildingLibMediaCenterSpecialtySpaceTypeId { get; set; }
 
     /// <summary>
@@ -147,6 +157,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingOperationsOrMaintSpaceType")]
+    [Comment("The area designed primarily for conducting activities concerned with maintaining the grounds, buildings, and equipment.")]
     public Guid? RefBuildingOperationsOrMaintSpaceTypeId { get; set; }
 
     /// <summary>
@@ -159,6 +170,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingOutdoorAthleticOrPhysEdSpaceType")]
+    [Comment("The outdoor space designed, located, furnished, and equipped for instruction and support of a physical education curriculum and athletic program.")]
     public Guid? RefBuildingOutdoorAthleticOrPhysEdSpaceTypeId { get; set; }
 
     /// <summary>
@@ -171,6 +183,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingOutdoorOrNonathleticSpaceType")]
+    [Comment("The outdoor space located, designed, furnished, and equipped primarily for recreation, play and outdoor environmental education.")]
     public Guid? RefBuildingOutdoorOrNonathleticSpaceTypeId { get; set; }
 
     /// <summary>
@@ -183,6 +196,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingPerformingArtsSpecialtySpaceType")]
+    [Comment("The space designed, located, furnished, and equipped for instruction and support of music and drama curricula and productions.")]
     public Guid? RefBuildingPerformingArtsSpecialtySpaceTypeId { get; set; }
 
     /// <summary>
@@ -195,6 +209,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingScienceSpecialtySpaceType")]
+    [Comment("The space designed, located, furnished, and equipped for instruction and experimentation in science.")]
     public Guid? RefBuildingScienceSpecialtySpaceTypeId { get; set; }
 
     /// <summary>
@@ -207,6 +222,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingSpaceDesignType")]
+    [Comment("The primary design or purpose of a space, as determined by its physical layout and built-in systems and equipment, regardless of its current use.")]
     public Guid? RefBuildingSpaceDesignTypeId { get; set; }
 
     /// <summary>
@@ -219,6 +235,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingSpecEdSpecialtySpaceType")]
+    [Comment("The space designed, located, furnished, and equipped to support instruction of children with special physical, emotional, and/or educational needs.")]
     public Guid? RefBuildingSpecEdSpecialtySpaceTypeId { get; set; }
 
     /// <summary>
@@ -231,6 +248,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingStudentSupportSpaceType")]
+    [Comment("The space designed to provide student support services such as administrative, technical (e.g., guidance and health), and logistical support to facilitate and enhance instruction.")]
     public Guid? RefBuildingStudentSupportSpaceTypeId { get; set; }
 
     /// <summary>
@@ -243,6 +261,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </para>
     /// </summary>
     [ForeignKey("RefSpaceUseType")]
+    [Comment("The primary use of a space, as determined by its physical layout and built-in systems and equipment, regardless of its original design.")]
     public Guid? RefSpaceUseTypeId { get; set; }
 
     /// <summary>
@@ -256,6 +275,7 @@ public partial class BuildingSpaceEntity : EntityBase, IBuildingSpace
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the space, as determined by its physical layout and built-in systems and equipment.")]
     public System.String SpaceDescription { get; set; }
 
     #endregion

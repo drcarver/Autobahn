@@ -23,6 +23,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20362">Learning Resource Assistive Technologies Compatible Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the learning resource is compatible with assistive technologies.")]
     public Boolean? AssistiveTechnologiesCompatibleInd { get; set; }
 
     /// <summary>
@@ -36,6 +37,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A resource that was used in the creation of this resource. This term can be repeated for multiple sources.")]
     public System.String BasedOnUrl { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The significant topicality of the Learning Resource using free-text keywords and phrases.")]
     public System.String ConceptKeyword { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name(s) of the person(s) or organization(s) holding the copyright for the Learning Resource.")]
     public System.String CopyrightHolderName { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The copyright year for the Learning Resource.")]
     public System.String CopyrightYear { get; set; }
 
     /// <summary>
@@ -88,6 +93,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of a person or organization credited with the creation of the resource.")]
     public System.String Creator { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19916">Learning Resource Date Created</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the resource was created.")]
     public DateTime? DateCreated { get; set; }
 
     /// <summary>
@@ -112,6 +119,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(128,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An email address for the author of the learning resource.")]
     public System.String LearningResourceAuthorEmail { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -127,6 +135,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20542">Learning Resource Date Modified</a>
     /// </para>
     /// </summary>
+    [Comment("The most recent date that the learning resource was updated.")]
     public DateTime? LearningResourceDateModified { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -144,6 +153,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(128,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An email address for the publisher of the learning resource.")]
     public System.String LearningResourcePublisherEmail { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -159,6 +169,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20369">Learning Resource Peer Rating Sample Size</a>
     /// </para>
     /// </summary>
+    [Comment("The sample size of a peer rating value. Only used when the Peer Rating Value is collected in aggregate as an average of multiple atomic/individual ratings.")]
     public Int32? PeerRatingSampleSize { get; set; }
 
     /// <summary>
@@ -170,6 +181,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20135">Learning Resource Published Date</a>
     /// </para>
     /// </summary>
+    [Comment("The published date of an educational resource, such as instructional media, an assessment form, or section of an assessment form.")]
     public DateTime? PublishedDate { get; set; }
 
     /// <summary>
@@ -183,6 +195,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the organization credited with publishing the resource.")]
     public System.String PublisherName { get; set; }
 
     /// <summary>
@@ -195,6 +208,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLanguage")]
+    [Comment("The primary language of the resource.")]
     public Guid? RefLanguageId { get; set; }
 
     /// <summary>
@@ -213,6 +227,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceAccessHazardType")]
+    [Comment("A characteristic of the described learning resource that is physiologically dangerous to some users.")]
     public Guid? RefLearningResourceAccessHazardTypeId { get; set; }
 
     /// <summary>
@@ -225,6 +240,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceAccessModeType")]
+    [Comment("An access mode through which the intellectual content of a described learning resource or adaptation is communicated; if adaptations for the resource are known, the access modes of those adaptations are not included.")]
     public Guid? RefLearningResourceAccessModeTypeId { get; set; }
 
     /// <summary>
@@ -237,6 +253,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceAccessRightsUrl")]
+    [Comment("A Uniform Resource Locator (URL) that identifies the conditions that govern the user's ability to access a learning resource.")]
     public Guid? RefLearningResourceAccessRightsUrlId { get; set; }
 
     /// <summary>
@@ -249,6 +266,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceAuthorType")]
+    [Comment("The type of entity, organization or person, that authored the learning resource.")]
     public Guid? RefLearningResourceAuthorTypeId { get; set; }
 
     /// <summary>
@@ -261,6 +279,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceBookFormatType")]
+    [Comment("Specifies the format for a learning resource that is a book.  Other options may be considered for inclusion in the option set.")]
     public Guid? RefLearningResourceBookFormatTypeId { get; set; }
 
     /// <summary>
@@ -273,6 +292,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceControlFlexibilityType")]
+    [Comment("Identifies a single input method that is sufficient to control the described learning resource.")]
     public Guid? RefLearningResourceControlFlexibilityTypeId { get; set; }
 
     /// <summary>
@@ -285,6 +305,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceDigitalMediaSubType")]
+    [Comment("The media or file subtype of the digital resource being based on the Media Types and Subtypes, formerly known as MIME types, defined by the Internet Assigned Numbers Authority (IANA).")]
     public Guid? RefLearningResourceDigitalMediaSubTypeId { get; set; }
 
     /// <summary>
@@ -297,6 +318,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceDigitalMediaType")]
+    [Comment("The media or file type of the digital resource being based on the media types defined by the Internet Assigned Numbers Authority (AINA) at http://www.iana.org/assignments/media-types.")]
     public Guid? RefLearningResourceDigitalMediaTypeId { get; set; }
 
     /// <summary>
@@ -309,6 +331,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceEducationalUse")]
+    [Comment("The purpose of the work in the context of education.")]
     public Guid? RefLearningResourceEducationalUseId { get; set; }
 
     /// <summary>
@@ -321,6 +344,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceIntendedEndUserRole")]
+    [Comment("The individual or group for which the resource was produced.")]
     public Guid? RefLearningResourceIntendedEndUserRoleId { get; set; }
 
     /// <summary>
@@ -333,6 +357,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceInteractionMode")]
+    [Comment("The primary type of interaction, synchronous or asynchronous, defined for the learning resource.")]
     public Guid? RefLearningResourceInteractionModeId { get; set; }
 
     /// <summary>
@@ -345,6 +370,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceInteractivityType")]
+    [Comment("The predominate mode of learning supported by the learning resource. Acceptable values are active, expositive, or mixed.")]
     public Guid? RefLearningResourceInteractivityTypeId { get; set; }
 
     /// <summary>
@@ -357,6 +383,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceType")]
+    [Comment("The predominate type or kind characterizing the learning resource.")]
     public Guid? RefLearningResourceTypeId { get; set; }
 
     /// <summary>
@@ -370,6 +397,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The code used to identify the organization of subject matter and related learning experiences addressed by the learning resource.")]
     public System.String SubjectCode { get; set; }
 
     /// <summary>
@@ -383,6 +411,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The system that is used to identify the organization of subject matter and related learning experiences addressed by the learning resource.")]
     public System.String SubjectCodeSystem { get; set; }
 
     /// <summary>
@@ -396,6 +425,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The descriptive name for the subject of the content for the learning resource.")]
     public System.String SubjectName { get; set; }
 
     /// <summary>
@@ -409,6 +439,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The scaling system used to specify the text complexity of an Learning Resource")]
     public System.String TextComplexitySystem { get; set; }
 
     /// <summary>
@@ -422,6 +453,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The complexity of the text using the scaling system defined by Text Complexity System, e.g. Lexile(tm).")]
     public System.String TextComplexityValue { get; set; }
 
     /// <summary>
@@ -433,6 +465,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19925">Learning Resource Time Required</a>
     /// </para>
     /// </summary>
+    [Comment("The approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.")]
     public Decimal? TimeRequired { get; set; }
 
     /// <summary>
@@ -446,6 +479,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of the resource.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -457,6 +491,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19927">Learning Resource Typical Age Range Maximum</a>
     /// </para>
     /// </summary>
+    [Comment("The maximum for the typical range of ages of the content's intended end user.")]
     public Byte? TypicalAgeRangeMaximum { get; set; }
 
     /// <summary>
@@ -468,6 +503,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19926">Learning Resource Typical Age Range Minimum</a>
     /// </para>
     /// </summary>
+    [Comment("The minimum for the typical range of ages of the content's intended end user.")]
     public Byte? TypicalAgeRangeMinimum { get; set; }
 
     /// <summary>
@@ -481,6 +517,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The Uniform Resource Locator where the resource may be accessed, or a proxy for the resource, such as an information page for a commercially available resource.")]
     public System.String Url { get; set; }
 
     /// <summary>
@@ -494,6 +531,7 @@ public partial class LearningResourceEntity : EntityBase, ILearningResource
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Defines the version of the learning resource as defined by the publisher.")]
     public System.String Version { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19026">Assessment Purpose</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentPurpose", Schema = "Assessments")]
+[Comment("The reason for which an assessment is designed or delivered.")]
 public partial class RefAssessmentPurposeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

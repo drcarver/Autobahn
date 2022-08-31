@@ -21,6 +21,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(9,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The academic year for which the data apply.")]
     public System.String AcademicYearDesignator { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19018">Advanced Placement Credits Awarded</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credits awarded a student by the postsecondary institution based on successful completion of advanced placement courses and/or advanced placement tests. ")]
     public Int32? AdvancedPlacementCreditsAwarded { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20282">Course Total</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of courses listed on a transcript. Used as a check digit for integrity purposes.")]
     public Int32? CourseTotal { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19073">Credits Attempted Cumulative</a>
     /// </para>
     /// </summary>
+    [Comment("The cumulative number of credits a person attempts to earn by taking courses during their enrollment in their current education institution as well as those credits transferred from an education institution in which the person had been previously enrolled.")]
     public Decimal? CreditsAttemptedCumulative { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19074">Credits Earned Cumulative</a>
     /// </para>
     /// </summary>
+    [Comment("The cumulative number of credits a person earns by completing courses or examinations during their enrollment in the current education institution as well as those credits transferred from an education institution in which the person had been previously enrolled.")]
     public Decimal? CreditsEarnedCumulative { get; set; }
 
     /// <summary>
@@ -78,6 +83,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(7,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.")]
     public System.String DiplomaOrCredentialAwardDate { get; set; }
 
     /// <summary>
@@ -89,6 +95,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19085">Dual Credit Dual Enrollment Credits Awarded</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credits awarded a student by the postsecondary institution based on successful completion of dual credit/dual enrollment courses. ")]
     public Decimal? DualCreditDualEnrollmentCredits { get; set; }
 
     /// <summary>
@@ -102,6 +109,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The term and year of the initial enrollment of an individual in credit bearing courses or developmental/remedial courses at an institution after completing high school or a high school equivalency program (e.g., GED, Adult High School Diploma).")]
     public System.String EnteringTerm { get; set; }
 
     /// <summary>
@@ -113,6 +121,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19127">Grade Point Average</a>
     /// </para>
     /// </summary>
+    [Comment("The value of the total quality points divided by the Credit Hours for Grade Point Average. ")]
     public Decimal? GradePointAverage { get; set; }
 
     /// <summary>
@@ -124,6 +133,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19128">Grade Point Average Cumulative</a>
     /// </para>
     /// </summary>
+    [Comment("A measure of average performance in all courses taken by a person during his or her school career as determined for record-keeping purposes. This is obtained by dividing the total grade points received by the total number of credits attempted. This usually includes grade points received and credits attempted in his or her current school as well as those transferred from schools in which the person was previously enrolled.")]
     public Decimal? GradePointAverageCumulative { get; set; }
 
     /// <summary>
@@ -135,6 +145,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19199">Number of Credits Attempted</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credits that a student can earn for enrolling in and completing a given course.")]
     public Decimal? NumberOfCreditsAttempted { get; set; }
 
     /// <summary>
@@ -154,6 +165,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicTermDesignator")]
+    [Comment("The academic term for which the data apply.")]
     public Guid? RefAcademicTermDesignatorId { get; set; }
 
     /// <summary>
@@ -166,6 +178,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </para>
     /// </summary>
     [ForeignKey("RefCreditHoursAppliedOtherProgram")]
+    [Comment("Codes identifying the set of credit hours taken in other programs or degrees that were applied to the individual's degree.")]
     public Guid? RefCreditHoursAppliedOtherProgramId { get; set; }
 
     /// <summary>
@@ -178,6 +191,7 @@ public partial class PsStudentAcademicRecordEntity : EntityBase, IPsStudentAcade
     /// </para>
     /// </summary>
     [ForeignKey("RefProfessionalTechCredentialType")]
+    [Comment("An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.")]
     public Guid? RefProfessionalTechCredentialTypeId { get; set; }
 
     #endregion

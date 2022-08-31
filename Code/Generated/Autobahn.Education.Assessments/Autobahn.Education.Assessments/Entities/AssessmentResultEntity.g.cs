@@ -26,6 +26,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20520">Assessment Result Descriptive Feedback Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("The date and time the descriptive feedback was entered for a scored/evaluated portion of an assessment.")]
     public DateTime? AssessmentResultDescriptiveFeedbackDateTime { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20522">Assessment Result Score Standard Error</a>
     /// </para>
     /// </summary>
+    [Comment("The measure of sampling variability and measurement error for the score, the amount of error to be expected in the score.")]
     public Decimal? AssessmentResultScoreStandardError { get; set; }
 
     /// <summary>
@@ -55,6 +57,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19972">Assessment Result Date Created</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the assessment result was generated.")]
     public DateTime? DateCreated { get; set; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19971">Assessment Result Date Updated</a>
     /// </para>
     /// </summary>
+    [Comment("The most recent date that the result was calculated/updated.  The value should be the same as Assessment Result Date Created if the subtest has only been scored once, but may be different if the score was recalculated with a different result.")]
     public DateTime? DateUpdated { get; set; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The formative descriptive feedback that was given to a learner based on a scored/evaluated portion of an assessment as recorded in the result entity.")]
     public System.String DescriptiveFeedback { get; set; }
 
     /// <summary>
@@ -92,6 +97,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Identifies the source of the descriptive feedback that was given to a learner based on a scored/evaluated portion of an assessment. May indicate if this is teacher, scorer, or system generated feedback. Values for this attribute would be determined by the assessment program.")]
     public System.String DescriptiveFeedbackSource { get; set; }
 
     /// <summary>
@@ -104,6 +110,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A statement intended for use by education professionals, using professional terminology, to interpret learner needs based on the scored/evaluated portion of an assessment.  This statement may inform Descriptive Feedback given to the learner.")]
     public System.String DiagnosticStatement { get; set; }
 
     /// <summary>
@@ -117,6 +124,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Identifies the source of the Diagnostic Statement based on a scored/evaluated portion of an assessment.")]
     public System.String DiagnosticStatementSource { get; set; }
 
     public Boolean? IncludedInAypCalculation { get; set; }
@@ -132,6 +140,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("This provides the next steps for instruction for the student based upon the assessment results and student characteristics.")]
     public System.String InstructionalRecommendation { get; set; }
 
     /// <summary>
@@ -143,6 +152,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20012">Assessment Result Number of Responses</a>
     /// </para>
     /// </summary>
+    [Comment("The number of responses that are included with the Student Score Set. Responses are those items that were attempted (partially or fully answered) by the student and not necessarily the number of items in the assessment (which can be determined from the assessment object).")]
     public Int32? NumberOfResponses { get; set; }
 
     /// <summary>
@@ -154,6 +164,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20010">Assessment Result Preliminary Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("If this score is preliminary, then this attribute value should be set.  Preliminary scores may be provided for early use by the assessment program or user while final scoring is occurring.")]
     public Boolean? PreliminaryIndicator { get; set; }
 
     /// <summary>
@@ -166,6 +177,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentPretestOutcome")]
+    [Comment("The results of a pre-test in academic subjects.")]
     public Guid? RefAssessmentPretestOutcomeId { get; set; }
 
     /// <summary>
@@ -178,6 +190,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentResultDataType")]
+    [Comment(" The data type of the assessment result score value.")]
     public Guid? RefAssessmentResultDataTypeId { get; set; }
 
     /// <summary>
@@ -190,6 +203,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentResultScoreType")]
+    [Comment("Indicates the purpose for which this assessment score instance was recorded.")]
     public Guid? RefAssessmentResultScoreTypeId { get; set; }
 
     /// <summary>
@@ -208,6 +222,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [ForeignKey("RefOutcomeTimePoint")]
+    [Comment("The point in time for which the result is used for an outcome measure.")]
     public Guid? RefOutcomeTimePointId { get; set; }
 
     /// <summary>
@@ -220,6 +235,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </para>
     /// </summary>
     [ForeignKey("RefScoreMetricType")]
+    [Comment("The specific method used to report the performance and achievement of the assessment. This is the metric that is being used to derive the scores.")]
     public Guid? RefScoreMetricTypeId { get; set; }
 
     /// <summary>
@@ -233,6 +249,7 @@ public partial class AssessmentResultEntity : EntityBase, IAssessmentResult
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(35,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A meaningful raw score, derived score, or statistical expression of the performance of a person on an assessment. The type of result is indicated by the Assessment Score Metric Type element. The results can be expressed as a number, percentile, range, level, etc. The score relates to all scored items or a sub test scoring one aspect of performance on the test. This value may or may not correspond to one or more Performance Levels.")]
     public System.String ScoreValue { get; set; }
 
     #endregion

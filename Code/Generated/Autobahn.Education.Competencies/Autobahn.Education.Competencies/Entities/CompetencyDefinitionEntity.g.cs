@@ -27,6 +27,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A human-referenceable code designated by the publisher to identify the parent item in the hierarchy of competency definitions.")]
     public System.String CompetencyDefParentCode { get; set; }
 
     /// <summary>
@@ -41,6 +42,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("CompetencyDefParent")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the parent item in the hierarchy of competency definitions using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.")]
     public Guid CompetencyDefParentId { get; set; }
 
     /// <summary>
@@ -54,6 +56,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A network-resolvable Uniform Resource Locator (URL) pointing to the authoritative reference for the hierarchal parent of the competency definition.")]
     public System.String CompetencyDefParentUrl { get; set; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A set of one or more alphanumeric characters and/or symbols denoting the positioning of the statement being described in a sequential listing of statements.")]
     public System.String CompetencyDefSequence { get; set; }
 
     /// <summary>
@@ -87,6 +91,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The significant topicality of the competency definition using free-text keywords and phrases.")]
     public System.String ConceptKeyword { get; set; }
 
     /// <summary>
@@ -100,6 +105,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The topicality of the competency definition, e.g. "Pythagorean Theorem," "Trigonometric functions," "Forces and energy," "Scientific method," "Oral history," etc.")]
     public System.String ConceptTerm { get; set; }
 
     /// <summary>
@@ -111,6 +117,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20499">Competency Definition Current Version Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that this is the most current version of the Competency Definition.")]
     public Boolean? CurrentVersionIndicator { get; set; }
 
     /// <summary>
@@ -124,6 +131,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The globally unique identifier (GUID) issued by the publisher of the competency framework that uniquely identifies the definition in the hierarchy of competency definitions using a RFC 4122 compliant 32-character hexadecimal string, such as 21EC2020-3AEA-1069-A2DD-08002B30309D.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full text or URL reference to a legal document giving official permission to do something with the competency definition statement.")]
     public System.String License { get; set; }
 
     /// <summary>
@@ -149,6 +158,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Information about the derivation of a Competency Definition Statement.")]
     public System.String Notes { get; set; }
 
     /// <summary>
@@ -162,6 +172,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The unique identifier of the previous version of the Competency Definition if the statement was modified.")]
     public System.String PreviousVersionIdentifier { get; set; }
 
     /// <summary>
@@ -174,6 +185,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefBloomsTaxonomyDomain")]
+    [Comment("Classification of the Competency Definition using Bloom's Taxonomy Domains.�")]
     public Guid? RefBloomsTaxonomyDomainId { get; set; }
 
     /// <summary>
@@ -186,6 +198,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCompetencyDefNodeAccessibilityProfile")]
+    [Comment("When the Competency Definition is used as a node in a learning map, this element supports alternative pathways based on a learner's accessibility profile. The type selected indicates which accessibility profile the node is designed to address.")]
     public Guid? RefCompetencyDefNodeAccessibilityProfileId { get; set; }
 
     /// <summary>
@@ -198,6 +211,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCompetencyDefTestabilityType")]
+    [Comment("Indicates if the competency described in the Competency Definition Statement can be tested using one or more assessment items.")]
     public Guid? RefCompetencyDefTestabilityTypeId { get; set; }
 
     /// <summary>
@@ -210,6 +224,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefLanguage")]
+    [Comment("The default language of the text used for the content in the competency definition statement.")]
     public Guid? RefLanguageId { get; set; }
 
     /// <summary>
@@ -222,6 +237,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefMultipleIntelligenceType")]
+    [Comment("Classification of the Competency Definition using intelligences defined for Howard Earl Gardner's Theory of Multiple Intelligences.")]
     public Guid? RefMultipleIntelligenceTypeId { get; set; }
 
     /// <summary>
@@ -235,6 +251,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The short name or label for the competency definition or its node in a competency framework.")]
     public System.String ShortName { get; set; }
 
     /// <summary>
@@ -247,6 +264,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The text of the statement. The textual content that either describes a specific competency or describes a less granular group of competencies within the taxonomy of the competency framework.")]
     public System.String Statement { get; set; }
 
     /// <summary>
@@ -258,6 +276,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20115">Competency Definition Text Complexity Maximum Value</a>
     /// </para>
     /// </summary>
+    [Comment("The maximum value in the range of text complexity applicable to a language competency definition using the scaling system defined by Text Complexity System, e.g. Lexile(tm).")]
     public Decimal? TextComplexityMaximumValue { get; set; }
 
     /// <summary>
@@ -269,6 +288,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20114">Competency Definition Text Complexity Minimum Value</a>
     /// </para>
     /// </summary>
+    [Comment("The minimum value in the range of text complexity applicable to a language competency definition using the scaling system defined by Text Complexity System, e.g. Lexile(tm).")]
     public Decimal? TextComplexityMinimumValue { get; set; }
 
     /// <summary>
@@ -282,6 +302,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The scaling system used to specify the text complexity of a competency item.")]
     public System.String TextComplexitySystem { get; set; }
 
     /// <summary>
@@ -295,6 +316,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The class of statement in the structure of statements in the Competency Framework according to a controlled vocabulary, specified as a textual label.")]
     public System.String Type { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -314,6 +336,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20890">Competency Definition Typical Age Range Maximum</a>
     /// </para>
     /// </summary>
+    [Comment("The typical maximum age at which a person learns the defined competency.")]
     public Int32? TypicalAgeRangeMaximum { get; set; }
 
     /// <summary>
@@ -325,6 +348,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20889">Competency Definition Typical Age Range Minimum</a>
     /// </para>
     /// </summary>
+    [Comment("The typical minimum age at which a person learns the defined competency.")]
     public Int32? TypicalAgeRangeMinimum { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -340,6 +364,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20483">Competency Definition Valid End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day the competency definition was deprecated/replaced by the jurisdiction in which it was intended to apply.")]
     public DateTime? ValidEndDate { get; set; }
 
     /// <summary>
@@ -351,6 +376,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20484">Competency Definition Valid Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day the competency definition was adopted by the jurisdiction in which it was intended to apply.")]
     public DateTime? ValidStartDate { get; set; }
 
     /// <summary>
@@ -363,6 +389,7 @@ public partial class CompetencyDefinitionEntity : EntityBase, ICompetencyDefinit
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A label assigned by the publisher indicating the version of the competency framework statement.")]
     public System.String Version { get; set; }
 
     #endregion

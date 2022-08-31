@@ -19,6 +19,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20823">Facility Hazardous Condition Expected Remediation Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day, and year by which a hazardous condition of a site or building is expected to be remediated.")]
     public DateTime? FacilityHazardousCondExpectedRemediationDate { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The location at which the identified hazardous material is found.")]
     public System.String FacilityLocationOfHazardousMaterials { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Description of any type of environmental hazards within range of the facility that has the potential to seriously affect the health, safety and operation of school facilities and their occupants.")]
     public System.String FacilityNearbyEnvHazardDescription { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the seriousness a threat or hazardous material poses.")]
     public System.String HazardousMaterialOrConditionDescription { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20826">Hazardous Material or Condition Testing Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day, and year that the site or building is tested for a specific hazardous material.")]
     public DateTime? HazardousMaterialOrConditionTestingDate { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityHazardousMaterialsOrCondType")]
+    [Comment("The type of hazardous materials or conditions tested for at a site or building.")]
     public Guid? RefFacilityHazardousMaterialsOrCondTypeId { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class FacilityHazardEntity : EntityBase, IFacilityHazard
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityNaturallyOccurringHazardType")]
+    [Comment("Type of natural hazard that can affect the health, safety and operation of school facilities and their occupants.")]
     public Guid? RefFacilityNaturallyOccurringHazardTypeId { get; set; }
 
     #endregion

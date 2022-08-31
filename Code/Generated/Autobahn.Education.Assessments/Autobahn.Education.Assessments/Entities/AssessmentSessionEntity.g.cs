@@ -19,6 +19,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20024">Assessment Session Actual End Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment actually ended.")]
     public DateTime? ActualEndDateTime { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20023">Assessment Session Actual Start Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment actually began.")]
     public DateTime? ActualStartDateTime { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19399">Assessment Session Allotted Time</a>
     /// </para>
     /// </summary>
+    [Comment("The duration of time allotted for the assessment session.")]
     public TimeSpan? AllottedTime { get; set; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(45,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment(" The description of the place where an assessment is administered.")]
     public System.String Location { get; set; }
 
     /// <summary>
@@ -84,6 +88,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentSessionSpecialCircumstanceType")]
+    [Comment("An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.")]
     public Guid? RefAssessmentSessionSpecialCircumstanceTypeId { get; set; }
 
     /// <summary>
@@ -96,6 +101,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentSessionType")]
+    [Comment("The type of session that is scheduled.")]
     public Guid? RefAssessmentSessionTypeId { get; set; }
 
     /// <summary>
@@ -107,6 +113,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20022">Assessment Session Scheduled End Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment is scheduled to end.")]
     public DateTime? ScheduledEndDateTime { get; set; }
 
     /// <summary>
@@ -118,6 +125,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20021">Assessment Session Scheduled Start Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("Date and time the assessment is scheduled to begin.")]
     public DateTime? ScheduledStartDateTime { get; set; }
 
     /// <summary>
@@ -137,6 +145,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The description of a security issue, if any, discovered for an administration of an assessment, such as suspected cheating by a student or a teacher changing answers after a student takes the test.")]
     public System.String SecurityIssue { get; set; }
 
     /// <summary>
@@ -150,6 +159,7 @@ public partial class AssessmentSessionEntity : EntityBase, IAssessmentSession
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Describes special events that occur before during or after the assessment session that may impact use of results according to rules related to the Assessment Registration Testing Indicator.")]
     public System.String SpecialEventDescription { get; set; }
 
     #endregion

@@ -19,6 +19,7 @@ public partial class PersonAddressNcesSideEntity : EntityBase, IPersonAddressNce
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20943">NCES SIDE Date Processed</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month, and day on which the National Center for Education Statistics (NCES) spatially interpolated demographic estimate (SIDE) was processed through the BlindSIDE resource.")]
     public DateTime? NcesSideDateProcessed { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class PersonAddressNcesSideEntity : EntityBase, IPersonAddressNce
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20944">NCES SIDE Estimate</a>
     /// </para>
     /// </summary>
+    [Comment("The National Center for Education Statistics (NCES) spatially interpolated demographic estimate (SIDE) based on the person's latitude and longitude location.")]
     public Decimal? NcesSideEstimate { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class PersonAddressNcesSideEntity : EntityBase, IPersonAddressNce
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20945">NCES SIDE Standard Error</a>
     /// </para>
     /// </summary>
+    [Comment("The standard error applied to the National Center for Education Statistics (NCES) spatially interpolated demographic estimate (SIDE).")]
     public Decimal? NcesSideStandardError { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class PersonAddressNcesSideEntity : EntityBase, IPersonAddressNce
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The begin year for the American Community Survey (ACS) period estimates used to construct the National Center for Education Statistics (NCES) spatially interpolated demographic estimate (SIDE).")]
     public System.String NcesSideVintageBeginYear { get; set; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public partial class PersonAddressNcesSideEntity : EntityBase, IPersonAddressNce
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The end year for the American Community Survey (ACS) period estimates used to construct the National Center for Education Statistics (NCES) spatially interpolated demographic estimate (SIDE).")]
     public System.String NcesSideVintageEndYear { get; set; }
 
     /// <summary>

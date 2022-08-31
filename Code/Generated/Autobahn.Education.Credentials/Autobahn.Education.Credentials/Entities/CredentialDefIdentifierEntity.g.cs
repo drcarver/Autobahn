@@ -28,6 +28,7 @@ public partial class CredentialDefIdentifierEntity : EntityBase, ICredentialDefI
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A globally unique identifier by which the creator/owner/provider of a credential recognizes the qualification, achievement, personal or organizational quality, or aspect of an identity in transactions with the external environment.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class CredentialDefIdentifierEntity : EntityBase, ICredentialDefI
     /// </para>
     /// </summary>
     [ForeignKey("RefCredentialentifierSystem")]
+    [Comment("A coding scheme that is used for identification and record-keeping purposes by a credentialing organization to refer to a qualification, achievement, personal or organizational quality, or aspect of an identity.")]
     public Guid? RefCredentialIdentifierSystemId { get; set; }
 
     #endregion

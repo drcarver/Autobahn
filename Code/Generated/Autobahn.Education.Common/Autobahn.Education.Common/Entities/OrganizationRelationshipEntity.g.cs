@@ -34,6 +34,7 @@ public partial class OrganizationRelationshipEntity : EntityBase, IOrganizationR
     /// </para>
     /// </summary>
     [ForeignKey("RefOrganizationRelationship")]
+    [Comment("The nature of one organization's relationship to another.")]
     public Guid? RefOrganizationRelationshipId { get; set; }
 
     #endregion

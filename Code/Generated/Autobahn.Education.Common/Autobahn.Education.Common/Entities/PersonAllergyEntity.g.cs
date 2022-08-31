@@ -28,6 +28,7 @@ public partial class PersonAllergyEntity : EntityBase, IPersonAllergy
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(2000,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Describes symptoms know to be associated with a person's reaction to an allergen.")]
     public System.String ReactionDescription { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PersonAllergyEntity : EntityBase, IPersonAllergy
     /// </para>
     /// </summary>
     [ForeignKey("RefAllergySeverity")]
+    [Comment("The level of severity of a person's reaction to an allergen.")]
     public Guid? RefAllergySeverityId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class PersonAllergyEntity : EntityBase, IPersonAllergy
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefAllergyType")]
+    [Comment("Type of allergy condition attributed to a person as defined by the SNOWMED Clinical Terms(r) vocabulary.")]
     public Guid RefAllergyTypeId { get; set; }
 
     #endregion

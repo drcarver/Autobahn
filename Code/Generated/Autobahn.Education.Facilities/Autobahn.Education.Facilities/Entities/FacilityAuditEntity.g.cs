@@ -19,6 +19,7 @@ public partial class FacilityAuditEntity : EntityBase, IFacilityAudit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20862">Facility Audit Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day, and year of the systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.")]
     public DateTime? FacilityAuditDate { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class FacilityAuditEntity : EntityBase, IFacilityAudit
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityAuditType")]
+    [Comment("The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.")]
     public Guid? RefFacilityAuditTypeId { get; set; }
 
     #endregion

@@ -28,6 +28,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(2,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The grading scale used by an academic educational institution for an academic course.")]
     public System.String GradeValueQualifier { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefCipCode")]
+    [Comment("A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.")]
     public Guid? RefCipCodeId { get; set; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseHonorsType")]
+    [Comment("An indication that the course is or can be counted as an honors course.")]
     public Guid? RefCourseHonorsTypeId { get; set; }
 
     /// <summary>
@@ -70,6 +73,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseInstructionMethod")]
+    [Comment("The primary method of instruction used for the course.")]
     public Guid? RefCourseInstructionMethodId { get; set; }
 
     /// <summary>
@@ -82,6 +86,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseLevelType")]
+    [Comment("The level of work which is reflected in the credits associated with the academic course being described or the level of the typical individual taking the academic course.")]
     public Guid? RefCourseLevelTypeId { get; set; }
 
     /// <summary>
@@ -94,6 +99,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefDevelopmentalEducationType")]
+    [Comment("An indicator of the category of developmental education.")]
     public Guid? RefDevelopmentalEducationTypeId { get; set; }
 
     /// <summary>
@@ -106,6 +112,7 @@ public partial class PsSectionEntity : EntityBase, IPsSection
     /// </para>
     /// </summary>
     [ForeignKey("RefWorkbasedLearningOpportunityType")]
+    [Comment("The type of work-based learning opportunity a student participated in.")]
     public Guid? RefWorkbasedLearningOpportunityTypeId { get; set; }
 
     #endregion

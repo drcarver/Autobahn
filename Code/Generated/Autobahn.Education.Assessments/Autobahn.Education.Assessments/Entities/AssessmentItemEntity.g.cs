@@ -19,6 +19,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20111">Assessment Item Adaptive Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("This indicator determines whether an assessment item is an adaptive item.")]
     public Boolean? AdaptiveIndicator { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19395">Assessment Item Allotted Time</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of time allotted for a specific item.")]
     public TimeSpan? AllottedTime { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20511">Assessment Form Section Item Field Test Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the assessment item is being field tested on this form of the test, and is not to be included for scoring.")]
     public Boolean? AssessmentFormSectionItemFieldTestIndicator { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("If the assessment is provided with an item bank, then this identifies the item bank: a unique code or number used by the item banking system.")]
     public System.String AssessmentItemBankIdentifier { get; set; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("If the assessment is provided with an item bank, then this is the name of the item bank.")]
     public System.String AssessmentItemBankName { get; set; }
 
     /// <summary>
@@ -79,6 +84,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The complete text of an assessment item including all applicable parts such as stimulus, stem, and possible response options presented.")]
     public System.String BodyText { get; set; }
 
     /// <summary>
@@ -90,6 +96,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19383">Assessment Item Difficulty</a>
     /// </para>
     /// </summary>
+    [Comment("The percentage of students who answered the item correctly during trial testing of the item.")]
     public Decimal? Difficulty { get; set; }
 
     /// <summary>
@@ -103,6 +110,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The analysis of the distractors provided for a specific assessment.")]
     public System.String DistractorAnalysis { get; set; }
 
     /// <summary>
@@ -116,6 +124,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The identifier that uniquely identifies an assessment item.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -133,6 +142,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20227">Assessment Item Linking Item Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the item is intended to be administered in two different grades for the goal of establishing cross grade comparison.")]
     public Boolean? LinkingItemIndicator { get; set; }
 
     /// <summary>
@@ -146,6 +156,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The maximum number of points possible for the assessment item.")]
     public System.String MaximumScore { get; set; }
 
     /// <summary>
@@ -159,6 +170,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The minimum number of points possible for the assessment item.")]
     public System.String MinimumScore { get; set; }
 
     /// <summary>
@@ -171,6 +183,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentItemType")]
+    [Comment("The specific type of assessment item.")]
     public Guid? RefAssessmentItemTypeId { get; set; }
 
     /// <summary>
@@ -183,6 +196,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [ForeignKey("RefNaepAspectsOfReading")]
+    [Comment("Aspects of reading defined by the National Assessment of Educational Progress (NAEP 2005b Framework).")]
     public Guid? RefNaepAspectsOfReadingId { get; set; }
 
     /// <summary>
@@ -195,6 +209,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [ForeignKey("RefNaepMathComplexityLevel")]
+    [Comment("Complexity levels defined by the National Assessment of Educational Progress (NAEP 2005a Framework).")]
     public Guid? RefNaepMathComplexityLevelId { get; set; }
 
     /// <summary>
@@ -207,6 +222,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [ForeignKey("RefTextComplexitySystem")]
+    [Comment("The scaling system used to specify the text complexity of an assessment item.")]
     public Guid? RefTextComplexitySystemId { get; set; }
 
     /// <summary>
@@ -218,6 +234,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20229">Assessment Item Release Status</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the assessment item has been released to the public.")]
     public Boolean? ReleaseStatus { get; set; }
 
     /// <summary>
@@ -236,6 +253,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The statement of the question or prompt for an Assessment Item to which the student responds.")]
     public System.String Stem { get; set; }
 
     /// <summary>
@@ -248,6 +266,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment(" The text, source (e.g., video clip), and/or graphic about which the assessment item is written. The stimulus provides the context of the item/task to which the student must respond.")]
     public System.String Stimulus { get; set; }
 
     /// <summary>
@@ -261,6 +280,7 @@ public partial class AssessmentItemEntity : EntityBase, IAssessmentItem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The complexity of the text using the scaling system defined by Text Complexity System, e.g. LexileT for assessment items with a reading passage.")]
     public System.String TextComplexityValue { get; set; }
 
     #endregion

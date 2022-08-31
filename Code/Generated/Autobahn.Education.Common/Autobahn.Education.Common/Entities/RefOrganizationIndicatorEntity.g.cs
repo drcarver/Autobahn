@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19000">Ability Grouping Status</a>
 /// </para>
 /// </summary>
+[Table("RefOrganizationIndicator", Schema = "Common")]
+[Comment("An indication of whether the school has students who are ability grouped for classroom instruction in mathematics or English/reading/language arts.")]
 public partial class RefOrganizationIndicatorEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefOrganizationIndicator Properties"

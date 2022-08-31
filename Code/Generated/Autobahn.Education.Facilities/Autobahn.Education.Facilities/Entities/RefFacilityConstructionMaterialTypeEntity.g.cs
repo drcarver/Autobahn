@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20763">Facility Construction Material Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityConstructionMaterialType", Schema = "Facilities")]
+[Comment("The primary material used for the construction of a building.")]
 public partial class RefFacilityConstructionMaterialTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

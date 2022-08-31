@@ -26,6 +26,7 @@ public partial class FacilitySiteEntity : EntityBase, IFacilitySite
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20754">Facility Site Area</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of acres in a continuous piece of land, to the nearest tenth, including undeveloped areas as well as areas occupied by buildings, walks, drives, parking facilities, and other improvements.")]
     public Decimal? FacilitySiteArea { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class FacilitySiteEntity : EntityBase, IFacilitySite
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(20,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The lot and square number, or equivalent unique municipal number identification, of a parcel of land.")]
     public System.String FacilitySiteIdentifier { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class FacilitySiteEntity : EntityBase, IFacilitySite
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingSiteUseRestrictionsType")]
+    [Comment("A characterization of a site that would define restrictions or opportunities.")]
     public Guid? RefBuildingSiteUseRestrictionsTypeId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class FacilitySiteEntity : EntityBase, IFacilitySite
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilitySiteOutdoorAreaType")]
+    [Comment("The designated constructed outdoor area on a public school site.")]
     public Guid? RefFacilitySiteOutdoorAreaTypeId { get; set; }
 
     #endregion

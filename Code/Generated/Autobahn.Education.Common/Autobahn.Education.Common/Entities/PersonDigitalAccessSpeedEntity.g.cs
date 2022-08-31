@@ -19,6 +19,7 @@ public partial class PersonDigitalAccessSpeedEntity : EntityBase, IPersonDigital
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20938">Internet Download Speed</a>
     /// </para>
     /// </summary>
+    [Comment("The speed that data or information can be downloaded from a server on the internet to one's device in megabits per second.")]
     public Decimal? InternetDownloadSpeed { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class PersonDigitalAccessSpeedEntity : EntityBase, IPersonDigital
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20940">Internet Speed Test Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("The date and, optionally, time that the information was gathered.")]
     public DateTime? InternetSpeedTestDateTime { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class PersonDigitalAccessSpeedEntity : EntityBase, IPersonDigital
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20941">Internet Upload Speed</a>
     /// </para>
     /// </summary>
+    [Comment("The speed that data or information can be sent from one's device to another device or server on the internet in megabits per second.")]
     public Decimal? InternetUploadSpeed { get; set; }
 
     /// <summary>

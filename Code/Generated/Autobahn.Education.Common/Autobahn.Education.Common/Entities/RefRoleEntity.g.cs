@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20959">Role</a>
 /// </para>
 /// </summary>
+[Table("RefRole", Schema = "Common")]
+[Comment("A description of the way in which a person relates to an organization.")]
 public partial class RefRoleEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

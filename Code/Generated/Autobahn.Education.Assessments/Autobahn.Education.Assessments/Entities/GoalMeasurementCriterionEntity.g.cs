@@ -19,6 +19,7 @@ public partial class GoalMeasurementCriterionEntity : EntityBase, IGoalMeasureme
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20672">Goal Measurement Criterion Accuracy Percent</a>
     /// </para>
     /// </summary>
+    [Comment("The percent of correct results that will be considered to represent successful achievement of a goal.")]
     public Decimal? AccuracyPercent { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class GoalMeasurementCriterionEntity : EntityBase, IGoalMeasureme
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20673">Goal Measurement Criterion Attempts Count</a>
     /// </para>
     /// </summary>
+    [Comment("The number of attempts representing a completed trial for assessing achievement of a goal.")]
     public Int32? AttemptsCount { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class GoalMeasurementCriterionEntity : EntityBase, IGoalMeasureme
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A metric used for evaluating achievement of a goal.")]
     public System.String Metric { get; set; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public partial class GoalMeasurementCriterionEntity : EntityBase, IGoalMeasureme
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20675">Goal Measurement Criterion Success Count</a>
     /// </para>
     /// </summary>
+    [Comment("The number of correct results that will be considered to represent successful achievement of a goal.")]
     public Int32? SuccessCount { get; set; }
 
     #endregion

@@ -23,6 +23,7 @@ public partial class OrganizationPopulationServedEntity : EntityBase, IOrganizat
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20189">Early Learning Oldest Age Authorized to Serve</a>
     /// </para>
     /// </summary>
+    [Comment("The oldest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)")]
     public Int32? OldestAgeServed { get; set; }
 
     /// <summary>
@@ -42,6 +43,7 @@ public partial class OrganizationPopulationServedEntity : EntityBase, IOrganizat
     /// </para>
     /// </summary>
     [ForeignKey("RefPopulationServed")]
+    [Comment("Program provides services to meet the needs of children in special circumstances.")]
     public Guid? RefPopulationServedId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class OrganizationPopulationServedEntity : EntityBase, IOrganizat
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19626">Early Learning Youngest Age Authorized to Serve</a>
     /// </para>
     /// </summary>
+    [Comment("The youngest age of children a class/group is authorized or licensed to serve.  (Age is specified in months)")]
     public Int32? YoungestAgeServed { get; set; }
 
     #endregion

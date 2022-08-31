@@ -20,6 +20,7 @@ public partial class OrganizationPersonRoleApplicationEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day on which an individual  application is received by the organization.")]
     public System.DateTime ApplicationDate { get; set; }
 
     /// <summary>

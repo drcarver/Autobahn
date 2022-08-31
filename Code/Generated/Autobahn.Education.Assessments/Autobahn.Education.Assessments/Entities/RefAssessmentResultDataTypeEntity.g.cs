@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20518">Assessment Result Data Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentResultDataType", Schema = "Assessments")]
+[Comment(" The data type of the assessment result score value.")]
 public partial class RefAssessmentResultDataTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -27,6 +27,7 @@ public partial class TeacherEducationCredentialExamEntity : EntityBase, ITeacher
     /// </para>
     /// </summary>
     [ForeignKey("RefTeacherEducationCredentialExam")]
+    [Comment("The type of examination used to assess teacher candidate's knowledge and skills.")]
     public Guid? RefTeacherEducationCredentialExamId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class TeacherEducationCredentialExamEntity : EntityBase, ITeacher
     /// </para>
     /// </summary>
     [ForeignKey("RefTeacherEducationExamScoreType")]
+    [Comment("An indication of the type of credential exam associated with a given exam score.")]
     public Guid? RefTeacherEducationExamScoreTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class TeacherEducationCredentialExamEntity : EntityBase, ITeacher
     /// </para>
     /// </summary>
     [ForeignKey("RefTeacherEducationTestCompany")]
+    [Comment("The name of the company that provides the examination used in the teacher education program.")]
     public Guid? RefTeacherEducationTestCompanyId { get; set; }
 
     #endregion

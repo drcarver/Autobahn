@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19644">Address Type for Organization</a>
 /// </para>
 /// </summary>
+[Table("RefOrganizationLocationType", Schema = "Common")]
+[Comment("The type of address listed for an organization.")]
 public partial class RefOrganizationLocationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

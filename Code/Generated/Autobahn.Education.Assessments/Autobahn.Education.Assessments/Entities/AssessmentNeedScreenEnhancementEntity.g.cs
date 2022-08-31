@@ -34,6 +34,7 @@ public partial class AssessmentNeedScreenEnhancementEntity : EntityBase, IAssess
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(6,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("This is the preferred Foreground color for screen enhancement defined as part of an Assessment Personal Needs Profile.")]
     public System.String ForegroundColor { get; set; }
 
     /// <summary>
@@ -45,6 +46,7 @@ public partial class AssessmentNeedScreenEnhancementEntity : EntityBase, IAssess
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20033">Assessment Need Invert Color Choice</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the Access for All (AfA) preference to invert the foreground and background Colors.")]
     public Boolean? InvertColorChoice { get; set; }
 
     /// <summary>
@@ -56,6 +58,7 @@ public partial class AssessmentNeedScreenEnhancementEntity : EntityBase, IAssess
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20034">Assessment Need Magnification</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the preferred magnification of the screen as a factor of a screen's original size.")]
     public Decimal? Magnification { get; set; }
 
     #endregion

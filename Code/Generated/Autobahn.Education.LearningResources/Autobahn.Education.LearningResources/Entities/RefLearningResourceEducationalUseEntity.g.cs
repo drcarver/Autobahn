@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20005">Learning Resource Educational Use</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceEducationalUse", Schema = "LearningResources")]
+[Comment("The purpose of the work in the context of education.")]
 public partial class RefLearningResourceEducationalUseEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

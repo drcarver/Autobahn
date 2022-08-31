@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20020">Assessment Session Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentSessionType", Schema = "Assessments")]
+[Comment("The type of session that is scheduled.")]
 public partial class RefAssessmentSessionTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

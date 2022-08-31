@@ -20,6 +20,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("MIME type to specifically indicate the Assessment Asset content type.")]
     public System.String ContentMimeType { get; set; }
 
     /// <summary>
@@ -33,6 +34,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The Uniform Resource Locator (URL) location of the external Assessment Asset content.")]
     public System.String ContentUrl { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -49,6 +51,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique code identifying the Assessment Asset provided by the authoring system.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -68,6 +71,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the Assessment Asset.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -81,6 +85,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the ownership rights holder or publisher of the asset.")]
     public System.String Owner { get; set; }
 
     /// <summary>
@@ -92,6 +97,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20148">Assessment Asset Published Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date that this version of the asset was made available for use.")]
     public DateTime? PublishedDate { get; set; }
 
     /// <summary>
@@ -103,6 +109,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20150">Assessment Asset Identifier Type</a>
     /// </para>
     /// </summary>
+    [Comment("The type of identifier that is provided for this asset.")]
     public Int32? RefAssessmentAssestIdentifierType { get; set; }
 
     /// <summary>
@@ -115,6 +122,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentAssetType")]
+    [Comment("Specifies a predominant type of assessment asset represented by the Learning Resource.  Assessment assets represent any content used to compose an assessment item, is referenced by an item but not part of the item content itself, or is content that is included as part of a section within an assessment form. Assets can be static content such as art work or dynamic assets such as calculators.")]
     public Guid? RefAssessmentAssetTypeId { get; set; }
 
     /// <summary>
@@ -127,6 +135,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentLanguage")]
+    [Comment("The language in which the assessment form is designed to be delivered.")]
     public Guid? RefAssessmentLanguageId { get; set; }
 
     /// <summary>
@@ -140,6 +149,7 @@ public partial class AssessmentAssetEntity : EntityBase, IAssessmentAsset
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A version number or label defined by the publisher.")]
     public System.String Version { get; set; }
 
     #endregion

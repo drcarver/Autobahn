@@ -19,6 +19,7 @@ public partial class EarlyChildhoodProgramTypeOfferedEntity : EntityBase, IEarly
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20615">Inclusive Setting Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that services are provided to the child in a place where children of all abilities learn together.")]
     public Boolean? InclusiveSettingIndicator { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class EarlyChildhoodProgramTypeOfferedEntity : EntityBase, IEarly
     /// </para>
     /// </summary>
     [ForeignKey("RefCommunityBasedType")]
+    [Comment("Non domestic residence in which the early learning setting is located.")]
     public Guid? RefCommunityBasedTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class EarlyChildhoodProgramTypeOfferedEntity : EntityBase, IEarly
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefEarlyChildhoodProgramEnrollmentType")]
+    [Comment("The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.")]
     public Guid RefEarlyChildhoodProgramEnrollmentTypeId { get; set; }
 
     #endregion

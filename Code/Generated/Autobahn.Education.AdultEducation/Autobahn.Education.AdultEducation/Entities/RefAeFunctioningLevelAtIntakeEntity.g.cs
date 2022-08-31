@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19763">Adult Educational Functioning Level at Intake</a>
 /// </para>
 /// </summary>
+[Table("RefAeFunctioningLevelAtIntake", Schema = "AdultEducation")]
+[Comment("An individual's entering skill level, as defined by the National Reporting System for Adult Education and determined by an approved standardized assessment at program intake.")]
 public partial class RefAeFunctioningLevelAtIntakeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

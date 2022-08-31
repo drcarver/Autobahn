@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefAssessmentTypeChildrenWithDisability file
 /// </summary>
+[Table("RefAssessmentTypeChildrenWithDisability", Schema = "Assessments")]
 public partial class RefAssessmentTypeChildrenWithDisabilityEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefAssessmentTypeChildrenWithDisability Properties"

@@ -21,6 +21,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An alias for the credential, which may include acronyms, alpha-numeric notations, and other forms of name abbreviations in common use such as PhD, MA, and BA.")]
     public System.String AlternateName { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20891">Credential Definition Date Effective</a>
     /// </para>
     /// </summary>
+    [Comment("Effective date of the content of a credential definition.")]
     public DateTime? CredentialDefDateEffective { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20919">Credential Definition Terminal Degree Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("This degree is the highest degree that can be awarded in this classification of instructional programs field or program area.")]
     public Boolean? CredentialDefinitionTerminalDegreeIndicator { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -64,6 +67,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The Uniform Resource Locator (URL) for the unique address of an image representing an award or badge associated with the qualification, achievement, personal or organizational quality, or aspect of an identity.")]
     public System.String ImageUrl { get; set; }
 
     /// <summary>
@@ -77,6 +81,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(2000,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The geo-political region in which the credential is applicable.")]
     public System.String JurisdictionRegion { get; set; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(2000,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A geo-political region in which the credential does not apply.")]
     public System.String JurisdictionRegionException { get; set; }
 
     /// <summary>
@@ -102,6 +108,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Keywords or key phrases describing aspects of a credential considered useful for its discovery.")]
     public System.String Keywords { get; set; }
 
     /// <summary>
@@ -114,6 +121,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCareerCluster")]
+    [Comment("The career cluster that defines the industry or occupational focus which may be associated with a career pathways program, plan of study, or course.")]
     public Guid? RefCareerClusterId { get; set; }
 
     /// <summary>
@@ -126,6 +134,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCipCode")]
+    [Comment("A six-digit code in the form xx.xxxx that identifies instructional program specialties within educational institutions.")]
     public Guid? RefCipCodeId { get; set; }
 
     /// <summary>
@@ -138,6 +147,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCredentialDefIntendedPurposeType")]
+    [Comment("The intended type of application of the credential by the holder.")]
     public Guid? RefCredentialDefIntendedPurposeTypeId { get; set; }
 
     /// <summary>
@@ -150,6 +160,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCredentialDefStatusType")]
+    [Comment("The status of the credential offered by a credentialing organization.")]
     public Guid? RefCredentialDefStatusTypeId { get; set; }
 
     /// <summary>
@@ -162,6 +173,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [ForeignKey("RefCredentialDefVerificationType")]
+    [Comment("A resource describing the means by which someone can verify whether a credential has been attained by a person.")]
     public Guid? RefCredentialDefVerificationTypeId { get; set; }
 
     /// <summary>
@@ -187,6 +199,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title assigned to a qualification, achievement, personal or organizational quality, or aspect of an identity.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -199,6 +212,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Description of the methods used to evaluate the validity and reliability of a credential earned by a person.")]
     public System.String ValidationMethodDescription { get; set; }
 
     /// <summary>
@@ -210,6 +224,7 @@ public partial class CredentialDefinitionEntity : EntityBase, ICredentialDefinit
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20735">Credential Definition Version</a>
     /// </para>
     /// </summary>
+    [Comment("An alphanumeric identifier of a version of the credential being described that is unique within the organizational context.")]
     public Decimal? Version { get; set; }
 
     #endregion

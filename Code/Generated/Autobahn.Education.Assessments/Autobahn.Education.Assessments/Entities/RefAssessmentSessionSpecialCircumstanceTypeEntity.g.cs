@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19380">Assessment Session Special Circumstance Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentSessionSpecialCircumstanceType", Schema = "Assessments")]
+[Comment("An unusual event occurred during the administration of the assessment. This could include fire alarm, student became ill, etc.")]
 public partial class RefAssessmentSessionSpecialCircumstanceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

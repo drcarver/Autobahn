@@ -19,6 +19,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20240">Session Attendance Term Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the session is an attendance term.")]
     public Boolean? AttendanceTermIndicator { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19054">Course Begin Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day an instance of a course officially began.")]
     public DateTime? BeginDate { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19487">Days in Session</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of days that the school was or is anticipated to be in session during the school year. Also included are days on which the education institution facility is closed and the student body as a whole is engaged in planned activities off-campus under the guidance and direction of staff members.")]
     public Int32? DaysInSession { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(7,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The academic session for which the data are recorded and applicable.")]
     public System.String Designator { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19059">Course End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day an instance of a course ends.")]
     public DateTime? EndDate { get; set; }
 
     /// <summary>
@@ -76,6 +81,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19488">First Instruction Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day of the first day of student instruction for the school year.")]
     public DateTime? FirstInstructionDate { get; set; }
 
     /// <summary>
@@ -87,6 +93,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19244">School Year Minutes</a>
     /// </para>
     /// </summary>
+    [Comment("The number of minutes that all students were required to be at school and any additional learning time (e.g., before or after school, weekend school, summer school) for which all students had the opportunity to participate.")]
     public Decimal? InstructionalMinutes { get; set; }
 
     /// <summary>
@@ -98,6 +105,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19489">Last Instruction Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day of the last day of student instruction (including days or times that students are present for purposes of testing and/or evaluation, but not including whole or part-days whose sole purposes is for distribution of report cards).")]
     public DateTime? LastInstructionDate { get; set; }
 
     /// <summary>
@@ -109,6 +117,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20238">Session Marking Term Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the session is a marking term.")]
     public Boolean? MarkingTermIndicator { get; set; }
 
     /// <summary>
@@ -120,6 +129,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19491">Minutes Per Day</a>
     /// </para>
     /// </summary>
+    [Comment("The number of minutes in the day in which the school is normally in session.")]
     public Int32? MinutesPerDay { get; set; }
 
     /// <summary>
@@ -138,6 +148,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicTermDesignator")]
+    [Comment("The academic term for which the data apply.")]
     public Guid? RefAcademicTermDesignatorId { get; set; }
 
     /// <summary>
@@ -150,6 +161,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// </para>
     /// </summary>
     [ForeignKey("RefSessionType")]
+    [Comment("A prescribed span of time when an education institution is open, instruction is provided, and students are under the direction and guidance of teachers and/or education institution administration. A session may be interrupted by one or more vacations.")]
     public Guid? RefSessionTypeId { get; set; }
 
     /// <summary>
@@ -161,6 +173,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20239">Session Scheduling Term Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that the session is a scheduling term.")]
     public Boolean? SchedulingTermIndicator { get; set; }
 
     /// <summary>
@@ -172,6 +185,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19988">Session End Time</a>
     /// </para>
     /// </summary>
+    [Comment("The hour, minute and second on which a session ends.")]
     public TimeSpan? SessionEndTime { get; set; }
 
     /// <summary>
@@ -183,6 +197,7 @@ public partial class OrganizationCalendarSessionEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19986">Session Start Time</a>
     /// </para>
     /// </summary>
+    [Comment("The hour, minute and second on which a session begins.")]
     public TimeSpan? SessionStartTime { get; set; }
 
     #endregion

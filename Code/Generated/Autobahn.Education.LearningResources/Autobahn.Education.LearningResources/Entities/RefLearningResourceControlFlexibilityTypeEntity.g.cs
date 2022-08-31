@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20364">Learning Resource Control Flexibility Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceControlFlexibilityType", Schema = "LearningResources")]
+[Comment("Identifies a single input method that is sufficient to control the described learning resource.")]
 public partial class RefLearningResourceControlFlexibilityTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

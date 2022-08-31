@@ -19,6 +19,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19078">Degree or Certificate Seeking Student</a>
     /// </para>
     /// </summary>
+    [Comment("Person is enrolled in courses for credit and recognized by the institution as seeking a degree, certificate, or other formal award. High school students also enrolled in postsecondary courses for credit are not considered degree/certificate-seeking.")]
     public Boolean? DegreeOrCertificateSeekingStudent { get; set; }
 
     public Boolean? DisplacedStudentStatus { get; set; }
@@ -32,6 +33,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20289">Distance Education Program Enrollment Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An individual's enrollment in a program for which all the required coursework for program completion is able to be completed via distance education courses. Distance education is education that uses one or more technologies to deliver instruction to individuals who are separated from the instructor and to support regular and substantive interaction between the individuals and the instructor synchronously or asynchronously.")]
     public Boolean? DistanceEducationProgramEnrollmentInd { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20290">Doctoral Candidacy Admit Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("The individual's status in being admitted as a doctoral candidate.")]
     public Boolean? DoctoralCandidacyAdmitInd { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20291">Doctoral Candidacy Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the individual was admitted to doctoral candidate status.")]
     public DateTime? DoctoralCandidacyDate { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20292">Doctoral Exam Taken Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the individual took an exam for advancement in, continuation or completion of a doctoral program.")]
     public DateTime? DoctoralExamTakenDate { get; set; }
 
     /// <summary>
@@ -76,6 +81,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19098">Entry Date into Postsecondary</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which a person entered and began to receive instructional services at a postsecondary institution for the first time after completing high school (or its equivalent). ")]
     public DateTime? EntryDateIntoPostsecondary { get; set; }
 
     /// <summary>
@@ -87,6 +93,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19117">First Time Postsecondary Student</a>
     /// </para>
     /// </summary>
+    [Comment("A person who has no prior postsecondary experience  attending any institution for the first time at the undergraduate level since completing high school (or its equivalent). This includes persons enrolled in academic or occupational programs. It also includes persons enrolled in the fall term who attended college for the first time in the prior summer term, and persons who entered with advanced standing (college credits earned before graduation from high school).")]
     public Boolean? FirstTimePostsecondaryStudent { get; set; }
 
     /// <summary>
@@ -98,6 +105,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19743">Fraternity Participation Status</a>
     /// </para>
     /// </summary>
+    [Comment("Student is in membership of a chiefly social organization of men students at a college or university, usually designated by Greek letters.")]
     public Boolean? FraternityParticipationStatus { get; set; }
 
     /// <summary>
@@ -109,6 +117,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19741">Postsecondary Student Housing On-Campus</a>
     /// </para>
     /// </summary>
+    [Comment("The student resides in a residence hall or housing facility owned or controlled by an institution within the same reasonably contiguous geographic area and used by the institution in direct support of or in a manner related to, the institution's educational purposes.")]
     public Boolean? HousingOnCampus { get; set; }
 
     /// <summary>
@@ -122,6 +131,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The first registration term of a person enrolling in credit-granting courses at a postsecondary institution after completing high school (or its equivalent).  ")]
     public System.String InitialEnrollmentTerm { get; set; }
 
     /// <summary>
@@ -133,6 +143,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19168">Instructional Activity Hours Attempted</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credit hours and/or contact hours attempted by a person during a term.")]
     public Decimal? InstructionalActivityHoursAttempted { get; set; }
 
     /// <summary>
@@ -144,6 +155,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19361">Instructional Activity Hours Completed</a>
     /// </para>
     /// </summary>
+    [Comment("The number of credit hours and/or contact hours successfully completed by a person during a term.")]
     public Decimal? InstructionalActivityHoursCompleted { get; set; }
 
     /// <summary>
@@ -155,6 +167,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20385">Oral Defense Completed Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of the individual's completion of an oral defense. The requirement to conduct an oral defense by doctoral individuals may vary across institutions, programs, or fields of study.")]
     public Boolean? OralDefenseCompletedIndicator { get; set; }
 
     /// <summary>
@@ -166,6 +179,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20386">Oral Defense Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the individual gave an oral defense.")]
     public DateTime? OralDefenseDate { get; set; }
 
     /// <summary>
@@ -184,6 +198,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20395">Postsecondary Entering Student Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("The initial enrollment of an individual in credit bearing courses or developmental/remedial courses at an institution after completing high school or a high school equivalency program (e.g. GED, Adult High School Diploma).")]
     public Boolean? PostsecondaryEnteringStudentInd { get; set; }
 
     /// <summary>
@@ -203,6 +218,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefDevelopmentalEducationReferralStatus")]
+    [Comment("The status of a student's referral to or placement into  developmental education.")]
     public Guid? RefDevelopmentalEducationReferralStatusId { get; set; }
 
     /// <summary>
@@ -215,6 +231,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefDevelopmentalEducationType")]
+    [Comment("An indicator of the category of developmental education.")]
     public Guid? RefDevelopmentalEducationTypeId { get; set; }
 
     /// <summary>
@@ -227,6 +244,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefDistanceEducationCourseEnrollment")]
+    [Comment("An individual's enrollment in a course or courses in which the instructional content is delivered exclusively via distance education.  Distance education is education that uses one or more technologies to deliver instruction to students who are separated from the instructor and to support regular and substantive interaction between the students and the instructor synchronously or asynchronously.  Technologies used for instruction may include: Internet; one-way and two-way transmissions through open broadcasts, closed circuit, cable, microwave, broadband lines, fiber optics, satellite or wireless communication devices; audio conferencing; and video cassette, DVDs, and CD-ROMs, if the cassette, DVDs, and CD-ROMs are used in a course in conjunction with the technologies listed above.")]
     public Guid? RefDistanceEducationCourseEnrollmentId { get; set; }
 
     /// <summary>
@@ -239,6 +257,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefDoctoralExamsRequiredCode")]
+    [Comment("A qualifier identifying the types of exams required of doctoral level individuals.")]
     public Guid? RefDoctoralExamsRequiredCodeId { get; set; }
 
     /// <summary>
@@ -251,6 +270,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefGraduateOrDoctoralExamResultsStatus")]
+    [Comment("The individual's status in completing exams required for graduate or doctoral degree programs.")]
     public Guid? RefGraduateOrDoctoralExamResultsStatusId { get; set; }
 
     /// <summary>
@@ -263,6 +283,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefInstructionalActivityHours")]
+    [Comment("The unit of measure of student instructional activity.")]
     public Guid? RefInstructionalActivityHoursId { get; set; }
 
     /// <summary>
@@ -275,6 +296,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefPsEnrollmentAwardType")]
+    [Comment("An indicator of the award level in which the person is currently enrolled.")]
     public Guid? RefPsEnrollmentAwardTypeId { get; set; }
 
     /// <summary>
@@ -287,6 +309,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefPsEnrollmentStatus")]
+    [Comment("An indication of the student's enrollment status for a particular term as defined by the institution")]
     public Guid? RefPsEnrollmentStatusId { get; set; }
 
     /// <summary>
@@ -299,6 +322,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefPsEnrollmentType")]
+    [Comment("An indicator of the enrollment type associated with the enrollment award level of a person at the beginning of a term.")]
     public Guid? RefPsEnrollmentTypeId { get; set; }
 
     /// <summary>
@@ -317,6 +341,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefPsStudentLevel")]
+    [Comment("Classification of a person enrolling in credit-granting courses at a postsecondary institution since completing high school (or its equivalent) as either an undergraduate or graduate student.")]
     public Guid? RefPsStudentLevelId { get; set; }
 
     /// <summary>
@@ -329,6 +354,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </para>
     /// </summary>
     [ForeignKey("RefTransferReady")]
+    [Comment("A person who has successfully completed a transfer-preparatory program as defined by the state or by the institution if no official state definition exists.")]
     public Guid? RefTransferReadyId { get; set; }
 
     /// <summary>
@@ -340,6 +366,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19744">Sorority Participation Status</a>
     /// </para>
     /// </summary>
+    [Comment("Student is in membership in a chiefly social organization of women students at a college or university, usually designated by Greek letters.")]
     public Boolean? SororityParticipationStatus { get; set; }
 
     /// <summary>
@@ -353,6 +380,7 @@ public partial class PsStudentEnrollmentEntity : EntityBase, IPsStudentEnrollmen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of the thesis or dissertation.")]
     public System.String ThesisOrDissertationTitle { get; set; }
 
     #endregion

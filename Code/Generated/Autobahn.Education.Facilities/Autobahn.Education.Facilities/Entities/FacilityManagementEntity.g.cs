@@ -27,6 +27,7 @@ public partial class FacilityManagementEntity : EntityBase, IFacilityManagement
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCharterSchoolRealtyAccessType")]
+    [Comment("The type of real estate vehicle through which a public charter school has access and control of its building space.")]
     public Guid? RefBuildingCharterSchoolRealtyAccessTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class FacilityManagementEntity : EntityBase, IFacilityManagement
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCleaningStandardType")]
+    [Comment("The standard for cleanliness, and benchmarks for how much space can be assigned to one properly supplied custodian to meet these standards.")]
     public Guid? RefBuildingCleaningStandardTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class FacilityManagementEntity : EntityBase, IFacilityManagement
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityCapitalProgramMgmtType")]
+    [Comment("The type of management organization for planning, design, and construction of major capital projects.")]
     public Guid? RefFacilityCapitalProgramMgmtTypeId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class FacilityManagementEntity : EntityBase, IFacilityManagement
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityComplianceAgencyType")]
+    [Comment("The type of agency that has ultimate responsibility for the compliance determination.")]
     public Guid? RefFacilityComplianceAgencyTypeId { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class FacilityManagementEntity : EntityBase, IFacilityManagement
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityOperationsMgmtType")]
+    [Comment("The type of management arrangements whereby a district oversees and manages its facilities operations.")]
     public Guid? RefFacilityOperationsMgmtTypeId { get; set; }
 
     #endregion

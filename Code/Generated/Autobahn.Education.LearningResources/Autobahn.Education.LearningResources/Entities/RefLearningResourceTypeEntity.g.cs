@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19929">Learning Resource Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceType", Schema = "LearningResources")]
+[Comment("The predominate type or kind characterizing the learning resource.")]
 public partial class RefLearningResourceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

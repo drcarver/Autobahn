@@ -34,6 +34,7 @@ public partial class CredentialAwardEvidenceEntity : EntityBase, ICredentialAwar
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A statement or reference describing the evidence that the learner met the criteria for attainment of the qualification, achievement, personal or organizational quality, or aspect of an identity.")]
     public System.String Statement { get; set; }
 
     #endregion

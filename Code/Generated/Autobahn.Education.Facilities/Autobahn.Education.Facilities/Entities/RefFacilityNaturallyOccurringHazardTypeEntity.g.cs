@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20858">Facility Naturally Occurring Hazard Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityNaturallyOccurringHazardType", Schema = "Facilities")]
+[Comment("Type of natural hazard that can affect the health, safety and operation of school facilities and their occupants.")]
 public partial class RefFacilityNaturallyOccurringHazardTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

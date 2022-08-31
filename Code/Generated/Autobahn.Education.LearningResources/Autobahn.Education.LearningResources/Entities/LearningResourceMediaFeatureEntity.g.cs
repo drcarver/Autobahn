@@ -28,6 +28,7 @@ public partial class LearningResourceMediaFeatureEntity : EntityBase, ILearningR
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefLearningResourceMediaFeatureType")]
+    [Comment("Accessible content features included with the learning resource.")]
     public Guid RefLearningResourceMediaFeatureTypeId { get; set; }
 
     #endregion

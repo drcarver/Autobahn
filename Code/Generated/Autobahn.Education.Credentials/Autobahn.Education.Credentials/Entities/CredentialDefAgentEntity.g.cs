@@ -32,6 +32,7 @@ public partial class CredentialDefAgentEntity : EntityBase, ICredentialDefAgent
     /// </para>
     /// </summary>
     [ForeignKey("RefCredentialDefAgentRoleType")]
+    [Comment("The role that an organization or person has in relation to this Credential Definition based on terms defined by Credential Engine.")]
     public Guid? RefCredentialDefAgentRoleTypeId { get; set; }
 
     /// <summary>

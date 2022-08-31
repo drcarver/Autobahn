@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19071">Credential Type</a>
 /// </para>
 /// </summary>
+[Table("RefCredentialType", Schema = "Credentials")]
+[Comment("An indication of the category of credential a person holds.")]
 public partial class RefCredentialTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

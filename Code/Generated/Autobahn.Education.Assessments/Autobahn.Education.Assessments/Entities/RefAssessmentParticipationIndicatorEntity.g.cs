@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19025">Assessment Registration Participation Indicator</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentParticipationIndicator", Schema = "Assessments")]
+[Comment("An indication of whether a student participated in an assessment.")]
 public partial class RefAssessmentParticipationIndicatorEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

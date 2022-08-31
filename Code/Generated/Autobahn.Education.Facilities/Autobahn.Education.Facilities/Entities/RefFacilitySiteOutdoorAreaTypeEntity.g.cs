@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20811">Facility Site Outdoor Area Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilitySiteOutdoorAreaType", Schema = "Facilities")]
+[Comment("The designated constructed outdoor area on a public school site.")]
 public partial class RefFacilitySiteOutdoorAreaTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

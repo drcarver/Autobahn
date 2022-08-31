@@ -21,6 +21,7 @@ public partial class PsSectionLocationEntity : EntityBase, IPsSectionLocation
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the location at which the course is taught.")]
     public System.String CourseInstructionSiteName { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PsSectionLocationEntity : EntityBase, IPsSectionLocation
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseInstructionSiteType")]
+    [Comment("An indication of the type of location at which the course is taught.")]
     public Guid? RefCourseInstructionSiteTypeId { get; set; }
 
     #endregion

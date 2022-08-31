@@ -21,6 +21,7 @@ public partial class OrganizationIdentifierEntity : EntityBase, IOrganizationIde
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The actual code that identifies the organization of subject matter and related learning experiences provided for the instruction of students.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class OrganizationIdentifierEntity : EntityBase, IOrganizationIde
     /// </para>
     /// </summary>
     [ForeignKey("RefOrganizationentificationSystem")]
+    [Comment("A system that is used to identify the organization of subject matter and related learning experiences provided for the instruction of students.")]
     public Guid? RefOrganizationIdentificationSystemId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class OrganizationIdentifierEntity : EntityBase, IOrganizationIde
     /// </para>
     /// </summary>
     [ForeignKey("RefOrganizationentifierType")]
+    [Comment("A unique number or alphanumeric code used in the local system to identify an activity, such as a co-curricular or extra-curricular activity that is offered at an education institution.")]
     public Guid? RefOrganizationIdentifierTypeId { get; set; }
 
     #endregion

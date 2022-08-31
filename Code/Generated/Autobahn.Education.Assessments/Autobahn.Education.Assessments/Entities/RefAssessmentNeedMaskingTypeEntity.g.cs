@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20051">Assessment Need Masking Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedMaskingType", Schema = "Assessments")]
+[Comment("Specifies as part of an Assessment Personal Needs Profile the type of masks the user is able to create  to cover portions of the question until needed.")]
 public partial class RefAssessmentNeedMaskingTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

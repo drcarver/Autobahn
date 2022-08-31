@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20678">Goal Measurement Type</a>
 /// </para>
 /// </summary>
+[Table("RefGoalMeasurementType", Schema = "Assessments")]
+[Comment("Type of evidence appropriate for assessing achievement of a goal or short-term objective.")]
 public partial class RefGoalMeasurementTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

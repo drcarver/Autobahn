@@ -28,6 +28,7 @@ public partial class StaffEvaluationEntity : EntityBase, IStaffEvaluation
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The result of an assessment of a person's performance.")]
     public System.String Outcome { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class StaffEvaluationEntity : EntityBase, IStaffEvaluation
     /// </para>
     /// </summary>
     [ForeignKey("RefStaffPerformanceLevel")]
+    [Comment("The levels used in district evaluation systems for assigning teacher or principal performance ratings.")]
     public Guid? RefStaffPerformanceLevelId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class StaffEvaluationEntity : EntityBase, IStaffEvaluation
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The quantitative or qualitative range of possible scores/rating for a person's overall performance (e.g., 0 - 10; Poor, Fair, Average, Good, Excellent).")]
     public System.String Scale { get; set; }
 
     /// <summary>
@@ -66,6 +69,7 @@ public partial class StaffEvaluationEntity : EntityBase, IStaffEvaluation
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The actual quantitative or qualitative assessment of a person's overall performance.")]
     public System.String ScoreOrRating { get; set; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public partial class StaffEvaluationEntity : EntityBase, IStaffEvaluation
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The instrument and/or set of procedures with which a person's performance is assessed.")]
     public System.String System { get; set; }
 
     #endregion

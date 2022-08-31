@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19029">Assessment Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentType", Schema = "Assessments")]
+[Comment("The category of an assessment based on format and content.")]
 public partial class RefAssessmentTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

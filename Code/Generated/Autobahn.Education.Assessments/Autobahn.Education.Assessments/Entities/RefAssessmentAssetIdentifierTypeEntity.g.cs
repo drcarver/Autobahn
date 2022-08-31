@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20150">Assessment Asset Identifier Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentAssetIdentifierType", Schema = "Assessments")]
+[Comment("The type of identifier that is provided for this asset.")]
 public partial class RefAssessmentAssetIdentifierTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

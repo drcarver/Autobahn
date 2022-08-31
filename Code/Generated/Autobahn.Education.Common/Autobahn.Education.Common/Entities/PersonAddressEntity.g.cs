@@ -21,6 +21,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the county, parish, borough, or comparable unit (within a state) in which an address is located.")]
     public System.String AddressCountyName { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The apartment, room, or suite number of an address.")]
     public System.String ApartmentRoomOrSuiteNumber { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the city in which an address is located.")]
     public System.String City { get; set; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the record should not be published.")]
     public Boolean? DoNotPublishIndicator { get; set; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(20,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The north or south angular distance from the equator that, when combined with longitude, reflects an estimation of where the address is physically situated.")]
     public System.String Latitude { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(20,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The east or west angular distance from the prime meridian that, when combined with latitude, reflects an estimation of where the address is physically situated.")]
     public System.String Longitude { get; set; }
 
     /// <summary>
@@ -104,6 +110,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(17,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A number that identifies each postal delivery area in the United States used as a portion of an address.")]
     public System.String PostalCode { get; set; }
 
     /// <summary>
@@ -116,6 +123,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </para>
     /// </summary>
     [ForeignKey("RefCountry")]
+    [Comment("The unique two character International Organization for Standardization (ISO) code for the country in which an address is located.")]
     public Guid? RefCountryId { get; set; }
 
     /// <summary>
@@ -134,6 +142,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </para>
     /// </summary>
     [ForeignKey("RefPersonalInformationVerification")]
+    [Comment("The evidence by which a persons name, address, date of birth, etc. is confirmed.")]
     public Guid? RefPersonalInformationVerificationId { get; set; }
 
     /// <summary>
@@ -147,6 +156,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefPersonLocationType")]
+    [Comment("The type of address listed for a learner or a parent, guardian, family member or related person.")]
     public Guid RefPersonLocationTypeId { get; set; }
 
     /// <summary>
@@ -159,6 +169,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </para>
     /// </summary>
     [ForeignKey("RefState")]
+    [Comment("The abbreviation for the state (within the United States) or outlying area in which an address is located.")]
     public Guid? RefStateId { get; set; }
 
     /// <summary>
@@ -172,6 +183,7 @@ public partial class PersonAddressEntity : EntityBase, IPersonAddress
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(150,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The street number and street name or post office box number of an address.")]
     public System.String StreetNumberAndName { get; set; }
 
     #endregion

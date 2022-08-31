@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefLearningResourceAccessApitype file
 /// </summary>
+[Table("RefLearningResourceAccessApitype", Schema = "LearningResources")]
 public partial class RefLearningResourceAccessApitypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

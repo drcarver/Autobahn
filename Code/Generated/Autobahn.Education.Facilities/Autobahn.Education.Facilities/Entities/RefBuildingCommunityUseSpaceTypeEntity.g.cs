@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20836">Building Community Use Space Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingCommunityUseSpaceType", Schema = "Facilities")]
+[Comment("The space designed primarily for community or shared use.")]
 public partial class RefBuildingCommunityUseSpaceTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

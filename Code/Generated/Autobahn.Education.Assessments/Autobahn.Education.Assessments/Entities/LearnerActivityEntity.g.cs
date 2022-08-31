@@ -37,6 +37,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19944">Learner Activity Creation Date</a>
     /// </para>
     /// </summary>
+    [Comment("The creation date of the assignment.")]
     public DateTime? CreationDate { get; set; }
 
     /// <summary>
@@ -48,6 +49,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19947">Learner Activity Due Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date assignment is due.")]
     public DateTime? DueDate { get; set; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19948">Learner Activity Due Time</a>
     /// </para>
     /// </summary>
+    [Comment("The time the assignment is due.")]
     public TimeSpan? DueTime { get; set; }
 
     /// <summary>
@@ -76,6 +79,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19949">Learner Activity Maximum Attempts Allowed</a>
     /// </para>
     /// </summary>
+    [Comment("The number attempts a student may make on this assignment. Assumed to be unlimited if zero or omitted.")]
     public Decimal? MaximumAttemptsAllowed { get; set; }
 
     /// <summary>
@@ -87,6 +91,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19945">Learner Activity Maximum Time Allowed</a>
     /// </para>
     /// </summary>
+    [Comment("The time required to complete the assignment.")]
     public Decimal? MaximumTimeAllowed { get; set; }
 
     /// <summary>
@@ -111,6 +116,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19953">Learner Activity Possible Points</a>
     /// </para>
     /// </summary>
+    [Comment("The number of possible points for an assignment.")]
     public Decimal? PossiblePoints { get; set; }
 
     /// <summary>
@@ -124,6 +130,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The description of the skills or competencies the student must have to engage in assignment.")]
     public System.String Prerequisite { get; set; }
 
     /// <summary>
@@ -136,6 +143,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </para>
     /// </summary>
     [ForeignKey("RefLanguage")]
+    [Comment("The default language used for the assignment.")]
     public Guid? RefLanguageId { get; set; }
 
     /// <summary>
@@ -148,6 +156,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </para>
     /// </summary>
     [ForeignKey("RefLearnerActivityAddToGradeBookFlag")]
+    [Comment("Identifies the assignment as one that is graded.")]
     public Guid? RefLearnerActivityAddToGradeBookFlagId { get; set; }
 
     /// <summary>
@@ -160,6 +169,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </para>
     /// </summary>
     [ForeignKey("RefLearnerActivityMaximumTimeAllowedUnits")]
+    [Comment("The unit of time of the�Maximum Time Allowed�value.")]
     public Guid? RefLearnerActivityMaximumTimeAllowedUnitsId { get; set; }
 
     /// <summary>
@@ -172,6 +182,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </para>
     /// </summary>
     [ForeignKey("RefLearnerActivityType")]
+    [Comment("The type of work assigned to the learner.")]
     public Guid? RefLearnerActivityTypeId { get; set; }
 
     /// <summary>
@@ -183,6 +194,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19951">Learner Activity Release Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date the student was informed about an assignment or that an automated system displays the assignment.")]
     public DateTime? ReleaseDate { get; set; }
 
     /// <summary>
@@ -196,6 +208,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The Uniform Resource Locator pointing to a rubric that may be used to evaluate learner performance on the assignment.")]
     public System.String RubricUrl { get; set; }
 
     /// <summary>
@@ -215,6 +228,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title�for work assigned to the learner, which can comprise of learning resources, activities, and assessments.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -226,6 +240,7 @@ public partial class LearnerActivityEntity : EntityBase, ILearnerActivity
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19952">Learner Activity Weight</a>
     /// </para>
     /// </summary>
+    [Comment("The percentage weight of the assignment during the particular course or term.")]
     public Decimal? Weight { get; set; }
 
     #endregion

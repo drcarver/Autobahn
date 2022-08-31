@@ -51,7 +51,8 @@ internal class MauiModule
             GenerateInterfaceFiles($@"{location}\{moduleName}\{moduleName}\Interfaces\", domain, entities.Where(t => !t.Name.StartsWith("Ref")).ToList());
             GenerateModelFiles($@"{location}\{moduleName}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
-            // Still todo - add virtuals for foreign keys.  Add the dbcontext for the domain
+            // Still todo - add virtuals for foreign keys.  Add the dbcontext for the domain using sqllite. explore
+            // using a dbcontext that can also connect to sql server and cosmosdb
             GenerateEntityFiles($@"{location}\{moduleName}\{moduleName}\Entities\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
             // Still todo - add reference models and embeded reference lists, plus pick lists
@@ -79,6 +80,7 @@ internal class MauiModule
             stream.WriteLine("global using System.ComponentModel;");
             stream.WriteLine("global using System.ComponentModel.DataAnnotations;");
             stream.WriteLine("global using System.ComponentModel.DataAnnotations.Schema;");
+            stream.WriteLine("global using Microsoft.EntityFrameworkCore;");
             stream.WriteLine("global using Microsoft.Extensions.DependencyInjection;");
             stream.WriteLine("global using CommunityToolkit.Mvvm;");
             stream.WriteLine("global using CommunityToolkit.Mvvm.ComponentModel;");
@@ -212,6 +214,11 @@ internal class MauiModule
         using (var stream = File.CreateText($"{filePath}{model.Name}Entity.g.cs"))
         {
             GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
+            stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
+            if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
+            {
+                stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition}"")]");
+            }
             stream.WriteLine($@"public partial class {model.Name}Entity : ReferenceBaseEntity, IReferenceBase");
             stream.WriteLine($@"{{");
             GenerateProperties(stream, model, TypeBeingGeneratedEnum.Entity);
@@ -407,6 +414,10 @@ internal class MauiModule
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
                 stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
+                if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
+                {
+                    stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition}"")]");
+                }
                 stream.WriteLine($@"public partial class {model.Name}Entity : EntityBase, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateProperties(stream, model, TypeBeingGeneratedEnum.Entity);
@@ -702,6 +713,13 @@ internal class MauiModule
             {
                 var errormsg = "The {0} must be less then {1} characters.";
                 stream.WriteLine($"    [StringLength({prop.Attributes.StringLengthAttribute.MaximumLength},ErrorMessage=\"{errormsg}\")]");
+            }
+        }
+        if (generatedType == TypeBeingGeneratedEnum.Entity)
+        {
+            if (!string.IsNullOrEmpty(prop.AutobahnElement?.Definition))
+            {
+                stream.WriteLine($@"    [Comment(""{prop.AutobahnElement.Definition}"")]");
             }
         }
     }

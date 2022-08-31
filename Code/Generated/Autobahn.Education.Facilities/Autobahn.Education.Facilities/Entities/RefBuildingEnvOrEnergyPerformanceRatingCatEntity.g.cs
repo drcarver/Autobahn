@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20800">Building Environmental or Energy Performance Rating Category</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingEnvOrEnergyPerformanceRatingCat", Schema = "Facilities")]
+[Comment("The primary groupings that rating organizations use to evaluate environmental sustainability and energy use.")]
 public partial class RefBuildingEnvOrEnergyPerformanceRatingCatEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

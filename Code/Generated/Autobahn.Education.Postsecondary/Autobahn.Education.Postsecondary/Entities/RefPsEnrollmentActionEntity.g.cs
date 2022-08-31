@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19579">Postsecondary Enrollment Action</a>
 /// </para>
 /// </summary>
+[Table("RefPsEnrollmentAction", Schema = "Postsecondary")]
+[Comment("The action taken with respect to postsecondary enrollment by the student who graduated from the school, LEA or state in the past two years.")]
 public partial class RefPsEnrollmentActionEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefPsEnrollmentAction Properties"

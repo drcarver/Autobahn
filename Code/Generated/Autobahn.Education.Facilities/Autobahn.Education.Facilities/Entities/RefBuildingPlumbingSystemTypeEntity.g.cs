@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20784">Building Plumbing System Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingPlumbingSystemType", Schema = "Facilities")]
+[Comment("The component of an on-site system for supplying, eliminating, and treating water.")]
 public partial class RefBuildingPlumbingSystemTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

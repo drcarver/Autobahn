@@ -21,6 +21,7 @@ public partial class AssessmentNeedApipControlEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(9,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Defines the multiplier to be applied to the time limit to determine the total testing time allowed when Additional Testing Time is specified as part of an Assessment Personal Needs Profile.  If the value is `unlimited' then there is no time limit for the test.")]
     public System.String AssessmentNeedTimeMultiplier { get; set; }
 
     /// <summary>
@@ -41,6 +42,7 @@ public partial class AssessmentNeedApipControlEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(6,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("This is the preferred Background color for screen enhancement defined as part of an Assessment Personal Needs Profile.")]
     public System.String BackgroundColor { get; set; }
 
     /// <summary>
@@ -54,6 +56,7 @@ public partial class AssessmentNeedApipControlEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(6,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The color defined as part of an Assessment Personal Needs Profile to be used to highlight the point of line reader activity i.e. the line being read.")]
     public System.String LineReaderHighlightColor { get; set; }
 
     /// <summary>
@@ -67,6 +70,7 @@ public partial class AssessmentNeedApipControlEntity : EntityBase, IAssessmentNe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(6,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("This is the preferred color for the overlay for screen enhancement defined as part of an Assessment Personal Needs Profile.")]
     public System.String OverlayColor { get; set; }
 
     /// <summary>
@@ -79,6 +83,7 @@ public partial class AssessmentNeedApipControlEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedIncreasedWhitespacingType")]
+    [Comment("Defines the user preferences for white spacing in lines, words and characters as part of an Assessment Personal Needs Profile.")]
     public Guid? RefAssessmentNeedIncreasedWhitespacingTypeId { get; set; }
 
     #endregion

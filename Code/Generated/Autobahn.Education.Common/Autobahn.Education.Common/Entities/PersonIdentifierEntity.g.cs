@@ -21,6 +21,7 @@ public partial class PersonIdentifierEntity : EntityBase, IPersonIdentifier
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to a staff member by a school, school system, a state, registry, or other agency or entity.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PersonIdentifierEntity : EntityBase, IPersonIdentifier
     /// </para>
     /// </summary>
     [ForeignKey("RefPersonalInformationVerification")]
+    [Comment("The evidence by which a persons name, address, date of birth, etc. is confirmed.")]
     public Guid? RefPersonalInformationVerificationId { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class PersonIdentifierEntity : EntityBase, IPersonIdentifier
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefPersonentificationSystem")]
+    [Comment("A coding scheme that is used for identification and record-keeping purposes by schools, social services, registry, or other agencies to refer to a staff member.")]
     public Guid RefPersonIdentificationSystemId { get; set; }
 
     #endregion

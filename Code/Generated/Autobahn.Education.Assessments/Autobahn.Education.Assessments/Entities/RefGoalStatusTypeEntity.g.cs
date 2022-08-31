@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20683">Goal Status Type</a>
 /// </para>
 /// </summary>
+[Table("RefGoalStatusType", Schema = "Assessments")]
+[Comment("Status toward achievement of the annual goal or short-term objectives.")]
 public partial class RefGoalStatusTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

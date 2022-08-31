@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19766">Adult Education Special Program Type</a>
 /// </para>
 /// </summary>
+[Table("RefAeSpecialProgramType", Schema = "AdultEducation")]
+[Comment("The type, by location or delivery mode, of adult education instruction program in which an adult participates.")]
 public partial class RefAeSpecialProgramTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -21,6 +21,7 @@ public partial class OrganizationCalendarEntity : EntityBase, IOrganizationCalen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number assigned by a school district to a school calendar.")]
     public System.String CalendarCode { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class OrganizationCalendarEntity : EntityBase, IOrganizationCalen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description or identification of the calendar.")]
     public System.String CalendarDescription { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class OrganizationCalendarEntity : EntityBase, IOrganizationCalen
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year for a reported school session.")]
     public System.String CalendarYear { get; set; }
 
     /// <summary>

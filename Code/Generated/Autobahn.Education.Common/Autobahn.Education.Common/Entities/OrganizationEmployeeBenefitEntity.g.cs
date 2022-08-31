@@ -19,6 +19,7 @@ public partial class OrganizationEmployeeBenefitEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19866">Full-Time Employee Benefits</a>
     /// </para>
     /// </summary>
+    [Comment("The benefits offered by a program/facility/employer for full-time staff.")]
     public Boolean? FullTimeBenefitIndicator { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class OrganizationEmployeeBenefitEntity : EntityBase, IOrganizati
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19867">Part-Time Employee Benefits</a>
     /// </para>
     /// </summary>
+    [Comment("The benefits offered by a program/facility/employer for part-time staff.")]
     public Boolean? PartTimeBenefitIndicator { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class OrganizationEmployeeBenefitEntity : EntityBase, IOrganizati
     /// </para>
     /// </summary>
     [ForeignKey("RefEmployeeBenefit")]
+    [Comment("The benefits offered by a program/facility/employer for full-time staff.")]
     public Guid? RefEmployeeBenefitId { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19272">Student Level</a>
 /// </para>
 /// </summary>
+[Table("RefPsStudentLevel", Schema = "Postsecondary")]
+[Comment("Classification of a person enrolling in credit-granting courses at a postsecondary institution since completing high school (or its equivalent) as either an undergraduate or graduate student.")]
 public partial class RefPsStudentLevelEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

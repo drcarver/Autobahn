@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19767">Goals for Attending Adult Education</a>
 /// </para>
 /// </summary>
+[Table("RefGoalsForAttendingAdultEducation", Schema = "Assessments")]
+[Comment("A person's reasons for attending an adult education class or program.")]
 public partial class RefGoalsForAttendingAdultEducationEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

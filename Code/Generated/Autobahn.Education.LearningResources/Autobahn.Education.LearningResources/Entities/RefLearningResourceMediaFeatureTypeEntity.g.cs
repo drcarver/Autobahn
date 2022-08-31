@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20368">Learning Resource Media Feature Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceMediaFeatureType", Schema = "LearningResources")]
+[Comment("Accessible content features included with the learning resource.")]
 public partial class RefLearningResourceMediaFeatureTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

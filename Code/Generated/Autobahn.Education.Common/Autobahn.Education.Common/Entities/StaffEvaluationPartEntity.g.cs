@@ -28,6 +28,7 @@ public partial class StaffEvaluationPartEntity : EntityBase, IStaffEvaluationPar
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the component part that is being evaluated and scored.")]
     public System.String PartName { get; set; }
 
     /// <summary>
@@ -41,6 +42,7 @@ public partial class StaffEvaluationPartEntity : EntityBase, IStaffEvaluationPar
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The quantitative or qualitative range of possible scores/rating for a person's performance on a component part (e.g., 0 - 10; Poor, Fair, Average, Good, Excellent).")]
     public System.String Scale { get; set; }
 
     /// <summary>
@@ -54,6 +56,7 @@ public partial class StaffEvaluationPartEntity : EntityBase, IStaffEvaluationPar
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The actual quantitative or qualitative assessment of a person's performance on a component part that is being evaluated. ")]
     public System.String ScoreOrRating { get; set; }
 
     /// <summary>

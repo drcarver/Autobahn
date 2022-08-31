@@ -27,6 +27,7 @@ public partial class AeStaffEntity : EntityBase, IAeStaff
     /// </para>
     /// </summary>
     [ForeignKey("RefAeStaffClassification")]
+    [Comment("The titles of employment, official status, or rank of adult education staff.")]
     public Guid? RefAeStaffClassificationId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class AeStaffEntity : EntityBase, IAeStaff
     /// </para>
     /// </summary>
     [ForeignKey("RefAeStaffEmploymentStatus")]
+    [Comment("The condition under which a person has agreed to serve as an employee.")]
     public Guid? RefAeStaffEmploymentStatusId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AeStaffEntity : EntityBase, IAeStaff
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19774">Years of Prior Adult Education Teaching Experience</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of years that a person has previously held a teaching position in one or more adult education programs.")]
     public Decimal? YearsOfPriorAeTeachingExperience { get; set; }
 
     #endregion

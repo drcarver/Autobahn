@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefAssessmentNeedNumberOfBrailleDot file
 /// </summary>
+[Table("RefAssessmentNeedNumberOfBrailleDot", Schema = "Assessments")]
 public partial class RefAssessmentNeedNumberOfBrailleDotEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefAssessmentNeedNumberOfBrailleDot Properties"

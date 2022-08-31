@@ -21,6 +21,7 @@ public partial class RubricEntity : EntityBase, IRubric
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An identifier assigned to a rubric.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class RubricEntity : EntityBase, IRubric
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of the rubric.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class RubricEntity : EntityBase, IRubric
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The URL location where the rubric may be found.")]
     public System.String UrlReference { get; set; }
 
     #endregion

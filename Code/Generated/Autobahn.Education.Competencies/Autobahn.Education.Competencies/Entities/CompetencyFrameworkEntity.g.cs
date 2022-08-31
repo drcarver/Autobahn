@@ -19,6 +19,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20548">Competency Framework Publication Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which this content was first published.")]
     public DateTime? CompetencyFrameworkPublicationDate { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(512,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A URL that resolves to the original or authoritative competency framework document.")]
     public System.String CompetencyFrameworkSourceUrl { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(120,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The person or organization chiefly responsible for the intellectual content of the competency framework.")]
     public System.String Creator { get; set; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(120,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A legal, quasi-legal, organizational or institutional domain of the entity mandating the use of the statement--e.g., California.")]
     public System.String Jurisdiction { get; set; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A legal document giving official permission to do something with the competency framework.")]
     public System.String License { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The entity responsible for making the competency framework available.")]
     public System.String Publisher { get; set; }
 
     /// <summary>
@@ -96,6 +102,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </para>
     /// </summary>
     [ForeignKey("RefCompetencyFrameworkPublicationStatus")]
+    [Comment("The publication status of the competency framework.")]
     public Guid? RefCompetencyFrameworkPublicationStatusId { get; set; }
 
     /// <summary>
@@ -108,6 +115,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </para>
     /// </summary>
     [ForeignKey("RefLanguage")]
+    [Comment("The default language of the text used for the content in the competency framework.")]
     public Guid? RefLanguageId { get; set; }
 
     /// <summary>
@@ -121,6 +129,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The information about rights held in and over the resource.")]
     public System.String Rights { get; set; }
 
     /// <summary>
@@ -134,6 +143,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The person or organization owning or managing rights over the competency framework.")]
     public System.String RightsHolder { get; set; }
 
     /// <summary>
@@ -147,6 +157,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The topic or academic subject of the competency framework.")]
     public System.String Subject { get; set; }
 
     /// <summary>
@@ -160,6 +171,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(120,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the competency framework.")]
     public System.String Title { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -176,6 +188,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day the competency framework was deprecated/replaced by the jurisdiction in which it was intended to apply.")]
     public System.DateTime ValidEndDate { get; set; }
 
     /// <summary>
@@ -188,6 +201,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day the competency framework was adopted by the jurisdiction in which it was intended to apply.")]
     public System.DateTime ValidStartDate { get; set; }
 
     /// <summary>
@@ -201,6 +215,7 @@ public partial class CompetencyFrameworkEntity : EntityBase, ICompetencyFramewor
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Defines the revision of the competency framework as a version number or date.")]
     public System.String Version { get; set; }
 
     #endregion

@@ -20,6 +20,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The date on which an attendance event takes place.")]
     public System.DateTime Date { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20901">End Time</a>
     /// </para>
     /// </summary>
+    [Comment("The ending hour, minute and second.")]
     public TimeSpan? EndTime { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [ForeignKey("RefAbsentAttendanceCategory")]
+    [Comment(" The category that describes how the student spends his or her time not physically present on school grounds and not participating in instruction or instruction-related activities at an approved off-grounds location.")]
     public Guid? RefAbsentAttendanceCategoryId { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [ForeignKey("RefAttendanceEventType")]
+    [Comment("The type of attendance event.")]
     public Guid? RefAttendanceEventTypeId { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [ForeignKey("RefAttendanceStatus")]
+    [Comment("The status of a person's attendance associated with an Attendance Event Type and Attendance Event Date in an organization-person-role context.")]
     public Guid? RefAttendanceStatusId { get; set; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [ForeignKey("RefLeaveEventType")]
+    [Comment("The type of the leave event.")]
     public Guid? RefLeaveEventTypeId { get; set; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// </para>
     /// </summary>
     [ForeignKey("RefPresentAttendanceCategory")]
+    [Comment("The category that describes how the student spends his or her time when attending an instructional program approved by the state and/or school.")]
     public Guid? RefPresentAttendanceCategoryId { get; set; }
 
     /// <summary>
@@ -109,6 +116,7 @@ public partial class RoleAttendanceEventEntity : EntityBase, IRoleAttendanceEven
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20900">Start Time</a>
     /// </para>
     /// </summary>
+    [Comment("The starting hour, minute and second.")]
     public TimeSpan? StartTime { get; set; }
 
     #endregion

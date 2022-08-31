@@ -27,6 +27,7 @@ public partial class RoleStatusEntity : EntityBase, IRoleStatus
     /// </para>
     /// </summary>
     [ForeignKey("RefRoleStatus")]
+    [Comment("An indication as to whether a student's name was, is, or will be officially registered on the roll of a school or schools.")]
     public Guid? RefRoleStatusId { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class RoleStatusEntity : EntityBase, IRoleStatus
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19794">Employment End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which a person ended self-employment or employment with an organization or institution.")]
     public DateTime? StatusEndDate { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class RoleStatusEntity : EntityBase, IRoleStatus
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day on which a person began self-employment or employment with an organization or institution.")]
     public System.DateTime StatusStartDate { get; set; }
 
     #endregion

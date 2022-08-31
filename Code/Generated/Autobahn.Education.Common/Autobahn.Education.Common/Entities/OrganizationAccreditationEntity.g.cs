@@ -21,6 +21,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full name of an agency that accredited a school.")]
     public System.String AccreditationAgencyName { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19840">Accreditation Award Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day when an accreditation was awarded.")]
     public DateTime? AccreditationAwardDate { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19841">Accreditation Expiration Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day when an accreditation expires.")]
     public DateTime? AccreditationExpirationDate { get; set; }
 
     public Boolean? AccreditationStatus { get; set; }
@@ -64,6 +67,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// </para>
     /// </summary>
     [ForeignKey("RefAccreditationAgency")]
+    [Comment("The agency that accredited a program.")]
     public Guid? RefAccreditationAgencyId { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// </para>
     /// </summary>
     [ForeignKey("RefHigherEducationInstitutionAccreditationStatus")]
+    [Comment("An indication of the accreditation status of a higher education institution.")]
     public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class OrganizationAccreditationEntity : EntityBase, IOrganization
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20388">Organization Seeking Accreditation Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date in which accreditation process was started (but not officially approved or denied)")]
     public DateTime? SeekingAccreditationDate { get; set; }
 
     #endregion

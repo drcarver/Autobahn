@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19086">Economic Disadvantage Status</a>
 /// </para>
 /// </summary>
+[Table("RefPersonStatusType", Schema = "Common")]
+[Comment("An indication that the student met the State criteria for classification as having an economic disadvantage.")]
 public partial class RefPersonStatusTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

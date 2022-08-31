@@ -45,6 +45,7 @@ public partial class PersonPersonalInformationVerificationEntity : EntityBase, I
     /// </para>
     /// </summary>
     [ForeignKey("RefPersonalInformationType")]
+    [Comment("The type of personal information verified through the Personal Information Verification evidence.")]
     public Guid? RefPersonalInformationTypeId { get; set; }
 
     /// <summary>
@@ -57,6 +58,7 @@ public partial class PersonPersonalInformationVerificationEntity : EntityBase, I
     /// </para>
     /// </summary>
     [ForeignKey("RefPersonalInformationVerification")]
+    [Comment("The evidence by which a persons name, address, date of birth, etc. is confirmed.")]
     public Guid? RefPersonalInformationVerificationId { get; set; }
 
     #endregion

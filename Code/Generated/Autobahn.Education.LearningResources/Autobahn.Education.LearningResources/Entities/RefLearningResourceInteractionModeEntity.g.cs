@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20543">Learning Resource Interaction Mode</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceInteractionMode", Schema = "LearningResources")]
+[Comment("The primary type of interaction, synchronous or asynchronous, defined for the learning resource.")]
 public partial class RefLearningResourceInteractionModeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

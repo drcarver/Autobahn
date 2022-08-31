@@ -26,6 +26,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A feedback message designed to be reported with the assessment performance level.")]
     public System.String DescriptiveFeedback { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to an assessment performance level.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(20,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A label representing the performance level appropriate for use on a report.")]
     public System.String Label { get; set; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Lowest possible score for the performance level.")]
     public System.String LowerCutScore { get; set; }
 
     /// <summary>
@@ -78,6 +82,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The metric or scale used for score reporting.")]
     public System.String ScoreMetric { get; set; }
 
     /// <summary>
@@ -91,6 +96,7 @@ public partial class AssessmentPerformanceLevelEntity : EntityBase, IAssessmentP
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Highest possible score for the performance level.")]
     public System.String UpperCutScore { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20044">Assessment Need Signing Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedSigningType", Schema = "Assessments")]
+[Comment("Defines as part of an Assessment Personal Needs Profile the type of signing preferred by the user.")]
 public partial class RefAssessmentNeedSigningTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

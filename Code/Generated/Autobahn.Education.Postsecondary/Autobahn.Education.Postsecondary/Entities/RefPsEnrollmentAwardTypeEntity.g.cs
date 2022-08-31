@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19360">Enrollment in Postsecondary Award Type</a>
 /// </para>
 /// </summary>
+[Table("RefPsEnrollmentAwardType", Schema = "Postsecondary")]
+[Comment("An indicator of the award level in which the person is currently enrolled.")]
 public partial class RefPsEnrollmentAwardTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -28,6 +28,7 @@ public partial class OrganizationPolicyEntity : EntityBase, IOrganizationPolicy
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Policies related to personnel in the organization.")]
     public System.String PolicyType { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]

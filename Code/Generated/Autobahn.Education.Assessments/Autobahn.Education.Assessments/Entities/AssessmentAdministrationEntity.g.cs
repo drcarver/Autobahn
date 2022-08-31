@@ -21,6 +21,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The period or window in which an assessment is supposed to be administered.")]
     public System.String AssessmentAdministrationPeriodDescription { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19375">Assessment Secure Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether or not the assessment is a secure assessment.")]
     public Boolean? AssessmentSecureIndicator { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19965">Assessment Administration Finish Date</a>
     /// </para>
     /// </summary>
+    [Comment("The finish date of the time period designated for the assessment administration.")]
     public DateTime? FinishDate { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19966">Assessment Administration Finish Time</a>
     /// </para>
     /// </summary>
+    [Comment("The finish time of the time period designated for the assessment administration.")]
     public TimeSpan? FinishTime { get; set; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name given to an assessment event.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -90,6 +95,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19963">Assessment Administration Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The start date of the time period designated for the assessment administration.")]
     public DateTime? StartDate { get; set; }
 
     /// <summary>
@@ -101,6 +107,7 @@ public partial class AssessmentAdministrationEntity : EntityBase, IAssessmentAdm
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19964">Assessment Administration Start Time</a>
     /// </para>
     /// </summary>
+    [Comment("The start time of the time period designated for the assessment administration.")]
     public TimeSpan? StartTime { get; set; }
 
     #endregion

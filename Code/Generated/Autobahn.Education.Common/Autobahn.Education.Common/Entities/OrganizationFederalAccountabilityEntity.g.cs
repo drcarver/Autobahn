@@ -21,6 +21,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of the accountability report.")]
     public System.String AccountabilityReportTitle { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19014">Alternate Adequate Yearly Progress Approach Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether the district or school used an approved alternate approach for calculating Adequate Yearly Progress (AYP).")]
     public Boolean? AlternateAypApproachIndicator { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19572">Annual Measurable Achievement Objective AYP Progress Attainment Status for LEP Students</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether the state or district met the annual measurable objectives for the Limited English Proficient (LEP) student subgroup in mathematics and reading/language arts.")]
     public Int32? AmaoAypProgressAttainmentLepStudents { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19535">Annual Measurable Achievement Objective Proficiency Attainment Status for LEP Students</a>
     /// </para>
     /// </summary>
+    [Comment("An indication whether the state, district or school met the Annual Measurable Achievement Objectives (AMAO) for attaining English proficiency for limited English proficient (LEP) students under Title III of ESEA.")]
     public Int32? AmaoProficiencyAttainmentLepStudents { get; set; }
 
     /// <summary>
@@ -65,6 +69,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19545">Annual Measurable Achievement Objective Progress Attainment Status for LEP Students</a>
     /// </para>
     /// </summary>
+    [Comment("An indication whether the state, district, or school met the Annual Measurable Achievement Objective (AMAO) for making progress in learning English for limited English proficient (LEP) students under Title III of ESEA as amended.")]
     public Int32? AmaoProgressAttainmentLepStudents { get; set; }
 
     /// <summary>
@@ -76,6 +81,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19433">Adequate Yearly Progress Appeal Changed Designation</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the appeal resulted in a change in a school or district's AYP designation.")]
     public Boolean? AypAppealChangedDesignation { get; set; }
 
     /// <summary>
@@ -87,6 +93,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19434">Adequate Yearly Progress Appeal Process Date</a>
     /// </para>
     /// </summary>
+    [Comment("The last date that an appeal of an AYP designation was processed.")]
     public DateTime? AypAppealProcessDate { get; set; }
 
     /// <summary>
@@ -98,6 +105,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19432">Appealed Adequate Yearly Progress Designation</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that a school or district appealed its AYP designation.")]
     public Boolean? AypAppealProcessDesignation { get; set; }
 
     /// <summary>
@@ -116,6 +124,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19210">Persistently Dangerous Status</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether the school is identified as persistently dangerous in accordance with state definition.")]
     public Boolean? PersistentlyDangerousStatus { get; set; }
 
     /// <summary>
@@ -128,6 +137,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefAdditionalTargetedSupportAndImprovementStatus")]
+    [Comment("The designation given to a school by the state for additional targeted support and improvement as part of its statewide system of annual meaningful differentiation.")]
     public Guid? RefAdditionalTargetedSupportAndImprovementStatusId { get; set; }
 
     /// <summary>
@@ -140,6 +150,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefAypStatus")]
+    [Comment("An indication of whether the state, district, or school met the Adequate Yearly Progress (AYP) requirements for the school year, as determined by the state-established criteria.")]
     public Guid? RefAypStatusId { get; set; }
 
     /// <summary>
@@ -152,6 +163,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefComprehensiveSupportAndImprovementStatus")]
+    [Comment("The designation given to a school by the state for comprehensive support and improvement as part of its statewide system of annual meaningful differentiation.")]
     public Guid? RefComprehensiveSupportAndImprovementStatusId { get; set; }
 
     /// <summary>
@@ -164,6 +176,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefCteGraduationRateInclusion")]
+    [Comment("An indication of how CTE concentrators are included in the state's computation of its graduation rate.")]
     public Guid? RefCteGraduationRateInclusionId { get; set; }
 
     /// <summary>
@@ -176,6 +189,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefElementaryMiddleAdditional")]
+    [Comment(" An indication of whether the school or district met the Elementary/Middle Additional Indicator requirement in accordance with state definition for the purpose of determining Adequate Yearly Progress (AYP).")]
     public Guid? RefElementaryMiddleAdditionalId { get; set; }
 
     /// <summary>
@@ -188,6 +202,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefGunFreeSchoolsActReportingStatus")]
+    [Comment("An indication of whether the school or local education agency (LEA) submitted a Gun-Free Schools Act (GFSA) of 1994 report to the state, as defined by Title 18, Section 921.")]
     public Guid? RefGunFreeSchoolsActReportingStatusId { get; set; }
 
     /// <summary>
@@ -200,6 +215,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefHighSchoolGraduationRateIndicator")]
+    [Comment("An indication of whether the school or district met the High School Graduation Rate requirement in accordance with state definition for the purposes of determining AYP.")]
     public Guid? RefHighSchoolGraduationRateIndicatorId { get; set; }
 
     /// <summary>
@@ -212,6 +228,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefParticipationStatusMath")]
+    [Comment("An indication of whether the school or district met the 95 percent participation requirement in the mathematics assessment in accordance with state definition for the purposes of determining AYP.")]
     public Guid? RefParticipationStatusMathId { get; set; }
 
     /// <summary>
@@ -224,6 +241,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefParticipationStatusRla")]
+    [Comment("An indication of whether the school or district met the 95 percent participation requirement on the reading/language arts assessment in accordance with state definition for the purposes of determining AYP.")]
     public Guid? RefParticipationStatusRlaId { get; set; }
 
     /// <summary>
@@ -236,6 +254,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefProficiencyTargetStatusMath")]
+    [Comment("An indication of whether the school or district met the math proficiency target in accordance with state definition for the purposes of determining AYP.")]
     public Guid? RefProficiencyTargetStatusMathId { get; set; }
 
     public Int32? RefProficiencyTargetStatusRlaid { get; set; }
@@ -250,6 +269,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefReconstitutedStatus")]
+    [Comment("An indication that the school was restructured, transformed or otherwise changed as a consequence of the state's accountability system under ESEA or as a result of School Improvement Grants (SIG).")]
     public Guid? RefReconstitutedStatusId { get; set; }
 
     /// <summary>
@@ -262,6 +282,7 @@ public partial class OrganizationFederalAccountabilityEntity : EntityBase, IOrga
     /// </para>
     /// </summary>
     [ForeignKey("RefTargetedSupportAndImprovementStatus")]
+    [Comment("The designation given to a school by the state for targeted support and improvement as part of its statewide system of annual meaningful differentiation.")]
     public Guid? RefTargetedSupportAndImprovementStatusId { get; set; }
 
     #endregion

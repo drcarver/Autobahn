@@ -20,6 +20,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day of a dental screening")]
     public System.DateTime DentalScreeningDate { get; set; }
 
     /// <summary>
@@ -33,6 +34,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The screening equipment used for the hearing screening or the method used for the vision screening")]
     public System.String HealthScreeningEquipmentUsed { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Recommendations for follow-up after a health screening.")]
     public System.String HealthScreeningFollowUpRecommendation { get; set; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19681">Hearing Screening Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day of a hearing screening.")]
     public DateTime? HearingScreeningDate { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefDentalInsuranceCoverageType")]
+    [Comment("The source of insurance covering an person's dental care.")]
     public Guid? RefDentalInsuranceCoverageTypeId { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefDentalScreeningStatus")]
+    [Comment("The condition of a person's mouth or oral cavity; more specifically the condition of the hard tissues (i.e., teeth and jaws) and the soft tissues (i.e., gums, tongue, lips, palate, mouth floor, and inner cheeks). Good oral health denotes the absence of clinically manifested disease or abnormalities of the oral cavity.")]
     public Guid? RefDentalScreeningStatusId { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefHealthInsuranceCoverage")]
+    [Comment("The nature of insurance covering an person's hospitalization and other health or medical care.")]
     public Guid? RefHealthInsuranceCoverageId { get; set; }
 
     /// <summary>
@@ -111,6 +118,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefHearingScreeningStatus")]
+    [Comment("Status of an examination used to measure a person's ability to perceive sounds.")]
     public Guid? RefHearingScreeningStatusId { get; set; }
 
     /// <summary>
@@ -123,6 +131,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefMedicalAlertIndicator")]
+    [Comment("Alert indicator for a medical/health condition.")]
     public Guid? RefMedicalAlertIndicatorId { get; set; }
 
     /// <summary>
@@ -135,6 +144,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// </para>
     /// </summary>
     [ForeignKey("RefVisionScreeningStatus")]
+    [Comment("Status of an examination used to measure a person's ability to see.")]
     public Guid? RefVisionScreeningStatusId { get; set; }
 
     /// <summary>
@@ -146,6 +156,7 @@ public partial class PersonHealthEntity : EntityBase, IPersonHealth
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19680">Vision Screening Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day of a vision screening.")]
     public DateTime? VisionScreeningDate { get; set; }
 
     #endregion

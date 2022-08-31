@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20038">Assessment Need Braille Mark Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedBrailleMarkType", Schema = "Assessments")]
+[Comment("Defines as part of an Assessment Personal Needs Profile what textual properties to mark when using a Braille display.")]
 public partial class RefAssessmentNeedBrailleMarkTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

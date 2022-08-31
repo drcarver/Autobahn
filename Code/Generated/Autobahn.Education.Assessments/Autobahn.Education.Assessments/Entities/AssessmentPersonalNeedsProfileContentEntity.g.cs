@@ -51,6 +51,7 @@ public partial class AssessmentPersonalNeedsProfileContentEntity : EntityBase, I
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedHazardType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile a characteristic of a digital resource that may be specified as being dangerous to a user.")]
     public Guid? RefAssessmentNeedHazardTypeId { get; set; }
 
     /// <summary>
@@ -63,6 +64,7 @@ public partial class AssessmentPersonalNeedsProfileContentEntity : EntityBase, I
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedSupportTool")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the electronic tool associated with a resource.")]
     public Guid? RefAssessmentNeedSupportToolId { get; set; }
 
     /// <summary>
@@ -75,6 +77,7 @@ public partial class AssessmentPersonalNeedsProfileContentEntity : EntityBase, I
     /// </para>
     /// </summary>
     [ForeignKey("RefKeywordTranslationsLanguage")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the default language for the keyword translation.")]
     public Guid? RefKeywordTranslationsLanguageId { get; set; }
 
     public Boolean? ScaffoldingActivateByDefaultIndicator { get; set; }

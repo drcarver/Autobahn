@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20857">Facility Maintenance Standard Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityMaintStandardType", Schema = "Facilities")]
+[Comment("The standard for maintenance of a component, system, or building.")]
 public partial class RefFacilityMaintStandardTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

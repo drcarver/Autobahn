@@ -26,6 +26,7 @@ public partial class FacilityLeaseEntity : EntityBase, IFacilityLease
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20868">Facility Lease Amount</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of money the school must pay to rent the facility that it is in.")]
     public Decimal? FacilityLeaseAmount { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class FacilityLeaseEntity : EntityBase, IFacilityLease
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityLeaseAmountCategory")]
+    [Comment("The category of payment that a school must pay to rent the facility that it is in.")]
     public Guid? RefFacilityLeaseAmountCategoryId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class FacilityLeaseEntity : EntityBase, IFacilityLease
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityLeaseType")]
+    [Comment("The type of agreement that allows the use and possession of a school, building, or other facility from a third party in return for a regularly scheduled installment payment over an agreed-upon period.")]
     public Guid? RefFacilityLeaseTypeId { get; set; }
 
     #endregion

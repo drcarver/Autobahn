@@ -21,6 +21,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The abbreviated title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus.")]
     public System.String AssessmentFamilyShortName { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full title of the Assessment Family. An Assessment Family is a set of assessments with a common name, jurisdiction, or focus, such as Graduate Record Exam or National Assessment of Educational Progress.")]
     public System.String AssessmentFamilyTitle { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20519">Assessment Revision Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day, and year that the conceptual design for the assessment was most recently revised substantially.")]
     public DateTime? AssessmentRevisionDate { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -60,6 +63,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19158">Assessment Identification System</a>
     /// </para>
     /// </summary>
+    [Comment("A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to an assessment.")]
     public Int32? IdentificationSystem { get; set; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to an assessment by a school, school system, a state, or other agency or entity.  This may be the publisher identifier.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(100,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("This is the objective that the assessment is measuring.")]
     public System.String Objective { get; set; }
 
     /// <summary>
@@ -99,6 +105,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Identifies the provider or publisher of the assessment.")]
     public System.String Provider { get; set; }
 
     /// <summary>
@@ -112,6 +119,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefAcademicSubject")]
+    [Comment("The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.")]
     public Guid RefAcademicSubjectId { get; set; }
 
     /// <summary>
@@ -124,6 +132,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentPurpose")]
+    [Comment("The reason for which an assessment is designed or delivered.")]
     public Guid? RefAssessmentPurposeId { get; set; }
 
     /// <summary>
@@ -136,6 +145,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentTypeChildrenWithDisabilities")]
+    [Comment("The types of assessments administered to children with disabilities.")]
     public Guid? RefAssessmentTypeChildrenWithDisabilitiesId { get; set; }
 
     /// <summary>
@@ -148,6 +158,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentType")]
+    [Comment("The category of an assessment based on format and content.")]
     public Guid? RefAssessmentTypeId { get; set; }
 
     /// <summary>
@@ -161,6 +172,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An abbreviated title for an assessment.")]
     public System.String ShortName { get; set; }
 
     /// <summary>
@@ -174,6 +186,7 @@ public partial class AssessmentEntity : EntityBase, IAssessment
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title or name of the assessment.")]
     public System.String Title { get; set; }
 
     #endregion

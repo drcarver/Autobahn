@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20797">Building Design Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingDesignType", Schema = "Facilities")]
+[Comment("The primary design or purpose of a building, as determined by its physical layout and built-in systems and equipment, regardless of its current use.")]
 public partial class RefBuildingDesignTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

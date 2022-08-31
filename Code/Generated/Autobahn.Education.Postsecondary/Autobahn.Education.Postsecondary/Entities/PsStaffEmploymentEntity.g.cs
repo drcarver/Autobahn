@@ -19,6 +19,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19722">Annual Base Contractual Salary</a>
     /// </para>
     /// </summary>
+    [Comment("The total annual base contractual salary of a person.")]
     public Decimal? AnnualBaseContractualSalary { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19711">Faculty Status</a>
     /// </para>
     /// </summary>
+    [Comment("Persons identified by the institution as such and typically those whose initial assignments are made for the purpose of conducting instruction, research or public service as a principal activity (or activities). They may hold academic rank titles of professor, associate professor, assistant professor, instructor, lecturer or the equivalent of any of those academic ranks. Faculty may also include the chancellor/president, provost, vice provosts, deans, directors or the equivalent, as well as associate deans, assistant deans and executive officers of academic departments (chairpersons, heads or the equivalent) if their principal activity is instruction combined with research and/or public service. The designation as "faculty" is separate from the activities to which they may be currently assigned. For example, a newly appointed president of an institution may also be appointed as a faculty member. Graduate, instruction, and research assistants are not included in this category.")]
     public Boolean? FacultyStatus { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19720">Graduate Assistant Status</a>
     /// </para>
     /// </summary>
+    [Comment("Graduate-level students employed on a part-time basis, not limited to, but often employed for the primary purpose of assisting in classroom or laboratory instruction or in the conduct of research.  Graduate students having titles such as graduate assistant, teaching assistant, teaching associate, teaching fellow, or research assistant typically hold these positions.")]
     public Boolean? GraduateAssistantStatus { get; set; }
 
     /// <summary>
@@ -52,6 +55,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19709">Instructional Staff Status</a>
     /// </para>
     /// </summary>
+    [Comment("Staff whose primary function/occupational activity is primarily instruction or instruction combined with research and/or public service.  Does not include medical school staff.")]
     public Boolean? InstructionalStaffStatus { get; set; }
 
     /// <summary>
@@ -63,6 +67,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19710">Medical School Staff Status</a>
     /// </para>
     /// </summary>
+    [Comment("Staff employed by or employees working in the medical school component of a postsecondary institution or in a free standing medical school.  Does not include staff employed by or employees working strictly in a hospital associated with a medical school or those who work in health or allied health schools or departments such as dentistry, veterinary medicine, nursing or dental hygiene.")]
     public Boolean? MedicalSchoolStaffStatus { get; set; }
 
     /// <summary>
@@ -75,6 +80,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicRank")]
+    [Comment("The academic rank of staff whose primary responsibility is instruction, research, and/or public service.  Institutions without standard academic ranks should code staff whose primary responsibility is instruction, research, and/or public service as "No Academic Rank."")]
     public Guid? RefAcademicRankId { get; set; }
 
     /// <summary>
@@ -87,6 +93,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefEmploymentContractType")]
+    [Comment("The type of employment contract used by an institution.")]
     public Guid? RefEmploymentContractTypeId { get; set; }
 
     /// <summary>
@@ -99,6 +106,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefFullTimeStatus")]
+    [Comment("An indication of whether an individual is employed for a standard number of hours (as determined by civil or organizational policies) in a week, month, or other period of time.")]
     public Guid? RefFullTimeStatusId { get; set; }
 
     /// <summary>
@@ -111,6 +119,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefGraduateAssistantIpedsCategory")]
+    [Comment("The Integrated Postsecondary Education Data System (IPEDS) occupational categories used to report graduate assistants.")]
     public Guid? RefGraduateAssistantIpedsCategoryId { get; set; }
 
     /// <summary>
@@ -123,6 +132,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefInstructionalStaffContractLength")]
+    [Comment("The contracted teaching period for faculty.")]
     public Guid? RefInstructionalStaffContractLengthId { get; set; }
 
     /// <summary>
@@ -135,6 +145,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefInstructionalStaffFacultyTenure")]
+    [Comment("An indicator of the type of faculty status a person has if, by institutional definition, a staff member has faculty status.")]
     public Guid? RefInstructionalStaffFacultyTenureId { get; set; }
 
     /// <summary>
@@ -147,6 +158,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefInstructionCreditType")]
+    [Comment("A designation of the type(s) of instruction being delivered by staff whose primary responsibility is instruction.  Instruction that is for "credit" can be applied toward the requirements for a postsecondary degree, diploma, certificate or other formal award.")]
     public Guid? RefInstructionCreditTypeId { get; set; }
 
     /// <summary>
@@ -159,6 +171,7 @@ public partial class PsStaffEmploymentEntity : EntityBase, IPsStaffEmployment
     /// </para>
     /// </summary>
     [ForeignKey("RefIpedsOccupationalCategory")]
+    [Comment("The Integrated Postsecondary Education Data System (IPEDS) occupational categories used to report employees.")]
     public Guid? RefIpedsOccupationalCategoryId { get; set; }
 
     /// <summary>

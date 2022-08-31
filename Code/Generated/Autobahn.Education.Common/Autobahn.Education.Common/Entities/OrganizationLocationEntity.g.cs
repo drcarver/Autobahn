@@ -34,6 +34,7 @@ public partial class OrganizationLocationEntity : EntityBase, IOrganizationLocat
     /// </para>
     /// </summary>
     [ForeignKey("RefOrganizationLocationType")]
+    [Comment("The type of address listed for an organization.")]
     public Guid? RefOrganizationLocationTypeId { get; set; }
 
     #endregion

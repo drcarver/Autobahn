@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19765">Adult Education Instructional Program Type</a>
 /// </para>
 /// </summary>
+[Table("RefAeInstructionalProgramType", Schema = "AdultEducation")]
+[Comment("The type of instructional program in which an adult is enrolled.")]
 public partial class RefAeInstructionalProgramTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

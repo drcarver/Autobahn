@@ -21,6 +21,7 @@ public partial class CredentialDefCategoryEntity : EntityBase, ICredentialDefCat
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A category for defining the qualification, achievement, personal or organizational quality, or aspect of an identity.")]
     public System.String Category { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class CredentialDefCategoryEntity : EntityBase, ICredentialDefCat
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The system that defines the categories of the qualification, achievement, personal or organizational quality, or aspect of an identity used in Credential Category Type.")]
     public System.String CategorySystem { get; set; }
 
     /// <summary>

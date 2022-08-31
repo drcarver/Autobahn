@@ -33,6 +33,7 @@ public partial class CredentialOfferedEntity : EntityBase, ICredentialOffered
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20893">Credential Offered End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The last date a credential was offered.")]
     public DateTime? CredentialOfferedEndDate { get; set; }
 
     /// <summary>
@@ -44,6 +45,7 @@ public partial class CredentialOfferedEntity : EntityBase, ICredentialOffered
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20892">Credential Offered Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The first date a credential was offered.")]
     public DateTime? CredentialOfferedStartDate { get; set; }
 
     #endregion

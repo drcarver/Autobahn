@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19756">Teacher Education Credential Exam Type</a>
 /// </para>
 /// </summary>
+[Table("RefTeacherEducationCredentialExam", Schema = "Common")]
+[Comment("The type of examination used to assess teacher candidate's knowledge and skills.")]
 public partial class RefTeacherEducationCredentialExamEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

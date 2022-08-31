@@ -21,6 +21,7 @@ public partial class PsStudentAcademicAwardEntity : EntityBase, IPsStudentAcadem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(14,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year, month and day or year and month on which the academic award was conferred.")]
     public System.String AcademicAwardDate { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class PsStudentAcademicAwardEntity : EntityBase, IPsStudentAcadem
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The descriptive title for the academic award.")]
     public System.String AcademicAwardTitle { get; set; }
 
     /// <summary>
@@ -53,6 +55,7 @@ public partial class PsStudentAcademicAwardEntity : EntityBase, IPsStudentAcadem
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicAwardLevel")]
+    [Comment("An indicator of the category of award conferred by a college, university, or other postsecondary education institution as official recognition for the successful completion of a program of study.   ")]
     public Guid? RefAcademicAwardLevelId { get; set; }
 
     /// <summary>
@@ -65,6 +68,7 @@ public partial class PsStudentAcademicAwardEntity : EntityBase, IPsStudentAcadem
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicAwardPrerequisiteType")]
+    [Comment("Prerequisite conditions for earning an academic award.")]
     public Guid? RefAcademicAwardPrerequisiteTypeId { get; set; }
 
     /// <summary>

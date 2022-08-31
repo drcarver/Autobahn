@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20951">Personal Information Type</a>
 /// </para>
 /// </summary>
+[Table("RefPersonalInformationType", Schema = "Common")]
+[Comment("The type of personal information verified through the Personal Information Verification evidence.")]
 public partial class RefPersonalInformationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

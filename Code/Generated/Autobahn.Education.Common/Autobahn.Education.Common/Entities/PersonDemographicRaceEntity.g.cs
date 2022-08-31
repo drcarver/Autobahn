@@ -19,6 +19,7 @@ public partial class PersonDemographicRaceEntity : EntityBase, IPersonDemographi
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20932">Federal Race and Ethnicity Declined</a>
     /// </para>
     /// </summary>
+    [Comment("A parent, guardian, or student declined to report sufficient information for identifying a student's federal race and/or ethnicity.")]
     public Boolean? FederalRaceAndEthnicityDeclined { get; set; }
 
     /// <summary>

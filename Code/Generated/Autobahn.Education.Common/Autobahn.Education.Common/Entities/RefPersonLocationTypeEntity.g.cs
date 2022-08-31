@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19358">Address Type for Learner or Family</a>
 /// </para>
 /// </summary>
+[Table("RefPersonLocationType", Schema = "Common")]
+[Comment("The type of address listed for a learner or a parent, guardian, family member or related person.")]
 public partial class RefPersonLocationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefPersonLocationType Properties"

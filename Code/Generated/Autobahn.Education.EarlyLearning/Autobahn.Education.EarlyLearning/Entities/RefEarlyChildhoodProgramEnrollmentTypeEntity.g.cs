@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19829">Early Childhood Program Enrollment Type</a>
 /// </para>
 /// </summary>
+[Table("RefEarlyChildhoodProgramEnrollmentType", Schema = "EarlyLearning")]
+[Comment("The system outlining activities and procedures based on a set of required services and standards in which the child is enrolled.")]
 public partial class RefEarlyChildhoodProgramEnrollmentTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefEarlyChildhoodProgramEnrollmentType Properties"

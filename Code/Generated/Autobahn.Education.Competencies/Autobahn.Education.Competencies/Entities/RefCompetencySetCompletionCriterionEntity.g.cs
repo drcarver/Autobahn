@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefCompetencySetCompletionCriterion file
 /// </summary>
+[Table("RefCompetencySetCompletionCriterion", Schema = "Competencies")]
 public partial class RefCompetencySetCompletionCriterionEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefCompetencySetCompletionCriterion Properties"

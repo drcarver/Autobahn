@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19770">Adult Education Staff Classification</a>
 /// </para>
 /// </summary>
+[Table("RefAeStaffClassification", Schema = "AdultEducation")]
+[Comment("The titles of employment, official status, or rank of adult education staff.")]
 public partial class RefAeStaffClassificationEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

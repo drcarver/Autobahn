@@ -20,6 +20,7 @@ public partial class RubricCriterionLevelEntity : EntityBase, IRubricCriterionLe
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Pre-defined feedback text to be relayed to the person or organization being evaluated.  This may include guidance and suggestions for improvement or development.")]
     public System.String Feedback { get; set; }
 
     /// <summary>
@@ -31,6 +32,7 @@ public partial class RubricCriterionLevelEntity : EntityBase, IRubricCriterionLe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20445">Rubric Criterion Level Position</a>
     /// </para>
     /// </summary>
+    [Comment("A numeric value representing the level's position in the list of levels defined for the Rubric Criterion.")]
     public Int32? Position { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class RubricCriterionLevelEntity : EntityBase, IRubricCriterionLe
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A qualitative description of this degree of achievement used for column headers or row labels in tabular rubrics.")]
     public System.String Quality { get; set; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public partial class RubricCriterionLevelEntity : EntityBase, IRubricCriterionLe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20447">Rubric Criterion Level Score</a>
     /// </para>
     /// </summary>
+    [Comment("The points awarded for achieving this level.")]
     public Decimal? Score { get; set; }
 
     #endregion

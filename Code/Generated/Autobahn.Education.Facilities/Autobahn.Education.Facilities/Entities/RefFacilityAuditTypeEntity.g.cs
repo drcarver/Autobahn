@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20845">Facility Audit Type</a>
 /// </para>
 /// </summary>
+[Table("RefFacilityAuditType", Schema = "Facilities")]
+[Comment("The type of systematic review or audit of facility quality, management, decision making processes, controls, schedule and cost.")]
 public partial class RefFacilityAuditTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

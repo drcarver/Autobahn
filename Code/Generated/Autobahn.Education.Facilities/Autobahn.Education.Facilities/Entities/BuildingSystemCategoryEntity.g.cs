@@ -27,6 +27,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingAirDistributionSystemType")]
+    [Comment("The primary means by which air is circulated, freshened, and exhausted.")]
     public Guid? RefBuildingAirDistributionSystemTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCommMgmtComponentSystemType")]
+    [Comment("The type of system, interface, and management components for carrying voice, video, and data throughout a building.")]
     public Guid? RefBuildingCommMgmtComponentSystemTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingCoolingGenerationSystemType")]
+    [Comment("The type of mechanical systems and building designs used for cooling.")]
     public Guid? RefBuildingCoolingGenerationSystemTypeId { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingElectricalSystemType")]
+    [Comment("The components and system required to distribute electricity throughout the building or site.")]
     public Guid? RefBuildingElectricalSystemTypeId { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingFireProtectionSystemType")]
+    [Comment("The type of system that protects the facility against fire.")]
     public Guid? RefBuildingFireProtectionSystemTypeId { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingHeatingGenerationSystemType")]
+    [Comment("The method by which the heat is distributed and delivered throughout the room(s) or building.")]
     public Guid? RefBuildingHeatingGenerationSystemTypeId { get; set; }
 
     /// <summary>
@@ -105,6 +111,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingMechanicalConveyingSystemType")]
+    [Comment("Mechanical means for moving people and equipment within buildings.")]
     public Guid? RefBuildingMechanicalConveyingSystemTypeId { get; set; }
 
     /// <summary>
@@ -117,6 +124,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingMechanicalSystemType")]
+    [Comment("The major manufactured systems required to operate a building.")]
     public Guid? RefBuildingMechanicalSystemTypeId { get; set; }
 
     /// <summary>
@@ -129,6 +137,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingPlumbingSystemType")]
+    [Comment("The component of an on-site system for supplying, eliminating, and treating water.")]
     public Guid? RefBuildingPlumbingSystemTypeId { get; set; }
 
     /// <summary>
@@ -141,6 +150,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingSecuritySystemType")]
+    [Comment("The type of system that protects the facility from intrusion.")]
     public Guid? RefBuildingSecuritySystemTypeId { get; set; }
 
     /// <summary>
@@ -153,6 +163,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingSystemType")]
+    [Comment("The type of system that is installed in the building or site.")]
     public Guid? RefBuildingSystemTypeId { get; set; }
 
     /// <summary>
@@ -165,6 +176,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingTechnologyWiringSystemType")]
+    [Comment("The means through which voice, video, audio, and data information are conveyed.")]
     public Guid? RefBuildingTechnologyWiringSystemTypeId { get; set; }
 
     /// <summary>
@@ -177,6 +189,7 @@ public partial class BuildingSystemCategoryEntity : EntityBase, IBuildingSystemC
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingVerticalTransportationSystemType")]
+    [Comment("The type of system used to convey persons or freight between floors.")]
     public Guid? RefBuildingVerticalTransportationSystemTypeId { get; set; }
 
     #endregion

@@ -19,6 +19,7 @@ public partial class PersonTelephoneEntity : EntityBase, IPersonTelephone
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20905">Do Not Publish Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the record should not be published.")]
     public Boolean? DoNotPublishIndicator { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class PersonTelephoneEntity : EntityBase, IPersonTelephone
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("An indication that the telephone number should be used as the principal number for a person or organization.")]
     public System.Boolean PrimaryTelephoneNumberIndicator { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class PersonTelephoneEntity : EntityBase, IPersonTelephone
     /// </para>
     /// </summary>
     [ForeignKey("RefPersonTelephoneNumberType")]
+    [Comment("The type of communication number listed for a person.")]
     public Guid? RefPersonTelephoneNumberTypeId { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class PersonTelephoneEntity : EntityBase, IPersonTelephone
     /// </para>
     /// </summary>
     [ForeignKey("RefTelephoneNumberListedStatus")]
+    [Comment("An indication of whether a telephone number is listed under a directory assistance service.")]
     public Guid? RefTelephoneNumberListedStatusId { get; set; }
 
     /// <summary>
@@ -75,6 +79,7 @@ public partial class PersonTelephoneEntity : EntityBase, IPersonTelephone
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(24,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The telephone number including the area code, and extension, if applicable.")]
     public System.String TelephoneNumber { get; set; }
 
     #endregion

@@ -19,6 +19,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19727">Institutionally Controlled Housing Status</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether an institution has any residence hall or housing facility located on- or off-campus that is owned or controlled by an institution and used by the institution in direct support of or in a manner related to, the institution's educational purposes.")]
     public Boolean? InstitutionallyControlledHousingStatus { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefAdministrativeFundingControl")]
+    [Comment("The type of education institution as classified by its funding source.")]
     public Guid? RefAdministrativeFundingControlId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefAdmissionConsiderationLevel")]
+    [Comment("The level of consideration given a type of admission criteria used at an institution during the selection process.")]
     public Guid? RefAdmissionConsiderationLevelId { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefAdmissionConsiderationType")]
+    [Comment("The type of admission consideration used at an institution during the selection process.")]
     public Guid? RefAdmissionConsiderationTypeId { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefCarnegieBasicClassification")]
+    [Comment("The Basic Classification is an update of the traditional classification framework developed by the Carnegie Commission on Higher Education in 1970 to support its research program, and later published in 1973 for use by other researchers.")]
     public Guid? RefCarnegieBasicClassificationId { get; set; }
 
     /// <summary>
@@ -86,6 +91,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefControlOfInstitution")]
+    [Comment("A classification of whether a postsecondary institution is operated by publicly elected or appointed officials (public control) or by privately elected or appointed officials and derives its major source of funds from private sources (private control). ")]
     public Guid? RefControlOfInstitutionId { get; set; }
 
     /// <summary>
@@ -98,6 +104,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefIncreasedLearningTimeType")]
+    [Comment("The types of increased learning time provided.")]
     public Guid? RefIncreasedLearningTimeTypeId { get; set; }
 
     /// <summary>
@@ -110,6 +117,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefLevelOfInstitution")]
+    [Comment("A classification of whether a postsecondary institution's highest level of offering is a program of 4-years or higher (4 year), 2-but-less-than 4-years (2 year), or less than 2-years.")]
     public Guid? RefLevelOfInstitutionId { get; set; }
 
     /// <summary>
@@ -122,6 +130,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefPredominantCalendarSystem")]
+    [Comment("The method by which an institution structures most of its courses for the academic year.")]
     public Guid? RefPredominantCalendarSystemId { get; set; }
 
     /// <summary>
@@ -134,6 +143,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// </para>
     /// </summary>
     [ForeignKey("RefTenureSystem")]
+    [Comment("An indicator of whether an institution has personnel positions that lead to consideration for tenure.")]
     public Guid? RefTenureSystemId { get; set; }
 
     /// <summary>
@@ -145,6 +155,7 @@ public partial class PsInstitutionEntity : EntityBase, IPsInstitution
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20167">Virtual Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates a school, institution, program, or course section focuses primarily on instruction in which students and teachers are separated by time and/or location and interact through the use of computers and/or telecommunications technologies.")]
     public Boolean? VirtualIndicator { get; set; }
 
     #endregion

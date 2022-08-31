@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19750">Teacher Preparation Program Completer Status</a>
 /// </para>
 /// </summary>
+[Table("RefTeacherPrepCompleterStatus", Schema = "Common")]
+[Comment("An indication of whether a person completed a state-approved teacher preparation program.  The fact that a person has or has not been recommended to the state for initial certification or licensure may not be used as a criterion for determining who is a program completer.")]
 public partial class RefTeacherPrepCompleterStatusEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

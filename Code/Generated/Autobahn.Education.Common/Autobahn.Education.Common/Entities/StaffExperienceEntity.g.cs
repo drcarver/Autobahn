@@ -28,6 +28,7 @@ public partial class StaffExperienceEntity : EntityBase, IStaffExperience
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19302">Years of Prior Teaching Experience</a>
     /// </para>
     /// </summary>
+    [Comment("The total number of years prior to this job that a person has previously held a teaching position in one or more education institutions.")]
     public Decimal? YearsOfPriorTeachingExperience { get; set; }
 
     #endregion

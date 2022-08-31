@@ -19,6 +19,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19030">Available Carnegie Unit Credit</a>
     /// </para>
     /// </summary>
+    [Comment("Measured in Carnegie units, the amount of credit available to a student who successfully meets the objectives of the course. A course meeting every day for one period of the school day over the span of a school year offers one Carnegie unit. A Carnegie unit is thus a measure of "seat time" rather than a measure of attainment of the course objectives.")]
     public Decimal? AvailableCarnegieUnitCredit { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19509">Core Academic Course</a>
     /// </para>
     /// </summary>
+    [Comment("The course meets the state definition of a core academic course.")]
     public Boolean? CoreAcademicCourse { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19013">Course Aligned with Standards</a>
     /// </para>
     /// </summary>
+    [Comment("An indication whether a course is aligned with the established standards of a curriculum framework.")]
     public Boolean? CourseAlignedWithStandards { get; set; }
 
     /// <summary>
@@ -54,6 +57,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Department with jurisdiction over this course.")]
     public System.String CourseDepartmentName { get; set; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19137">High School Course Requirement</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that this course credit is required for a high school diploma.")]
     public Boolean? HighSchoolCourseRequirement { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefAdditionalCreditType")]
+    [Comment("The type of credits or units of value available for the completion of a course in addition to Carnegie Units.")]
     public Guid? RefAdditionalCreditTypeId { get; set; }
 
     /// <summary>
@@ -96,6 +102,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCareerCluster")]
+    [Comment("The career cluster that defines the industry or occupational focus which may be associated with a career pathways program, plan of study, or course.")]
     public Guid? RefCareerClusterId { get; set; }
 
     /// <summary>
@@ -114,6 +121,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCreditTypeEarned")]
+    [Comment("The type of credits or units of value awarded for the completion of a course.")]
     public Guid? RefCreditTypeEarnedId { get; set; }
 
     /// <summary>
@@ -126,6 +134,7 @@ public partial class CteCourseEntity : EntityBase, ICteCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCurriculumFrameworkType")]
+    [Comment("An indication of the standard curriculum used for this course.")]
     public Guid? RefCurriculumFrameworkTypeId { get; set; }
 
     /// <summary>

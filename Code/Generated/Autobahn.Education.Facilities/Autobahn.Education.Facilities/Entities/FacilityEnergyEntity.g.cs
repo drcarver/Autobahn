@@ -21,6 +21,7 @@ public partial class FacilityEnergyEntity : EntityBase, IFacilityEnergy
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the company that designs, procures, finances, installs, maintains, and guarantees the performance of energy conservation measures in an owner's facility or facilities.")]
     public System.String BuildingEnergyServiceCompanyName { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class FacilityEnergyEntity : EntityBase, IFacilityEnergy
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingEnergySourceType")]
+    [Comment("The source of energy that directly powers a school district facility or building system.")]
     public Guid? RefBuildingEnergySourceTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class FacilityEnergyEntity : EntityBase, IFacilityEnergy
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityUtilityProviderType")]
+    [Comment("An indication of how utilities are supplied to a site or a building by a company or provider.")]
     public Guid? RefFacilityUtilityProviderTypeId { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class FacilityEnergyEntity : EntityBase, IFacilityEnergy
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityUtilityType")]
+    [Comment("The type of utility used in the operation of a facility.")]
     public Guid? RefFacilityUtilityTypeId { get; set; }
 
     #endregion

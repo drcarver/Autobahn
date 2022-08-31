@@ -28,6 +28,7 @@ public partial class PersonStatusEntity : EntityBase, IPersonStatus
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefPersonStatusType")]
+    [Comment("An indication that the student met the State criteria for classification as having an economic disadvantage.")]
     public Guid RefPersonStatusTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class PersonStatusEntity : EntityBase, IPersonStatus
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20193">Status End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The last year, month and day when a status applied to an individual.")]
     public DateTime? StatusEndDate { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class PersonStatusEntity : EntityBase, IPersonStatus
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20192">Status Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day that a status became applicable to an individual.")]
     public DateTime? StatusStartDate { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]

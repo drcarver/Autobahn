@@ -28,6 +28,7 @@ public partial class FacilityMortgageFeeEntity : EntityBase, IFacilityMortgageFe
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefFacilityFinancingFeeType")]
+    [Comment("The type of fee that one must pay when getting a mortgage.")]
     public Guid RefFacilityFinancingFeeTypeId { get; set; }
 
     #endregion

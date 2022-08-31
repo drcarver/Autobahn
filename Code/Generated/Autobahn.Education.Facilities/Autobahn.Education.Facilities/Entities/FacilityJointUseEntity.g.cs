@@ -27,6 +27,7 @@ public partial class FacilityJointUseEntity : EntityBase, IFacilityJointUse
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingJointUseRationaleType")]
+    [Comment("The reasons for permitting and participating in joint-use.")]
     public Guid? RefBuildingJointUseRationaleTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class FacilityJointUseEntity : EntityBase, IFacilityJointUse
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingJointUserType")]
+    [Comment("The types of users sharing school district controlled, owned, or utilized facilities.")]
     public Guid? RefBuildingJointUserTypeId { get; set; }
 
     /// <summary>
@@ -51,6 +53,7 @@ public partial class FacilityJointUseEntity : EntityBase, IFacilityJointUse
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingJointUseSchedulingType")]
+    [Comment("The type of designation of non school district users by the amount of time they have access to public school for joint use.")]
     public Guid? RefBuildingJointUseSchedulingTypeId { get; set; }
 
     #endregion

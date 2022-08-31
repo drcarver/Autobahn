@@ -6,6 +6,7 @@
 /// <summary>
 /// The IRefLearnerActivityMaximumTimeAllowedUnit file
 /// </summary>
+[Table("RefLearnerActivityMaximumTimeAllowedUnit", Schema = "Assessments")]
 public partial class RefLearnerActivityMaximumTimeAllowedUnitEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefLearnerActivityMaximumTimeAllowedUnit Properties"

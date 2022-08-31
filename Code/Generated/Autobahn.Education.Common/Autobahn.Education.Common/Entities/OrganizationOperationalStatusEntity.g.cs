@@ -19,6 +19,7 @@ public partial class OrganizationOperationalStatusEntity : EntityBase, IOrganiza
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19350">Operation Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which a program or center began operation.")]
     public DateTime? OperationalStatusEffectiveDate { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class OrganizationOperationalStatusEntity : EntityBase, IOrganiza
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefOperationalStatus")]
+    [Comment("The classification of the operational condition of a local education agency (LEA) at the start of the school year.")]
     public Guid RefOperationalStatusId { get; set; }
 
     #endregion

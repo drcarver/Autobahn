@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19384">Assessment Item Characteristic Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentItemCharacteristicType", Schema = "Assessments")]
+[Comment("The type of psychometric measure provided for assessment item.")]
 public partial class RefAssessmentItemCharacteristicTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

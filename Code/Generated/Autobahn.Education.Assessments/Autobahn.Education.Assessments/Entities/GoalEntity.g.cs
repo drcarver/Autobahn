@@ -25,6 +25,7 @@ public partial class GoalEntity : EntityBase, IGoal
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20170">Goal End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the goal expires or has been achieved.")]
     public DateTime? EndDate { get; set; }
 
     /// <summary>
@@ -42,6 +43,7 @@ public partial class GoalEntity : EntityBase, IGoal
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20169">Goal Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the goal becomes active.")]
     public DateTime? StartDate { get; set; }
 
     #endregion

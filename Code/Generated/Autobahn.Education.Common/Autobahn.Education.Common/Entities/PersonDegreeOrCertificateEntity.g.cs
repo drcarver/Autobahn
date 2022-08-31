@@ -19,6 +19,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19081">Diploma or Credential Award Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.")]
     public DateTime? AwardDate { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(45,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the degree or certificate earned by a person. This includes honorary degrees conferred upon an individual.")]
     public System.String DegreeOrCertificateTitleOrSubject { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full legally accepted name of the institution.")]
     public System.String NameOfInstitution { get; set; }
 
     /// <summary>
@@ -64,6 +67,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// </para>
     /// </summary>
     [ForeignKey("RefDegreeOrCertificateType")]
+    [Comment("The type of degree or certificate earned by a person.")]
     public Guid? RefDegreeOrCertificateTypeId { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// </para>
     /// </summary>
     [ForeignKey("RefEducationVerificationMethod")]
+    [Comment("The method by which the formal education is verified.")]
     public Guid? RefEducationVerificationMethodId { get; set; }
 
     /// <summary>
@@ -88,6 +93,7 @@ public partial class PersonDegreeOrCertificateEntity : EntityBase, IPersonDegree
     /// </para>
     /// </summary>
     [ForeignKey("RefHigherEducationInstitutionAccreditationStatus")]
+    [Comment("An indication of the accreditation status of a higher education institution.")]
     public Guid? RefHigherEducationInstitutionAccreditationStatusId { get; set; }
 
     #endregion

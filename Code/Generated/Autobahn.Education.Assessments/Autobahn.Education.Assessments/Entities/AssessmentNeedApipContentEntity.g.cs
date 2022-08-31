@@ -19,6 +19,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20050">Assessment Need Directions Only</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile whether or not the verbal alternative content presentation should be applied to directive content only.")]
     public Boolean? AssessmentNeedDirectionsOnlyIndicator { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("ItemTranslationDisplayLanguageType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the default language for the displayed translation.")]
     public Guid? ItemTranslationDisplayLanguageTypeId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("KeywordTranslationLanguageType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the default language for the keyword translation.")]
     public Guid? KeywordTranslationLanguageTypeId { get; set; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20048">Assessment Need Read at Start Preference</a>
     /// </para>
     /// </summary>
+    [Comment("Used as part of an Assessment Personal Needs Profile to define if the spoken play-back should commence from the start of a recording or not.")]
     public Boolean? ReadAtStartPreferenceIndicator { get; set; }
 
     /// <summary>
@@ -73,6 +77,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedAlternativeRepresentationType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the default presentation mode of the associated Alternative Representations accessibility.")]
     public Guid? RefAssessmentNeedAlternativeRepresentationTypeId { get; set; }
 
     /// <summary>
@@ -85,6 +90,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedSigningType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the type of signing preferred by the user.")]
     public Guid? RefAssessmentNeedSigningTypeId { get; set; }
 
     /// <summary>
@@ -97,6 +103,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedSpokenSourcePreferenceType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the preferred spoken audio form.")]
     public Guid? RefAssessmentNeedSpokenSourcePreferenceTypeId { get; set; }
 
     /// <summary>
@@ -109,6 +116,7 @@ public partial class AssessmentNeedApipContentEntity : EntityBase, IAssessmentNe
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedUserSpokenPreferenceType")]
+    [Comment("Used as part of an Assessment Personal Needs Profile to define the type of material that should be rendered using the read aloud alternative content.")]
     public Guid? RefAssessmentNeedUserSpokenPreferenceTypeId { get; set; }
 
     #endregion

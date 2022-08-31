@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19928">Learning Resource Interactivity Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceInteractivityType", Schema = "LearningResources")]
+[Comment("The predominate mode of learning supported by the learning resource. Acceptable values are active, expositive, or mixed.")]
 public partial class RefLearningResourceInteractivityTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

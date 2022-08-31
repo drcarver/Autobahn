@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19935">Learner Action Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearnerActionType", Schema = "Assessments")]
+[Comment("The type of action taken by the learner.")]
 public partial class RefLearnerActionTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

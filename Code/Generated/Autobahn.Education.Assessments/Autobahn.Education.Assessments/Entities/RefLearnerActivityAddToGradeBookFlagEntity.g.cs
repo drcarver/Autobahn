@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19950">Learner Activity Add to Grade Book Flag</a>
 /// </para>
 /// </summary>
+[Table("RefLearnerActivityAddToGradeBookFlag", Schema = "Assessments")]
+[Comment("Identifies the assignment as one that is graded.")]
 public partial class RefLearnerActivityAddToGradeBookFlagEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

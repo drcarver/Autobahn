@@ -20,6 +20,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A description of a credential that reduced the time or cost of attaining this credential.")]
     public System.String AdvancedStandingDescription { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -37,6 +38,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Pronouncement of a favorable judgment by the agent being referenced.")]
     public System.String ApproverName { get; set; }
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20645">Credential Completion Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the person's requirements for earning a credential were met or completed.")]
     public DateTime? CompletionDate { get; set; }
 
     /// <summary>
@@ -59,6 +62,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20121">Credential Award End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date, if any, on which the qualification, achievement, personal or organizational quality, or aspect of an identity expires or requires renewal.")]
     public DateTime? CredentialAwardEndDate { get; set; }
 
     /// <summary>
@@ -70,6 +74,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20120">Credential Award Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the qualification, achievement, personal or organizational quality, or aspect of an identity was conferred.")]
     public DateTime? CredentialAwardStartDate { get; set; }
 
     /// <summary>
@@ -111,6 +116,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20641">Credential Revoked Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the qualification, achievement, personal or organizational quality, or aspect of an identity was revoked.")]
     public DateTime? RevokedDate { get; set; }
 
     /// <summary>
@@ -122,6 +128,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20732">Credential Revoked Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether the credential has been revoked by the credential provider.")]
     public Boolean? RevokedIndicator { get; set; }
 
     /// <summary>
@@ -134,6 +141,7 @@ public partial class CredentialAwardEntity : EntityBase, ICredentialAward
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Published reason for revocation of a credential award.")]
     public System.String RevokedReason { get; set; }
 
     #endregion

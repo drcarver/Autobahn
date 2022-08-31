@@ -32,6 +32,7 @@ public partial class OrganizationIndicatorEntity : EntityBase, IOrganizationIndi
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefOrganizationIndicator")]
+    [Comment("An indication of whether the school has students who are ability grouped for classroom instruction in mathematics or English/reading/language arts.")]
     public Guid RefOrganizationIndicatorId { get; set; }
 
     #endregion

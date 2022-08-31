@@ -26,6 +26,7 @@ public partial class AssessmentPersonalNeedScreenReaderEntity : EntityBase, IAss
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20031">Assessment Need Pitch</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the pitch of a speech synthesizer.")]
     public Decimal? Pitch { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class AssessmentPersonalNeedScreenReaderEntity : EntityBase, IAss
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedLinkIndicationType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the characteristics of presentation for a hyperlink when using a screen reader.")]
     public Guid? RefAssessmentNeedLinkIndicationTypeId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AssessmentPersonalNeedScreenReaderEntity : EntityBase, IAss
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedUsageType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.")]
     public Guid? RefAssessmentNeedUsageTypeId { get; set; }
 
     /// <summary>
@@ -61,6 +64,7 @@ public partial class AssessmentPersonalNeedScreenReaderEntity : EntityBase, IAss
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20030">Assessment Need Speech Rate</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the rate of speech of a speech synthesizer.")]
     public Int32? SpeechRate { get; set; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public partial class AssessmentPersonalNeedScreenReaderEntity : EntityBase, IAss
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20032">Assessment Need Volume</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the volume of a speech synthesizer.")]
     public Decimal? Volume { get; set; }
 
     #endregion

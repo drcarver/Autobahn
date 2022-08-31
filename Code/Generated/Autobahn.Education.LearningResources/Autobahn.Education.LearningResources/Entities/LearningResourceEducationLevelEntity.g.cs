@@ -28,6 +28,7 @@ public partial class LearningResourceEducationLevelEntity : EntityBase, ILearnin
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefEducationLevel")]
+    [Comment("The education level, grade level or primary instructional level at which a Learning Resource is intended.")]
     public Guid RefEducationLevelId { get; set; }
 
     #endregion

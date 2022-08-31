@@ -19,6 +19,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20317">Financial Accounting Period Actual Value</a>
     /// </para>
     /// </summary>
+    [Comment("The actual value of a financial account for the specified accounting period or fiscal year.")]
     public Decimal? ActualValue { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20318">Financial Accounting Period Budgeted Value</a>
     /// </para>
     /// </summary>
+    [Comment("The budgeted value of a financial account for the specified accounting period or fiscal year.")]
     public Decimal? BudgetedValue { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20629">Financial Accounting Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date of a financial transaction or when an account balance is reported.")]
     public DateTime? Date { get; set; }
 
     /// <summary>
@@ -52,6 +55,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20625">Financial Accounting Period Encumbered Value</a>
     /// </para>
     /// </summary>
+    [Comment("The planned or obligated expense value of a financial account for the specified accounting period or fiscal year.")]
     public Decimal? EncumberedValue { get; set; }
 
     /// <summary>
@@ -76,6 +80,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20623">Fiscal Period Begin Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which an accounting period begins.")]
     public DateTime? FiscalPeriodBeginDate { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20624">Fiscal Period End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which an accounting period ends.")]
     public DateTime? FiscalPeriodEndDate { get; set; }
 
     /// <summary>
@@ -100,6 +106,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year a school uses for budgeting, accounting, and reporting financials.")]
     public System.String FiscalYear { get; set; }
 
     /// <summary>
@@ -118,6 +125,7 @@ public partial class OrganizationFinancialEntity : EntityBase, IOrganizationFina
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20628">Financial Accounting Value</a>
     /// </para>
     /// </summary>
+    [Comment("The value of a financial account balance or transaction.")]
     public Decimal? Value { get; set; }
 
     #endregion

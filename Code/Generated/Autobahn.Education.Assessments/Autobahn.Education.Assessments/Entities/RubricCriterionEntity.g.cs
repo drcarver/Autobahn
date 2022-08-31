@@ -21,6 +21,7 @@ public partial class RubricCriterionEntity : EntityBase, IRubricCriterion
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A textual label for category by which Rubric Criterion may be grouped.")]
     public System.String Category { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class RubricCriterionEntity : EntityBase, IRubricCriterion
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20448">Rubric Criterion Position</a>
     /// </para>
     /// </summary>
+    [Comment("A numeric value representing this criterion's position in the criteria list for this rubric.")]
     public Int32? Position { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class RubricCriterionEntity : EntityBase, IRubricCriterion
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The title of the rubric criterion.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -63,6 +66,7 @@ public partial class RubricCriterionEntity : EntityBase, IRubricCriterion
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20450">Rubric Criterion Weight</a>
     /// </para>
     /// </summary>
+    [Comment("A numeric weight assigned to this Rubric Criterion, used for scored rubrics.")]
     public Decimal? Weight { get; set; }
 
     #endregion

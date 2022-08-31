@@ -19,6 +19,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19033">Birthdate</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which a person was born.")]
     public DateTime? Birthdate { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The evidence by which a child's date of birth is confirmed.")]
     public System.String BirthdateVerification { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(75,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full legal first name given to a person at birth, baptism, or through legal change.")]
     public System.String FirstName { get; set; }
 
     /// <summary>
@@ -58,6 +61,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(10,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An appendage, if any, used to denote a person's generation in his family (e.g., Jr., Sr., III).")]
     public System.String GenerationCode { get; set; }
 
     /// <summary>
@@ -69,6 +73,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19144">Hispanic or Latino Ethnicity</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the person traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central and South America, and other Spanish cultures, regardless of race.")]
     public Boolean? HispanicLatinoEthnicity { get; set; }
 
     /// <summary>
@@ -82,6 +87,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(75,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The full legal last name borne in common by members of a family.")]
     public System.String LastName { get; set; }
 
     /// <summary>
@@ -95,6 +101,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(75,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A full legal middle name given to a person at birth, baptism, or through legal change.")]
     public System.String MiddleName { get; set; }
 
     /// <summary>
@@ -115,6 +122,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("An appellation, if any, used to denote rank, placement, or status (e.g., Mr., Ms., Reverend, Sister, Dr., Colonel).")]
     public System.String Prefix { get; set; }
 
     /// <summary>
@@ -127,6 +135,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefHighestEducationLevelCompleted")]
+    [Comment("The extent of formal instruction a person has received (e.g., the highest grade in school completed or its equivalent or the highest degree received).")]
     public Guid? RefHighestEducationLevelCompletedId { get; set; }
 
     /// <summary>
@@ -139,6 +148,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefProofOfResidencyType")]
+    [Comment("An accepted form of proof of residency in the district/county/other locality.")]
     public Guid? RefProofOfResidencyTypeId { get; set; }
 
     /// <summary>
@@ -151,6 +161,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefSex")]
+    [Comment("The concept describing the biological traits that distinguish the males and females of a species.")]
     public Guid? RefSexId { get; set; }
 
     /// <summary>
@@ -163,6 +174,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefStateOfResidence")]
+    [Comment("An person's permanent address as determined by such evidence as a driver's license or voter registration. For entering freshmen, state of residence may be the legal state of residence of a parent or guardian.")]
     public Guid? RefStateOfResidenceId { get; set; }
 
     /// <summary>
@@ -175,6 +187,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefTribalAffiliation")]
+    [Comment("The Native American tribal entity recognized and eligible to receive services from the United States Bureau of Indian Affairs to which a person is affiliated.")]
     public Guid? RefTribalAffiliationId { get; set; }
 
     /// <summary>
@@ -193,6 +206,7 @@ public partial class PersonDetailEntity : EntityBase, IPersonDetail
     /// </para>
     /// </summary>
     [ForeignKey("RefVisaType")]
+    [Comment("An indicator of a non-US citizen's Visa type.")]
     public Guid? RefVisaTypeId { get; set; }
 
     #endregion

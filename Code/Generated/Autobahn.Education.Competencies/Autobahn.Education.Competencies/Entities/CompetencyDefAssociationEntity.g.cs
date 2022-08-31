@@ -21,6 +21,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("AssociatedEntity")]
+    [Comment("The unique identifier of an immediate prerequisite Competency Definition, a competency needed prior to learning this one. (Some items may have no prerequisites while others may have one or more prerequisites. This should only be used to represent the immediate predecessors in a competency-based pathway, i.e. not prerequisites of prerequisites.)")]
     public Guid AssociatedEntityId { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -45,6 +46,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Any citation appropriate to evidence the connection between nodes")]
     public System.String ConnectionCitation { get; set; }
 
     /// <summary>
@@ -58,6 +60,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Name of the destination node when the Competency Association is used as a connector in a learning map.")]
     public System.String DestinationNodeName { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -75,6 +78,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Name of the origin node when the Competency Association is used as a connector in a learning map.")]
     public System.String OriginNodeName { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -91,6 +95,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </para>
     /// </summary>
     [ForeignKey("RefCompetencyDefAssociationType")]
+    [Comment("Defines the nature of the association between a Competency Definition and an associated data object such as a Learning Resource, an Assessment Item, or even another Competency Definition.")]
     public Guid? RefCompetencyDefAssociationTypeId { get; set; }
 
     /// <summary>
@@ -110,6 +115,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// </para>
     /// </summary>
     [ForeignKey("RefLearningResourceCompetencyAlignmentType")]
+    [Comment("The alignment relationship between the resource and a competency definition object.")]
     public Guid? RefLearningResourceCompetencyAlignmentTypeId { get; set; }
 
     /// <summary>
@@ -121,6 +127,7 @@ public partial class CompetencyDefAssociationEntity : EntityBase, ICompetencyDef
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20376">Competency Association Weight</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates the relative significance this connection has for the destination node in a learning map.")]
     public Decimal? Weight { get; set; }
 
     #endregion

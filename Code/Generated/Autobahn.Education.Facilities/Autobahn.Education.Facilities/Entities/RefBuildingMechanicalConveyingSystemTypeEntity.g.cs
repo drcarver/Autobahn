@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20783">Building Mechanical Conveying System Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingMechanicalConveyingSystemType", Schema = "Facilities")]
+[Comment("Mechanical means for moving people and equipment within buildings.")]
 public partial class RefBuildingMechanicalConveyingSystemTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

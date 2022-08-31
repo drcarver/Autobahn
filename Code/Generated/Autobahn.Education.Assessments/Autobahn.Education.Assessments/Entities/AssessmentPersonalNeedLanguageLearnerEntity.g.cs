@@ -19,6 +19,7 @@ public partial class AssessmentPersonalNeedLanguageLearnerEntity : EntityBase, I
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20008">Assessment Personal Needs Profile Activate by Default</a>
     /// </para>
     /// </summary>
+    [Comment("Determines if the alternative accessible content is rendered as the default content for the learner.")]
     public Boolean? ActivateByDefault { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class AssessmentPersonalNeedLanguageLearnerEntity : EntityBase, I
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20007">Assessment Personal Needs Profile Assigned Support</a>
     /// </para>
     /// </summary>
+    [Comment("Defines whether or not the individual needs the kind of support defined by the entity.")]
     public Boolean? AssignedSupport { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class AssessmentPersonalNeedLanguageLearnerEntity : EntityBase, I
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefAssessmentNeedsProfileContentLanguageLearnerType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile a preference for the language of the user interface.")]
     public Guid RefAssessmentNeedsProfileContentLanguageLearnerTypeId { get; set; }
 
     #endregion

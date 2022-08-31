@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19675">Competency Framework Publication Status</a>
 /// </para>
 /// </summary>
+[Table("RefCompetencyFrameworkPublicationStatus", Schema = "Competencies")]
+[Comment("The publication status of the competency framework.")]
 public partial class RefCompetencyFrameworkPublicationStatusEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

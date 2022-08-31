@@ -21,6 +21,7 @@ public partial class WorkforceProgramParticipationEntity : EntityBase, IWorkforc
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(7,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The month and year on which the diploma/credential is awarded to a student in recognition of his/her completion of the curricular requirements.")]
     public System.String DiplomaOrCredentialAwardDate { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class WorkforceProgramParticipationEntity : EntityBase, IWorkforc
     /// </para>
     /// </summary>
     [ForeignKey("RefProfessionalTechnicalCredentialType")]
+    [Comment("An indicator of the category of credential conferred by a state occupational licensing entity or industry organization for competency in a specific area measured by a set of pre-established standards.")]
     public Guid? RefProfessionalTechnicalCredentialTypeId { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class WorkforceProgramParticipationEntity : EntityBase, IWorkforc
     /// </para>
     /// </summary>
     [ForeignKey("RefWfProgramParticipation")]
+    [Comment("The type of workforce and employment development program that an individual is participating in.")]
     public Guid? RefWfProgramParticipationId { get; set; }
 
     #endregion

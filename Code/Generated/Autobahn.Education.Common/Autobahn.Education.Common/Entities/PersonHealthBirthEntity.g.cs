@@ -19,6 +19,7 @@ public partial class PersonHealthBirthEntity : EntityBase, IPersonHealthBirth
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19421">Multiple Birth Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("An indication that the person is a twin, triplet, etc.")]
     public Boolean? MultipleBirthIndicator { get; set; }
 
     /// <summary>
@@ -38,6 +39,7 @@ public partial class PersonHealthBirthEntity : EntityBase, IPersonHealthBirth
     /// </para>
     /// </summary>
     [ForeignKey("RefTrimesterWhenPrenatalCareBegan")]
+    [Comment("The trimester of pregnancy in which a child's mother began receiving prenatal health care.")]
     public Guid? RefTrimesterWhenPrenatalCareBeganId { get; set; }
 
     /// <summary>
@@ -49,6 +51,7 @@ public partial class PersonHealthBirthEntity : EntityBase, IPersonHealthBirth
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19313">Weeks of Gestation</a>
     /// </para>
     /// </summary>
+    [Comment("The number of weeks during gestational period.")]
     public Int32? WeeksOfGestation { get; set; }
 
     /// <summary>
@@ -62,6 +65,7 @@ public partial class PersonHealthBirthEntity : EntityBase, IPersonHealthBirth
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(20,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The weight of a child at birth in pounds and ounces.")]
     public System.String WeightAtBirth { get; set; }
 
     #endregion

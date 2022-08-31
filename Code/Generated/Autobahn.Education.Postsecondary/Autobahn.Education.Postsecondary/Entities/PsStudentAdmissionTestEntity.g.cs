@@ -28,6 +28,7 @@ public partial class PsStudentAdmissionTestEntity : EntityBase, IPsStudentAdmiss
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefStandardizedAdmissionTest")]
+    [Comment("The type of test prepared and administered by an agency that is independent of any postsecondary education institution and is typically used for admissions purposes. Tests provide information about prospective students and their academic qualifications relative to a national sample.")]
     public Guid RefStandardizedAdmissionTestId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class PsStudentAdmissionTestEntity : EntityBase, IPsStudentAdmiss
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19265">Standardized Admission Test Score</a>
     /// </para>
     /// </summary>
+    [Comment("The quantitative score on a standardized admission test reported to a postsecondary institution.")]
     public Decimal? StandardizedAdmissionTestScore { get; set; }
 
     #endregion

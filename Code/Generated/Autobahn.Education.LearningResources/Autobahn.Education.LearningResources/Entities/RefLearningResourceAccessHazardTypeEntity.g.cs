@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20359">Learning Resource Access Hazard Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceAccessHazardType", Schema = "LearningResources")]
+[Comment("A characteristic of the described learning resource that is physiologically dangerous to some users.")]
 public partial class RefLearningResourceAccessHazardTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

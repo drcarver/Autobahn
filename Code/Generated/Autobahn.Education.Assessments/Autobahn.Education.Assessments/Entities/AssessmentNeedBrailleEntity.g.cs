@@ -25,6 +25,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20040">Assessment Need Braille Dot Pressure</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the resistance pressure of Braille display pins.")]
     public Decimal? BrailleDotPressure { get; set; }
 
     /// <summary>
@@ -36,6 +37,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20037">Assessment Need Number of Braille Cells</a>
     /// </para>
     /// </summary>
+    [Comment("Defines as part of an Assessment Personal Needs Profile the number of active Braille cells in a Braille display.")]
     public Int32? NumberOfBrailleCells { get; set; }
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedBrailleGradeType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the grade of Braille to use when using a Braille display.")]
     public Guid? RefAssessmentNeedBrailleGradeTypeId { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedBrailleMarkType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile what textual properties to mark when using a Braille display.")]
     public Guid? RefAssessmentNeedBrailleMarkTypeId { get; set; }
 
     /// <summary>
@@ -72,6 +76,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedBrailleStatusCellType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the preferred presence or location of a Braille display status cell.")]
     public Guid? RefAssessmentNeedBrailleStatusCellTypeId { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedNumberOfBrailleDots")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the number of dots in a Braille cell.")]
     public Guid? RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
 
     /// <summary>
@@ -96,6 +102,7 @@ public partial class AssessmentNeedBrailleEntity : EntityBase, IAssessmentNeedBr
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentNeedUsageType")]
+    [Comment("Defines as part of an Assessment Personal Needs Profile the rating for the collection of Access for All (AfA) needs and preferences.")]
     public Guid? RefAssessmentNeedUsageTypeId { get; set; }
 
     #endregion

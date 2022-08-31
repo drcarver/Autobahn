@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20516">Assessment Registration Completion Status</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentRegistrationCompletionStatus", Schema = "Assessments")]
+[Comment("The completion and scoring status for an instance of a person taking an assessment.")]
 public partial class RefAssessmentRegistrationCompletionStatusEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

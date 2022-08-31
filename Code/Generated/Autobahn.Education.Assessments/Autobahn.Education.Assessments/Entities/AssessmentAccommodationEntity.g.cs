@@ -21,6 +21,7 @@ public partial class AssessmentAccommodationEntity : EntityBase, IAssessmentAcco
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The description of the accommodation when 'Accommodation Type' is set to 'Other'.")]
     public System.String OtherDescription { get; set; }
 
     /// <summary>
@@ -33,6 +34,7 @@ public partial class AssessmentAccommodationEntity : EntityBase, IAssessmentAcco
     /// </para>
     /// </summary>
     [ForeignKey("RefAccommodationType")]
+    [Comment("The specific accommodation necessary for assessment or instruction.")]
     public Guid? RefAccommodationTypeId { get; set; }
 
     /// <summary>
@@ -45,6 +47,7 @@ public partial class AssessmentAccommodationEntity : EntityBase, IAssessmentAcco
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentAccommodationCategory")]
+    [Comment("A category of accommodations needed for a given assessment.")]
     public Guid? RefAssessmentAccommodationCategoryId { get; set; }
 
     #endregion

@@ -32,6 +32,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20517">Assessment Registration Completion Status Date Time</a>
     /// </para>
     /// </summary>
+    [Comment("The date and time the completion and scoring status was changed for an instance of a person taking an assessment.")]
     public DateTime? AssessmentRegistrationCompletionStatusDateTime { get; set; }
 
     /// <summary>
@@ -44,6 +45,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("AssignedByPerson")]
+    [Comment("The unique identifier of the person who assigned the assessment to the learner.")]
     public Guid? AssignedByPersonId { get; set; }
 
     /// <summary>
@@ -61,6 +63,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20019">Assessment Registration Creation Date</a>
     /// </para>
     /// </summary>
+    [Comment("Date/time assignment is made.")]
     public DateTime? CreationDate { get; set; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20017">Assessment Registration Days of Instruction</a>
     /// </para>
     /// </summary>
+    [Comment("The number of days of instruction the student has taken prior to testing.")]
     public Int32? DaysOfInstructionPriorToAssessment { get; set; }
 
     public Boolean? LeafullAcademicYear { get; set; }
@@ -105,6 +109,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentParticipationIndicator")]
+    [Comment("An indication of whether a student participated in an assessment.")]
     public Guid? RefAssessmentParticipationIndicatorId { get; set; }
 
     /// <summary>
@@ -117,6 +122,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentPurpose")]
+    [Comment("The reason for which an assessment is designed or delivered.")]
     public Guid? RefAssessmentPurposeId { get; set; }
 
     /// <summary>
@@ -129,6 +135,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentReasonNotCompleting")]
+    [Comment("The primary reason a participant did not complete an assessment.")]
     public Guid? RefAssessmentReasonNotCompletingId { get; set; }
 
     /// <summary>
@@ -141,6 +148,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentReasonNotTested")]
+    [Comment("The primary reason a student is not tested.")]
     public Guid? RefAssessmentReasonNotTestedId { get; set; }
 
     /// <summary>
@@ -153,6 +161,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentRegistrationCompletionStatus")]
+    [Comment("The completion and scoring status for an instance of a person taking an assessment.")]
     public Guid? RefAssessmentRegistrationCompletionStatusId { get; set; }
 
     /// <summary>
@@ -165,6 +174,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefGradeLevelToBeAssessed")]
+    [Comment("The grade or developmental level of a student when assessed.")]
     public Guid? RefGradeLevelToBeAssessedId { get; set; }
 
     /// <summary>
@@ -177,6 +187,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </para>
     /// </summary>
     [ForeignKey("RefGradeLevelWhenAssessed")]
+    [Comment("The grade or developmental level of a student when assessed.")]
     public Guid? RefGradeLevelWhenAssessedId { get; set; }
 
     /// <summary>
@@ -188,6 +199,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20018">Assessment Registration Retest Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates if this registration is for a retest (retake). Retest can occur if a student failed a prior attempt and is eligible to retake. Other retest scenarios also can occur.")]
     public Boolean? RetestIndicator { get; set; }
 
     /// <summary>
@@ -199,6 +211,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20744">School Full Academic Year</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether a student was in membership in the school education unit for a full academic year, according to the state's definition of Full Academic Year.")]
     public Boolean? SchoolFullAcademicYear { get; set; }
 
     /// <summary>
@@ -216,6 +229,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20062">Assessment Registration Score Publish Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date set by the testing program when the test scores are published.  For formative or classroom assessments, this will likely be the date when the scored the individual test.  For summative assessments, this date is likely set for a group of assessments when the processing system releases the scores.")]
     public DateTime? ScorePublishDate { get; set; }
 
     /// <summary>
@@ -227,6 +241,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20742">State Full Academic Year</a>
     /// </para>
     /// </summary>
+    [Comment("An indication of whether a student was in membership in the state education unit for a full academic year, according to the state's definition of Full Academic Year.")]
     public Boolean? StateFullAcademicYear { get; set; }
 
     /// <summary>
@@ -240,6 +255,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique identifier for the test attempt assigned by the delivery system.")]
     public System.String TestAttemptIdentifier { get; set; }
 
     /// <summary>
@@ -253,6 +269,7 @@ public partial class AssessmentRegistrationEntity : EntityBase, IAssessmentRegis
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("Indicates rules about use of results based on Special Events before, during or after the test. The option set values are determined by the testing program.")]
     public System.String TestingIndicator { get; set; }
 
     #endregion

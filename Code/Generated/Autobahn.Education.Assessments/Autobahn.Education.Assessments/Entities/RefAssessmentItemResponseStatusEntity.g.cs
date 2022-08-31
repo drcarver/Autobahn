@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19396">Assessment Item Response Status</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentItemResponseStatus", Schema = "Assessments")]
+[Comment("The status of the response for a given item.")]
 public partial class RefAssessmentItemResponseStatusEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20029">Assessment Need Link Indication Type</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentNeedLinkIndicationType", Schema = "Assessments")]
+[Comment("Defines as part of an Assessment Personal Needs Profile the characteristics of presentation for a hyperlink when using a screen reader.")]
 public partial class RefAssessmentNeedLinkIndicationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20833">Building Joint Use Rationale Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingJointUseRationaleType", Schema = "Facilities")]
+[Comment("The reasons for permitting and participating in joint-use.")]
 public partial class RefBuildingJointUseRationaleTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

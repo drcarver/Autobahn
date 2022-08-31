@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19775">Adult Education Certification Type</a>
 /// </para>
 /// </summary>
+[Table("RefAeCertificationType", Schema = "AdultEducation")]
+[Comment("An indication of the category of the adult education certification a person holds.")]
 public partial class RefAeCertificationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

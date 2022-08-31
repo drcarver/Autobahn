@@ -19,6 +19,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19729">Board Charges</a>
     /// </para>
     /// </summary>
+    [Comment("The charges assessed students for an academic year for the maximum meal plan available.")]
     public Decimal? BoardCharges { get; set; }
 
     /// <summary>
@@ -30,6 +31,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19730">Books and Supplies Costs</a>
     /// </para>
     /// </summary>
+    [Comment("The average cost for books and supplies for a typical student for an entire academic year (or program). Does not include unusual costs for special groups of students (e.g., engineering or art majors) unless they constitute the majority of students at an institution.")]
     public Decimal? BooksAndSuppliesCosts { get; set; }
 
     /// <summary>
@@ -41,6 +43,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19733">Comprehensive Fee</a>
     /// </para>
     /// </summary>
+    [Comment("A single fixed amount of money charged by an institution that covers tuition, required fees, room, and board. For some institutions, this amount may also cover books and supplies.")]
     public Decimal? ComprehensiveFee { get; set; }
 
     [Required(ErrorMessage="{0} is required.")]
@@ -56,6 +59,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19731">Other Student Expenses</a>
     /// </para>
     /// </summary>
+    [Comment("The amount of money (estimated by the financial aid office) needed by a person to cover expenses such as laundry, transportation, and entertainment.")]
     public Decimal? OtherStudentExpenses { get; set; }
 
     /// <summary>
@@ -67,6 +71,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19732">Price of Attendance</a>
     /// </para>
     /// </summary>
+    [Comment("The total amount institutions estimate that undergraduate-level full-time, first-time degree-seeking students will pay to attend before financial aid is considered. This price includes tuition and fees, books and supplies, room and board, and certain other designated expenses such as transportation. These estimates are the average amounts used by the financial aid office to determine a student's financial aid.")]
     public Decimal? PriceOfAttendance { get; set; }
 
     /// <summary>
@@ -93,6 +98,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// </para>
     /// </summary>
     [ForeignKey("RefTuitionUnit")]
+    [Comment("The component for which tuition is being charged.  It might be a time period (term, quarter, year, etc.) or it might be an entity of education (course, credit hour, etc.).")]
     public Guid? RefTuitionUnitId { get; set; }
 
     /// <summary>
@@ -104,6 +110,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19726">Required Student Fees</a>
     /// </para>
     /// </summary>
+    [Comment("Fixed sum charged to persons for items not covered by tuition and required of such a large proportion of all students that the student who does not pay the charge is the exception.")]
     public Decimal? RequiredStudentFees { get; set; }
 
     /// <summary>
@@ -115,6 +122,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19728">Room Charges</a>
     /// </para>
     /// </summary>
+    [Comment("The charges for an academic year for rooming accommodations for a typical student sharing a room with one other student.")]
     public Decimal? RoomCharges { get; set; }
 
     /// <summary>
@@ -128,6 +136,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(7,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The academic session for which the data are recorded and applicable.")]
     public System.String SessionDesignator { get; set; }
 
     /// <summary>
@@ -139,6 +148,7 @@ public partial class PsPriceOfAttendanceEntity : EntityBase, IPsPriceOfAttendanc
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19723">Tuition - Published</a>
     /// </para>
     /// </summary>
+    [Comment("The published tuition for first time, full-time undergraduate students (lower of in-district or in-state for public institutions).  Tuition may be charged per term, per course, per credit or per program.")]
     public Decimal? TuitionPublished { get; set; }
 
     #endregion

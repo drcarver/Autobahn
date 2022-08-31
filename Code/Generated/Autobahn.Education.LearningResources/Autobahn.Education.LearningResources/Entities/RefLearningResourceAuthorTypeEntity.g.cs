@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20540">Learning Resource Author Type</a>
 /// </para>
 /// </summary>
+[Table("RefLearningResourceAuthorType", Schema = "LearningResources")]
+[Comment("The type of entity, organization or person, that authored the learning resource.")]
 public partial class RefLearningResourceAuthorTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

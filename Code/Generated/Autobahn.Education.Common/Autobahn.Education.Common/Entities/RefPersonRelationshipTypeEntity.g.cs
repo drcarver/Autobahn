@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19415">Person Relationship Type</a>
 /// </para>
 /// </summary>
+[Table("RefPersonRelationshipType", Schema = "Common")]
+[Comment("The nature of a person's relationship to another person.")]
 public partial class RefPersonRelationshipTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

@@ -20,6 +20,7 @@ public partial class PersonImmunizationEntity : EntityBase, IPersonImmunization
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("The year, month and day of an immunization.")]
     public System.DateTime ImmunizationDate { get; set; }
 
     /// <summary>
@@ -40,6 +41,7 @@ public partial class PersonImmunizationEntity : EntityBase, IPersonImmunization
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefImmunizationType")]
+    [Comment("An indication of the type of immunization that an individual has satisfactorily received. (Note: The International Classification of Diseases (ICD) is maintained by the World Health Organization. The ICD is revised periodically to incorporate changes in the medical field, the most updated and detailed list of International Statistical Classification of Diseases and Related Health Problems can be found at http://www.who.int/classifications/apps/icd/icd10online).")]
     public Guid RefImmunizationTypeId { get; set; }
 
     #endregion

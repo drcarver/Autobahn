@@ -21,6 +21,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the crisis that caused the displacement of students.")]
     public System.String CrisisDescription { get; set; }
 
     /// <summary>
@@ -32,6 +33,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20528">Crisis End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the crisis ceased to affect the agency.")]
     public DateTime? CrisisEndDate { get; set; }
 
     /// <summary>
@@ -43,6 +45,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20528">Crisis End Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the crisis ceased to affect the agency.")]
     public DateTime? EndDate { get; set; }
 
     /// <summary>
@@ -56,6 +59,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(50,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name of the crisis that caused the displacement of students.")]
     public System.String Name { get; set; }
 
     /// <summary>
@@ -74,6 +78,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19607">Crisis Start Date</a>
     /// </para>
     /// </summary>
+    [Comment("The year, month and day on which the crisis affected the agency. This date may not be the same as the date the crisis occurred if evacuation orders are implemented in anticipation of a crisis.")]
     public DateTime? StartDate { get; set; }
 
     /// <summary>
@@ -87,6 +92,7 @@ public partial class OrganizationCalendarCrisisEntity : EntityBase, IOrganizatio
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(50,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The type or category of crisis (ex., chemical, earthquake, flood, wildfire, etc.).")]
     public System.String Type { get; set; }
 
     #endregion

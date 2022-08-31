@@ -39,6 +39,7 @@ public partial class AssessmentSessionStaffRoleEntity : EntityBase, IAssessmentS
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentSessionStaffRoleType")]
+    [Comment("The type of role served related to the administration of an assessment session.")]
     public Guid? RefAssessmentSessionStaffRoleTypeId { get; set; }
 
     #endregion

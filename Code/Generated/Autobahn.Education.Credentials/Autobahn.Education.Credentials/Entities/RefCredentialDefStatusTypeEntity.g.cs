@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20721">Credential Definition Status Type</a>
 /// </para>
 /// </summary>
+[Table("RefCredentialDefStatusType", Schema = "Credentials")]
+[Comment("The status of the credential offered by a credentialing organization.")]
 public partial class RefCredentialDefStatusTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

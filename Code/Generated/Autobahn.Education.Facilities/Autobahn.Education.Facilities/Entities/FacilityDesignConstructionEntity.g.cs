@@ -21,6 +21,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to a building addition by a school, school system, state, or other agency or entity.")]
     public System.String BuildingAdditionCode { get; set; }
 
     /// <summary>
@@ -34,6 +35,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the permanent structure added to the original building.")]
     public System.String BuildingAdditionDescription { get; set; }
 
     /// <summary>
@@ -47,6 +49,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(80,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A description of the designed and constructed improvements made to a site.")]
     public System.String BuildingSiteImprovementDescription { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year the construction on the addition was completed.")]
     public System.String FacilityAdditionYear { get; set; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20761">Facility Construction Date</a>
     /// </para>
     /// </summary>
+    [Comment("The month, day, and year on which construction of a building, addition, or improvement was completed.")]
     public DateTime? FacilityConstructionDate { get; set; }
 
     /// <summary>
@@ -84,6 +89,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(4,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The year the building was first constructed.")]
     public System.String FacilityConstructionYear { get; set; }
 
     /// <summary>
@@ -103,6 +109,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefBuildingEnergyConservationMeasureType")]
+    [Comment("The type of modification to, or replacement of, a piece of equipment or building shell/system that increases energy efficiency.")]
     public Guid? RefBuildingEnergyConservationMeasureTypeId { get; set; }
 
     /// <summary>
@@ -115,6 +122,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityConstructionDateType")]
+    [Comment("Designation of the nature of the construction completion date.")]
     public Guid? RefFacilityConstructionDateTypeId { get; set; }
 
     /// <summary>
@@ -127,6 +135,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityConstructionMaterialType")]
+    [Comment("The primary material used for the construction of a building.")]
     public Guid? RefFacilityConstructionMaterialTypeId { get; set; }
 
     /// <summary>
@@ -139,6 +148,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityJointDevelopmentType")]
+    [Comment("The type of development where two or more entities partner to plan, site, design, and/or build a new school or renovate an existing school to better support the joint use of the building and/or land.")]
     public Guid? RefFacilityJointDevelopmentTypeId { get; set; }
 
     /// <summary>
@@ -151,6 +161,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilitySiteImprovementLocationType")]
+    [Comment("The type of location of the designed and constructed improvements made to a site.")]
     public Guid? RefFacilitySiteImprovementLocationTypeId { get; set; }
 
     /// <summary>
@@ -163,6 +174,7 @@ public partial class FacilityDesignConstructionEntity : EntityBase, IFacilityDes
     /// </para>
     /// </summary>
     [ForeignKey("RefFacilityStandardType")]
+    [Comment("An indication of the district or state requirements or guidelines for the design and construction of school facilities.")]
     public Guid? RefFacilityStandardTypeId { get; set; }
 
     #endregion

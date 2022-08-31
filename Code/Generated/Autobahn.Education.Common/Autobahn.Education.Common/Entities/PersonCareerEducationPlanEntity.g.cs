@@ -19,6 +19,7 @@ public partial class PersonCareerEducationPlanEntity : EntityBase, IPersonCareer
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20255">Career Education Plan Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which an individual's professional development career plan was last updated.")]
     public DateTime? LastUpdated { get; set; }
 
     /// <summary>
@@ -37,6 +38,7 @@ public partial class PersonCareerEducationPlanEntity : EntityBase, IPersonCareer
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20599">Professional Development Plan Approved by Supervisor</a>
     /// </para>
     /// </summary>
+    [Comment("Professional development plan is approved by the employee's supervisor.")]
     public Boolean? ProfessionalDevelopmentPlanApprovedBySupervisor { get; set; }
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class PersonCareerEducationPlanEntity : EntityBase, IPersonCareer
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20600">Professional Development Plan Completion</a>
     /// </para>
     /// </summary>
+    [Comment("The date the professional development plan is completed.")]
     public DateTime? ProfessionalDevelopmentPlanCompletion { get; set; }
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class PersonCareerEducationPlanEntity : EntityBase, IPersonCareer
     /// </para>
     /// </summary>
     [ForeignKey("RefCareerEducationPlanType")]
+    [Comment("An indication of whether an individual completed an individualized guidance and counseling plan")]
     public Guid? RefCareerEducationPlanTypeId { get; set; }
 
     /// <summary>
@@ -71,6 +75,7 @@ public partial class PersonCareerEducationPlanEntity : EntityBase, IPersonCareer
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20554">Tuition Funded</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates that tuition for person's participation in a program, service, or course is funded or partially funded by an external grant program.")]
     public Boolean? TuitionFunded { get; set; }
 
     #endregion

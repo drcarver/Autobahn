@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19779">Adult Education Provider Type</a>
 /// </para>
 /// </summary>
+[Table("RefOrganizationType", Schema = "Common")]
+[Comment("The type of institution responsible for providing adult education instructional services.")]
 public partial class RefOrganizationTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefOrganizationType Properties"

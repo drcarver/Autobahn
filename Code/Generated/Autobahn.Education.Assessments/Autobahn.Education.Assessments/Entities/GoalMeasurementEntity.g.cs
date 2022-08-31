@@ -27,6 +27,7 @@ public partial class GoalMeasurementEntity : EntityBase, IGoalMeasurement
     /// </para>
     /// </summary>
     [ForeignKey("RefGoalMeasurementType")]
+    [Comment("Type of evidence appropriate for assessing achievement of a goal or short-term objective.")]
     public Guid? RefGoalMeasurementTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class GoalMeasurementEntity : EntityBase, IGoalMeasurement
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("Frequency of evaluation of progress toward meeting the goal or short-term objective.")]
     public System.String Schedule { get; set; }
 
     /// <summary>
@@ -52,6 +54,7 @@ public partial class GoalMeasurementEntity : EntityBase, IGoalMeasurement
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(300,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("One or more statements that describes the criteria used by teachers and students to check for attainment of a goal.")]
     public System.String SuccessCriteria { get; set; }
 
     #endregion

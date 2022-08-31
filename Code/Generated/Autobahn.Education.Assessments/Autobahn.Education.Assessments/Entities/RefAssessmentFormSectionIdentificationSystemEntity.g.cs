@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20141">Identification System for Assessment Form Section</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentFormSectionIdentificationSystem", Schema = "Assessments")]
+[Comment("A coding scheme that is used for identification of an Assessment Form Section.")]
 public partial class RefAssessmentFormSectionIdentificationSystemEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

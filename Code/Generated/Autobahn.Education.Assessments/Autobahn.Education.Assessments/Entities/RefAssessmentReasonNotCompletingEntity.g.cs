@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19531">Assessment Registration Reason Not Completing</a>
 /// </para>
 /// </summary>
+[Table("RefAssessmentReasonNotCompleting", Schema = "Assessments")]
+[Comment("The primary reason a participant did not complete an assessment.")]
 public partial class RefAssessmentReasonNotCompletingEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

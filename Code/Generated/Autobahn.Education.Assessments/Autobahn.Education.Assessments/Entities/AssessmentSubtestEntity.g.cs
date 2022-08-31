@@ -21,6 +21,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The shortened name identifying the assessment for use in reference and/or reports.")]
     public System.String Abbreviation { get; set; }
 
     /// <summary>
@@ -46,6 +47,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("In a hierarchy of subtests, this indicates that this tier is only used as a level in the hierarchy and does not represent a scoring model.")]
     public System.String ContainerOnly { get; set; }
 
     /// <summary>
@@ -59,6 +61,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(40,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("A unique number or alphanumeric code assigned to an assessment subtest.")]
     public System.String Identifier { get; set; }
 
     /// <summary>
@@ -72,6 +75,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The minimum value possible for the measurement.")]
     public System.String MaximumValue { get; set; }
 
     /// <summary>
@@ -85,6 +89,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The maximum value for the measurement.")]
     public System.String MinimumValue { get; set; }
 
     /// <summary>
@@ -98,6 +103,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The optimal value for this measurement.")]
     public System.String OptimalValue { get; set; }
 
     /// <summary>
@@ -109,6 +115,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20075">Assessment Subtest Published Date</a>
     /// </para>
     /// </summary>
+    [Comment("The date on which the Subtest was published.")]
     public DateTime? PublishedDate { get; set; }
 
     /// <summary>
@@ -121,6 +128,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [ForeignKey("RefAcademicSubject")]
+    [Comment("The description of the academic content or subject area (e.g., arts, mathematics, reading, or a foreign language) being evaluated.")]
     public Guid? RefAcademicSubjectId { get; set; }
 
     /// <summary>
@@ -133,6 +141,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentPurpose")]
+    [Comment("The reason for which an assessment is designed or delivered.")]
     public Guid? RefAssessmentPurposeId { get; set; }
 
     /// <summary>
@@ -145,6 +154,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [ForeignKey("RefAssessmentSubtestentifierType")]
+    [Comment("The type of identifier that is provided for a Subtest.")]
     public Guid? RefAssessmentSubtestIdentifierTypeId { get; set; }
 
     /// <summary>
@@ -157,6 +167,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [ForeignKey("RefContentStandardType")]
+    [Comment("An indication as to whether an assessment conforms to a standard.")]
     public Guid? RefContentStandardTypeId { get; set; }
 
     /// <summary>
@@ -169,6 +180,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [ForeignKey("RefScoreMetricType")]
+    [Comment("The specific method used to report the performance and achievement of the assessment. This is the metric that is being used to derive the scores.")]
     public Guid? RefScoreMetricTypeId { get; set; }
 
     /// <summary>
@@ -181,6 +193,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </para>
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
+    [Comment("A description of the rules to produce a student test/subtest score from for a grouping of student item scores.")]
     public System.String Rules { get; set; }
 
     /// <summary>
@@ -192,6 +205,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20180">Assessment Form Subtest Tier</a>
     /// </para>
     /// </summary>
+    [Comment("In a hierarchy of subtests, this element represents the level of the sub test in the hierarchy.  The top tier and default is zero.")]
     public Int32? Tier { get; set; }
 
     /// <summary>
@@ -205,6 +219,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(60,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The name or title of the subtest.")]
     public System.String Title { get; set; }
 
     /// <summary>
@@ -218,6 +233,7 @@ public partial class AssessmentSubtestEntity : EntityBase, IAssessmentSubtest
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [StringLength(30,ErrorMessage="The {0} must be less then {1} characters.")]
+    [Comment("The version of the subtest that is included for the assessment.")]
     public System.String Version { get; set; }
 
     #endregion

@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=19162">Staff Member Identification System</a>
 /// </para>
 /// </summary>
+[Table("RefPersonIdentificationSystem", Schema = "Common")]
+[Comment("A coding scheme that is used for identification and record-keeping purposes by schools, social services, registry, or other agencies to refer to a staff member.")]
 public partial class RefPersonIdentificationSystemEntity : ReferenceBaseEntity, IReferenceBase
 {
     #region "IRefPersonIdentificationSystem Properties"

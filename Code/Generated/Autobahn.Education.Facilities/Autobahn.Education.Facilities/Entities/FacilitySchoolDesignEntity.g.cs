@@ -28,6 +28,7 @@ public partial class FacilitySchoolDesignEntity : EntityBase, IFacilitySchoolDes
     /// </summary>
     [Required(ErrorMessage="{0} is required.")]
     [ForeignKey("RefBuildingSchoolDesignType")]
+    [Comment("The physical layout and character of a school facility, as determined by age groups served and educational programs provided.")]
     public Guid RefBuildingSchoolDesignTypeId { get; set; }
 
     #endregion

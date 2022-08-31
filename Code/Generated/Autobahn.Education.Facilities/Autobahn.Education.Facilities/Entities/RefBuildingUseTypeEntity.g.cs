@@ -14,6 +14,8 @@
 /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20173">Building Use Type</a>
 /// </para>
 /// </summary>
+[Table("RefBuildingUseType", Schema = "Facilities")]
+[Comment("How a building is principally used, regardless of its original design.")]
 public partial class RefBuildingUseTypeEntity : ReferenceBaseEntity, IReferenceBase
 {
 }

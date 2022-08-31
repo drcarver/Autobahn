@@ -27,6 +27,7 @@ public partial class StaffTechnicalAssistanceEntity : EntityBase, IStaffTechnica
     /// </para>
     /// </summary>
     [ForeignKey("RefTechnicalAssistanceDeliveryType")]
+    [Comment("The method of delivery of technical assistance received/provided")]
     public Guid? RefTechnicalAssistanceDeliveryTypeId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class StaffTechnicalAssistanceEntity : EntityBase, IStaffTechnica
     /// </para>
     /// </summary>
     [ForeignKey("RefTechnicalAssistanceType")]
+    [Comment("The type of technical assistance provided.")]
     public Guid? RefTechnicalAssistanceTypeId { get; set; }
 
     /// <summary>
@@ -50,6 +52,7 @@ public partial class StaffTechnicalAssistanceEntity : EntityBase, IStaffTechnica
     /// <a href="https://ceds.ed.gov/CEDSElementDetails.aspx?TermId=20465">Technical Assistance Approved Indicator</a>
     /// </para>
     /// </summary>
+    [Comment("Indicates whether or not the technical assistance was approved.")]
     public Boolean? TechnicalAssistanceApprovedInd { get; set; }
 
     #endregion

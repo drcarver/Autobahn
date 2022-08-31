@@ -27,6 +27,7 @@ public partial class AeCourseEntity : EntityBase, IAeCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCareerCluster")]
+    [Comment("The career cluster that defines the industry or occupational focus which may be associated with a career pathways program, plan of study, or course.")]
     public Guid? RefCareerClusterId { get; set; }
 
     /// <summary>
@@ -39,6 +40,7 @@ public partial class AeCourseEntity : EntityBase, IAeCourse
     /// </para>
     /// </summary>
     [ForeignKey("RefCourseLevelType")]
+    [Comment("The level of work which is reflected in the credits associated with the academic course being described or the level of the typical individual taking the academic course.")]
     public Guid? RefCourseLevelTypeId { get; set; }
 
     #endregion
