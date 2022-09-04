@@ -9,19 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefAssessmentSubtestIdentifierType")]
-    public partial class RefAssessmentSubtestIdentifierType
+    [Table("RefInstructionalActivityHour")]
+    public partial class RefInstructionalActivityHour
     {
-        public RefAssessmentSubtestIdentifierType()
+        public RefInstructionalActivityHour()
         {
-            AssessmentSubtests = new HashSet<AssessmentSubTest>();
+            PsStudentEnrollments = new HashSet<PsStudentEnrollment>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int RefAssessmentSubtestIdentifierTypeId { get; set; }
+        public int RefInstructionalActivityHourId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -46,9 +46,9 @@ namespace ScafoldADatabase.Entities
         public DateTime? RecordEndDateTime { get; set; }
 
         [ForeignKey("RefJurisdictionId")]
-        [InverseProperty("RefAssessmentSubtestIdentifierTypes")]
+        [InverseProperty("RefInstructionalActivityHours")]
         public virtual Organization? RefJurisdiction { get; set; }
-        [InverseProperty("RefAssessmentSubtestIdentifierType")]
-        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
+        [InverseProperty("RefInstructionalActivityHours")]
+        public virtual ICollection<PsStudentEnrollment> PsStudentEnrollments { get; set; }
     }
 }

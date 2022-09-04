@@ -32,7 +32,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int? RefAssessmentNeedNumberOfBrailleDotsId { get; set; }
+        public int? RefAssessmentNeedNumberOfBrailleDotId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -81,7 +81,7 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("RefAssessmentNeedBrailleStatusCellTypeId")]
         [InverseProperty("AssessmentNeedBrailles")]
         public virtual RefAssessmentNeedBrailleStatusCellType? RefAssessmentNeedBrailleStatusCellType { get; set; }
-        [ForeignKey("RefAssessmentNeedNumberOfBrailleDotsId")]
+        [ForeignKey("RefAssessmentNeedNumberOfBrailleDotId")]
         [InverseProperty("AssessmentNeedBrailles")]
         public virtual RefAssessmentNeedNumberOfBrailleDot? RefAssessmentNeedNumberOfBrailleDots { get; set; }
         [ForeignKey("RefAssessmentNeedUsageTypeId")]

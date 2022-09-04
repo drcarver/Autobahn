@@ -1,8 +1,8 @@
 ﻿using Autobahn.Codegen.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using ScafoldADatabase.Entities;
 using SchemaOrg;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 
@@ -10,12 +10,107 @@ namespace Autobahn.Codegen;
 
 internal class Program
 {
+    private static List<string> AdditionalCommonEducationTypes = new()
+    {
+        "FinancialAccount",
+        "FinancialAccountProgram",
+        "OrganizationAccreditation",
+        "OrganizationCalendarSession",
+        "OrganizationFederalAccountability",
+        "OrganizationFinancial",
+        "OrganizationPopulationServed",
+        "OrganizationProgramType",
+        "OrganizationService",
+        "OrganizationTechnicalAssistance",
+        "RefProgramType",
+        "RefStudentSupportServiceType",
+        "RefTechnicalAssistanceType",
+        "RefTechnicalAssistanceDeliveryType"
+    };
+
+    private static List<string> AdditionalOrganizationTypes = new()
+    {
+        "RefEmailType",
+        "OrganizationEmployeeBenefit",
+        "RefEmployeeBenefit",
+        "RefInstitutionTelephoneType",
+        "RefTelephoneNumberListedStatus",
+        "RefOperationalStatus",
+    };
+
+    private static List<string> AdditionalPersonTypes = new()
+    {
+        "AssessmentPersonalNeedsProfile",
+        "Incident",
+        "IncidentPerson",
+        "PersonLearningDevice",
+        "RefAccommodationsNeededType",
+        "RefAllergySeverity",
+        "RefAllergyType",
+        "RefBarrierToInternetAccessInResidence",
+        "RefCommunicationMethod",
+        "RefCredentialType",
+        "RefDegreeOrCertificateType",
+        "RefDentalInsuranceCoverageType",
+        "RefDentalScreeningStatus",
+        "RefDisabilityConditionStatusCode",
+        "RefDisabilityConditionType",
+        "RefDisabilityDeterminationSourceType",
+        "RefEducationVerificationMethod",
+        "RefElprogramEligibility",
+        "RefEmailType",
+        "RefFamilyIncomeSource",
+        "RefHealthInsuranceCoverage",
+        "RefHearingScreeningStatus",
+        "RefHigherEducationInstitutionAccreditationStatus",
+        "RefHomelessNighttimeResidence",
+        "RefImmunizationType",
+        "RefIncomeCalculationMethod",
+        "RefInternetAccessTypeInResidence",
+        "RefInternetPerformanceInResidence",
+        "RefLanguageUseType",
+        "RefMedicalAlertIndicator",
+        "RefMilitaryActiveStudentIndicator",
+        "RefMilitaryBranch",
+        "RefMilitaryVeteranStudentIndicator",
+        "RefOtherNameType",
+        "RefParticipationType",
+        "RefProgramEntryReason",
+        "RefProgramExitReason",
+        "RefProofOfResidencyType",
+        "RefRace",
+        "RefReferralOutcome",
+        "RefTelephoneNumberListedStatus",
+        "RefTribalAffiliation",
+        "RefTrimesterWhenPrenatalCareBegan",
+        "RefUscitizenshipStatus",
+        "RefVisaType",
+        "RefVisionScreeningStatus",
+    };
+
+    private static List<string> AdditionalRoleTypes = new()
+    {
+        "RefAttendanceEventType",
+        "RefAttendanceStatus",
+        "RefAbsentAttendanceCategory",
+        "RefPresentAttendanceCategory",
+        "RefLeaveEventType",
+    };
+
+    private static List<string> AdditionalAssessmentTypes = new()
+    {
+        "AssessmentPersonalNeedsProfile",
+        "PersonAssessmentPersonalNeedsProfile",
+        "ApipInteraction",
+        "RefApipInteractionType",
+    };
+
     /// <summary>
     /// Set the domain of the table based on it name
     /// </summary>
     /// <param name="autobahnDomains"></param>
     /// <param name="table"></param>
-    static void SetTableDomain(List<AutobahnDomain> autobahnDomains, ref AutobahnEntity table)
+    static void SetTableDomain(List<AutobahnDomain> autobahnDomains, AutobahnEntity table)
     {
         // Set the domains in the tablesMetadata
         var comdom = autobahnDomains.First(d => d.Module == "Common");
@@ -29,49 +124,47 @@ internal class Program
         var compdom = autobahnDomains.First(d => d.Module == "Competencies");
         var creddom = autobahnDomains.First(d => d.Module == "Credentials");
         var ctedom = autobahnDomains.First(d => d.Module == "CTE");
-        var authdom = autobahnDomains.First(d => d.Module == "Authorization");
         var wfdom = autobahnDomains.First(d => d.Module == "Workforce");
-        var invaliddom = autobahnDomains.First(d => d.Module == "Invalid");
 
-        if (table.Name.StartsWith("Ae")
-            || table.Name.EndsWith("AE")
-            || table.Name.StartsWith("RefAE")
-            || table.Name.StartsWith("RefAe"))
+        if (table.Name.ToUpper().StartsWith("AE")
+            || table.Name.ToUpper().EndsWith("AE")
+            || table.Name.ToUpper().StartsWith("REFAE"))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = aedom.Module;
         }
-        if (table.Name.StartsWith("EL")
-            || table.Name.StartsWith("EarlyChildhood")
-            || table.Name.EndsWith("EL")
-            || table.Name.StartsWith("RefEL")
-            || table.Name.StartsWith("RefEarlyChildhood"))
+        if (table.Name.ToUpper().StartsWith("EL")
+            || table.Name.ToUpper().StartsWith("EARLYCHILDHOOD")
+            || table.Name.ToUpper().EndsWith("EL")
+            || table.Name.ToUpper().StartsWith("REFEL")
+            || table.Name.ToUpper().IndexOf("EARLYCHILDHOOD") > 0)
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = eldom.Module;
         }
-        if (table.Name.StartsWith("Assessment")
-            || table.Name.StartsWith("Rubric")
-            || table.Name.StartsWith("Goal")
-            || table.Name.StartsWith("Learner")
-            || table.Name.StartsWith("RefAssessment")
-            || table.Name.StartsWith("RefRubric")
-            || table.Name.StartsWith("RefGoal")
-            || table.Name.StartsWith("RefLearner"))
+        if (table.Name.ToUpper().StartsWith("ASSESSMENT")
+            || table.Name.ToUpper().StartsWith("RUBRIC")
+            || table.Name.ToUpper().StartsWith("GOAL")
+            || table.Name.ToUpper().StartsWith("LEARNER")
+            || table.Name.IndexOf("ASSESSMENT") > 0
+            || table.Name.IndexOf("RUBRIC") > 0
+            || table.Name.IndexOf("GOAL") > 0
+            || table.Name.IndexOf("LEARNER") > 0
+            || AdditionalAssessmentTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = assesdom.Module;
         }
-        if (table.Name.StartsWith("Learning")
-            || table.Name.StartsWith("Peer")
-            || table.Name.StartsWith("RefLearning")
-            || table.Name.StartsWith("RefPeer"))
+        if (table.Name.ToUpper().StartsWith("Learning".ToUpper())
+            || table.Name.ToUpper().StartsWith("Peer".ToUpper())
+            || table.Name.ToUpper().IndexOf("Learning".ToUpper()) > 0
+            || table.Name.ToUpper().IndexOf("Peer".ToUpper()) > 0)
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = lrdom.Module;
         }
-        if (table.Name.StartsWith("K12")
-            || table.Name.StartsWith("RefK12"))
+        if (table.Name.ToUpper().StartsWith("K12")
+            || table.Name.ToUpper().IndexOf("K12") > 0)
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = k12dom.Module;
@@ -112,33 +205,52 @@ internal class Program
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = ctedom.Module;
         }
-        if (table.Name.StartsWith("Organization")
-            || table.Name.StartsWith("Person")
-            || table.Name.StartsWith("Staff")
-            || table.Name.StartsWith("Teacher")
-            || table.Name.StartsWith("Role")
-            || table.Name.StartsWith("RefOrganization")
-            || table.Name.StartsWith("RefPerson")
-            || table.Name.StartsWith("RefStaff")
-            || table.Name.StartsWith("RefTeacher")
-            || table.Name.StartsWith("RefRole"))
-        {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = comdom.Module;
-        }
         if (table.Name.StartsWith("App")
             || table.Name.StartsWith("Auth")
             || table.Name.StartsWith("RefApp")
             || table.Name.StartsWith("RefAuth"))
         {
             table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = authdom.Module;
+            table.Attributes.TableAttribute.Schema = "Autorization";
         }
         if (table.Name.StartsWith("Workforce")
             || table.Name.StartsWith("RefWorkforce"))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = wfdom.Module;
+        }
+        if (table.Attributes?.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("Organization".ToUpper())
+            || table.Name.ToUpper().IndexOf("Organization".ToUpper()) > 0)
+            || AdditionalOrganizationTypes.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = "Organization";
+        }
+        if (table.Attributes?.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("Person".ToUpper())
+            || table.Name.ToUpper().IndexOf("Person".ToUpper()) > 0)
+            || AdditionalPersonTypes.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = "Person";
+        }
+        if (table.Attributes?.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("Role".ToUpper())
+            || table.Name.ToUpper().IndexOf("Role".ToUpper()) > 0)
+            || AdditionalRoleTypes.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = "Role";
+        }
+        if (table.Attributes.TableAttribute?.Schema == null
+            || AdditionalCommonEducationTypes.Contains(table.Name))
+        {
+            if (AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = comdom.Module;
+            } 
         }
     }
 
@@ -158,14 +270,19 @@ internal class Program
 
         List<string> EntitiesToIgnore = new List<string>
         {
+            "Application",
             "Authentication",
             "Authorization",
             "AuthorizationDocument",
-            "Application",
+            "Autobahn",
+            "Cedselement",
+            "CedselementDetail",
+            "CedsMapping",
+            "CedstoNdsmapping",
             "Organization",
             "OrganizationPersonRole",
             "Person",
-            "Role"
+            "Role",
         };
 
         foreach (var type in types)
@@ -190,7 +307,7 @@ internal class Program
                     entity.Attributes.CommentAttribute = new($"The {entity.Name} Entity");
                 }
             }
-            SetTableDomain(domains, ref entity);
+            SetTableDomain(domains, entity);
             foreach (var prop in entity.AutobahnProperties)
             {
                 globalId = tables.FirstOrDefault(t => t.TableName == entity.Name && t.ColumnName == prop.Name)?.GlobalId;
@@ -203,58 +320,86 @@ internal class Program
             autobahnEntities.Add(entity);
         }
 
-        int entityCount = 0;
-        int propertyCount = 0;
-        int propertyTotal = 0;
-        foreach (var entity in autobahnEntities)
+        foreach (var entity in autobahnEntities.Where(e => e.Attributes.TableAttribute.Schema == null))
         {
-            if (entity.AutobahnElement != null)
-            {
-                entityCount++;
-            }
-            propertyTotal += entity.AutobahnProperties.Count();
-            propertyCount += entity.AutobahnProperties.Count(p => p.AutobahnElement != null);
+            entity.Attributes.TableAttribute.Schema = "Invalid";
         }
+
+        //foreach (var domain in domains.OrderByDescending(o => o.SortOrder))
+        //{
+        //    foreach (var entity in autobahnEntities.Where(e => e.Attributes.TableAttribute.Schema == domain.Module))
+        //    {
+        //        if (entity.Attributes?.TableAttribute?.Schema == null)
+        //        {
+        //            entity.Attributes.TableAttribute.Schema = "Common";
+        //        }
+        //        SetEntityDomain(autobahnEntities, entity, domain.Module);
+        //    }
+        //}
+
+        var notcommon = autobahnEntities.Count(e => e.Attributes.TableAttribute.Schema != "Common");
+        var common = autobahnEntities.Count(e => e.Attributes.TableAttribute.Schema == "Common");
 
         return autobahnEntities;
     }
 
-    //private static List<AutobahnElement> GetAutobahnElements()
-    //{
-    //    var csv = new CSVServices();
-    //    var CEDSElements = csv.ReadCEDSElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv", "|");
+    private static List<string> CoreEntities = new()
+    {
+        "Organization",
+        "Role",
+        "Person",
+        "OrganizationPersonRole"
+    };
+    private static void SetEntityDomain(List<AutobahnEntity> entities, AutobahnEntity entity, string module)
+    {
+        // If module != common the schema name is not the module name we
+        // want to shift to then reset it and all of its foreign keys to 
+        // common.  Basically if the entity is in multiple domains move it
+        // to common
+        if (entity.Attributes.TableAttribute.Schema != module)
+        {
+            entity.Attributes.TableAttribute.Schema = "Common";
+        }
 
-    //    // Cleanup the Global Id
-    //    int output;
-    //    foreach (var element in CEDSElements.Where(element => !Int32.TryParse(element.GlobalID, out output)))
-    //    {
-    //        element.GlobalID = string.Empty;
-    //    }
-
-    //    // save off the updated elements
-    //    csv.WriteCEDSlementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", CEDSElements, "|");
-
-    //    // return the new list
-    //    return csv.ReadAutobahnElementsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnElements.csv", "|"); ;
+        // Put the domain and all of it's foreign keys into the same domain
+        foreach (var prop in entity.AutobahnProperties.Where(p => p.Name.EndsWith("Id")))
+        {
+            var fkeyEntity = entities.FirstOrDefault(e => e.Name == prop.VirtualType);
+            if (fkeyEntity != null)
+            {
+                if (fkeyEntity.Attributes.TableAttribute.Schema != module
+                    && fkeyEntity.Attributes.TableAttribute.Schema != "Common")
+                {
+                    fkeyEntity.Attributes.TableAttribute.Schema = module;
+                    SetEntityDomain(entities, fkeyEntity, module);
+                }
+                prop.MapFKeyVirtualType();
+            }
+            else
+            {
+                if (!CoreEntities.Contains(prop.VirtualType))
+                {
+                    prop.Attributes.ObsoleteAttribute = new($"The {prop.VirtualType} property is obsolete and will be removed in a later version");
+                }
+            }
+            prop.MapFKeyVirtualType();
+        }
+        entity.ResetEntityDomain();
+    }
 
     static async Task Main(string[] args)
     {
         var csv = new CSVServices();
-        var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
-        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
-        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
+        var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\AutobahnDomains.csv");
+        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\_CEDSElements.csv");
+        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\_CEDStoNDSMapping.csv");
 
         // Autobahn Domains
         var autobahnEntites = GetAutobahnEntities(
             Assembly.GetExecutingAssembly().GetExportedTypes().OrderBy(o => o.Name).ToList(), 
             autobahnDomains, autobahnTables, autobahnElements);
 
-        var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\schemaorg-all-http.jsonld");
-
-        //var CDMPath = $@"C:\Users\drcarver\Desktop\codegen\CDM\schemaDocuments";
-        //var CDMStorage = new Microsoft.CommonDataModel.ObjectModel.Storage.LocalAdapter(CDMPath);
-        //var files = CDMStorage.FetchAllFilesAsync(CDMPath).Result;
-        //var date = CDMStorage
+        var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\schemaorg-all-http.jsonld");
 
         //SeedOrganization();
         //SeedRefRecordStatusType();
@@ -266,8 +411,8 @@ internal class Program
         //var RefAutobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv").ToList();
         //var domainReferenceList = BuildTableListByProperty(autobahnTables);
 
-        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\Code\Generated\";
-        MauiModule.GenerateModule(location, autobahnEntites, autobahnDomains); //autobahnDomains, autobahnTables, autobahnElements, types.GetTypes().ToList(), domainReferenceList);
+        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\src\";
+        MauiModule.GenerateModule(location, autobahnEntites, autobahnDomains);
     }
 
     private static List<AutobahnEntity> GetSchemaEntities(string location)

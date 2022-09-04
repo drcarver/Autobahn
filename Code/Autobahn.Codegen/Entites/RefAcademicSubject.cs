@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefAcademicSubject()
         {
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
             Assessments = new HashSet<Assessment>();
         }
 
@@ -50,7 +50,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefAcademicSubjects")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefAcademicSubject")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
         [InverseProperty("RefAcademicSubject")]
         public virtual ICollection<Assessment> Assessments { get; set; }
     }

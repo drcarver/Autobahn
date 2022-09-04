@@ -9,32 +9,22 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("WorkforceEmploymentQuarterlyDatum")]
-    public partial class WorkforceEmploymentQuarterlyDatum
+    [Table("LearningResourcePhysicalMedia", Schema = "LearningResource")]
+    public partial class LearningResourcePhysicalMedia
     {
+        /// <summary>
+        /// Surrogate key
+        /// </summary>
         [Key]
-        public int WorkforceEmploymentQuarterlyDatumId { get; set; }
+        public int LearningResourcePhysicalMediaId { get; set; }
         /// <summary>
-        /// Surrogate Key
+        /// Foreign key to LearningResource
         /// </summary>
-        public int OrganizationPersonRoleId { get; set; }
-        /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
-        /// </summary>
-        [Column(TypeName = "decimal(2, 0)")]
-        public decimal? EmployedInMultipleJobsCount { get; set; }
+        public int LearningResourceId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public bool? MilitaryEnlistmentAfterExit { get; set; }
-        /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
-        /// </summary>
-        public int? RefEmployedWhileEnrolledId { get; set; }
-        /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
-        /// </summary>
-        public int? RefEmployedAfterExitId { get; set; }
+        public int RefLearningResourcePhysicalMediaTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -49,13 +39,16 @@ namespace ScafoldADatabase.Entities
         public int? DataCollectionId { get; set; }
 
         [ForeignKey("DataCollectionId")]
-        [InverseProperty("WorkforceEmploymentQuarterlyData")]
+        [InverseProperty("LearningResourcePhysicalMedia")]
         public virtual DataCollection? DataCollection { get; set; }
-        [ForeignKey("OrganizationPersonRoleId")]
-        [InverseProperty("WorkforceEmploymentQuarterlyData")]
-        public virtual OrganizationPersonRole OrganizationPersonRole { get; set; } = null!;
+        [ForeignKey("LearningResourceId")]
+        [InverseProperty("LearningResourcePhysicalMedia")]
+        public virtual LearningResource LearningResource { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
-        [InverseProperty("WorkforceEmploymentQuarterlyData")]
+        [InverseProperty("LearningResourcePhysicalMedia")]
         public virtual RecordStatus? RecordStatus { get; set; }
+        [ForeignKey("RefLearningResourcePhysicalMediaTypeId")]
+        [InverseProperty("LearningResourcePhysicalMedia")]
+        public virtual RefLearningResourcePhysicalMediaType RefLearningResourcePhysicalMediaType { get; set; } = null!;
     }
 }

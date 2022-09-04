@@ -25,5 +25,20 @@
         internal AutobahnElement? AutobahnElement { get; set; }
         internal List<string> SubClass { get; set; } = new List<string>();
         internal List<AutobahnProperty> AutobahnProperties { get; set; } = new List<AutobahnProperty>();
+        internal AutobahnDomain GeneratedDomain { get; set; }
+        internal bool IsPickList { get; set; }
+
+        internal void ResetEntityDomain()
+        {
+            switch(Name)
+            {
+                case "CompetencyDefinition":
+                case "RubricCriterion":
+                case "AssessmentResult":
+                case "CredentialAwardEvidence":
+                    Attributes.TableAttribute.Schema = "Common";
+                    break;
+            }
+        }
     }
 }

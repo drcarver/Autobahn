@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefContentStandardType()
         {
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefContentStandardTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefContentStandardType")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
     }
 }

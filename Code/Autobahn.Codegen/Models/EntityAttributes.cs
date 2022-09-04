@@ -22,11 +22,13 @@ namespace Autobahn.Codegen.Models
             KeylessAttribute = type.GetCustomAttributes<KeylessAttribute>().FirstOrDefault();
             NotMappedAttribute = type.GetCustomAttributes<NotMappedAttribute>().FirstOrDefault();
             TableAttribute = type.GetCustomAttributes<TableAttribute>().FirstOrDefault();
+            ObsoleteAttribute = type.GetCustomAttributes<ObsoleteAttribute>().FirstOrDefault();
         }
         internal CommentAttribute? CommentAttribute { get; set; }
         internal IndexAttribute? IndexAttribute { get; set; }
         internal KeylessAttribute? KeylessAttribute { get; set; }
         internal NotMappedAttribute? NotMappedAttribute { get; set; }
         internal TableAttribute? TableAttribute { get; set; }
+        internal ObsoleteAttribute? ObsoleteAttribute { get; set; }
     }
 }

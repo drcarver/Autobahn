@@ -21,7 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int RefAssessmentTypeChildrenWithDisabilitiesId { get; set; }
+        public int RefAssessmentTypeChildrenWithDisabilityId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentSubtest")]
-    public partial class AssessmentSubtest
+    [Table("AssessmentSubTest")]
+    public partial class AssessmentSubTest
     {
-        public AssessmentSubtest()
+        public AssessmentSubTest()
         {
             AssessmentPerformanceLevels = new HashSet<AssessmentPerformanceLevel>();
             AssessmentResults = new HashSet<AssessmentResult>();
@@ -20,14 +20,14 @@ namespace ScafoldADatabase.Entities
             AssessmentSubtestCompetencyDefinitions = new HashSet<AssessmentSubtestCompetencyDefinition>();
             AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestEldevelopmentalDomain>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
-            InverseChildOfAssessmentSubtest = new HashSet<AssessmentSubtest>();
+            InverseChildOfAssessmentSubtest = new HashSet<AssessmentSubTest>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int AssessmentSubtestId { get; set; }
+        public int AssessmentSubTestId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -133,7 +133,7 @@ namespace ScafoldADatabase.Entities
         public virtual AssessmentForm? AssessmentForm { get; set; }
         [ForeignKey("ChildOfAssessmentSubtestId")]
         [InverseProperty("InverseChildOfAssessmentSubtest")]
-        public virtual AssessmentSubtest? ChildOfAssessmentSubtest { get; set; }
+        public virtual AssessmentSubTest? ChildOfAssessmentSubtest { get; set; }
         [ForeignKey("DataCollectionId")]
         [InverseProperty("AssessmentSubtests")]
         public virtual DataCollection? DataCollection { get; set; }
@@ -168,6 +168,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("AssessmentSubTest")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }
         [InverseProperty("ChildOfAssessmentSubtest")]
-        public virtual ICollection<AssessmentSubtest> InverseChildOfAssessmentSubtest { get; set; }
+        public virtual ICollection<AssessmentSubTest> InverseChildOfAssessmentSubtest { get; set; }
     }
 }

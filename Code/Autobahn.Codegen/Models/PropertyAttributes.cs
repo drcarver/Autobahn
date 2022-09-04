@@ -28,6 +28,7 @@ namespace Autobahn.Codegen.Models
             TimestampAttribute = property.GetCustomAttributes<TimestampAttribute>().FirstOrDefault();
             StringLengthAttribute = property.GetCustomAttributes<StringLengthAttribute>().FirstOrDefault();
             UnicodeAttribute = property.GetCustomAttributes<UnicodeAttribute>().FirstOrDefault();
+            ObsoleteAttribute = property.GetCustomAttributes<ObsoleteAttribute>().FirstOrDefault();
         }
         internal ColumnAttribute? ColumnAttribute { get; set; }
         internal CommentAttribute? CommentAttribute { get; set; }
@@ -39,6 +40,7 @@ namespace Autobahn.Codegen.Models
         internal KeylessAttribute? KeylessAttribute { get; set; }
         internal MaxLengthAttribute? MaxLengthAttribute { get; set; }
         internal NotMappedAttribute? NotMappedAttribute { get; set; }
+        internal ObsoleteAttribute? ObsoleteAttribute { get; set; }
         internal PrecisionAttribute? PrecisionAttribute { get; set; }
         internal RequiredAttribute? RequiredAttribute { get; set; }
         internal StringLengthAttribute? StringLengthAttribute { get; set; }

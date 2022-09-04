@@ -29,5 +29,10 @@
         /// Generate code for the domain
         /// </summary>
         public bool GenerateCode { get;set; }
+
+        /// <summary>
+        /// The order of code generation
+        /// </summary>
+        public int SortOrder { get; set; }
     }
 }

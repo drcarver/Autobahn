@@ -17,7 +17,7 @@ namespace ScafoldADatabase.Entities
             AssessmentFormAssessmentAssets = new HashSet<AssessmentFormAssessmentAsset>();
             AssessmentFormAssessmentFormSections = new HashSet<AssessmentFormAssessmentFormSection>();
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
         }
 
         /// <summary>
@@ -144,6 +144,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("AssessmentForm")]
         public virtual ICollection<AssessmentRegistration> AssessmentRegistrations { get; set; }
         [InverseProperty("AssessmentForm")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
     }
 }

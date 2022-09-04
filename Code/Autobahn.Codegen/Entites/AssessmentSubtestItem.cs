@@ -9,30 +9,37 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentPersonalNeedLanguageLearner")]
-    public partial class AssessmentPersonalNeedLanguageLearner
+    [Table("AssessmentSubtestItem")]
+    public partial class AssessmentSubtestItem
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int AssessmentPersonalNeedLanguageLearnerId { get; set; }
+        public int AssessmentSubtestItemId { get; set; }
         /// <summary>
-        /// Foreign key - AssessmentNeedsProfileContent
+        /// Foreign key - AssessmentSubtest
         /// </summary>
-        public int AssessmentPersonalNeedsProfileContentId { get; set; }
+        public int AssessmentSubTestId { get; set; }
         /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
+        /// Foreign key - AssessmentItem
         /// </summary>
-        public bool? AssignedSupport { get; set; }
-        /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
-        /// </summary>
-        public bool? ActivateByDefault { get; set; }
+        public int AssessmentItemId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int RefAssessmentNeedLanguageLearnerTypeId { get; set; }
+        [Column(TypeName = "decimal(3, 2)")]
+        public decimal? ItemWeightCorrect { get; set; }
+        /// <summary>
+        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
+        /// </summary>
+        [Column(TypeName = "decimal(3, 2)")]
+        public decimal? ItemWeightIncorrect { get; set; }
+        /// <summary>
+        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
+        /// </summary>
+        [Column(TypeName = "decimal(3, 2)")]
+        public decimal? ItemWeightNotAttempted { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -46,17 +53,17 @@ namespace ScafoldADatabase.Entities
         public int? RecordStatusId { get; set; }
         public int? DataCollectionId { get; set; }
 
-        [ForeignKey("AssessmentNeedsProfileContentId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
-        public virtual AssessmentPersonalNeedsProfileContent AssessmentPersonalNeedsProfileContent { get; set; } = null!;
+        [ForeignKey("AssessmentItemId")]
+        [InverseProperty("AssessmentSubtestAssessmentItems")]
+        public virtual AssessmentItem AssessmentItem { get; set; } = null!;
+        [ForeignKey("AssessmentSubtestId")]
+        [InverseProperty("AssessmentSubtestAssessmentItems")]
+        public virtual AssessmentSubTest AssessmentSubTest { get; set; } = null!;
         [ForeignKey("DataCollectionId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
+        [InverseProperty("AssessmentSubtestAssessmentItems")]
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("RecordStatusId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
+        [InverseProperty("AssessmentSubtestAssessmentItems")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefAssessmentNeedsProfileContentLanguageLearnerTypeId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
-        public virtual RefAssessmentNeedLanguageLearnerType RefAssessmentNeedLanguageLearnerType { get; set; } = null!;
     }
 }

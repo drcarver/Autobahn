@@ -70,7 +70,7 @@ namespace ScafoldADatabase.Entities
 
         [ForeignKey("AssessmentSubtestId")]
         [InverseProperty("AssessmentPerformanceLevels")]
-        public virtual AssessmentSubtest? AssessmentSubtest { get; set; }
+        public virtual AssessmentSubTest? AssessmentSubTest { get; set; }
         [ForeignKey("DataCollectionId")]
         [InverseProperty("AssessmentPerformanceLevels")]
         public virtual DataCollection? DataCollection { get; set; }

@@ -30,28 +30,36 @@ internal enum TypeBeingGeneratedEnum
 
 internal class MauiModule
 {
-    private static List<string> ModelsGenerated { get; set; } = new List<string>();
+    private static List<string> modelsGenerated { get; set; } = new List<string>();
+    private static List<AutobahnEntity> allEntities { get; set; }
 
     internal static void GenerateModule(string location, 
         List<AutobahnEntity> entities, List<AutobahnDomain> domains)
     {
-        foreach (var domain in domains)
+        allEntities = entities;
+        foreach (var domain in domains.OrderBy(o => o.SortOrder))
         {
             Console.WriteLine($"Generating files for Autobahn {domain.Name} domain");
-            var moduleName = $"Autobahn.Education.{domain.Module}";
-            if (domain.Module == "Authorization")
+            string moduleName;
+            if (domain.Module != "Organization"
+                || domain.Module != "Person"
+                || domain.Module != "Role")
             {
-                continue;
+                moduleName = $"Autobahn.Education.{domain.Module}";
+            }
+            else
+            {
+                moduleName = $"Autobahn.Core.{domain.Module}";
             }
 
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
             GenerateTemplateProject(location, moduleName);
             GenerateGlobalUsings($@"{location}\{moduleName}\{moduleName}");
             AddAssemblyInfo($@"{location}\{moduleName}\{moduleName}\{moduleName}.csproj", domain);
-            GenerateInterfaceFiles($@"{location}\{moduleName}\{moduleName}\Interfaces\", domain, entities.Where(t => !t.Name.StartsWith("Ref")).ToList());
+            GenerateInterfaceFiles($@"{location}\{moduleName}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
             GenerateModelFiles($@"{location}\{moduleName}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
-            // Still todo - add virtuals for foreign keys.  Add the dbcontext for the domain using sqllite. explore
+            // Still todo - Add the dbcontext for the domain using sqllite. explore
             // using a dbcontext that can also connect to sql server and cosmosdb
             GenerateEntityFiles($@"{location}\{moduleName}\{moduleName}\Entities\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
@@ -65,6 +73,23 @@ internal class MauiModule
             // Still todo - service collection extensions for view routes
             //GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
             //GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList());
+        }
+        var notgenerated = entities.Where(e => e.GeneratedDomain == null).ToList();
+        GeneratedCodeStats(location, entities);
+    }
+
+    /// <summary>
+    /// write the generated code stats
+    /// </summary>
+    /// <param name="entites"></param>
+    private static void GeneratedCodeStats(string location, List<AutobahnEntity> entites)
+    {
+        using (var stream = File.CreateText($@"{location}\CodeGenerationStats.csv"))
+        {
+            foreach (var entity in entites.OrderBy(o => o.Name))
+            {
+                stream.WriteLine($"{entity.Name},{entity?.Attributes?.TableAttribute?.Schema},{entity?.GeneratedDomain?.Module}");
+            }
         }
     }
 
@@ -198,6 +223,7 @@ internal class MauiModule
     {
         foreach (var model in models)
         {
+            model.GeneratedDomain = domain;
             GenerateReferenceEntity($@"{filePath}\Entities\", domain, model);
             //GenerateReferenceList($@"{filePath}Autobahn.Education.{domain.Module}\Models\", domain, model);
         }
@@ -217,7 +243,7 @@ internal class MauiModule
             stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
             if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
             {
-                stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition}"")]");
+                stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
             }
             stream.WriteLine($@"public partial class {model.Name}Entity : ReferenceBaseEntity, IReferenceBase");
             stream.WriteLine($@"{{");
@@ -416,11 +442,12 @@ internal class MauiModule
                 stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
                 if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
                 {
-                    stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition}"")]");
+                    stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
                 }
                 stream.WriteLine($@"public partial class {model.Name}Entity : EntityBase, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateProperties(stream, model, TypeBeingGeneratedEnum.Entity);
+                GenerateVirtualProperties(stream, model, TypeBeingGeneratedEnum.Entity);
                 stream.WriteLine($@"}}");
             }
         }
@@ -504,8 +531,9 @@ internal class MauiModule
         AutobahnDomain domain, 
         List<AutobahnEntity> models)
     {
-        foreach (var model in models.Where(m => m.Attributes.TableAttribute?.Schema == domain.Module).ToList())
+        foreach (var model in models)
         {
+            model.GeneratedDomain = domain;
             Console.WriteLine($"Generating interface I{model.Name}");
             using (var stream = File.CreateText($@"{filePath}\I{model.Name}.g.cs"))
             {
@@ -692,6 +720,11 @@ internal class MauiModule
             var errormsg = "{0} is required.";
             stream.WriteLine($"    [Required(ErrorMessage=\"{errormsg}\")]");
         }
+        if (prop.Attributes.ObsoleteAttribute != null
+            && generatedType == TypeBeingGeneratedEnum.Entity)
+        {
+            stream.WriteLine($"    [Obsolete(\"{prop.Attributes.ObsoleteAttribute.Message}\")]");
+        }
         if (prop.Name.EndsWith("Id")
             && generatedType == TypeBeingGeneratedEnum.Entity)
         {
@@ -719,7 +752,7 @@ internal class MauiModule
         {
             if (!string.IsNullOrEmpty(prop.AutobahnElement?.Definition))
             {
-                stream.WriteLine($@"    [Comment(""{prop.AutobahnElement.Definition}"")]");
+                stream.WriteLine($@"    [Comment(""{prop.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
             }
         }
     }
@@ -941,40 +974,66 @@ internal class MauiModule
     //            }
     //        }
 
-    //        private static void GenerateVirtualProperties(StreamWriter stream, AutobahnTable model, List<AutobahnTable> columns, List<AutobahnElement> elements)
-    //        {
-    //            if (!elements.Any(e => e.TechnicalName.EndsWith("Id") && !e.TechnicalName.StartsWith("Ref")))
-    //            {
-    //                return;
-    //            }
-    //            stream.WriteLine();
-    //            stream.WriteLine($"        #region \"ICommands for Navigation Properties\"");
-    //            foreach (var prop in elements.Where(e => e.TechnicalName.EndsWith("Id") && !e.TechnicalName.StartsWith("Ref")))
-    //            {
-    //                stream.WriteLine($"        /// <summary>");
-    //                if (prop.TechnicalName.EndsWith("Id"))
-    //                {
-    //                    if (string.IsNullOrEmpty(prop.Definition))
-    //                    {
-    //                        stream.WriteLine($"        /// Reference to an optional instance of the <see cref=\"{prop.TechnicalName.Replace("Id", string.Empty)}\"/> model");
-    //                    }
-    //                    else
-    //                    {
-    //                        stream.WriteLine($"        /// {prop.Definition}");
-    //                    }
-    //                }
-    //                if (prop.URL != null)
-    //                {
-    //                    stream.WriteLine($"        /// <para>");
-    //                    stream.WriteLine($"        /// <a href=\"{prop.URL}\">{prop.ElementName}</a>");
-    //                    stream.WriteLine($"        /// </para>");
-    //                }
-    //                stream.WriteLine($"        /// </summary>");
-    //                stream.WriteLine($"        public ICommand {prop.TechnicalName.Replace("Id", string.Empty)}Command {{ get; set; }}");
-    //                stream.WriteLine();
-    //            }
-    //            stream.WriteLine($"        #endregion");
-    //        }
+    private static void GenerateVirtualProperties(StreamWriter stream, AutobahnEntity model, TypeBeingGeneratedEnum generatedType)
+    {
+        stream.WriteLine();
+        if (generatedType == TypeBeingGeneratedEnum.Entity)
+        {
+            stream.WriteLine($"    #region \"Virtual Properties for foreign keys\"");
+        }
+        List<string> propertiesToIgnore = new List<string>
+                    {
+                        "RecordStartDateTime",
+                        "RecordEndDateTime",
+                        "RecordStatusId",
+                        "Description",
+                        "Code",
+                        "Definition",
+                        "RefJurisdictionId",
+                        "SortOrder",
+                        "DataCollectionId",
+                        $"{model.Name}Id"
+                    };
+        List<string> propertiesGenerated = new();
+        foreach (var prop in model.AutobahnProperties.Where(m => m.Name.EndsWith("Id")))
+        {
+            if (propertiesGenerated.Contains(prop.Name)
+                || propertiesToIgnore.Contains(prop.Name))
+            {
+                continue;
+            }
+            var fkeyEntity = allEntities.FirstOrDefault(e => e.Name == prop.Name.Replace("Id", string.Empty));
+            if (fkeyEntity == null)
+            {
+                prop.Attributes.ObsoleteAttribute = new("This property is obsolete and will be removed in a later version");
+                continue;
+            }
+            propertiesGenerated.Add(prop.Name);
+
+            stream.WriteLine($"    /// <summary>");
+            if (string.IsNullOrEmpty(prop.AutobahnElement?.Definition))
+            {
+                stream.WriteLine($"    /// Reference to an optional instance of the <see cref=\"I{prop.Name.Replace("Id", string.Empty)}\"/> implementation");
+            }
+            else
+            {
+                stream.WriteLine($"    /// {prop.AutobahnElement.Definition}");
+            }
+            if (prop.AutobahnElement?.URL != null)
+            {
+                stream.WriteLine($"    /// <para>");
+                stream.WriteLine($"    /// <a href=\"{prop.AutobahnElement?.URL}\">{prop.AutobahnElement?.ElementName}</a>");
+                stream.WriteLine($"    /// </para>");
+            }
+            stream.WriteLine($"    /// <remarks>");
+            stream.WriteLine($"    /// This entity is in the {model.Attributes?.TableAttribute?.Schema} domain");
+            stream.WriteLine($"    /// </remarks>");
+            stream.WriteLine($"    /// </summary>");
+            stream.WriteLine($"    public virtual {prop.VirtualType}Entity{(prop.IsNullable ? "?" : String.Empty)} {prop.Name.Replace("Id", string.Empty)}Entity {{ get; set; }}");
+            stream.WriteLine();
+        }
+        stream.WriteLine($"    #endregion");
+    }
 
     /// <summary>
     /// Generate the backing fields for a view model
@@ -1080,6 +1139,36 @@ internal class MauiModule
 
         // Add the new entries
         project?.Root?.LastNode?.AddBeforeSelf(assemblyInfoNode);
+
+        // Add project references
+        var group = project?.Root?.Elements("ItemGroup");
+        if (group.Any())
+        {
+            foreach (var refnode in group)
+            {
+                if (!refnode.Elements("ProjectReference").Any())
+                {
+                    continue;
+                }
+                var projnode = new XElement("ProjectReference");
+                if (domain.Module != "Common"
+                    || (domain.Module != "Organization")
+                    || (domain.Module != "Person")
+                    || (domain.Module != "Role"))
+                    {
+                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Education.Common\Autobahn.Education.Common\Autobahn.Education.Common.csproj"));
+                    refnode.Add(projnode);
+                    if (filePath.EndsWith(".maui"))
+                    {
+                        var include = $@"..\..\{fi.Name.Replace(".maui", string.Empty)}";
+                        projnode = new XElement("ProjectReference");
+                        projnode.Add(new XAttribute("Include", $@"..\{include}\{include}.csproj"));
+                        refnode.Add(projnode);
+                    }
+                }
+                break;
+            }
+        }
 
         project?.Save(filePath);
     }

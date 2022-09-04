@@ -39,8 +39,6 @@ namespace ScafoldADatabase.Entities
         public bool? AslOnDemandIndicator { get; set; }
         public bool? SignedEnglishIndicator { get; set; }
         public bool? SignedEnglishOnDemandIndicator { get; set; }
-        public int? RefHazardTypeId { get; set; }
-        public int? RefSupportToolTypeId { get; set; }
         public int? RefKeywordTranslationLanguageId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.

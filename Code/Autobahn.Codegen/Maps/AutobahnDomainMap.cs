@@ -15,10 +15,11 @@ namespace Autobahn.Codegen.Maps
     {
         internal AutobahnDomainMap()
         {
-            Map(x => x.Id).Index(3);
-            Map(x => x.Module).Index(0);
-            Map(x => x.Name).Index(1);
-            Map(x => x.Description).Index(2);
+            Map(x => x.Id).Index(4);
+            Map(x => x.Module).Index(1);
+            Map(x => x.Name).Index(2);
+            Map(x => x.Description).Index(3);
+            Map(x => x.SortOrder).Index(0);
         }
     }
 }

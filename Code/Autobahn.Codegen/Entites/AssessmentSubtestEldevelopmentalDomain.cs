@@ -22,7 +22,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - Assessment
         /// </summary>
-        public int AssessmentSubtestId { get; set; }
+        public int AssessmentSubTestId { get; set; }
         /// <summary>
         /// Foreign key - RefAssessmentELDevelopmentalDomain
         /// </summary>
@@ -43,7 +43,7 @@ namespace ScafoldADatabase.Entities
 
         [ForeignKey("AssessmentSubtestId")]
         [InverseProperty("AssessmentSubtestEldevelopmentalDomains")]
-        public virtual AssessmentSubtest AssessmentSubtest { get; set; } = null!;
+        public virtual AssessmentSubTest AssessmentSubtest { get; set; } = null!;
         [ForeignKey("DataCollectionId")]
         [InverseProperty("AssessmentSubtestEldevelopmentalDomains")]
         public virtual DataCollection? DataCollection { get; set; }

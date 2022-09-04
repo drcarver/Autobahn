@@ -68,7 +68,7 @@ namespace ScafoldADatabase.Entities
             AssessmentSubtestCompetencyDefinitions = new HashSet<AssessmentSubtestCompetencyDefinition>();
             AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestEldevelopmentalDomain>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
             Assessments = new HashSet<Assessment>();
             Authentications = new HashSet<Authentication>();
             AuthorizationDocuments = new HashSet<AuthorizationDocument>();
@@ -516,7 +516,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RecordStatus")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }
         [InverseProperty("RecordStatus")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
         [InverseProperty("RecordStatus")]
         public virtual ICollection<Assessment> Assessments { get; set; }
         [InverseProperty("RecordStatus")]

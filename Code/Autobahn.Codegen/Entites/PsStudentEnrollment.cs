@@ -16,8 +16,8 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("PSStudentEnrollmentId")]
-        public int PsstudentEnrollmentId { get; set; }
+        [Column("PsStudentEnrollmentId")]
+        public int PsStudentEnrollmentId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
         /// </summary>
@@ -190,7 +190,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefGraduateOrDoctoralExamResultsStatus? RefGraduateOrDoctoralExamResultsStatus { get; set; }
         [ForeignKey("RefInstructionalActivityHoursId")]
         [InverseProperty("PsStudentEnrollments")]
-        public virtual RefInstructionalActivityHour? RefInstructionalActivityHours { get; set; }
+        public virtual RefInstructionalActivityHour? RefInstructionalActivityHour { get; set; }
         [ForeignKey("RefPsEnrollmentAwardTypeId")]
         [InverseProperty("PsStudentEnrollments")]
         public virtual RefPsEnrollmentAwardType? RefPsEnrollmentAwardType { get; set; }

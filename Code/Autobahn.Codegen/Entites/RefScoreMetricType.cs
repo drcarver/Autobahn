@@ -15,7 +15,7 @@ namespace ScafoldADatabase.Entities
         public RefScoreMetricType()
         {
             AssessmentResults = new HashSet<AssessmentResult>();
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
         }
 
         /// <summary>
@@ -52,6 +52,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefScoreMetricType")]
         public virtual ICollection<AssessmentResult> AssessmentResults { get; set; }
         [InverseProperty("RefScoreMetricType")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace ScafoldADatabase.Entities
         public RefAssessmentPurpose()
         {
             AssessmentRegistrations = new HashSet<AssessmentRegistration>();
-            AssessmentSubtests = new HashSet<AssessmentSubtest>();
+            AssessmentSubtests = new HashSet<AssessmentSubTest>();
             Assessments = new HashSet<Assessment>();
         }
 
@@ -53,7 +53,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefAssessmentPurpose")]
         public virtual ICollection<AssessmentRegistration> AssessmentRegistrations { get; set; }
         [InverseProperty("RefAssessmentPurpose")]
-        public virtual ICollection<AssessmentSubtest> AssessmentSubtests { get; set; }
+        public virtual ICollection<AssessmentSubTest> AssessmentSubtests { get; set; }
         [InverseProperty("RefAssessmentPurpose")]
         public virtual ICollection<Assessment> Assessments { get; set; }
     }

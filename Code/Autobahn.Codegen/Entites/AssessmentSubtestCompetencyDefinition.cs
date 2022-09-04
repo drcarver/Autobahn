@@ -16,7 +16,7 @@ namespace ScafoldADatabase.Entities
         [Key]
         [Column("AssessmentSubtest_CompetencyDefinitionId")]
         public int AssessmentSubtestCompetencyDefinitionId { get; set; }
-        public int AssessmentSubtestId { get; set; }
+        public int AssessmentSubTestId { get; set; }
         public int CompetencyDefinitionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -33,7 +33,7 @@ namespace ScafoldADatabase.Entities
 
         [ForeignKey("AssessmentSubtestId")]
         [InverseProperty("AssessmentSubtestCompetencyDefinitions")]
-        public virtual AssessmentSubtest AssessmentSubtest { get; set; } = null!;
+        public virtual AssessmentSubTest AssessmentSubtest { get; set; } = null!;
         [ForeignKey("CompetencyDefinitionId")]
         [InverseProperty("AssessmentSubtestCompetencyDefinitions")]
         public virtual CompetencyDefinition CompetencyDefinition { get; set; } = null!;

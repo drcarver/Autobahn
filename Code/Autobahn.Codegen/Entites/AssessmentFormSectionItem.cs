@@ -9,30 +9,27 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentPersonalNeedLanguageLearner")]
-    public partial class AssessmentPersonalNeedLanguageLearner
+    [Table("AssessmentFormSectionItem")]
+    public partial class AssessmentFormSectionItem
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int AssessmentPersonalNeedLanguageLearnerId { get; set; }
+        [Column("AssessmentFormSectionItem")]
+        public int AssessmentFormSectionItemId { get; set; }
         /// <summary>
-        /// Foreign key - AssessmentNeedsProfileContent
+        /// Foreign key - AssessmentForm.
         /// </summary>
-        public int AssessmentPersonalNeedsProfileContentId { get; set; }
+        public int AssessmentFormId { get; set; }
         /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
+        /// Foreign key - AssessmentFormSection
         /// </summary>
-        public bool? AssignedSupport { get; set; }
-        /// <summary>
-        /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
-        /// </summary>
-        public bool? ActivateByDefault { get; set; }
+        public int AssessmentFormSectionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int RefAssessmentNeedLanguageLearnerTypeId { get; set; }
+        public int? SequenceNumber { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -46,17 +43,17 @@ namespace ScafoldADatabase.Entities
         public int? RecordStatusId { get; set; }
         public int? DataCollectionId { get; set; }
 
-        [ForeignKey("AssessmentNeedsProfileContentId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
-        public virtual AssessmentPersonalNeedsProfileContent AssessmentPersonalNeedsProfileContent { get; set; } = null!;
+        [ForeignKey("AssessmentFormId")]
+        [InverseProperty("AssessmentFormAssessmentFormSections")]
+        public virtual AssessmentForm AssessmentForm { get; set; } = null!;
+        [ForeignKey("AssessmentFormSectionId")]
+        [InverseProperty("AssessmentFormAssessmentFormSections")]
+        public virtual AssessmentFormSection AssessmentFormSection { get; set; } = null!;
         [ForeignKey("DataCollectionId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
+        [InverseProperty("AssessmentFormAssessmentFormSections")]
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("RecordStatusId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
+        [InverseProperty("AssessmentFormAssessmentFormSections")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefAssessmentNeedsProfileContentLanguageLearnerTypeId")]
-        [InverseProperty("AssessmentPersonalNeedLanguageLearners")]
-        public virtual RefAssessmentNeedLanguageLearnerType RefAssessmentNeedLanguageLearnerType { get; set; } = null!;
     }
 }

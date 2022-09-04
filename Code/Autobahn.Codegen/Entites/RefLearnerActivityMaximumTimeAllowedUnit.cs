@@ -21,7 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int RefLearnerActivityMaximumTimeAllowedUnitsId { get; set; }
+        public int RefLearnerActivityMaximumTimeAllowedUnitId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

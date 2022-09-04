@@ -36,7 +36,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int? RefAssessItemResponseStatusId { get; set; }
+        public int? RefAssessmentItemResponseStatusId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -132,7 +132,7 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("RecordStatusId")]
         [InverseProperty("AssessmentItemResponses")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefAssessItemResponseStatusId")]
+        [ForeignKey("RefAssessmentItemResponseStatusId")]
         [InverseProperty("AssessmentItemResponses")]
         public virtual RefAssessmentItemResponseStatus? RefAssessItemResponseStatus { get; set; }
         [ForeignKey("RefAssessmentItemResponseScoreStatusId")]
