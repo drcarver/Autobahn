@@ -29,7 +29,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int? RefEmailTypeId { get; set; }
+        public int? RefOrganizationEmailTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -56,8 +56,8 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("RecordStatusId")]
         [InverseProperty("OrganizationEmails")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefEmailTypeId")]
+        [ForeignKey("RefOrganizationEmailTypeId")]
         [InverseProperty("OrganizationEmails")]
-        public virtual RefEmailType? RefEmailType { get; set; }
+        public virtual RefOrganizationEmailType? RefEmailType { get; set; }
     }
 }

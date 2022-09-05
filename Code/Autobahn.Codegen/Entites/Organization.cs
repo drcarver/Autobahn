@@ -327,7 +327,7 @@ namespace ScafoldADatabase.Entities
             RefElserviceTypes = new HashSet<RefElserviceType>();
             RefElstateRevenueSources = new HashSet<RefElstateRevenueSource>();
             RefEltrainerCoreKnowledgeAreas = new HashSet<RefEltrainerCoreKnowledgeArea>();
-            RefEmailTypes = new HashSet<RefEmailType>();
+            RefEmailTypes = new HashSet<RefOrganizationEmailType>();
             RefEmergencyOrProvisionalCredentialStatuses = new HashSet<RefEmergencyOrProvisionalCredentialStatus>();
             RefEmployedAfterExits = new HashSet<RefEmployedAfterExit>();
             RefEmployedPriorToEnrollments = new HashSet<RefEmployedPriorToEnrollment>();
@@ -1353,7 +1353,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefEltrainerCoreKnowledgeArea> RefEltrainerCoreKnowledgeAreas { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefEmailType> RefEmailTypes { get; set; }
+        public virtual ICollection<RefOrganizationEmailType> RefEmailTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefEmergencyOrProvisionalCredentialStatus> RefEmergencyOrProvisionalCredentialStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]

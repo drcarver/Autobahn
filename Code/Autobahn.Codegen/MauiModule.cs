@@ -40,16 +40,16 @@ internal class MauiModule
         foreach (var domain in domains.OrderBy(o => o.SortOrder))
         {
             Console.WriteLine($"Generating files for Autobahn {domain.Name} domain");
-            string moduleName;
-            if (domain.Module != "Organization"
-                || domain.Module != "Person"
-                || domain.Module != "Role")
-            {
-                moduleName = $"Autobahn.Education.{domain.Module}";
-            }
-            else
+            string moduleName = $"Autobahn.Education.{domain.Module}";
+            if (domain.Module == "Organization"
+                || domain.Module == "Person"
+                || domain.Module == "Role")
             {
                 moduleName = $"Autobahn.Core.{domain.Module}";
+            }
+            if (domain.Module == "StockPortfolio")
+            {
+                moduleName = $"Autobahn.{domain.Module}";
             }
 
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
@@ -1122,8 +1122,20 @@ internal class MauiModule
         //Gets the title associated with the application.
         assemblyInfoNode.Add(new XElement("ApplicationTitle", domain.Name));
 
+        var moduleName = $"Autobahn.Education.{domain.Module}";
+        if (domain.Module == "Organization"
+            || domain.Module == "Person"
+            || domain.Module == "Role")
+        {
+            moduleName = $"Autobahn.Core.{domain.Module}";
+        }
+        if (domain.Module == "StockPortfolio")
+        {
+            moduleName = $"Autobahn.{domain.Module}";
+        }
+
         //Gets the name, without the extension, of the assembly file for the application.
-        assemblyInfoNode.Add(new XElement("AssemblyName", $"Autobahn.Education.{domain.Module}"));
+        assemblyInfoNode.Add(new XElement("AssemblyName", $"{moduleName}."));
 
         //Gets the company name associated with the application.
         assemblyInfoNode.Add(new XElement("CompanyName", $"dcarver.com"));
@@ -1150,21 +1162,31 @@ internal class MauiModule
                 {
                     continue;
                 }
-                var projnode = new XElement("ProjectReference");
                 if (domain.Module != "Common"
-                    || (domain.Module != "Organization")
-                    || (domain.Module != "Person")
-                    || (domain.Module != "Role"))
-                    {
+                    && (domain.Module != "Organization")
+                    && (domain.Module != "StockPortfolio")
+                    && (domain.Module != "Person")
+                    && (domain.Module != "Role"))
+                {
+                    var projnode = new XElement("ProjectReference");
                     projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Education.Common\Autobahn.Education.Common\Autobahn.Education.Common.csproj"));
                     refnode.Add(projnode);
-                    if (filePath.EndsWith(".maui"))
-                    {
-                        var include = $@"..\..\{fi.Name.Replace(".maui", string.Empty)}";
-                        projnode = new XElement("ProjectReference");
-                        projnode.Add(new XAttribute("Include", $@"..\{include}\{include}.csproj"));
-                        refnode.Add(projnode);
-                    }
+                }
+                if (domain.Module == "Common")
+                {
+                    var projnode = new XElement("ProjectReference");
+                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj"));
+                    refnode.Add(projnode);
+                    projnode = new XElement("ProjectReference");
+                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj"));
+                    refnode.Add(projnode);
+                }
+                if (filePath.EndsWith(".maui"))
+                {
+                    var projnode = new XElement("ProjectReference");
+                    var include = $@"{fi.Name.Replace(".maui", string.Empty)}";
+                    projnode.Add(new XAttribute("Include", $@"..\{include}\{include}.csproj"));
+                    refnode.Add(projnode);
                 }
                 break;
             }

@@ -51,7 +51,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        public int? RefTelephoneNumberListedStatusId { get; set; }
+        public int? RefOrganizationTelephoneNumberListedStatusId { get; set; }
         public int? RecordStatusId { get; set; }
         public int? DataCollectionId { get; set; }
 

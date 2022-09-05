@@ -58,6 +58,6 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefEmailTypeId")]
         [InverseProperty("PersonEmailAddresses")]
-        public virtual RefEmailType? RefEmailType { get; set; }
+        public virtual RefOrganizationEmailType? RefEmailType { get; set; }
     }
 }
