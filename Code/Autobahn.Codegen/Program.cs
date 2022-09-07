@@ -36,9 +36,111 @@ internal class Program
             "RefState",
         };
 
+    /// <summary>
+    /// The adult education domain
+    /// </summary>
+    private static List<string> AdditionalAdultEducationTypes = new()
+    {
+        "RefCourseLevelType",
+        "RefCareerCluster",
+        "RefLevelOfInstitution",
+        "RefHighSchoolDiplomaType",
+        "RefProfessionalTechnicalCredentialType",
+        "RefEmployedWhileEnrolled",
+        "RefEmployedAfterExit",
+        "RefGoalsForAttendingAdultEducation",
+        "RefCorrectionalEducationFacilityType",
+        "RefWorkbasedLearningOpportunityType",
+        "RefAdultEducationProgramExitReason",
+        "RefWorkbasedLearningOpportunityType",
+};
+
+    private static List<string> AdditionalAssessmentTypes = new()
+    {
+        "ApipInteraction",
+        "AssessmentPersonalNeedsProfile",
+        "AssessmentResult",
+        "PersonAssessmentPersonalNeedsProfile",
+        "RefAcademicSubject",
+        "RefAccommodationType",
+        "RefApipInteractionType",
+        "RefAssessmentAccommodationCategory",
+        "RefAssessmentAssetType",
+        "RefAssessmentEldevelopmentalDomain",
+        "RefAssessmentEldevelopmentalDomain",
+        "RefAssessmentItemCharacteristicType",
+        "RefAssessmentItemResponseScoreStatus",
+        "RefAssessmentItemResponseStatus",
+        "RefAssessmentItemType",
+        "RefAssessmentNeedAlternativeRepresentationType",
+        "RefAssessmentNeedBrailleGradeType",
+        "RefAssessmentNeedBrailleMarkType",
+        "RefAssessmentNeedBrailleStatusCellType",
+        "RefAssessmentNeedHazardType",
+        "RefAssessmentNeedIncreasedWhitespacingType",
+        "RefAssessmentNeedLanguageLearnerType",
+        "RefAssessmentNeedLinkIndicationType",
+        "RefAssessmentNeedMaskingType",
+        "RefAssessmentNeedSigningType",
+        "RefAssessmentNeedSpokenSourcePreferenceType",
+        "RefAssessmentNeedSupportTool",
+        "RefAssessmentNeedUsageType",
+        "RefAssessmentNeedUserSpokenPreferenceType",
+        "RefAssessmentParticipationIndicator",
+        "RefAssessmentPlatformType",
+        "RefAssessmentPretestOutcome",
+        "RefAssessmentPurpose",
+        "RefAssessmentPurpose",
+        "RefAssessmentPurpose",
+        "RefAssessmentReasonNotCompleting",
+        "RefAssessmentReasonNotTested",
+        "RefAssessmentRegistrationCompletionStatus",
+        "RefAssessmentReportingMethod",
+        "RefAssessmentReportingMethod",
+        "RefAssessmentResultDataType",
+        "RefAssessmentResultScoreType",
+        "RefAssessmentSessionSpecialCircumstanceType",
+        "RefAssessmentSessionSpecialCircumstanceType",
+        "RefAssessmentSessionStaffRoleType",
+        "RefAssessmentSessionType",
+        "RefAssessmentType",
+        "RefContentStandardType",
+        "RefEloutcomeMeasurementLevel",
+        "RefGoalMeasurementType",
+        "RefGoalStatusType",
+        "RefItemResponseTheoryDifficultyCategory",
+        "RefItemResponseTheoryKappaAlgorithm",
+        "RefLearnerActionType",
+        "RefLearnerActivityAddToGradeBookFlag",
+        "RefLearnerActivityMaximumTimeAllowedUnit",
+        "RefLearnerActivityType",
+        "RefNaepAspectsOfReading",
+        "RefNaepMathComplexityLevel",
+        "RefOutcomeTimePoint",
+        "RefProficiencyStatus",
+        "RefScoreMetricType",
+        "RefTextComplexitySystem",
+    };
+
+    private static List<string> AdditionalCompetenciesTypes = new()
+    {
+        "RefType",
+        "RefLearningResourceCompetencyAlignmentType",
+        "RefEducationLevel",
+        "RubricCriterion",
+        "Rubric",
+    };
+
+    private static List<string> AdditionalCredentialsTypes = new()
+    {
+        "RefCareerCluster",
+        "RefCipCode",
+        "RefOnetsococcupationType",
+        "RefCtdlaudienceLevelType",
+    };
+
     private static List<string> AdditionalCommonEducationTypes = new()
     {
-        "AssessmentResult",
         "Classroom",
         "CompetencyDefinition",
         "CompetencyFramework",
@@ -111,22 +213,18 @@ internal class Program
         "RefTechnicalAssistanceType",
 };
 
-    private static List<string> AdditionalAdultEducationTypes = new()
+    private static List<string> AdditionalEarlyChildhoodTypes = new()
     {
-        "RefCourseLevelType",
-        "RefCareerCluster",
-        "RefLevelOfInstitution",
-        "RefHighSchoolDiplomaType",
-        "RefProfessionalTechnicalCredentialType",
-        "RefEmployedWhileEnrolled",
-        "RefEmployedAfterExit",
-        "RefGoalsForAttendingAdultEducation",
-        "RefCorrectionalEducationFacilityType",
-        "RefWorkbasedLearningOpportunityType",
-        "RefAdultEducationProgramExitReason",
-        "RefWorkbasedLearningOpportunityType",
-};
+    };
 
+    private static List<string> AdditionalK12Types = new()
+    {
+    };
+
+    private static List<string> AdditionalLearningResourcesTypes = new()
+    {
+    };
+    
     private static List<string> AdditionalOrganizationTypes = new()
     {
         "RefOrganizationEmailType",
@@ -215,93 +313,6 @@ internal class Program
         "RefLeaveEventType",
     };
 
-    private static List<string> AdditionalAssessmentTypes = new()
-    {
-        "ApipInteraction",
-        "AssessmentPersonalNeedsProfile",
-        "PersonAssessmentPersonalNeedsProfile",
-        "RefAcademicSubject",
-        "RefAccommodationType",
-        "RefApipInteractionType",
-        "RefAssessmentAccommodationCategory",
-        "RefAssessmentAssetType",
-        "RefAssessmentEldevelopmentalDomain",
-        "RefAssessmentEldevelopmentalDomain",
-        "RefAssessmentItemCharacteristicType",
-        "RefAssessmentItemResponseScoreStatus",
-        "RefAssessmentItemResponseStatus",
-        "RefAssessmentItemType",
-        "RefAssessmentNeedAlternativeRepresentationType",
-        "RefAssessmentNeedBrailleGradeType",
-        "RefAssessmentNeedBrailleMarkType",
-        "RefAssessmentNeedBrailleStatusCellType",
-        "RefAssessmentNeedHazardType",
-        "RefAssessmentNeedIncreasedWhitespacingType",
-        "RefAssessmentNeedLanguageLearnerType",
-        "RefAssessmentNeedLinkIndicationType",
-        "RefAssessmentNeedMaskingType",
-        "RefAssessmentNeedSigningType",
-        "RefAssessmentNeedSpokenSourcePreferenceType",
-        "RefAssessmentNeedSupportTool",
-        "RefAssessmentNeedUsageType",
-        "RefAssessmentNeedUserSpokenPreferenceType",
-        "RefAssessmentParticipationIndicator",
-        "RefAssessmentPlatformType",
-        "RefAssessmentPretestOutcome",
-        "RefAssessmentPurpose",
-        "RefAssessmentPurpose",
-        "RefAssessmentPurpose",
-        "RefAssessmentReasonNotCompleting",
-        "RefAssessmentReasonNotTested",
-        "RefAssessmentRegistrationCompletionStatus",
-        "RefAssessmentReportingMethod",
-        "RefAssessmentReportingMethod",
-        "RefAssessmentResultDataType",
-        "RefAssessmentResultScoreType",
-        "RefAssessmentSessionSpecialCircumstanceType",
-        "RefAssessmentSessionSpecialCircumstanceType",
-        "RefAssessmentSessionStaffRoleType",
-        "RefAssessmentSessionType",
-        "RefAssessmentType",
-        "RefContentStandardType",
-        "RefEloutcomeMeasurementLevel",
-        "RefGoalMeasurementType",
-        "RefGoalStatusType",
-        "RefItemResponseTheoryDifficultyCategory",
-        "RefItemResponseTheoryKappaAlgorithm",
-        "RefLearnerActionType",
-        "RefLearnerActivityAddToGradeBookFlag",
-        "RefLearnerActivityMaximumTimeAllowedUnit",
-        "RefLearnerActivityType",
-        "RefNaepAspectsOfReading",
-        "RefNaepMathComplexityLevel",
-        "RefOutcomeTimePoint",
-        "RefProficiencyStatus",
-        "RefScoreMetricType",
-        "RefTextComplexitySystem",
-    };
-
-    private static List<string> AdditionalCompetenciesTypes = new()
-    {
-        "RefType",
-        "RefLearningResourceCompetencyAlignmentType",
-        "RefEducationLevel",
-        "RubricCriterion",
-        "Rubric",
-    };
-
-    private static List<string> AdditionalCredentialsTypes = new()
-    {
-        "RefCareerCluster",
-        "RefCipCode",
-        "RefOnetsococcupationType",
-        "RefCtdlaudienceLevelType",
-    };
-
-    private static List<string> AdditionalEarlyChildhoodTypes = new()
-    {
-    };
-
     /// <summary>
     /// Set the domain of the table based on it name
     /// </summary>
@@ -323,11 +334,12 @@ internal class Program
         var ctedom = autobahnDomains.First(d => d.Module == "CTE");
         var wfdom = autobahnDomains.First(d => d.Module == "Workforce");
 
-        if ((table.Name.ToUpper().StartsWith("AE")
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("AE")
             || table.Name.ToUpper().EndsWith("AE")
             || table.Name.ToUpper().StartsWith("REFAE")))
         {
-            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            if (!AdditionalCommonEducationTypes.Contains(table.Name)                )
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = aedom.Module;
@@ -338,7 +350,8 @@ internal class Program
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = aedom.Module;
         }
-        if ((table.Name.ToUpper().StartsWith("EL")
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("EL")
             || table.Name.ToUpper().StartsWith("EARLYCHILDHOOD")
             || table.Name.ToUpper().EndsWith("EL")
             || table.Name.ToUpper().StartsWith("REFEL")
@@ -355,7 +368,8 @@ internal class Program
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = aedom.Module;
         }
-        if ((table.Name.ToUpper().StartsWith("ASSESSMENT")
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("ASSESSMENT")
             || table.Name.ToUpper().StartsWith("RUBRIC")
             || table.Name.ToUpper().StartsWith("GOAL")
             || table.Name.ToUpper().StartsWith("LEARNER")
@@ -375,81 +389,140 @@ internal class Program
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = assesdom.Module;
         }
-        if ((table.Name.ToUpper().StartsWith("Learning".ToUpper())
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("Learning".ToUpper())
             || table.Name.ToUpper().StartsWith("Peer".ToUpper())
             || table.Name.ToUpper().IndexOf("Learning".ToUpper()) > 0
             || table.Name.ToUpper().IndexOf("Peer".ToUpper()) > 0))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = lrdom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = lrdom.Module;
+            }
         }
-        if ((table.Name.ToUpper().StartsWith("K12")
-            || table.Name.ToUpper().IndexOf("K12") > 0))
+        if (AdditionalLearningResourcesTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = k12dom.Module;
+            table.Attributes.TableAttribute.Schema = assesdom.Module;
         }
-        if ((table.Name.StartsWith("Build")
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.ToUpper().StartsWith("K12")
+            || table.Name.ToUpper().IndexOf("K12") > 0))
+        {
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = k12dom.Module;
+            }
+        }
+        if (AdditionalK12Types.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = assesdom.Module;
+        }
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Build")
             || table.Name.StartsWith("Facility")
             || table.Name.StartsWith("RefBuild")
             || table.Name.StartsWith("RefFacility")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = facdom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = facdom.Module;
+            }
         }
-        if ((table.Name.StartsWith("Ps")
+
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Ps")
             || table.Name.StartsWith("PS")
             || table.Name.IndexOf("IPEDS", StringComparison.InvariantCulture) > -1
             || table.Name.StartsWith("RefPs")
             || table.Name.StartsWith("RefPS")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = psdom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = psdom.Module;
+            }
         }
-        if ((table.Name.StartsWith("Competency")
+
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Competency")
             || table.Name.StartsWith("RefCompet")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = compdom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = compdom.Module;
+            }
         }
         if (AdditionalCompetenciesTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = compdom.Module;
         }
-        if ((table.Name.StartsWith("Credential")
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Credential")
             || table.Name.StartsWith("RefCred")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = creddom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = creddom.Module;
+            }
         }
-        if ((table.Name.StartsWith("Cte")
+        if (AdditionalCredentialsTypes.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = compdom.Module;
+        }
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Cte")
             || table.Name.EndsWith("Cte")
             || table.Name.StartsWith("RefCte")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = ctedom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = ctedom.Module;
+            }
         }
-        if ((table.Name.StartsWith("App")
+
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("App")
             || table.Name.StartsWith("Auth")
             || table.Name.StartsWith("RefApp")
             || table.Name.StartsWith("RefAuth")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = "Autorization";
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = "Autorization";
+            }
         }
-        if ((table.Name.StartsWith("Workforce")
+
+        if (table.Attributes.TableAttribute?.Schema == null
+            && (table.Name.StartsWith("Workforce")
             || table.Name.StartsWith("RefWorkforce")))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = wfdom.Module;
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = wfdom.Module;
+            }
         }
+
         if (table.Attributes?.TableAttribute?.Schema == null
-            || (table.Name.ToUpper().StartsWith("Organization".ToUpper())
+            && (table.Name.ToUpper().StartsWith("Organization".ToUpper())
             || table.Name.ToUpper().IndexOf("Organization".ToUpper()) > 0))
        {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = "Organization";
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = "Organization";
+            }
         }
         if (AdditionalOrganizationTypes.Contains(table.Name))
         {
@@ -460,8 +533,11 @@ internal class Program
             && (table.Name.ToUpper().StartsWith("Person".ToUpper())
             || table.Name.ToUpper().IndexOf("Person".ToUpper()) > 0))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = "Person";
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = "Person";
+            }
         }
         if (AdditionalPersonTypes.Contains(table.Name))
         {
@@ -472,22 +548,21 @@ internal class Program
             && (table.Name.ToUpper().StartsWith("Role".ToUpper())
             || table.Name.ToUpper().IndexOf("Role".ToUpper()) > 0))
         {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = "Role";
+            if (!AdditionalCommonEducationTypes.Contains(table.Name))
+            {
+                table.Attributes.TableAttribute = new(table.Name);
+                table.Attributes.TableAttribute.Schema = "Role";
+            }
         }
         if (AdditionalRoleTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = "Role";
         }
-        if (table.Attributes.TableAttribute?.Schema == null
-            || AdditionalCommonEducationTypes.Contains(table.Name))
+        if (AdditionalCommonEducationTypes.Contains(table.Name))
         {
-            if (AdditionalCommonEducationTypes.Contains(table.Name))
-            {
-                table.Attributes.TableAttribute = new(table.Name);
-                table.Attributes.TableAttribute.Schema = comdom.Module;
-            } 
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = comdom.Module;
         }
     }
 
@@ -513,7 +588,7 @@ internal class Program
                 continue;
             }
 
-            var entity = new AutobahnEntity(type);
+            var entity  = new AutobahnEntity(type);
             var globalId = tables.FirstOrDefault(t => t.TableName == entity.Name && string.IsNullOrEmpty(t.ColumnName.Trim()))?.GlobalId;
             entity.AutobahnElement = elements.FirstOrDefault(e => e.GlobalID == globalId);
             if (entity.Attributes.CommentAttribute == null)
@@ -524,7 +599,7 @@ internal class Program
                 }
                 else
                 {
-                    entity.Attributes.CommentAttribute = new($"The {entity.Name} Entity");
+                    entity.Attributes.CommentAttribute = new($"The {entity.Name} ");
                 }
             }
             SetTableDomain(domains, entity);
@@ -545,39 +620,19 @@ internal class Program
             entity.Attributes.TableAttribute.Schema = "Invalid";
         }
 
-        //foreach (var domain in domains.OrderByDescending(o => o.SortOrder))
-        //{
-        //    foreach (var entity in autobahnEntities.Where(e => e.Attributes.TableAttribute.Schema == domain.Module))
-        //    {
-        //        if (entity.Attributes?.TableAttribute?.Schema == null)
-        //        {
-        //            entity.Attributes.TableAttribute.Schema = "Common";
-        //        }
-        //        SetEntityDomain(autobahnEntities, entity, domain.Module);
-        //    }
-        //}
-
         var notcommon = autobahnEntities.Count(e => e.Attributes.TableAttribute.Schema != "Common");
         var common = autobahnEntities.Count(e => e.Attributes.TableAttribute.Schema == "Common");
 
         return autobahnEntities;
     }
 
-    private static List<string> CoreEntities = new()
-    {
-        "Organization",
-        "Role",
-        "Person",
-        "OrganizationPersonRole"
-    };
-
-    private static void SetEntityDomain(List<AutobahnEntity> entities, AutobahnEntity entity, string module)
+    private static void SetDomain(List<AutobahnEntity> entities, AutobahnEntity entity, string module)
     {
         // If module != common the schema name is not the module name we
         // want to shift to then reset it and all of its foreign keys to 
-        // common.  Basically if the entity is in multiple domains move it
+        // common.  Basically if the  is in multiple domains move it
         // to common
-        if (entity.Attributes.TableAttribute.Schema != module)
+        if (entity.Attributes?.TableAttribute.Schema != module)
         {
             entity.Attributes.TableAttribute.Schema = "Common";
         }
@@ -585,20 +640,20 @@ internal class Program
         // Put the domain and all of it's foreign keys into the same domain
         foreach (var prop in entity.AutobahnProperties.Where(p => p.Name.EndsWith("Id")))
         {
-            var fkeyEntity = entities.FirstOrDefault(e => e.Name == prop.VirtualType);
-            if (fkeyEntity != null)
+            var fkey = entities.FirstOrDefault(e => e.Name == prop.VirtualType);
+            if (fkey != null)
             {
-                if (fkeyEntity.Attributes.TableAttribute.Schema != module
-                    && fkeyEntity.Attributes.TableAttribute.Schema != "Common")
+                if (fkey.Attributes.TableAttribute.Schema != module
+                    && fkey.Attributes.TableAttribute.Schema != "Common")
                 {
-                    fkeyEntity.Attributes.TableAttribute.Schema = module;
-                    SetEntityDomain(entities, fkeyEntity, module);
+                    fkey.Attributes.TableAttribute.Schema = module;
+                    SetDomain(entities, fkey, module);
                 }
                 prop.MapFKeyVirtualType();
             }
             else
             {
-                if (!CoreEntities.Contains(prop.VirtualType))
+                if (!EntitiesToIgnore.Contains(prop.VirtualType))
                 {
                     prop.Attributes.ObsoleteAttribute = new($"The {prop.VirtualType} property is obsolete and will be removed in a later version");
                 }
@@ -611,16 +666,16 @@ internal class Program
     static async Task Main(string[] args)
     {
         var csv = new CSVServices();
-        var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\AutobahnDomains.csv");
-        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\_CEDSElements.csv");
-        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\_CEDStoNDSMapping.csv");
+        var autobahnDomains = csv.ReadDomainsFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\AutobahnDomains.csv");
+        var autobahnElements = csv.ReadAutobahnElementFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDSElements.csv");
+        var autobahnTables = csv.ReadTablesFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\_CEDStoNDSMapping.csv");
 
         // Autobahn Domains
         var autobahnEntites = GetAutobahnEntities(
             Assembly.GetExecutingAssembly().GetExportedTypes().OrderBy(o => o.Name).ToList(), 
             autobahnDomains, autobahnTables, autobahnElements);
 
-        var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\Data\schemaorg-all-http.jsonld");
+        var schemaEntites = GetSchemaEntities(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\schemaorg-all-http.jsonld");
 
         var tickerlist = JsonConvert.DeserializeObject<List<Ticker>>(File.ReadAllText(@"C:\Users\drcarver\Desktop\codegen\FMP\Data\list.json"));
         int symbolLength = 0;
@@ -628,6 +683,7 @@ internal class Program
         int exchangenameLength = 0;
         int exchangeshortnameLength = 0;
         List<string> tickertype = new();
+        List<string> exchangeabbr = new();
         foreach (var ticker in tickerlist)
         {
             if (ticker.Symbol.Length > symbolLength) symbolLength = ticker.Symbol.Length;
@@ -637,6 +693,10 @@ internal class Program
             if (!tickertype.Contains(ticker.TickerType))
             {
                 tickertype.Add(ticker.TickerType);
+            }
+            if (!exchangeabbr.Contains(ticker.Exchange))
+            {
+                exchangeabbr.Add(ticker.Exchange);
             }
         }
 
@@ -649,10 +709,14 @@ internal class Program
         {
             Console.WriteLine($"{item}");
         }
+        foreach (var item in exchangeabbr)
+        {
+            Console.WriteLine($"{item}");
+        }
 
         //SeedOrganization();
         //SeedRefRecordStatusType();
-        //SeedRefRecordStatusCreatorEntity();
+        //SeedRefRecordStatusCreator();
 
         //var autobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\MarcRelator.csv");
         //            csv.WriteReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv", autobahnMarc, false, "|");
@@ -660,7 +724,7 @@ internal class Program
         //var RefAutobahnMarc = csv.ReadMarcReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefMarcRelator.csv").ToList();
         //var domainReferenceList = BuildTableListByProperty(autobahnTables);
 
-        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn.Education\src\";
+        var location = $@"C:\Users\drcarver\Desktop\codegen\Autobahn\src\";
         MauiModule.GenerateModule(location, autobahnEntites, autobahnDomains);
     }
 
@@ -676,13 +740,13 @@ internal class Program
         {
             if (schema.SchemaType.Contains("rdfs:Class") && !schema.SchemaType.Contains("schema:DataType"))
             {
-                var entityName = FirstCharToUpper(schema.Id.Replace("schema:", string.Empty));
-                var entity = graphlist.FirstOrDefault(e => e.Name == entityName);
+                var Name = FirstCharToUpper(schema.Id.Replace("schema:", string.Empty));
+                var entity = graphlist.FirstOrDefault(e => e.Name == Name);
                 if (entity == null)
                 {
                     entity = new AutobahnEntity
                     {
-                        Name = entityName,
+                        Name = Name,
                     };
                     if (!string.IsNullOrEmpty(schema.RdfsComment))
                     {
@@ -693,7 +757,7 @@ internal class Program
                         foreach (var subclass in schema.RdfsSubClassOf)
                         {
                             var subClassName = FirstCharToUpper(subclass.Id.Replace("schema:", string.Empty));
-                            if (!entity.SubClass.Contains(subClassName) && subClassName != entityName)
+                            if (!entity.SubClass.Contains(subClassName) && subClassName != Name)
                             {
                                 entity.SubClass.Add(subClassName);
                             }
@@ -701,14 +765,14 @@ internal class Program
                             // Update the domain map (entities that inherit from many others)
                             if (domains.ContainsKey(subClassName))
                             {
-                                if (!domains[subClassName].Contains(entityName))
+                                if (!domains[subClassName].Contains(Name))
                                 {
-                                    domains[subClassName].Add(entityName);
+                                    domains[subClassName].Add(Name);
                                 }
                             }
                             else
                             {
-                                domains.Add(subClassName, new List<string> { entityName });
+                                domains.Add(subClassName, new List<string> { Name });
                             }
                         }
                     }
@@ -718,7 +782,7 @@ internal class Program
                     }
                     if (!entity.SubClass.Any())
                     {
-                        entity.SubClass.Add("EntityBase");
+                        entity.SubClass.Add("Base");
                     }
                     entity.Attributes.TableAttribute = new TableAttribute(entity.Name);
                     entity.SubClass.Add($"I{entity.Name}");
@@ -727,7 +791,7 @@ internal class Program
             }
         }
 
-        // Add the properties to the entity
+        // Add the properties to the 
         foreach (var schema in SchemaOrg.Graph)
         {
             if (schema.SchemaType.Contains("rdf:Property"))
@@ -736,8 +800,8 @@ internal class Program
                 {
                     foreach (var schemaName in schema.SchemaDomainIncludes)
                     {
-                        var entityName = FirstCharToUpper(schemaName.Id.Replace("schema:", string.Empty));
-                        var entity = graphlist.FirstOrDefault(e => e.Name == entityName);
+                        var Name = FirstCharToUpper(schemaName.Id.Replace("schema:", string.Empty));
+                        var entity = graphlist.FirstOrDefault(e => e.Name == Name);
                         if (entity != null)
                         {
                             var propName = FirstCharToUpper(schema.Id.Replace("schema:", string.Empty));
@@ -758,8 +822,8 @@ internal class Program
                                 {
                                     entity.Label = FirstCharToUpper(schema.RdfsLabel);
                                 }
-                                var fkEntity = graphlist.FirstOrDefault(e => e.Name == prop.PropertyType);
-                                if (fkEntity != null)
+                                var fk = graphlist.FirstOrDefault(e => e.Name == prop.PropertyType);
+                                if (fk != null)
                                 {
                                     var virtualProperty = new AutobahnProperty
                                     {
@@ -784,18 +848,18 @@ internal class Program
         return graphlist;
     }
 
-    private static AutobahnElement? GetEntityMeta(string entityName, 
+    private static AutobahnElement? GetMeta(string Name, 
         string propertyName, List<AutobahnTable> tables,
         List<AutobahnElement> elements)
     {
         AutobahnTable? tableMeta;
         if (string.IsNullOrEmpty(propertyName))
         {
-            tableMeta = tables.FirstOrDefault(t => t.TableName == entityName);
+            tableMeta = tables.FirstOrDefault(t => t.TableName == Name);
         }
         else
         {
-            tableMeta = tables.FirstOrDefault(e => e.TableName == entityName && e.ColumnName == propertyName);
+            tableMeta = tables.FirstOrDefault(e => e.TableName == Name && e.ColumnName == propertyName);
         }
         AutobahnElement? element = null;
         if (!string.IsNullOrEmpty(tableMeta?.GlobalId))
@@ -868,15 +932,15 @@ internal class Program
     //    }
     //}
 
-    //private static void SeedRefRecordStatusCreatorEntity()
+    //private static void SeedRefRecordStatusCreator()
     //{
     //    var csv = new CSVServices();
     //    using (var ctx = new AutobahnCommonContext())
     //    {
-    //        var reftype = csv.ReadReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefRecordStatusCreatorEntity.csv");
+    //        var reftype = csv.ReadReferenceFile(@"C:\Users\drcarver\Desktop\codegen\Autobahn\Data\RefRecordStatusCreator.csv");
     //        foreach (var item in reftype)
     //        {
-    //            ctx.RefRecordStatusCreatorEntity.Add(new RefRecordStatusCreatorEntity
+    //            ctx.RefRecordStatusCreator.Add(new RefRecordStatusCreator
     //            {
     //                Id = item.Id, // ?? Guid.NewGuid(),
     //                Code = item.Code,

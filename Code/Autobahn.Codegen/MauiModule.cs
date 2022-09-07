@@ -41,41 +41,44 @@ internal class MauiModule
         {
             Console.WriteLine($"Generating files for Autobahn {domain.Name} domain");
             string moduleName = $"Autobahn.Education.{domain.Module}";
+            var moduleLocation = $@"{location}\{moduleName}";
             if (domain.Module == "Organization"
                 || domain.Module == "Person"
                 || domain.Module == "Role")
             {
                 moduleName = $"Autobahn.Core.{domain.Module}";
+                moduleLocation = $@"{location}\{moduleName}\";
             }
             if (domain.Module == "StockPortfolio")
             {
                 moduleName = $"Autobahn.{domain.Module}";
+                moduleLocation = $@"{location}\\{moduleName}\";
             }
 
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
             GenerateTemplateProject(location, moduleName);
-            GenerateGlobalUsings($@"{location}\{moduleName}\{moduleName}");
-            AddAssemblyInfo($@"{location}\{moduleName}\{moduleName}\{moduleName}.csproj", domain);
-            GenerateInterfaceFiles($@"{location}\{moduleName}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
-            GenerateModelFiles($@"{location}\{moduleName}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
+            GenerateGlobalUsings($@"{moduleLocation}\{moduleName}");
+            AddAssemblyInfo($@"{moduleLocation}\{moduleName}\{moduleName}.csproj", domain);
+            GenerateInterfaceFiles($@"{moduleLocation}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
+            GenerateModelFiles($@"{moduleLocation}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
             // Still todo - Add the dbcontext for the domain using sqllite. explore
             // using a dbcontext that can also connect to sql server and cosmosdb
-            GenerateEntityFiles($@"{location}\{moduleName}\{moduleName}\Entities\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
+            GenerateEntityFiles($@"{moduleLocation}\{moduleName}\Entities\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
             
             // Still todo - add reference models and embeded reference lists, plus pick lists
-            GenerateReferences($@"{location}\{moduleName}\{moduleName}\", domain, domainModels.Where(m => m.Name.StartsWith("Ref")).ToList());
+            GenerateReferences($@"{moduleLocation}\{moduleName}", domain, domainModels.Where(m => m.Name.StartsWith("Ref")).ToList());
             
             // Still todo - convert/add virtuals as navigation commands
-            GenerateViewModelFiles($@"{location}\{moduleName}\{moduleName}\ViewModels\", domain, domainModels.ToList());
-            ServiceCollectionExtensions($@"{location}\{moduleName}\{moduleName}\ServiceCollectionExtensions.cs", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
+            GenerateViewModelFiles($@"{moduleLocation}\{moduleName}\ViewModels\", domain, domainModels.ToList());
+            ServiceCollectionExtensions($@"{moduleLocation}\{moduleName}\ServiceCollectionExtensions.cs", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
             
             // Still todo - service collection extensions for view routes
             //GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
             //GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList());
         }
         var notgenerated = entities.Where(e => e.GeneratedDomain == null).ToList();
-        GeneratedCodeStats(location, entities);
+        GeneratedCodeStats($@"{location}", entities);
     }
 
     /// <summary>
@@ -1114,7 +1117,7 @@ internal class MauiModule
 
         var assemblyInfoNode = new XElement("PropertyGroup");
         assemblyInfoNode.Add(new XAttribute("Condition", $@"'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'"));
-        assemblyInfoNode.Add(new XElement("ApplicationId", $"com.drcarver.Autobahn.Education.{domain.Module}".ToLower()));
+        assemblyInfoNode.Add(new XElement("ApplicationId", $"com.drcarver.Autobahn".ToLower()));
         assemblyInfoNode.Add(new XElement("ApplicationDisplayVersion", "1.0.0"));
         assemblyInfoNode.Add(new XElement("ApplicationVersion", "1.0"));
         assemblyInfoNode.Add(new XElement("ApplicationIdGuid", domain.Id));
