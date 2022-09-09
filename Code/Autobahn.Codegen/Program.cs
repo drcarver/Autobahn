@@ -343,12 +343,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = aedom.Module;
+                return;
             }
         }
         if (AdditionalAdultEducationTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = aedom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("EL")
@@ -361,12 +363,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = eldom.Module;
+                return;
             }
         }
         if (AdditionalEarlyChildhoodTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = aedom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("ASSESSMENT")
@@ -382,12 +386,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = assesdom.Module;
+                return;
             }
         }
         if (AdditionalAssessmentTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = assesdom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("Learning".ToUpper())
@@ -399,12 +405,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = lrdom.Module;
+                return;
             }
         }
         if (AdditionalLearningResourcesTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = assesdom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("K12")
@@ -414,12 +422,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = k12dom.Module;
+                return;
             }
         }
         if (AdditionalK12Types.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = assesdom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.StartsWith("Build")
@@ -431,6 +441,7 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = facdom.Module;
+                return;
             }
         }
 
@@ -445,6 +456,7 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = psdom.Module;
+                return;
             }
         }
 
@@ -456,12 +468,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = compdom.Module;
+                return;
             }
         }
         if (AdditionalCompetenciesTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = compdom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.StartsWith("Credential")
@@ -471,12 +485,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = creddom.Module;
+                return;
             }
         }
         if (AdditionalCredentialsTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = compdom.Module;
+            return;
         }
         if (table.Attributes.TableAttribute?.Schema == null
             && (table.Name.StartsWith("Cte")
@@ -487,6 +503,7 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = ctedom.Module;
+                return;
             }
         }
 
@@ -500,6 +517,7 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = "Autorization";
+                return;
             }
         }
 
@@ -514,6 +532,13 @@ internal class Program
             }
         }
 
+        if (AdditionalCommonEducationTypes.Contains(table.Name))
+        {
+            table.Attributes.TableAttribute = new(table.Name);
+            table.Attributes.TableAttribute.Schema = comdom.Module;
+            return;
+        }
+
         if (table.Attributes?.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("Organization".ToUpper())
             || table.Name.ToUpper().IndexOf("Organization".ToUpper()) > 0))
@@ -522,13 +547,17 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = "Organization";
+                return;
             }
         }
-        if (AdditionalOrganizationTypes.Contains(table.Name))
+        if (AdditionalOrganizationTypes.Contains(table.Name)
+            && !AdditionalCommonEducationTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = "Organization";
+            return;
         }
+
         if (table.Attributes?.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("Person".ToUpper())
             || table.Name.ToUpper().IndexOf("Person".ToUpper()) > 0))
@@ -537,13 +566,16 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = "Person";
+                return;
             }
         }
         if (AdditionalPersonTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = "Person";
+            return;
         }
+
         if (table.Attributes?.TableAttribute?.Schema == null
             && (table.Name.ToUpper().StartsWith("Role".ToUpper())
             || table.Name.ToUpper().IndexOf("Role".ToUpper()) > 0))
@@ -552,17 +584,14 @@ internal class Program
             {
                 table.Attributes.TableAttribute = new(table.Name);
                 table.Attributes.TableAttribute.Schema = "Role";
+                return;
             }
         }
         if (AdditionalRoleTypes.Contains(table.Name))
         {
             table.Attributes.TableAttribute = new(table.Name);
             table.Attributes.TableAttribute.Schema = "Role";
-        }
-        if (AdditionalCommonEducationTypes.Contains(table.Name))
-        {
-            table.Attributes.TableAttribute = new(table.Name);
-            table.Attributes.TableAttribute.Schema = comdom.Module;
+            return;
         }
     }
 

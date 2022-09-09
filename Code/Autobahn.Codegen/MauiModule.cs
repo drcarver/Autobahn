@@ -57,7 +57,7 @@ internal class MauiModule
 
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
             GenerateTemplateProject(location, moduleName);
-            GenerateGlobalUsings($@"{moduleLocation}\{moduleName}");
+            GenerateUsings($@"{moduleLocation}\{moduleName}");
             AddAssemblyInfo($@"{moduleLocation}\{moduleName}\{moduleName}.csproj", domain);
             GenerateInterfaceFiles($@"{moduleLocation}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
             GenerateModelFiles($@"{moduleLocation}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
@@ -100,18 +100,19 @@ internal class MauiModule
     /// Generate the global usings for the project
     /// </summary>
     /// <param name="location">The location of the file generated</param>
-    private static void GenerateGlobalUsings(string location)
+    private static void GenerateUsings(string location)
     {
-        using (var stream = File.CreateText($@"{location}\GlobalUsings.cs"))
+        using (var stream = File.CreateText($@"{location}\Usings.cs"))
         {
             stream.WriteLine("global using System;");
-            stream.WriteLine("global using System.ComponentModel;");
-            stream.WriteLine("global using System.ComponentModel.DataAnnotations;");
             stream.WriteLine("global using System.ComponentModel.DataAnnotations.Schema;");
+            stream.WriteLine("global using System.ComponentModel.DataAnnotations;");
+            stream.WriteLine("global using System.ComponentModel;");
+            stream.WriteLine("global using AutoMapper;");
+            stream.WriteLine("global using CommunityToolkit.Mvvm.ComponentModel;");
+            stream.WriteLine("global using CommunityToolkit.Mvvm;");
             stream.WriteLine("global using Microsoft.EntityFrameworkCore;");
             stream.WriteLine("global using Microsoft.Extensions.DependencyInjection;");
-            stream.WriteLine("global using CommunityToolkit.Mvvm;");
-            stream.WriteLine("global using CommunityToolkit.Mvvm.ComponentModel;");
         }
     }
 
@@ -167,7 +168,7 @@ internal class MauiModule
         }
         else
         {
-            stream.WriteLine($"/// The I{model.Name} file");
+            stream.WriteLine($"/// The {filename} file");
         }
         stream.WriteLine($"/// </summary>");
         return filename;
@@ -244,6 +245,7 @@ internal class MauiModule
         {
             GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
             stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
+            stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
             if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
             {
                 stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
@@ -406,6 +408,7 @@ internal class MauiModule
             using (var stream = File.CreateText($@"{filePath}\{model.Name}ViewModel.g.cs"))
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.ViewModel);
+                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
                 stream.WriteLine($@"public partial class {model.Name}ViewModel : ObservableValidator, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateViewModelConstructor(stream, model);
@@ -443,6 +446,7 @@ internal class MauiModule
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
                 stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
+                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
                 if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
                 {
                     stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
@@ -515,6 +519,7 @@ internal class MauiModule
             using (var stream = File.CreateText($@"{filePath}\{model.Name}Model.g.cs"))
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
+                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Entity)"")]");
                 stream.WriteLine($@"public partial class {model.Name}Model : AutobahnBaseModel, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateProperties(stream, model, TypeBeingGeneratedEnum.Model);
