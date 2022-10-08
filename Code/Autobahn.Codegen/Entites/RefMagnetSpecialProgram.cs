@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefMagnetSpecialProgram")]
+    [Table("RefMagnetSpecialProgram", Schema = "K12")]
     public partial class RefMagnetSpecialProgram
     {
         public RefMagnetSpecialProgram()
         {
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12SchoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefMagnetSpecialPrograms")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefMagnetSpecialProgram")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12SchoolStatuses { get; set; }
     }
 }

@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// CEDS Element has been removed.
     /// </summary>
-    [Table("RefAlternateFundUse", Schema="Financial")]
+    [Table("RefAlternateFundUse", Schema="K12")]
     public partial class RefAlternateFundUse
     {
         public RefAlternateFundUse()
         {
-            K12seaAlternateFundUses = new HashSet<K12seaAlternateFundUse>();
+            K12seaAlternateFundUses = new HashSet<K12SeaAlternateFundUse>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefAlternateFundUses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefAlternateFundUses")]
-        public virtual ICollection<K12seaAlternateFundUse> K12seaAlternateFundUses { get; set; }
+        public virtual ICollection<K12SeaAlternateFundUse> K12seaAlternateFundUses { get; set; }
     }
 }

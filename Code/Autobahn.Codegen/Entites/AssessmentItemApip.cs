@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentItemApip")]
+    [Table("AssessmentItemApip", Schema = "Assessment")]
     public partial class AssessmentItemApip
     {
         public AssessmentItemApip()

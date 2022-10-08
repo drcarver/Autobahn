@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProfessionalDevelopmentSession")]
+    [Table("ProfessionalDevelopmentSession", Schema = "Common")]
     public partial class ProfessionalDevelopmentSession
     {
         public ProfessionalDevelopmentSession()
@@ -35,8 +35,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefPDDeliveryMethodId")]
-        public int? RefPddeliveryMethodId { get; set; }
+        public int? RefPDDeliveryMethodId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -84,13 +83,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefPDSessionStatusId")]
-        public int? RefPdsessionStatusId { get; set; }
+        public int? RefPDSessionStatusId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefPDInstructionalDeliveryModeId")]
-        public int? RefPdinstructionalDeliveryModeId { get; set; }
+        public int? RefPDInstructionalDeliveryModeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -113,8 +110,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELTrainerCoreKnowledgeAreaId")]
-        public int? RefEltrainerCoreKnowledgeAreaId { get; set; }
+        public int? RefELTrainerCoreKnowledgeAreaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -139,16 +135,16 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefEltrainerCoreKnowledgeAreaId")]
         [InverseProperty("ProfessionalDevelopmentSessions")]
-        public virtual RefEltrainerCoreKnowledgeArea? RefEltrainerCoreKnowledgeArea { get; set; }
+        public virtual RefELTrainerCoreKnowledgeArea? RefEltrainerCoreKnowledgeArea { get; set; }
         [ForeignKey("RefLanguageId")]
         [InverseProperty("ProfessionalDevelopmentSessions")]
         public virtual RefLanguage? RefLanguage { get; set; }
         [ForeignKey("RefPdinstructionalDeliveryModeId")]
         [InverseProperty("ProfessionalDevelopmentSessions")]
-        public virtual RefPdinstructionalDeliveryMode? RefPdinstructionalDeliveryMode { get; set; }
+        public virtual RefPDInstructionalDeliveryMode? RefPdinstructionalDeliveryMode { get; set; }
         [ForeignKey("RefPdsessionStatusId")]
         [InverseProperty("ProfessionalDevelopmentSessions")]
-        public virtual RefPdsessionStatus? RefPdsessionStatus { get; set; }
+        public virtual RefPDSessionStatus? RefPdsessionStatus { get; set; }
         [InverseProperty("ProfessionalDevelopmentSession")]
         public virtual ICollection<ProfessionalDevelopmentSessionInstructor> ProfessionalDevelopmentSessionInstructors { get; set; }
         [InverseProperty("ProfessionalDevelopmentSession")]

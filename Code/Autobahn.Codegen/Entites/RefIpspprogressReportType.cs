@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIPSPProgressReportType")]
-    public partial class RefIpspprogressReportType
+    [Table("RefIPSPProgressReportType", Schema = "Common")]
+    public partial class RefIPSPProgressReportType
     {
-        public RefIpspprogressReportType()
+        public RefIPSPProgressReportType()
         {
             IndividualizedProgramProgressReportPlans = new HashSet<IndividualizedProgramProgressReportPlan>();
             IndividualizedProgramProgressReports = new HashSet<IndividualizedProgramProgressReport>();
@@ -19,8 +19,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIPSPProgressReportTypeId")]
-        public int RefIpspprogressReportTypeId { get; set; }
+        public int RefIPSPProgressReportTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

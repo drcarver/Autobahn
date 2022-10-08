@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("BuildingSpaceUtilization")]
+    [Table("BuildingSpaceUtilization", Schema = "Facilities")]
     public partial class BuildingSpaceUtilization
     {
         [Key]

@@ -9,22 +9,21 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12School")]
-    public partial class K12school
+    [Table("K12School", Schema ="K12")]
+    public partial class K12School
     {
-        public K12school()
+        public K12School()
         {
-            K12schoolCorrectiveActions = new HashSet<K12schoolCorrectiveAction>();
-            K12schoolGradeLevelsApproveds = new HashSet<K12schoolGradeLevelsApproved>();
-            K12schoolGradeOffereds = new HashSet<K12schoolGradeOffered>();
-            K12schoolImprovements = new HashSet<K12schoolImprovement>();
-            K12schoolIndicatorStatuses = new HashSet<K12schoolIndicatorStatus>();
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12SchoolCorrectiveActions = new HashSet<K12SchoolCorrectiveAction>();
+            K12schoolGradeLevelsApproveds = new HashSet<K12SchoolGradeLevelsApproved>();
+            K12schoolGradeOffereds = new HashSet<K12SchoolGradeOffered>();
+            K12schoolImprovements = new HashSet<K12SchoolImprovement>();
+            K12schoolIndicatorStatuses = new HashSet<K12SchoolIndicatorStatus>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         [Key]
-        [Column("K12SchoolId")]
-        public int K12schoolId { get; set; }
+        public int K12SchoolId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -65,10 +64,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("K12CharterSchoolManagementOrganizationId")]
-        public int? K12charterSchoolManagementOrganizationId { get; set; }
-        [Column("K12CharterSchoolAuthorizerAgencyId")]
-        public int? K12charterSchoolAuthorizerAgencyId { get; set; }
+        public int? K12CharterSchoolManagementOrganizationId { get; set; }
+        public int? K12CharterSchoolAuthorizerAgencyId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -108,10 +105,10 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12charterSchoolAuthorizerAgencyId")]
         [InverseProperty("K12schools")]
-        public virtual K12charterSchoolAuthorizerAgency? K12charterSchoolAuthorizerAgency { get; set; }
+        public virtual K12CharterSchoolAuthorizerAgency? K12charterSchoolAuthorizerAgency { get; set; }
         [ForeignKey("K12charterSchoolManagementOrganizationId")]
         [InverseProperty("K12schools")]
-        public virtual K12charterSchoolManagementOrganization? K12charterSchoolManagementOrganization { get; set; }
+        public virtual K12CharterSchoolManagementOrganization? K12charterSchoolManagementOrganization { get; set; }
         [ForeignKey("OrganizationId")]
         [InverseProperty("K12schools")]
         public virtual Organization Organization { get; set; } = null!;
@@ -137,16 +134,16 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("K12schools")]
         public virtual RefStatePovertyDesignation? RefStatePovertyDesignation { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolCorrectiveAction> K12schoolCorrectiveActions { get; set; }
+        public virtual ICollection<K12SchoolCorrectiveAction> K12SchoolCorrectiveActions { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12SchoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolGradeOffered> K12schoolGradeOffereds { get; set; }
+        public virtual ICollection<K12SchoolGradeOffered> K12schoolGradeOffereds { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolImprovement> K12schoolImprovements { get; set; }
+        public virtual ICollection<K12SchoolImprovement> K12schoolImprovements { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolIndicatorStatus> K12schoolIndicatorStatuses { get; set; }
+        public virtual ICollection<K12SchoolIndicatorStatus> K12schoolIndicatorStatuses { get; set; }
         [InverseProperty("K12school")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencyFramework")]
+    [Table("CompetencyFramework", Schema = "Common")]
     public partial class CompetencyFramework
     {
         public CompetencyFramework()
@@ -19,9 +19,8 @@ namespace ScafoldADatabase.Entities
 
         [Key]
         public int CompetencyFrameworkId { get; set; }
-        [Column("URI")]
         [StringLength(512)]
-        public string? Uri { get; set; }
+        public string? URI { get; set; }
         [StringLength(120)]
         public string? Title { get; set; }
         [StringLength(30)]

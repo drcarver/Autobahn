@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefGpaWeightedIndicator")]
+    [Table("RefGpaWeightedIndicator", Schema = "Common")]
     public partial class RefGpaWeightedIndicator
     {
         public RefGpaWeightedIndicator()
         {
-            K12studentAcademicRecords = new HashSet<K12studentAcademicRecord>();
+            K12studentAcademicRecords = new HashSet<K12StudentAcademicRecord>();
             PsStudentApplications = new HashSet<PsStudentApplication>();
         }
 
@@ -50,7 +50,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefGpaWeightedIndicators")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefGpaWeightedIndicator")]
-        public virtual ICollection<K12studentAcademicRecord> K12studentAcademicRecords { get; set; }
+        public virtual ICollection<K12StudentAcademicRecord> K12studentAcademicRecords { get; set; }
         [InverseProperty("RefGpaWeightedIndicator")]
         public virtual ICollection<PsStudentApplication> PsStudentApplications { get; set; }
     }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("BuildingSystemCategory")]
+    [Table("BuildingSystemCategory", Schema = "Facilities")]
     public partial class BuildingSystemCategory
     {
         [Key]
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         public int? RefBuildingElectricalSystemTypeId { get; set; }
         public int? RefBuildingFireProtectionSystemTypeId { get; set; }
         public int? RefBuildingHeatingGenerationSystemTypeId { get; set; }
-        [Column("RefBuildingHVACSystemTypeId")]
-        public int? RefBuildingHvacsystemTypeId { get; set; }
+        public int? RefBuildingHVACSystemTypeId { get; set; }
         public int? RefBuildingMechanicalConveyingSystemTypeId { get; set; }
         public int? RefBuildingMechanicalSystemTypeId { get; set; }
         public int? RefBuildingPlumbingSystemTypeId { get; set; }
@@ -72,7 +71,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefBuildingHeatingGenerationSystemType? RefBuildingHeatingGenerationSystemType { get; set; }
         [ForeignKey("RefBuildingHvacsystemTypeId")]
         [InverseProperty("BuildingSystemCategories")]
-        public virtual RefBuildingHvacsystemType? RefBuildingHvacsystemType { get; set; }
+        public virtual RefBuildingHVACSystemType? RefBuildingHvacsystemType { get; set; }
         [ForeignKey("RefBuildingMechanicalConveyingSystemTypeId")]
         [InverseProperty("BuildingSystemCategories")]
         public virtual RefBuildingMechanicalConveyingSystemType? RefBuildingMechanicalConveyingSystemType { get; set; }

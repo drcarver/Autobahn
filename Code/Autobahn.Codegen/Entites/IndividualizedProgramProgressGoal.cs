@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramProgressGoal")]
+    [Table("IndividualizedProgramProgressGoal", Schema = "Common")]
     [Index("GoalPerformanceId", "IndividualizedProgramProgressReportId", Name = "IX_GoalPerformance_IndividualizedProgramProgressReport", IsUnique = true)]
     public partial class IndividualizedProgramProgressGoal
     {

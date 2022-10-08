@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefGoalMeasurementType")]
+    [Table("RefGoalMeasurementType", Schema = "Common")]
     public partial class RefGoalMeasurementType
     {
         public RefGoalMeasurementType()

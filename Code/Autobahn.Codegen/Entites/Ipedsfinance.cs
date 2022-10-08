@@ -9,37 +9,24 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IPEDSFinance")]
-    public partial class Ipedsfinance
+    [Table("IPEDSFinance", Schema = "Finance")]
+    public partial class IPEDSFinance
     {
         [Key]
-        [Column("IPEDSFinanceId")]
-        public int IpedsfinanceId { get; set; }
+        public int IPEDSFinanceId { get; set; }
         public int OrganizationFinancialId { get; set; }
-        [Column("RefIPEDSFASBFinancialPositionId")]
-        public int? RefIpedsfasbfinancialPositionId { get; set; }
-        [Column("RefIPEDSFASBFunctionalExpenseId")]
-        public int? RefIpedsfasbfunctionalExpenseId { get; set; }
-        [Column("RefIPEDSFASBPellGrantTransactionsId")]
-        public int? RefIpedsfasbpellGrantTransactionsId { get; set; }
-        [Column("RefIPEDSFASBRevenueId")]
-        public int? RefIpedsfasbrevenueId { get; set; }
-        [Column("RefIPEDSFASBRevenueRestrictionId")]
-        public int? RefIpedsfasbrevenueRestrictionId { get; set; }
-        [Column("RefIPEDSFASBScholarshipsandFellowshipsRevenueId")]
-        public int? RefIpedsfasbscholarshipsandFellowshipsRevenueId { get; set; }
-        [Column("RefIPEDSGASBFinancialPositionId")]
-        public int? RefIpedsgasbfinancialPositionId { get; set; }
-        [Column("RefIPEDSGASBFunctionalExpenseId")]
-        public int? RefIpedsgasbfunctionalExpenseId { get; set; }
-        [Column("RefIPEDSGASBRevenueId")]
-        public int? RefIpedsgasbrevenueId { get; set; }
-        [Column("RefIPEDSGASBScholarshipsandFellowshipsRevenueId")]
-        public int? RefIpedsgasbscholarshipsandFellowshipsRevenueId { get; set; }
-        [Column("RefIPEDSIntercollegiateAthleticsExpensesId")]
-        public int? RefIpedsintercollegiateAthleticsExpensesId { get; set; }
-        [Column("RefIPEDSNaturalExpenseId")]
-        public int? RefIpedsnaturalExpenseId { get; set; }
+        public int? RefIPEDSFASBFinancialPositionId { get; set; }
+        public int? RefIPEDSFASBFunctionalExpenseId { get; set; }
+        public int? RefIPEDSFASBPellGrantTransactionsId { get; set; }
+        public int? RefIPEDSFASBRevenueId { get; set; }
+        public int? RefIPEDSFASBRevenueRestrictionId { get; set; }
+        public int? RefIPEDSFASBScholarshipsandFellowshipsRevenueId { get; set; }
+        public int? RefIPEDSGASBFinancialPositionId { get; set; }
+        public int? RefIPEDSGASBFunctionalExpenseId { get; set; }
+        public int? RefIPEDSGASBRevenueId { get; set; }
+        public int? RefIPEDSGASBScholarshipsandFellowshipsRevenueId { get; set; }
+        public int? RefIPEDSIntercollegiateAthleticsExpensesId { get; set; }
+        public int? RefIPEDSNaturalExpenseId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -64,39 +51,39 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIpedsfasbfinancialPositionId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbfinancialPosition? RefIpedsfasbfinancialPosition { get; set; }
+        public virtual RefIPEDSFASBFinancialPosition? RefIPEDSFASBFinancialPosition { get; set; }
         [ForeignKey("RefIpedsfasbfunctionalExpenseId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbfunctionalExpense? RefIpedsfasbfunctionalExpense { get; set; }
+        public virtual RefIPEDSFASBFunctionalExpense? RefIpedsfasbfunctionalExpense { get; set; }
         [ForeignKey("RefIpedsfasbpellGrantTransactionsId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbpellGrantTransaction? RefIpedsfasbpellGrantTransactions { get; set; }
-        [ForeignKey("RefIpedsfasbrevenueId")]
+        public virtual RefIPEDSFASBPellGrantTransactions? RefIpedsfasbpellGrantTransactions { get; set; }
+        [ForeignKey("RefIPEDSFASBRevenueId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbrevenue? RefIpedsfasbrevenue { get; set; }
+        public virtual RefIPEDSFASBRevenue? RefIpedsfasbrevenue { get; set; }
         [ForeignKey("RefIpedsfasbrevenueRestrictionId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbrevenueRestriction? RefIpedsfasbrevenueRestriction { get; set; }
+        public virtual RefIPEDSFASBRevenueRestriction? RefIpedsfasbrevenueRestriction { get; set; }
         [ForeignKey("RefIpedsfasbscholarshipsandFellowshipsRevenueId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsfasbscholarshipsandFellowshipsRevenue? RefIpedsfasbscholarshipsandFellowshipsRevenue { get; set; }
+        public virtual RefIPEDSFASBScholarshipsandFellowshipsRevenue? RefIpedsfasbscholarshipsandFellowshipsRevenue { get; set; }
         [ForeignKey("RefIpedsgasbfinancialPositionId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsgasbfinancialPosition? RefIpedsgasbfinancialPosition { get; set; }
+        public virtual RefIPEDSGASBFinancialPosition? RefIpedsgasbfinancialPosition { get; set; }
         [ForeignKey("RefIpedsgasbfunctionalExpenseId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsgasbfunctionalExpense? RefIpedsgasbfunctionalExpense { get; set; }
+        public virtual RefIPEDSGASBFunctionalExpense? RefIpedsgasbfunctionalExpense { get; set; }
         [ForeignKey("RefIpedsgasbrevenueId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsgasbrevenue? RefIpedsgasbrevenue { get; set; }
+        public virtual RefIPEDSGASBRevenue? RefIpedsgasbrevenue { get; set; }
         [ForeignKey("RefIpedsgasbscholarshipsandFellowshipsRevenueId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsgasbscholarshipsandFellowshipsRevenue? RefIpedsgasbscholarshipsandFellowshipsRevenue { get; set; }
+        public virtual RefIPEDSGASBScholarshipsandFellowshipsRevenue? RefIpedsgasbscholarshipsandFellowshipsRevenue { get; set; }
         [ForeignKey("RefIpedsintercollegiateAthleticsExpensesId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsintercollegiateAthleticsExpense? RefIpedsintercollegiateAthleticsExpenses { get; set; }
+        public virtual RefIPEDSIntercollegiateAthleticsExpenses? RefIpedsintercollegiateAthleticsExpenses { get; set; }
         [ForeignKey("RefIpedsnaturalExpenseId")]
         [InverseProperty("Ipedsfinances")]
-        public virtual RefIpedsnaturalExpense? RefIpedsnaturalExpense { get; set; }
+        public virtual RefIPEDSNaturalExpense? RefIpedsnaturalExpense { get; set; }
     }
 }

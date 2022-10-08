@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ApipInteraction")]
+    [Table("ApipInteraction", Schema = "Assesment")]
     public partial class ApipInteraction
     {
         /// <summary>
@@ -26,8 +26,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("APIPInteractionSequenceNumber", TypeName = "decimal(9, 2)")]
-        public decimal? ApipinteractionSequenceNumber { get; set; }
+        public decimal? APIPInteractionSequenceNumber { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

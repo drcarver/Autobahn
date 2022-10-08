@@ -7,19 +7,18 @@ using Microsoft.EntityFrameworkCore;
 namespace ScafoldADatabase.Entities
 {
     [Table("RefIDEAEligibilityEvaluationCategory")]
-    public partial class RefIdeaeligibilityEvaluationCategory
+    public partial class RefIDEAEligibilityEvaluationCategory
     {
-        public RefIdeaeligibilityEvaluationCategory()
+        public RefIDEAEligibilityEvaluationCategory()
         {
-            IdeaeligibilityEvaluationCategories = new HashSet<IdeaeligibilityEvaluationCategory>();
+            IdeaeligibilityEvaluationCategories = new HashSet<IDEAEligibilityEvaluationCategory>();
         }
 
         /// <summary>
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIDEAEligibilityEvaluationCategoryId")]
-        public int RefIdeaeligibilityEvaluationCategoryId { get; set; }
+        public int RefIDEAEligibilityEvaluationCategoryId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -53,6 +52,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefIdeaeligibilityEvaluationCategories")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefIdeaeligibilityEvaluationCategory")]
-        public virtual ICollection<IdeaeligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
+        public virtual ICollection<IDEAEligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
     }
 }

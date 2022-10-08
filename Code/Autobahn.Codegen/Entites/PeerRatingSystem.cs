@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PeerRatingSystem")]
+    [Table("PeerRatingSystem", Schema = "LearningResources")]
     public partial class PeerRatingSystem
     {
         public PeerRatingSystem()

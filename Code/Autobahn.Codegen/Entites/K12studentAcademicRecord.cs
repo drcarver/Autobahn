@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentAcademicRecord")]
-    public partial class K12studentAcademicRecord
+    [Table("K12StudentAcademicRecord", Schema = "K12")]
+    public partial class K12StudentAcademicRecord
     {
         [Key]
-        [Column("K12StudentAcademicRecordId")]
-        public int K12studentAcademicRecordId { get; set; }
+        public int K12StudentAcademicRecordId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

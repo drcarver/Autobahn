@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Organization")]
+    [Table("Organization", Schema = "Core")]
     public partial class Organization
     {
         public Organization()
@@ -29,24 +29,24 @@ namespace ScafoldADatabase.Entities
             CredentialDefAgents = new HashSet<CredentialDefAgent>();
             CredentialIssuers = new HashSet<CredentialIssuer>();
             EarlyChildhoodProgramTypeOffereds = new HashSet<EarlyChildhoodProgramTypeOffered>();
-            ElclassSections = new HashSet<ElclassSection>();
-            ElfacilityLicensings = new HashSet<ElfacilityLicensing>();
-            ElorganizationAvailabilities = new HashSet<ElorganizationAvailability>();
-            ElorganizationFunds = new HashSet<ElorganizationFund>();
-            ElorganizationMonitorings = new HashSet<ElorganizationMonitoring>();
-            Elorganizations = new HashSet<Elorganization>();
-            ElprogramLicensings = new HashSet<ElprogramLicensing>();
-            ElqualityInitiatives = new HashSet<ElqualityInitiative>();
-            ElqualityRatingImprovements = new HashSet<ElqualityRatingImprovement>();
-            ElservicePartners = new HashSet<ElservicePartner>();
+            ElclassSections = new HashSet<ELClassSection>();
+            ElfacilityLicensings = new HashSet<ELFacilityLicensing>();
+            ElorganizationAvailabilities = new HashSet<ELOrganizationAvailability>();
+            ElorganizationFunds = new HashSet<ELOrganizationFunds>();
+            ElorganizationMonitorings = new HashSet<ELOrganizationMonitoring>();
+            Elorganizations = new HashSet<ELOrganization>();
+            ElprogramLicensings = new HashSet<ELProgramLicensing>();
+            ElqualityInitiatives = new HashSet<ELQualityInitiative>();
+            ElqualityRatingImprovements = new HashSet<ELQualityRatingImprovement>();
+            ElservicePartners = new HashSet<ELServicePartner>();
             Facilities = new HashSet<Facility>();
-            K12charterSchoolAuthorizerAgencies = new HashSet<K12charterSchoolAuthorizerAgency>();
-            K12charterSchoolManagementOrganizations = new HashSet<K12charterSchoolManagementOrganization>();
-            K12leas = new HashSet<K12lea>();
-            K12programOrServices = new HashSet<K12programOrService>();
-            K12schools = new HashSet<K12school>();
-            K12seas = new HashSet<K12sea>();
-            K12titleIiilanguageInstructions = new HashSet<K12titleIiilanguageInstruction>();
+            K12charterSchoolAuthorizerAgencies = new HashSet<K12CharterSchoolAuthorizerAgency>();
+            K12charterSchoolManagementOrganizations = new HashSet<K12CharterSchoolManagementOrganization>();
+            K12leas = new HashSet<K12Lea>();
+            K12programOrServices = new HashSet<K12ProgramOrService>();
+            K12schools = new HashSet<K12School>();
+            K12seas = new HashSet<K12Sea>();
+            K12titleIiilanguageInstructions = new HashSet<K12TitleIIILanguageInstruction>();
             LearnerActivityLeaOrganizations = new HashSet<LearnerActivity>();
             LearnerActivitySchoolOrganizations = new HashSet<LearnerActivity>();
             OrganizationAccreditations = new HashSet<OrganizationAccreditation>();
@@ -99,8 +99,8 @@ namespace ScafoldADatabase.Entities
             RefAdultEducationProgramExitReasons = new HashSet<RefAdultEducationProgramExitReason>();
             RefAdvancedPlacementCourseCodes = new HashSet<RefAdvancedPlacementCourseCode>();
             RefAeCertificationTypes = new HashSet<RefAeCertificationType>();
-            RefAeFunctioningLevelAtIntakes = new HashSet<RefAeFunctioningLevelAtIntake>();
-            RefAeFunctioningLevelAtPosttests = new HashSet<RefAeFunctioningLevelAtPosttest>();
+            RefAeFunctioningLevelAtIntakes = new HashSet<RefAEFunctioningLevelAtIntake>();
+            RefAeFunctioningLevelAtPosttests = new HashSet<RefAEFunctioningLevelAtPosttest>();
             RefAeInstructionalProgramTypes = new HashSet<RefAeInstructionalProgramType>();
             RefAePostsecondaryTransitionActions = new HashSet<RefAePostsecondaryTransitionAction>();
             RefAeSpecialProgramTypes = new HashSet<RefAeSpecialProgramType>();
@@ -115,7 +115,7 @@ namespace ScafoldADatabase.Entities
             RefApipInteractionTypes = new HashSet<RefApipInteractionType>();
             RefAssessmentAssetIdentifierTypes = new HashSet<RefAssessmentAssetIdentifierType>();
             RefAssessmentAssetTypes = new HashSet<RefAssessmentAssetType>();
-            RefAssessmentEldevelopmentalDomains = new HashSet<RefAssessmentEldevelopmentalDomain>();
+            RefAssessmentEldevelopmentalDomains = new HashSet<RefAssessmentELDevelopmentalDomain>();
             RefAssessmentFormSectionIdentificationSystems = new HashSet<RefAssessmentFormSectionIdentificationSystem>();
             RefAssessmentItemCharacteristicTypes = new HashSet<RefAssessmentItemCharacteristicType>();
             RefAssessmentItemResponseScoreStatuses = new HashSet<RefAssessmentItemResponseScoreStatus>();
@@ -183,7 +183,7 @@ namespace ScafoldADatabase.Entities
             RefBuildingFullServiceKitchenTypes = new HashSet<RefBuildingFullServiceKitchenType>();
             RefBuildingHeatingGenerationSystemTypes = new HashSet<RefBuildingHeatingGenerationSystemType>();
             RefBuildingHistoricStatuses = new HashSet<RefBuildingHistoricStatus>();
-            RefBuildingHvacsystemTypes = new HashSet<RefBuildingHvacsystemType>();
+            RefBuildingHvacsystemTypes = new HashSet<RefBuildingHVACSystemType>();
             RefBuildingIndoorAthleticOrPhysEdSpaceTypes = new HashSet<RefBuildingIndoorAthleticOrPhysEdSpaceType>();
             RefBuildingInstructionalSpaceFactorTypes = new HashSet<RefBuildingInstructionalSpaceFactorType>();
             RefBuildingJointUseRationaleTypes = new HashSet<RefBuildingJointUseRationaleType>();
@@ -274,8 +274,8 @@ namespace ScafoldADatabase.Entities
             RefCreditHoursAppliedOtherPrograms = new HashSet<RefCreditHoursAppliedOtherProgram>();
             RefCreditTypeEarneds = new HashSet<RefCreditTypeEarned>();
             RefCriticalTeacherShortageCandidates = new HashSet<RefCriticalTeacherShortageCandidate>();
-            RefCtdlaudienceLevelTypes = new HashSet<RefCtdlaudienceLevelType>();
-            RefCtdlorganizationTypes = new HashSet<RefCtdlorganizationType>();
+            RefCtdlaudienceLevelTypes = new HashSet<RefCTDLAudienceLevelType>();
+            RefCtdlorganizationTypes = new HashSet<RefCTDLOrganizationType>();
             RefCteGraduationRateInclusions = new HashSet<RefCteGraduationRateInclusion>();
             RefCteNonTraditionalGenderStatuses = new HashSet<RefCteNonTraditionalGenderStatus>();
             RefCurriculumFrameworkTypes = new HashSet<RefCurriculumFrameworkType>();
@@ -299,7 +299,7 @@ namespace ScafoldADatabase.Entities
             RefDisciplineReasons = new HashSet<RefDisciplineReason>();
             RefDistanceEducationCourseEnrollments = new HashSet<RefDistanceEducationCourseEnrollment>();
             RefDoctoralExamsRequiredCodes = new HashSet<RefDoctoralExamsRequiredCode>();
-            RefDqpcategoriesOfLearnings = new HashSet<RefDqpcategoriesOfLearning>();
+            RefDqpcategoriesOfLearnings = new HashSet<RefDQPCategoriesOfLearning>();
             RefEarlyChildhoodCredentials = new HashSet<RefEarlyChildhoodCredential>();
             RefEarlyChildhoodProgramEnrollmentTypes = new HashSet<RefEarlyChildhoodProgramEnrollmentType>();
             RefEarlyChildhoodServices = new HashSet<RefEarlyChildhoodService>();
@@ -311,22 +311,22 @@ namespace ScafoldADatabase.Entities
             RefEducationVerificationMethods = new HashSet<RefEducationVerificationMethod>();
             RefEleducationStaffClassifications = new HashSet<RefEleducationStaffClassification>();
             RefElementaryMiddleAdditionals = new HashSet<RefElementaryMiddleAdditional>();
-            RefElemploymentSeparationReasons = new HashSet<RefElemploymentSeparationReason>();
-            RefElfacilityLicensingStatuses = new HashSet<RefElfacilityLicensingStatus>();
-            RefElfederalFundingTypes = new HashSet<RefElfederalFundingType>();
+            RefElemploymentSeparationReasons = new HashSet<RefELEmploymentSeparationReason>();
+            RefElfacilityLicensingStatuses = new HashSet<RefELFacilityLicensingStatus>();
+            RefElfederalFundingTypes = new HashSet<RefELFederalFundingType>();
             RefElgroupSizeStandardMets = new HashSet<RefElgroupSizeStandardMet>();
             RefEllevelOfSpecializations = new HashSet<RefEllevelOfSpecialization>();
-            RefEllocalRevenueSources = new HashSet<RefEllocalRevenueSource>();
-            RefElotherFederalFundingSources = new HashSet<RefElotherFederalFundingSource>();
-            RefEloutcomeMeasurementLevels = new HashSet<RefEloutcomeMeasurementLevel>();
-            RefElprofessionalDevelopmentTopicAreas = new HashSet<RefElprofessionalDevelopmentTopicArea>();
-            RefElprogramEligibilities = new HashSet<RefElprogramEligibility>();
-            RefElprogramEligibilityStatuses = new HashSet<RefElprogramEligibilityStatus>();
-            RefElprogramLicenseStatuses = new HashSet<RefElprogramLicenseStatus>();
-            RefElserviceProfessionalStaffClassifications = new HashSet<RefElserviceProfessionalStaffClassification>();
-            RefElserviceTypes = new HashSet<RefElserviceType>();
-            RefElstateRevenueSources = new HashSet<RefElstateRevenueSource>();
-            RefEltrainerCoreKnowledgeAreas = new HashSet<RefEltrainerCoreKnowledgeArea>();
+            RefEllocalRevenueSources = new HashSet<RefELLocalRevenueSource>();
+            RefElotherFederalFundingSources = new HashSet<RefELOtherFederalFundingSources>();
+            RefEloutcomeMeasurementLevels = new HashSet<RefELOutcomeMeasurementLevel>();
+            RefElprofessionalDevelopmentTopicAreas = new HashSet<RefELProfessionalDevelopmentTopicArea>();
+            RefElprogramEligibilities = new HashSet<RefELProgramEligibility>();
+            RefElprogramEligibilityStatuses = new HashSet<RefELProgramEligibilityStatus>();
+            RefElprogramLicenseStatuses = new HashSet<RefELProgramLicenseStatus>();
+            RefElserviceProfessionalStaffClassifications = new HashSet<RefELServiceProfessionalStaffClassification>();
+            RefElserviceTypes = new HashSet<RefELServiceType>();
+            RefElstateRevenueSources = new HashSet<RefELStateRevenueSource>();
+            RefEltrainerCoreKnowledgeAreas = new HashSet<RefELTrainerCoreKnowledgeArea>();
             RefEmailTypes = new HashSet<RefOrganizationEmailType>();
             RefEmergencyOrProvisionalCredentialStatuses = new HashSet<RefEmergencyOrProvisionalCredentialStatus>();
             RefEmployedAfterExits = new HashSet<RefEmployedAfterExit>();
@@ -343,8 +343,8 @@ namespace ScafoldADatabase.Entities
             RefEntityTypes = new HashSet<RefEntityType>();
             RefEntryTypes = new HashSet<RefEntryType>();
             RefEnvironmentSettings = new HashSet<RefEnvironmentSetting>();
-            RefEradministrativeDataSources = new HashSet<RefEradministrativeDataSource>();
-            RefErsruralUrbanContinuumCodes = new HashSet<RefErsruralUrbanContinuumCode>();
+            RefEradministrativeDataSources = new HashSet<RefERAdministrativeDataSource>();
+            RefErsruralUrbanContinuumCodes = new HashSet<RefERSRuralUrbanContinuumCode>();
             RefExitOrWithdrawalStatuses = new HashSet<RefExitOrWithdrawalStatus>();
             RefExitOrWithdrawalTypes = new HashSet<RefExitOrWithdrawalType>();
             RefFacilitiesMandateAuthorityTypes = new HashSet<RefFacilitiesMandateAuthorityType>();
@@ -415,19 +415,19 @@ namespace ScafoldADatabase.Entities
             RefHighSchoolGraduationRateIndicators = new HashSet<RefHighSchoolGraduationRateIndicator>();
             RefHigherEducationInstitutionAccreditationStatuses = new HashSet<RefHigherEducationInstitutionAccreditationStatus>();
             RefHomelessNighttimeResidences = new HashSet<RefHomelessNighttimeResidence>();
-            RefIdeadisabilityTypes = new HashSet<RefIdeadisabilityType>();
-            RefIdeadisciplineMethodFirearms = new HashSet<RefIdeadisciplineMethodFirearm>();
-            RefIdeaeducationalEnvironmentEcs = new HashSet<RefIdeaeducationalEnvironmentEc>();
-            RefIdeaeducationalEnvironmentSchoolAges = new HashSet<RefIdeaeducationalEnvironmentSchoolAge>();
-            RefIdeaeligibilityEvaluationCategories = new HashSet<RefIdeaeligibilityEvaluationCategory>();
-            RefIdeaenvironmentEls = new HashSet<RefIdeaenvironmentEl>();
-            RefIdeaiepstatuses = new HashSet<RefIdeaiepstatus>();
-            RefIdeainterimRemovalReasons = new HashSet<RefIdeainterimRemovalReason>();
-            RefIdeainterimRemovals = new HashSet<RefIdeainterimRemoval>();
-            RefIdeapartCeligibilityCategories = new HashSet<RefIdeapartCeligibilityCategory>();
-            RefIepauthorizationDocumentTypes = new HashSet<RefIepauthorizationDocumentType>();
-            RefIepeligibilityEvaluationTypes = new HashSet<RefIepeligibilityEvaluationType>();
-            RefIepgoalTypes = new HashSet<RefIepgoalType>();
+            RefIdeadisabilityTypes = new HashSet<RefIDEADisabilityType>();
+            RefIdeadisciplineMethodFirearms = new HashSet<RefIDEADisciplineMethodFirearm>();
+            RefIdeaeducationalEnvironmentEcs = new HashSet<RefIDEAEducationalEnvironmentEC>();
+            RefIdeaeducationalEnvironmentSchoolAges = new HashSet<RefIDEAEducationalEnvironmentSchoolAge>();
+            RefIdeaeligibilityEvaluationCategories = new HashSet<RefIDEAEligibilityEvaluationCategory>();
+            RefIdeaenvironmentEls = new HashSet<RefIDEAEnvironmentEL>();
+            RefIdeaiepstatuses = new HashSet<RefIDEAIEPStatus>();
+            RefIdeainterimRemovalReasons = new HashSet<RefIDEAInterimRemovalReason>();
+            RefIdeainterimRemovals = new HashSet<RefIDEAInterimRemoval>();
+            RefIdeapartCeligibilityCategories = new HashSet<RefIDEAPartCEligibilityCategory>();
+            RefIepauthorizationDocumentTypes = new HashSet<RefIEPAuthorizationDocumentType>();
+            RefIepeligibilityEvaluationTypes = new HashSet<RefIEPEligibilityEvaluationType>();
+            RefIepgoalTypes = new HashSet<RefIEPGoalType>();
             RefImmunizationTypes = new HashSet<RefImmunizationType>();
             RefIncidentBehaviorSecondaries = new HashSet<RefIncidentBehaviorSecondary>();
             RefIncidentBehaviors = new HashSet<RefIncidentBehavior>();
@@ -461,29 +461,29 @@ namespace ScafoldADatabase.Entities
             RefInternetAccesses = new HashSet<RefInternetAccess>();
             RefInternetPerformanceInResidences = new HashSet<RefInternetPerformanceInResidence>();
             RefIpedsOccupationalCategories = new HashSet<RefIpedsOccupationalCategory>();
-            RefIpedsfasbfinancialPositions = new HashSet<RefIpedsfasbfinancialPosition>();
-            RefIpedsfasbfunctionalExpenses = new HashSet<RefIpedsfasbfunctionalExpense>();
-            RefIpedsfasbpellGrantTransactions = new HashSet<RefIpedsfasbpellGrantTransaction>();
-            RefIpedsfasbrevenueRestrictions = new HashSet<RefIpedsfasbrevenueRestriction>();
-            RefIpedsfasbrevenues = new HashSet<RefIpedsfasbrevenue>();
-            RefIpedsfasbscholarshipsandFellowshipsRevenues = new HashSet<RefIpedsfasbscholarshipsandFellowshipsRevenue>();
-            RefIpedsgasbfinancialPositions = new HashSet<RefIpedsgasbfinancialPosition>();
-            RefIpedsgasbfunctionalExpenses = new HashSet<RefIpedsgasbfunctionalExpense>();
-            RefIpedsgasbrevenues = new HashSet<RefIpedsgasbrevenue>();
-            RefIpedsgasbscholarshipsandFellowshipsRevenues = new HashSet<RefIpedsgasbscholarshipsandFellowshipsRevenue>();
-            RefIpedsintercollegiateAthleticsExpenses = new HashSet<RefIpedsintercollegiateAthleticsExpense>();
-            RefIpedsnaturalExpenses = new HashSet<RefIpedsnaturalExpense>();
-            RefIpspprogressReportSchedules = new HashSet<RefIpspprogressReportSchedule>();
-            RefIpspprogressReportTypes = new HashSet<RefIpspprogressReportType>();
-            RefIso6392languages = new HashSet<RefIso6392language>();
-            RefIso6393languages = new HashSet<RefIso6393language>();
-            RefIso6395languageFamilies = new HashSet<RefIso6395languageFamily>();
+            RefIpedsfasbfinancialPositions = new HashSet<RefIPEDSFASBFinancialPosition>();
+            RefIpedsfasbfunctionalExpenses = new HashSet<RefIPEDSFASBFunctionalExpense>();
+            RefIpedsfasbpellGrantTransactions = new HashSet<RefIPEDSFASBPellGrantTransactions>();
+            RefIpedsfasbrevenueRestrictions = new HashSet<RefIPEDSFASBRevenueRestriction>();
+            RefIpedsfasbrevenues = new HashSet<RefIPEDSFASBRevenue>();
+            RefIpedsfasbscholarshipsandFellowshipsRevenues = new HashSet<RefIPEDSFASBScholarshipsandFellowshipsRevenue>();
+            RefIpedsgasbfinancialPositions = new HashSet<RefIPEDSFASBFinancialPosition>();
+            RefIpedsgasbfunctionalExpenses = new HashSet<RefIPEDSFASBFunctionalExpense>();
+            RefIpedsgasbrevenues = new HashSet<RefIPEDSGASBRevenue>();
+            RefIpedsgasbscholarshipsandFellowshipsRevenues = new HashSet<RefIPEDSGASBScholarshipsandFellowshipsRevenue>();
+            RefIpedsintercollegiateAthleticsExpenses = new HashSet<RefIPEDSIntercollegiateAthleticsExpenses>();
+            RefIpedsnaturalExpenses = new HashSet<RefIPEDSNaturalExpense>();
+            RefIpspprogressReportSchedules = new HashSet<RefIPSPProgressReportSchedule>();
+            RefIpspprogressReportTypes = new HashSet<RefIPSPProgressReportType>();
+            RefIso6392languages = new HashSet<RefISO6392Language>();
+            RefIso6393languages = new HashSet<RefISO6393Language>();
+            RefIso6395languageFamilies = new HashSet<RefISO6395LanguageFamily>();
             RefItemResponseTheoryDifficultyCategories = new HashSet<RefItemResponseTheoryDifficultyCategory>();
             RefItemResponseTheoryKappaAlgorithms = new HashSet<RefItemResponseTheoryKappaAlgorithm>();
-            RefK12endOfCourseRequirements = new HashSet<RefK12endOfCourseRequirement>();
+            RefK12endOfCourseRequirements = new HashSet<RefK12EndOfCourseRequirement>();
             RefK12leaTitleIsupportServices = new HashSet<RefK12leaTitleIsupportService>();
-            RefK12responsibilityTypes = new HashSet<RefK12responsibilityType>();
-            RefK12staffClassifications = new HashSet<RefK12staffClassification>();
+            RefK12responsibilityTypes = new HashSet<RefK12ResponsibilityType>();
+            RefK12staffClassifications = new HashSet<RefK12StaffClassification>();
             RefLanguageUseTypes = new HashSet<RefLanguageUseType>();
             RefLanguages = new HashSet<RefLanguage>();
             RefLeaFundsTransferTypes = new HashSet<RefLeaFundsTransferType>();
@@ -493,7 +493,7 @@ namespace ScafoldADatabase.Entities
             RefLearnerActivityAddToGradeBookFlags = new HashSet<RefLearnerActivityAddToGradeBookFlag>();
             RefLearnerActivityMaximumTimeAllowedUnits = new HashSet<RefLearnerActivityMaximumTimeAllowedUnit>();
             RefLearnerActivityTypes = new HashSet<RefLearnerActivityType>();
-            RefLearningResourceAccessApitypes = new HashSet<RefLearningResourceAccessApitype>();
+            RefLearningResourceAccessApitypes = new HashSet<RefLearningResourceAccessAPIType>();
             RefLearningResourceAccessHazardTypes = new HashSet<RefLearningResourceAccessHazardType>();
             RefLearningResourceAccessModeTypes = new HashSet<RefLearningResourceAccessModeType>();
             RefLearningResourceAccessRightsUrls = new HashSet<RefLearningResourceAccessRightsUrl>();
@@ -531,14 +531,14 @@ namespace ScafoldADatabase.Entities
             RefNaepAspectsOfReadings = new HashSet<RefNaepAspectsOfReading>();
             RefNaepMathComplexityLevels = new HashSet<RefNaepMathComplexityLevel>();
             RefNationalSchoolLunchProgramStatuses = new HashSet<RefNationalSchoolLunchProgramStatus>();
-            RefNcescollegeCourseMapCodes = new HashSet<RefNcescollegeCourseMapCode>();
+            RefNcescollegeCourseMapCodes = new HashSet<RefNCESCollegeCourseMapCode>();
             RefNeedDeterminationMethods = new HashSet<RefNeedDeterminationMethod>();
             RefNeglectedProgramTypes = new HashSet<RefNeglectedProgramType>();
             RefNonPromotionReasons = new HashSet<RefNonPromotionReason>();
             RefNonTraditionalGenderStatuses = new HashSet<RefNonTraditionalGenderStatus>();
-            RefNslpstatuses = new HashSet<RefNslpstatus>();
+            RefNslpstatuses = new HashSet<RefNSLPStatus>();
             RefNumberOfDependentsTypes = new HashSet<RefNumberOfDependentsType>();
-            RefOnetsococcupationTypes = new HashSet<RefOnetsococcupationType>();
+            RefOnetsococcupationTypes = new HashSet<RefONETSOCOccupationType>();
             RefOperationalStatusTypes = new HashSet<RefOperationalStatusType>();
             RefOperationalStatuses = new HashSet<RefOperationalStatus>();
             RefOrganizationElementTypes = new HashSet<RefOrganizationElementType>();
@@ -555,16 +555,16 @@ namespace ScafoldADatabase.Entities
             RefParaprofessionalQualifications = new HashSet<RefParaprofessionalQualification>();
             RefParticipationStatusAyps = new HashSet<RefParticipationStatusAyp>();
             RefParticipationTypes = new HashSet<RefParticipationType>();
-            RefPdactivityApprovedPurposes = new HashSet<RefPdactivityApprovedPurpose>();
-            RefPdactivityCreditTypes = new HashSet<RefPdactivityCreditType>();
-            RefPdactivityEducationLevelsAddresseds = new HashSet<RefPdactivityEducationLevelsAddressed>();
+            RefPdactivityApprovedPurposes = new HashSet<RefPDActivityApprovedPurpose>();
+            RefPdactivityCreditTypes = new HashSet<RefPDActivityCreditType>();
+            RefPdactivityEducationLevelsAddresseds = new HashSet<RefPDActivityEducationLevelsAddressed>();
             RefPdactivityLevels = new HashSet<RefPdactivityLevel>();
-            RefPdactivityTargetAudiences = new HashSet<RefPdactivityTargetAudience>();
-            RefPdactivityTypes = new HashSet<RefPdactivityType>();
-            RefPdaudienceTypes = new HashSet<RefPdaudienceType>();
-            RefPddeliveryMethods = new HashSet<RefPddeliveryMethod>();
-            RefPdinstructionalDeliveryModes = new HashSet<RefPdinstructionalDeliveryMode>();
-            RefPdsessionStatuses = new HashSet<RefPdsessionStatus>();
+            RefPdactivityTargetAudiences = new HashSet<RefPDActivityTargetAudience>();
+            RefPdactivityTypes = new HashSet<RefPDActivityType>();
+            RefPdaudienceTypes = new HashSet<RefPDAudienceType>();
+            RefPddeliveryMethods = new HashSet<RefPDDeliveryMethod>();
+            RefPdinstructionalDeliveryModes = new HashSet<RefPDInstructionalDeliveryMode>();
+            RefPdsessionStatuses = new HashSet<RefPDSessionStatus>();
             RefPersonIdentificationSystems = new HashSet<RefPersonIdentificationSystem>();
             RefPersonIdentifierTypes = new HashSet<RefPersonIdentifierType>();
             RefPersonLocationTypes = new HashSet<RefPersonLocationType>();
@@ -573,10 +573,10 @@ namespace ScafoldADatabase.Entities
             RefPersonTelephoneNumberTypes = new HashSet<RefPersonTelephoneNumberType>();
             RefPersonalInformationTypes = new HashSet<RefPersonalInformationType>();
             RefPersonalInformationVerifications = new HashSet<RefPersonalInformationVerification>();
-            RefPescawardLevelTypes = new HashSet<RefPescawardLevelType>();
+            RefPescawardLevelTypes = new HashSet<RefPESCAwardLevelType>();
             RefPopulationServeds = new HashSet<RefPopulationServed>();
             RefPreAndPostTestIndicators = new HashSet<RefPreAndPostTestIndicator>();
-            RefPreKeligibleAgesNonIdeas = new HashSet<RefPreKeligibleAgesNonIdea>();
+            RefPreKeligibleAgesNonIdeas = new HashSet<RefPreKEligibleAgesNonIDEA>();
             RefPredominantCalendarSystems = new HashSet<RefPredominantCalendarSystem>();
             RefPrekindergartenEligibilities = new HashSet<RefPrekindergartenEligibility>();
             RefPresentAttendanceCategories = new HashSet<RefPresentAttendanceCategory>();
@@ -605,8 +605,8 @@ namespace ScafoldADatabase.Entities
             RefPsEnrollmentTypes = new HashSet<RefPsEnrollmentType>();
             RefPsLepTypes = new HashSet<RefPsLepType>();
             RefPsStudentLevels = new HashSet<RefPsStudentLevel>();
-            RefPsexitOrWithdrawalTypes = new HashSet<RefPsexitOrWithdrawalType>();
-            RefPsprogramLevels = new HashSet<RefPsprogramLevel>();
+            RefPsexitOrWithdrawalTypes = new HashSet<RefPSExitOrWithdrawalType>();
+            RefPsprogramLevels = new HashSet<RefPSProgramLevel>();
             RefPublicSchoolChoiceStatuses = new HashSet<RefPublicSchoolChoiceStatus>();
             RefPublicSchoolResidences = new HashSet<RefPublicSchoolResidence>();
             RefPurposeOfMonitoringVisits = new HashSet<RefPurposeOfMonitoringVisit>();
@@ -624,7 +624,7 @@ namespace ScafoldADatabase.Entities
             RefRoleStatusTypes = new HashSet<RefRoleStatusType>();
             RefRoleStatuses = new HashSet<RefRoleStatus>();
             RefRoles = new HashSet<RefRole>();
-            RefScedcourseLevels = new HashSet<RefScedcourseLevel>();
+            RefScedcourseLevels = new HashSet<RefSCEDCourseLevel>();
             RefScedcourseSubjectAreas = new HashSet<RefScedcourseSubjectArea>();
             RefScheduledWellChildScreenings = new HashSet<RefScheduledWellChildScreening>();
             RefSchoolDangerousStatuses = new HashSet<RefSchoolDangerousStatus>();
@@ -648,7 +648,6 @@ namespace ScafoldADatabase.Entities
             RefStaffCompensationSourceTypes = new HashSet<RefStaffCompensationSourceType>();
             RefStaffPerformanceLevels = new HashSet<RefStaffPerformanceLevel>();
             RefStandardizedAdmissionTests = new HashSet<RefStandardizedAdmissionTest>();
-            RefStateAnsicodes = new HashSet<RefStateAnsicode>();
             RefStatePovertyDesignations = new HashSet<RefStatePovertyDesignation>();
             RefStates = new HashSet<RefState>();
             RefStudentEnrollmentAccessTypes = new HashSet<RefStudentEnrollmentAccessType>();
@@ -673,21 +672,21 @@ namespace ScafoldADatabase.Entities
             RefTenureSystems = new HashSet<RefTenureSystem>();
             RefTextComplexitySystems = new HashSet<RefTextComplexitySystem>();
             RefTimeForCompletionUnits = new HashSet<RefTimeForCompletionUnit>();
-            RefTitleIiiaccountabilities = new HashSet<RefTitleIiiaccountability>();
-            RefTitleIiilanguageInstructionProgramTypes = new HashSet<RefTitleIiilanguageInstructionProgramType>();
-            RefTitleIiiprofessionalDevelopmentTypes = new HashSet<RefTitleIiiprofessionalDevelopmentType>();
-            RefTitleIindicators = new HashSet<RefTitleIindicator>();
-            RefTitleIinstructionalServices = new HashSet<RefTitleIinstructionalService>();
-            RefTitleIprogramStaffCategories = new HashSet<RefTitleIprogramStaffCategory>();
-            RefTitleIprogramTypes = new HashSet<RefTitleIprogramType>();
-            RefTitleIschoolStatuses = new HashSet<RefTitleIschoolStatus>();
+            RefTitleIiiaccountabilities = new HashSet<RefTitleIIIAccountability>();
+            RefTitleIiilanguageInstructionProgramTypes = new HashSet<RefTitleIIILanguageInstructionProgramType>();
+            RefTitleIiiprofessionalDevelopmentTypes = new HashSet<RefTitleIIIProfessionalDevelopmentType>();
+            RefTitleIindicators = new HashSet<RefTitleIIndicator>();
+            RefTitleIinstructionalServices = new HashSet<RefTitleIInstructionalServices>();
+            RefTitleIprogramStaffCategories = new HashSet<RefTitleIProgramStaffCategory>();
+            RefTitleIprogramTypes = new HashSet<RefTitleIProgramType>();
+            RefTitleIschoolStatuses = new HashSet<RefTitleISchoolStatus>();
             RefTransferOutIndicators = new HashSet<RefTransferOutIndicator>();
             RefTransferReadies = new HashSet<RefTransferReady>();
             RefTribalAffiliations = new HashSet<RefTribalAffiliation>();
             RefTrimesterWhenPrenatalCareBegans = new HashSet<RefTrimesterWhenPrenatalCareBegan>();
             RefTuitionResidencyTypes = new HashSet<RefTuitionResidencyType>();
             RefTuitionUnits = new HashSet<RefTuitionUnit>();
-            RefUscitizenshipStatuses = new HashSet<RefUscitizenshipStatus>();
+            RefUscitizenshipStatuses = new HashSet<RefUSCitizenshipStatus>();
             RefVirtualSchoolStatuses = new HashSet<RefVirtualSchoolStatus>();
             RefVisaTypes = new HashSet<RefVisaType>();
             RefVisionScreeningStatuses = new HashSet<RefVisionScreeningStatus>();
@@ -695,7 +694,7 @@ namespace ScafoldADatabase.Entities
             RefWageVerifications = new HashSet<RefWageVerification>();
             RefWeaponTypes = new HashSet<RefWeaponType>();
             RefWfProgramParticipations = new HashSet<RefWfProgramParticipation>();
-            RefWioabarrierstoEmployments = new HashSet<RefWioabarrierstoEmployment>();
+            RefWioabarrierstoEmployments = new HashSet<RefWIOABarrierstoEmployment>();
             RefWorkbasedLearningOpportunityTypes = new HashSet<RefWorkbasedLearningOpportunityType>();
             RequiredImmunizations = new HashSet<RequiredImmunization>();
             Roles = new HashSet<Role>();
@@ -757,41 +756,41 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Organization")]
         public virtual ICollection<EarlyChildhoodProgramTypeOffered> EarlyChildhoodProgramTypeOffereds { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElclassSection> ElclassSections { get; set; }
+        public virtual ICollection<ELClassSection> ElclassSections { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElfacilityLicensing> ElfacilityLicensings { get; set; }
+        public virtual ICollection<ELFacilityLicensing> ElfacilityLicensings { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElorganizationAvailability> ElorganizationAvailabilities { get; set; }
+        public virtual ICollection<ELOrganizationAvailability> ElorganizationAvailabilities { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElorganizationFund> ElorganizationFunds { get; set; }
+        public virtual ICollection<ELOrganizationFunds> ElorganizationFunds { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElorganizationMonitoring> ElorganizationMonitorings { get; set; }
+        public virtual ICollection<ELOrganizationMonitoring> ElorganizationMonitorings { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<Elorganization> Elorganizations { get; set; }
+        public virtual ICollection<ELOrganization> Elorganizations { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElprogramLicensing> ElprogramLicensings { get; set; }
+        public virtual ICollection<ELProgramLicensing> ElprogramLicensings { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElqualityInitiative> ElqualityInitiatives { get; set; }
+        public virtual ICollection<ELQualityInitiative> ElqualityInitiatives { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElqualityRatingImprovement> ElqualityRatingImprovements { get; set; }
+        public virtual ICollection<ELQualityRatingImprovement> ElqualityRatingImprovements { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<ElservicePartner> ElservicePartners { get; set; }
+        public virtual ICollection<ELServicePartner> ElservicePartners { get; set; }
         [InverseProperty("Organization")]
         public virtual ICollection<Facility> Facilities { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12charterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
+        public virtual ICollection<K12CharterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12charterSchoolManagementOrganization> K12charterSchoolManagementOrganizations { get; set; }
+        public virtual ICollection<K12CharterSchoolManagementOrganization> K12charterSchoolManagementOrganizations { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12lea> K12leas { get; set; }
+        public virtual ICollection<K12Lea> K12leas { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12programOrService> K12programOrServices { get; set; }
+        public virtual ICollection<K12ProgramOrService> K12programOrServices { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12school> K12schools { get; set; }
+        public virtual ICollection<K12School> K12schools { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12sea> K12seas { get; set; }
+        public virtual ICollection<K12Sea> K12seas { get; set; }
         [InverseProperty("Organization")]
-        public virtual ICollection<K12titleIiilanguageInstruction> K12titleIiilanguageInstructions { get; set; }
+        public virtual ICollection<K12TitleIIILanguageInstruction> K12titleIiilanguageInstructions { get; set; }
         [InverseProperty("LeaOrganization")]
         public virtual ICollection<LearnerActivity> LearnerActivityLeaOrganizations { get; set; }
         [InverseProperty("SchoolOrganization")]
@@ -897,9 +896,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefAeCertificationType> RefAeCertificationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefAeFunctioningLevelAtIntake> RefAeFunctioningLevelAtIntakes { get; set; }
+        public virtual ICollection<RefAEFunctioningLevelAtIntake> RefAeFunctioningLevelAtIntakes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefAeFunctioningLevelAtPosttest> RefAeFunctioningLevelAtPosttests { get; set; }
+        public virtual ICollection<RefAEFunctioningLevelAtPosttest> RefAeFunctioningLevelAtPosttests { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefAeInstructionalProgramType> RefAeInstructionalProgramTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -929,7 +928,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefAssessmentAssetType> RefAssessmentAssetTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefAssessmentEldevelopmentalDomain> RefAssessmentEldevelopmentalDomains { get; set; }
+        public virtual ICollection<RefAssessmentELDevelopmentalDomain> RefAssessmentEldevelopmentalDomains { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefAssessmentFormSectionIdentificationSystem> RefAssessmentFormSectionIdentificationSystems { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1065,7 +1064,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefBuildingHistoricStatus> RefBuildingHistoricStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefBuildingHvacsystemType> RefBuildingHvacsystemTypes { get; set; }
+        public virtual ICollection<RefBuildingHVACSystemType> RefBuildingHvacsystemTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefBuildingIndoorAthleticOrPhysEdSpaceType> RefBuildingIndoorAthleticOrPhysEdSpaceTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1247,9 +1246,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefCriticalTeacherShortageCandidate> RefCriticalTeacherShortageCandidates { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefCtdlaudienceLevelType> RefCtdlaudienceLevelTypes { get; set; }
+        public virtual ICollection<RefCTDLAudienceLevelType> RefCtdlaudienceLevelTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefCtdlorganizationType> RefCtdlorganizationTypes { get; set; }
+        public virtual ICollection<RefCTDLOrganizationType> RefCtdlorganizationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefCteGraduationRateInclusion> RefCteGraduationRateInclusions { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1297,7 +1296,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefDoctoralExamsRequiredCode> RefDoctoralExamsRequiredCodes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefDqpcategoriesOfLearning> RefDqpcategoriesOfLearnings { get; set; }
+        public virtual ICollection<RefDQPCategoriesOfLearning> RefDqpcategoriesOfLearnings { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefEarlyChildhoodCredential> RefEarlyChildhoodCredentials { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1321,37 +1320,37 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefElementaryMiddleAdditional> RefElementaryMiddleAdditionals { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElemploymentSeparationReason> RefElemploymentSeparationReasons { get; set; }
+        public virtual ICollection<RefELEmploymentSeparationReason> RefElemploymentSeparationReasons { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElfacilityLicensingStatus> RefElfacilityLicensingStatuses { get; set; }
+        public virtual ICollection<RefELFacilityLicensingStatus> RefElfacilityLicensingStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElfederalFundingType> RefElfederalFundingTypes { get; set; }
+        public virtual ICollection<RefELFederalFundingType> RefElfederalFundingTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefElgroupSizeStandardMet> RefElgroupSizeStandardMets { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefEllevelOfSpecialization> RefEllevelOfSpecializations { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefEllocalRevenueSource> RefEllocalRevenueSources { get; set; }
+        public virtual ICollection<RefELLocalRevenueSource> RefEllocalRevenueSources { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElotherFederalFundingSource> RefElotherFederalFundingSources { get; set; }
+        public virtual ICollection<RefELOtherFederalFundingSources> RefElotherFederalFundingSources { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefEloutcomeMeasurementLevel> RefEloutcomeMeasurementLevels { get; set; }
+        public virtual ICollection<RefELOutcomeMeasurementLevel> RefEloutcomeMeasurementLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElprofessionalDevelopmentTopicArea> RefElprofessionalDevelopmentTopicAreas { get; set; }
+        public virtual ICollection<RefELProfessionalDevelopmentTopicArea> RefElprofessionalDevelopmentTopicAreas { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElprogramEligibility> RefElprogramEligibilities { get; set; }
+        public virtual ICollection<RefELProgramEligibility> RefElprogramEligibilities { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElprogramEligibilityStatus> RefElprogramEligibilityStatuses { get; set; }
+        public virtual ICollection<RefELProgramEligibilityStatus> RefElprogramEligibilityStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElprogramLicenseStatus> RefElprogramLicenseStatuses { get; set; }
+        public virtual ICollection<RefELProgramLicenseStatus> RefElprogramLicenseStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElserviceProfessionalStaffClassification> RefElserviceProfessionalStaffClassifications { get; set; }
+        public virtual ICollection<RefELServiceProfessionalStaffClassification> RefElserviceProfessionalStaffClassifications { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElserviceType> RefElserviceTypes { get; set; }
+        public virtual ICollection<RefELServiceType> RefElserviceTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefElstateRevenueSource> RefElstateRevenueSources { get; set; }
+        public virtual ICollection<RefELStateRevenueSource> RefElstateRevenueSources { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefEltrainerCoreKnowledgeArea> RefEltrainerCoreKnowledgeAreas { get; set; }
+        public virtual ICollection<RefELTrainerCoreKnowledgeArea> RefEltrainerCoreKnowledgeAreas { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefOrganizationEmailType> RefEmailTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1385,9 +1384,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefEnvironmentSetting> RefEnvironmentSettings { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefEradministrativeDataSource> RefEradministrativeDataSources { get; set; }
+        public virtual ICollection<RefERAdministrativeDataSource> RefEradministrativeDataSources { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefErsruralUrbanContinuumCode> RefErsruralUrbanContinuumCodes { get; set; }
+        public virtual ICollection<RefERSRuralUrbanContinuumCode> RefErsruralUrbanContinuumCodes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefExitOrWithdrawalStatus> RefExitOrWithdrawalStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1529,31 +1528,31 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefHomelessNighttimeResidence> RefHomelessNighttimeResidences { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeadisabilityType> RefIdeadisabilityTypes { get; set; }
+        public virtual ICollection<RefIDEADisabilityType> RefIdeadisabilityTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeadisciplineMethodFirearm> RefIdeadisciplineMethodFirearms { get; set; }
+        public virtual ICollection<RefIDEADisciplineMethodFirearm> RefIdeadisciplineMethodFirearms { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeaeducationalEnvironmentEc> RefIdeaeducationalEnvironmentEcs { get; set; }
+        public virtual ICollection<RefIDEAEducationalEnvironmentEC> RefIdeaeducationalEnvironmentEcs { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeaeducationalEnvironmentSchoolAge> RefIdeaeducationalEnvironmentSchoolAges { get; set; }
+        public virtual ICollection<RefIDEAEducationalEnvironmentSchoolAge> RefIdeaeducationalEnvironmentSchoolAges { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeaeligibilityEvaluationCategory> RefIdeaeligibilityEvaluationCategories { get; set; }
+        public virtual ICollection<RefIDEAEligibilityEvaluationCategory> RefIdeaeligibilityEvaluationCategories { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeaenvironmentEl> RefIdeaenvironmentEls { get; set; }
+        public virtual ICollection<RefIDEAEnvironmentEL> RefIdeaenvironmentEls { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeaiepstatus> RefIdeaiepstatuses { get; set; }
+        public virtual ICollection<RefIDEAIEPStatus> RefIdeaiepstatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeainterimRemovalReason> RefIdeainterimRemovalReasons { get; set; }
+        public virtual ICollection<RefIDEAInterimRemovalReason> RefIdeainterimRemovalReasons { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeainterimRemoval> RefIdeainterimRemovals { get; set; }
+        public virtual ICollection<RefIDEAInterimRemoval> RefIdeainterimRemovals { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIdeapartCeligibilityCategory> RefIdeapartCeligibilityCategories { get; set; }
+        public virtual ICollection<RefIDEAPartCEligibilityCategory> RefIdeapartCeligibilityCategories { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIepauthorizationDocumentType> RefIepauthorizationDocumentTypes { get; set; }
+        public virtual ICollection<RefIEPAuthorizationDocumentType> RefIepauthorizationDocumentTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIepeligibilityEvaluationType> RefIepeligibilityEvaluationTypes { get; set; }
+        public virtual ICollection<RefIEPEligibilityEvaluationType> RefIepeligibilityEvaluationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIepgoalType> RefIepgoalTypes { get; set; }
+        public virtual ICollection<RefIEPGoalType> RefIepgoalTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefImmunizationType> RefImmunizationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1621,51 +1620,51 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefIpedsOccupationalCategory> RefIpedsOccupationalCategories { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbfinancialPosition> RefIpedsfasbfinancialPositions { get; set; }
+        public virtual ICollection<RefIPEDSFASBFinancialPosition> RefIpedsfasbfinancialPositions { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbfunctionalExpense> RefIpedsfasbfunctionalExpenses { get; set; }
+        public virtual ICollection<RefIPEDSFASBFunctionalExpense> RefIpedsfasbfunctionalExpenses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbpellGrantTransaction> RefIpedsfasbpellGrantTransactions { get; set; }
+        public virtual ICollection<RefIPEDSFASBPellGrantTransactions> RefIpedsfasbpellGrantTransactions { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbrevenueRestriction> RefIpedsfasbrevenueRestrictions { get; set; }
+        public virtual ICollection<RefIPEDSFASBRevenueRestriction> RefIpedsfasbrevenueRestrictions { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbrevenue> RefIpedsfasbrevenues { get; set; }
+        public virtual ICollection<RefIPEDSFASBRevenue> RefIpedsfasbrevenues { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsfasbscholarshipsandFellowshipsRevenue> RefIpedsfasbscholarshipsandFellowshipsRevenues { get; set; }
+        public virtual ICollection<RefIPEDSFASBScholarshipsandFellowshipsRevenue> RefIpedsfasbscholarshipsandFellowshipsRevenues { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsgasbfinancialPosition> RefIpedsgasbfinancialPositions { get; set; }
+        public virtual ICollection<RefIPEDSFASBFinancialPosition> RefIpedsgasbfinancialPositions { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsgasbfunctionalExpense> RefIpedsgasbfunctionalExpenses { get; set; }
+        public virtual ICollection<RefIPEDSFASBFunctionalExpense> RefIpedsgasbfunctionalExpenses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsgasbrevenue> RefIpedsgasbrevenues { get; set; }
+        public virtual ICollection<RefIPEDSGASBRevenue> RefIpedsgasbrevenues { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsgasbscholarshipsandFellowshipsRevenue> RefIpedsgasbscholarshipsandFellowshipsRevenues { get; set; }
+        public virtual ICollection<RefIPEDSGASBScholarshipsandFellowshipsRevenue> RefIpedsgasbscholarshipsandFellowshipsRevenues { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsintercollegiateAthleticsExpense> RefIpedsintercollegiateAthleticsExpenses { get; set; }
+        public virtual ICollection<RefIPEDSIntercollegiateAthleticsExpenses> RefIpedsintercollegiateAthleticsExpenses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpedsnaturalExpense> RefIpedsnaturalExpenses { get; set; }
+        public virtual ICollection<RefIPEDSNaturalExpense> RefIpedsnaturalExpenses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpspprogressReportSchedule> RefIpspprogressReportSchedules { get; set; }
+        public virtual ICollection<RefIPSPProgressReportSchedule> RefIpspprogressReportSchedules { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIpspprogressReportType> RefIpspprogressReportTypes { get; set; }
+        public virtual ICollection<RefIPSPProgressReportType> RefIpspprogressReportTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIso6392language> RefIso6392languages { get; set; }
+        public virtual ICollection<RefISO6392Language> RefIso6392languages { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIso6393language> RefIso6393languages { get; set; }
+        public virtual ICollection<RefISO6393Language> RefIso6393languages { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefIso6395languageFamily> RefIso6395languageFamilies { get; set; }
+        public virtual ICollection<RefISO6395LanguageFamily> RefIso6395languageFamilies { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefItemResponseTheoryDifficultyCategory> RefItemResponseTheoryDifficultyCategories { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefItemResponseTheoryKappaAlgorithm> RefItemResponseTheoryKappaAlgorithms { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefK12endOfCourseRequirement> RefK12endOfCourseRequirements { get; set; }
+        public virtual ICollection<RefK12EndOfCourseRequirement> RefK12endOfCourseRequirements { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefK12leaTitleIsupportService> RefK12leaTitleIsupportServices { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefK12responsibilityType> RefK12responsibilityTypes { get; set; }
+        public virtual ICollection<RefK12ResponsibilityType> RefK12responsibilityTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefK12staffClassification> RefK12staffClassifications { get; set; }
+        public virtual ICollection<RefK12StaffClassification> RefK12staffClassifications { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefLanguageUseType> RefLanguageUseTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1685,7 +1684,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefLearnerActivityType> RefLearnerActivityTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefLearningResourceAccessApitype> RefLearningResourceAccessApitypes { get; set; }
+        public virtual ICollection<RefLearningResourceAccessAPIType> RefLearningResourceAccessApitypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefLearningResourceAccessHazardType> RefLearningResourceAccessHazardTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1761,7 +1760,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefNationalSchoolLunchProgramStatus> RefNationalSchoolLunchProgramStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefNcescollegeCourseMapCode> RefNcescollegeCourseMapCodes { get; set; }
+        public virtual ICollection<RefNCESCollegeCourseMapCode> RefNcescollegeCourseMapCodes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefNeedDeterminationMethod> RefNeedDeterminationMethods { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1771,11 +1770,11 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefNonTraditionalGenderStatus> RefNonTraditionalGenderStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefNslpstatus> RefNslpstatuses { get; set; }
+        public virtual ICollection<RefNSLPStatus> RefNslpstatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefNumberOfDependentsType> RefNumberOfDependentsTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefOnetsococcupationType> RefOnetsococcupationTypes { get; set; }
+        public virtual ICollection<RefONETSOCOccupationType> RefOnetsococcupationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefOperationalStatusType> RefOperationalStatusTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1809,25 +1808,25 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Organization")]
         public virtual ICollection<RefParticipationType> RefParticipationTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdactivityApprovedPurpose> RefPdactivityApprovedPurposes { get; set; }
+        public virtual ICollection<RefPDActivityApprovedPurpose> RefPdactivityApprovedPurposes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdactivityCreditType> RefPdactivityCreditTypes { get; set; }
+        public virtual ICollection<RefPDActivityCreditType> RefPdactivityCreditTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdactivityEducationLevelsAddressed> RefPdactivityEducationLevelsAddresseds { get; set; }
+        public virtual ICollection<RefPDActivityEducationLevelsAddressed> RefPdactivityEducationLevelsAddresseds { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPdactivityLevel> RefPdactivityLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdactivityTargetAudience> RefPdactivityTargetAudiences { get; set; }
+        public virtual ICollection<RefPDActivityTargetAudience> RefPdactivityTargetAudiences { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdactivityType> RefPdactivityTypes { get; set; }
+        public virtual ICollection<RefPDActivityType> RefPdactivityTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdaudienceType> RefPdaudienceTypes { get; set; }
+        public virtual ICollection<RefPDAudienceType> RefPdaudienceTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPddeliveryMethod> RefPddeliveryMethods { get; set; }
+        public virtual ICollection<RefPDDeliveryMethod> RefPddeliveryMethods { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdinstructionalDeliveryMode> RefPdinstructionalDeliveryModes { get; set; }
+        public virtual ICollection<RefPDInstructionalDeliveryMode> RefPdinstructionalDeliveryModes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPdsessionStatus> RefPdsessionStatuses { get; set; }
+        public virtual ICollection<RefPDSessionStatus> RefPdsessionStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPersonIdentificationSystem> RefPersonIdentificationSystems { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1845,13 +1844,13 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPersonalInformationVerification> RefPersonalInformationVerifications { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPescawardLevelType> RefPescawardLevelTypes { get; set; }
+        public virtual ICollection<RefPESCAwardLevelType> RefPescawardLevelTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPopulationServed> RefPopulationServeds { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPreAndPostTestIndicator> RefPreAndPostTestIndicators { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPreKeligibleAgesNonIdea> RefPreKeligibleAgesNonIdeas { get; set; }
+        public virtual ICollection<RefPreKEligibleAgesNonIDEA> RefPreKeligibleAgesNonIdeas { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPredominantCalendarSystem> RefPredominantCalendarSystems { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1909,9 +1908,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPsStudentLevel> RefPsStudentLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPsexitOrWithdrawalType> RefPsexitOrWithdrawalTypes { get; set; }
+        public virtual ICollection<RefPSExitOrWithdrawalType> RefPsexitOrWithdrawalTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefPsprogramLevel> RefPsprogramLevels { get; set; }
+        public virtual ICollection<RefPSProgramLevel> RefPsprogramLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefPublicSchoolChoiceStatus> RefPublicSchoolChoiceStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1947,7 +1946,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefRole> RefRoles { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefScedcourseLevel> RefScedcourseLevels { get; set; }
+        public virtual ICollection<RefSCEDCourseLevel> RefScedcourseLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefScedcourseSubjectArea> RefScedcourseSubjectAreas { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -1994,8 +1993,6 @@ namespace ScafoldADatabase.Entities
         public virtual ICollection<RefStaffPerformanceLevel> RefStaffPerformanceLevels { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefStandardizedAdmissionTest> RefStandardizedAdmissionTests { get; set; }
-        [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefStateAnsicode> RefStateAnsicodes { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefStatePovertyDesignation> RefStatePovertyDesignations { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -2045,21 +2042,21 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefTimeForCompletionUnit> RefTimeForCompletionUnits { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIiiaccountability> RefTitleIiiaccountabilities { get; set; }
+        public virtual ICollection<RefTitleIIIAccountability> RefTitleIiiaccountabilities { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIiilanguageInstructionProgramType> RefTitleIiilanguageInstructionProgramTypes { get; set; }
+        public virtual ICollection<RefTitleIIILanguageInstructionProgramType> RefTitleIiilanguageInstructionProgramTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIiiprofessionalDevelopmentType> RefTitleIiiprofessionalDevelopmentTypes { get; set; }
+        public virtual ICollection<RefTitleIIIProfessionalDevelopmentType> RefTitleIiiprofessionalDevelopmentTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIindicator> RefTitleIindicators { get; set; }
+        public virtual ICollection<RefTitleIIndicator> RefTitleIindicators { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIinstructionalService> RefTitleIinstructionalServices { get; set; }
+        public virtual ICollection<RefTitleIInstructionalServices> RefTitleIinstructionalServices { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIprogramStaffCategory> RefTitleIprogramStaffCategories { get; set; }
+        public virtual ICollection<RefTitleIProgramStaffCategory> RefTitleIprogramStaffCategories { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIprogramType> RefTitleIprogramTypes { get; set; }
+        public virtual ICollection<RefTitleIProgramType> RefTitleIprogramTypes { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefTitleIschoolStatus> RefTitleIschoolStatuses { get; set; }
+        public virtual ICollection<RefTitleISchoolStatus> RefTitleIschoolStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefTransferOutIndicator> RefTransferOutIndicators { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -2073,7 +2070,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefTuitionUnit> RefTuitionUnits { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefUscitizenshipStatus> RefUscitizenshipStatuses { get; set; }
+        public virtual ICollection<RefUSCitizenshipStatus> RefUscitizenshipStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefVirtualSchoolStatus> RefVirtualSchoolStatuses { get; set; }
         [InverseProperty("RefJurisdiction")]
@@ -2089,7 +2086,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefWfProgramParticipation> RefWfProgramParticipations { get; set; }
         [InverseProperty("RefJurisdiction")]
-        public virtual ICollection<RefWioabarrierstoEmployment> RefWioabarrierstoEmployments { get; set; }
+        public virtual ICollection<RefWIOABarrierstoEmployment> RefWioabarrierstoEmployments { get; set; }
         [InverseProperty("RefJurisdiction")]
         public virtual ICollection<RefWorkbasedLearningOpportunityType> RefWorkbasedLearningOpportunityTypes { get; set; }
         [InverseProperty("Organization")]

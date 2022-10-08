@@ -9,14 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentRegistration_Accommodation")]
+    [Table("AssessmentRegistrationAccommodation", Schema = "Assessment")]
     public partial class AssessmentRegistrationAccommodation
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("AssessmentRegistration_AccommodationId")]
         public int AssessmentRegistrationAccommodationId { get; set; }
         /// <summary>
         /// Foreign key - AssessmentRegistration

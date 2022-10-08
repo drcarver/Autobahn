@@ -9,21 +9,20 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefTitleIIILanguageInstructionProgramType")]
-    public partial class RefTitleIiilanguageInstructionProgramType
+    [Table("RefTitleIIILanguageInstructionProgramType", Schema = "Common")]
+    public partial class RefTitleIIILanguageInstructionProgramType
     {
-        public RefTitleIiilanguageInstructionProgramType()
+        public RefTitleIIILanguageInstructionProgramType()
         {
-            K12titleIiilanguageInstructions = new HashSet<K12titleIiilanguageInstruction>();
-            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIiilep>();
+            K12titleIiilanguageInstructions = new HashSet<K12TitleIIILanguageInstruction>();
+            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIIILep>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefTitleIIILanguageInstructionProgramTypeId")]
-        public int RefTitleIiilanguageInstructionProgramTypeId { get; set; }
+        public int RefTitleIIILanguageInstructionProgramTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -57,8 +56,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefTitleIiilanguageInstructionProgramTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefTitleIiilanguageInstructionProgramType")]
-        public virtual ICollection<K12titleIiilanguageInstruction> K12titleIiilanguageInstructions { get; set; }
+        public virtual ICollection<K12TitleIIILanguageInstruction> K12titleIiilanguageInstructions { get; set; }
         [InverseProperty("RefTitleIiilanguageInstructionProgramType")]
-        public virtual ICollection<ProgramParticipationTitleIiilep> ProgramParticipationTitleIiileps { get; set; }
+        public virtual ICollection<ProgramParticipationTitleIIILep> ProgramParticipationTitleIiileps { get; set; }
     }
 }

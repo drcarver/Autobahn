@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Person")]
+    [Table("Person", Schema = "Core")]
     public partial class Person
     {
         public Person()
@@ -19,13 +19,13 @@ namespace ScafoldADatabase.Entities
             AssessmentSessionStaffRoles = new HashSet<AssessmentSessionStaffRole>();
             CredentialAwards = new HashSet<CredentialAward>();
             CredentialDefAgents = new HashSet<CredentialDefAgent>();
-            ElchildDemographics = new HashSet<ElchildDemographic>();
-            ElchildDevelopmentalAssessments = new HashSet<ElchildDevelopmentalAssessment>();
-            ElchildHealths = new HashSet<ElchildHealth>();
-            ElchildIndividualizedPrograms = new HashSet<ElchildIndividualizedProgram>();
-            ElchildOutcomeSummaries = new HashSet<ElchildOutcomeSummary>();
-            ElchildTransitionPlans = new HashSet<ElchildTransitionPlan>();
-            ElenrollmentOtherFundings = new HashSet<ElenrollmentOtherFunding>();
+            ElchildDemographics = new HashSet<ELChildDemographic>();
+            ElchildDevelopmentalAssessments = new HashSet<ELChildDevelopmentalAssessment>();
+            ElchildHealths = new HashSet<ELChildHealth>();
+            ElchildIndividualizedPrograms = new HashSet<ELChildIndividualizedProgram>();
+            ElchildOutcomeSummaries = new HashSet<ELChildOutcomeSummary>();
+            ElchildTransitionPlans = new HashSet<ELChildTransitionPlan>();
+            ElenrollmentOtherFundings = new HashSet<ELEnrollmentOtherFunding>();
             IncidentPeople = new HashSet<IncidentPerson>();
             Incidents = new HashSet<Incident>();
             IndividualizedProgramServices = new HashSet<IndividualizedProgramService>();
@@ -101,19 +101,19 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Person")]
         public virtual ICollection<CredentialDefAgent> CredentialDefAgents { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildDemographic> ElchildDemographics { get; set; }
+        public virtual ICollection<ELChildDemographic> ElchildDemographics { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildDevelopmentalAssessment> ElchildDevelopmentalAssessments { get; set; }
+        public virtual ICollection<ELChildDevelopmentalAssessment> ElchildDevelopmentalAssessments { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildHealth> ElchildHealths { get; set; }
+        public virtual ICollection<ELChildHealth> ElchildHealths { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
+        public virtual ICollection<ELChildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildOutcomeSummary> ElchildOutcomeSummaries { get; set; }
+        public virtual ICollection<ELChildOutcomeSummary> ElchildOutcomeSummaries { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElchildTransitionPlan> ElchildTransitionPlans { get; set; }
+        public virtual ICollection<ELChildTransitionPlan> ElchildTransitionPlans { get; set; }
         [InverseProperty("Person")]
-        public virtual ICollection<ElenrollmentOtherFunding> ElenrollmentOtherFundings { get; set; }
+        public virtual ICollection<ELEnrollmentOtherFunding> ElenrollmentOtherFundings { get; set; }
         [InverseProperty("Person")]
         public virtual ICollection<IncidentPerson> IncidentPeople { get; set; }
         [InverseProperty("IncidentReporter")]

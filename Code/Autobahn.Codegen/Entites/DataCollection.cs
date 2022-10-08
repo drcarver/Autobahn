@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("DataCollection")]
+    [Table("DataCollection", Schema = "Common")]
     public partial class DataCollection
     {
         public DataCollection()
@@ -17,7 +17,7 @@ namespace ScafoldADatabase.Entities
             AeProviders = new HashSet<AeProvider>();
             AeStaffs = new HashSet<AeStaff>();
             AeStudentAcademicRecords = new HashSet<AeStudentAcademicRecord>();
-            AeStudentEmployments = new HashSet<AeStudentEmployment>();
+            AeStudentEmployments = new HashSet<AEStudentEmployment>();
             ApipInteractions = new HashSet<ApipInteraction>();
             Applications = new HashSet<Application>();
             AssessmentAccommodations = new HashSet<AssessmentAccommodation>();
@@ -25,7 +25,7 @@ namespace ScafoldADatabase.Entities
             AssessmentAdministrations = new HashSet<AssessmentAdministration>();
             AssessmentAssessmentAdministrations = new HashSet<AssessmentAssessmentAdministration>();
             AssessmentAssets = new HashSet<AssessmentAsset>();
-            AssessmentEldevelopmentalDomains = new HashSet<AssessmentEldevelopmentalDomain>();
+            AssessmentEldevelopmentalDomains = new HashSet<AssessmentELDevelopmentalDomain>();
             AssessmentFormAssessmentAssets = new HashSet<AssessmentFormAssessmentAsset>();
             AssessmentFormAssessmentFormSections = new HashSet<AssessmentFormAssessmentFormSection>();
             AssessmentFormSectionAssessmentAssets = new HashSet<AssessmentFormSectionAssessmentAsset>();
@@ -66,7 +66,7 @@ namespace ScafoldADatabase.Entities
             AssessmentSessions = new HashSet<AssessmentSession>();
             AssessmentSubtestAssessmentItems = new HashSet<AssessmentSubtestAssessmentItem>();
             AssessmentSubtestCompetencyDefinitions = new HashSet<AssessmentSubtestCompetencyDefinition>();
-            AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestEldevelopmentalDomain>();
+            AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestELDevelopmentalDomain>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
             AssessmentSubtests = new HashSet<AssessmentSubTest>();
             Assessments = new HashSet<Assessment>();
@@ -110,33 +110,33 @@ namespace ScafoldADatabase.Entities
             CteStudentAcademicRecords = new HashSet<CteStudentAcademicRecord>();
             EarlyChildhoodCredentials = new HashSet<EarlyChildhoodCredential>();
             EarlyChildhoodProgramTypeOffereds = new HashSet<EarlyChildhoodProgramTypeOffered>();
-            ElchildDemographics = new HashSet<ElchildDemographic>();
-            ElchildDevelopmentalAssessments = new HashSet<ElchildDevelopmentalAssessment>();
-            ElchildHealths = new HashSet<ElchildHealth>();
-            ElchildIndividualizedPrograms = new HashSet<ElchildIndividualizedProgram>();
-            ElchildOutcomeSummaries = new HashSet<ElchildOutcomeSummary>();
-            ElchildProgramEligibilities = new HashSet<ElchildProgramEligibility>();
-            ElchildServices = new HashSet<ElchildService>();
-            ElchildServicesApplications = new HashSet<ElchildServicesApplication>();
-            ElchildTransitionPlans = new HashSet<ElchildTransitionPlan>();
-            ElclassSectionServices = new HashSet<ElclassSectionService>();
-            ElclassSections = new HashSet<ElclassSection>();
-            ElenrollmentOtherFundings = new HashSet<ElenrollmentOtherFunding>();
-            Elenrollments = new HashSet<Elenrollment>();
-            ElfacilityLicensings = new HashSet<ElfacilityLicensing>();
+            ElchildDemographics = new HashSet<ELChildDemographic>();
+            ElchildDevelopmentalAssessments = new HashSet<ELChildDevelopmentalAssessment>();
+            ElchildHealths = new HashSet<ELChildHealth>();
+            ElchildIndividualizedPrograms = new HashSet<ELChildIndividualizedProgram>();
+            ElchildOutcomeSummaries = new HashSet<ELChildOutcomeSummary>();
+            ElchildProgramEligibilities = new HashSet<ELChildProgramEligibility>();
+            ElchildServices = new HashSet<ELChildService>();
+            ElchildServicesApplications = new HashSet<ELChildServicesApplication>();
+            ElchildTransitionPlans = new HashSet<ELChildTransitionPlan>();
+            ElclassSectionServices = new HashSet<ELClassSectionService>();
+            ElclassSections = new HashSet<ELClassSection>();
+            ElenrollmentOtherFundings = new HashSet<ELEnrollmentOtherFunding>();
+            Elenrollments = new HashSet<ELEnrollment>();
+            ElfacilityLicensings = new HashSet<ELFacilityLicensing>();
             EligibilityEvaluations = new HashSet<EligibilityEvaluation>();
-            ElorganizationAvailabilities = new HashSet<ElorganizationAvailability>();
-            ElorganizationFunds = new HashSet<ElorganizationFund>();
-            ElorganizationMonitorings = new HashSet<ElorganizationMonitoring>();
-            Elorganizations = new HashSet<Elorganization>();
-            ElprogramLicensings = new HashSet<ElprogramLicensing>();
-            ElqualityInitiatives = new HashSet<ElqualityInitiative>();
-            ElqualityRatingImprovements = new HashSet<ElqualityRatingImprovement>();
-            ElservicePartners = new HashSet<ElservicePartner>();
-            ElstaffAssignments = new HashSet<ElstaffAssignment>();
-            ElstaffEducations = new HashSet<ElstaffEducation>();
-            ElstaffEmployments = new HashSet<ElstaffEmployment>();
-            Elstaffs = new HashSet<Elstaff>();
+            ElorganizationAvailabilities = new HashSet<ELOrganizationAvailability>();
+            ElorganizationFunds = new HashSet<ELOrganizationFunds>();
+            ElorganizationMonitorings = new HashSet<ELOrganizationMonitoring>();
+            Elorganizations = new HashSet<ELOrganization>();
+            ElprogramLicensings = new HashSet<ELProgramLicensing>();
+            ElqualityInitiatives = new HashSet<ELQualityInitiative>();
+            ElqualityRatingImprovements = new HashSet<ELQualityRatingImprovement>();
+            ElservicePartners = new HashSet<ELServicePartner>();
+            ElstaffAssignments = new HashSet<ELStaffAssignment>();
+            ElstaffEducations = new HashSet<ELStaffEducation>();
+            ElstaffEmployments = new HashSet<ELStaffEmployment>();
+            Elstaffs = new HashSet<ELStaff>();
             Facilities = new HashSet<Facility>();
             FacilityAudits = new HashSet<FacilityAudit>();
             FacilityCompliances = new HashSet<FacilityCompliance>();
@@ -166,10 +166,10 @@ namespace ScafoldADatabase.Entities
             GoalMeasurements = new HashSet<GoalMeasurement>();
             GoalPerformances = new HashSet<GoalPerformance>();
             Goals = new HashSet<Goal>();
-            IdeaeligibilityEvaluationCategories = new HashSet<IdeaeligibilityEvaluationCategory>();
-            IepauthorizationRejecteds = new HashSet<IepauthorizationRejected>();
-            Iepauthorizations = new HashSet<Iepauthorization>();
-            IeppresentLevels = new HashSet<IeppresentLevel>();
+            IdeaeligibilityEvaluationCategories = new HashSet<IDEAEligibilityEvaluationCategory>();
+            IepauthorizationRejecteds = new HashSet<IEPAuthorizationRejected>();
+            Iepauthorizations = new HashSet<IEPAuthorization>();
+            IeppresentLevels = new HashSet<IEPPresentLevel>();
             IncidentPeople = new HashSet<IncidentPerson>();
             Incidents = new HashSet<Incident>();
             IndividualizedProgramAccommodationSubjects = new HashSet<IndividualizedProgramAccommodationSubject>();
@@ -188,49 +188,49 @@ namespace ScafoldADatabase.Entities
             IndividualizedProgramServices = new HashSet<IndividualizedProgramService>();
             IndividualizedProgramServicesReceiveds = new HashSet<IndividualizedProgramServicesReceived>();
             IndividualizedPrograms = new HashSet<IndividualizedProgram>();
-            Ipedsfinances = new HashSet<Ipedsfinance>();
-            K12charterSchoolAuthorizerAgencies = new HashSet<K12charterSchoolAuthorizerAgency>();
-            K12charterSchoolManagementOrganizations = new HashSet<K12charterSchoolManagementOrganization>();
-            K12courses = new HashSet<K12course>();
-            K12federalFundAllocations = new HashSet<K12federalFundAllocation>();
-            K12leaFederalFunds = new HashSet<K12leaFederalFund>();
-            K12leaFederalReportings = new HashSet<K12leaFederalReporting>();
-            K12leaGradeLevelsApproveds = new HashSet<K12leaGradeLevelsApproved>();
-            K12leaGradeOffereds = new HashSet<K12leaGradeOffered>();
-            K12leaPreKeligibilities = new HashSet<K12leaPreKeligibility>();
+            Ipedsfinances = new HashSet<IPEDSFinance>();
+            K12charterSchoolAuthorizerAgencies = new HashSet<K12CharterSchoolAuthorizerAgency>();
+            K12charterSchoolManagementOrganizations = new HashSet<K12CharterSchoolManagementOrganization>();
+            K12courses = new HashSet<K12Course>();
+            K12federalFundAllocations = new HashSet<K12FederalFundAllocation>();
+            K12leaFederalFunds = new HashSet<K12LeaFederalFunds>();
+            K12leaFederalReportings = new HashSet<K12LeaFederalReporting>();
+            K12leaGradeLevelsApproveds = new HashSet<K12LeaGradeLevelsApproved>();
+            K12leaGradeOffereds = new HashSet<K12LeaGradeOffered>();
+            K12leaPreKeligibilities = new HashSet<K12LeaPreKEligibility>();
             K12leaPreKeligibleAgesIdeas = new HashSet<K12leaPreKeligibleAgesIdea>();
-            K12leaSafeDrugFrees = new HashSet<K12leaSafeDrugFree>();
-            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12leaTitleIiiprofessionalDevelopment>();
-            K12leaTitleIsupportServices = new HashSet<K12leaTitleIsupportService>();
-            K12leas = new HashSet<K12lea>();
-            K12organizationStudentResponsibilities = new HashSet<K12organizationStudentResponsibility>();
-            K12programOrServices = new HashSet<K12programOrService>();
-            K12schoolCorrectiveActions = new HashSet<K12schoolCorrectiveAction>();
-            K12schoolGradeLevelsApproveds = new HashSet<K12schoolGradeLevelsApproved>();
-            K12schoolGradeOffereds = new HashSet<K12schoolGradeOffered>();
-            K12schoolImprovements = new HashSet<K12schoolImprovement>();
-            K12schoolIndicatorStatuses = new HashSet<K12schoolIndicatorStatus>();
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
-            K12schools = new HashSet<K12school>();
-            K12seaAlternateFundUses = new HashSet<K12seaAlternateFundUse>();
+            K12leaSafeDrugFrees = new HashSet<K12LeaSafeDrugFree>();
+            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12LeaTitleIIIProfessionalDevelopment>();
+            K12leaTitleIsupportServices = new HashSet<K12LeaTitleISupportService>();
+            K12leas = new HashSet<K12Lea>();
+            K12organizationStudentResponsibilities = new HashSet<K12OrganizationStudentResponsibility>();
+            K12programOrServices = new HashSet<K12ProgramOrService>();
+            K12schoolCorrectiveActions = new HashSet<K12SchoolCorrectiveAction>();
+            K12schoolGradeLevelsApproveds = new HashSet<K12SchoolGradeLevelsApproved>();
+            K12schoolGradeOffereds = new HashSet<K12SchoolGradeOffered>();
+            K12schoolImprovements = new HashSet<K12SchoolImprovement>();
+            K12schoolIndicatorStatuses = new HashSet<K12SchoolIndicatorStatus>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
+            K12schools = new HashSet<K12School>();
+            K12seaAlternateFundUses = new HashSet<K12SeaAlternateFundUse>();
             K12seaFederalFunds = new HashSet<K12seaFederalFund>();
-            K12seas = new HashSet<K12sea>();
-            K12staffAssignments = new HashSet<K12staffAssignment>();
-            K12staffEmployments = new HashSet<K12staffEmployment>();
-            K12studentAcademicHonors = new HashSet<K12studentAcademicHonor>();
-            K12studentAcademicRecords = new HashSet<K12studentAcademicRecord>();
-            K12studentActivities = new HashSet<K12studentActivity>();
-            K12studentCohorts = new HashSet<K12studentCohort>();
-            K12studentCourseSectionMarks = new HashSet<K12studentCourseSectionMark>();
-            K12studentCourseSections = new HashSet<K12studentCourseSection>();
-            K12studentDisciplines = new HashSet<K12studentDiscipline>();
-            K12studentEmployments = new HashSet<K12studentEmployment>();
-            K12studentEnrollments = new HashSet<K12studentEnrollment>();
-            K12studentGraduationPlans = new HashSet<K12studentGraduationPlan>();
-            K12studentHomeLanguageSurveys = new HashSet<K12studentHomeLanguageSurvey>();
-            K12studentLiteracyAssessments = new HashSet<K12studentLiteracyAssessment>();
-            K12studentSessions = new HashSet<K12studentSession>();
-            K12titleIiilanguageInstructions = new HashSet<K12titleIiilanguageInstruction>();
+            K12seas = new HashSet<K12Sea>();
+            K12staffAssignments = new HashSet<K12StaffAssignment>();
+            K12staffEmployments = new HashSet<K12StaffEmployment>();
+            K12studentAcademicHonors = new HashSet<K12StudentAcademicHonor>();
+            K12studentAcademicRecords = new HashSet<K12StudentAcademicRecord>();
+            K12studentActivities = new HashSet<K12StudentActivity>();
+            K12studentCohorts = new HashSet<K12StudentCohort>();
+            K12studentCourseSectionMarks = new HashSet<K12StudentCourseSectionMark>();
+            K12studentCourseSections = new HashSet<K12StudentCourseSection>();
+            K12studentDisciplines = new HashSet<K12StudentDiscipline>();
+            K12studentEmployments = new HashSet<K12StudentEmployment>();
+            K12studentEnrollments = new HashSet<K12StudentEnrollment>();
+            K12studentGraduationPlans = new HashSet<K12StudentGraduationPlan>();
+            K12studentHomeLanguageSurveys = new HashSet<K12StudentHomeLanguageSurvey>();
+            K12studentLiteracyAssessments = new HashSet<K12StudentLiteracyAssessment>();
+            K12studentSessions = new HashSet<K12StudentSession>();
+            K12titleIiilanguageInstructions = new HashSet<K12TitleIIILanguageInstruction>();
             LearnerActions = new HashSet<LearnerAction>();
             LearnerActivities = new HashSet<LearnerActivity>();
             LearnerActivityLearningResources = new HashSet<LearnerActivityLearningResource>();
@@ -259,7 +259,7 @@ namespace ScafoldADatabase.Entities
             OrganizationLocations = new HashSet<OrganizationLocation>();
             OrganizationOperationalStatuses = new HashSet<OrganizationOperationalStatus>();
             OrganizationPersonRoleApplications = new HashSet<OrganizationPersonRoleApplication>();
-            OrganizationPersonRoleFtes = new HashSet<OrganizationPersonRoleFte>();
+            OrganizationPersonRoleFtes = new HashSet<OrganizationPersonRoleFTE>();
             OrganizationPersonRoleRelationships = new HashSet<OrganizationPersonRoleRelationship>();
             OrganizationPersonRoles = new HashSet<OrganizationPersonRole>();
             OrganizationPolicies = new HashSet<OrganizationPolicy>();
@@ -271,7 +271,7 @@ namespace ScafoldADatabase.Entities
             OrganizationTelephones = new HashSet<OrganizationTelephone>();
             OrganizationWebsites = new HashSet<OrganizationWebsite>();
             Organizations = new HashSet<Organization>();
-            PdactivityEducationLevels = new HashSet<PdactivityEducationLevel>();
+            PdactivityEducationLevels = new HashSet<PDActivityEducationLevel>();
             PeerRatingSystems = new HashSet<PeerRatingSystem>();
             People = new HashSet<Person>();
             PersonAddressNcesSides = new HashSet<PersonAddressNcesSide>();
@@ -309,7 +309,7 @@ namespace ScafoldADatabase.Entities
             ProfessionalDevelopmentRequirements = new HashSet<ProfessionalDevelopmentRequirement>();
             ProfessionalDevelopmentSessionInstructors = new HashSet<ProfessionalDevelopmentSessionInstructor>();
             ProfessionalDevelopmentSessions = new HashSet<ProfessionalDevelopmentSession>();
-            ProgramParticipationAes = new HashSet<ProgramParticipationAe>();
+            ProgramParticipationAes = new HashSet<ProgramParticipationAE>();
             ProgramParticipationAttainments = new HashSet<ProgramParticipationAttainment>();
             ProgramParticipationCtes = new HashSet<ProgramParticipationCte>();
             ProgramParticipationFoodServices = new HashSet<ProgramParticipationFoodService>();
@@ -317,10 +317,10 @@ namespace ScafoldADatabase.Entities
             ProgramParticipationNeglecteds = new HashSet<ProgramParticipationNeglected>();
             ProgramParticipationSpecialEducations = new HashSet<ProgramParticipationSpecialEducation>();
             ProgramParticipationTeacherPreps = new HashSet<ProgramParticipationTeacherPrep>();
-            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIiilep>();
+            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIIILep>();
             ProgramParticipationTitleIs = new HashSet<ProgramParticipationTitleI>();
-            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWioabarrier>();
-            ProgramParticipationWioas = new HashSet<ProgramParticipationWioa>();
+            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWIOABarriers>();
+            ProgramParticipationWioas = new HashSet<ProgramParticipationWIOA>();
             Programs = new HashSet<Program>();
             PsCourses = new HashSet<PsCourse>();
             PsInstitutions = new HashSet<PsInstitution>();
@@ -340,7 +340,7 @@ namespace ScafoldADatabase.Entities
             PsStudentEnrollments = new HashSet<PsStudentEnrollment>();
             PsStudentFinancialAids = new HashSet<PsStudentFinancialAid>();
             PsStudentSections = new HashSet<PsStudentSection>();
-            PsstudentPrograms = new HashSet<PsstudentProgram>();
+            PsstudentPrograms = new HashSet<PSStudentProgram>();
             QuarterlyEmploymentRecords = new HashSet<QuarterlyEmploymentRecord>();
             RequiredImmunizations = new HashSet<RequiredImmunization>();
             RoleAttendanceEvents = new HashSet<RoleAttendanceEvent>();
@@ -433,7 +433,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<AeStudentAcademicRecord> AeStudentAcademicRecords { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<AeStudentEmployment> AeStudentEmployments { get; set; }
+        public virtual ICollection<AEStudentEmployment> AeStudentEmployments { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<ApipInteraction> ApipInteractions { get; set; }
         [InverseProperty("DataCollection")]
@@ -449,7 +449,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<AssessmentAsset> AssessmentAssets { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<AssessmentEldevelopmentalDomain> AssessmentEldevelopmentalDomains { get; set; }
+        public virtual ICollection<AssessmentELDevelopmentalDomain> AssessmentEldevelopmentalDomains { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<AssessmentFormAssessmentAsset> AssessmentFormAssessmentAssets { get; set; }
         [InverseProperty("DataCollection")]
@@ -531,7 +531,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<AssessmentSubtestCompetencyDefinition> AssessmentSubtestCompetencyDefinitions { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<AssessmentSubtestEldevelopmentalDomain> AssessmentSubtestEldevelopmentalDomains { get; set; }
+        public virtual ICollection<AssessmentSubtestELDevelopmentalDomain> AssessmentSubtestEldevelopmentalDomains { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }
         [InverseProperty("DataCollection")]
@@ -619,59 +619,59 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<EarlyChildhoodProgramTypeOffered> EarlyChildhoodProgramTypeOffereds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildDemographic> ElchildDemographics { get; set; }
+        public virtual ICollection<ELChildDemographic> ElchildDemographics { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildDevelopmentalAssessment> ElchildDevelopmentalAssessments { get; set; }
+        public virtual ICollection<ELChildDevelopmentalAssessment> ElchildDevelopmentalAssessments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildHealth> ElchildHealths { get; set; }
+        public virtual ICollection<ELChildHealth> ElchildHealths { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
+        public virtual ICollection<ELChildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildOutcomeSummary> ElchildOutcomeSummaries { get; set; }
+        public virtual ICollection<ELChildOutcomeSummary> ElchildOutcomeSummaries { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildProgramEligibility> ElchildProgramEligibilities { get; set; }
+        public virtual ICollection<ELChildProgramEligibility> ElchildProgramEligibilities { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildService> ElchildServices { get; set; }
+        public virtual ICollection<ELChildService> ElchildServices { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildServicesApplication> ElchildServicesApplications { get; set; }
+        public virtual ICollection<ELChildServicesApplication> ElchildServicesApplications { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElchildTransitionPlan> ElchildTransitionPlans { get; set; }
+        public virtual ICollection<ELChildTransitionPlan> ElchildTransitionPlans { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElclassSectionService> ElclassSectionServices { get; set; }
+        public virtual ICollection<ELClassSectionService> ElclassSectionServices { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElclassSection> ElclassSections { get; set; }
+        public virtual ICollection<ELClassSection> ElclassSections { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElenrollmentOtherFunding> ElenrollmentOtherFundings { get; set; }
+        public virtual ICollection<ELEnrollmentOtherFunding> ElenrollmentOtherFundings { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<Elenrollment> Elenrollments { get; set; }
+        public virtual ICollection<ELEnrollment> Elenrollments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElfacilityLicensing> ElfacilityLicensings { get; set; }
+        public virtual ICollection<ELFacilityLicensing> ElfacilityLicensings { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<EligibilityEvaluation> EligibilityEvaluations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElorganizationAvailability> ElorganizationAvailabilities { get; set; }
+        public virtual ICollection<ELOrganizationAvailability> ElorganizationAvailabilities { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElorganizationFund> ElorganizationFunds { get; set; }
+        public virtual ICollection<ELOrganizationFunds> ElorganizationFunds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElorganizationMonitoring> ElorganizationMonitorings { get; set; }
+        public virtual ICollection<ELOrganizationMonitoring> ElorganizationMonitorings { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<Elorganization> Elorganizations { get; set; }
+        public virtual ICollection<ELOrganization> Elorganizations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElprogramLicensing> ElprogramLicensings { get; set; }
+        public virtual ICollection<ELProgramLicensing> ElprogramLicensings { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElqualityInitiative> ElqualityInitiatives { get; set; }
+        public virtual ICollection<ELQualityInitiative> ElqualityInitiatives { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElqualityRatingImprovement> ElqualityRatingImprovements { get; set; }
+        public virtual ICollection<ELQualityRatingImprovement> ElqualityRatingImprovements { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElservicePartner> ElservicePartners { get; set; }
+        public virtual ICollection<ELServicePartner> ElservicePartners { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElstaffAssignment> ElstaffAssignments { get; set; }
+        public virtual ICollection<ELStaffAssignment> ElstaffAssignments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElstaffEducation> ElstaffEducations { get; set; }
+        public virtual ICollection<ELStaffEducation> ElstaffEducations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ElstaffEmployment> ElstaffEmployments { get; set; }
+        public virtual ICollection<ELStaffEmployment> ElstaffEmployments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<Elstaff> Elstaffs { get; set; }
+        public virtual ICollection<ELStaff> Elstaffs { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<Facility> Facilities { get; set; }
         [InverseProperty("DataCollection")]
@@ -731,13 +731,13 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<Goal> Goals { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<IdeaeligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
+        public virtual ICollection<IDEAEligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<IepauthorizationRejected> IepauthorizationRejecteds { get; set; }
+        public virtual ICollection<IEPAuthorizationRejected> IepauthorizationRejecteds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<Iepauthorization> Iepauthorizations { get; set; }
+        public virtual ICollection<IEPAuthorization> Iepauthorizations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<IeppresentLevel> IeppresentLevels { get; set; }
+        public virtual ICollection<IEPPresentLevel> IeppresentLevels { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<IncidentPerson> IncidentPeople { get; set; }
         [InverseProperty("DataCollection")]
@@ -775,91 +775,91 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<IndividualizedProgram> IndividualizedPrograms { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<Ipedsfinance> Ipedsfinances { get; set; }
+        public virtual ICollection<IPEDSFinance> Ipedsfinances { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12charterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
+        public virtual ICollection<K12CharterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12charterSchoolManagementOrganization> K12charterSchoolManagementOrganizations { get; set; }
+        public virtual ICollection<K12CharterSchoolManagementOrganization> K12charterSchoolManagementOrganizations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12federalFundAllocation> K12federalFundAllocations { get; set; }
+        public virtual ICollection<K12FederalFundAllocation> K12federalFundAllocations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaFederalFund> K12leaFederalFunds { get; set; }
+        public virtual ICollection<K12LeaFederalFunds> K12leaFederalFunds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaFederalReporting> K12leaFederalReportings { get; set; }
+        public virtual ICollection<K12LeaFederalReporting> K12leaFederalReportings { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12LeaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaGradeOffered> K12leaGradeOffereds { get; set; }
+        public virtual ICollection<K12LeaGradeOffered> K12leaGradeOffereds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaPreKeligibility> K12leaPreKeligibilities { get; set; }
+        public virtual ICollection<K12LeaPreKEligibility> K12leaPreKeligibilities { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<K12leaPreKeligibleAgesIdea> K12leaPreKeligibleAgesIdeas { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaSafeDrugFree> K12leaSafeDrugFrees { get; set; }
+        public virtual ICollection<K12LeaSafeDrugFree> K12leaSafeDrugFrees { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaTitleIiiprofessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
+        public virtual ICollection<K12LeaTitleIIIProfessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12leaTitleIsupportService> K12leaTitleIsupportServices { get; set; }
+        public virtual ICollection<K12LeaTitleISupportService> K12leaTitleIsupportServices { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12lea> K12leas { get; set; }
+        public virtual ICollection<K12Lea> K12leas { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12organizationStudentResponsibility> K12organizationStudentResponsibilities { get; set; }
+        public virtual ICollection<K12OrganizationStudentResponsibility> K12organizationStudentResponsibilities { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12programOrService> K12programOrServices { get; set; }
+        public virtual ICollection<K12ProgramOrService> K12programOrServices { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolCorrectiveAction> K12schoolCorrectiveActions { get; set; }
+        public virtual ICollection<K12SchoolCorrectiveAction> K12schoolCorrectiveActions { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12SchoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolGradeOffered> K12schoolGradeOffereds { get; set; }
+        public virtual ICollection<K12SchoolGradeOffered> K12schoolGradeOffereds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolImprovement> K12schoolImprovements { get; set; }
+        public virtual ICollection<K12SchoolImprovement> K12schoolImprovements { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolIndicatorStatus> K12schoolIndicatorStatuses { get; set; }
+        public virtual ICollection<K12SchoolIndicatorStatus> K12schoolIndicatorStatuses { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12school> K12schools { get; set; }
+        public virtual ICollection<K12School> K12schools { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12seaAlternateFundUse> K12seaAlternateFundUses { get; set; }
+        public virtual ICollection<K12SeaAlternateFundUse> K12seaAlternateFundUses { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<K12seaFederalFund> K12seaFederalFunds { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12sea> K12seas { get; set; }
+        public virtual ICollection<K12Sea> K12seas { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12staffAssignment> K12staffAssignments { get; set; }
+        public virtual ICollection<K12StaffAssignment> K12staffAssignments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12staffEmployment> K12staffEmployments { get; set; }
+        public virtual ICollection<K12StaffEmployment> K12staffEmployments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentAcademicHonor> K12studentAcademicHonors { get; set; }
+        public virtual ICollection<K12StudentAcademicHonor> K12studentAcademicHonors { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentAcademicRecord> K12studentAcademicRecords { get; set; }
+        public virtual ICollection<K12StudentAcademicRecord> K12studentAcademicRecords { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentActivity> K12studentActivities { get; set; }
+        public virtual ICollection<K12StudentActivity> K12studentActivities { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentCohort> K12studentCohorts { get; set; }
+        public virtual ICollection<K12StudentCohort> K12studentCohorts { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentCourseSectionMark> K12studentCourseSectionMarks { get; set; }
+        public virtual ICollection<K12StudentCourseSectionMark> K12studentCourseSectionMarks { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentCourseSection> K12studentCourseSections { get; set; }
+        public virtual ICollection<K12StudentCourseSection> K12studentCourseSections { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentDiscipline> K12studentDisciplines { get; set; }
+        public virtual ICollection<K12StudentDiscipline> K12studentDisciplines { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentEmployment> K12studentEmployments { get; set; }
+        public virtual ICollection<K12StudentEmployment> K12studentEmployments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentEnrollment> K12studentEnrollments { get; set; }
+        public virtual ICollection<K12StudentEnrollment> K12studentEnrollments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentGraduationPlan> K12studentGraduationPlans { get; set; }
+        public virtual ICollection<K12StudentGraduationPlan> K12studentGraduationPlans { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentHomeLanguageSurvey> K12studentHomeLanguageSurveys { get; set; }
+        public virtual ICollection<K12StudentHomeLanguageSurvey> K12studentHomeLanguageSurveys { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentLiteracyAssessment> K12studentLiteracyAssessments { get; set; }
+        public virtual ICollection<K12StudentLiteracyAssessment> K12studentLiteracyAssessments { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12studentSession> K12studentSessions { get; set; }
+        public virtual ICollection<K12StudentSession> K12studentSessions { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<K12titleIiilanguageInstruction> K12titleIiilanguageInstructions { get; set; }
+        public virtual ICollection<K12TitleIIILanguageInstruction> K12titleIiilanguageInstructions { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<LearnerAction> LearnerActions { get; set; }
         [InverseProperty("DataCollection")]
@@ -917,7 +917,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<OrganizationPersonRoleApplication> OrganizationPersonRoleApplications { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<OrganizationPersonRoleFte> OrganizationPersonRoleFtes { get; set; }
+        public virtual ICollection<OrganizationPersonRoleFTE> OrganizationPersonRoleFtes { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<OrganizationPersonRoleRelationship> OrganizationPersonRoleRelationships { get; set; }
         [InverseProperty("DataCollection")]
@@ -941,7 +941,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<Organization> Organizations { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<PdactivityEducationLevel> PdactivityEducationLevels { get; set; }
+        public virtual ICollection<PDActivityEducationLevel> PdactivityEducationLevels { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<PeerRatingSystem> PeerRatingSystems { get; set; }
         [InverseProperty("DataCollection")]
@@ -1017,7 +1017,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<ProfessionalDevelopmentSession> ProfessionalDevelopmentSessions { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ProgramParticipationAe> ProgramParticipationAes { get; set; }
+        public virtual ICollection<ProgramParticipationAE> ProgramParticipationAes { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<ProgramParticipationAttainment> ProgramParticipationAttainments { get; set; }
         [InverseProperty("DataCollection")]
@@ -1033,13 +1033,13 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<ProgramParticipationTeacherPrep> ProgramParticipationTeacherPreps { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ProgramParticipationTitleIiilep> ProgramParticipationTitleIiileps { get; set; }
+        public virtual ICollection<ProgramParticipationTitleIIILep> ProgramParticipationTitleIiileps { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<ProgramParticipationTitleI> ProgramParticipationTitleIs { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ProgramParticipationWioabarrier> ProgramParticipationWioabarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWioabarriers { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<ProgramParticipationWioa> ProgramParticipationWioas { get; set; }
+        public virtual ICollection<ProgramParticipationWIOA> ProgramParticipationWioas { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<Program> Programs { get; set; }
         [InverseProperty("DataCollection")]
@@ -1079,7 +1079,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("DataCollection")]
         public virtual ICollection<PsStudentSection> PsStudentSections { get; set; }
         [InverseProperty("DataCollection")]
-        public virtual ICollection<PsstudentProgram> PsstudentPrograms { get; set; }
+        public virtual ICollection<PSStudentProgram> PsstudentPrograms { get; set; }
         [InverseProperty("DataCollection")]
         public virtual ICollection<QuarterlyEmploymentRecord> QuarterlyEmploymentRecords { get; set; }
         [InverseProperty("DataCollection")]

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialDefinition")]
+    [Table("CredentialDefinition", Schema = "Postsecondary")]
     public partial class CredentialDefinition
     {
         public CredentialDefinition()
@@ -32,9 +32,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("CredentialNAICSIndustryType")]
         [StringLength(6)]
-        public string? CredentialNaicsindustryType { get; set; }
+        public string? CredentialNAICSIndustryType { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -43,9 +42,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("EmploymentNAICSCode")]
         [StringLength(6)]
-        public string? EmploymentNaicscode { get; set; }
+        public string? EmploymentNAICSCode { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -107,13 +105,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefONETSOCOccupationTypeId")]
-        public int? RefOnetsococcupationTypeId { get; set; }
+        public int? RefONETSOCOccupationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefCTDLAudienceLevelTypeId")]
-        public int? RefCtdlaudienceLevelTypeId { get; set; }
+        public int? RefCTDLAudienceLevelTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -154,10 +150,10 @@ namespace ScafoldADatabase.Entities
         public virtual RefCredentialDefVerificationType? RefCredentialDefVerificationType { get; set; }
         [ForeignKey("RefCtdlaudienceLevelTypeId")]
         [InverseProperty("CredentialDefinitions")]
-        public virtual RefCtdlaudienceLevelType? RefCtdlaudienceLevelType { get; set; }
+        public virtual RefCTDLAudienceLevelType? RefCtdlaudienceLevelType { get; set; }
         [ForeignKey("RefOnetsococcupationTypeId")]
         [InverseProperty("CredentialDefinitions")]
-        public virtual RefOnetsococcupationType? RefOnetsococcupationType { get; set; }
+        public virtual RefONETSOCOccupationType? RefOnetsococcupationType { get; set; }
         [InverseProperty("CredentialDefinition")]
         public virtual ICollection<CredentialAward> CredentialAwards { get; set; }
         [InverseProperty("CredentialDefinition")]

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentLevelsForWhichDesigned")]
+    [Table("AssessmentLevelsForWhichDesigned", Schema = "Assessment")]
     [Index("AssessmentId", "RefGradeLevelId", Name = "IX_AssessmentLevelsForWhichDesigned", IsUnique = true)]
     public partial class AssessmentLevelsForWhichDesigned
     {

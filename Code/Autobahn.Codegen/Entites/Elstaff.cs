@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELStaff")]
-    public partial class Elstaff
+    [Table("ELStaff", Schema = "EarlyLearning")]
+    public partial class ELStaff
     {
-        public Elstaff()
+        public ELStaff()
         {
-            ElstaffEducations = new HashSet<ElstaffEducation>();
+            ElstaffEducations = new HashSet<ELStaffEducation>();
         }
 
         [Key]
-        [Column("ELStaffId")]
-        public int ElstaffId { get; set; }
+        public int ELStaffId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -54,6 +53,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Elstaffs")]
         public virtual RefChildDevelopmentAssociateType? RefChildDevelopmentAssociateType { get; set; }
         [InverseProperty("Elstaff")]
-        public virtual ICollection<ElstaffEducation> ElstaffEducations { get; set; }
+        public virtual ICollection<ELStaffEducation> ElstaffEducations { get; set; }
     }
 }

@@ -9,17 +9,15 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELClassSectionService")]
-    public partial class ElclassSectionService
+    [Table("ELClassSectionService", Schema = "EarlyLearning")]
+    public partial class ELClassSectionService
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("ELClassSectionServiceId")]
-        public int ElclassSectionServiceId { get; set; }
-        [Column("ELClassSectionId")]
-        public int ElclassSectionId { get; set; }
+        public int ELClassSectionServiceId { get; set; }
+        public int ELClassSectionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -35,14 +33,12 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELClassGroupCurriculumType")]
         [StringLength(60)]
-        public string? ElclassGroupCurriculumType { get; set; }
+        public string? ELClassGroupCurriculumType { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELGroupSizeStandardMetId")]
-        public int? RefElgroupSizeStandardMetId { get; set; }
+        public int? RefELGroupSizeStandardMetId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -65,7 +61,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("ElclassSectionId")]
         [InverseProperty("ElclassSectionServices")]
-        public virtual ElclassSection ElclassSection { get; set; } = null!;
+        public virtual ELClassSection ELClassSection { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("ElclassSectionServices")]
         public virtual RecordStatus? RecordStatus { get; set; }

@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildOutcomeSummary")]
-    public partial class ElchildOutcomeSummary
+    [Table("ELChildOutcomeSummary", Schema = "EarlyLearning")]
+    public partial class ELChildOutcomeSummary
     {
         [Key]
-        [Column("ELChildOutcomeSummaryId")]
-        public int ElchildOutcomeSummaryId { get; set; }
+        public int ELChildOutcomeSummaryId { get; set; }
         /// <summary>
         /// Surrogate key from Person.
         /// </summary>
@@ -22,33 +21,27 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSProgressAIndicator")]
-        public bool? CosprogressAindicator { get; set; }
+        public bool? COSProgressAIndicator { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSProgressBIndicator")]
-        public bool? CosprogressBindicator { get; set; }
+        public bool? COSProgressBIndicator { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSProgressCIndicator")]
-        public bool? CosprogressCindicator { get; set; }
+        public bool? COSProgressCIndicator { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSRatingAId")]
-        public int? CosratingAid { get; set; }
+        public int? COSRatingAId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSRatingBId")]
-        public int? CosratingBid { get; set; }
+        public int? COSRatingBId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("COSRatingCId")]
-        public int? CosratingCid { get; set; }
+        public int? COSRatingCId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

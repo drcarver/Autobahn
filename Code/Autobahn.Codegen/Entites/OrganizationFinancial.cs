@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("OrganizationFinancial")]
+    [Table("OrganizationFinancial", Schema = "Finance")]
     public partial class OrganizationFinancial
     {
         public OrganizationFinancial()
         {
             FacilityFinancials = new HashSet<FacilityFinancial>();
-            Ipedsfinances = new HashSet<Ipedsfinance>();
+            Ipedsfinances = new HashSet<IPEDSFinance>();
         }
 
         /// <summary>
@@ -106,6 +106,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("OrganizationFinancial")]
         public virtual ICollection<FacilityFinancial> FacilityFinancials { get; set; }
         [InverseProperty("OrganizationFinancial")]
-        public virtual ICollection<Ipedsfinance> Ipedsfinances { get; set; }
+        public virtual ICollection<IPEDSFinance> Ipedsfinances { get; set; }
     }
 }

@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildProgramEligibility")]
-    public partial class ElchildProgramEligibility
+    [Table("ELChildProgramEligibility", Schema = "EarlyLearning")]
+    public partial class ELChildProgramEligibility
     {
         [Key]
-        [Column("ELChildProgramEligibilityId")]
-        public int ElchildProgramEligibilityId { get; set; }
+        public int ELChildProgramEligibilityId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
         /// </summary>
@@ -32,8 +31,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELProgramEligibilityStatusId")]
-        public int? RefElprogramEligibilityStatusId { get; set; }
+        public int? RefELProgramEligibilityStatusId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

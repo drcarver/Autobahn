@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencyDefAssociation")]
+    [Table("CompetencyDefAssociation", Schema = "Competencies")]
     public partial class CompetencyDefAssociation
     {
         [Key]
@@ -22,9 +22,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("CompetencyDefAssociationIdentifierURI")]
         [StringLength(512)]
-        public string? CompetencyDefAssociationIdentifierUri { get; set; }
+        public string? CompetencyDefAssociationIdentifierURI { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -38,9 +37,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("OriginNodeURI")]
         [StringLength(512)]
-        public string? OriginNodeUri { get; set; }
+        public string? OriginNodeURI { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -49,9 +47,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("DestinationNodeURI")]
         [StringLength(512)]
-        public string? DestinationNodeUri { get; set; }
+        public string? DestinationNodeURI { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

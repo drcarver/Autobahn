@@ -9,19 +9,17 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12SeaFederalFunds")]
+    [Table("K12SeaFederalFunds", Schema = "K12")]
     public partial class K12seaFederalFund
     {
         public K12seaFederalFund()
         {
-            K12seaAlternateFundUses = new HashSet<K12seaAlternateFundUse>();
+            K12seaAlternateFundUses = new HashSet<K12SeaAlternateFundUse>();
         }
 
         [Key]
-        [Column("K12SeaFederalFundsId")]
-        public int K12seaFederalFundsId { get; set; }
-        [Column("K12SeaId")]
-        public int K12seaId { get; set; }
+        public int K12SeaFederalFundsId { get; set; }
+        public int K12SeaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -29,18 +27,15 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("DateStateReceivedTitleIIIAllocation", TypeName = "date")]
-        public DateTime? DateStateReceivedTitleIiiallocation { get; set; }
+        public DateTime? DateStateReceivedTitleIIIAllocation { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("DateTitleIIIFundsAvailableToSubgrantees", TypeName = "date")]
-        public DateTime? DateTitleIiifundsAvailableToSubgrantees { get; set; }
+        public DateTime? DateTitleIIIFundsAvailableToSubgrantees { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("NumberOfDaysForTitleIIISubgrants", TypeName = "numeric(6, 2)")]
-        public decimal? NumberOfDaysForTitleIiisubgrants { get; set; }
+        public decimal? NumberOfDaysForTitleIIISubgrants { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -59,11 +54,11 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12seaId")]
         [InverseProperty("K12seaFederalFunds")]
-        public virtual K12sea K12sea { get; set; } = null!;
+        public virtual K12Sea K12sea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12seaFederalFunds")]
         public virtual RecordStatus? RecordStatus { get; set; }
         [InverseProperty("K12seaFederalFunds")]
-        public virtual ICollection<K12seaAlternateFundUse> K12seaAlternateFundUses { get; set; }
+        public virtual ICollection<K12SeaAlternateFundUse> K12seaAlternateFundUses { get; set; }
     }
 }

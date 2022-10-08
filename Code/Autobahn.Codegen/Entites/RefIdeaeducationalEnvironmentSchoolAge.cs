@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefIDEAEducationalEnvironmentSchoolAge")]
-    public partial class RefIdeaeducationalEnvironmentSchoolAge
+    [Table("RefIDEAEducationalEnvironmentSchoolAge", Schema = "K12")]
+    public partial class RefIDEAEducationalEnvironmentSchoolAge
     {
-        public RefIdeaeducationalEnvironmentSchoolAge()
+        public RefIDEAEducationalEnvironmentSchoolAge()
         {
             ProgramParticipationSpecialEducations = new HashSet<ProgramParticipationSpecialEducation>();
         }
 
         [Key]
-        [Column("RefIDEAEducationalEnvironmentSchoolAgeId")]
-        public int RefIdeaeducationalEnvironmentSchoolAgeId { get; set; }
+        public int RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

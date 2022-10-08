@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCorrectiveActionType")]
+    [Table("RefCorrectiveActionType", Schema = "K12")]
     public partial class RefCorrectiveActionType
     {
         public RefCorrectiveActionType()
         {
-            K12schoolCorrectiveActions = new HashSet<K12schoolCorrectiveAction>();
+            K12schoolCorrectiveActions = new HashSet<K12SchoolCorrectiveAction>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefCorrectiveActionTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefCorrectiveActionType")]
-        public virtual ICollection<K12schoolCorrectiveAction> K12schoolCorrectiveActions { get; set; }
+        public virtual ICollection<K12SchoolCorrectiveAction> K12schoolCorrectiveActions { get; set; }
     }
 }

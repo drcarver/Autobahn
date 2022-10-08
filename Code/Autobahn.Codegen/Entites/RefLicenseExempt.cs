@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefLicenseExempt")]
+    [Table("RefLicenseExempt", Schema = "EarlyLearning")]
     public partial class RefLicenseExempt
     {
         public RefLicenseExempt()
         {
-            ElfacilityLicensings = new HashSet<ElfacilityLicensing>();
-            ElprogramLicensings = new HashSet<ElprogramLicensing>();
+            ElfacilityLicensings = new HashSet<ELFacilityLicensing>();
+            ElprogramLicensings = new HashSet<ELProgramLicensing>();
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefLicenseExempts")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefLicenseExempt")]
-        public virtual ICollection<ElfacilityLicensing> ElfacilityLicensings { get; set; }
+        public virtual ICollection<ELFacilityLicensing> ElfacilityLicensings { get; set; }
         [InverseProperty("RefLicenseExempt")]
-        public virtual ICollection<ElprogramLicensing> ElprogramLicensings { get; set; }
+        public virtual ICollection<ELProgramLicensing> ElprogramLicensings { get; set; }
     }
 }

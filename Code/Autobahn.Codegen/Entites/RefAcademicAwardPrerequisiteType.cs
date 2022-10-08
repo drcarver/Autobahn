@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefAcademicAwardPrerequisiteType")]
+    [Table("RefAcademicAwardPrerequisiteType", Schema = "Postsecondary")]
     public partial class RefAcademicAwardPrerequisiteType
     {
         public RefAcademicAwardPrerequisiteType()

@@ -9,23 +9,20 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12LeaTitleIIIProfessionalDevelopment")]
+    [Table("K12LeaTitleIIIProfessionalDevelopment", Schema = "K12")]
     [Index("K12leaId", "RefTitleIiiprofessionalDevelopmentTypeId", Name = "IX_K12LeaTitleIIIProfessionalDevelopment", IsUnique = true)]
-    public partial class K12leaTitleIiiprofessionalDevelopment
+    public partial class K12LeaTitleIIIProfessionalDevelopment
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("K12LEATitleIIIProfessionalDevelopmentId")]
-        public int K12leatitleIiiprofessionalDevelopmentId { get; set; }
-        [Column("K12LeaId")]
-        public int K12leaId { get; set; }
+        public int K12LEATitleIIIProfessionalDevelopmentId { get; set; }
+        public int K12LeaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefTitleIIIProfessionalDevelopmentTypeId")]
-        public int RefTitleIiiprofessionalDevelopmentTypeId { get; set; }
+        public int RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -44,12 +41,12 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12leaId")]
         [InverseProperty("K12leaTitleIiiprofessionalDevelopments")]
-        public virtual K12lea K12lea { get; set; } = null!;
+        public virtual K12Lea K12lea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12leaTitleIiiprofessionalDevelopments")]
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefTitleIiiprofessionalDevelopmentTypeId")]
         [InverseProperty("K12leaTitleIiiprofessionalDevelopments")]
-        public virtual RefTitleIiiprofessionalDevelopmentType RefTitleIiiprofessionalDevelopmentType { get; set; } = null!;
+        public virtual RefTitleIIIProfessionalDevelopmentType RefTitleIiiprofessionalDevelopmentType { get; set; } = null!;
     }
 }

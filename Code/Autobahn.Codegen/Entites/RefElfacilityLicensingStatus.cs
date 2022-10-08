@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefELFacilityLicensingStatus")]
-    public partial class RefElfacilityLicensingStatus
+    [Table("RefELFacilityLicensingStatus", Schema = "EarlyLearning")]
+    public partial class RefELFacilityLicensingStatus
     {
-        public RefElfacilityLicensingStatus()
+        public RefELFacilityLicensingStatus()
         {
-            ElfacilityLicensings = new HashSet<ElfacilityLicensing>();
+            ElfacilityLicensings = new HashSet<ELFacilityLicensing>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELFacilityLicensingStatusId")]
-        public int RefElfacilityLicensingStatusId { get; set; }
+        public int RefELFacilityLicensingStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -47,9 +46,9 @@ namespace ScafoldADatabase.Entities
         public DateTime? RecordEndDateTime { get; set; }
 
         [ForeignKey("RefJurisdictionId")]
-        [InverseProperty("RefElfacilityLicensingStatuses")]
+        [InverseProperty("RefELFacilityLicensingStatuses")]
         public virtual Organization? RefJurisdiction { get; set; }
-        [InverseProperty("RefElfacilityLicensingStatus")]
-        public virtual ICollection<ElfacilityLicensing> ElfacilityLicensings { get; set; }
+        [InverseProperty("RefELFacilityLicensingStatus")]
+        public virtual ICollection<ELFacilityLicensing> ElfacilityLicensings { get; set; }
     }
 }

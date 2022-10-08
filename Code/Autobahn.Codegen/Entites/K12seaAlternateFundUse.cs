@@ -9,15 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12SeaAlternateFundUse")]
+    [Table("K12SeaAlternateFundUse", Schema="K12")]
     [Index("K12seaFederalFundsId", "RefAlternateFundUsesId", Name = "IX_K12SeaAlternateFundUse", IsUnique = true)]
-    public partial class K12seaAlternateFundUse
+    public partial class K12SeaAlternateFundUse
     {
         [Key]
-        [Column("K12SeaAlternateFundUseId")]
-        public int K12seaAlternateFundUseId { get; set; }
-        [Column("K12SeaFederalFundsId")]
-        public int K12seaFederalFundsId { get; set; }
+        public int K12SeaAlternateFundUseId { get; set; }
+        public int K12SeaFederalFundsId { get; set; }
         /// <summary>
         /// CEDS Element has been removed.
         /// </summary>

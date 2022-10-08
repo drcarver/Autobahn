@@ -11,10 +11,9 @@ namespace ScafoldADatabase.Entities
     [Index("GlobalId", "TableName", "ColumnName", "Version", Name = "IX_GlobalID_TableName_ColumnName_Version", IsUnique = true)]
     public partial class CedstoNdsmapping
     {
-        [Column("GlobalID")]
         [StringLength(20)]
         [Unicode(false)]
-        public string GlobalId { get; set; } = null!;
+        public string GlobalID { get; set; } = null!;
         [StringLength(100)]
         [Unicode(false)]
         public string TableName { get; set; } = null!;

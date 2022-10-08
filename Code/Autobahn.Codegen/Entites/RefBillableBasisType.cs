@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefBillableBasisType")]
+    [Table("RefBillableBasisType", Schema = "EarlyLearning")]
     public partial class RefBillableBasisType
     {
         public RefBillableBasisType()
         {
-            ElorganizationFunds = new HashSet<ElorganizationFund>();
+            ElorganizationFunds = new HashSet<ELOrganizationFunds>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefBillableBasisTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefBillableBasisType")]
-        public virtual ICollection<ElorganizationFund> ElorganizationFunds { get; set; }
+        public virtual ICollection<ELOrganizationFunds> ElorganizationFunds { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// List of identification system types.
     /// </summary>
-    [Table("RefAddressType")]
+    [Table("RefAddressType", Schema = "Core.Person")]
     public partial class RefAddressType
     {
         public RefAddressType()

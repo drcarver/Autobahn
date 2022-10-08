@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefLanguageUseType")]
+    [Table("RefLanguageUseType", Schema ="Person")]
     public partial class RefLanguageUseType
     {
         public RefLanguageUseType()

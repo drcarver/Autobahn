@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildService")]
-    public partial class ElchildService
+    [Table("ELChildService", Schema = "EarlyLearning")]
+    public partial class ELChildService
     {
         [Key]
-        [Column("ELChildServiceId")]
-        public int ElchildServiceId { get; set; }
+        public int ELChildServiceId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
         /// </summary>
@@ -22,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ECEAPEligibility")]
-        public bool? Eceapeligibility { get; set; }
+        public bool? ECEAPEligibility { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -45,8 +43,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELServiceTypeId")]
-        public int? RefElserviceTypeId { get; set; }
+        public int? RefELServiceTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -77,6 +74,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefEarlyChildhoodService? RefEarlyChildhoodServicesReceived { get; set; }
         [ForeignKey("RefElserviceTypeId")]
         [InverseProperty("ElchildServices")]
-        public virtual RefElserviceType? RefElserviceType { get; set; }
+        public virtual RefELServiceType? RefElserviceType { get; set; }
     }
 }

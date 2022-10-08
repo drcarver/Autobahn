@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Activity")]
+    [Table("Activity", Schema = "Organization")]
     public partial class Activity
     {
         [Key]

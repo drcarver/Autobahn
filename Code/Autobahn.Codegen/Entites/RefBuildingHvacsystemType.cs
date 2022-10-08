@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingHVACSystemType")]
-    public partial class RefBuildingHvacsystemType
+    [Table("RefBuildingHVACSystemType", Schema = "Facilities")]
+    public partial class RefBuildingHVACSystemType
     {
-        public RefBuildingHvacsystemType()
+        public RefBuildingHVACSystemType()
         {
             BuildingSystemCategories = new HashSet<BuildingSystemCategory>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefBuildingHVACSystemTypeId")]
-        public int RefBuildingHvacsystemTypeId { get; set; }
+        public int RefBuildingHVACSystemTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

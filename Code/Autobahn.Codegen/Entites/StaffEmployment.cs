@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("StaffEmployment")]
+    [Table("StaffEmployment", Schema = "Common")]
     public partial class StaffEmployment
     {
         public StaffEmployment()
         {
-            ElstaffEmployments = new HashSet<ElstaffEmployment>();
-            K12staffEmployments = new HashSet<K12staffEmployment>();
+            ElstaffEmployments = new HashSet<ELStaffEmployment>();
+            K12staffEmployments = new HashSet<K12StaffEmployment>();
             PsStaffEmployments = new HashSet<PsStaffEmployment>();
             StaffCompensations = new HashSet<StaffCompensation>();
         }
@@ -95,9 +95,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("StaffEmployments")]
         public virtual RefEmploymentSeparationType? RefEmploymentSeparationType { get; set; }
         [InverseProperty("StaffEmployment")]
-        public virtual ICollection<ElstaffEmployment> ElstaffEmployments { get; set; }
+        public virtual ICollection<ELStaffEmployment> ElstaffEmployments { get; set; }
         [InverseProperty("StaffEmployment")]
-        public virtual ICollection<K12staffEmployment> K12staffEmployments { get; set; }
+        public virtual ICollection<K12StaffEmployment> K12staffEmployments { get; set; }
         [InverseProperty("StaffEmployment")]
         public virtual ICollection<PsStaffEmployment> PsStaffEmployments { get; set; }
         [InverseProperty("StaffEmployment")]

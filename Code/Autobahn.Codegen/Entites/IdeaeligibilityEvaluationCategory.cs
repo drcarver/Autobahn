@@ -9,15 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IDEAEligibilityEvaluationCategory")]
-    [Index("EligibilityEvaluationId", "RefIdeaeligibilityEvaluationCategoryId", Name = "IX_EligibilityEvaluation_RefIDEAEligibilityEvaluationCategory", IsUnique = true)]
-    public partial class IdeaeligibilityEvaluationCategory
+    [Table("IDEAEligibilityEvaluationCategory", Schema = "Common")]
+    [Index("EligibilityEvaluationId", "RefIDEAEligibilityEvaluationCategoryId", Name = "IX_EligibilityEvaluation_RefIDEAEligibilityEvaluationCategory", IsUnique = true)]
+    public partial class IDEAEligibilityEvaluationCategory
     {
         [Key]
-        [Column("IDEAEligibilityEvaluationCategoryId")]
-        public int IdeaeligibilityEvaluationCategoryId { get; set; }
+        public int IDEAEligibilityEvaluationCategoryId { get; set; }
         public int EligibilityEvaluationId { get; set; }
-        [Column("RefIDEAEligibilityEvaluationCategoryId")]
         public int RefIdeaeligibilityEvaluationCategoryId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -41,8 +39,8 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("RecordStatusId")]
         [InverseProperty("IdeaeligibilityEvaluationCategories")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefIdeaeligibilityEvaluationCategoryId")]
+        [ForeignKey("RefIDEAEligibilityEvaluationCategoryId")]
         [InverseProperty("IdeaeligibilityEvaluationCategories")]
-        public virtual RefIdeaeligibilityEvaluationCategory RefIdeaeligibilityEvaluationCategory { get; set; } = null!;
+        public virtual RefIDEAEligibilityEvaluationCategory RefIdeaeligibilityEvaluationCategory { get; set; } = null!;
     }
 }

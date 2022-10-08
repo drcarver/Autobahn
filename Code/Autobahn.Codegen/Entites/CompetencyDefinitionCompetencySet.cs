@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencyDefinition_CompetencySet")]
+    [Table("CompetencyDefinitionCompetencySet", Schema = "Competencies")]
     [Index("CompetencyDefinitionId", "CompetencySetId", Name = "IX_CompetencyFrameworkItem_CompetencySet", IsUnique = true)]
     public partial class CompetencyDefinitionCompetencySet
     {
         [Key]
-        [Column("CompetencyDefinition_CompetencySetId")]
         public int CompetencyDefinitionCompetencySetId { get; set; }
         public int CompetencySetId { get; set; }
         public int CompetencyDefinitionId { get; set; }

@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("OrganizationPersonRoleFTE")]
-    public partial class OrganizationPersonRoleFte
+    [Table("OrganizationPersonRoleFTE", Schema = "Organization")]
+    public partial class OrganizationPersonRoleFTE
     {
         [Key]
-        [Column("OrganizationPersonRoleFTEId")]
-        public int OrganizationPersonRoleFteid { get; set; }
+        public int OrganizationPersonRoleFTEId { get; set; }
         public int OrganizationPersonRoleId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.

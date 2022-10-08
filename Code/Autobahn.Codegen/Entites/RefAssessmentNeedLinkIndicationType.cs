@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefAssessmentNeedLinkIndicationType")]
+    [Table("RefAssessmentNeedLinkIndicationType", Schema = "Assessment")]
     public partial class RefAssessmentNeedLinkIndicationType
     {
         public RefAssessmentNeedLinkIndicationType()

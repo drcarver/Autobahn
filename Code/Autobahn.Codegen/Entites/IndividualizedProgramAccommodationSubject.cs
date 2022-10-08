@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramAccommodationSubject")]
+    [Table("IndividualizedProgramAccommodationSubject", Schema = "Common")]
     [Index("IndividualizedProgramAccommodationId", "RefScedcourseSubjectAreaId", Name = "IX_IndividualizedProgramAccommodation_RefSCEDCourseSubjectArea", IsUnique = true)]
     public partial class IndividualizedProgramAccommodationSubject
     {
         [Key]
         public int IndividualizedProgramAccommodationSubjectId { get; set; }
         public int IndividualizedProgramAccommodationId { get; set; }
-        [Column("RefSCEDCourseSubjectAreaId")]
-        public int RefScedcourseSubjectAreaId { get; set; }
+        public int RefSCEDCourseSubjectAreaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

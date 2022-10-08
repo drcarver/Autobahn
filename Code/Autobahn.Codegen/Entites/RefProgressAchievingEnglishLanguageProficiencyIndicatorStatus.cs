@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus")]
+    [Table("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus", Schema = "K12")]
     public partial class RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus
     {
         public RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus()
         {
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         [Key]
@@ -45,6 +45,6 @@ namespace ScafoldADatabase.Entities
         public DateTime? RecordEndDateTime { get; set; }
 
         [InverseProperty("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
     }
 }

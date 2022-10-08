@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefONETSOCOccupationType")]
-    public partial class RefOnetsococcupationType
+    [Table("RefONETSOCOccupationType", Schema = "Postsecondary")]
+    public partial class RefONETSOCOccupationType
     {
-        public RefOnetsococcupationType()
+        public RefONETSOCOccupationType()
         {
             CredentialDefinitions = new HashSet<CredentialDefinition>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefONETSOCOccupationTypeId")]
-        public int RefOnetsococcupationTypeId { get; set; }
+        public int RefONETSOCOccupationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

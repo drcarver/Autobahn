@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELQualityRatingImprovement")]
-    public partial class ElqualityRatingImprovement
+    [Table("ELQualityRatingImprovement", Schema = "EarlyLearning")]
+    public partial class ELQualityRatingImprovement
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("ELQualityRatingImprovementId")]
-        public int ElqualityRatingImprovementId { get; set; }
+        public int ELQualityRatingImprovementId { get; set; }
         /// <summary>
         /// Surrogate key from Organization.
         /// </summary>
@@ -34,8 +33,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("QRISExpirationDate", TypeName = "date")]
-        public DateTime? QrisexpirationDate { get; set; }
+        public DateTime? QRISExpirationDate { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefElgroupSizeStandardMet()
         {
-            ElclassSectionServices = new HashSet<ElclassSectionService>();
+            ElclassSectionServices = new HashSet<ELClassSectionService>();
         }
 
         /// <summary>
@@ -50,6 +50,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefElgroupSizeStandardMets")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefElgroupSizeStandardMet")]
-        public virtual ICollection<ElclassSectionService> ElclassSectionServices { get; set; }
+        public virtual ICollection<ELClassSectionService> ElclassSectionServices { get; set; }
     }
 }

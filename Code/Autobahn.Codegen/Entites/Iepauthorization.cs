@@ -9,21 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IEPAuthorization")]
-    public partial class Iepauthorization
+    [Table("IEPAuthorization", Schema = "K12")]
+    public partial class IEPAuthorization
     {
-        public Iepauthorization()
+        public IEPAuthorization()
         {
-            IepauthorizationRejecteds = new HashSet<IepauthorizationRejected>();
+            IEPAuthorizationRejecteds = new HashSet<IEPAuthorizationRejected>();
         }
 
         [Key]
-        [Column("IEPAuthorizationId")]
-        public int IepauthorizationId { get; set; }
+        public int IEPAuthorizationId { get; set; }
         public int AuthorizationDocumentId { get; set; }
         public int IndividualizedProgramId { get; set; }
-        [Column("RefIEPAuthorizationDocumentTypeId")]
-        public int? RefIepauthorizationDocumentTypeId { get; set; }
+        public int? RefIEPAuthorizationDocumentTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -49,10 +47,10 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("RecordStatusId")]
         [InverseProperty("Iepauthorizations")]
         public virtual RecordStatus? RecordStatus { get; set; }
-        [ForeignKey("RefIepauthorizationDocumentTypeId")]
+        [ForeignKey("RefIEPAuthorizationDocumentTypeId")]
         [InverseProperty("Iepauthorizations")]
-        public virtual RefIepauthorizationDocumentType? RefIepauthorizationDocumentType { get; set; }
+        public virtual RefIEPAuthorizationDocumentType? RefIEPAuthorizationDocumentType { get; set; }
         [InverseProperty("Iepauthorization")]
-        public virtual ICollection<IepauthorizationRejected> IepauthorizationRejecteds { get; set; }
+        public virtual ICollection<IEPAuthorizationRejected> IEPAuthorizationRejecteds { get; set; }
     }
 }

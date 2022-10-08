@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// List of identification system types.
     /// </summary>
-    [Table("RefGradeLevelType")]
+    [Table("RefGradeLevelType", Schema = "Common")]
     public partial class RefGradeLevelType
     {
         public RefGradeLevelType()

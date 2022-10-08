@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Incident")]
+    [Table("Incident", Schema = "Incident")]
     public partial class Incident
     {
         public Incident()
         {
             IncidentPeople = new HashSet<IncidentPerson>();
-            K12studentDisciplines = new HashSet<K12studentDiscipline>();
+            K12studentDisciplines = new HashSet<K12StudentDiscipline>();
         }
 
         /// <summary>
@@ -165,6 +165,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Incident")]
         public virtual ICollection<IncidentPerson> IncidentPeople { get; set; }
         [InverseProperty("Incident")]
-        public virtual ICollection<K12studentDiscipline> K12studentDisciplines { get; set; }
+        public virtual ICollection<K12StudentDiscipline> K12studentDisciplines { get; set; }
     }
 }

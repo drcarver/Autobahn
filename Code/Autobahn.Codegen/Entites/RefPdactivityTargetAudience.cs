@@ -10,14 +10,13 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefPDActivityTargetAudience")]
-    public partial class RefPdactivityTargetAudience
+    public partial class RefPDActivityTargetAudience
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPDActivityTargetAudienceId")]
-        public int RefPdactivityTargetAudienceId { get; set; }
+        public int RefPDActivityTargetAudienceId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -40,7 +39,6 @@ namespace ScafoldADatabase.Entities
         public DateTime? RecordStartDateTime { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? RecordEndDateTime { get; set; }
-
         [ForeignKey("RefJurisdictionId")]
         [InverseProperty("RefPdactivityTargetAudiences")]
         public virtual Organization? RefJurisdiction { get; set; }

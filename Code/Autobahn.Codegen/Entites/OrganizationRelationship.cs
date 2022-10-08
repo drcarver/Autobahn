@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("OrganizationRelationship")]
+    [Table("OrganizationRelationship", Schema = "Organization")]
     public partial class OrganizationRelationship
     {
         /// <summary>
@@ -20,7 +20,6 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - Organization
         /// </summary>
-        [Column("Parent_OrganizationId")]
         public int ParentOrganizationId { get; set; }
         /// <summary>
         /// Foreign key - Organization

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingInstructionalSpaceFactorType")]
+    [Table("RefBuildingInstructionalSpaceFactorType", Schema = "Facilities")]
     public partial class RefBuildingInstructionalSpaceFactorType
     {
         public RefBuildingInstructionalSpaceFactorType()

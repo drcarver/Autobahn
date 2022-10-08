@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PersonProgramParticipation")]
+    [Table("PersonProgramParticipation", Schema = "Common")]
     [Index("OrganizationPersonRoleId", Name = "IX_OrganizationPersonRoleId")]
     public partial class PersonProgramParticipation
     {
         public PersonProgramParticipation()
         {
-            ProgramParticipationAes = new HashSet<ProgramParticipationAe>();
+            ProgramParticipationAes = new HashSet<ProgramParticipationAE>();
             ProgramParticipationAttainments = new HashSet<ProgramParticipationAttainment>();
             ProgramParticipationCtes = new HashSet<ProgramParticipationCte>();
             ProgramParticipationFoodServices = new HashSet<ProgramParticipationFoodService>();
@@ -23,9 +23,9 @@ namespace ScafoldADatabase.Entities
             ProgramParticipationNeglecteds = new HashSet<ProgramParticipationNeglected>();
             ProgramParticipationSpecialEducations = new HashSet<ProgramParticipationSpecialEducation>();
             ProgramParticipationTeacherPreps = new HashSet<ProgramParticipationTeacherPrep>();
-            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIiilep>();
+            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIIILep>();
             ProgramParticipationTitleIs = new HashSet<ProgramParticipationTitleI>();
-            ProgramParticipationWioas = new HashSet<ProgramParticipationWioa>();
+            ProgramParticipationWioas = new HashSet<ProgramParticipationWIOA>();
             WorkforceProgramParticipations = new HashSet<WorkforceProgramParticipation>();
         }
 
@@ -72,7 +72,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("PersonProgramParticipations")]
         public virtual RefProgramExitReason? RefProgramExitReason { get; set; }
         [InverseProperty("PersonProgramParticipation")]
-        public virtual ICollection<ProgramParticipationAe> ProgramParticipationAes { get; set; }
+        public virtual ICollection<ProgramParticipationAE> ProgramParticipationAes { get; set; }
         [InverseProperty("PersonProgramParticipation")]
         public virtual ICollection<ProgramParticipationAttainment> ProgramParticipationAttainments { get; set; }
         [InverseProperty("PersonProgramParticipation")]
@@ -88,11 +88,11 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("PersonProgramParticipation")]
         public virtual ICollection<ProgramParticipationTeacherPrep> ProgramParticipationTeacherPreps { get; set; }
         [InverseProperty("PersonProgramParticipation")]
-        public virtual ICollection<ProgramParticipationTitleIiilep> ProgramParticipationTitleIiileps { get; set; }
+        public virtual ICollection<ProgramParticipationTitleIIILep> ProgramParticipationTitleIiileps { get; set; }
         [InverseProperty("PersonProgramParticipation")]
         public virtual ICollection<ProgramParticipationTitleI> ProgramParticipationTitleIs { get; set; }
         [InverseProperty("PersonProgramParticipation")]
-        public virtual ICollection<ProgramParticipationWioa> ProgramParticipationWioas { get; set; }
+        public virtual ICollection<ProgramParticipationWIOA> ProgramParticipationWioas { get; set; }
         [InverseProperty("PersonProgramParticipation")]
         public virtual ICollection<WorkforceProgramParticipation> WorkforceProgramParticipations { get; set; }
     }

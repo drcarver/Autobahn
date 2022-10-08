@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefProgramDayLength")]
+    [Table("RefProgramDayLength", Schema = "K12")]
     public partial class RefProgramDayLength
     {
         public RefProgramDayLength()
         {
-            K12programOrServiceRefKindergartenDailyLengths = new HashSet<K12programOrService>();
-            K12programOrServiceRefPrekindergartenDailyLengths = new HashSet<K12programOrService>();
+            K12programOrServiceRefKindergartenDailyLengths = new HashSet<K12ProgramOrService>();
+            K12programOrServiceRefPrekindergartenDailyLengths = new HashSet<K12ProgramOrService>();
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefProgramDayLengths")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefKindergartenDailyLength")]
-        public virtual ICollection<K12programOrService> K12programOrServiceRefKindergartenDailyLengths { get; set; }
+        public virtual ICollection<K12ProgramOrService> K12programOrServiceRefKindergartenDailyLengths { get; set; }
         [InverseProperty("RefPrekindergartenDailyLength")]
-        public virtual ICollection<K12programOrService> K12programOrServiceRefPrekindergartenDailyLengths { get; set; }
+        public virtual ICollection<K12ProgramOrService> K12programOrServiceRefPrekindergartenDailyLengths { get; set; }
     }
 }

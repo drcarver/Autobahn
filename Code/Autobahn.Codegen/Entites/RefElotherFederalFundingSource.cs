@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefELOtherFederalFundingSources")]
-    public partial class RefElotherFederalFundingSource
+    [Table("RefELOtherFederalFundingSources", Schema = "EarlyLearning")]
+    public partial class RefELOtherFederalFundingSources
     {
-        public RefElotherFederalFundingSource()
+        public RefELOtherFederalFundingSources()
         {
-            ElorganizationFunds = new HashSet<ElorganizationFund>();
+            ElorganizationFunds = new HashSet<ELOrganizationFunds>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELOtherFederalFundingSourcesId")]
-        public int RefElotherFederalFundingSourcesId { get; set; }
+        public int RefELOtherFederalFundingSourcesId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefElotherFederalFundingSources")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefElotherFederalFundingSources")]
-        public virtual ICollection<ElorganizationFund> ElorganizationFunds { get; set; }
+        public virtual ICollection<ELOrganizationFunds> ElorganizationFunds { get; set; }
     }
 }

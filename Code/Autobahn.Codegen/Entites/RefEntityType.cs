@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// CEDS entities. Used when the relationship of data requires the associated entity to be specified.
     /// </summary>
-    [Table("RefEntityType")]
+    [Table("RefEntityType", Schema = "Competencies")]
     public partial class RefEntityType
     {
         public RefEntityType()

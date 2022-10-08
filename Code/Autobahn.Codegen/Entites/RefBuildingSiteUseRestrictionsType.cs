@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingSiteUseRestrictionsType")]
+    [Table("RefBuildingSiteUseRestrictionsType", Schema = "Facilities")]
     public partial class RefBuildingSiteUseRestrictionsType
     {
         public RefBuildingSiteUseRestrictionsType()

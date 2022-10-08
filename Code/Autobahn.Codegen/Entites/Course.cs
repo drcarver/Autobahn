@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Course")]
+    [Table("Course", Schema = "Common")]
     public partial class Course
     {
         public Course()
@@ -17,7 +17,7 @@ namespace ScafoldADatabase.Entities
             CourseSections = new HashSet<CourseSection>();
             CredentialCriteriaCourses = new HashSet<CredentialCriteriaCourse>();
             CteCourses = new HashSet<CteCourse>();
-            K12courses = new HashSet<K12course>();
+            K12courses = new HashSet<K12Course>();
             ProfessionalDevelopmentActivities = new HashSet<ProfessionalDevelopmentActivity>();
             PsCourses = new HashSet<PsCourse>();
         }
@@ -41,9 +41,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("SCEDSequenceOfCourse")]
         [StringLength(50)]
-        public string? ScedsequenceOfCourse { get; set; }
+        public string? SCEDSequenceOfCourse { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -113,7 +112,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Course")]
         public virtual ICollection<CteCourse> CteCourses { get; set; }
         [InverseProperty("Course")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("Course")]
         public virtual ICollection<ProfessionalDevelopmentActivity> ProfessionalDevelopmentActivities { get; set; }
         [InverseProperty("Course")]

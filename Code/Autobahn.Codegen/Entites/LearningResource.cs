@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("LearningResource")]
+    [Table("LearningResource", Schema = "Common")]
     public partial class LearningResource
     {
         public LearningResource()
@@ -261,7 +261,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefLanguage? RefLanguage { get; set; }
         [ForeignKey("RefLearningResourceAccessApitypeId")]
         [InverseProperty("LearningResources")]
-        public virtual RefLearningResourceAccessApitype? RefLearningResourceAccessApitype { get; set; }
+        public virtual RefLearningResourceAccessAPIType? RefLearningResourceAccessAPIType { get; set; }
         [ForeignKey("RefLearningResourceAccessHazardTypeId")]
         [InverseProperty("LearningResources")]
         public virtual RefLearningResourceAccessHazardType? RefLearningResourceAccessHazardType { get; set; }

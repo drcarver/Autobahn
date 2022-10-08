@@ -7,16 +7,13 @@ using Microsoft.EntityFrameworkCore;
 namespace ScafoldADatabase.Entities
 {
     [Table("IDSVersion")]
-    public partial class Idsversion
+    public partial class IDSVersion
     {
         [Key]
-        [Column("IDSVersionId")]
-        public int IdsversionId { get; set; }
+        public int IDSVersionId { get; set; }
         public bool CurrentVersion { get; set; }
-        [Column("IDSVersionDate", TypeName = "datetime")]
-        public DateTime IdsversionDate { get; set; }
-        [Column("IDSVersionNumber")]
+        public DateTime IDSVersionDate { get; set; }
         [StringLength(10)]
-        public string IdsversionNumber { get; set; } = null!;
+        public string IDSVersionNumber { get; set; } = null!;
     }
 }

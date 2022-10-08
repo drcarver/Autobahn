@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELQualityInitiative")]
-    public partial class ElqualityInitiative
+    [Table("ELQualityInitiative", Schema = "EarlyLearning")]
+    public partial class ELQualityInitiative
     {
         /// <summary>
         /// Surrogate key
         /// </summary>
         [Key]
-        [Column("ELQualityInitiativeId")]
-        public int ElqualityInitiativeId { get; set; }
+        public int ELQualityInitiativeId { get; set; }
         /// <summary>
         /// Surrogate key from Organization.
         /// </summary>

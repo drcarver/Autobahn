@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefDQPCategoriesOfLearning")]
-    public partial class RefDqpcategoriesOfLearning
+    [Table("RefDQPCategoriesOfLearning", Schema = "Postsecondary")]
+    public partial class RefDQPCategoriesOfLearning
     {
-        public RefDqpcategoriesOfLearning()
+        public RefDQPCategoriesOfLearning()
         {
             PsPrograms = new HashSet<PsProgram>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefDQPCategoriesOfLearningId")]
-        public int RefDqpcategoriesOfLearningId { get; set; }
+        public int RefDQPCategoriesOfLearningId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

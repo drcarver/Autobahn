@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefFrequencyOfService")]
+    [Table("RefFrequencyOfService", Schema = "EarlyLearning")]
     public partial class RefFrequencyOfService
     {
         public RefFrequencyOfService()
         {
-            ElclassSectionServices = new HashSet<ElclassSectionService>();
+            ElclassSectionServices = new HashSet<ELClassSectionService>();
         }
 
         /// <summary>
@@ -55,6 +55,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefFrequencyOfServices")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefFrequencyOfService")]
-        public virtual ICollection<ElclassSectionService> ElclassSectionServices { get; set; }
+        public virtual ICollection<ELClassSectionService> ElclassSectionServices { get; set; }
     }
 }

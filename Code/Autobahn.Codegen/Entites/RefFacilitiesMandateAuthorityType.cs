@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefFacilitiesMandateAuthorityType")]
+    [Table("RefFacilitiesMandateAuthorityType", Schema = "Facilities")]
     public partial class RefFacilitiesMandateAuthorityType
     {
         public RefFacilitiesMandateAuthorityType()

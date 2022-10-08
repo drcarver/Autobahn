@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("TeacherStudentDataLinkExclusion")]
+    [Table("TeacherStudentDataLinkExclusion", Schema = "K12")]
     public partial class TeacherStudentDataLinkExclusion
     {
         /// <summary>
@@ -39,10 +39,10 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12staffAssignmentId")]
         [InverseProperty("TeacherStudentDataLinkExclusions")]
-        public virtual K12staffAssignment K12staffAssignment { get; set; } = null!;
+        public virtual K12StaffAssignment K12staffAssignment { get; set; } = null!;
         [ForeignKey("K12studentCourseSectionId")]
         [InverseProperty("TeacherStudentDataLinkExclusions")]
-        public virtual K12studentCourseSection K12studentCourseSection { get; set; } = null!;
+        public virtual K12StudentCourseSection K12studentCourseSection { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("TeacherStudentDataLinkExclusions")]
         public virtual RecordStatus? RecordStatus { get; set; }

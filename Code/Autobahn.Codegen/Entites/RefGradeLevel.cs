@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefGradeLevel")]
+    [Table("RefGradeLevel", Schema = "Common")]
     public partial class RefGradeLevel
     {
         public RefGradeLevel()
@@ -18,14 +18,14 @@ namespace ScafoldADatabase.Entities
             AssessmentRegistrationRefGradeLevelToBeAssesseds = new HashSet<AssessmentRegistration>();
             AssessmentRegistrationRefGradeLevelWhenAssesseds = new HashSet<AssessmentRegistration>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
-            K12leaGradeLevelsApproveds = new HashSet<K12leaGradeLevelsApproved>();
-            K12leaGradeOffereds = new HashSet<K12leaGradeOffered>();
-            K12schoolGradeLevelsApproveds = new HashSet<K12schoolGradeLevelsApproved>();
-            K12schoolGradeOffereds = new HashSet<K12schoolGradeOffered>();
-            K12studentCourseSections = new HashSet<K12studentCourseSection>();
-            K12studentEnrollmentRefEntryGradeLevels = new HashSet<K12studentEnrollment>();
-            K12studentEnrollmentRefExitGradeLevels = new HashSet<K12studentEnrollment>();
-            K12studentGraduationPlans = new HashSet<K12studentGraduationPlan>();
+            K12leaGradeLevelsApproveds = new HashSet<K12LeaGradeLevelsApproved>();
+            K12leaGradeOffereds = new HashSet<K12LeaGradeOffered>();
+            K12schoolGradeLevelsApproveds = new HashSet<K12SchoolGradeLevelsApproved>();
+            K12schoolGradeOffereds = new HashSet<K12SchoolGradeOffered>();
+            K12studentCourseSections = new HashSet<K12StudentCourseSection>();
+            K12studentEnrollmentRefEntryGradeLevels = new HashSet<K12StudentEnrollment>();
+            K12studentEnrollmentRefExitGradeLevels = new HashSet<K12StudentEnrollment>();
+            K12studentGraduationPlans = new HashSet<K12StudentGraduationPlan>();
         }
 
         /// <summary>
@@ -78,20 +78,20 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefGrade")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }
         [InverseProperty("RefGradeLevel")]
-        public virtual ICollection<K12leaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12LeaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
         [InverseProperty("RefGradeLevel")]
-        public virtual ICollection<K12leaGradeOffered> K12leaGradeOffereds { get; set; }
+        public virtual ICollection<K12LeaGradeOffered> K12leaGradeOffereds { get; set; }
         [InverseProperty("RefGradeLevel")]
-        public virtual ICollection<K12schoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12SchoolGradeLevelsApproved> K12schoolGradeLevelsApproveds { get; set; }
         [InverseProperty("RefGradeLevel")]
-        public virtual ICollection<K12schoolGradeOffered> K12schoolGradeOffereds { get; set; }
+        public virtual ICollection<K12SchoolGradeOffered> K12schoolGradeOffereds { get; set; }
         [InverseProperty("RefGradeLevelWhenCourseTaken")]
-        public virtual ICollection<K12studentCourseSection> K12studentCourseSections { get; set; }
+        public virtual ICollection<K12StudentCourseSection> K12studentCourseSections { get; set; }
         [InverseProperty("RefEntryGradeLevel")]
-        public virtual ICollection<K12studentEnrollment> K12studentEnrollmentRefEntryGradeLevels { get; set; }
+        public virtual ICollection<K12StudentEnrollment> K12studentEnrollmentRefEntryGradeLevels { get; set; }
         [InverseProperty("RefExitGradeLevel")]
-        public virtual ICollection<K12studentEnrollment> K12studentEnrollmentRefExitGradeLevels { get; set; }
+        public virtual ICollection<K12StudentEnrollment> K12studentEnrollmentRefExitGradeLevels { get; set; }
         [InverseProperty("RefGradeLevelWhenCourseTaken")]
-        public virtual ICollection<K12studentGraduationPlan> K12studentGraduationPlans { get; set; }
+        public virtual ICollection<K12StudentGraduationPlan> K12studentGraduationPlans { get; set; }
     }
 }

@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIndicatorStatusSubgroupType")]
+    [Table("RefIndicatorStatusSubgroupType", Schema = "K12")]
     public partial class RefIndicatorStatusSubgroupType
     {
         public RefIndicatorStatusSubgroupType()
         {
-            K12schoolIndicatorStatuses = new HashSet<K12schoolIndicatorStatus>();
+            K12SchoolIndicatorStatuses = new HashSet<K12SchoolIndicatorStatus>();
         }
 
         [Key]
@@ -33,6 +33,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefIndicatorStatusSubgroupTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefIndicatorStatusSubgroupType")]
-        public virtual ICollection<K12schoolIndicatorStatus> K12schoolIndicatorStatuses { get; set; }
+        public virtual ICollection<K12SchoolIndicatorStatus> K12SchoolIndicatorStatuses { get; set; }
     }
 }

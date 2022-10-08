@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramAssessment")]
+    [Table("IndividualizedProgramAssessment", Schema = "Assessment")]
     public partial class IndividualizedProgramAssessment
     {
         public IndividualizedProgramAssessment()
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         public int IndividualizedProgramAssessmentId { get; set; }
         public int AssessmentId { get; set; }
         public int IndividualizedProgramId { get; set; }
-        [Column("IEPAlternativeAssessmentRationale")]
-        public string? IepalternativeAssessmentRationale { get; set; }
+        public string? IEPAlternativeAssessmentRationale { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

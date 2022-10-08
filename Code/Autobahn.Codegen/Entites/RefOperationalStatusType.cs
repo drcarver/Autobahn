@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// List of operational status types.
     /// </summary>
-    [Table("RefOperationalStatusType")]
+    [Table("RefOperationalStatusType", Schema = "Organization")]
     public partial class RefOperationalStatusType
     {
         public RefOperationalStatusType()

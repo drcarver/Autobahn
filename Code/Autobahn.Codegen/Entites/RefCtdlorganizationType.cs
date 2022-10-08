@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefCTDLOrganizationType")]
-    public partial class RefCtdlorganizationType
+    [Table("RefCTDLOrganizationType", Schema = "Credentials")]
+    public partial class RefCTDLOrganizationType
     {
-        public RefCtdlorganizationType()
+        public RefCTDLOrganizationType()
         {
             CredentialDefAgents = new HashSet<CredentialDefAgent>();
             CredentialIssuers = new HashSet<CredentialIssuer>();
@@ -19,8 +19,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefCTDLOrganizationTypeId")]
-        public int RefCtdlorganizationTypeId { get; set; }
+        public int RefCTDLOrganizationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

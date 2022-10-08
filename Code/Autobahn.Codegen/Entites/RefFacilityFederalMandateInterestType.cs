@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefFacilityFederalMandateInterestType")]
+    [Table("RefFacilityFederalMandateInterestType", Schema = "Facilities")]
     public partial class RefFacilityFederalMandateInterestType
     {
         public RefFacilityFederalMandateInterestType()

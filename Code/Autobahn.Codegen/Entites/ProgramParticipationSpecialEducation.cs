@@ -9,30 +9,26 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProgramParticipationSpecialEducation")]
+    [Table("ProgramParticipationSpecialEducation", Schema = "K12")]
     public partial class ProgramParticipationSpecialEducation
     {
         [Key]
         public int ProgramParticipationSpecialEducationId { get; set; }
         public int PersonProgramParticipationId { get; set; }
-        [Column("AwaitingInitialIDEAEvaluationStatus")]
-        public bool? AwaitingInitialIdeaevaluationStatus { get; set; }
-        [Column("SpecialEducationFTE", TypeName = "decimal(5, 4)")]
-        public decimal? SpecialEducationFte { get; set; }
+        public bool? AwaitingInitialIDEAEvaluationStatus { get; set; }
+        [Column(TypeName = "decimal(5, 4)")]
+        public decimal? SpecialEducationFTE { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
         [Column(TypeName = "date")]
         public DateTime? SpecialEducationServicesExitDate { get; set; }
-        [Column("IDEAPlacementRationale")]
-        public string? IdeaplacementRationale { get; set; }
-        [Column("RefIDEAEducationalEnvironmentECId")]
-        public int? RefIdeaeducationalEnvironmentEcid { get; set; }
+        public string? IDEAPlacementRationale { get; set; }
+        public int? RefIDEAEducationalEnvironmentECId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefIDEAEducationalEnvironmentSchoolAgeId")]
-        public int? RefIdeaeducationalEnvironmentSchoolAgeId { get; set; }
+        public int? RefIDEAEducationalEnvironmentSchoolAgeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -58,10 +54,10 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIdeaeducationalEnvironmentEcid")]
         [InverseProperty("ProgramParticipationSpecialEducations")]
-        public virtual RefIdeaeducationalEnvironmentEc? RefIdeaeducationalEnvironmentEc { get; set; }
+        public virtual RefIDEAEducationalEnvironmentEC? RefIdeaeducationalEnvironmentEc { get; set; }
         [ForeignKey("RefIdeaeducationalEnvironmentSchoolAgeId")]
         [InverseProperty("ProgramParticipationSpecialEducations")]
-        public virtual RefIdeaeducationalEnvironmentSchoolAge? RefIdeaeducationalEnvironmentSchoolAge { get; set; }
+        public virtual RefIDEAEducationalEnvironmentSchoolAge? RefIDEAEducationalEnvironmentSchoolAge { get; set; }
         [ForeignKey("RefSpecialEducationExitReasonId")]
         [InverseProperty("ProgramParticipationSpecialEducations")]
         public virtual RefSpecialEducationExitReason? RefSpecialEducationExitReason { get; set; }

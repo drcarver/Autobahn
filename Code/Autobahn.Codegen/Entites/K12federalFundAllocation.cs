@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12FederalFundAllocation")]
-    public partial class K12federalFundAllocation
+    [Table("K12FederalFundAllocation", Schema = "K12")]
+    public partial class K12FederalFundAllocation
     {
         [Key]
-        [Column("K12FederalFundAllocationId")]
-        public int K12federalFundAllocationId { get; set; }
+        public int K12FederalFundAllocationId { get; set; }
         public int OrganizationCalendarSessionId { get; set; }
         [StringLength(10)]
         public string FederalProgramCode { get; set; } = null!;

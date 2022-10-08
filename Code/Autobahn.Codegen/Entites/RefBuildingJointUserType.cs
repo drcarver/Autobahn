@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingJointUserType")]
+    [Table("RefBuildingJointUserType", Schema = "Facilities")]
     public partial class RefBuildingJointUserType
     {
         public RefBuildingJointUserType()

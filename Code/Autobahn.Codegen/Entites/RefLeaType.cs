@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefLeaType()
         {
-            K12leas = new HashSet<K12lea>();
+            K12Leas = new HashSet<K12Lea>();
         }
 
         /// <summary>
@@ -55,6 +55,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefLeaTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefLeaType")]
-        public virtual ICollection<K12lea> K12leas { get; set; }
+        public virtual ICollection<K12Lea> K12Leas { get; set; }
     }
 }

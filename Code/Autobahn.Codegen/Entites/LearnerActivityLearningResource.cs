@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("LearnerActivity_LearningResource")]
+    [Table("LearnerActivityLearningResource", Schema = "Assessment")]
     [Index("LearnerActivityId", "LearningResourceId", Name = "IX_LearnerActivity_LearningResource", IsUnique = true)]
     public partial class LearnerActivityLearningResource
     {
@@ -17,7 +17,6 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("LearnerActivity_LearningResourceId")]
         public int LearnerActivityLearningResourceId { get; set; }
         /// <summary>
         /// Foreign key - LearnerActivity

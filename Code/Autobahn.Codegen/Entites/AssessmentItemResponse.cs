@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentItemResponse")]
+    [Table("AssessmentItemResponse", Schema = "Assessment")]
     public partial class AssessmentItemResponse
     {
         public AssessmentItemResponse()
@@ -96,8 +96,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ResultXML")]
-        public string? ResultXml { get; set; }
+        public string? ResultXML { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

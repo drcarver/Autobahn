@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("PersonPersonalInformationVerification")]
+    [Table("PersonPersonalInformationVerification", Schema = "Person")]
     public partial class PersonPersonalInformationVerification
     {
         [Key]

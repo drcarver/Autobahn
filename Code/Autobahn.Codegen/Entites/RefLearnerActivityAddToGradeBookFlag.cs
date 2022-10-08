@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefLearnerActivityAddToGradeBookFlag")]
+    [Table("RefLearnerActivityAddToGradeBookFlag", Schema = "Assessment")]
     public partial class RefLearnerActivityAddToGradeBookFlag
     {
         /// <summary>

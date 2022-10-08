@@ -9,15 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProgramParticipationTitleI")]
+    [Table("ProgramParticipationTitleI", Schema ="Person")]
     public partial class ProgramParticipationTitleI
     {
         [Key]
-        [Column("ProgramParticipationTitleIId")]
-        public int ProgramParticipationTitleIid { get; set; }
+        public int ProgramParticipationTitleIId { get; set; }
         public int PersonProgramParticipationId { get; set; }
-        [Column("RefTitleIIndicatorId")]
-        public int? RefTitleIindicatorId { get; set; }
+        public int? RefTitleIIndicatorId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -42,6 +40,6 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefTitleIindicatorId")]
         [InverseProperty("ProgramParticipationTitleIs")]
-        public virtual RefTitleIindicator? RefTitleIindicator { get; set; }
+        public virtual RefTitleIIndicator? RefTitleIindicator { get; set; }
     }
 }

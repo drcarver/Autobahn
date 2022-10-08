@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELEnrollment")]
-    public partial class Elenrollment
+    [Table("ELEnrollment", Schema = "EarlyLearning")]
+    public partial class ELEnrollment
     {
         [Key]
-        [Column("ELEnrollmentId")]
-        public int ElenrollmentId { get; set; }
+        public int ELEnrollmentId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -32,13 +31,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - ELClassSection.
         /// </summary>
-        [Column("ELClassSectionId")]
-        public int? ElclassSectionId { get; set; }
+        public int? ELClassSectionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefIDEAEnvironmentELId")]
-        public int? RefIdeaenvironmentElid { get; set; }
+        public int? RefIDEAEnvironmentELId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -50,8 +47,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELFederalFundingTypeId")]
-        public int? RefElfederalFundingTypeId { get; set; }
+        public int? RefELFederalFundingTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -70,7 +66,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("ElclassSectionId")]
         [InverseProperty("Elenrollments")]
-        public virtual ElclassSection? ElclassSection { get; set; }
+        public virtual ELClassSection? ElclassSection { get; set; }
         [ForeignKey("OrganizationPersonRoleId")]
         [InverseProperty("Elenrollments")]
         public virtual OrganizationPersonRole OrganizationPersonRole { get; set; } = null!;
@@ -79,13 +75,13 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefElfederalFundingTypeId")]
         [InverseProperty("Elenrollments")]
-        public virtual RefElfederalFundingType? RefElfederalFundingType { get; set; }
+        public virtual RefELFederalFundingType? RefElfederalFundingType { get; set; }
         [ForeignKey("RefFoodServiceParticipationId")]
         [InverseProperty("Elenrollments")]
         public virtual RefFoodServiceParticipation? RefFoodServiceParticipation { get; set; }
         [ForeignKey("RefIdeaenvironmentElid")]
         [InverseProperty("Elenrollments")]
-        public virtual RefIdeaenvironmentEl? RefIdeaenvironmentEl { get; set; }
+        public virtual RefIDEAEnvironmentEL? RefIdeaenvironmentEl { get; set; }
         [ForeignKey("RefServiceOptionId")]
         [InverseProperty("Elenrollments")]
         public virtual RefServiceOption? RefServiceOption { get; set; }

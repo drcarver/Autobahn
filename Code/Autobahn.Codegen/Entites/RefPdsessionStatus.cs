@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPDSessionStatus")]
-    public partial class RefPdsessionStatus
+    [Table("RefPDSessionStatus", Schema = "Common")]
+    public partial class RefPDSessionStatus
     {
-        public RefPdsessionStatus()
+        public RefPDSessionStatus()
         {
             ProfessionalDevelopmentSessions = new HashSet<ProfessionalDevelopmentSession>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPDSessionStatusId")]
-        public int RefPdsessionStatusId { get; set; }
+        public int RefPDSessionStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

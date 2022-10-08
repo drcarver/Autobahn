@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildIndividualizedProgram")]
-    public partial class ElchildIndividualizedProgram
+    [Table("ELChildIndividualizedProgram", Schema= "EarlyLearning")]
+    public partial class ELChildIndividualizedProgram
     {
         [Key]
-        [Column("ELChildIndividualizedProgramId")]
-        public int ElchildIndividualizedProgramId { get; set; }
+        public int ELChildIndividualizedProgramId { get; set; }
         /// <summary>
         /// Surrogate key from Person.
         /// </summary>
@@ -26,13 +25,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefIDEAIEPStatusId")]
-        public int? RefIdeaiepstatusId { get; set; }
+        public int? RefIDEAIEPStatusId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefIDEAPartCEligibilityCategoryId")]
-        public int? RefIdeapartCeligibilityCategoryId { get; set; }
+        public int? RefIDEAPartCEligibilityCategoryId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -60,9 +57,9 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIdeaiepstatusId")]
         [InverseProperty("ElchildIndividualizedPrograms")]
-        public virtual RefIdeaiepstatus? RefIdeaiepstatus { get; set; }
+        public virtual RefIDEAIEPStatus? RefIDEAIEPStatus { get; set; }
         [ForeignKey("RefIdeapartCeligibilityCategoryId")]
         [InverseProperty("ElchildIndividualizedPrograms")]
-        public virtual RefIdeapartCeligibilityCategory? RefIdeapartCeligibilityCategory { get; set; }
+        public virtual RefIDEAPartCEligibilityCategory? RefIdeapartCeligibilityCategory { get; set; }
     }
 }

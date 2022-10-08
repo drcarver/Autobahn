@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELOrganization")]
-    public partial class Elorganization
+    [Table("ELOrganization", Schema = "EarlyLearning")]
+    public partial class ELOrganization
     {
         [Key]
-        [Column("ELOrganizationId")]
-        public int ElorganizationId { get; set; }
+        public int ELOrganizationId { get; set; }
         public int OrganizationId { get; set; }
         public int? RefProfitStatusId { get; set; }
         /// <summary>

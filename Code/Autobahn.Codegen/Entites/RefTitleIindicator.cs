@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefTitleIIndicator")]
-    public partial class RefTitleIindicator
+    [Table("RefTitleIIndicator", Schema = "Person")]
+    public partial class RefTitleIIndicator
     {
-        public RefTitleIindicator()
+        public RefTitleIIndicator()
         {
             ProgramParticipationTitleIs = new HashSet<ProgramParticipationTitleI>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefTitleIIndicatorId")]
-        public int RefTitleIindicatorId { get; set; }
+        public int RefTitleIIndicatorId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

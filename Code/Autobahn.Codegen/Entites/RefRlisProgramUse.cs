@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefRlisProgramUse()
         {
-            K12leaFederalFunds = new HashSet<K12leaFederalFund>();
+            K12leaFederalFunds = new HashSet<K12LeaFederalFunds>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefRlisProgramUses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefRlisProgramUse")]
-        public virtual ICollection<K12leaFederalFund> K12leaFederalFunds { get; set; }
+        public virtual ICollection<K12LeaFederalFunds> K12leaFederalFunds { get; set; }
     }
 }

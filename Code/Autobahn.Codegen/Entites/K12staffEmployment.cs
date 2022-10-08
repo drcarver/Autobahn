@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StaffEmployment")]
-    public partial class K12staffEmployment
+    [Table("K12StaffEmployment", Schema = "K12")]
+    public partial class K12StaffEmployment
     {
         [Key]
-        [Column("K12StaffEmploymentId")]
-        public int K12staffEmploymentId { get; set; }
+        public int K12StaffEmploymentId { get; set; }
         /// <summary>
         /// Foreign key - StaffEmployment
         /// </summary>
@@ -31,8 +30,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("TitleITargetedAssistanceStaffFunded")]
-        public bool? TitleItargetedAssistanceStaffFunded { get; set; }
+        public bool? TitleITargetedAssistanceStaffFunded { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -40,8 +38,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefK12StaffClassificationId")]
-        public int? RefK12staffClassificationId { get; set; }
+        public int? RefK12StaffClassificationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -67,7 +64,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefEmploymentStatus? RefEmploymentStatus { get; set; }
         [ForeignKey("RefK12staffClassificationId")]
         [InverseProperty("K12staffEmployments")]
-        public virtual RefK12staffClassification? RefK12staffClassification { get; set; }
+        public virtual RefK12StaffClassification? RefK12staffClassification { get; set; }
         [ForeignKey("StaffEmploymentId")]
         [InverseProperty("K12staffEmployments")]
         public virtual StaffEmployment StaffEmployment { get; set; } = null!;

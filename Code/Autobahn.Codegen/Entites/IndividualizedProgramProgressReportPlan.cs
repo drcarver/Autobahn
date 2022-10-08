@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramProgressReportPlan")]
+    [Table("IndividualizedProgramProgressReportPlan", Schema = "Common")]
     public partial class IndividualizedProgramProgressReportPlan
     {
         public IndividualizedProgramProgressReportPlan()
@@ -20,10 +20,8 @@ namespace ScafoldADatabase.Entities
         [Key]
         public int IndividualizedProgramProgressReportPlanId { get; set; }
         public int IndividualizedProgramId { get; set; }
-        [Column("RefIPSPProgressReportScheduleId")]
-        public int? RefIpspprogressReportScheduleId { get; set; }
-        [Column("RefIPSPProgressReportTypeId")]
-        public int? RefIpspprogressReportTypeId { get; set; }
+        public int? RefIPSPProgressReportScheduleId { get; set; }
+        public int? RefIPSPProgressReportTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -48,10 +46,10 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIpspprogressReportScheduleId")]
         [InverseProperty("IndividualizedProgramProgressReportPlans")]
-        public virtual RefIpspprogressReportSchedule? RefIpspprogressReportSchedule { get; set; }
+        public virtual RefIPSPProgressReportType? RefIpspprogressReportSchedule { get; set; }
         [ForeignKey("RefIpspprogressReportTypeId")]
         [InverseProperty("IndividualizedProgramProgressReportPlans")]
-        public virtual RefIpspprogressReportType? RefIpspprogressReportType { get; set; }
+        public virtual RefIPSPProgressReportType? RefIpspprogressReportType { get; set; }
         [InverseProperty("IndividualizedProgramProgressReportPlan")]
         public virtual ICollection<IndividualizedProgramProgressReport> IndividualizedProgramProgressReports { get; set; }
     }

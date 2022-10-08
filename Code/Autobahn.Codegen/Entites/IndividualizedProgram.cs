@@ -9,15 +9,15 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgram")]
+    [Table("IndividualizedProgram", Schema = "Common")]
     public partial class IndividualizedProgram
     {
         public IndividualizedProgram()
         {
-            ElchildIndividualizedPrograms = new HashSet<ElchildIndividualizedProgram>();
-            ElchildTransitionPlans = new HashSet<ElchildTransitionPlan>();
-            Iepauthorizations = new HashSet<Iepauthorization>();
-            IeppresentLevels = new HashSet<IeppresentLevel>();
+            ElchildIndividualizedPrograms = new HashSet<ELChildIndividualizedProgram>();
+            ElchildTransitionPlans = new HashSet<ELChildTransitionPlan>();
+            Iepauthorizations = new HashSet<IEPAuthorization>();
+            IeppresentLevels = new HashSet<IEPPresentLevel>();
             IndividualizedProgramAccommodations = new HashSet<IndividualizedProgramAccommodation>();
             IndividualizedProgramAmendments = new HashSet<IndividualizedProgramAmendment>();
             IndividualizedProgramAssessments = new HashSet<IndividualizedProgramAssessment>();
@@ -141,13 +141,13 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("IndividualizedPrograms")]
         public virtual RefStudentSupportServiceType? RefStudentSupportServiceType { get; set; }
         [InverseProperty("IndividualizedProgram")]
-        public virtual ICollection<ElchildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
+        public virtual ICollection<ELChildIndividualizedProgram> ElchildIndividualizedPrograms { get; set; }
         [InverseProperty("IndividualizedProgram")]
-        public virtual ICollection<ElchildTransitionPlan> ElchildTransitionPlans { get; set; }
+        public virtual ICollection<ELChildTransitionPlan> ElchildTransitionPlans { get; set; }
         [InverseProperty("IndividualizedProgram")]
-        public virtual ICollection<Iepauthorization> Iepauthorizations { get; set; }
+        public virtual ICollection<IEPAuthorization> Iepauthorizations { get; set; }
         [InverseProperty("IndividualizedProgram")]
-        public virtual ICollection<IeppresentLevel> IeppresentLevels { get; set; }
+        public virtual ICollection<IEPPresentLevel> IeppresentLevels { get; set; }
         [InverseProperty("IndividualizedProgram")]
         public virtual ICollection<IndividualizedProgramAccommodation> IndividualizedProgramAccommodations { get; set; }
         [InverseProperty("IndividualizedProgram")]

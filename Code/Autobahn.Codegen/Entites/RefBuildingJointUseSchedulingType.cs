@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingJointUseSchedulingType")]
+    [Table("RefBuildingJointUseSchedulingType", Schema = "Facilities")]
     public partial class RefBuildingJointUseSchedulingType
     {
         public RefBuildingJointUseSchedulingType()

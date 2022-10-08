@@ -9,16 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProgramParticipationTitleIIILep")]
-    public partial class ProgramParticipationTitleIiilep
+    [Table("ProgramParticipationTitleIIILep", Schema = "Person")]
+    public partial class ProgramParticipationTitleIIILep
     {
-        [Column("RefTitleIIIAccountabilityId")]
-        public int? RefTitleIiiaccountabilityId { get; set; }
+        public int? RefTitleIIIAccountabilityId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefTitleIIILanguageInstructionProgramTypeId")]
-        public int? RefTitleIiilanguageInstructionProgramTypeId { get; set; }
+        public int? RefTitleIIILanguageInstructionProgramTypeId { get; set; }
         public int PersonProgramParticipationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -46,9 +44,9 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefTitleIiiaccountabilityId")]
         [InverseProperty("ProgramParticipationTitleIiileps")]
-        public virtual RefTitleIiiaccountability? RefTitleIiiaccountability { get; set; }
+        public virtual RefTitleIIIAccountability? RefTitleIiiaccountability { get; set; }
         [ForeignKey("RefTitleIiilanguageInstructionProgramTypeId")]
         [InverseProperty("ProgramParticipationTitleIiileps")]
-        public virtual RefTitleIiilanguageInstructionProgramType? RefTitleIiilanguageInstructionProgramType { get; set; }
+        public virtual RefTitleIIILanguageInstructionProgramType? RefTitleIiilanguageInstructionProgramType { get; set; }
     }
 }

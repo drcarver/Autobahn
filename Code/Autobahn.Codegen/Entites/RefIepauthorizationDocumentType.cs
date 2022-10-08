@@ -6,20 +6,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIEPAuthorizationDocumentType")]
-    public partial class RefIepauthorizationDocumentType
+    [Table("RefIEPAuthorizationDocumentType", Schema="K12")]
+    public partial class RefIEPAuthorizationDocumentType
     {
-        public RefIepauthorizationDocumentType()
+        public RefIEPAuthorizationDocumentType()
         {
-            Iepauthorizations = new HashSet<Iepauthorization>();
+            IEPAuthorizations = new HashSet<IEPAuthorization>();
         }
 
         /// <summary>
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIEPAuthorizationDocumentTypeId")]
-        public int RefIepauthorizationDocumentTypeId { get; set; }
+        public int RefIEPAuthorizationDocumentTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -53,6 +52,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefIepauthorizationDocumentTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefIepauthorizationDocumentType")]
-        public virtual ICollection<Iepauthorization> Iepauthorizations { get; set; }
+        public virtual ICollection<IEPAuthorization> IEPAuthorizations { get; set; }
     }
 }

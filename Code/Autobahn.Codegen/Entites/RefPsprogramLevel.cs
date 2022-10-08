@@ -10,9 +10,9 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefPSProgramLevel")]
-    public partial class RefPsprogramLevel
+    public partial class RefPSProgramLevel
     {
-        public RefPsprogramLevel()
+        public RefPSProgramLevel()
         {
             PsPrograms = new HashSet<PsProgram>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPSProgramLevelId")]
-        public int RefPsprogramLevelId { get; set; }
+        public int RefPSProgramLevelId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

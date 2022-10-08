@@ -9,14 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsStudentEnrollment")]
+    [Table("PsStudentEnrollment", Schema = "Postsecondary")]
     public partial class PsStudentEnrollment
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("PsStudentEnrollmentId")]
         public int PsStudentEnrollmentId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
@@ -155,8 +154,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefPSExitOrWithdrawalTypeId")]
-        public int? RefPsexitOrWithdrawalTypeId { get; set; }
+        public int? RefPSExitOrWithdrawalTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -205,7 +203,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefPsStudentLevel? RefPsStudentLevel { get; set; }
         [ForeignKey("RefPsexitOrWithdrawalTypeId")]
         [InverseProperty("PsStudentEnrollments")]
-        public virtual RefPsexitOrWithdrawalType? RefPsexitOrWithdrawalType { get; set; }
+        public virtual RefPSExitOrWithdrawalType? RefPsexitOrWithdrawalType { get; set; }
         [ForeignKey("RefTransferReadyId")]
         [InverseProperty("PsStudentEnrollments")]
         public virtual RefTransferReady? RefTransferReady { get; set; }

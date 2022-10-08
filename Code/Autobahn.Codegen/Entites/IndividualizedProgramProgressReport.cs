@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramProgressReport")]
+    [Table("IndividualizedProgramProgressReport", Schema = "Common")]
     public partial class IndividualizedProgramProgressReport
     {
         public IndividualizedProgramProgressReport()
@@ -24,8 +24,7 @@ namespace ScafoldADatabase.Entities
         public string? ProgressDescription { get; set; }
         [Column(TypeName = "date")]
         public DateTime? ProgressReportDate { get; set; }
-        [Column("RefIPSPProgressReportTypeId")]
-        public int? RefIpspprogressReportTypeId { get; set; }
+        public int? RefIPSPProgressReportTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -53,7 +52,7 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIpspprogressReportTypeId")]
         [InverseProperty("IndividualizedProgramProgressReports")]
-        public virtual RefIpspprogressReportType? RefIpspprogressReportType { get; set; }
+        public virtual RefIPSPProgressReportType? RefIpspprogressReportType { get; set; }
         [InverseProperty("IndividualizedProgramProgressReport")]
         public virtual ICollection<IndividualizedProgramProgressGoal> IndividualizedProgramProgressGoals { get; set; }
     }

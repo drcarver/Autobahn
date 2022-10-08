@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialOffered")]
+    [Table("CredentialOffered", Schema = "Credentials")]
     [Index("CredentialDefinitionId", "CredentialIssuerId", Name = "IX_Credential_CredentialIssuer", IsUnique = true)]
     public partial class CredentialOffered
     {

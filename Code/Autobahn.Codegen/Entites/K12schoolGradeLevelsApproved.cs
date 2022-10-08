@@ -9,14 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12SchoolGradeLevelsApproved")]
-    public partial class K12schoolGradeLevelsApproved
+    [Table("K12SchoolGradeLevelsApproved", Schema = "K12")]
+    public partial class K12SchoolGradeLevelsApproved
     {
         [Key]
-        [Column("K12SchoolGradeLevelsApprovedId")]
-        public int K12schoolGradeLevelsApprovedId { get; set; }
-        [Column("K12SchoolId")]
-        public int K12schoolId { get; set; }
+        public int K12SchoolGradeLevelsApprovedId { get; set; }
+        public int K12SchoolId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -39,7 +37,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12schoolId")]
         [InverseProperty("K12schoolGradeLevelsApproveds")]
-        public virtual K12school K12school { get; set; } = null!;
+        public virtual K12School K12school { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12schoolGradeLevelsApproveds")]
         public virtual RecordStatus? RecordStatus { get; set; }

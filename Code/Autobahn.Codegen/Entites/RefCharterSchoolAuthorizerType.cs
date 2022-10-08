@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCharterSchoolAuthorizerType")]
+    [Table("RefCharterSchoolAuthorizerType", Schema = "K12")]
     public partial class RefCharterSchoolAuthorizerType
     {
         public RefCharterSchoolAuthorizerType()
         {
-            K12charterSchoolAuthorizerAgencies = new HashSet<K12charterSchoolAuthorizerAgency>();
+            K12charterSchoolAuthorizerAgencies = new HashSet<K12CharterSchoolAuthorizerAgency>();
         }
 
         [Key]
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefCharterSchoolAuthorizerTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefCharterSchoolAuthorizerType")]
-        public virtual ICollection<K12charterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
+        public virtual ICollection<K12CharterSchoolAuthorizerAgency> K12charterSchoolAuthorizerAgencies { get; set; }
     }
 }

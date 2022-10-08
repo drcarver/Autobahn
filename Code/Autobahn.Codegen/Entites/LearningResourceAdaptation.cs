@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("LearningResourceAdaptation")]
+    [Table("LearningResourceAdaptation", Schema = "LearningResources")]
     public partial class LearningResourceAdaptation
     {
         /// <summary>
@@ -24,9 +24,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("AdaptationURL")]
         [StringLength(512)]
-        public string AdaptationUrl { get; set; } = null!;
+        public string AdaptationURL { get; set; } = null!;
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

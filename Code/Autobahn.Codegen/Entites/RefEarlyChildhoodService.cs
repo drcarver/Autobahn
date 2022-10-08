@@ -14,8 +14,8 @@ namespace ScafoldADatabase.Entities
     {
         public RefEarlyChildhoodService()
         {
-            ElchildServiceRefEarlyChildhoodServicesOffereds = new HashSet<ElchildService>();
-            ElchildServiceRefEarlyChildhoodServicesReceiveds = new HashSet<ElchildService>();
+            ElchildServiceRefEarlyChildhoodServicesOffereds = new HashSet<ELChildService>();
+            ElchildServiceRefEarlyChildhoodServicesReceiveds = new HashSet<ELChildService>();
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefEarlyChildhoodServices")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefEarlyChildhoodServicesOffered")]
-        public virtual ICollection<ElchildService> ElchildServiceRefEarlyChildhoodServicesOffereds { get; set; }
+        public virtual ICollection<ELChildService> ElchildServiceRefEarlyChildhoodServicesOffereds { get; set; }
         [InverseProperty("RefEarlyChildhoodServicesReceived")]
-        public virtual ICollection<ElchildService> ElchildServiceRefEarlyChildhoodServicesReceiveds { get; set; }
+        public virtual ICollection<ELChildService> ElchildServiceRefEarlyChildhoodServicesReceiveds { get; set; }
     }
 }

@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCTDLAudienceLevelType")]
-    public partial class RefCtdlaudienceLevelType
+    [Table("RefCTDLAudienceLevelType", Schema = "Postsecondary")]
+    public partial class RefCTDLAudienceLevelType
     {
-        public RefCtdlaudienceLevelType()
+        public RefCTDLAudienceLevelType()
         {
             CredentialDefinitions = new HashSet<CredentialDefinition>();
         }
 
         [Key]
-        [Column("RefCTDLAudienceLevelTypeId")]
-        public int RefCtdlaudienceLevelTypeId { get; set; }
+        public int RefCTDLAudienceLevelTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

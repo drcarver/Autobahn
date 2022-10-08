@@ -57,7 +57,7 @@ internal class MauiModule
 
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
             GenerateTemplateProject(location, moduleName);
-            GenerateUsings($@"{moduleLocation}\{moduleName}");
+            GenerateUsings($@"{moduleLocation}\{moduleName}", domain);
             AddAssemblyInfo($@"{moduleLocation}\{moduleName}\{moduleName}.csproj", domain);
             GenerateInterfaceFiles($@"{moduleLocation}\{moduleName}\Interfaces\", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
             GenerateModelFiles($@"{moduleLocation}\{moduleName}\Models\", domain, domainModels.Where(m => !m.Name.StartsWith("Ref")).ToList());
@@ -71,14 +71,57 @@ internal class MauiModule
             
             // Still todo - convert/add virtuals as navigation commands
             GenerateViewModelFiles($@"{moduleLocation}\{moduleName}\ViewModels\", domain, domainModels.ToList());
-            ServiceCollectionExtensions($@"{moduleLocation}\{moduleName}\ServiceCollectionExtensions.cs", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
-            
+            ServiceCollectionExtensions($@"{moduleLocation}\{moduleName}\ServiceCollectionExtensions.g.cs", domain, domainModels.Where(t => !t.Name.StartsWith("Ref")).ToList());
+            GenerateMapperProfile($@"{moduleLocation}\{moduleName}\MapperProfile.g.cs", domain, domainModels);
+ 
             // Still todo - service collection extensions for view routes
             //GenerateViewFiles($@"{filePath}\{moduleName}\Views\", domain, domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList(), elements);
             //GenerateXAMLFiles($@"{filePath}\{moduleName}\Views\", domainModels.Where(m => !m.TableName.StartsWith("Ref")).ToList());
         }
         var notgenerated = entities.Where(e => e.GeneratedDomain == null).ToList();
         GeneratedCodeStats($@"{location}", entities);
+    }
+
+    private static void GenerateMapperProfile(
+        string location, 
+        AutobahnDomain domain,
+        List<AutobahnEntity> models)
+    {
+        using (var stream = File.CreateText($@"{location}"))
+        {
+            stream.WriteLine($"//**********************************************************");
+            stream.WriteLine($"//* DomainName: {domain.Name}");
+            stream.WriteLine($"//* FileName:   {domain.Module}Profile.g.cs");
+            stream.WriteLine($"//**********************************************************");
+            stream.WriteLine();
+            stream.WriteLine($"/// <summary>");
+            stream.WriteLine($"/// The mapper profile for the {domain.Name} domain");
+            stream.WriteLine($"/// </summary>");
+            stream.WriteLine($"public partial class {domain.Module}Profile : Profile");
+            stream.WriteLine($"{{");
+            stream.WriteLine($"    /// <summary>");
+            stream.WriteLine($"    /// Known {domain.Name} maps to configure");
+            stream.WriteLine($"    /// </summary>");
+            stream.WriteLine($"    public {domain.Module}Profile()");
+            stream.WriteLine($"    {{");
+            var modelsGenerated = new List<string>();
+            foreach (var model in models.Where(m => !m.Name.StartsWith("Ref")).OrderBy(o => o.Name))
+            {
+                if (modelsGenerated.Contains(model.Name))
+                {
+                    continue;
+                }
+                modelsGenerated.Add(model.Name);
+                stream.WriteLine($"        // Maps for I{model.Name} types");
+                stream.WriteLine($"        CreateMap<{model.Name}Model, {model.Name}Entity>();");
+                stream.WriteLine($"        CreateMap<{model.Name}Model, {model.Name}ViewModel>();");
+                stream.WriteLine($"        CreateMap<{model.Name}Entity, {model.Name}Model>();");
+                stream.WriteLine($"        CreateMap<{model.Name}ViewModel, {model.Name}Model>();");
+                stream.WriteLine();
+            }
+            stream.WriteLine("    }");
+            stream.WriteLine("}");
+        }
     }
 
     /// <summary>
@@ -100,10 +143,18 @@ internal class MauiModule
     /// Generate the global usings for the project
     /// </summary>
     /// <param name="location">The location of the file generated</param>
-    private static void GenerateUsings(string location)
+    private static void GenerateUsings(string location, AutobahnDomain domain)
     {
         using (var stream = File.CreateText($@"{location}\Usings.cs"))
         {
+            stream.WriteLine($"//**********************************************************");
+            stream.WriteLine($"//* DomainName: {domain.Name}");
+            stream.WriteLine($"//* FileName:   {domain.Module}Usings.cs");
+            stream.WriteLine($"//**********************************************************");
+            stream.WriteLine();
+            stream.WriteLine($"/// <summary>");
+            stream.WriteLine($"/// The global usings for the {domain.Name} domain");
+            stream.WriteLine($"/// </summary>");
             stream.WriteLine("global using System;");
             stream.WriteLine("global using System.ComponentModel.DataAnnotations.Schema;");
             stream.WriteLine("global using System.ComponentModel.DataAnnotations;");
@@ -245,7 +296,6 @@ internal class MauiModule
         {
             GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
             stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
-            stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
             if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
             {
                 stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
@@ -408,7 +458,6 @@ internal class MauiModule
             using (var stream = File.CreateText($@"{filePath}\{model.Name}ViewModel.g.cs"))
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.ViewModel);
-                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
                 stream.WriteLine($@"public partial class {model.Name}ViewModel : ObservableValidator, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateViewModelConstructor(stream, model);
@@ -446,7 +495,6 @@ internal class MauiModule
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
                 stream.WriteLine($@"[Table(""{model.Name}"", Schema = ""{domain.Module}"")]");
-                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Model)"")]");
                 if (!string.IsNullOrEmpty(model.AutobahnElement?.Definition))
                 {
                     stream.WriteLine($@"[Comment(""{model.AutobahnElement.Definition.Replace("\"", "\\u0022")}"")]");
@@ -519,7 +567,6 @@ internal class MauiModule
             using (var stream = File.CreateText($@"{filePath}\{model.Name}Model.g.cs"))
             {
                 GenerateFileHeader(stream, domain, model, TypeBeingGeneratedEnum.Entity);
-                stream.WriteLine($@"[AutoMap(""typeof({model.Name}Entity)"")]");
                 stream.WriteLine($@"public partial class {model.Name}Model : AutobahnBaseModel, I{model.Name}");
                 stream.WriteLine($@"{{");
                 GenerateProperties(stream, model, TypeBeingGeneratedEnum.Model);
@@ -1178,15 +1225,22 @@ internal class MauiModule
                 {
                     var projnode = new XElement("ProjectReference");
                     projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Education.Common\Autobahn.Education.Common\Autobahn.Education.Common.csproj"));
+                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj" />
+                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj" />
+                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Role\Autobahn.Core.Role\Autobahn.Core.Role.csproj" />
+                    //< ProjectReference Include = "..\..\Core\Autobahn.Core\Autobahn.Core.csproj" />
                     refnode.Add(projnode);
                 }
                 if (domain.Module == "Common")
                 {
                     var projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj"));
+                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj"));
                     refnode.Add(projnode);
                     projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj"));
+                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj"));
+                    refnode.Add(projnode);
+                    projnode = new XElement("ProjectReference");
+                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Role\Autobahn.Core.Role\Autobahn.Core.Role.csproj"));
                     refnode.Add(projnode);
                 }
                 if (filePath.EndsWith(".maui"))

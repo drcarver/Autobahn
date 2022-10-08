@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
-namespace ScafoldADatabase.Entities
+﻿namespace ScafoldADatabase.Entities
 {
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("FinancialAccount")]
+    [Table("FinancialAccount", Schema = "Finance")]
     public partial class FinancialAccount
     {
         public FinancialAccount()

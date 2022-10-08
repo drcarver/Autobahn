@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentAcademicHonor")]
-    public partial class K12studentAcademicHonor
+    [Table("K12StudentAcademicHonor", Schema = "K12")]
+    public partial class K12StudentAcademicHonor
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("K12StudentAcademicHonorId")]
-        public int K12studentAcademicHonorId { get; set; }
+        public int K12StudentAcademicHonorId { get; set; }
         /// <summary>
         /// Foreign key - OrganizationPersonRole.
         /// </summary>

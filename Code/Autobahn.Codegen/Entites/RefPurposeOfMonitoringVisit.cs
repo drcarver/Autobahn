@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPurposeOfMonitoringVisit")]
+    [Table("RefPurposeOfMonitoringVisit", Schema = "EarlyLearning")]
     public partial class RefPurposeOfMonitoringVisit
     {
         public RefPurposeOfMonitoringVisit()
         {
-            ElorganizationMonitorings = new HashSet<ElorganizationMonitoring>();
+            ElorganizationMonitorings = new HashSet<ELOrganizationMonitoring>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefPurposeOfMonitoringVisits")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefPurposeOfMonitoringVisit")]
-        public virtual ICollection<ElorganizationMonitoring> ElorganizationMonitorings { get; set; }
+        public virtual ICollection<ELOrganizationMonitoring> ElorganizationMonitorings { get; set; }
     }
 }

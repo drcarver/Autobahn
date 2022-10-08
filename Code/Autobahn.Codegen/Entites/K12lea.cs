@@ -9,24 +9,23 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12Lea")]
-    public partial class K12lea
+    [Table("K12Lea", Schema = "K12")]
+    public partial class K12Lea
     {
-        public K12lea()
+        public K12Lea()
         {
-            K12leaFederalReportings = new HashSet<K12leaFederalReporting>();
-            K12leaGradeLevelsApproveds = new HashSet<K12leaGradeLevelsApproved>();
-            K12leaGradeOffereds = new HashSet<K12leaGradeOffered>();
-            K12leaPreKeligibilities = new HashSet<K12leaPreKeligibility>();
+            K12leaFederalReportings = new HashSet<K12LeaFederalReporting>();
+            K12leaGradeLevelsApproveds = new HashSet<K12LeaGradeLevelsApproved>();
+            K12leaGradeOffereds = new HashSet<K12LeaGradeOffered>();
+            K12leaPreKeligibilities = new HashSet<K12LeaPreKEligibility>();
             K12leaPreKeligibleAgesIdeas = new HashSet<K12leaPreKeligibleAgesIdea>();
-            K12leaSafeDrugFrees = new HashSet<K12leaSafeDrugFree>();
-            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12leaTitleIiiprofessionalDevelopment>();
-            K12leaTitleIsupportServices = new HashSet<K12leaTitleIsupportService>();
+            K12leaSafeDrugFrees = new HashSet<K12LeaSafeDrugFree>();
+            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12LeaTitleIIIProfessionalDevelopment>();
+            K12leaTitleIsupportServices = new HashSet<K12LeaTitleISupportService>();
         }
 
         [Key]
-        [Column("K12LeaId")]
-        public int K12leaId { get; set; }
+        public int K12LeaId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -85,20 +84,20 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("K12leas")]
         public virtual RefPublicSchoolChoiceStatus? RefPublicSchoolChoiceStatus { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaFederalReporting> K12leaFederalReportings { get; set; }
+        public virtual ICollection<K12LeaFederalReporting> K12leaFederalReportings { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
+        public virtual ICollection<K12LeaGradeLevelsApproved> K12leaGradeLevelsApproveds { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaGradeOffered> K12leaGradeOffereds { get; set; }
+        public virtual ICollection<K12LeaGradeOffered> K12leaGradeOffereds { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaPreKeligibility> K12leaPreKeligibilities { get; set; }
+        public virtual ICollection<K12LeaPreKEligibility> K12leaPreKeligibilities { get; set; }
         [InverseProperty("K12lea")]
         public virtual ICollection<K12leaPreKeligibleAgesIdea> K12leaPreKeligibleAgesIdeas { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaSafeDrugFree> K12leaSafeDrugFrees { get; set; }
+        public virtual ICollection<K12LeaSafeDrugFree> K12leaSafeDrugFrees { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaTitleIiiprofessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
+        public virtual ICollection<K12LeaTitleIIIProfessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
         [InverseProperty("K12lea")]
-        public virtual ICollection<K12leaTitleIsupportService> K12leaTitleIsupportServices { get; set; }
+        public virtual ICollection<K12LeaTitleISupportService> K12leaTitleIsupportServices { get; set; }
     }
 }

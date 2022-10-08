@@ -6,12 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("K12LeaFederalFunds")]
-    public partial class K12leaFederalFund
+    [Table("K12LeaFederalFunds", Schema = "K12")]
+    public partial class K12LeaFederalFunds
     {
         [Key]
-        [Column("K12LeaFederalFundsId")]
-        public int K12leaFederalFundsId { get; set; }
+        public int K12LeaFederalFundsId { get; set; }
         public int OrganizationCalendarSessionId { get; set; }
         [Column(TypeName = "numeric(12, 2)")]
         public decimal? InnovativeProgramsFundsReceived { get; set; }

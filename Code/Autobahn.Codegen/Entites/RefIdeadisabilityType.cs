@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIDEADisabilityType")]
-    public partial class RefIdeadisabilityType
+    [Table("RefIDEADisabilityType", Schema = "Person")]
+    public partial class RefIDEADisabilityType
     {
-        public RefIdeadisabilityType()
+        public RefIDEADisabilityType()
         {
             PersonDisabilities = new HashSet<PersonDisability>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIDEADisabilityTypeId")]
-        public int RefIdeadisabilityTypeId { get; set; }
+        public int RefIDEADisabilityTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentRegistration")]
+    [Table("AssessmentRegistration", Schema = "Assessment")]
     [Index("PersonId", Name = "IX_AssReg_PersonId")]
     public partial class AssessmentRegistration
     {
@@ -47,8 +47,7 @@ namespace ScafoldADatabase.Entities
         [Column(TypeName = "datetime")]
         public DateTime? AssessmentRegistrationCompletionStatusDateTime { get; set; }
         public bool? StateFullAcademicYear { get; set; }
-        [Column("LEAFullAcademicYear")]
-        public bool? LeafullAcademicYear { get; set; }
+        public bool? LEAFullAcademicYear { get; set; }
         public bool? SchoolFullAcademicYear { get; set; }
         public int? RefAssessmentParticipationIndicatorId { get; set; }
         public int? RefAssessmentPurposeId { get; set; }

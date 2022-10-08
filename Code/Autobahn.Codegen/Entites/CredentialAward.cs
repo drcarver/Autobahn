@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialAward")]
+    [Table("CredentialAward", Schema = "Postsecondary")]
     public partial class CredentialAward
     {
         public CredentialAward()
@@ -24,9 +24,8 @@ namespace ScafoldADatabase.Entities
         public int CredentialIssuerId { get; set; }
         public int? PersonId { get; set; }
         public string? AdvancedStandingDescription { get; set; }
-        [Column("AdvancedStandingURL")]
         [StringLength(512)]
-        public string? AdvancedStandingUrl { get; set; }
+        public string? AdvancedStandingURL { get; set; }
         [StringLength(300)]
         public string? ApproverName { get; set; }
         [Column(TypeName = "date")]
@@ -36,9 +35,8 @@ namespace ScafoldADatabase.Entities
         /// </summary>
         [Column(TypeName = "date")]
         public DateTime? CredentialAwardEndDate { get; set; }
-        [Column("EvidenceURL")]
         [StringLength(512)]
-        public string? EvidenceUrl { get; set; }
+        public string? EvidenceURL { get; set; }
         [Column(TypeName = "date")]
         public DateTime? RevokedDate { get; set; }
         public bool? RevokedIndicator { get; set; }

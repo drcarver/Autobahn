@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialIssuer")]
+    [Table("CredentialIssuer", Schema = "Credentials")]
     public partial class CredentialIssuer
     {
         public CredentialIssuer()
@@ -21,17 +21,14 @@ namespace ScafoldADatabase.Entities
         [Key]
         public int CredentialIssuerId { get; set; }
         public int OrganizationId { get; set; }
-        [Column("AwardIssuerOriginURL")]
         [StringLength(512)]
-        public string? AwardIssuerOriginUrl { get; set; }
+        public string? AwardIssuerOriginURL { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RevocationListURL")]
         [StringLength(512)]
-        public string? RevocationListUrl { get; set; }
-        [Column("RefCTDLOrganizationTypeId")]
-        public int? RefCtdlorganizationTypeId { get; set; }
+        public string? RevocationListURL { get; set; }
+        public int? RefCTDLOrganizationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -56,7 +53,7 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefCtdlorganizationTypeId")]
         [InverseProperty("CredentialIssuers")]
-        public virtual RefCtdlorganizationType? RefCtdlorganizationType { get; set; }
+        public virtual RefCTDLOrganizationType? RefCtdlorganizationType { get; set; }
         [InverseProperty("CredentialIssuer")]
         public virtual ICollection<CredentialAward> CredentialAwards { get; set; }
         [InverseProperty("CredentialIssuer")]

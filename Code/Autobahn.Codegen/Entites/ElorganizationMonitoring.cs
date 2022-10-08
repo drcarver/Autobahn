@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELOrganizationMonitoring")]
-    public partial class ElorganizationMonitoring
+    [Table("ELOrganizationMonitoring", Schema = "EarlyLearning")]
+    public partial class ELOrganizationMonitoring
     {
         /// <summary>
         /// Surrogate key
         /// </summary>
         [Key]
-        [Column("ELOrganizationMonitoringId")]
-        public int ElorganizationMonitoringId { get; set; }
+        public int ELOrganizationMonitoringId { get; set; }
         /// <summary>
         /// Surrogate key from Organization.
         /// </summary>

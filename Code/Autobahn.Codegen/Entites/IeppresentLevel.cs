@@ -10,11 +10,10 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
     [Table("IEPPresentLevel")]
-    public partial class IeppresentLevel
+    public partial class IEPPresentLevel
     {
         [Key]
-        [Column("IEPPresentLevelId")]
-        public int IeppresentLevelId { get; set; }
+        public int IEPPresentLevelId { get; set; }
         public int IndividualizedProgramId { get; set; }
         public string? AcademicDescription { get; set; }
         public string? FunctionalDescription { get; set; }

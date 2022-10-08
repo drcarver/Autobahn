@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 namespace ScafoldADatabase.Entities
 {
     [Table("RefPESCAwardLevelType")]
-    public partial class RefPescawardLevelType
+    public partial class RefPESCAwardLevelType
     {
-        public RefPescawardLevelType()
+        public RefPESCAwardLevelType()
         {
             PsStudentAcademicAwards = new HashSet<PsStudentAcademicAward>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefPESCAwardLevelTypeId")]
-        public int RefPescawardLevelTypeId { get; set; }
+        public int RefPESCAwardLevelTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

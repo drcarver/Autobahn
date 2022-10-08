@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefActivityTimeMeasurementType")]
+    [Table("RefActivityTimeMeasurementType", Schema = "K12")]
     public partial class RefActivityTimeMeasurementType
     {
         public RefActivityTimeMeasurementType()
         {
-            K12studentActivities = new HashSet<K12studentActivity>();
+            K12studentActivities = new HashSet<K12StudentActivity>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefActivityTimeMeasurementTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefActivityTimeMeasurementType")]
-        public virtual ICollection<K12studentActivity> K12studentActivities { get; set; }
+        public virtual ICollection<K12StudentActivity> K12studentActivities { get; set; }
     }
 }

@@ -9,13 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentEnrollment")]
+    [Table("K12StudentEnrollment", Schema = "K12")]
     [Index("OrganizationPersonRoleId", Name = "IX_OrganizationPersonRoleId")]
-    public partial class K12studentEnrollment
+    public partial class K12StudentEnrollment
     {
         [Key]
-        [Column("K12StudentEnrollmentId")]
-        public int K12studentEnrollmentId { get; set; }
+        public int K12StudentEnrollmentId { get; set; }
         public int OrganizationPersonRoleId { get; set; }
         public bool? DisplacedStudentStatus { get; set; }
         [Column("FirstEntryDateIntoUSSchool", TypeName = "date")]

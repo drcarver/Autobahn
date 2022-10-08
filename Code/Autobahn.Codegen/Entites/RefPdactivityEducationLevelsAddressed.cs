@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPDActivityEducationLevelsAddressed")]
-    public partial class RefPdactivityEducationLevelsAddressed
+    [Table("RefPDActivityEducationLevelsAddressed", Schema = "Common")]
+    public partial class RefPDActivityEducationLevelsAddressed
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPDActivityEducationLevelsAddressedId")]
-        public int RefPdactivityEducationLevelsAddressedId { get; set; }
+        public int RefPDActivityEducationLevelsAddressedId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("ProgramParticipationAttainment")]
+    [Table("ProgramParticipationAttainment", Schema = "AdultEducation")]
     public partial class ProgramParticipationAttainment
     {
         [Key]

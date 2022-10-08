@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencySet")]
+    [Table("CompetencySet", Schema = "Competencies")]
     public partial class CompetencySet
     {
         public CompetencySet()
@@ -31,7 +31,6 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - CompentencySet (this table)
         /// </summary>
-        [Column("ChildOf_CompetencySet")]
         public int? ChildOfCompetencySet { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.

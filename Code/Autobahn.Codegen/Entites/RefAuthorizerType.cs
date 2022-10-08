@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefAuthorizerType")]
+    [Table("RefAuthorizerType", Schema ="K12")]
     public partial class RefAuthorizerType
     {
         public RefAuthorizerType()

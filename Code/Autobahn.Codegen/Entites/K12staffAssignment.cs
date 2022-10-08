@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StaffAssignment")]
-    public partial class K12staffAssignment
+    [Table("K12StaffAssignment", Schema = "K12")]
+    public partial class K12StaffAssignment
     {
-        public K12staffAssignment()
+        public K12StaffAssignment()
         {
             TeacherStudentDataLinkExclusions = new HashSet<TeacherStudentDataLinkExclusion>();
         }
 
         [Key]
-        [Column("K12StaffAssignmentId")]
-        public int K12staffAssignmentId { get; set; }
+        public int K12StaffAssignmentId { get; set; }
         public int OrganizationPersonRoleId { get; set; }
         public bool? PrimaryAssignment { get; set; }
         public bool? TeacherOfRecord { get; set; }
@@ -35,21 +34,18 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefK12StaffClassificationId")]
-        public int? RefK12staffClassificationId { get; set; }
+        public int? RefK12StaffClassificationId { get; set; }
         public int? RefProfessionalEducationJobClassificationId { get; set; }
         public int? RefTeachingAssignmentRoleId { get; set; }
         public int? RefClassroomPositionTypeId { get; set; }
         public int? RefSpecialEducationStaffCategoryId { get; set; }
         public int? RefSpecialEducationAgeGroupTaughtId { get; set; }
         public int? RefMepStaffCategoryId { get; set; }
-        [Column("RefTitleIProgramStaffCategoryId")]
-        public int? RefTitleIprogramStaffCategoryId { get; set; }
+        public int? RefTitleIProgramStaffCategoryId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefEDFactsTeacherInexperiencedStatusId")]
-        public int? RefEdfactsTeacherInexperiencedStatusId { get; set; }
+        public int? RefEDFactsTeacherInexperiencedStatusId { get; set; }
         public int? RefEmergencyOrProvisionalCredentialStatusId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -85,7 +81,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefEmergencyOrProvisionalCredentialStatus? RefEmergencyOrProvisionalCredentialStatus { get; set; }
         [ForeignKey("RefK12staffClassificationId")]
         [InverseProperty("K12staffAssignments")]
-        public virtual RefK12staffClassification? RefK12staffClassification { get; set; }
+        public virtual RefK12StaffClassification? RefK12staffClassification { get; set; }
         [ForeignKey("RefMepStaffCategoryId")]
         [InverseProperty("K12staffAssignments")]
         public virtual RefMepStaffCategory? RefMepStaffCategory { get; set; }
@@ -106,7 +102,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefTeachingAssignmentRole? RefTeachingAssignmentRole { get; set; }
         [ForeignKey("RefTitleIprogramStaffCategoryId")]
         [InverseProperty("K12staffAssignments")]
-        public virtual RefTitleIprogramStaffCategory? RefTitleIprogramStaffCategory { get; set; }
+        public virtual RefTitleIProgramStaffCategory? RefTitleIprogramStaffCategory { get; set; }
         [InverseProperty("K12staffAssignment")]
         public virtual ICollection<TeacherStudentDataLinkExclusion> TeacherStudentDataLinkExclusions { get; set; }
     }

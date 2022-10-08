@@ -9,18 +9,17 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentCourseSection")]
-    public partial class K12studentCourseSection
+    [Table("K12StudentCourseSection", Schema = "K12")]
+    public partial class K12StudentCourseSection
     {
-        public K12studentCourseSection()
+        public K12StudentCourseSection()
         {
-            K12studentCourseSectionMarks = new HashSet<K12studentCourseSectionMark>();
+            K12studentCourseSectionMarks = new HashSet<K12StudentCourseSectionMark>();
             TeacherStudentDataLinkExclusions = new HashSet<TeacherStudentDataLinkExclusion>();
         }
 
         [Key]
-        [Column("K12StudentCourseSectionId")]
-        public int K12studentCourseSectionId { get; set; }
+        public int K12StudentCourseSectionId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -155,7 +154,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("K12studentCourseSections")]
         public virtual RefProgressLevel? RefProgressLevel { get; set; }
         [InverseProperty("K12studentCourseSection")]
-        public virtual ICollection<K12studentCourseSectionMark> K12studentCourseSectionMarks { get; set; }
+        public virtual ICollection<K12StudentCourseSectionMark> K12studentCourseSectionMarks { get; set; }
         [InverseProperty("K12studentCourseSection")]
         public virtual ICollection<TeacherStudentDataLinkExclusion> TeacherStudentDataLinkExclusions { get; set; }
     }

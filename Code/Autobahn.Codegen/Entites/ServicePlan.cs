@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ServicePlan")]
+    [Table("ServicePlan", Schema = "Common")]
     public partial class ServicePlan
     {
         public ServicePlan()

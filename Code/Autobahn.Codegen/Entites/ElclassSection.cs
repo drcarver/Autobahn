@@ -9,18 +9,17 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELClassSection")]
-    public partial class ElclassSection
+    [Table("ELClassSection", Schema = "EarlyLearning")]
+    public partial class ELClassSection
     {
-        public ElclassSection()
+        public ELClassSection()
         {
-            ElclassSectionServices = new HashSet<ElclassSectionService>();
-            Elenrollments = new HashSet<Elenrollment>();
+            ElclassSectionServices = new HashSet<ELClassSectionService>();
+            Elenrollments = new HashSet<ELEnrollment>();
         }
 
         [Key]
-        [Column("ELClassSectionId")]
-        public int ElclassSectionId { get; set; }
+        public int ELClassSectionId { get; set; }
         /// <summary>
         /// Surrogate key from Organization
         /// </summary>
@@ -37,8 +36,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELProgramAnnualOperatingWeeks")]
-        public int? ElprogramAnnualOperatingWeeks { get; set; }
+        public int? ELProgramAnnualOperatingWeeks { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -84,8 +82,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("ElclassSections")]
         public virtual RefServiceOption? RefServiceOption { get; set; }
         [InverseProperty("ElclassSection")]
-        public virtual ICollection<ElclassSectionService> ElclassSectionServices { get; set; }
+        public virtual ICollection<ELClassSectionService> ElclassSectionServices { get; set; }
         [InverseProperty("ElclassSection")]
-        public virtual ICollection<Elenrollment> Elenrollments { get; set; }
+        public virtual ICollection<ELEnrollment> Elenrollments { get; set; }
     }
 }

@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProfessionalDevelopmentActivity")]
+    [Table("ProfessionalDevelopmentActivity", Schema = "Common")]
     public partial class ProfessionalDevelopmentActivity
     {
         public ProfessionalDevelopmentActivity()
         {
-            PdactivityEducationLevels = new HashSet<PdactivityEducationLevel>();
+            PdactivityEducationLevels = new HashSet<PDActivityEducationLevel>();
             ProfessionalDevelopmentSessions = new HashSet<ProfessionalDevelopmentSession>();
             StaffProfessionalDevelopmentActivities = new HashSet<StaffProfessionalDevelopmentActivity>();
         }
@@ -147,24 +147,24 @@ namespace ScafoldADatabase.Entities
         public virtual RefCourseCreditUnit? RefCourseCreditUnit { get; set; }
         [ForeignKey("RefPdactivityApprovedPurposeId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
-        public virtual RefPdactivityApprovedPurpose? RefPdactivityApprovedPurpose { get; set; }
+        public virtual RefPDActivityApprovedPurpose? RefPdactivityApprovedPurpose { get; set; }
         [ForeignKey("RefPdactivityCreditTypeId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
-        public virtual RefPdactivityCreditType? RefPdactivityCreditType { get; set; }
+        public virtual RefPDActivityCreditType? RefPdactivityCreditType { get; set; }
         [ForeignKey("RefPdactivityLevelId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
         public virtual RefPdactivityLevel? RefPdactivityLevel { get; set; }
         [ForeignKey("RefPdactivityTypeId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
-        public virtual RefPdactivityType? RefPdactivityType { get; set; }
+        public virtual RefPDActivityType? RefPdactivityType { get; set; }
         [ForeignKey("RefPdaudienceTypeId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
-        public virtual RefPdaudienceType? RefPdaudienceType { get; set; }
+        public virtual RefPDAudienceType? RefPdaudienceType { get; set; }
         [ForeignKey("RefProfessionalDevelopmentFinancialSupportId")]
         [InverseProperty("ProfessionalDevelopmentActivities")]
         public virtual RefProfessionalDevelopmentFinancialSupport? RefProfessionalDevelopmentFinancialSupport { get; set; }
         [InverseProperty("ProfessionalDevelopmentActivity")]
-        public virtual ICollection<PdactivityEducationLevel> PdactivityEducationLevels { get; set; }
+        public virtual ICollection<PDActivityEducationLevel> PdactivityEducationLevels { get; set; }
         [InverseProperty("ProfessionalDevelopmentActivity")]
         public virtual ICollection<ProfessionalDevelopmentSession> ProfessionalDevelopmentSessions { get; set; }
         [InverseProperty("ProfessionalDevelopmentActivity")]

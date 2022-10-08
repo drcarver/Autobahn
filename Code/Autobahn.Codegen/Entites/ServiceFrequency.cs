@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ServiceFrequency")]
+    [Table("ServiceFrequency", Schema = "Common")]
     public partial class ServiceFrequency
     {
         [Key]
@@ -19,6 +19,7 @@ namespace ScafoldADatabase.Entities
         public int? FrequencyLength { get; set; }
         public int? InstancesPerCycle { get; set; }
         public int? RefFrequencyUnitId { get; set; }
+
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

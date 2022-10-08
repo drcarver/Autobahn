@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPSExitOrWithdrawalType")]
-    public partial class RefPsexitOrWithdrawalType
+    [Table("RefPSExitOrWithdrawalType", Schema = "Postsecondary")]
+    public partial class RefPSExitOrWithdrawalType
     {
-        public RefPsexitOrWithdrawalType()
+        public RefPSExitOrWithdrawalType()
         {
             PsStudentEnrollments = new HashSet<PsStudentEnrollment>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPSExitOrWithdrawalTypeId")]
-        public int RefPsexitOrWithdrawalTypeId { get; set; }
+        public int RefPSExitOrWithdrawalTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCareerCluster")]
+    [Table("RefCareerCluster", Schema = "Common")]
     public partial class RefCareerCluster
     {
         public RefCareerCluster()
@@ -17,8 +17,8 @@ namespace ScafoldADatabase.Entities
             AeCourses = new HashSet<AeCourse>();
             CredentialDefinitions = new HashSet<CredentialDefinition>();
             CteCourses = new HashSet<CteCourse>();
-            K12courses = new HashSet<K12course>();
-            PsstudentPrograms = new HashSet<PsstudentProgram>();
+            K12courses = new HashSet<K12Course>();
+            PsstudentPrograms = new HashSet<PSStudentProgram>();
         }
 
         /// <summary>
@@ -59,8 +59,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefCareerCluster")]
         public virtual ICollection<CteCourse> CteCourses { get; set; }
         [InverseProperty("RefCareerCluster")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("RefCareerCluster")]
-        public virtual ICollection<PsstudentProgram> PsstudentPrograms { get; set; }
+        public virtual ICollection<PSStudentProgram> PsstudentPrograms { get; set; }
     }
 }

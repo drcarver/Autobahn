@@ -4,12 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
 namespace ScafoldADatabase.Entities
 {
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProgramParticipationFoodService")]
+    [Table("ProgramParticipationFoodService", Schema = "Common")]
     public partial class ProgramParticipationFoodService
     {
         [Key]

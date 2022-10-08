@@ -9,14 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefProfessionalTechnicalCredentialType")]
+    [Table("RefProfessionalTechnicalCredentialType", Schema = "K12")]
     public partial class RefProfessionalTechnicalCredentialType
     {
         public RefProfessionalTechnicalCredentialType()
         {
             AeStudentAcademicRecords = new HashSet<AeStudentAcademicRecord>();
             CteStudentAcademicRecords = new HashSet<CteStudentAcademicRecord>();
-            K12studentAcademicRecords = new HashSet<K12studentAcademicRecord>();
+            K12studentAcademicRecords = new HashSet<K12StudentAcademicRecord>();
             PsStudentAcademicRecords = new HashSet<PsStudentAcademicRecord>();
             WorkforceProgramParticipations = new HashSet<WorkforceProgramParticipation>();
         }
@@ -57,7 +57,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefProfessionalTechnicalCredentialType")]
         public virtual ICollection<CteStudentAcademicRecord> CteStudentAcademicRecords { get; set; }
         [InverseProperty("RefProfessionalTechnicalCredentialType")]
-        public virtual ICollection<K12studentAcademicRecord> K12studentAcademicRecords { get; set; }
+        public virtual ICollection<K12StudentAcademicRecord> K12studentAcademicRecords { get; set; }
         [InverseProperty("RefProfessionalTechCredentialType")]
         public virtual ICollection<PsStudentAcademicRecord> PsStudentAcademicRecords { get; set; }
         [InverseProperty("RefProfessionalTechnicalCredentialType")]

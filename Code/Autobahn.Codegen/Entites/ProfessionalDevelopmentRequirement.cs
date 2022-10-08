@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProfessionalDevelopmentRequirement")]
+    [Table("ProfessionalDevelopmentRequirement", Schema = "Common")]
     public partial class ProfessionalDevelopmentRequirement
     {
         public ProfessionalDevelopmentRequirement()

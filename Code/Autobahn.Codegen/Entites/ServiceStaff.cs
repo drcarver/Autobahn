@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ServiceStaff")]
+    [Table("ServiceStaff", Schema = "Common")]
     [Index("OrganizationPersonRoleId", "RefSpecialEducationStaffCategoryId", Name = "IX_OrganizationPersonRole_RefSpecialEducationStaffCategory", IsUnique = true)]
     public partial class ServiceStaff
     {

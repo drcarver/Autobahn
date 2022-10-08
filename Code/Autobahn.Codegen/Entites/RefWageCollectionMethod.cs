@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefWageCollectionMethod")]
+    [Table("RefWageCollectionMethod", Schema = "EarlyLearning")]
     public partial class RefWageCollectionMethod
     {
         public RefWageCollectionMethod()
         {
-            ElstaffEmployments = new HashSet<ElstaffEmployment>();
+            ElstaffEmployments = new HashSet<ELStaffEmployment>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefWageCollectionMethods")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefWageCollectionMethod")]
-        public virtual ICollection<ElstaffEmployment> ElstaffEmployments { get; set; }
+        public virtual ICollection<ELStaffEmployment> ElstaffEmployments { get; set; }
     }
 }

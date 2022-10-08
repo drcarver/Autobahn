@@ -9,16 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefWorkbasedLearningOpportunityType")]
+    [Table("RefWorkbasedLearningOpportunityType", Schema="Common")]
     public partial class RefWorkbasedLearningOpportunityType
     {
         public RefWorkbasedLearningOpportunityType()
         {
-            K12courses = new HashSet<K12course>();
-            ProgramParticipationAes = new HashSet<ProgramParticipationAe>();
+            K12courses = new HashSet<K12Course>();
+            ProgramParticipationAes = new HashSet<ProgramParticipationAE>();
             ProgramParticipationCtes = new HashSet<ProgramParticipationCte>();
             PsSections = new HashSet<PsSection>();
-            PsstudentPrograms = new HashSet<PsstudentProgram>();
+            PsstudentPrograms = new HashSet<PSStudentProgram>();
         }
 
         /// <summary>
@@ -53,14 +53,14 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefWorkbasedLearningOpportunityTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefWorkbasedLearningOpportunityType")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("RefWorkbasedLearningOpportunityType")]
-        public virtual ICollection<ProgramParticipationAe> ProgramParticipationAes { get; set; }
+        public virtual ICollection<ProgramParticipationAE> ProgramParticipationAes { get; set; }
         [InverseProperty("RefWorkbasedLearningOpportunityType")]
         public virtual ICollection<ProgramParticipationCte> ProgramParticipationCtes { get; set; }
         [InverseProperty("RefWorkbasedLearningOpportunityType")]
         public virtual ICollection<PsSection> PsSections { get; set; }
         [InverseProperty("RefWorkbasedLearningOpportunityType")]
-        public virtual ICollection<PsstudentProgram> PsstudentPrograms { get; set; }
+        public virtual ICollection<PSStudentProgram> PsstudentPrograms { get; set; }
     }
 }

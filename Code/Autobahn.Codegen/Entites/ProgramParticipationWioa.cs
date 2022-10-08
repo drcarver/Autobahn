@@ -6,28 +6,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("ProgramParticipationWIOA")]
-    public partial class ProgramParticipationWioa
+    [Table("ProgramParticipationWIOA", Schema = "Person")]
+    public partial class ProgramParticipationWIOA
     {
-        public ProgramParticipationWioa()
+        public ProgramParticipationWIOA()
         {
-            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWioabarrier>();
+            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWIOABarriers>();
         }
 
         [Key]
-        [Column("ProgramParticipationWIOAId")]
-        public int ProgramParticipationWioaid { get; set; }
+        public int ProgramParticipationWIOAId { get; set; }
         public int PersonProgramParticipationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("WIOACareerServices")]
-        public bool? WioacareerServices { get; set; }
+        public bool? WIOACareerServices { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("WIOATrainingServices")]
-        public bool? WioatrainingServices { get; set; }
+        public bool? WIOATrainingServices { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -51,6 +48,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("ProgramParticipationWioas")]
         public virtual RecordStatus? RecordStatus { get; set; }
         [InverseProperty("ProgramParticipationWioa")]
-        public virtual ICollection<ProgramParticipationWioabarrier> ProgramParticipationWioabarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWioabarriers { get; set; }
     }
 }

@@ -9,10 +9,9 @@ namespace ScafoldADatabase.Entities
     [Table("_CEDSElements")]
     public partial class Cedselement
     {
-        [Column("GlobalID")]
         [StringLength(20)]
         [Unicode(false)]
-        public string? GlobalId { get; set; }
+        public string? GlobalID { get; set; }
         [StringLength(150)]
         [Unicode(false)]
         public string ElementName { get; set; } = null!;
@@ -27,16 +26,14 @@ namespace ScafoldADatabase.Entities
         public bool HasOptionSet { get; set; }
         [Unicode(false)]
         public string? UsageNotes { get; set; }
-        [Column("URL")]
         [StringLength(512)]
         [Unicode(false)]
-        public string? Url { get; set; }
+        public string? URL { get; set; }
         [StringLength(20)]
         [Unicode(false)]
         public string? Version { get; set; }
         [Key]
-        [Column("TermID")]
-        public int TermId { get; set; }
+        public int TermID { get; set; }
         [StringLength(20)]
         [Unicode(false)]
         public string? ChangedInThisVersionInd { get; set; }

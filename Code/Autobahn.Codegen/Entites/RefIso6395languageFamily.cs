@@ -10,14 +10,13 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefISO6395LanguageFamily")]
-    public partial class RefIso6395languageFamily
+    public partial class RefISO6395LanguageFamily
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefISO6395LanguageFamilyId")]
-        public int RefIso6395languageFamilyId { get; set; }
+        public int RefISO6395LanguageFamilyId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

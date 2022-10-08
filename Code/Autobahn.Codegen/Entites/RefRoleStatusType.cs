@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// List of role status types.
     /// </summary>
-    [Table("RefRoleStatusType")]
+    [Table("RefRoleStatusType", Schema = "Role")]
     public partial class RefRoleStatusType
     {
         public RefRoleStatusType()

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingCommunityUseSpaceType")]
+    [Table("RefBuildingCommunityUseSpaceType", Schema = "Facilities")]
     public partial class RefBuildingCommunityUseSpaceType
     {
         public RefBuildingCommunityUseSpaceType()

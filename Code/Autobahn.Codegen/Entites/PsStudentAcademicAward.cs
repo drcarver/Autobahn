@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsStudentAcademicAward")]
+    [Table("PsStudentAcademicAward", Schema = "Postsecondary")]
     public partial class PsStudentAcademicAward
     {
         /// <summary>
@@ -71,6 +71,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefAcademicAwardPrerequisiteType? RefAcademicAwardPrerequisiteType { get; set; }
         [ForeignKey("RefPescawardLevelTypeId")]
         [InverseProperty("PsStudentAcademicAwards")]
-        public virtual RefPescawardLevelType? RefPescawardLevelType { get; set; }
+        public virtual RefPESCAwardLevelType? RefPescawardLevelType { get; set; }
     }
 }

@@ -6,20 +6,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIPEDSGASBFunctionalExpense")]
-    public partial class RefIpedsgasbfunctionalExpense
+    [Table("RefIPEDSGASBFunctionalExpense", Schema = "Finance")]
+    public partial class RefIPEDSGASBFunctionalExpense
     {
-        public RefIpedsgasbfunctionalExpense()
+        public RefIPEDSGASBFunctionalExpense()
         {
-            Ipedsfinances = new HashSet<Ipedsfinance>();
+            Ipedsfinances = new HashSet<IPEDSFinance>();
         }
 
         /// <summary>
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIPEDSGASBFunctionalExpenseId")]
-        public int RefIpedsgasbfunctionalExpenseId { get; set; }
+        public int RefIPEDSGASBFunctionalExpenseId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -53,6 +52,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefIpedsgasbfunctionalExpenses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefIpedsgasbfunctionalExpense")]
-        public virtual ICollection<Ipedsfinance> Ipedsfinances { get; set; }
+        public virtual ICollection<IPEDSFinance> Ipedsfinances { get; set; }
     }
 }

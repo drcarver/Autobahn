@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefBlendedLearningModelType")]
+    [Table("RefBlendedLearningModelType", Schema ="K12")]
     public partial class RefBlendedLearningModelType
     {
         public RefBlendedLearningModelType()
         {
-            K12courses = new HashSet<K12course>();
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12courses = new HashSet<K12Course>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefBlendedLearningModelTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefBlendedLearningModelType")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("RefBlendedLearningModelType")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
     }
 }

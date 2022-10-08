@@ -10,16 +10,15 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefTitleISchoolStatus")]
-    public partial class RefTitleIschoolStatus
+    public partial class RefTitleISchoolStatus
     {
-        public RefTitleIschoolStatus()
+        public RefTitleISchoolStatus()
         {
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         [Key]
-        [Column("RefTitleISchoolStatusId")]
-        public int RefTitleIschoolStatusId { get; set; }
+        public int RefTitleISchoolStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -47,6 +46,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefTitleIschoolStatuses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefTitleIschoolStatus")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
     }
 }

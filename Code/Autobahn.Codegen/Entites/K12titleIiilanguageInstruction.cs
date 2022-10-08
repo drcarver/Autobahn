@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
-namespace ScafoldADatabase.Entities
+﻿namespace ScafoldADatabase.Entities
 {
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12TitleIIILanguageInstruction")]
+    [Table("K12TitleIIILanguageInstruction", Schema = "K12")]
     [Index("OrganizationId", "RefTitleIiilanguageInstructionProgramTypeId", Name = "IX_K12LeaTitleIIILanguageInstruction", IsUnique = true)]
-    public partial class K12titleIiilanguageInstruction
+    public partial class K12TitleIIILanguageInstruction
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("K12TitleIIILanguageInstructionId")]
-        public int K12titleIiilanguageInstructionId { get; set; }
+        public int K12TitleIIILanguageInstructionId { get; set; }
         /// <summary>
         /// Foreign key - Organization
         /// </summary>
@@ -26,8 +19,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefTitleIIILanguageInstructionProgramTypeId")]
-        public int RefTitleIiilanguageInstructionProgramTypeId { get; set; }
+        public int RefTitleIIILanguageInstructionProgramTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -52,6 +44,6 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefTitleIiilanguageInstructionProgramTypeId")]
         [InverseProperty("K12titleIiilanguageInstructions")]
-        public virtual RefTitleIiilanguageInstructionProgramType RefTitleIiilanguageInstructionProgramType { get; set; } = null!;
+        public virtual RefTitleIIILanguageInstructionProgramType RefTitleIiilanguageInstructionProgramType { get; set; } = null!;
     }
 }

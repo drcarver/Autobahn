@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefERAdministrativeDataSource")]
-    public partial class RefEradministrativeDataSource
+    [Table("RefERAdministrativeDataSource", Schema = "Workforce")]
+    public partial class RefERAdministrativeDataSource
     {
-        public RefEradministrativeDataSource()
+        public RefERAdministrativeDataSource()
         {
             QuarterlyEmploymentRecords = new HashSet<QuarterlyEmploymentRecord>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefERAdministrativeDataSourceId")]
-        public int RefEradministrativeDataSourceId { get; set; }
+        public int RefERAdministrativeDataSourceId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

@@ -9,11 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencySet_Rubric")]
+    [Table("CompetencySetRubric", Schema = "Competencies")]
     public partial class CompetencySetRubric
     {
         [Key]
-        [Column("CompetencySet_RubricId")]
         public int CompetencySetRubricId { get; set; }
         public int CompetencySetId { get; set; }
         public int RubricId { get; set; }

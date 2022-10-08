@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIEPGoalType")]
-    public partial class RefIepgoalType
+    [Table("RefIEPGoalType", Schema = "K12")]
+    public partial class RefIEPGoalType
     {
-        public RefIepgoalType()
+        public RefIEPGoalType()
         {
             IndividualizedProgramGoals = new HashSet<IndividualizedProgramGoal>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIEPGoalTypeId")]
-        public int RefIepgoalTypeId { get; set; }
+        public int RefIEPGoalTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

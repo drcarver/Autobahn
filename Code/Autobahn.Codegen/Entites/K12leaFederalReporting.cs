@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
-namespace ScafoldADatabase.Entities
+﻿namespace ScafoldADatabase.Entities
 {
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12LeaFederalReporting")]
-    public partial class K12leaFederalReporting
+    [Table("K12LeaFederalReporting", Schema = "K12")]
+    public partial class K12LeaFederalReporting
     {
         [Key]
-        [Column("K12LeaFederalReportingId")]
-        public int K12leaFederalReportingId { get; set; }
-        [Column("K12LeaId")]
-        public int K12leaId { get; set; }
+        public int K12LeaFederalReportingId { get; set; }
+        public int K12LeaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -38,8 +30,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("TerminatedTitleIIIProgramFailure")]
-        public bool? TerminatedTitleIiiprogramFailure { get; set; }
+        public bool? TerminatedTitleIIIProgramFailure { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -90,7 +81,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12leaId")]
         [InverseProperty("K12leaFederalReportings")]
-        public virtual K12lea K12lea { get; set; } = null!;
+        public virtual K12Lea K12lea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12leaFederalReportings")]
         public virtual RecordStatus? RecordStatus { get; set; }

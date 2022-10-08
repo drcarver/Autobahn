@@ -9,18 +9,17 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefK12StaffClassification")]
-    public partial class RefK12staffClassification
+    [Table("RefK12StaffClassification", Schema = "K12")]
+    public partial class RefK12StaffClassification
     {
-        public RefK12staffClassification()
+        public RefK12StaffClassification()
         {
-            K12staffAssignments = new HashSet<K12staffAssignment>();
-            K12staffEmployments = new HashSet<K12staffEmployment>();
+            K12StaffAssignments = new HashSet<K12StaffAssignment>();
+            K12StaffEmployments = new HashSet<K12StaffEmployment>();
         }
 
         [Key]
-        [Column("RefK12StaffClassificationId")]
-        public int RefK12staffClassificationId { get; set; }
+        public int RefK12StaffClassificationId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -54,8 +53,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefK12staffClassifications")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefK12staffClassification")]
-        public virtual ICollection<K12staffAssignment> K12staffAssignments { get; set; }
+        public virtual ICollection<K12StaffAssignment> K12StaffAssignments { get; set; }
         [InverseProperty("RefK12staffClassification")]
-        public virtual ICollection<K12staffEmployment> K12staffEmployments { get; set; }
+        public virtual ICollection<K12StaffEmployment> K12StaffEmployments { get; set; }
     }
 }

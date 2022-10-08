@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("QuarterlyEmploymentRecord")]
+    [Table("QuarterlyEmploymentRecord", Schema = "Workforce")]
     public partial class QuarterlyEmploymentRecord
     {
         /// <summary>
@@ -29,9 +29,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("EmploymentNAICSCode")]
         [StringLength(50)]
-        public string? EmploymentNaicscode { get; set; }
+        public string? EmploymentNAICSCode { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -45,8 +44,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefERAdministrativeDataSourceId")]
-        public int? RefEradministrativeDataSourceId { get; set; }
+        public int? RefERAdministrativeDataSourceId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -85,6 +83,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefEmploymentLocation? RefEmploymentLocation { get; set; }
         [ForeignKey("RefEradministrativeDataSourceId")]
         [InverseProperty("QuarterlyEmploymentRecords")]
-        public virtual RefEradministrativeDataSource? RefEradministrativeDataSource { get; set; }
+        public virtual RefERAdministrativeDataSource? RefEradministrativeDataSource { get; set; }
     }
 }

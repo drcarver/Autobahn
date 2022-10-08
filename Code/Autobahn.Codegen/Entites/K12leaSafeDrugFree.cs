@@ -9,14 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12LeaSafeDrugFree")]
-    public partial class K12leaSafeDrugFree
+    [Table("K12LeaSafeDrugFree", Schema = "K12")]
+    public partial class K12LeaSafeDrugFree
     {
         [Key]
-        [Column("K12LeaSafeDrugFreeId")]
-        public int K12leaSafeDrugFreeId { get; set; }
-        [Column("K12LeaId")]
-        public int K12leaId { get; set; }
+        public int K12LeaSafeDrugFreeId { get; set; }
+        public int K12LeaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -75,7 +73,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12leaId")]
         [InverseProperty("K12leaSafeDrugFrees")]
-        public virtual K12lea K12lea { get; set; } = null!;
+        public virtual K12Lea K12lea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12leaSafeDrugFrees")]
         public virtual RecordStatus? RecordStatus { get; set; }

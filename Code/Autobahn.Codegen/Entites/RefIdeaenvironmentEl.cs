@@ -10,19 +10,18 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefIDEAEnvironmentEL")]
-    public partial class RefIdeaenvironmentEl
+    public partial class RefIDEAEnvironmentEL
     {
-        public RefIdeaenvironmentEl()
+        public RefIDEAEnvironmentEL()
         {
-            Elenrollments = new HashSet<Elenrollment>();
+            Elenrollments = new HashSet<ELEnrollment>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefIDEAEnvironmentELId")]
-        public int RefIdeaenvironmentElid { get; set; }
+        public int RefIDEAEnvironmentELId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefIdeaenvironmentEls")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefIdeaenvironmentEl")]
-        public virtual ICollection<Elenrollment> Elenrollments { get; set; }
+        public virtual ICollection<ELEnrollment> Elenrollments { get; set; }
     }
 }

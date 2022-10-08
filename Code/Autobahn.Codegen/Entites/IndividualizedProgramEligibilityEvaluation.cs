@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IndividualizedProgramEligibilityEvaluation")]
+    [Table("IndividualizedProgramEligibilityEvaluation", Schema = "K12")]
     public partial class IndividualizedProgramEligibilityEvaluation
     {
         [Key]
         public int IndividualizedProgramEligibilityEvaluationId { get; set; }
         public int EligibilityEvaluationId { get; set; }
         public int IndividualizedProgramEligibilityId { get; set; }
-        [Column("RefIEPEligibilityEvaluationTypeId")]
-        public int? RefIepeligibilityEvaluationTypeId { get; set; }
+        public int? RefIEPEligibilityEvaluationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -45,6 +44,6 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefIepeligibilityEvaluationTypeId")]
         [InverseProperty("IndividualizedProgramEligibilityEvaluations")]
-        public virtual RefIepeligibilityEvaluationType? RefIepeligibilityEvaluationType { get; set; }
+        public virtual RefIEPEligibilityEvaluationType? RefIepeligibilityEvaluationType { get; set; }
     }
 }

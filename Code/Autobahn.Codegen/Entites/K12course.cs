@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12Course")]
-    public partial class K12course
+    [Table("K12Course", Schema = "K12")]
+    public partial class K12Course
     {
-        public K12course()
+        public K12Course()
         {
-            K12studentGraduationPlans = new HashSet<K12studentGraduationPlan>();
+            K12studentGraduationPlans = new HashSet<K12StudentGraduationPlan>();
         }
 
         [Key]
-        [Column("K12CourseId")]
-        public int K12courseId { get; set; }
+        public int K12CourseId { get; set; }
         public int CourseId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -50,15 +49,13 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("SCEDCourseCode")]
         [StringLength(5)]
-        public string? ScedcourseCode { get; set; }
+        public string? SCEDCourseCode { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("SCEDGradeSpan")]
         [StringLength(4)]
-        public string? ScedgradeSpan { get; set; }
+        public string? SCEDGradeSpan { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -75,8 +72,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefCourseGPAApplicabilityId")]
-        public int? RefCourseGpaapplicabilityId { get; set; }
+        public int? RefCourseGPAApplicabilityId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -84,13 +80,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefSCEDCourseLevelId")]
-        public int? RefScedcourseLevelId { get; set; }
+        public int? RefSCEDCourseLevelId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefSCEDCourseSubjectAreaId")]
-        public int? RefScedcourseSubjectAreaId { get; set; }
+        public int? RefSCEDCourseSubjectAreaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -106,8 +100,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefK12EndOfCourseRequirementId")]
-        public int? RefK12endOfCourseRequirementId { get; set; }
+        public int? RefK12EndOfCourseRequirementId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -154,10 +147,10 @@ namespace ScafoldADatabase.Entities
         public virtual RefCurriculumFrameworkType? RefCurriculumFrameworkType { get; set; }
         [ForeignKey("RefK12endOfCourseRequirementId")]
         [InverseProperty("K12courses")]
-        public virtual RefK12endOfCourseRequirement? RefK12endOfCourseRequirement { get; set; }
+        public virtual RefK12EndOfCourseRequirement? RefK12EndOfCourseRequirement { get; set; }
         [ForeignKey("RefScedcourseLevelId")]
         [InverseProperty("K12courses")]
-        public virtual RefScedcourseLevel? RefScedcourseLevel { get; set; }
+        public virtual RefSCEDCourseLevel? RefScedcourseLevel { get; set; }
         [ForeignKey("RefScedcourseSubjectAreaId")]
         [InverseProperty("K12courses")]
         public virtual RefScedcourseSubjectArea? RefScedcourseSubjectArea { get; set; }
@@ -165,6 +158,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("K12courses")]
         public virtual RefWorkbasedLearningOpportunityType? RefWorkbasedLearningOpportunityType { get; set; }
         [InverseProperty("K12course")]
-        public virtual ICollection<K12studentGraduationPlan> K12studentGraduationPlans { get; set; }
+        public virtual ICollection<K12StudentGraduationPlan> K12studentGraduationPlans { get; set; }
     }
 }

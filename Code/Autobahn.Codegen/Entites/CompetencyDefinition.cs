@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencyDefinition")]
+    [Table("CompetencyDefinition", Schema = "Common")]
     public partial class CompetencyDefinition
     {
         public CompetencyDefinition()
@@ -37,9 +37,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("URL")]
         [StringLength(512)]
-        public string? Url { get; set; }
+        public string? URL { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -107,7 +106,6 @@ namespace ScafoldADatabase.Entities
         /// </summary>
         [StringLength(512)]
         public string? CompetencyDefParentUrl { get; set; }
-        [Column("ChildOf_CompetencyDefinitionId")]
         public int? ChildOfCompetencyDefinitionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -141,9 +139,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("TypeURL")]
         [StringLength(512)]
-        public string? TypeUrl { get; set; }
+        public string? TypeURL { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

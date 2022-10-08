@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("LocationAddress")]
+    [Table("LocationAddress", Schema = "Core")]
     public partial class LocationAddress
     {
         [Key]
@@ -77,8 +77,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefERSRuralUrbanContinuumCodeId")]
-        public int? RefErsruralUrbanContinuumCodeId { get; set; }
+        public int? RefERSRuralUrbanContinuumCodeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -113,7 +112,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefCounty? RefCounty { get; set; }
         [ForeignKey("RefErsruralUrbanContinuumCodeId")]
         [InverseProperty("LocationAddresses")]
-        public virtual RefErsruralUrbanContinuumCode? RefErsruralUrbanContinuumCode { get; set; }
+        public virtual RefERSRuralUrbanContinuumCode? RefERSRuralUrbanContinuumCode { get; set; }
         [ForeignKey("RefStateId")]
         [InverseProperty("LocationAddresses")]
         public virtual RefState? RefState { get; set; }

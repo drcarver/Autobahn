@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PersonDisability")]
+    [Table("PersonDisability", Schema = "Person")]
     public partial class PersonDisability
     {
         public int PersonId { get; set; }
@@ -32,8 +32,7 @@ namespace ScafoldADatabase.Entities
         [Key]
         public int PersonDisabilityId { get; set; }
         public bool? SignificantCognitiveDisabilityIndicator { get; set; }
-        [Column("RefIDEADisabilityTypeId")]
-        public int? RefIdeadisabilityTypeId { get; set; }
+        public int? RefIDEADisabilityTypeId { get; set; }
         public int? RecordStatusId { get; set; }
         public int? DataCollectionId { get; set; }
 
@@ -63,6 +62,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefDisabilityDeterminationSourceType? RefDisabilityDeterminationSourceType { get; set; }
         [ForeignKey("RefIdeadisabilityTypeId")]
         [InverseProperty("PersonDisabilities")]
-        public virtual RefIdeadisabilityType? RefIdeadisabilityType { get; set; }
+        public virtual RefIDEADisabilityType? RefIdeadisabilityType { get; set; }
     }
 }

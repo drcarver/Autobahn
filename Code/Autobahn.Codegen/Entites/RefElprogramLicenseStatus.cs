@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefELProgramLicenseStatus")]
-    public partial class RefElprogramLicenseStatus
+    [Table("RefELProgramLicenseStatus", Schema = "EarlyLearning")]
+    public partial class RefELProgramLicenseStatus
     {
-        public RefElprogramLicenseStatus()
+        public RefELProgramLicenseStatus()
         {
-            ElprogramLicensings = new HashSet<ElprogramLicensing>();
+            ElprogramLicensings = new HashSet<ELProgramLicensing>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELProgramLicenseStatusId")]
-        public int RefElprogramLicenseStatusId { get; set; }
+        public int RefELProgramLicenseStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefElprogramLicenseStatuses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefElprogramLicenseStatus")]
-        public virtual ICollection<ElprogramLicensing> ElprogramLicensings { get; set; }
+        public virtual ICollection<ELProgramLicensing> ElprogramLicensings { get; set; }
     }
 }

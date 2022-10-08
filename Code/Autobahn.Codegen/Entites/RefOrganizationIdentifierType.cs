@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// List of identification system types.
     /// </summary>
-    [Table("RefOrganizationIdentifierType")]
+    [Table("RefOrganizationIdentifierType", Schema = "Organization")]
     public partial class RefOrganizationIdentifierType
     {
         public RefOrganizationIdentifierType()

@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentDiscipline")]
-    public partial class K12studentDiscipline
+    [Table("K12StudentDiscipline", Schema = "K12")]
+    public partial class K12StudentDiscipline
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("K12StudentDisciplineId")]
-        public int K12studentDisciplineId { get; set; }
+        public int K12StudentDisciplineId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
         /// </summary>
@@ -80,8 +79,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("IEPPlacementMeetingIndicator")]
-        public bool? IepplacementMeetingIndicator { get; set; }
+        public bool? IEPPlacementMeetingIndicator { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -93,8 +91,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefIDEADisciplineMethodFirearmId")]
-        public int? RefIdeadisciplineMethodFirearmId { get; set; }
+        public int? RefIDEADisciplineMethodFirearmId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -137,12 +134,12 @@ namespace ScafoldADatabase.Entities
         public virtual RefDisciplineReason? RefDisciplineReason { get; set; }
         [ForeignKey("RefIdeaInterimRemovalId")]
         [InverseProperty("K12studentDisciplines")]
-        public virtual RefIdeainterimRemoval? RefIdeaInterimRemoval { get; set; }
+        public virtual RefIDEAInterimRemoval? RefIDEAInterimRemoval { get; set; }
         [ForeignKey("RefIdeaInterimRemovalReasonId")]
         [InverseProperty("K12studentDisciplines")]
-        public virtual RefIdeainterimRemovalReason? RefIdeaInterimRemovalReason { get; set; }
+        public virtual RefIDEAInterimRemovalReason? RefIDEAInterimRemovalReason { get; set; }
         [ForeignKey("RefIdeadisciplineMethodFirearmId")]
         [InverseProperty("K12studentDisciplines")]
-        public virtual RefIdeadisciplineMethodFirearm? RefIdeadisciplineMethodFirearm { get; set; }
+        public virtual RefIDEADisciplineMethodFirearm? RefIdeadisciplineMethodFirearm { get; set; }
     }
 }

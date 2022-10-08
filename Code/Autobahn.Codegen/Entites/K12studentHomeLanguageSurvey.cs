@@ -6,12 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("K12StudentHomeLanguageSurvey")]
-    public partial class K12studentHomeLanguageSurvey
+    [Table("K12StudentHomeLanguageSurvey", Schema = "K12")]
+    public partial class K12StudentHomeLanguageSurvey
     {
         [Key]
-        [Column("K12StudentHomeLanguageSurveyId")]
-        public int K12studentHomeLanguageSurveyId { get; set; }
+        public int K12StudentHomeLanguageSurveyId { get; set; }
         public int OrganizationPersonRoleId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.

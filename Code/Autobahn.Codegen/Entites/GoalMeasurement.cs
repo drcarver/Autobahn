@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("GoalMeasurement")]
+    [Table("GoalMeasurement", Schema = "Common")]
     public partial class GoalMeasurement
     {
         public GoalMeasurement()

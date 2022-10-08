@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefDisciplinaryActionTaken()
         {
-            K12studentDisciplines = new HashSet<K12studentDiscipline>();
+            K12studentDisciplines = new HashSet<K12StudentDiscipline>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefDisciplinaryActionTakens")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefDisciplinaryActionTaken")]
-        public virtual ICollection<K12studentDiscipline> K12studentDisciplines { get; set; }
+        public virtual ICollection<K12StudentDiscipline> K12studentDisciplines { get; set; }
     }
 }

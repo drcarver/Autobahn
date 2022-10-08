@@ -14,7 +14,7 @@ namespace ScafoldADatabase.Entities
     {
         public RefEllevelOfSpecialization()
         {
-            ElstaffEducations = new HashSet<ElstaffEducation>();
+            ElstaffEducations = new HashSet<ELStaffEducation>();
         }
 
         /// <summary>
@@ -50,6 +50,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefEllevelOfSpecializations")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefEllevelOfSpecialization")]
-        public virtual ICollection<ElstaffEducation> ElstaffEducations { get; set; }
+        public virtual ICollection<ELStaffEducation> ElstaffEducations { get; set; }
     }
 }

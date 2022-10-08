@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PersonFamily")]
+    [Table("PersonFamily", Schema = "Person")]
     public partial class PersonFamily
     {
         /// <summary>
@@ -54,8 +54,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELProgramEligibilityId")]
-        public int? RefElprogramEligibilityId { get; set; }
+        public int? RefELProgramEligibilityId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -99,7 +98,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefCommunicationMethod? RefCommunicationMethod { get; set; }
         [ForeignKey("RefElprogramEligibilityId")]
         [InverseProperty("PersonFamilies")]
-        public virtual RefElprogramEligibility? RefElprogramEligibility { get; set; }
+        public virtual RefELProgramEligibility? RefElprogramEligibility { get; set; }
         [ForeignKey("RefFamilyIncomeSourceId")]
         [InverseProperty("PersonFamilies")]
         public virtual RefFamilyIncomeSource? RefFamilyIncomeSource { get; set; }

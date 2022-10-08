@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("RequiredImmunization")]
+    [Table("RequiredImmunization", Schema="Core")]
     [Index("OrganizationId", "RefImmunizationTypeId", Name = "IX_RequiredImmunization", IsUnique = true)]
     public partial class RequiredImmunization
     {

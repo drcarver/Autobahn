@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELStaffEmployment")]
-    public partial class ElstaffEmployment
+    [Table("ELStaffEmployment", Schema = "EarlyLearning")]
+    public partial class ELStaffEmployment
     {
         [Key]
-        [Column("ELStaffEmploymentId")]
-        public int ElstaffEmploymentId { get; set; }
+        public int ELStaffEmploymentId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -52,18 +51,15 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELEducationStaffClassificationId")]
-        public int? RefEleducationStaffClassificationId { get; set; }
+        public int? RefELEducationStaffClassificationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELEmploymentSeparationReasonId")]
-        public int? RefElemploymentSeparationReasonId { get; set; }
+        public int? RefELEmploymentSeparationReasonId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELServiceProfessionalStaffClassificationId")]
-        public int? RefElserviceProfessionalStaffClassificationId { get; set; }
+        public int? RefELServiceProfessionalStaffClassificationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -88,10 +84,10 @@ namespace ScafoldADatabase.Entities
         public virtual RefEleducationStaffClassification? RefEleducationStaffClassification { get; set; }
         [ForeignKey("RefElemploymentSeparationReasonId")]
         [InverseProperty("ElstaffEmployments")]
-        public virtual RefElemploymentSeparationReason? RefElemploymentSeparationReason { get; set; }
+        public virtual RefELEmploymentSeparationReason? RefElemploymentSeparationReason { get; set; }
         [ForeignKey("RefElserviceProfessionalStaffClassificationId")]
         [InverseProperty("ElstaffEmployments")]
-        public virtual RefElserviceProfessionalStaffClassification? RefElserviceProfessionalStaffClassification { get; set; }
+        public virtual RefELServiceProfessionalStaffClassification? RefElserviceProfessionalStaffClassification { get; set; }
         [ForeignKey("RefEmploymentStatusId")]
         [InverseProperty("ElstaffEmployments")]
         public virtual RefEmploymentStatus? RefEmploymentStatus { get; set; }

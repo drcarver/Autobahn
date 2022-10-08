@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefUSCitizenshipStatus")]
-    public partial class RefUscitizenshipStatus
+    [Table("RefUSCitizenshipStatus", Schema = "Person")]
+    public partial class RefUSCitizenshipStatus
     {
-        public RefUscitizenshipStatus()
+        public RefUSCitizenshipStatus()
         {
             PersonDetails = new HashSet<PersonDetail>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefUSCitizenshipStatusId")]
-        public int RefUscitizenshipStatusId { get; set; }
+        public int RefUSCitizenshipStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

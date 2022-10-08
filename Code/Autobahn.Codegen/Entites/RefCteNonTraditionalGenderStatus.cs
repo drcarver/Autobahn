@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCteNonTraditionalGenderStatus")]
+    [Table("RefCteNonTraditionalGenderStatus", Schema = "Common")]
     public partial class RefCteNonTraditionalGenderStatus
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefCTENonTraditionalGenderStatusId")]
-        public int RefCtenonTraditionalGenderStatusId { get; set; }
+        public int RefCTENonTraditionalGenderStatusId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

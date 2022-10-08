@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefK12LeaTitleISupportService")]
+    [Table("RefK12LeaTitleISupportService", Schema = "K12")]
     public partial class RefK12leaTitleIsupportService
     {
         public RefK12leaTitleIsupportService()
         {
-            K12leaTitleIsupportServices = new HashSet<K12leaTitleIsupportService>();
+            K12LeaTitleISupportServices = new HashSet<K12LeaTitleISupportService>();
         }
 
         /// <summary>
@@ -50,6 +50,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefK12leaTitleIsupportServices")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefK12leaTitleIsupportService")]
-        public virtual ICollection<K12leaTitleIsupportService> K12leaTitleIsupportServices { get; set; }
+        public virtual ICollection<K12LeaTitleISupportService> K12LeaTitleISupportServices { get; set; }
     }
 }

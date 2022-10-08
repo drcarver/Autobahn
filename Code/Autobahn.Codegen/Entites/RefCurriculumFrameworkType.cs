@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefCurriculumFrameworkType")]
+    [Table("RefCurriculumFrameworkType", Schema = "Common")]
     public partial class RefCurriculumFrameworkType
     {
         public RefCurriculumFrameworkType()
         {
             CteCourses = new HashSet<CteCourse>();
-            K12courses = new HashSet<K12course>();
+            K12courses = new HashSet<K12Course>();
         }
 
         /// <summary>
@@ -52,6 +52,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefCurriculumFrameworkType")]
         public virtual ICollection<CteCourse> CteCourses { get; set; }
         [InverseProperty("RefCurriculumFrameworkType")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
     }
 }

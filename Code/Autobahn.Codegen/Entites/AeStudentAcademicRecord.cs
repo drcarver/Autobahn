@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AeStudentAcademicRecord")]
+    [Table("AeStudentAcademicRecord", Schema = "AdultEducation")]
     public partial class AeStudentAcademicRecord
     {
         [Key]

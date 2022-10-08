@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefProgressLevel")]
+    [Table("RefProgressLevel", Schema = "K12")]
     public partial class RefProgressLevel
     {
         public RefProgressLevel()
         {
-            K12studentAcademicRecords = new HashSet<K12studentAcademicRecord>();
-            K12studentCourseSections = new HashSet<K12studentCourseSection>();
+            K12studentAcademicRecords = new HashSet<K12StudentAcademicRecord>();
+            K12studentCourseSections = new HashSet<K12StudentCourseSection>();
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefProgressLevels")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefProgressLevel")]
-        public virtual ICollection<K12studentAcademicRecord> K12studentAcademicRecords { get; set; }
+        public virtual ICollection<K12StudentAcademicRecord> K12studentAcademicRecords { get; set; }
         [InverseProperty("RefProgressLevel")]
-        public virtual ICollection<K12studentCourseSection> K12studentCourseSections { get; set; }
+        public virtual ICollection<K12StudentCourseSection> K12studentCourseSections { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialDefIdentifier")]
+    [Table("CredentialDefIdentifier", Schema = "Credentials")]
     public partial class CredentialDefIdentifier
     {
         [Key]

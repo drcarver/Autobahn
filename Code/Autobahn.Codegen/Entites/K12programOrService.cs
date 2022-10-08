@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12ProgramOrService")]
-    public partial class K12programOrService
+    [Table("K12ProgramOrService", Schema = "K12")]
+    public partial class K12ProgramOrService
     {
         [Key]
-        [Column("K12ProgramOrServiceId")]
-        public int K12programOrServiceId { get; set; }
+        public int K12ProgramOrServiceId { get; set; }
         /// <summary>
         /// Surrogate key from K12LEA.
         /// </summary>
@@ -46,13 +45,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefTitleIInstructionalServicesId")]
-        public int? RefTitleIinstructionalServicesId { get; set; }
+        public int? RefTitleIInstructionalServicesId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefTitleIProgramTypeId")]
-        public int? RefTitleIprogramTypeId { get; set; }
+        public int? RefTitleIProgramTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -92,9 +89,9 @@ namespace ScafoldADatabase.Entities
         public virtual RefProgramGiftedEligibility? RefProgramGiftedEligibility { get; set; }
         [ForeignKey("RefTitleIinstructionalServicesId")]
         [InverseProperty("K12programOrServices")]
-        public virtual RefTitleIinstructionalService? RefTitleIinstructionalServices { get; set; }
+        public virtual RefTitleIInstructionalServices? RefTitleIinstructionalServices { get; set; }
         [ForeignKey("RefTitleIprogramTypeId")]
         [InverseProperty("K12programOrServices")]
-        public virtual RefTitleIprogramType? RefTitleIprogramType { get; set; }
+        public virtual RefTitleIProgramType? RefTitleIprogramType { get; set; }
     }
 }

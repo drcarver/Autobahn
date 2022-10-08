@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefCompetencyFrameworkPublicationStatus")]
+    [Table("RefCompetencyFrameworkPublicationStatus", Schema = "Common")]
     public partial class RefCompetencyFrameworkPublicationStatus
     {
         public RefCompetencyFrameworkPublicationStatus()

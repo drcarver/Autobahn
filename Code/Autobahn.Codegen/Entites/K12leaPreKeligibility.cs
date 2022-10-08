@@ -9,18 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12LeaPreKEligibility")]
+    [Table("K12LeaPreKEligibility", Schema ="K12")]
     [Index("K12leaId", "RefPrekindergartenEligibilityId", Name = "IX_K12LeaPreKEligibility", IsUnique = true)]
-    public partial class K12leaPreKeligibility
+    public partial class K12LeaPreKEligibility
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("K12LEAPreKEligibilityId")]
-        public int K12leapreKeligibilityId { get; set; }
-        [Column("K12LeaId")]
-        public int K12leaId { get; set; }
+        public int K12LEAPreKEligibilityId { get; set; }
+        public int K12LeaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -43,7 +41,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12leaId")]
         [InverseProperty("K12leaPreKeligibilities")]
-        public virtual K12lea K12lea { get; set; } = null!;
+        public virtual K12Lea K12Lea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12leaPreKeligibilities")]
         public virtual RecordStatus? RecordStatus { get; set; }

@@ -9,11 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentResult_PerformanceLevel")]
+    [Table("AssessmentResultPerformanceLevel", Schema = "Assessment")]
     public partial class AssessmentResultPerformanceLevel
     {
         [Key]
-        [Column("AssessmentResult_PerformanceLevelId")]
         public int AssessmentResultPerformanceLevelId { get; set; }
         /// <summary>
         /// Foreign key to AssessmentResult.  [Related CEDS Elements: Developmental Evaluation Finding (000315), Early Learning Child Developmental Screening Status (000314)]

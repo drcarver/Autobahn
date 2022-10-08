@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingSpaceDesignType")]
+    [Table("RefBuildingSpaceDesignType", Schema = "Facilities")]
     public partial class RefBuildingSpaceDesignType
     {
         public RefBuildingSpaceDesignType()

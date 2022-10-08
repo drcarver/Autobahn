@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefIEPEligibilityEvaluationType")]
-    public partial class RefIepeligibilityEvaluationType
+    [Table("RefIEPEligibilityEvaluationType", Schema = "K12")]
+    public partial class RefIEPEligibilityEvaluationType
     {
-        public RefIepeligibilityEvaluationType()
+        public RefIEPEligibilityEvaluationType()
         {
             IndividualizedProgramEligibilityEvaluations = new HashSet<IndividualizedProgramEligibilityEvaluation>();
         }
@@ -18,8 +18,7 @@ namespace ScafoldADatabase.Entities
         /// The surrogate key for the options in this option set.
         /// </summary>
         [Key]
-        [Column("RefIEPEligibilityEvaluationTypeId")]
-        public int RefIepeligibilityEvaluationTypeId { get; set; }
+        public int RefIEPEligibilityEvaluationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

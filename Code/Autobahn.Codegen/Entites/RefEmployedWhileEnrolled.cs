@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefEmployedWhileEnrolled")]
+    [Table("RefEmployedWhileEnrolled", Schema = "AdultEducation")]
     public partial class RefEmployedWhileEnrolled
     {
         public RefEmployedWhileEnrolled()
         {
-            AeStudentEmployments = new HashSet<AeStudentEmployment>();
-            K12studentEmployments = new HashSet<K12studentEmployment>();
+            AeStudentEmployments = new HashSet<AEStudentEmployment>();
+            K12studentEmployments = new HashSet<K12StudentEmployment>();
             PsStudentEmployments = new HashSet<PsStudentEmployment>();
         }
 
@@ -51,9 +51,9 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefEmployedWhileEnrolleds")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefEmployedWhileEnrolled")]
-        public virtual ICollection<AeStudentEmployment> AeStudentEmployments { get; set; }
+        public virtual ICollection<AEStudentEmployment> AeStudentEmployments { get; set; }
         [InverseProperty("RefEmployedWhileEnrolled")]
-        public virtual ICollection<K12studentEmployment> K12studentEmployments { get; set; }
+        public virtual ICollection<K12StudentEmployment> K12studentEmployments { get; set; }
         [InverseProperty("RefEmployedWhileEnrolled")]
         public virtual ICollection<PsStudentEmployment> PsStudentEmployments { get; set; }
     }

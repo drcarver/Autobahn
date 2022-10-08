@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildTransitionPlan")]
-    public partial class ElchildTransitionPlan
+    [Table("ELChildTransitionPlan", Schema = "EarlyLearning")]
+    public partial class ELChildTransitionPlan
     {
         [Key]
-        [Column("ELChildTransitionPlanId")]
-        public int ElchildTransitionPlanId { get; set; }
+        public int ELChildTransitionPlanId { get; set; }
         /// <summary>
         /// Surrogate key from Person.
         /// </summary>
@@ -22,13 +21,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("PartB619PotentialEligibilityInd")]
-        public bool? PartB619potentialEligibilityInd { get; set; }
+        public bool? PartB619PotentialEligibilityInd { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("IDEAPartCToPartBNotificationDate", TypeName = "date")]
-        public DateTime? IdeapartCtoPartBnotificationDate { get; set; }
+        public DateTime? IDEAPartCToPartBNotificationDate { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -47,13 +44,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("IDEAPartCToPartBNotificationOptOutDate", TypeName = "date")]
-        public DateTime? IdeapartCtoPartBnotificationOptOutDate { get; set; }
+        public DateTime? IDEAPartCToPartBNotificationOptOutDate { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("IDEAPartCToPartBNotificationOptOutIndicator")]
-        public bool? IdeapartCtoPartBnotificationOptOutIndicator { get; set; }
+        public bool? IDEAPartCToPartBNotificationOptOutIndicator { get; set; }
         /// <summary>
         /// Foreign key - IndividualizedProgram
         /// </summary>

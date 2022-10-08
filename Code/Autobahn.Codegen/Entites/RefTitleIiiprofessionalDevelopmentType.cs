@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefTitleIIIProfessionalDevelopmentType")]
-    public partial class RefTitleIiiprofessionalDevelopmentType
+    [Table("RefTitleIIIProfessionalDevelopmentType", Schema = "K12")]
+    public partial class RefTitleIIIProfessionalDevelopmentType
     {
-        public RefTitleIiiprofessionalDevelopmentType()
+        public RefTitleIIIProfessionalDevelopmentType()
         {
-            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12leaTitleIiiprofessionalDevelopment>();
+            K12leaTitleIiiprofessionalDevelopments = new HashSet<K12LeaTitleIIIProfessionalDevelopment>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefTitleIIIProfessionalDevelopmentTypeId")]
-        public int RefTitleIiiprofessionalDevelopmentTypeId { get; set; }
+        public int RefTitleIIIProfessionalDevelopmentTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefTitleIiiprofessionalDevelopmentTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefTitleIiiprofessionalDevelopmentType")]
-        public virtual ICollection<K12leaTitleIiiprofessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
+        public virtual ICollection<K12LeaTitleIIIProfessionalDevelopment> K12leaTitleIiiprofessionalDevelopments { get; set; }
     }
 }

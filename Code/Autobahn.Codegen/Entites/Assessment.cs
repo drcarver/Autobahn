@@ -9,13 +9,13 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("Assessment")]
+    [Table("Assessment", Schema = "Assessment")]
     public partial class Assessment
     {
         public Assessment()
         {
             AssessmentAssessmentAdministrations = new HashSet<AssessmentAssessmentAdministration>();
-            AssessmentEldevelopmentalDomains = new HashSet<AssessmentEldevelopmentalDomain>();
+            AssessmentEldevelopmentalDomains = new HashSet<AssessmentELDevelopmentalDomain>();
             AssessmentForms = new HashSet<AssessmentForm>();
             AssessmentLanguages = new HashSet<AssessmentLanguage>();
             AssessmentLevelsForWhichDesigneds = new HashSet<AssessmentLevelsForWhichDesigned>();
@@ -39,9 +39,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("GUID")]
-        [StringLength(40)]
-        public string? Guid { get; set; }
+        public Guid? Guid { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -127,7 +125,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("Assessment")]
         public virtual ICollection<AssessmentAssessmentAdministration> AssessmentAssessmentAdministrations { get; set; }
         [InverseProperty("Assessment")]
-        public virtual ICollection<AssessmentEldevelopmentalDomain> AssessmentEldevelopmentalDomains { get; set; }
+        public virtual ICollection<AssessmentELDevelopmentalDomain> AssessmentEldevelopmentalDomains { get; set; }
         [InverseProperty("Assessment")]
         public virtual ICollection<AssessmentForm> AssessmentForms { get; set; }
         [InverseProperty("Assessment")]

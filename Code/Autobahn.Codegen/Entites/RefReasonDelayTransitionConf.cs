@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefReasonDelayTransitionConf")]
+    [Table("RefReasonDelayTransitionConf", Schema = "EarlyLearning")]
     public partial class RefReasonDelayTransitionConf
     {
         public RefReasonDelayTransitionConf()
         {
-            ElchildTransitionPlans = new HashSet<ElchildTransitionPlan>();
+            ElchildTransitionPlans = new HashSet<ELChildTransitionPlan>();
         }
 
         /// <summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefReasonDelayTransitionConfs")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefReasonDelayTransitionConf")]
-        public virtual ICollection<ElchildTransitionPlan> ElchildTransitionPlans { get; set; }
+        public virtual ICollection<ELChildTransitionPlan> ElchildTransitionPlans { get; set; }
     }
 }

@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefWIOABarrierstoEmployment")]
-    public partial class RefWioabarrierstoEmployment
+    [Table("RefWIOABarrierstoEmployment", Schema = "Person")]
+    public partial class RefWIOABarrierstoEmployment
     {
-        public RefWioabarrierstoEmployment()
+        public RefWIOABarrierstoEmployment()
         {
-            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWioabarrier>();
+            ProgramParticipationWioabarriers = new HashSet<ProgramParticipationWIOABarriers>();
         }
 
         [Key]
-        [Column("RefWIOABarrierstoEmploymentId")]
-        public int RefWioabarrierstoEmploymentId { get; set; }
+        public int RefWIOABarrierstoEmploymentId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefWioabarrierstoEmployments")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefWioabarrierstoEmployment")]
-        public virtual ICollection<ProgramParticipationWioabarrier> ProgramParticipationWioabarriers { get; set; }
+        public virtual ICollection<ProgramParticipationWIOABarriers> ProgramParticipationWioabarriers { get; set; }
     }
 }

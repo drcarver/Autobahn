@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AuthorizationDocument")]
+    [Table("AuthorizationDocument", Schema = "K12")]
     public partial class AuthorizationDocument
     {
         public AuthorizationDocument()
         {
-            Iepauthorizations = new HashSet<Iepauthorization>();
+            Iepauthorizations = new HashSet<IEPAuthorization>();
         }
 
         [Key]
@@ -51,6 +51,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("AuthorizationDocuments")]
         public virtual RefAuthorizerType? RefAuthorizerType { get; set; }
         [InverseProperty("AuthorizationDocument")]
-        public virtual ICollection<Iepauthorization> Iepauthorizations { get; set; }
+        public virtual ICollection<IEPAuthorization> Iepauthorizations { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsStudentAdmissionTest")]
+    [Table("PsStudentAdmissionTest", Schema = "Postsecondary")]
     public partial class PsStudentAdmissionTest
     {
         /// <summary>

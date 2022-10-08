@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsCourse")]
+    [Table("PsCourse", Schema = "Postsecondary")]
     public partial class PsCourse
     {
         [Key]
@@ -33,8 +33,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("NCAAEligibilityInd")]
-        public int? NcaaeligibilityInd { get; set; }
+        public int? NCAAEligibilityInd { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -46,8 +45,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefNCESCollegeCourseMapCodeId")]
-        public int? RefNcescollegeCourseMapCodeId { get; set; }
+        public int? RefNCESCollegeCourseMapCodeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -85,6 +83,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefCourseCreditLevelType? RefCourseCreditLevelType { get; set; }
         [ForeignKey("RefNcescollegeCourseMapCodeId")]
         [InverseProperty("PsCourses")]
-        public virtual RefNcescollegeCourseMapCode? RefNcescollegeCourseMapCode { get; set; }
+        public virtual RefNCESCollegeCourseMapCode? RefNcescollegeCourseMapCode { get; set; }
     }
 }

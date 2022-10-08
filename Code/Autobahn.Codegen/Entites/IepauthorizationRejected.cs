@@ -9,14 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("IEPAuthorizationRejected")]
-    public partial class IepauthorizationRejected
+    [Table("IEPAuthorizationRejected", Schema = "K12")]
+    public partial class IEPAuthorizationRejected
     {
         [Key]
-        [Column("IEPAuthorizationRejectedId")]
-        public int IepauthorizationRejectedId { get; set; }
-        [Column("IEPAuthorizationId")]
-        public int IepauthorizationId { get; set; }
+        public int IEPAuthorizationRejectedId { get; set; }
+        public int IEPAuthorizationId { get; set; }
         public string? PortionDescription { get; set; }
         public string? PortionExplanation { get; set; }
         /// <summary>
@@ -35,9 +33,9 @@ namespace ScafoldADatabase.Entities
         [ForeignKey("DataCollectionId")]
         [InverseProperty("IepauthorizationRejecteds")]
         public virtual DataCollection? DataCollection { get; set; }
-        [ForeignKey("IepauthorizationId")]
+        [ForeignKey("IEPAuthorizationId")]
         [InverseProperty("IepauthorizationRejecteds")]
-        public virtual Iepauthorization Iepauthorization { get; set; } = null!;
+        public virtual IEPAuthorization IEPAuthorization { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("IepauthorizationRejecteds")]
         public virtual RecordStatus? RecordStatus { get; set; }

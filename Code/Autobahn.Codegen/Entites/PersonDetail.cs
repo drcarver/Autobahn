@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PersonDetail")]
+    [Table("PersonDetail", Schema = "Person")]
     [Index("PersonId", Name = "IX_PersonId")]
     public partial class PersonDetail
     {
@@ -128,7 +128,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefTribalAffiliation? RefTribalAffiliation { get; set; }
         [ForeignKey("RefUscitizenshipStatusId")]
         [InverseProperty("PersonDetails")]
-        public virtual RefUscitizenshipStatus? RefUscitizenshipStatus { get; set; }
+        public virtual RefUSCitizenshipStatus? RefUscitizenshipStatus { get; set; }
         [ForeignKey("RefVisaTypeId")]
         [InverseProperty("PersonDetails")]
         public virtual RefVisaType? RefVisaType { get; set; }

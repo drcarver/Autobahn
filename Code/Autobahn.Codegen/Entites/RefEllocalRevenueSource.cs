@@ -10,19 +10,18 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
     [Table("RefELLocalRevenueSource")]
-    public partial class RefEllocalRevenueSource
+    public partial class RefELLocalRevenueSource
     {
-        public RefEllocalRevenueSource()
+        public RefELLocalRevenueSource()
         {
-            ElorganizationFunds = new HashSet<ElorganizationFund>();
+            ElorganizationFunds = new HashSet<ELOrganizationFunds>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELLocalRevenueSourceId")]
-        public int RefEllocalRevenueSourceId { get; set; }
+        public int RefELLocalRevenueSourceId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefEllocalRevenueSources")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefEllocalRevenueSource")]
-        public virtual ICollection<ElorganizationFund> ElorganizationFunds { get; set; }
+        public virtual ICollection<ELOrganizationFunds> ElorganizationFunds { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CompetencyDefEducationLevel")]
+    [Table("CompetencyDefEducationLevel", Schema = "Competencies")]
     [Index("CompetencyDefinitionId", "RefEducationLevelId", Name = "IX_CompetencyFrameworkItem_RefEducationLevel", IsUnique = true)]
     public partial class CompetencyDefEducationLevel
     {

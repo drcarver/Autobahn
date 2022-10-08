@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentSubTest")]
+    [Table("AssessmentSubTest", Schema = "Assessment")]
     public partial class AssessmentSubTest
     {
         public AssessmentSubTest()
@@ -18,7 +18,7 @@ namespace ScafoldADatabase.Entities
             AssessmentResults = new HashSet<AssessmentResult>();
             AssessmentSubtestAssessmentItems = new HashSet<AssessmentSubtestAssessmentItem>();
             AssessmentSubtestCompetencyDefinitions = new HashSet<AssessmentSubtestCompetencyDefinition>();
-            AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestEldevelopmentalDomain>();
+            AssessmentSubtestEldevelopmentalDomains = new HashSet<AssessmentSubtestELDevelopmentalDomain>();
             AssessmentSubtestLevelsForWhichDesigneds = new HashSet<AssessmentSubtestLevelsForWhichDesigned>();
             InverseChildOfAssessmentSubtest = new HashSet<AssessmentSubTest>();
         }
@@ -109,7 +109,6 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - AssessmentSubtest 
         /// </summary>
-        [Column("ChildOf_AssessmentSubtestId")]
         public int? ChildOfAssessmentSubtestId { get; set; }
         /// <summary>
         /// Foreign key - AssessmentForm
@@ -164,7 +163,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("AssessmentSubtest")]
         public virtual ICollection<AssessmentSubtestCompetencyDefinition> AssessmentSubtestCompetencyDefinitions { get; set; }
         [InverseProperty("AssessmentSubtest")]
-        public virtual ICollection<AssessmentSubtestEldevelopmentalDomain> AssessmentSubtestEldevelopmentalDomains { get; set; }
+        public virtual ICollection<AssessmentSubtestELDevelopmentalDomain> AssessmentSubtestEldevelopmentalDomains { get; set; }
         [InverseProperty("AssessmentSubTest")]
         public virtual ICollection<AssessmentSubtestLevelsForWhichDesigned> AssessmentSubtestLevelsForWhichDesigneds { get; set; }
         [InverseProperty("ChildOfAssessmentSubtest")]

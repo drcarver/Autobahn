@@ -9,14 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefChildOutcomesSummaryRating")]
+    [Table("RefChildOutcomesSummaryRating", Schema = "EarlyLearning")]
     public partial class RefChildOutcomesSummaryRating
     {
         public RefChildOutcomesSummaryRating()
         {
-            ElchildOutcomeSummaryCosratingAs = new HashSet<ElchildOutcomeSummary>();
-            ElchildOutcomeSummaryCosratingBs = new HashSet<ElchildOutcomeSummary>();
-            ElchildOutcomeSummaryCosratingCs = new HashSet<ElchildOutcomeSummary>();
+            ElchildOutcomeSummaryCosratingAs = new HashSet<ELChildOutcomeSummary>();
+            ElchildOutcomeSummaryCosratingBs = new HashSet<ELChildOutcomeSummary>();
+            ElchildOutcomeSummaryCosratingCs = new HashSet<ELChildOutcomeSummary>();
         }
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefChildOutcomesSummaryRatings")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("CosratingA")]
-        public virtual ICollection<ElchildOutcomeSummary> ElchildOutcomeSummaryCosratingAs { get; set; }
+        public virtual ICollection<ELChildOutcomeSummary> ElchildOutcomeSummaryCosratingAs { get; set; }
         [InverseProperty("CosratingB")]
-        public virtual ICollection<ElchildOutcomeSummary> ElchildOutcomeSummaryCosratingBs { get; set; }
+        public virtual ICollection<ELChildOutcomeSummary> ElchildOutcomeSummaryCosratingBs { get; set; }
         [InverseProperty("CosratingC")]
-        public virtual ICollection<ElchildOutcomeSummary> ElchildOutcomeSummaryCosratingCs { get; set; }
+        public virtual ICollection<ELChildOutcomeSummary> ElchildOutcomeSummaryCosratingCs { get; set; }
     }
 }

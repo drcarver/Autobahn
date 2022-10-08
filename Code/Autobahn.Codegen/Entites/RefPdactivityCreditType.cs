@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPDActivityCreditType")]
-    public partial class RefPdactivityCreditType
+    [Table("RefPDActivityCreditType", Schema = "Common")]
+    public partial class RefPDActivityCreditType
     {
-        public RefPdactivityCreditType()
+        public RefPDActivityCreditType()
         {
             ProfessionalDevelopmentActivities = new HashSet<ProfessionalDevelopmentActivity>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefPDActivityCreditTypeId")]
-        public int RefPdactivityCreditTypeId { get; set; }
+        public int RefPDActivityCreditTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

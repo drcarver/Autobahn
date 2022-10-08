@@ -9,16 +9,15 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentELDevelopmentalDomain")]
+    [Table("AssessmentELDevelopmentalDomain", Schema = "Assessment")]
     [Index("AssessmentId", "RefAssessmentEldevelopmentalDomainId", Name = "IX_AssessmentELDevelopmentalDomain", IsUnique = true)]
-    public partial class AssessmentEldevelopmentalDomain
+    public partial class AssessmentELDevelopmentalDomain
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("AssessmentELDevelopmentalDomainId")]
-        public int AssessmentEldevelopmentalDomainId { get; set; }
+        public int AssessmentELDevelopmentalDomainId { get; set; }
         /// <summary>
         /// Foreign key - Assessment
         /// </summary>
@@ -26,8 +25,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - RefAssessmentELDevelopmentalDomain
         /// </summary>
-        [Column("RefAssessmentELDevelopmentalDomainId")]
-        public int RefAssessmentEldevelopmentalDomainId { get; set; }
+        public int RefAssessmentELDevelopmentalDomainId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -52,6 +50,6 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefAssessmentEldevelopmentalDomainId")]
         [InverseProperty("AssessmentEldevelopmentalDomains")]
-        public virtual RefAssessmentEldevelopmentalDomain RefAssessmentEldevelopmentalDomain { get; set; } = null!;
+        public virtual RefAssessmentELDevelopmentalDomain RefAssessmentEldevelopmentalDomain { get; set; } = null!;
     }
 }

@@ -10,11 +10,10 @@ namespace ScafoldADatabase.Entities
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
     [Table("ELChildServicesApplication")]
-    public partial class ElchildServicesApplication
+    public partial class ELChildServicesApplication
     {
         [Key]
-        [Column("ELChildServicesApplicationId")]
-        public int ElchildServicesApplicationId { get; set; }
+        public int ELChildServicesApplicationId { get; set; }
         /// <summary>
         /// Surrogate key from OrganizationPersonRole
         /// </summary>
@@ -22,9 +21,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELApplicationIdentifier")]
-        [StringLength(40)]
-        public string? ElapplicationIdentifier { get; set; }
+        public Guid? ELApplicationIdentifier { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -33,37 +30,30 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELEnrollmentApplicationDocumentIdentifier")]
-        [StringLength(40)]
-        public string? ElenrollmentApplicationDocumentIdentifier { get; set; }
+        public Guid? ELEnrollmentApplicationDocumentIdentifier { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELEnrollmentApplicationDocumentName")]
         [StringLength(60)]
-        public string? ElenrollmentApplicationDocumentName { get; set; }
+        public string? ELEnrollmentApplicationDocumentName { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELEnrollmentApplicationDocumentType")]
         [StringLength(100)]
-        public string? ElenrollmentApplicationDocumentType { get; set; }
+        public string? ELEnrollmentApplicationDocumentType { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELApplicationRequiredDocument")]
-        public bool? ElapplicationRequiredDocument { get; set; }
+        public bool? ELApplicationRequiredDocument { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELEnrollmentApplicationVerificationDate", TypeName = "date")]
-        public DateTime? ElenrollmentApplicationVerificationDate { get; set; }
+        public DateTime? ELEnrollmentApplicationVerificationDate { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ELEnrollmentApplicationVerificationReasonType")]
         [StringLength(100)]
-        public string? ElenrollmentApplicationVerificationReasonType { get; set; }
+        public string? ELEnrollmentApplicationVerificationReasonType { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

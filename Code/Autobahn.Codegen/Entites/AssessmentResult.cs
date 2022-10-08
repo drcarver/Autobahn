@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentResult")]
+    [Table("AssessmentResult", Schema = "Assessment")]
     [Index("AssessmentResultId", Name = "IX_AssessmentResultId")]
     public partial class AssessmentResult
     {
@@ -95,8 +95,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELOutcomeMeasurementLevelId")]
-        public int? RefEloutcomeMeasurementLevelId { get; set; }
+        public int? RefELOutcomeMeasurementLevelId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -155,7 +154,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefAssessmentResultScoreType? RefAssessmentResultScoreType { get; set; }
         [ForeignKey("RefEloutcomeMeasurementLevelId")]
         [InverseProperty("AssessmentResults")]
-        public virtual RefEloutcomeMeasurementLevel? RefEloutcomeMeasurementLevel { get; set; }
+        public virtual RefELOutcomeMeasurementLevel? RefEloutcomeMeasurementLevel { get; set; }
         [ForeignKey("RefOutcomeTimePointId")]
         [InverseProperty("AssessmentResults")]
         public virtual RefOutcomeTimePoint? RefOutcomeTimePoint { get; set; }

@@ -9,14 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefServiceOption")]
+    [Table("RefServiceOption", Schema="EarlyLearning")]
     public partial class RefServiceOption
     {
         public RefServiceOption()
         {
-            ElclassSections = new HashSet<ElclassSection>();
-            Elenrollments = new HashSet<Elenrollment>();
-            ElorganizationAvailabilities = new HashSet<ElorganizationAvailability>();
+            ElclassSections = new HashSet<ELClassSection>();
+            Elenrollments = new HashSet<ELEnrollment>();
+            ElorganizationAvailabilities = new HashSet<ELOrganizationAvailability>();
         }
 
         /// <summary>
@@ -51,10 +51,10 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefServiceOptions")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefServiceOption")]
-        public virtual ICollection<ElclassSection> ElclassSections { get; set; }
+        public virtual ICollection<ELClassSection> ElclassSections { get; set; }
         [InverseProperty("RefServiceOption")]
-        public virtual ICollection<Elenrollment> Elenrollments { get; set; }
+        public virtual ICollection<ELEnrollment> Elenrollments { get; set; }
         [InverseProperty("RefServiceOption")]
-        public virtual ICollection<ElorganizationAvailability> ElorganizationAvailabilities { get; set; }
+        public virtual ICollection<ELOrganizationAvailability> ElorganizationAvailabilities { get; set; }
     }
 }

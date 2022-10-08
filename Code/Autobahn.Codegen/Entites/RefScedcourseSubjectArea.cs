@@ -9,15 +9,15 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefSCEDCourseSubjectArea")]
+    [Table("RefSCEDCourseSubjectArea", Schema = "Common")]
     public partial class RefScedcourseSubjectArea
     {
         public RefScedcourseSubjectArea()
         {
             CteCourses = new HashSet<CteCourse>();
             IndividualizedProgramAccommodationSubjects = new HashSet<IndividualizedProgramAccommodationSubject>();
-            K12courses = new HashSet<K12course>();
-            K12studentGraduationPlans = new HashSet<K12studentGraduationPlan>();
+            K12courses = new HashSet<K12Course>();
+            K12studentGraduationPlans = new HashSet<K12StudentGraduationPlan>();
         }
 
         /// <summary>
@@ -57,8 +57,8 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefScedcourseSubjectArea")]
         public virtual ICollection<IndividualizedProgramAccommodationSubject> IndividualizedProgramAccommodationSubjects { get; set; }
         [InverseProperty("RefScedcourseSubjectArea")]
-        public virtual ICollection<K12course> K12courses { get; set; }
+        public virtual ICollection<K12Course> K12courses { get; set; }
         [InverseProperty("RefScedcourseSubjectArea")]
-        public virtual ICollection<K12studentGraduationPlan> K12studentGraduationPlans { get; set; }
+        public virtual ICollection<K12StudentGraduationPlan> K12studentGraduationPlans { get; set; }
     }
 }

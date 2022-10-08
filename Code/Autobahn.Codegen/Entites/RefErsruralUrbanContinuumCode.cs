@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefERSRuralUrbanContinuumCode")]
-    public partial class RefErsruralUrbanContinuumCode
+    [Table("RefERSRuralUrbanContinuumCode", Schema = "Core")]
+    public partial class RefERSRuralUrbanContinuumCode
     {
-        public RefErsruralUrbanContinuumCode()
+        public RefERSRuralUrbanContinuumCode()
         {
             LocationAddresses = new HashSet<LocationAddress>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefERSRuralUrbanContinuumCodeId")]
-        public int RefErsruralUrbanContinuumCodeId { get; set; }
+        public int RefERSRuralUrbanContinuumCodeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

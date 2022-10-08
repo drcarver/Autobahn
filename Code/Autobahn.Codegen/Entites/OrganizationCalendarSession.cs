@@ -9,15 +9,15 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("OrganizationCalendarSession")]
+    [Table("OrganizationCalendarSession", Schema = "Organization")]
     public partial class OrganizationCalendarSession
     {
         public OrganizationCalendarSession()
         {
             CourseSections = new HashSet<CourseSection>();
-            K12federalFundAllocations = new HashSet<K12federalFundAllocation>();
-            K12leaFederalFunds = new HashSet<K12leaFederalFund>();
-            K12studentSessions = new HashSet<K12studentSession>();
+            K12federalFundAllocations = new HashSet<K12FederalFundAllocation>();
+            K12leaFederalFunds = new HashSet<K12LeaFederalFunds>();
+            K12studentSessions = new HashSet<K12StudentSession>();
             LearnerActivities = new HashSet<LearnerActivity>();
             OrganizationFinancials = new HashSet<OrganizationFinancial>();
         }
@@ -137,11 +137,11 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("OrganizationCalendarSession")]
         public virtual ICollection<CourseSection> CourseSections { get; set; }
         [InverseProperty("OrganizationCalendarSession")]
-        public virtual ICollection<K12federalFundAllocation> K12federalFundAllocations { get; set; }
+        public virtual ICollection<K12FederalFundAllocation> K12federalFundAllocations { get; set; }
         [InverseProperty("OrganizationCalendarSession")]
-        public virtual ICollection<K12leaFederalFund> K12leaFederalFunds { get; set; }
+        public virtual ICollection<K12LeaFederalFunds> K12leaFederalFunds { get; set; }
         [InverseProperty("OrganizationCalendarSession")]
-        public virtual ICollection<K12studentSession> K12studentSessions { get; set; }
+        public virtual ICollection<K12StudentSession> K12studentSessions { get; set; }
         [InverseProperty("OrganizationCalendarSession")]
         public virtual ICollection<LearnerActivity> LearnerActivities { get; set; }
         [InverseProperty("OrganizationCalendarSession")]

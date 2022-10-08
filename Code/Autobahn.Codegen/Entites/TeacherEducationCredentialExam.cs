@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("TeacherEducationCredentialExam")]
+    [Table("TeacherEducationCredentialExam", Schema = "Common")]
     public partial class TeacherEducationCredentialExam
     {
         public int? RefTeacherEducationCredentialExamId { get; set; }

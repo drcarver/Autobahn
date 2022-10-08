@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("RubricCriterion")]
+    [Table("RubricCriterion", Schema = "Common")]
     public partial class RubricCriterion
     {
         public RubricCriterion()

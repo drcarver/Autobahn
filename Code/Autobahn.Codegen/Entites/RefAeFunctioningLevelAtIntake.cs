@@ -9,19 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefAeFunctioningLevelAtIntake")]
-    public partial class RefAeFunctioningLevelAtIntake
+    [Table("RefAEFunctioningLevelAtIntake", Schema = "AdultEducation")]
+    public partial class RefAEFunctioningLevelAtIntake
     {
-        public RefAeFunctioningLevelAtIntake()
+        public RefAEFunctioningLevelAtIntake()
         {
-            ProgramParticipationAes = new HashSet<ProgramParticipationAe>();
+            ProgramParticipationAEs = new HashSet<ProgramParticipationAE>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        public int RefAeFunctioningLevelAtIntakeId { get; set; }
+        public int RefAEFunctioningLevelAtIntakeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefAeFunctioningLevelAtIntakes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefAeFunctioningLevelAtIntake")]
-        public virtual ICollection<ProgramParticipationAe> ProgramParticipationAes { get; set; }
+        public virtual ICollection<ProgramParticipationAE> ProgramParticipationAEs { get; set; }
     }
 }

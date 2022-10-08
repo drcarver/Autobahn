@@ -9,17 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefPDActivityApprovedPurpose")]
-    public partial class RefPdactivityApprovedPurpose
+    [Table("RefPDActivityApprovedPurpose", Schema = "Common")]
+    public partial class RefPDActivityApprovedPurpose
     {
-        public RefPdactivityApprovedPurpose()
+        public RefPDActivityApprovedPurpose()
         {
             ProfessionalDevelopmentActivities = new HashSet<ProfessionalDevelopmentActivity>();
         }
 
         [Key]
-        [Column("RefPDActivityApprovedPurposeId")]
-        public int RefPdactivityApprovedPurposeId { get; set; }
+        public int RefPDActivityApprovedPurposeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

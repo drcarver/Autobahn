@@ -9,9 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ProgramParticipationAE")]
-    public partial class ProgramParticipationAe
+    [Table("ProgramParticipationAE", Schema = "AdultEducation")]
+    public partial class ProgramParticipationAE
     {
+        [Key]
+        public int ProgramParticipationAEId { get; set; }
         public int PersonProgramParticipationId { get; set; }
         public int? RefAeInstructionalProgramTypeId { get; set; }
         public int? RefAePostsecondaryTransitionActionId { get; set; }
@@ -28,9 +30,6 @@ namespace ScafoldADatabase.Entities
         public decimal? InstructionalActivityHoursCompleted { get; set; }
         public int? RefCorrectionalEducationFacilityTypeId { get; set; }
         public int? RefWorkbasedLearningOpportunityTypeId { get; set; }
-        [Key]
-        [Column("ProgramParticipationAEId")]
-        public int ProgramParticipationAeid { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -66,10 +65,10 @@ namespace ScafoldADatabase.Entities
         public virtual RefAdultEducationProgramExitReason? RefAdultEducationProgramExitReason { get; set; }
         [ForeignKey("RefAeFunctioningLevelAtIntakeId")]
         [InverseProperty("ProgramParticipationAes")]
-        public virtual RefAeFunctioningLevelAtIntake? RefAeFunctioningLevelAtIntake { get; set; }
+        public virtual RefAEFunctioningLevelAtIntake? RefAeFunctioningLevelAtIntake { get; set; }
         [ForeignKey("RefAeFunctioningLevelAtPosttestId")]
         [InverseProperty("ProgramParticipationAes")]
-        public virtual RefAeFunctioningLevelAtPosttest? RefAeFunctioningLevelAtPosttest { get; set; }
+        public virtual RefAEFunctioningLevelAtPosttest? RefAeFunctioningLevelAtPosttest { get; set; }
         [ForeignKey("RefAeInstructionalProgramTypeId")]
         [InverseProperty("ProgramParticipationAes")]
         public virtual RefAeInstructionalProgramType? RefAeInstructionalProgramType { get; set; }

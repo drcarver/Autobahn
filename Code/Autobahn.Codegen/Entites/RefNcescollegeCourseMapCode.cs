@@ -9,10 +9,10 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefNCESCollegeCourseMapCode")]
-    public partial class RefNcescollegeCourseMapCode
+    [Table("RefNCESCollegeCourseMapCode", Schema = "Postsecondary")]
+    public partial class RefNCESCollegeCourseMapCode
     {
-        public RefNcescollegeCourseMapCode()
+        public RefNCESCollegeCourseMapCode()
         {
             PsCourses = new HashSet<PsCourse>();
         }
@@ -21,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefNCESCollegeCourseMapCodeId")]
-        public int RefNcescollegeCourseMapCodeId { get; set; }
+        public int RefNCESCollegeCourseMapCodeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>

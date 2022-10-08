@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefELServiceType")]
-    public partial class RefElserviceType
+    [Table("RefELServiceType", Schema = "EarlyLearning")]
+    public partial class RefELServiceType
     {
-        public RefElserviceType()
+        public RefELServiceType()
         {
-            ElchildServices = new HashSet<ElchildService>();
+            ElchildServices = new HashSet<ELChildService>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELServiceTypeId")]
-        public int RefElserviceTypeId { get; set; }
+        public int RefELServiceTypeId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefElserviceTypes")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefElserviceType")]
-        public virtual ICollection<ElchildService> ElchildServices { get; set; }
+        public virtual ICollection<ELChildService> ElchildServices { get; set; }
     }
 }

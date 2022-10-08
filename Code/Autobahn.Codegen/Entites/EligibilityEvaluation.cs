@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("EligibilityEvaluation")]
+    [Table("EligibilityEvaluation", Schema = "Common")]
     public partial class EligibilityEvaluation
     {
         public EligibilityEvaluation()
         {
-            IdeaeligibilityEvaluationCategories = new HashSet<IdeaeligibilityEvaluationCategory>();
+            IdeaeligibilityEvaluationCategories = new HashSet<IDEAEligibilityEvaluationCategory>();
             IndividualizedProgramEligibilityEvaluations = new HashSet<IndividualizedProgramEligibilityEvaluation>();
         }
 
@@ -43,7 +43,7 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("EligibilityEvaluations")]
         public virtual RecordStatus? RecordStatus { get; set; }
         [InverseProperty("EligibilityEvaluation")]
-        public virtual ICollection<IdeaeligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
+        public virtual ICollection<IDEAEligibilityEvaluationCategory> IdeaeligibilityEvaluationCategories { get; set; }
         [InverseProperty("EligibilityEvaluation")]
         public virtual ICollection<IndividualizedProgramEligibilityEvaluation> IndividualizedProgramEligibilityEvaluations { get; set; }
     }

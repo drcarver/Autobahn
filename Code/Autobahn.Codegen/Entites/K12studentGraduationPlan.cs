@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12StudentGraduationPlan")]
-    public partial class K12studentGraduationPlan
+    [Table("K12StudentGraduationPlan", Schema = "K12")]
+    public partial class K12StudentGraduationPlan
     {
         [Key]
-        [Column("K12StudentGraduationPlanId")]
-        public int K12studentGraduationPlanId { get; set; }
+        public int K12StudentGraduationPlanId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -22,8 +21,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - K12Course.
         /// </summary>
-        [Column("K12CourseId")]
-        public int K12courseId { get; set; }
+        public int K12CourseId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -32,8 +30,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefSCEDCourseSubjectAreaId")]
-        public int? RefScedcourseSubjectAreaId { get; set; }
+        public int? RefSCEDCourseSubjectAreaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -56,7 +53,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12courseId")]
         [InverseProperty("K12studentGraduationPlans")]
-        public virtual K12course K12course { get; set; } = null!;
+        public virtual K12Course K12course { get; set; } = null!;
         [ForeignKey("OrganizationPersonRoleId")]
         [InverseProperty("K12studentGraduationPlans")]
         public virtual OrganizationPersonRole OrganizationPersonRole { get; set; } = null!;

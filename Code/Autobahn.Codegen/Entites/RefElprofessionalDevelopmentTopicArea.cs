@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefELProfessionalDevelopmentTopicArea")]
-    public partial class RefElprofessionalDevelopmentTopicArea
+    [Table("RefELProfessionalDevelopmentTopicArea", Schema = "EarlyLearning")]
+    public partial class RefELProfessionalDevelopmentTopicArea
     {
-        public RefElprofessionalDevelopmentTopicArea()
+        public RefELProfessionalDevelopmentTopicArea()
         {
-            ElstaffEducations = new HashSet<ElstaffEducation>();
+            ElstaffEducations = new HashSet<ELStaffEducation>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefELProfessionalDevelopmentTopicAreaId")]
-        public int RefElprofessionalDevelopmentTopicAreaId { get; set; }
+        public int RefELProfessionalDevelopmentTopicAreaId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefElprofessionalDevelopmentTopicAreas")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefElprofessionalDevelopmentTopicArea")]
-        public virtual ICollection<ElstaffEducation> ElstaffEducations { get; set; }
+        public virtual ICollection<ELStaffEducation> ElstaffEducations { get; set; }
     }
 }

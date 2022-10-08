@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialDefAgent")]
+    [Table("CredentialDefAgent", Schema = "Credentials")]
     public partial class CredentialDefAgent
     {
         public CredentialDefAgent()
@@ -24,8 +24,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefCTDLOrganizationTypeId")]
-        public int? RefCtdlorganizationTypeId { get; set; }
+        public int? RefCTDLOrganizationTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -60,7 +59,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefCredentialDefAgentRoleType? RefCredentialDefAgentRoleType { get; set; }
         [ForeignKey("RefCtdlorganizationTypeId")]
         [InverseProperty("CredentialDefAgents")]
-        public virtual RefCtdlorganizationType? RefCtdlorganizationType { get; set; }
+        public virtual RefCTDLOrganizationType? RefCtdlorganizationType { get; set; }
         [InverseProperty("CredentialDefAgent")]
         public virtual ICollection<CredentialDefAgentCredential> CredentialDefAgentCredentials { get; set; }
     }

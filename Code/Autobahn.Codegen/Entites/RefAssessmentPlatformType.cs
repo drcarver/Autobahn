@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefAssessmentPlatformType")]
+    [Table("RefAssessmentPlatformType", Schema = "Assessment")]
     public partial class RefAssessmentPlatformType
     {
         public RefAssessmentPlatformType()

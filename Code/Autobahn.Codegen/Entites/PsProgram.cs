@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsProgram")]
+    [Table("PsProgram", Schema = "Postsecondary")]
     public partial class PsProgram
     {
         public PsProgram()
         {
-            PsstudentPrograms = new HashSet<PsstudentProgram>();
+            PsstudentPrograms = new HashSet<PSStudentProgram>();
         }
 
         /// <summary>
@@ -55,13 +55,11 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefPSProgramLevelId")]
-        public int? RefPsprogramLevelId { get; set; }
+        public int? RefPSProgramLevelId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefDQPCategoriesOfLearningId")]
-        public int? RefDqpcategoriesOfLearningId { get; set; }
+        public int? RefDQPCategoriesOfLearningId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -91,18 +89,15 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("PsPrograms")]
         public virtual RefCipVersion? RefCipVersion { get; set; }
         [ForeignKey("RefDqpcategoriesOfLearningId")]
-        [InverseProperty("PsPrograms")]
-        public virtual RefDqpcategoriesOfLearning? RefDqpcategoriesOfLearning { get; set; }
-        [ForeignKey("RefProgramLengthHoursTypeId")]
+        public virtual RefDQPCategoriesOfLearning? RefDqpcategoriesOfLearning { get; set; }
         [InverseProperty("PsPrograms")]
         public virtual RefProgramLengthHoursType? RefProgramLengthHoursType { get; set; }
         [ForeignKey("RefPsprogramLevelId")]
         [InverseProperty("PsPrograms")]
-        public virtual RefPsprogramLevel? RefPsprogramLevel { get; set; }
-        [ForeignKey("RefTimeForCompletionUnitsId")]
+        public virtual RefPSProgramLevel? RefPsprogramLevel { get; set; }
         [InverseProperty("PsPrograms")]
         public virtual RefTimeForCompletionUnit? RefTimeForCompletionUnits { get; set; }
         [InverseProperty("PsProgram")]
-        public virtual ICollection<PsstudentProgram> PsstudentPrograms { get; set; }
+        public virtual ICollection<PSStudentProgram> PsstudentPrograms { get; set; }
     }
 }

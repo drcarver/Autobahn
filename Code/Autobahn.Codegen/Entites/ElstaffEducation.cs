@@ -9,19 +9,16 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELStaffEducation")]
-    public partial class ElstaffEducation
+    [Table("ELStaffEducation", Schema = "EarlyLearning")]
+    public partial class ELStaffEducation
     {
         [Key]
-        [Column("ELStaffEducationId")]
-        public int ElstaffEducationId { get; set; }
-        [Column("ELStaffId")]
-        public int ElstaffId { get; set; }
+        public int ELStaffEducationId { get; set; }
+        public int ELStaffId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("ECDegreeOrCertificateHolder")]
-        public bool? EcdegreeOrCertificateHolder { get; set; }
+        public bool? ECDegreeOrCertificateHolder { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -30,23 +27,19 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("TotalApprovedECCreditsEarned", TypeName = "decimal(10, 2)")]
-        public decimal? TotalApprovedEccreditsEarned { get; set; }
+        public decimal? TotalApprovedECCreditsEarned { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("SchoolAgeEducationPSCredits", TypeName = "decimal(10, 2)")]
-        public decimal? SchoolAgeEducationPscredits { get; set; }
+        public decimal? SchoolAgeEducationPSCredits { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELLevelOfSpecializationId")]
-        public int? RefEllevelOfSpecializationId { get; set; }
+        public int? RefELLevelOfSpecializationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELProfessionalDevelopmentTopicAreaId")]
-        public int? RefElprofessionalDevelopmentTopicAreaId { get; set; }
+        public int? RefELProfessionalDevelopmentTopicAreaId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -65,7 +58,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("ElstaffId")]
         [InverseProperty("ElstaffEducations")]
-        public virtual Elstaff Elstaff { get; set; } = null!;
+        public virtual ELStaff Elstaff { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("ElstaffEducations")]
         public virtual RecordStatus? RecordStatus { get; set; }
@@ -74,6 +67,6 @@ namespace ScafoldADatabase.Entities
         public virtual RefEllevelOfSpecialization? RefEllevelOfSpecialization { get; set; }
         [ForeignKey("RefElprofessionalDevelopmentTopicAreaId")]
         [InverseProperty("ElstaffEducations")]
-        public virtual RefElprofessionalDevelopmentTopicArea? RefElprofessionalDevelopmentTopicArea { get; set; }
+        public virtual RefELProfessionalDevelopmentTopicArea? RefElprofessionalDevelopmentTopicArea { get; set; }
     }
 }

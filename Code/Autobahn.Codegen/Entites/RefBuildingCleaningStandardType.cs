@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefBuildingCleaningStandardType")]
+    [Table("RefBuildingCleaningStandardType", Schema = "Facilities")]
     public partial class RefBuildingCleaningStandardType
     {
         public RefBuildingCleaningStandardType()

@@ -9,14 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12SchoolStatus")]
-    public partial class K12schoolStatus
+    [Table("K12SchoolStatus", Schema = "K12")]
+    public partial class K12SchoolStatus
     {
         [Key]
-        [Column("K12SchoolStatusId")]
-        public int K12schoolStatusId { get; set; }
-        [Column("K12SchoolId")]
-        public int K12schoolId { get; set; }
+        public int K12SchoolStatusId { get; set; }
+        public int K12SchoolId { get; set; }
         public bool? ConsolidatedMepFundsStatus { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -27,10 +25,8 @@ namespace ScafoldADatabase.Entities
         public int? RefAlternativeSchoolFocusId { get; set; }
         public int? RefInternetAccessId { get; set; }
         public int? RefRestructuringActionId { get; set; }
-        [Column("RefTitleISchoolStatusId")]
-        public int? RefTitleIschoolStatusId { get; set; }
-        [Column("RefNSLPStatusId")]
-        public int? RefNslpstatusId { get; set; }
+        public int? RefTitleISchoolStatusId { get; set; }
+        public int? RefNSLPStatusId { get; set; }
         public int? RefSchoolDangerousStatusId { get; set; }
         public int? RefSchoolImprovementStatusId { get; set; }
         /// <summary>
@@ -61,7 +57,7 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12schoolId")]
         [InverseProperty("K12schoolStatuses")]
-        public virtual K12school K12school { get; set; } = null!;
+        public virtual K12School K12school { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12schoolStatuses")]
         public virtual RecordStatus? RecordStatus { get; set; }
@@ -88,7 +84,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefNationalSchoolLunchProgramStatus? RefNationalSchoolLunchProgramStatus { get; set; }
         [ForeignKey("RefNslpstatusId")]
         [InverseProperty("K12schoolStatuses")]
-        public virtual RefNslpstatus? RefNslpstatus { get; set; }
+        public virtual RefNSLPStatus? RefNslpstatus { get; set; }
         [ForeignKey("RefProgressAchievingEnglishLanguageProficiencyIndicatorStatusId")]
         [InverseProperty("K12schoolStatuses")]
         public virtual RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus? RefProgressAchievingEnglishLanguageProficiencyIndicatorStatus { get; set; }
@@ -106,7 +102,7 @@ namespace ScafoldADatabase.Entities
         public virtual RefTargetedSupport? RefTargetedSupport { get; set; }
         [ForeignKey("RefTitleIschoolStatusId")]
         [InverseProperty("K12schoolStatuses")]
-        public virtual RefTitleIschoolStatus? RefTitleIschoolStatus { get; set; }
+        public virtual RefTitleISchoolStatus? RefTitleIschoolStatus { get; set; }
         [ForeignKey("RefVirtualSchoolStatusId")]
         [InverseProperty("K12schoolStatuses")]
         public virtual RefVirtualSchoolStatus? RefVirtualSchoolStatus { get; set; }

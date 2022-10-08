@@ -6,17 +6,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefNSLPStatus")]
-    public partial class RefNslpstatus
+    [Table("RefNSLPStatus", Schema = "K12")]
+    public partial class RefNSLPStatus
     {
-        public RefNslpstatus()
+        public RefNSLPStatus()
         {
-            K12schoolStatuses = new HashSet<K12schoolStatus>();
+            K12schoolStatuses = new HashSet<K12SchoolStatus>();
         }
 
         [Key]
-        [Column("RefNSLPStatusId")]
-        public int RefNslpstatusId { get; set; }
+        public int RefNSLPStatusId { get; set; }
         [StringLength(150)]
         public string Description { get; set; } = null!;
         [StringLength(50)]
@@ -35,6 +34,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefNslpstatuses")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefNslpstatus")]
-        public virtual ICollection<K12schoolStatus> K12schoolStatuses { get; set; }
+        public virtual ICollection<K12SchoolStatus> K12schoolStatuses { get; set; }
     }
 }

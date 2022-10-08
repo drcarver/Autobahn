@@ -9,13 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("FacilityRelationship")]
+    [Table("FacilityRelationship", Schema = "Facilities")]
     [Index("ParentFacilityId", "FacilityId", Name = "IX_Facility_Facility", IsUnique = true)]
     public partial class FacilityRelationship
     {
         [Key]
         public int FacilityRelationshipId { get; set; }
-        [Column("Parent_FacilityId")]
         public int ParentFacilityId { get; set; }
         public int FacilityId { get; set; }
         /// <summary>

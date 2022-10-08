@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefState")]
+    [Table("RefState", Schema = "Core")]
     public partial class RefState
     {
         public RefState()
@@ -20,6 +20,7 @@ namespace ScafoldADatabase.Entities
             PersonCredentials = new HashSet<PersonCredential>();
             PersonDetails = new HashSet<PersonDetail>();
             ProgramParticipationMigrants = new HashSet<ProgramParticipationMigrant>();
+            K12Seas = new HashSet<K12Sea>();
         }
 
         /// <summary>
@@ -65,5 +66,6 @@ namespace ScafoldADatabase.Entities
         public virtual ICollection<PersonDetail> PersonDetails { get; set; }
         [InverseProperty("RefQualifyingMoveFromState")]
         public virtual ICollection<ProgramParticipationMigrant> ProgramParticipationMigrants { get; set; }
+        public virtual ICollection<K12Sea> K12Seas { get; set; }
     }
 }

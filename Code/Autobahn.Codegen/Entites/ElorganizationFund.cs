@@ -9,12 +9,11 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELOrganizationFunds")]
-    public partial class ElorganizationFund
+    [Table("ELOrganizationFunds", Schema = "EarlyLearning")]
+    public partial class ELOrganizationFunds
     {
         [Key]
-        [Column("ELOrganizationFundsId")]
-        public int ElorganizationFundsId { get; set; }
+        public int ELOrganizationFundsId { get; set; }
         /// <summary>
         /// Surrogate key from Organization
         /// </summary>
@@ -22,23 +21,19 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELFederalFundingTypeId")]
-        public int? RefElfederalFundingTypeId { get; set; }
+        public int? RefELFederalFundingTypeId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELLocalRevenueSourceId")]
-        public int? RefEllocalRevenueSourceId { get; set; }
+        public int? RefELLocalRevenueSourceId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELOtherFederalFundingSourcesId")]
-        public int? RefElotherFederalFundingSourcesId { get; set; }
+        public int? RefELOtherFederalFundingSourcesId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefELStateRevenueSourceId")]
-        public int? RefElstateRevenueSourceId { get; set; }
+        public int? RefELStateRevenueSourceId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -74,18 +69,18 @@ namespace ScafoldADatabase.Entities
         public virtual RefBillableBasisType? RefBillableBasisType { get; set; }
         [ForeignKey("RefElfederalFundingTypeId")]
         [InverseProperty("ElorganizationFunds")]
-        public virtual RefElfederalFundingType? RefElfederalFundingType { get; set; }
+        public virtual RefELFederalFundingType? RefElfederalFundingType { get; set; }
         [ForeignKey("RefEllocalRevenueSourceId")]
         [InverseProperty("ElorganizationFunds")]
-        public virtual RefEllocalRevenueSource? RefEllocalRevenueSource { get; set; }
+        public virtual RefELLocalRevenueSource? RefEllocalRevenueSource { get; set; }
         [ForeignKey("RefElotherFederalFundingSourcesId")]
         [InverseProperty("ElorganizationFunds")]
-        public virtual RefElotherFederalFundingSource? RefElotherFederalFundingSources { get; set; }
+        public virtual RefELOtherFederalFundingSources? RefElotherFederalFundingSources { get; set; }
         [ForeignKey("RefElstateRevenueSourceId")]
         [InverseProperty("ElorganizationFunds")]
-        public virtual RefElstateRevenueSource? RefElstateRevenueSource { get; set; }
+        public virtual RefELStateRevenueSource? RefElstateRevenueSource { get; set; }
         [ForeignKey("RefReimbursementTypeId")]
-        [InverseProperty("ElorganizationFunds")]
+        [InverseProperty("ELOrganizationFunds")]
         public virtual RefReimbursementType? RefReimbursementType { get; set; }
     }
 }

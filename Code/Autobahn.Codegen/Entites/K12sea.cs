@@ -9,17 +9,17 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12Sea")]
-    public partial class K12sea
+    [Table("K12Sea", Schema = "K12")]
+    public partial class K12Sea
     {
-        public K12sea()
+        public K12Sea()
         {
             K12seaFederalFunds = new HashSet<K12seaFederalFund>();
         }
 
         [Key]
-        [Column("K12SeaId")]
-        public int K12seaId { get; set; }
+        public int K12SeaId { get; set; }
+
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -27,8 +27,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("RefStateANSICodeId")]
-        public int? RefStateAnsicodeId { get; set; }
+        public int? RefStateId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
@@ -50,7 +49,7 @@ namespace ScafoldADatabase.Entities
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefStateAnsicodeId")]
         [InverseProperty("K12seas")]
-        public virtual RefStateAnsicode? RefStateAnsicode { get; set; }
+        public virtual RefState? RefState { get; set; }
         [InverseProperty("K12sea")]
         public virtual ICollection<K12seaFederalFund> K12seaFederalFunds { get; set; }
     }

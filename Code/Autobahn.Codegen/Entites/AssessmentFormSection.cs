@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentFormSection")]
+    [Table("AssessmentFormSection", Schema = "Assessment")]
     public partial class AssessmentFormSection
     {
         public AssessmentFormSection()
@@ -70,7 +70,6 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - AssessmentFormSection (this table)
         /// </summary>
-        [Column("ChildOf_FormSectionId")]
         public int? ChildOfFormSectionId { get; set; }
         /// <summary>
         /// Foreign key - LearningResource
@@ -79,9 +78,7 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("GUID")]
-        [StringLength(40)]
-        public string? Guid { get; set; }
+        public Guid? GUID { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>

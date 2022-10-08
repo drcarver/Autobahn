@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("K12LeaPreKEligibleAgesIDEA")]
+    [Table("K12LeaPreKEligibleAgesIDEA", Schema = "K12")]
     public partial class K12leaPreKeligibleAgesIdea
     {
         /// <summary>
@@ -43,12 +43,12 @@ namespace ScafoldADatabase.Entities
         public virtual DataCollection? DataCollection { get; set; }
         [ForeignKey("K12leaId")]
         [InverseProperty("K12leaPreKeligibleAgesIdeas")]
-        public virtual K12lea K12lea { get; set; } = null!;
+        public virtual K12Lea K12lea { get; set; } = null!;
         [ForeignKey("RecordStatusId")]
         [InverseProperty("K12leaPreKeligibleAgesIdeas")]
         public virtual RecordStatus? RecordStatus { get; set; }
         [ForeignKey("RefPreKeligibleAgesNonIdeaid")]
         [InverseProperty("K12leaPreKeligibleAgesIdeas")]
-        public virtual RefPreKeligibleAgesNonIdea RefPreKeligibleAgesNonIdea { get; set; } = null!;
+        public virtual RefPreKEligibleAgesNonIDEA RefPreKeligibleAgesNonIdea { get; set; } = null!;
     }
 }

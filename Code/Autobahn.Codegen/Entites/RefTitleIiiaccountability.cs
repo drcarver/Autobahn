@@ -9,20 +9,19 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefTitleIIIAccountability")]
-    public partial class RefTitleIiiaccountability
+    [Table("RefTitleIIIAccountability", Schema = "Person")]
+    public partial class RefTitleIIIAccountability
     {
-        public RefTitleIiiaccountability()
+        public RefTitleIIIAccountability()
         {
-            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIiilep>();
+            ProgramParticipationTitleIiileps = new HashSet<ProgramParticipationTitleIIILep>();
         }
 
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("RefTitleIIIAccountabilityId")]
-        public int RefTitleIiiaccountabilityId { get; set; }
+        public int RefTitleIIIAccountabilityId { get; set; }
         /// <summary>
         /// See the CEDS_Def_Desc extended property.
         /// </summary>
@@ -50,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefTitleIiiaccountabilities")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefTitleIiiaccountability")]
-        public virtual ICollection<ProgramParticipationTitleIiilep> ProgramParticipationTitleIiileps { get; set; }
+        public virtual ICollection<ProgramParticipationTitleIIILep> ProgramParticipationTitleIiileps { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("AssessmentSession")]
+    [Table("AssessmentSession", Schema = "Assessment")]
     public partial class AssessmentSession
     {
         public AssessmentSession()
@@ -81,12 +81,10 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// Foreign key - Organization : Local Education Agency
         /// </summary>
-        [Column("Lea_OrganizationId")]
-        public int? LeaOrganizationId { get; set; }
+        public int? LEAOrganizationId { get; set; }
         /// <summary>
         /// Foreign key - Organization : School
         /// </summary>
-        [Column("School_OrganizationId")]
         public int? SchoolOrganizationId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.

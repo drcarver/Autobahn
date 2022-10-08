@@ -9,12 +9,12 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefAdultEducationProgramExitReason")]
+    [Table("RefAdultEducationProgramExitReason", Schema = "AdultEducation")]
     public partial class RefAdultEducationProgramExitReason
     {
         public RefAdultEducationProgramExitReason()
         {
-            ProgramParticipationAes = new HashSet<ProgramParticipationAe>();
+            ProgramParticipationAes = new HashSet<ProgramParticipationAE>();
         }
 
         [Key]
@@ -49,6 +49,6 @@ namespace ScafoldADatabase.Entities
         [InverseProperty("RefAdultEducationProgramExitReasons")]
         public virtual Organization? RefJurisdiction { get; set; }
         [InverseProperty("RefAdultEducationProgramExitReason")]
-        public virtual ICollection<ProgramParticipationAe> ProgramParticipationAes { get; set; }
+        public virtual ICollection<ProgramParticipationAE> ProgramParticipationAes { get; set; }
     }
 }

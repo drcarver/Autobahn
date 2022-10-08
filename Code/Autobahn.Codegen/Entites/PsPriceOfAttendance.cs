@@ -9,15 +9,14 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("PsPriceOfAttendance")]
+    [Table("PsPriceOfAttendance", Schema = "Postsecondary")]
     public partial class PsPriceOfAttendance
     {
         /// <summary>
         /// Surrogate Key
         /// </summary>
         [Key]
-        [Column("PSPriceOfAttendanceId")]
-        public int PspriceOfAttendanceId { get; set; }
+        public int PSPriceOfAttendanceId { get; set; }
         public int PsInstitutionId { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
@@ -67,9 +66,8 @@ namespace ScafoldADatabase.Entities
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
-        [Column("IPEDSCollectionYearDesignator")]
         [StringLength(9)]
-        public string? IpedscollectionYearDesignator { get; set; }
+        public string? IPEDSCollectionYearDesignator { get; set; }
         /// <summary>
         /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
         /// </summary>
