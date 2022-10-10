@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_GlobalId, CEDS_Element, CEDS_URL, and CEDS_Def_Desc extended properties.
     /// </summary>
-    [Table("RefEmployedWhileEnrolled", Schema = "AdultEducation")]
+    [Table("RefEmployedWhileEnrolled", Schema = "Common")]
     public partial class RefEmployedWhileEnrolled
     {
         public RefEmployedWhileEnrolled()

@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CoreKnowledgeArea", Schema = "Common")]
+    [Table("CoreKnowledgeArea", Schema = "Education.Common")]
     [Index("ProfessionalDevelopmentActivityId", "RefCoreKnowledgeAreaId", Name = "IX_CoreKnowledgeArea", IsUnique = true)]
     public partial class CoreKnowledgeArea
     {

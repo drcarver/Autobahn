@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("RefCTDLOrganizationType", Schema = "Credentials")]
+    [Table("RefCTDLOrganizationType", Schema = "Common")]
     public partial class RefCTDLOrganizationType
     {
         public RefCTDLOrganizationType()

@@ -30,7 +30,6 @@ internal enum TypeBeingGeneratedEnum
 
 internal class MauiModule
 {
-    private static List<string> modelsGenerated { get; set; } = new List<string>();
     private static List<AutobahnEntity> allEntities { get; set; }
 
     internal static void GenerateModule(string location, 
@@ -39,22 +38,9 @@ internal class MauiModule
         allEntities = entities;
         foreach (var domain in domains.OrderBy(o => o.SortOrder))
         {
-            Console.WriteLine($"Generating files for Autobahn {domain.Name} domain");
-            string moduleName = $"Autobahn.Education.{domain.Module}";
+            Console.WriteLine($"Generating files for the Autobahn {domain.Name} domain");
+            string moduleName = $"Autobahn.{domain.Module}";
             var moduleLocation = $@"{location}\{moduleName}";
-            if (domain.Module == "Organization"
-                || domain.Module == "Person"
-                || domain.Module == "Role")
-            {
-                moduleName = $"Autobahn.Core.{domain.Module}";
-                moduleLocation = $@"{location}\{moduleName}\";
-            }
-            if (domain.Module == "StockPortfolio")
-            {
-                moduleName = $"Autobahn.{domain.Module}";
-                moduleLocation = $@"{location}\\{moduleName}\";
-            }
-
             var domainModels = entities.Where(e => e.Attributes?.TableAttribute?.Schema == domain.Module).ToList();
             GenerateTemplateProject(location, moduleName);
             GenerateUsings($@"{moduleLocation}\{moduleName}", domain);
@@ -197,7 +183,7 @@ internal class MauiModule
                 break;
         }
         stream.WriteLine($"//***************************************************************************");
-        stream.WriteLine($"//* DomainName: {domain.Name}");
+        stream.WriteLine($"//* DomainName: {domain.Module}");
         stream.WriteLine($"//* FileName:   {filename}.g.cs");
         if (model.AutobahnElement != null)
         {
@@ -1166,6 +1152,24 @@ internal class MauiModule
     {
         var fi = new FileInfo(filePath);
         var project = XDocument.Load(filePath);
+        var educationDomains = new List<string>
+        {
+            "AdultEducation",
+            "Assessment",
+            "EarlyLearning",
+            "Competencies",
+            "Credentials",
+            "CTE",
+            "EarlyLearning",
+            "Facilities",
+            "Finance",
+            "Implementation",
+            "Incident",
+            "K12",
+            "LearningResources",
+            "Postsecondary",
+            "Workforce"
+        };
 
         var assemblyInfoNode = new XElement("PropertyGroup");
         assemblyInfoNode.Add(new XAttribute("Condition", $@"'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'"));
@@ -1175,22 +1179,12 @@ internal class MauiModule
         assemblyInfoNode.Add(new XElement("ApplicationIdGuid", domain.Id));
 
         //Gets the title associated with the application.
-        assemblyInfoNode.Add(new XElement("ApplicationTitle", domain.Name));
+        assemblyInfoNode.Add(new XElement("ApplicationTitle", domain.Module));
 
-        var moduleName = $"Autobahn.Education.{domain.Module}";
-        if (domain.Module == "Organization"
-            || domain.Module == "Person"
-            || domain.Module == "Role")
-        {
-            moduleName = $"Autobahn.Core.{domain.Module}";
-        }
-        if (domain.Module == "StockPortfolio")
-        {
-            moduleName = $"Autobahn.{domain.Module}";
-        }
+        var moduleName = $"{domain.Module}";
 
         //Gets the name, without the extension, of the assembly file for the application.
-        assemblyInfoNode.Add(new XElement("AssemblyName", $"{moduleName}."));
+        assemblyInfoNode.Add(new XElement("AssemblyName", $"Autobahn.{domain.Name}"));
 
         //Gets the company name associated with the application.
         assemblyInfoNode.Add(new XElement("CompanyName", $"dcarver.com"));
@@ -1208,40 +1202,54 @@ internal class MauiModule
         project?.Root?.LastNode?.AddBeforeSelf(assemblyInfoNode);
 
         // Add project references
-        var group = project?.Root?.Elements("ItemGroup");
+        var group = project?.Root?.Elements("ItemGroup").ToList();
         if (group.Any())
         {
             foreach (var refnode in group)
             {
-                if (!refnode.Elements("ProjectReference").Any())
+                var projnodes = refnode.Elements("ProjectReference").ToList();
+                if (!projnodes.Any())
                 {
                     continue;
                 }
-                if (domain.Module != "Common"
-                    && (domain.Module != "Organization")
-                    && (domain.Module != "StockPortfolio")
-                    && (domain.Module != "Person")
-                    && (domain.Module != "Role"))
+                var coreproj = @"..\..\Autobahn.Core\Autobahn.Core\Autobahn.Core.csproj";
+                var orgproj = @"..\..\Autobahn.Organization\Autobahn.Organization\Autobahn.Organization.csproj";
+                var personproj = @"..\..\Autobahn.Person\Autobahn.Person\Autobahn.Person.csproj";
+                var roleproj = @"..\..\Autobahn.Role\Autobahn.Role\Autobahn.Role.csproj";
+                var commonproj = @"..\..\Autobahn.Common\Autobahn.Common\Autobahn.Common.csproj";
+                if (projnodes?.FirstOrDefault(p => p.Attribute("Include")?.Value == coreproj) == null)
                 {
-                    var projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Autobahn.Education.Common\Autobahn.Education.Common\Autobahn.Education.Common.csproj"));
-                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj" />
-                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj" />
-                    //< ProjectReference Include = "..\..\Core\Autobahn.Core.Role\Autobahn.Core.Role\Autobahn.Core.Role.csproj" />
-                    //< ProjectReference Include = "..\..\Core\Autobahn.Core\Autobahn.Core.csproj" />
-                    refnode.Add(projnode);
+                    var newnode = new XElement("ProjectReference");
+                    newnode.Add(new XAttribute("Include", coreproj));
+                    refnode.Add(newnode);
                 }
-                if (domain.Module == "Common")
+                if (projnodes?.FirstOrDefault(p => p.Attribute("Include")?.Value == orgproj) == null 
+                    && domain.Module == "Common")
                 {
-                    var projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Organization\Autobahn.Core.Organization\Autobahn.Core.Organization.csproj"));
-                    refnode.Add(projnode);
-                    projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Person\Autobahn.Core.Person\Autobahn.Core.Person.csproj"));
-                    refnode.Add(projnode);
-                    projnode = new XElement("ProjectReference");
-                    projnode.Add(new XAttribute("Include", @"..\..\Core\Autobahn.Core.Role\Autobahn.Core.Role\Autobahn.Core.Role.csproj"));
-                    refnode.Add(projnode);
+                    var newnode = new XElement("ProjectReference");
+                    newnode.Add(new XAttribute("Include", orgproj));
+                    refnode.Add(newnode);
+                }
+                if (projnodes?.FirstOrDefault(p => p.Attribute("Include")?.Value == personproj) == null
+                    && domain.Module == "Common")
+                {
+                    var newnode = new XElement("ProjectReference");
+                    newnode.Add(new XAttribute("Include", personproj));
+                    refnode.Add(newnode);
+                }
+                if (projnodes?.FirstOrDefault(p => p.Attribute("Include")?.Value == roleproj) == null
+                    && domain.Module == "Common")
+                {
+                    var newnode = new XElement("ProjectReference");
+                    newnode.Add(new XAttribute("Include", roleproj));
+                    refnode.Add(newnode);
+                }
+                if (projnodes?.FirstOrDefault(p => p.Attribute("Include")?.Value == commonproj) == null
+                    && educationDomains.Contains(domain.Module))
+                {
+                    var newnode = new XElement("ProjectReference");
+                    newnode.Add(new XAttribute("Include", commonproj));
+                    refnode.Add(newnode);
                 }
                 if (filePath.EndsWith(".maui"))
                 {
@@ -1307,10 +1315,18 @@ internal class MauiModule
         File.Move($@"{filePath}\{moduleName}\mauiproject\module.csproj", $@"{filePath}\{moduleName}\mauiproject\{moduleName}.Maui.csproj");
         Directory.Move($@"{filePath}\{moduleName}\mauiproject", $@"{filePath}\{moduleName}\{moduleName}.Maui");
         
-        // Next the .net library for the entites, interfaces, models and view models of the module
-        ZipFile.ExtractToDirectory($@"Reference\Autobahn.Library.zip", $@"{filePath}\{moduleName}");
-        File.Move($@"{filePath}\{moduleName}\Autobahn.Library\Autobahn.Library.csproj", $@"{filePath}\{moduleName}\Autobahn.Library\{moduleName}.csproj");
-        Directory.Move($@"{filePath}\{moduleName}\Autobahn.Library", $@"{filePath}\{moduleName}\{moduleName}");
+        if (moduleName == "Autobahn.Core")
+        {
+            // Next the .net library for the entites, interfaces, models and view models of the module
+            ZipFile.ExtractToDirectory($@"Reference\Autobahn.Core.zip", $@"{filePath}\{moduleName}");
+        } 
+        else
+        {
+            // Next the .net library for the entites, interfaces, models and view models of the module
+            ZipFile.ExtractToDirectory($@"Reference\Autobahn.Library.zip", $@"{filePath}\{moduleName}");
+            File.Move($@"{filePath}\{moduleName}\Autobahn.Library\Autobahn.Library.csproj", $@"{filePath}\{moduleName}\Autobahn.Library\{moduleName}.csproj");
+            Directory.Move($@"{filePath}\{moduleName}\Autobahn.Library", $@"{filePath}\{moduleName}\{moduleName}");
+        }
     }
 
     /// <summary>

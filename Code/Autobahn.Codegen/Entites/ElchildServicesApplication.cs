@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("ELChildServicesApplication")]
+    [Table("ELChildServicesApplication", Schema = "EarlyLearning")]
     public partial class ELChildServicesApplication
     {
         [Key]

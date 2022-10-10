@@ -36,7 +36,7 @@
                 case "RubricCriterion":
                 case "AssessmentResult":
                 case "CredentialAwardEvidence":
-                    Attributes.TableAttribute.Schema = "Common";
+                    Attributes.TableAttribute.Schema = "Education.Common";
                     break;
             }
         }

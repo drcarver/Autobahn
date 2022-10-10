@@ -9,7 +9,7 @@ namespace ScafoldADatabase.Entities
     /// <summary>
     /// See the CEDS_Def_Desc extended property.
     /// </summary>
-    [Table("CredentialAward", Schema = "Postsecondary")]
+    [Table("CredentialAward", Schema = "Common")]
     public partial class CredentialAward
     {
         public CredentialAward()

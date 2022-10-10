@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ScafoldADatabase.Entities
 {
-    [Table("IDSVersion")]
+    [Table("IDSVersion", Schema ="Core")]
     public partial class IDSVersion
     {
         [Key]

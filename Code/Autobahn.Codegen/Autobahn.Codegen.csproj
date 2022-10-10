@@ -26,6 +26,9 @@
     <None Update="Reference\APi.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Reference\Autobahn.Core.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Reference\Autobahn.Education.Common..zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
